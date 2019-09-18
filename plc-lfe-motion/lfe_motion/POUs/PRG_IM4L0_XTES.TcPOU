@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+  <POU Name="PRG_IM4L0_XTES" Id="{6a457a34-4929-4680-9285-094630b3c7e5}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_IM4L0_XTES
+VAR
+	fbMotion1: FB_SimMotor;
+	fbMotion2: FB_SimMotor;
+	fbMotion3: FB_SimMotor;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Placeholder, standard simulated motion for all axes
+fbMotion1(stMotionStage := Main.M28);
+fbMotion2(stMotionStage := Main.M29);
+fbMotion3(stMotionStage := Main.M30);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

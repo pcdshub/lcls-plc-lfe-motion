@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+  <POU Name="PRG_WF1L0_WFS" Id="{ffa57a7d-9d02-44af-b3b1-a3a307e22cab}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_WF1L0_WFS
+VAR
+	fbMotion1: FB_SimMotor;
+	fbMotion2: FB_SimMotor;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Placeholder, standard simulated motion for all axes
+fbMotion1(stMotionStage := Main.M53);
+fbMotion2(stMotionStage := Main.M54);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

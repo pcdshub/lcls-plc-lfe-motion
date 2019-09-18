@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+  <POU Name="PRG_IM3L0_PPM" Id="{e4255619-3c3a-488b-9f38-90b77c8df5be}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_IM3L0_PPM
+VAR
+	fbMotion1: FB_SimMotor;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Placeholder, standard simulated motion for all axes
+fbMotion1(stMotionStage := Main.M27);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
