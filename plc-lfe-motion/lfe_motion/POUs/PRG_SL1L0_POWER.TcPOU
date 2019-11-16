@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+  <POU Name="PRG_SL1L0_POWER" Id="{bb2d6beb-8e46-4873-9e1c-8b32c60eb928}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_SL1L0_POWER
+VAR
+	fbMotion1: FB_SimMotor;
+	fbMotion2: FB_SimMotor;
+	fbMotion3: FB_SimMotor;
+	fbMotion4: FB_SimMotor;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Placeholder, standard simulated motion for all axes
+fbMotion1(stMotionStage := Main.M41);
+fbMotion2(stMotionStage := Main.M42);
+fbMotion3(stMotionStage := Main.M43);
+fbMotion4(stMotionStage := Main.M44);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

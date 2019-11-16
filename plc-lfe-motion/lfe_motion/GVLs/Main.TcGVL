@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+  <GVL Name="Main" Id="{1042c520-30ed-442b-b556-5a9b26ae9c26}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+(*
+	Only includes motor definitions for the IOC
+	These are hard-coded to be Main.M#,
+	but are very convenient to store in a GVL,
+	hence the confusing namespace here
+	
+	This should be refactored once the IOC
+	supports arbitrary ads paths for motors
+*)
+	// AT2L0-SOLID: 19 Axes
+	M1: DUT_MotionStage;
+	M2: DUT_MotionStage;
+	M3: DUT_MotionStage;
+	M4: DUT_MotionStage;
+	M5: DUT_MotionStage;
+	M6: DUT_MotionStage;
+	M7: DUT_MotionStage;
+	M8: DUT_MotionStage;
+	M9: DUT_MotionStage;
+	M10: DUT_MotionStage;
+	M11: DUT_MotionStage;
+	M12: DUT_MotionStage;
+	M13: DUT_MotionStage;
+	M14: DUT_MotionStage;
+	M15: DUT_MotionStage;
+	M16: DUT_MotionStage;
+	M17: DUT_MotionStage;
+	M18: DUT_MotionStage;
+	M19: DUT_MotionStage;
+	
+	// IM1L0-XTES: 3 Axes
+	M20: DUT_MotionStage;
+	M21: DUT_MotionStage;
+	M22: DUT_MotionStage;
+	
+	// IM1L1-PPM: 1 Axis
+	M23: DUT_MotionStage;
+	
+	// IM2L0-XTES: 3 Axes
+	M24: DUT_MotionStage;
+	M25: DUT_MotionStage;
+	M26: DUT_MotionStage;
+	
+	// IM3L0-PPM: 1 Axes
+	M27: DUT_MotionStage;
+	
+	// IM4L0-XTES: 3 Axes
+	M28: DUT_MotionStage;
+	M29: DUT_MotionStage;
+	M30: DUT_MotionStage;
+
+	// PF1L0-WFS: 2 Axes
+	M31: DUT_MotionStage;
+	M32: DUT_MotionStage;
+
+	// RTDSL0: 8 Axes
+	M33: DUT_MotionStage;
+	M34: DUT_MotionStage;
+	M35: DUT_MotionStage;
+	M36: DUT_MotionStage;
+	M37: DUT_MotionStage;
+	M38: DUT_MotionStage;
+	M39: DUT_MotionStage;
+	M40: DUT_MotionStage;
+	
+	// SL1L0-POWER: 4 Axes
+	M41: DUT_MotionStage;
+	M42: DUT_MotionStage;
+	M43: DUT_MotionStage;
+	M44: DUT_MotionStage;
+
+	// SL2L0-POWER: 4 Axes
+	M45: DUT_MotionStage;
+	M46: DUT_MotionStage;
+	M47: DUT_MotionStage;
+	M48: DUT_MotionStage;
+	
+	// SP1K0-KMONO: 6 Axes
+	M49: DUT_MotionStage;
+	M50: DUT_MotionStage;
+	M51: DUT_MotionStage;
+	M52: DUT_MotionStage;
+	M53: DUT_MotionStage;
+	M54: DUT_MotionStage;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

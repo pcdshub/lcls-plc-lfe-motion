@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+  <POU Name="PRG_RTDSL0" Id="{0731cf32-d059-4658-a450-fc5e211c2dc2}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_RTDSL0
+VAR
+	fbMotion1: FB_SimMotor;
+	fbMotion2: FB_SimMotor;
+	fbMotion3: FB_SimMotor;
+	fbMotion4: FB_SimMotor;
+	fbMotion5: FB_SimMotor;
+	fbMotion6: FB_SimMotor;
+	fbMotion7: FB_SimMotor;
+	fbMotion8: FB_SimMotor;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Placeholder, standard simulated motion for all axes
+fbMotion1(stMotionStage := Main.M33);
+fbMotion2(stMotionStage := Main.M34);
+fbMotion3(stMotionStage := Main.M35);
+fbMotion4(stMotionStage := Main.M36);
+fbMotion5(stMotionStage := Main.M37);
+fbMotion6(stMotionStage := Main.M38);
+fbMotion7(stMotionStage := Main.M39);
+fbMotion8(stMotionStage := Main.M40);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
