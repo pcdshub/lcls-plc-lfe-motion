@@ -8,19 +8,29 @@
 	anything else needs to be relegated to a second task
 *)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[PRG_AT2L0_SOLID();
+      <ST><![CDATA[PRG_2_PMPS_PRE();
+
+PRG_AT2L0_SOLID();
 PRG_IM1L0_XTES();
 PRG_IM1L1_PPM();
 PRG_IM2L0_XTES();
 PRG_IM3L0_PPM();
 PRG_IM4L0_XTES();
+PRG_PF1L0_WFS();
 PRG_RTDSL0();
 PRG_SL1L0_POWER();
 PRG_SL2L0_POWER();
 PRG_SP1K0_KMONO();
-PRG_PF1L0_WFS();
 
-PRG_2_PMPS();]]></ST>
+PRG_3_PMPS_POST();]]></ST>
     </Implementation>
+    <LineIds Name="PRG_1_PlcTask">
+      <LineId Id="20" Count="1" />
+      <LineId Id="3" Count="5" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="9" Count="3" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>
