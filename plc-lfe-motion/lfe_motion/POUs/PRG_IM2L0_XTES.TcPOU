@@ -3,7 +3,10 @@
   <POU Name="PRG_IM2L0_XTES" Id="{86a27ca3-c197-4a69-8332-821ef1b19550}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_IM2L0_XTES
 VAR
-	{attribute 'pytmc' := 'pv: IM2L0:XTES'}
+	{attribute 'pytmc' := '
+		pv: IM2L0:XTES
+		io: io
+	'}
 	fbIM2L0: FB_XPIM;
 	stEL6In: EL6InData22b;
 	stEL6Out: EL6OutData22b;

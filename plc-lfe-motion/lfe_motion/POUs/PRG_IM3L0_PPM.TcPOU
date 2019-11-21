@@ -3,7 +3,10 @@
   <POU Name="PRG_IM3L0_PPM" Id="{e4255619-3c3a-488b-9f38-90b77c8df5be}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_IM3L0_PPM
 VAR
-	{attribute 'pytmc' := 'pv: IM3L0:PPM'}
+	{attribute 'pytmc' := '
+		pv: IM3L0:PPM
+		io: io
+	'}
 	fbIM3L0: FB_PPM;
 END_VAR
 ]]></Declaration>
