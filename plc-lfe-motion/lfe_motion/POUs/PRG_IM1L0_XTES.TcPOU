@@ -7,6 +7,11 @@ VAR
 		pv: IM1L0:XTES
 		io: io
 	'}
+	{attribute 'TcLinkTo' := '.bZoomEndFwd := TIIB[IM1L0-EL1088]^Channel 1^Input;
+	                          .bZoomEndBwd := TIIB[IM1L0-EL1088]^Channel 2^Input;
+							  .bFocusEndFwd := TIIB[IM1L0-EL1088]^Channel 3^Input;
+							  .bFocusEndBwd := TIIB[IM1L0-EL1088]^Channel 4^Input;
+							  .fbOpal.bOpalPower := TIIB[IM1L0-EL2004]^Channel 2^Output'}
 	fbIM1L0: FB_XPIM;
 	stEL6In: EL6InData22b;
 	stEL6Out: EL6OutData22b;
@@ -19,8 +24,8 @@ END_VAR
 	stFocusStage := Main.M22,
 	stEl6In := stEL6In,
 	stEl6Out := stEl6Out,
-	fPolished := -87,
-	fFrosted := -57,
+	fYag := -87,
+	fDiamond := -57,
 	fReticle := -27,
 	fOut := 0);]]></ST>
     </Implementation>
