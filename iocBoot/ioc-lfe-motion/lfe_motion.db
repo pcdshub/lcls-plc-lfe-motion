@@ -10,8 +10,8 @@ record(waveform, "IM1L0:XTES:MMS:STATES:YAG:NAME_RBV"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:YAG:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoYag.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -25,8 +25,8 @@ record(ao, "IM1L0:XTES:MMS:STATES:YAG:SETPOINT"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:YAG:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoYag.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -40,8 +40,8 @@ record(ao, "IM1L0:XTES:MMS:STATES:YAG:DELTA"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:YAG:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoYag.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -55,8 +55,8 @@ record(ao, "IM1L0:XTES:MMS:STATES:YAG:VELO"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:YAG:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoYag.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -70,8 +70,8 @@ record(ao, "IM1L0:XTES:MMS:STATES:YAG:ACCL"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:YAG:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoYag.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -85,26 +85,26 @@ record(ao, "IM1L0:XTES:MMS:STATES:YAG:DCCL"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:YAG:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoYag.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM1L0:XTES:MMS:STATES:YAG:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoYag.bExecute=")
 }
 
 record(bi, "IM1L0:XTES:MMS:STATES:YAG:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoYag.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -112,9 +112,9 @@ record(bi, "IM1L0:XTES:MMS:STATES:YAG:MOVE_OK_RBV"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:YAG:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoYag.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -122,9 +122,9 @@ record(bi, "IM1L0:XTES:MMS:STATES:YAG:AT_STATE_RBV"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:YAG:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoYag.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -132,9 +132,9 @@ record(bi, "IM1L0:XTES:MMS:STATES:YAG:DMOV_RBV"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:YAG:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoYag.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -142,9 +142,9 @@ record(bi, "IM1L0:XTES:MMS:STATES:YAG:BUSY_RBV"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:YAG:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoYag.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -172,8 +172,8 @@ record(waveform, "IM1L0:XTES:MMS:STATES:DIAMOND:NAME_RBV"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:DIAMOND:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoDiamond.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -187,8 +187,8 @@ record(ao, "IM1L0:XTES:MMS:STATES:DIAMOND:SETPOINT"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:DIAMOND:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoDiamond.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -202,8 +202,8 @@ record(ao, "IM1L0:XTES:MMS:STATES:DIAMOND:DELTA"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:DIAMOND:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoDiamond.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -217,8 +217,8 @@ record(ao, "IM1L0:XTES:MMS:STATES:DIAMOND:VELO"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:DIAMOND:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoDiamond.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -232,8 +232,8 @@ record(ao, "IM1L0:XTES:MMS:STATES:DIAMOND:ACCL"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:DIAMOND:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoDiamond.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -247,26 +247,26 @@ record(ao, "IM1L0:XTES:MMS:STATES:DIAMOND:DCCL"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:DIAMOND:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoDiamond.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM1L0:XTES:MMS:STATES:DIAMOND:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoDiamond.bExecute=")
 }
 
 record(bi, "IM1L0:XTES:MMS:STATES:DIAMOND:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoDiamond.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -274,9 +274,9 @@ record(bi, "IM1L0:XTES:MMS:STATES:DIAMOND:MOVE_OK_RBV"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:DIAMOND:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoDiamond.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -284,9 +284,9 @@ record(bi, "IM1L0:XTES:MMS:STATES:DIAMOND:AT_STATE_RBV"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:DIAMOND:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoDiamond.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -294,9 +294,9 @@ record(bi, "IM1L0:XTES:MMS:STATES:DIAMOND:DMOV_RBV"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:DIAMOND:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoDiamond.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -304,9 +304,9 @@ record(bi, "IM1L0:XTES:MMS:STATES:DIAMOND:BUSY_RBV"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:DIAMOND:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoDiamond.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -334,8 +334,8 @@ record(waveform, "IM1L0:XTES:MMS:STATES:RETICLE:NAME_RBV"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:RETICLE:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoReticle.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -349,8 +349,8 @@ record(ao, "IM1L0:XTES:MMS:STATES:RETICLE:SETPOINT"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:RETICLE:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoReticle.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -364,8 +364,8 @@ record(ao, "IM1L0:XTES:MMS:STATES:RETICLE:DELTA"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:RETICLE:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoReticle.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -379,8 +379,8 @@ record(ao, "IM1L0:XTES:MMS:STATES:RETICLE:VELO"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:RETICLE:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoReticle.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -394,8 +394,8 @@ record(ao, "IM1L0:XTES:MMS:STATES:RETICLE:ACCL"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:RETICLE:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoReticle.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -409,26 +409,26 @@ record(ao, "IM1L0:XTES:MMS:STATES:RETICLE:DCCL"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:RETICLE:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoReticle.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM1L0:XTES:MMS:STATES:RETICLE:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoReticle.bExecute=")
 }
 
 record(bi, "IM1L0:XTES:MMS:STATES:RETICLE:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoReticle.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -436,9 +436,9 @@ record(bi, "IM1L0:XTES:MMS:STATES:RETICLE:MOVE_OK_RBV"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:RETICLE:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoReticle.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -446,9 +446,9 @@ record(bi, "IM1L0:XTES:MMS:STATES:RETICLE:AT_STATE_RBV"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:RETICLE:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoReticle.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -456,9 +456,9 @@ record(bi, "IM1L0:XTES:MMS:STATES:RETICLE:DMOV_RBV"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:RETICLE:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoReticle.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -466,9 +466,9 @@ record(bi, "IM1L0:XTES:MMS:STATES:RETICLE:BUSY_RBV"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:RETICLE:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoReticle.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -496,8 +496,8 @@ record(waveform, "IM1L0:XTES:MMS:STATES:OUT:NAME_RBV"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:OUT:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoOut.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -511,8 +511,8 @@ record(ao, "IM1L0:XTES:MMS:STATES:OUT:SETPOINT"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:OUT:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoOut.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -526,8 +526,8 @@ record(ao, "IM1L0:XTES:MMS:STATES:OUT:DELTA"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:OUT:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoOut.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -541,8 +541,8 @@ record(ao, "IM1L0:XTES:MMS:STATES:OUT:VELO"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:OUT:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoOut.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -556,8 +556,8 @@ record(ao, "IM1L0:XTES:MMS:STATES:OUT:ACCL"){
 
 record(ai, "IM1L0:XTES:MMS:STATES:OUT:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoOut.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -571,26 +571,26 @@ record(ao, "IM1L0:XTES:MMS:STATES:OUT:DCCL"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:OUT:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoOut.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM1L0:XTES:MMS:STATES:OUT:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoOut.bExecute=")
 }
 
 record(bi, "IM1L0:XTES:MMS:STATES:OUT:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoOut.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -598,9 +598,9 @@ record(bi, "IM1L0:XTES:MMS:STATES:OUT:MOVE_OK_RBV"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:OUT:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoOut.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -608,9 +608,9 @@ record(bi, "IM1L0:XTES:MMS:STATES:OUT:AT_STATE_RBV"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:OUT:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoOut.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -618,9 +618,9 @@ record(bi, "IM1L0:XTES:MMS:STATES:OUT:DMOV_RBV"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:OUT:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoOut.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -628,9 +628,9 @@ record(bi, "IM1L0:XTES:MMS:STATES:OUT:BUSY_RBV"){
 
 record(bi, "IM1L0:XTES:MMS:STATES:OUT:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbStates.fbGoOut.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -648,17 +648,17 @@ record(waveform, "IM1L0:XTES:MMS:STATES:OUT:ERRMSG_RBV"){
 
 record(bi, "IM1L0:XTES:MFW:ERR:RESET_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbFilterWheel.bResetError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM1L0:XTES:MFW:ERR:RESET"){
-  field(ONAM, "One")
   field(ZNAM, "Zero")
+  field(ONAM, "One")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbFilterWheel.bResetError=")
 }
@@ -692,17 +692,17 @@ record(waveform, "IM1L0:XTES:MFW:RAW:CMD"){
 
 record(bi, "IM1L0:XTES:MFW:RAW:SEND_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbFilterWheel.fbCom.bSend?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM1L0:XTES:MFW:RAW:SEND"){
-  field(ONAM, "One")
   field(ZNAM, "Zero")
+  field(ONAM, "One")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbFilterWheel.fbCom.bSend=")
 }
@@ -719,9 +719,9 @@ record(waveform, "IM1L0:XTES:MFW:RAW:RESP_RBV"){
 
 record(bi, "IM1L0:XTES:MFW:RAW:DONE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbFilterWheel.fbCom.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -849,34 +849,34 @@ record(mbbi, "IM1L0:XTES:MFW:RAW:ERR:RECV_RBV"){
 
 record(bi, "IM1L0:XTES:CAM:PWR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbOpal.bOpalPower?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM1L0:XTES:CAM:PWR"){
-  field(ONAM, "One")
   field(ZNAM, "Zero")
+  field(ONAM, "One")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbOpal.bOpalPower=")
 }
 
 record(bi, "IM1L0:XTES:SFW:FLOW_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbFlowSwitch.bFlowOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM1L0:XTES:SFW:FLOW"){
-  field(ONAM, "One")
   field(ZNAM, "Zero")
+  field(ONAM, "One")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbFlowSwitch.bFlowOk=")
 }
@@ -893,8 +893,8 @@ record(waveform, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:NAME_RBV"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPolished.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -908,8 +908,8 @@ record(ao, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:SETPOINT"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPolished.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -923,8 +923,8 @@ record(ao, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:DELTA"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPolished.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -938,8 +938,8 @@ record(ao, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:VELO"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPolished.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -953,8 +953,8 @@ record(ao, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:ACCL"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPolished.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -968,26 +968,26 @@ record(ao, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:DCCL"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPolished.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPolished.bExecute=")
 }
 
 record(bi, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPolished.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -995,9 +995,9 @@ record(bi, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:MOVE_OK_RBV"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPolished.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1005,9 +1005,9 @@ record(bi, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:AT_STATE_RBV"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPolished.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1015,9 +1015,9 @@ record(bi, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:DMOV_RBV"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPolished.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1025,9 +1025,9 @@ record(bi, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:BUSY_RBV"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:POLISHED_YAG:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPolished.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1055,8 +1055,8 @@ record(waveform, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:NAME_RBV"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoFrosted.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1070,8 +1070,8 @@ record(ao, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:SETPOINT"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoFrosted.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1085,8 +1085,8 @@ record(ao, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:DELTA"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoFrosted.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1100,8 +1100,8 @@ record(ao, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:VELO"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoFrosted.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1115,8 +1115,8 @@ record(ao, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:ACCL"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoFrosted.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1130,26 +1130,26 @@ record(ao, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:DCCL"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoFrosted.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoFrosted.bExecute=")
 }
 
 record(bi, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoFrosted.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1157,9 +1157,9 @@ record(bi, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:MOVE_OK_RBV"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoFrosted.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1167,9 +1167,9 @@ record(bi, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:AT_STATE_RBV"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoFrosted.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1177,9 +1177,9 @@ record(bi, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:DMOV_RBV"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoFrosted.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1187,9 +1187,9 @@ record(bi, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:BUSY_RBV"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:FROSTED_YAG:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoFrosted.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1217,8 +1217,8 @@ record(waveform, "IM1L1:PPM:MMS:STATES:POWER_METER:NAME_RBV"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:POWER_METER:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPower.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1232,8 +1232,8 @@ record(ao, "IM1L1:PPM:MMS:STATES:POWER_METER:SETPOINT"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:POWER_METER:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPower.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1247,8 +1247,8 @@ record(ao, "IM1L1:PPM:MMS:STATES:POWER_METER:DELTA"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:POWER_METER:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPower.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1262,8 +1262,8 @@ record(ao, "IM1L1:PPM:MMS:STATES:POWER_METER:VELO"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:POWER_METER:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPower.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1277,8 +1277,8 @@ record(ao, "IM1L1:PPM:MMS:STATES:POWER_METER:ACCL"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:POWER_METER:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPower.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1292,26 +1292,26 @@ record(ao, "IM1L1:PPM:MMS:STATES:POWER_METER:DCCL"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:POWER_METER:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPower.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM1L1:PPM:MMS:STATES:POWER_METER:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPower.bExecute=")
 }
 
 record(bi, "IM1L1:PPM:MMS:STATES:POWER_METER:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPower.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1319,9 +1319,9 @@ record(bi, "IM1L1:PPM:MMS:STATES:POWER_METER:MOVE_OK_RBV"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:POWER_METER:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPower.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1329,9 +1329,9 @@ record(bi, "IM1L1:PPM:MMS:STATES:POWER_METER:AT_STATE_RBV"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:POWER_METER:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPower.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1339,9 +1339,9 @@ record(bi, "IM1L1:PPM:MMS:STATES:POWER_METER:DMOV_RBV"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:POWER_METER:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPower.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1349,9 +1349,9 @@ record(bi, "IM1L1:PPM:MMS:STATES:POWER_METER:BUSY_RBV"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:POWER_METER:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoPower.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1379,8 +1379,8 @@ record(waveform, "IM1L1:PPM:MMS:STATES:OUT:NAME_RBV"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:OUT:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoOut.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1394,8 +1394,8 @@ record(ao, "IM1L1:PPM:MMS:STATES:OUT:SETPOINT"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:OUT:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoOut.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1409,8 +1409,8 @@ record(ao, "IM1L1:PPM:MMS:STATES:OUT:DELTA"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:OUT:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoOut.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1424,8 +1424,8 @@ record(ao, "IM1L1:PPM:MMS:STATES:OUT:VELO"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:OUT:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoOut.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1439,8 +1439,8 @@ record(ao, "IM1L1:PPM:MMS:STATES:OUT:ACCL"){
 
 record(ai, "IM1L1:PPM:MMS:STATES:OUT:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoOut.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1454,26 +1454,26 @@ record(ao, "IM1L1:PPM:MMS:STATES:OUT:DCCL"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:OUT:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoOut.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM1L1:PPM:MMS:STATES:OUT:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoOut.bExecute=")
 }
 
 record(bi, "IM1L1:PPM:MMS:STATES:OUT:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoOut.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1481,9 +1481,9 @@ record(bi, "IM1L1:PPM:MMS:STATES:OUT:MOVE_OK_RBV"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:OUT:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoOut.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1491,9 +1491,9 @@ record(bi, "IM1L1:PPM:MMS:STATES:OUT:AT_STATE_RBV"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:OUT:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoOut.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1501,9 +1501,9 @@ record(bi, "IM1L1:PPM:MMS:STATES:OUT:DMOV_RBV"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:OUT:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoOut.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1511,9 +1511,9 @@ record(bi, "IM1L1:PPM:MMS:STATES:OUT:BUSY_RBV"){
 
 record(bi, "IM1L1:PPM:MMS:STATES:OUT:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbStates.fbGoOut.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1531,8 +1531,8 @@ record(waveform, "IM1L1:PPM:MMS:STATES:OUT:ERRMSG_RBV"){
 
 record(ai, "IM1L1:PPM:SPM:VOLT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fVoltage?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1550,8 +1550,8 @@ record(waveform, "IM1L1:PPM:SPM:VOLT_BUFFER_RBV"){
 
 record(ai, "IM1L1:PPM:SPM:MJ_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fCalibMJ?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1569,8 +1569,8 @@ record(waveform, "IM1L1:PPM:SPM:MJ_BUFFER_RBV"){
 
 record(ai, "IM1L1:PPM:SPM:STC:TEMP_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.fTemp?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1578,9 +1578,9 @@ record(ai, "IM1L1:PPM:SPM:STC:TEMP_RBV"){
 
 record(bi, "IM1L1:PPM:SPM:STC:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1588,25 +1588,25 @@ record(bi, "IM1L1:PPM:SPM:STC:ERR_RBV"){
 
 record(bi, "IM1L1:PPM:GIGE:PWR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbGige.bGigePower?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM1L1:PPM:GIGE:PWR"){
-  field(ONAM, "One")
   field(ZNAM, "Zero")
+  field(ONAM, "One")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbGige.bGigePower=")
 }
 
 record(ai, "IM1L1:PPM:GIGE:CIL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbGige.fIlluminatorPercent?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1628,8 +1628,8 @@ record(longin, "IM1L1:PPM:SFM:MA_RBV"){
 
 record(ai, "IM1L1:PPM:SFM:FLOW_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbFlowMeter.fFlowRate?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1637,8 +1637,8 @@ record(ai, "IM1L1:PPM:SFM:FLOW_RBV"){
 
 record(ai, "IM1L1:PPM:YAG:TEMP_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.fTemp?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1646,9 +1646,9 @@ record(ai, "IM1L1:PPM:YAG:TEMP_RBV"){
 
 record(bi, "IM1L1:PPM:YAG:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1666,8 +1666,8 @@ record(waveform, "IM2L0:XTES:MMS:STATES:YAG:NAME_RBV"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:YAG:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoYag.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1681,8 +1681,8 @@ record(ao, "IM2L0:XTES:MMS:STATES:YAG:SETPOINT"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:YAG:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoYag.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1696,8 +1696,8 @@ record(ao, "IM2L0:XTES:MMS:STATES:YAG:DELTA"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:YAG:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoYag.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1711,8 +1711,8 @@ record(ao, "IM2L0:XTES:MMS:STATES:YAG:VELO"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:YAG:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoYag.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1726,8 +1726,8 @@ record(ao, "IM2L0:XTES:MMS:STATES:YAG:ACCL"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:YAG:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoYag.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1741,26 +1741,26 @@ record(ao, "IM2L0:XTES:MMS:STATES:YAG:DCCL"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:YAG:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoYag.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM2L0:XTES:MMS:STATES:YAG:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoYag.bExecute=")
 }
 
 record(bi, "IM2L0:XTES:MMS:STATES:YAG:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoYag.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1768,9 +1768,9 @@ record(bi, "IM2L0:XTES:MMS:STATES:YAG:MOVE_OK_RBV"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:YAG:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoYag.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1778,9 +1778,9 @@ record(bi, "IM2L0:XTES:MMS:STATES:YAG:AT_STATE_RBV"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:YAG:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoYag.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1788,9 +1788,9 @@ record(bi, "IM2L0:XTES:MMS:STATES:YAG:DMOV_RBV"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:YAG:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoYag.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1798,9 +1798,9 @@ record(bi, "IM2L0:XTES:MMS:STATES:YAG:BUSY_RBV"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:YAG:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoYag.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1828,8 +1828,8 @@ record(waveform, "IM2L0:XTES:MMS:STATES:DIAMOND:NAME_RBV"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:DIAMOND:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoDiamond.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1843,8 +1843,8 @@ record(ao, "IM2L0:XTES:MMS:STATES:DIAMOND:SETPOINT"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:DIAMOND:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoDiamond.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1858,8 +1858,8 @@ record(ao, "IM2L0:XTES:MMS:STATES:DIAMOND:DELTA"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:DIAMOND:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoDiamond.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1873,8 +1873,8 @@ record(ao, "IM2L0:XTES:MMS:STATES:DIAMOND:VELO"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:DIAMOND:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoDiamond.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1888,8 +1888,8 @@ record(ao, "IM2L0:XTES:MMS:STATES:DIAMOND:ACCL"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:DIAMOND:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoDiamond.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -1903,26 +1903,26 @@ record(ao, "IM2L0:XTES:MMS:STATES:DIAMOND:DCCL"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:DIAMOND:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoDiamond.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM2L0:XTES:MMS:STATES:DIAMOND:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoDiamond.bExecute=")
 }
 
 record(bi, "IM2L0:XTES:MMS:STATES:DIAMOND:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoDiamond.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1930,9 +1930,9 @@ record(bi, "IM2L0:XTES:MMS:STATES:DIAMOND:MOVE_OK_RBV"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:DIAMOND:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoDiamond.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1940,9 +1940,9 @@ record(bi, "IM2L0:XTES:MMS:STATES:DIAMOND:AT_STATE_RBV"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:DIAMOND:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoDiamond.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1950,9 +1950,9 @@ record(bi, "IM2L0:XTES:MMS:STATES:DIAMOND:DMOV_RBV"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:DIAMOND:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoDiamond.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1960,9 +1960,9 @@ record(bi, "IM2L0:XTES:MMS:STATES:DIAMOND:BUSY_RBV"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:DIAMOND:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoDiamond.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -1990,8 +1990,8 @@ record(waveform, "IM2L0:XTES:MMS:STATES:RETICLE:NAME_RBV"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:RETICLE:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoReticle.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2005,8 +2005,8 @@ record(ao, "IM2L0:XTES:MMS:STATES:RETICLE:SETPOINT"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:RETICLE:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoReticle.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2020,8 +2020,8 @@ record(ao, "IM2L0:XTES:MMS:STATES:RETICLE:DELTA"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:RETICLE:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoReticle.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2035,8 +2035,8 @@ record(ao, "IM2L0:XTES:MMS:STATES:RETICLE:VELO"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:RETICLE:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoReticle.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2050,8 +2050,8 @@ record(ao, "IM2L0:XTES:MMS:STATES:RETICLE:ACCL"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:RETICLE:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoReticle.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2065,26 +2065,26 @@ record(ao, "IM2L0:XTES:MMS:STATES:RETICLE:DCCL"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:RETICLE:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoReticle.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM2L0:XTES:MMS:STATES:RETICLE:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoReticle.bExecute=")
 }
 
 record(bi, "IM2L0:XTES:MMS:STATES:RETICLE:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoReticle.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2092,9 +2092,9 @@ record(bi, "IM2L0:XTES:MMS:STATES:RETICLE:MOVE_OK_RBV"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:RETICLE:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoReticle.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2102,9 +2102,9 @@ record(bi, "IM2L0:XTES:MMS:STATES:RETICLE:AT_STATE_RBV"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:RETICLE:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoReticle.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2112,9 +2112,9 @@ record(bi, "IM2L0:XTES:MMS:STATES:RETICLE:DMOV_RBV"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:RETICLE:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoReticle.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2122,9 +2122,9 @@ record(bi, "IM2L0:XTES:MMS:STATES:RETICLE:BUSY_RBV"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:RETICLE:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoReticle.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2152,8 +2152,8 @@ record(waveform, "IM2L0:XTES:MMS:STATES:OUT:NAME_RBV"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:OUT:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoOut.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2167,8 +2167,8 @@ record(ao, "IM2L0:XTES:MMS:STATES:OUT:SETPOINT"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:OUT:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoOut.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2182,8 +2182,8 @@ record(ao, "IM2L0:XTES:MMS:STATES:OUT:DELTA"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:OUT:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoOut.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2197,8 +2197,8 @@ record(ao, "IM2L0:XTES:MMS:STATES:OUT:VELO"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:OUT:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoOut.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2212,8 +2212,8 @@ record(ao, "IM2L0:XTES:MMS:STATES:OUT:ACCL"){
 
 record(ai, "IM2L0:XTES:MMS:STATES:OUT:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoOut.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2227,26 +2227,26 @@ record(ao, "IM2L0:XTES:MMS:STATES:OUT:DCCL"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:OUT:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoOut.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM2L0:XTES:MMS:STATES:OUT:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoOut.bExecute=")
 }
 
 record(bi, "IM2L0:XTES:MMS:STATES:OUT:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoOut.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2254,9 +2254,9 @@ record(bi, "IM2L0:XTES:MMS:STATES:OUT:MOVE_OK_RBV"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:OUT:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoOut.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2264,9 +2264,9 @@ record(bi, "IM2L0:XTES:MMS:STATES:OUT:AT_STATE_RBV"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:OUT:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoOut.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2274,9 +2274,9 @@ record(bi, "IM2L0:XTES:MMS:STATES:OUT:DMOV_RBV"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:OUT:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoOut.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2284,9 +2284,9 @@ record(bi, "IM2L0:XTES:MMS:STATES:OUT:BUSY_RBV"){
 
 record(bi, "IM2L0:XTES:MMS:STATES:OUT:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbStates.fbGoOut.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2304,17 +2304,17 @@ record(waveform, "IM2L0:XTES:MMS:STATES:OUT:ERRMSG_RBV"){
 
 record(bi, "IM2L0:XTES:MFW:ERR:RESET_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbFilterWheel.bResetError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM2L0:XTES:MFW:ERR:RESET"){
-  field(ONAM, "One")
   field(ZNAM, "Zero")
+  field(ONAM, "One")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbFilterWheel.bResetError=")
 }
@@ -2348,17 +2348,17 @@ record(waveform, "IM2L0:XTES:MFW:RAW:CMD"){
 
 record(bi, "IM2L0:XTES:MFW:RAW:SEND_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbFilterWheel.fbCom.bSend?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM2L0:XTES:MFW:RAW:SEND"){
-  field(ONAM, "One")
   field(ZNAM, "Zero")
+  field(ONAM, "One")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbFilterWheel.fbCom.bSend=")
 }
@@ -2375,9 +2375,9 @@ record(waveform, "IM2L0:XTES:MFW:RAW:RESP_RBV"){
 
 record(bi, "IM2L0:XTES:MFW:RAW:DONE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbFilterWheel.fbCom.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2505,34 +2505,34 @@ record(mbbi, "IM2L0:XTES:MFW:RAW:ERR:RECV_RBV"){
 
 record(bi, "IM2L0:XTES:CAM:PWR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbOpal.bOpalPower?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM2L0:XTES:CAM:PWR"){
-  field(ONAM, "One")
   field(ZNAM, "Zero")
+  field(ONAM, "One")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbOpal.bOpalPower=")
 }
 
 record(bi, "IM2L0:XTES:SFW:FLOW_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbFlowSwitch.bFlowOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM2L0:XTES:SFW:FLOW"){
-  field(ONAM, "One")
   field(ZNAM, "Zero")
+  field(ONAM, "One")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbFlowSwitch.bFlowOk=")
 }
@@ -2549,8 +2549,8 @@ record(waveform, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:NAME_RBV"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPolished.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2564,8 +2564,8 @@ record(ao, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:SETPOINT"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPolished.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2579,8 +2579,8 @@ record(ao, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:DELTA"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPolished.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2594,8 +2594,8 @@ record(ao, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:VELO"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPolished.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2609,8 +2609,8 @@ record(ao, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:ACCL"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPolished.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2624,26 +2624,26 @@ record(ao, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:DCCL"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPolished.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPolished.bExecute=")
 }
 
 record(bi, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPolished.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2651,9 +2651,9 @@ record(bi, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:MOVE_OK_RBV"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPolished.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2661,9 +2661,9 @@ record(bi, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:AT_STATE_RBV"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPolished.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2671,9 +2671,9 @@ record(bi, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:DMOV_RBV"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPolished.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2681,9 +2681,9 @@ record(bi, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:BUSY_RBV"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:POLISHED_YAG:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPolished.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2711,8 +2711,8 @@ record(waveform, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:NAME_RBV"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoFrosted.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2726,8 +2726,8 @@ record(ao, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:SETPOINT"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoFrosted.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2741,8 +2741,8 @@ record(ao, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:DELTA"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoFrosted.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2756,8 +2756,8 @@ record(ao, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:VELO"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoFrosted.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2771,8 +2771,8 @@ record(ao, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:ACCL"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoFrosted.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2786,26 +2786,26 @@ record(ao, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:DCCL"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoFrosted.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoFrosted.bExecute=")
 }
 
 record(bi, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoFrosted.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2813,9 +2813,9 @@ record(bi, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:MOVE_OK_RBV"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoFrosted.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2823,9 +2823,9 @@ record(bi, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:AT_STATE_RBV"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoFrosted.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2833,9 +2833,9 @@ record(bi, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:DMOV_RBV"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoFrosted.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2843,9 +2843,9 @@ record(bi, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:BUSY_RBV"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:FROSTED_YAG:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoFrosted.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2873,8 +2873,8 @@ record(waveform, "IM3L0:PPM:MMS:STATES:POWER_METER:NAME_RBV"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:POWER_METER:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPower.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2888,8 +2888,8 @@ record(ao, "IM3L0:PPM:MMS:STATES:POWER_METER:SETPOINT"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:POWER_METER:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPower.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2903,8 +2903,8 @@ record(ao, "IM3L0:PPM:MMS:STATES:POWER_METER:DELTA"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:POWER_METER:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPower.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2918,8 +2918,8 @@ record(ao, "IM3L0:PPM:MMS:STATES:POWER_METER:VELO"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:POWER_METER:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPower.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2933,8 +2933,8 @@ record(ao, "IM3L0:PPM:MMS:STATES:POWER_METER:ACCL"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:POWER_METER:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPower.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -2948,26 +2948,26 @@ record(ao, "IM3L0:PPM:MMS:STATES:POWER_METER:DCCL"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:POWER_METER:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPower.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM3L0:PPM:MMS:STATES:POWER_METER:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPower.bExecute=")
 }
 
 record(bi, "IM3L0:PPM:MMS:STATES:POWER_METER:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPower.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2975,9 +2975,9 @@ record(bi, "IM3L0:PPM:MMS:STATES:POWER_METER:MOVE_OK_RBV"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:POWER_METER:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPower.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2985,9 +2985,9 @@ record(bi, "IM3L0:PPM:MMS:STATES:POWER_METER:AT_STATE_RBV"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:POWER_METER:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPower.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -2995,9 +2995,9 @@ record(bi, "IM3L0:PPM:MMS:STATES:POWER_METER:DMOV_RBV"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:POWER_METER:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPower.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3005,9 +3005,9 @@ record(bi, "IM3L0:PPM:MMS:STATES:POWER_METER:BUSY_RBV"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:POWER_METER:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoPower.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3035,8 +3035,8 @@ record(waveform, "IM3L0:PPM:MMS:STATES:OUT:NAME_RBV"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:OUT:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoOut.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3050,8 +3050,8 @@ record(ao, "IM3L0:PPM:MMS:STATES:OUT:SETPOINT"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:OUT:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoOut.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3065,8 +3065,8 @@ record(ao, "IM3L0:PPM:MMS:STATES:OUT:DELTA"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:OUT:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoOut.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3080,8 +3080,8 @@ record(ao, "IM3L0:PPM:MMS:STATES:OUT:VELO"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:OUT:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoOut.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3095,8 +3095,8 @@ record(ao, "IM3L0:PPM:MMS:STATES:OUT:ACCL"){
 
 record(ai, "IM3L0:PPM:MMS:STATES:OUT:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoOut.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3110,26 +3110,26 @@ record(ao, "IM3L0:PPM:MMS:STATES:OUT:DCCL"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:OUT:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoOut.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM3L0:PPM:MMS:STATES:OUT:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoOut.bExecute=")
 }
 
 record(bi, "IM3L0:PPM:MMS:STATES:OUT:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoOut.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3137,9 +3137,9 @@ record(bi, "IM3L0:PPM:MMS:STATES:OUT:MOVE_OK_RBV"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:OUT:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoOut.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3147,9 +3147,9 @@ record(bi, "IM3L0:PPM:MMS:STATES:OUT:AT_STATE_RBV"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:OUT:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoOut.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3157,9 +3157,9 @@ record(bi, "IM3L0:PPM:MMS:STATES:OUT:DMOV_RBV"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:OUT:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoOut.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3167,9 +3167,9 @@ record(bi, "IM3L0:PPM:MMS:STATES:OUT:BUSY_RBV"){
 
 record(bi, "IM3L0:PPM:MMS:STATES:OUT:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbStates.fbGoOut.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3187,8 +3187,8 @@ record(waveform, "IM3L0:PPM:MMS:STATES:OUT:ERRMSG_RBV"){
 
 record(ai, "IM3L0:PPM:SPM:VOLT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fVoltage?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3206,8 +3206,8 @@ record(waveform, "IM3L0:PPM:SPM:VOLT_BUFFER_RBV"){
 
 record(ai, "IM3L0:PPM:SPM:MJ_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fCalibMJ?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3225,8 +3225,8 @@ record(waveform, "IM3L0:PPM:SPM:MJ_BUFFER_RBV"){
 
 record(ai, "IM3L0:PPM:SPM:STC:TEMP_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.fTemp?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3234,9 +3234,9 @@ record(ai, "IM3L0:PPM:SPM:STC:TEMP_RBV"){
 
 record(bi, "IM3L0:PPM:SPM:STC:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3244,25 +3244,25 @@ record(bi, "IM3L0:PPM:SPM:STC:ERR_RBV"){
 
 record(bi, "IM3L0:PPM:GIGE:PWR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbGige.bGigePower?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM3L0:PPM:GIGE:PWR"){
-  field(ONAM, "One")
   field(ZNAM, "Zero")
+  field(ONAM, "One")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbGige.bGigePower=")
 }
 
 record(ai, "IM3L0:PPM:GIGE:CIL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbGige.fIlluminatorPercent?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3284,8 +3284,8 @@ record(longin, "IM3L0:PPM:SFM:MA_RBV"){
 
 record(ai, "IM3L0:PPM:SFM:FLOW_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbFlowMeter.fFlowRate?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3293,8 +3293,8 @@ record(ai, "IM3L0:PPM:SFM:FLOW_RBV"){
 
 record(ai, "IM3L0:PPM:YAG:TEMP_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.fTemp?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3302,9 +3302,9 @@ record(ai, "IM3L0:PPM:YAG:TEMP_RBV"){
 
 record(bi, "IM3L0:PPM:YAG:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3322,8 +3322,8 @@ record(waveform, "IM4L0:XTES:MMS:STATES:YAG:NAME_RBV"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:YAG:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoYag.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3337,8 +3337,8 @@ record(ao, "IM4L0:XTES:MMS:STATES:YAG:SETPOINT"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:YAG:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoYag.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3352,8 +3352,8 @@ record(ao, "IM4L0:XTES:MMS:STATES:YAG:DELTA"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:YAG:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoYag.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3367,8 +3367,8 @@ record(ao, "IM4L0:XTES:MMS:STATES:YAG:VELO"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:YAG:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoYag.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3382,8 +3382,8 @@ record(ao, "IM4L0:XTES:MMS:STATES:YAG:ACCL"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:YAG:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoYag.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3397,26 +3397,26 @@ record(ao, "IM4L0:XTES:MMS:STATES:YAG:DCCL"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:YAG:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoYag.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM4L0:XTES:MMS:STATES:YAG:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoYag.bExecute=")
 }
 
 record(bi, "IM4L0:XTES:MMS:STATES:YAG:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoYag.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3424,9 +3424,9 @@ record(bi, "IM4L0:XTES:MMS:STATES:YAG:MOVE_OK_RBV"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:YAG:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoYag.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3434,9 +3434,9 @@ record(bi, "IM4L0:XTES:MMS:STATES:YAG:AT_STATE_RBV"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:YAG:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoYag.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3444,9 +3444,9 @@ record(bi, "IM4L0:XTES:MMS:STATES:YAG:DMOV_RBV"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:YAG:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoYag.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3454,9 +3454,9 @@ record(bi, "IM4L0:XTES:MMS:STATES:YAG:BUSY_RBV"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:YAG:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoYag.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3484,8 +3484,8 @@ record(waveform, "IM4L0:XTES:MMS:STATES:DIAMOND:NAME_RBV"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:DIAMOND:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoDiamond.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3499,8 +3499,8 @@ record(ao, "IM4L0:XTES:MMS:STATES:DIAMOND:SETPOINT"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:DIAMOND:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoDiamond.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3514,8 +3514,8 @@ record(ao, "IM4L0:XTES:MMS:STATES:DIAMOND:DELTA"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:DIAMOND:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoDiamond.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3529,8 +3529,8 @@ record(ao, "IM4L0:XTES:MMS:STATES:DIAMOND:VELO"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:DIAMOND:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoDiamond.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3544,8 +3544,8 @@ record(ao, "IM4L0:XTES:MMS:STATES:DIAMOND:ACCL"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:DIAMOND:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoDiamond.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3559,26 +3559,26 @@ record(ao, "IM4L0:XTES:MMS:STATES:DIAMOND:DCCL"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:DIAMOND:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoDiamond.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM4L0:XTES:MMS:STATES:DIAMOND:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoDiamond.bExecute=")
 }
 
 record(bi, "IM4L0:XTES:MMS:STATES:DIAMOND:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoDiamond.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3586,9 +3586,9 @@ record(bi, "IM4L0:XTES:MMS:STATES:DIAMOND:MOVE_OK_RBV"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:DIAMOND:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoDiamond.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3596,9 +3596,9 @@ record(bi, "IM4L0:XTES:MMS:STATES:DIAMOND:AT_STATE_RBV"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:DIAMOND:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoDiamond.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3606,9 +3606,9 @@ record(bi, "IM4L0:XTES:MMS:STATES:DIAMOND:DMOV_RBV"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:DIAMOND:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoDiamond.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3616,9 +3616,9 @@ record(bi, "IM4L0:XTES:MMS:STATES:DIAMOND:BUSY_RBV"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:DIAMOND:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoDiamond.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3646,8 +3646,8 @@ record(waveform, "IM4L0:XTES:MMS:STATES:RETICLE:NAME_RBV"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:RETICLE:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoReticle.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3661,8 +3661,8 @@ record(ao, "IM4L0:XTES:MMS:STATES:RETICLE:SETPOINT"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:RETICLE:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoReticle.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3676,8 +3676,8 @@ record(ao, "IM4L0:XTES:MMS:STATES:RETICLE:DELTA"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:RETICLE:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoReticle.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3691,8 +3691,8 @@ record(ao, "IM4L0:XTES:MMS:STATES:RETICLE:VELO"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:RETICLE:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoReticle.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3706,8 +3706,8 @@ record(ao, "IM4L0:XTES:MMS:STATES:RETICLE:ACCL"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:RETICLE:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoReticle.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3721,26 +3721,26 @@ record(ao, "IM4L0:XTES:MMS:STATES:RETICLE:DCCL"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:RETICLE:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoReticle.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM4L0:XTES:MMS:STATES:RETICLE:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoReticle.bExecute=")
 }
 
 record(bi, "IM4L0:XTES:MMS:STATES:RETICLE:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoReticle.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3748,9 +3748,9 @@ record(bi, "IM4L0:XTES:MMS:STATES:RETICLE:MOVE_OK_RBV"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:RETICLE:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoReticle.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3758,9 +3758,9 @@ record(bi, "IM4L0:XTES:MMS:STATES:RETICLE:AT_STATE_RBV"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:RETICLE:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoReticle.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3768,9 +3768,9 @@ record(bi, "IM4L0:XTES:MMS:STATES:RETICLE:DMOV_RBV"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:RETICLE:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoReticle.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3778,9 +3778,9 @@ record(bi, "IM4L0:XTES:MMS:STATES:RETICLE:BUSY_RBV"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:RETICLE:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoReticle.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3808,8 +3808,8 @@ record(waveform, "IM4L0:XTES:MMS:STATES:OUT:NAME_RBV"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:OUT:SETPOINT_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoOut.stPositionState.fPosition?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3823,8 +3823,8 @@ record(ao, "IM4L0:XTES:MMS:STATES:OUT:SETPOINT"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:OUT:DELTA_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoOut.stPositionState.fDelta?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3838,8 +3838,8 @@ record(ao, "IM4L0:XTES:MMS:STATES:OUT:DELTA"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:OUT:VELO_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoOut.stPositionState.fVelocity?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3853,8 +3853,8 @@ record(ao, "IM4L0:XTES:MMS:STATES:OUT:VELO"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:OUT:ACCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoOut.stPositionState.fAccel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3868,8 +3868,8 @@ record(ao, "IM4L0:XTES:MMS:STATES:OUT:ACCL"){
 
 record(ai, "IM4L0:XTES:MMS:STATES:OUT:DCCL_RBV"){
   field(PINI, "1")
-  field(TSE, "-2")
   field(PREC, "3")
+  field(TSE, "-2")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoOut.stPositionState.fDecel?")
   field(DTYP, "asynFloat64")
   field(SCAN, "I/O Intr")
@@ -3883,26 +3883,26 @@ record(ao, "IM4L0:XTES:MMS:STATES:OUT:DCCL"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:OUT:GO_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoOut.bExecute?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM4L0:XTES:MMS:STATES:OUT:GO"){
-  field(ONAM, "True")
   field(ZNAM, "False")
+  field(ONAM, "True")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoOut.bExecute=")
 }
 
 record(bi, "IM4L0:XTES:MMS:STATES:OUT:MOVE_OK_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoOut.bMoveOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3910,9 +3910,9 @@ record(bi, "IM4L0:XTES:MMS:STATES:OUT:MOVE_OK_RBV"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:OUT:AT_STATE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoOut.bAtState?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3920,9 +3920,9 @@ record(bi, "IM4L0:XTES:MMS:STATES:OUT:AT_STATE_RBV"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:OUT:DMOV_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoOut.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3930,9 +3930,9 @@ record(bi, "IM4L0:XTES:MMS:STATES:OUT:DMOV_RBV"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:OUT:BUSY_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoOut.bBusy?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3940,9 +3940,9 @@ record(bi, "IM4L0:XTES:MMS:STATES:OUT:BUSY_RBV"){
 
 record(bi, "IM4L0:XTES:MMS:STATES:OUT:ERR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "False")
   field(ONAM, "True")
   field(TSE, "-2")
-  field(ZNAM, "False")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbStates.fbGoOut.bError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -3960,17 +3960,17 @@ record(waveform, "IM4L0:XTES:MMS:STATES:OUT:ERRMSG_RBV"){
 
 record(bi, "IM4L0:XTES:MFW:ERR:RESET_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbFilterWheel.bResetError?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM4L0:XTES:MFW:ERR:RESET"){
-  field(ONAM, "One")
   field(ZNAM, "Zero")
+  field(ONAM, "One")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbFilterWheel.bResetError=")
 }
@@ -4004,17 +4004,17 @@ record(waveform, "IM4L0:XTES:MFW:RAW:CMD"){
 
 record(bi, "IM4L0:XTES:MFW:RAW:SEND_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbFilterWheel.fbCom.bSend?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM4L0:XTES:MFW:RAW:SEND"){
-  field(ONAM, "One")
   field(ZNAM, "Zero")
+  field(ONAM, "One")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbFilterWheel.fbCom.bSend=")
 }
@@ -4031,9 +4031,9 @@ record(waveform, "IM4L0:XTES:MFW:RAW:RESP_RBV"){
 
 record(bi, "IM4L0:XTES:MFW:RAW:DONE_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbFilterWheel.fbCom.bDone?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
@@ -4161,34 +4161,34 @@ record(mbbi, "IM4L0:XTES:MFW:RAW:ERR:RECV_RBV"){
 
 record(bi, "IM4L0:XTES:CAM:PWR_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbOpal.bOpalPower?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM4L0:XTES:CAM:PWR"){
-  field(ONAM, "One")
   field(ZNAM, "Zero")
+  field(ONAM, "One")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbOpal.bOpalPower=")
 }
 
 record(bi, "IM4L0:XTES:SFW:FLOW_RBV"){
   field(PINI, "1")
+  field(ZNAM, "Zero")
   field(ONAM, "One")
   field(TSE, "-2")
-  field(ZNAM, "Zero")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbFlowSwitch.bFlowOk?")
   field(DTYP, "asynInt32")
   field(SCAN, "I/O Intr")
 }
 
 record(bo, "IM4L0:XTES:SFW:FLOW"){
-  field(ONAM, "One")
   field(ZNAM, "Zero")
+  field(ONAM, "One")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbFlowSwitch.bFlowOk=")
 }

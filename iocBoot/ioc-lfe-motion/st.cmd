@@ -1,4 +1,4 @@
-#!/reg/neh/home/zlentz/github/ads-ioc/bin/rhel7-x86_64/adsIoc
+#!/reg/g/pcds/epics/ioc/common/ads-ioc/v0.1.5/bin/rhel7-x86_64/adsIoc
 
 < envPaths
 
@@ -27,7 +27,6 @@ cd "$(ADS_IOC_TOP)/db"
 
 epicsEnvSet("MOTOR_PORT",    "PLC_ADS")
 epicsEnvSet("PREFIX",        "PLC:LFE:MOTION:")
-epicsEnvSet("ECM_NUMAXES",   "54")
 epicsEnvSet("NUMAXES",       "54")
 
 EthercatMCCreateController("$(MOTOR_PORT)", "$(ASYN_PORT)", "$(NUMAXES)", "200", "1000")
