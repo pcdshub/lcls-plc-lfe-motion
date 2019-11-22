@@ -6,7 +6,7 @@ epicsEnvSet("ADS_IOC_TOP", "$(TOP)" )
 
 epicsEnvSet("IOCNAME", "ioc-lfe-motion" )
 epicsEnvSet("ENGINEER", "zlentz" )
-epicsEnvSet("LOCATION", "TST:MOTION" )
+epicsEnvSet("LOCATION", "PLC:LFE:MOTION" )
 epicsEnvSet("IOCSH_PS1", "$(IOCNAME)> " )
 
 # Run common startup commands for linux soft IOC's
@@ -17,8 +17,8 @@ dbLoadDatabase("$(ADS_IOC_TOP)/dbd/adsIoc.dbd")
 adsIoc_registerRecordDeviceDriver(pdbbase)
 
 epicsEnvSet("ASYN_PORT",     "ASYN_PLC")
-epicsEnvSet("IPADDR",        "172.21.148.227")
-epicsEnvSet("AMSID",         "172.21.42.227.1.1")
+epicsEnvSet("IPADDR",        "172.21.88.228")
+epicsEnvSet("AMSID",         "172.21.88.228.1.1")
 epicsEnvSet("IPPORT",        "851")
 
 adsAsynPortDriverConfigure("$(ASYN_PORT)","$(IPADDR)","$(AMSID)","$(IPPORT)", 1000, 0, 0, 50, 100, 1000, 0)
@@ -26,7 +26,7 @@ adsAsynPortDriverConfigure("$(ASYN_PORT)","$(IPADDR)","$(AMSID)","$(IPPORT)", 10
 cd "$(ADS_IOC_TOP)/db"
 
 epicsEnvSet("MOTOR_PORT",    "PLC_ADS")
-epicsEnvSet("PREFIX",        "TST:MOTION:")
+epicsEnvSet("PREFIX",        "PLC:LFE:MOTION:")
 epicsEnvSet("ECM_NUMAXES",   "54")
 epicsEnvSet("NUMAXES",       "54")
 
@@ -58,7 +58,7 @@ asynSetTraceInfoMask("$(ASYN_PORT)", -1, 5)
 #define AMPLIFIER_ON_FLAG_USING_CNEN   4
 
 epicsEnvSet("AXIS_NO",         "1")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:1")
 epicsEnvSet("DESC",            "Main.M1 / Axis 1")
 epicsEnvSet("EGU",             "mm")
@@ -73,7 +73,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "2")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:2")
 epicsEnvSet("DESC",            "Main.M2 / Axis 2")
 epicsEnvSet("EGU",             "mm")
@@ -88,7 +88,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "3")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:3")
 epicsEnvSet("DESC",            "Main.M3 / Axis 3")
 epicsEnvSet("EGU",             "mm")
@@ -103,7 +103,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "4")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:4")
 epicsEnvSet("DESC",            "Main.M4 / Axis 4")
 epicsEnvSet("EGU",             "mm")
@@ -118,7 +118,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "5")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:5")
 epicsEnvSet("DESC",            "Main.M5 / Axis 5")
 epicsEnvSet("EGU",             "mm")
@@ -133,7 +133,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "6")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:6")
 epicsEnvSet("DESC",            "Main.M6 / Axis 6")
 epicsEnvSet("EGU",             "mm")
@@ -148,7 +148,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "7")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:7")
 epicsEnvSet("DESC",            "Main.M7 / Axis 7")
 epicsEnvSet("EGU",             "mm")
@@ -163,7 +163,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "8")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:8")
 epicsEnvSet("DESC",            "Main.M8 / Axis 8")
 epicsEnvSet("EGU",             "mm")
@@ -178,7 +178,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "9")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:9")
 epicsEnvSet("DESC",            "Main.M9 / Axis 9")
 epicsEnvSet("EGU",             "mm")
@@ -193,7 +193,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "10")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:10")
 epicsEnvSet("DESC",            "Main.M10 / Axis 10")
 epicsEnvSet("EGU",             "mm")
@@ -208,7 +208,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "11")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:11")
 epicsEnvSet("DESC",            "Main.M11 / Axis 11")
 epicsEnvSet("EGU",             "mm")
@@ -223,7 +223,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "12")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:12")
 epicsEnvSet("DESC",            "Main.M12 / Axis 12")
 epicsEnvSet("EGU",             "mm")
@@ -238,7 +238,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "13")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:13")
 epicsEnvSet("DESC",            "Main.M13 / Axis 13")
 epicsEnvSet("EGU",             "mm")
@@ -253,7 +253,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "14")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:14")
 epicsEnvSet("DESC",            "Main.M14 / Axis 14")
 epicsEnvSet("EGU",             "mm")
@@ -268,7 +268,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "15")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:15")
 epicsEnvSet("DESC",            "Main.M15 / Axis 15")
 epicsEnvSet("EGU",             "mm")
@@ -283,7 +283,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "16")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:16")
 epicsEnvSet("DESC",            "Main.M16 / Axis 16")
 epicsEnvSet("EGU",             "mm")
@@ -298,7 +298,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "17")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:17")
 epicsEnvSet("DESC",            "Main.M17 / Axis 17")
 epicsEnvSet("EGU",             "mm")
@@ -313,7 +313,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "18")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:18")
 epicsEnvSet("DESC",            "Main.M18 / Axis 18")
 epicsEnvSet("EGU",             "mm")
@@ -328,7 +328,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "19")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:19")
 epicsEnvSet("DESC",            "Main.M19 / Axis 19")
 epicsEnvSet("EGU",             "mm")
@@ -343,9 +343,9 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "20")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
-epicsEnvSet("MOTOR_NAME",      "Axis:20")
-epicsEnvSet("DESC",            "Main.M20 / Axis 20")
+epicsEnvSet("MOTOR_PREFIX",    "IM1L0:XTES:")
+epicsEnvSet("MOTOR_NAME",      "MMS")
+epicsEnvSet("DESC",            "Main.M20 / IM1L0-XTES-MMS")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -358,10 +358,10 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "21")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
-epicsEnvSet("MOTOR_NAME",      "Axis:21")
-epicsEnvSet("DESC",            "Main.M21 / Axis 21")
-epicsEnvSet("EGU",             "mm")
+epicsEnvSet("MOTOR_PREFIX",    "IM1L0:XTES:")
+epicsEnvSet("MOTOR_NAME",      "CLZ")
+epicsEnvSet("DESC",            "Main.M21 / IM1L0-XTES-CLZ")
+epicsEnvSet("EGU",             "%")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
 epicsEnvSet("ECAXISFIELDINIT", "")
@@ -373,10 +373,10 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "22")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
-epicsEnvSet("MOTOR_NAME",      "Axis:22")
-epicsEnvSet("DESC",            "Main.M22 / Axis 22")
-epicsEnvSet("EGU",             "mm")
+epicsEnvSet("MOTOR_PREFIX",    "IM1L0:XTES:")
+epicsEnvSet("MOTOR_NAME",      "CLF")
+epicsEnvSet("DESC",            "Main.M22 / IM1L0-XTES-CLF")
+epicsEnvSet("EGU",             "%")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
 epicsEnvSet("ECAXISFIELDINIT", "")
@@ -388,9 +388,9 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "23")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
-epicsEnvSet("MOTOR_NAME",      "Axis:23")
-epicsEnvSet("DESC",            "Main.M23 / Axis 23")
+epicsEnvSet("MOTOR_PREFIX",    "IM1L1:PPM:")
+epicsEnvSet("MOTOR_NAME",      "MMS")
+epicsEnvSet("DESC",            "Main.M23 / IM1L1-PPM-MMS")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -403,9 +403,9 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "24")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
-epicsEnvSet("MOTOR_NAME",      "Axis:24")
-epicsEnvSet("DESC",            "Main.M24 / Axis 24")
+epicsEnvSet("MOTOR_PREFIX",    "IM2L0:XTES:")
+epicsEnvSet("MOTOR_NAME",      "MMS")
+epicsEnvSet("DESC",            "Main.M24 / IM2L0-XTES-MMS")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -418,10 +418,10 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "25")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
-epicsEnvSet("MOTOR_NAME",      "Axis:25")
-epicsEnvSet("DESC",            "Main.M25 / Axis 25")
-epicsEnvSet("EGU",             "mm")
+epicsEnvSet("MOTOR_PREFIX",    "IM2L0:XTES:")
+epicsEnvSet("MOTOR_NAME",      "CLZ")
+epicsEnvSet("DESC",            "Main.M25 / IM2L0-XTES-CLZ")
+epicsEnvSet("EGU",             "%")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
 epicsEnvSet("ECAXISFIELDINIT", "")
@@ -433,10 +433,10 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "26")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
-epicsEnvSet("MOTOR_NAME",      "Axis:26")
-epicsEnvSet("DESC",            "Main.M26 / Axis 26")
-epicsEnvSet("EGU",             "mm")
+epicsEnvSet("MOTOR_PREFIX",    "IM2L0:XTES:")
+epicsEnvSet("MOTOR_NAME",      "CLF")
+epicsEnvSet("DESC",            "Main.M26 / IM2L0-XTES-CLF")
+epicsEnvSet("EGU",             "%")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
 epicsEnvSet("ECAXISFIELDINIT", "")
@@ -448,9 +448,9 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "27")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
-epicsEnvSet("MOTOR_NAME",      "Axis:27")
-epicsEnvSet("DESC",            "Main.M27 / Axis 27")
+epicsEnvSet("MOTOR_PREFIX",    "IM3L0:PPM:")
+epicsEnvSet("MOTOR_NAME",      "MMS")
+epicsEnvSet("DESC",            "Main.M27 / IM3L0-PPM-MMS")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -463,9 +463,9 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "28")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
-epicsEnvSet("MOTOR_NAME",      "Axis:28")
-epicsEnvSet("DESC",            "Main.M28 / Axis 28")
+epicsEnvSet("MOTOR_PREFIX",    "IM4L0:XTES:")
+epicsEnvSet("MOTOR_NAME",      "MMS")
+epicsEnvSet("DESC",            "Main.M28 / IM4L0-XTES-MMS")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -478,10 +478,10 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "29")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
-epicsEnvSet("MOTOR_NAME",      "Axis:29")
-epicsEnvSet("DESC",            "Main.M29 / Axis 29")
-epicsEnvSet("EGU",             "mm")
+epicsEnvSet("MOTOR_PREFIX",    "IM4L0:XTES:")
+epicsEnvSet("MOTOR_NAME",      "CLZ")
+epicsEnvSet("DESC",            "Main.M29 / IM4L0-XTES-CLZ")
+epicsEnvSet("EGU",             "%")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
 epicsEnvSet("ECAXISFIELDINIT", "")
@@ -493,10 +493,10 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "30")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
-epicsEnvSet("MOTOR_NAME",      "Axis:30")
-epicsEnvSet("DESC",            "Main.M30 / Axis 30")
-epicsEnvSet("EGU",             "mm")
+epicsEnvSet("MOTOR_PREFIX",    "IM4L0:XTES:")
+epicsEnvSet("MOTOR_NAME",      "CLF")
+epicsEnvSet("DESC",            "Main.M30 / IM4L0-XTES-CLF")
+epicsEnvSet("EGU",             "%")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
 epicsEnvSet("ECAXISFIELDINIT", "")
@@ -508,9 +508,9 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "31")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
-epicsEnvSet("MOTOR_NAME",      "Axis:31")
-epicsEnvSet("DESC",            "Main.M31 / Axis 31")
+epicsEnvSet("MOTOR_PREFIX",    "PF1L0:WFS:MMS:")
+epicsEnvSet("MOTOR_NAME",      "01")
+epicsEnvSet("DESC",            "Main.M31 / PF1L0-WFS-MMS-01")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -523,9 +523,9 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "32")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
-epicsEnvSet("MOTOR_NAME",      "Axis:32")
-epicsEnvSet("DESC",            "Main.M32 / Axis 32")
+epicsEnvSet("MOTOR_PREFIX",    "PF1L0:WFS:MMS:")
+epicsEnvSet("MOTOR_NAME",      "02")
+epicsEnvSet("DESC",            "Main.M32 / PF1L0-WFS-MMS-02")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -538,7 +538,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "33")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:33")
 epicsEnvSet("DESC",            "Main.M33 / Axis 33")
 epicsEnvSet("EGU",             "mm")
@@ -553,7 +553,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "34")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:34")
 epicsEnvSet("DESC",            "Main.M34 / Axis 34")
 epicsEnvSet("EGU",             "mm")
@@ -568,7 +568,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "35")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:35")
 epicsEnvSet("DESC",            "Main.M35 / Axis 35")
 epicsEnvSet("EGU",             "mm")
@@ -583,7 +583,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "36")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:36")
 epicsEnvSet("DESC",            "Main.M36 / Axis 36")
 epicsEnvSet("EGU",             "mm")
@@ -598,7 +598,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "37")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:37")
 epicsEnvSet("DESC",            "Main.M37 / Axis 37")
 epicsEnvSet("EGU",             "mm")
@@ -613,7 +613,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "38")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:38")
 epicsEnvSet("DESC",            "Main.M38 / Axis 38")
 epicsEnvSet("EGU",             "mm")
@@ -628,7 +628,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "39")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:39")
 epicsEnvSet("DESC",            "Main.M39 / Axis 39")
 epicsEnvSet("EGU",             "mm")
@@ -643,7 +643,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "40")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:40")
 epicsEnvSet("DESC",            "Main.M40 / Axis 40")
 epicsEnvSet("EGU",             "mm")
@@ -658,7 +658,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "41")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:41")
 epicsEnvSet("DESC",            "Main.M41 / Axis 41")
 epicsEnvSet("EGU",             "mm")
@@ -673,7 +673,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "42")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:42")
 epicsEnvSet("DESC",            "Main.M42 / Axis 42")
 epicsEnvSet("EGU",             "mm")
@@ -688,7 +688,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "43")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:43")
 epicsEnvSet("DESC",            "Main.M43 / Axis 43")
 epicsEnvSet("EGU",             "mm")
@@ -703,7 +703,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "44")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:44")
 epicsEnvSet("DESC",            "Main.M44 / Axis 44")
 epicsEnvSet("EGU",             "mm")
@@ -718,7 +718,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "45")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:45")
 epicsEnvSet("DESC",            "Main.M45 / Axis 45")
 epicsEnvSet("EGU",             "mm")
@@ -733,7 +733,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "46")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:46")
 epicsEnvSet("DESC",            "Main.M46 / Axis 46")
 epicsEnvSet("EGU",             "mm")
@@ -748,7 +748,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "47")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:47")
 epicsEnvSet("DESC",            "Main.M47 / Axis 47")
 epicsEnvSet("EGU",             "mm")
@@ -763,7 +763,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "48")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:48")
 epicsEnvSet("DESC",            "Main.M48 / Axis 48")
 epicsEnvSet("EGU",             "mm")
@@ -778,7 +778,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "49")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:49")
 epicsEnvSet("DESC",            "Main.M49 / Axis 49")
 epicsEnvSet("EGU",             "mm")
@@ -793,7 +793,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "50")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:50")
 epicsEnvSet("DESC",            "Main.M50 / Axis 50")
 epicsEnvSet("EGU",             "mm")
@@ -808,7 +808,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "51")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:51")
 epicsEnvSet("DESC",            "Main.M51 / Axis 51")
 epicsEnvSet("EGU",             "mm")
@@ -823,7 +823,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "52")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:52")
 epicsEnvSet("DESC",            "Main.M52 / Axis 52")
 epicsEnvSet("EGU",             "mm")
@@ -838,7 +838,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "53")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:53")
 epicsEnvSet("DESC",            "Main.M53 / Axis 53")
 epicsEnvSet("EGU",             "mm")
@@ -853,7 +853,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "54")
-epicsEnvSet("MOTOR_PREFIX",    "TST:MOTION:")
+epicsEnvSet("MOTOR_PREFIX",    "PLC:LFE:MOTION:")
 epicsEnvSet("MOTOR_NAME",      "Axis:54")
 epicsEnvSet("DESC",            "Main.M54 / Axis 54")
 epicsEnvSet("EGU",             "mm")
@@ -868,14 +868,17 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 cd "$(IOC_TOP)"
+dbLoadRecords("lfe_motion.db", "PORT=ASYN_PLC,")
 
-dbLoadRecords("db/iocSoft.db", "IOC=TST:MOTION")
-dbLoadRecords("db/save_restoreStatus.db", "P=TST:MOTION:")
+cd "$(IOC_TOP)"
+
+dbLoadRecords("db/iocSoft.db", "IOC=PLC:LFE:MOTION")
+dbLoadRecords("db/save_restoreStatus.db", "P=PLC:LFE:MOTION:")
 
 # Setup autosave
 set_savefile_path( "$(IOC_DATA)/$(IOC)/autosave" )
 set_requestfile_path( "$(IOC_TOP)/autosave" )
-save_restoreSet_status_prefix( "TST:MOTION:" )
+save_restoreSet_status_prefix( "PLC:LFE:MOTION:" )
 save_restoreSet_IncompleteSetsOk( 1 )
 save_restoreSet_DatedBackupFiles( 1 )
 set_pass0_restoreFile( "$(IOC).sav" )
