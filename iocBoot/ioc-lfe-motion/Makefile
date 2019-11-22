@@ -5,7 +5,6 @@ PROJECT_NAME = plc-lfe-motion
 PROJECT_PATH := ../../plc-lfe-motion/plc-lfe-motion.tsproj
 PLC = lfe_motion
 
-PYTMC_OPTS = --only-motor
-PREFIX = TST:MOTION
+PREFIX = PLC:LFE:MOTION
 
 include $(IOC_TOP)/iocBoot/templates/Makefile.base
