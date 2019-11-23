@@ -35,40 +35,58 @@ VAR_GLOBAL
 	
 	// IM1L0-XTES: 3 Axes
 	{attribute 'pytmc' := 'pv: IM1L0:XTES:MMS'}
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[IM1L0-EL7041]^STM Status^Status^Digital input 1;
+	                          .bBrakeRelease        := TIIB[IM1L0-EL2004]^Channel 1^Output'}
 	M20: DUT_MotionStage;
-	{attribute 'pytmc' := 'pv: IM1L0:XTES:MMD:Z'}
+	{attribute 'pytmc' := 'pv: IM1L0:XTES:CLZ'}
+	{attribute 'TcLinkTo' := '.bHome := TIIB[IM1L0-EL1088]^Channel 2^Input'}
 	M21: DUT_MotionStage;
-	{attribute 'pytmc' := 'pv: IM1L0:XTES:MMD:F'}
+	{attribute 'pytmc' := 'pv: IM1L0:XTES:CLF'}
+	{attribute 'TcLinkTo' := '.bHome := TIIB[IM1L0-EL1088]^Channel 4^Input'}
 	M22: DUT_MotionStage;
 	
 	// IM1L1-PPM: 1 Axis
-	{attribute 'pytmc' := 'pv: IM1L1:PPM:MMS:01'}
+	{attribute 'pytmc' := 'pv: IM1L1:PPM:MMS'}
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[IM1L1-EL7041]^STM Status^Status^Digital input 1;
+	                          .bLimitBackwardEnable := TIIB[IM1L1-EL7041]^STM Status^Status^Digital input 2;
+	                          .bBrakeRelease        := TIIB[IM1L1-EL2004]^Channel 1^Output'}
 	M23: DUT_MotionStage;
 	
 	// IM2L0-XTES: 3 Axes
-	{attribute 'pytmc' := 'pv: IM2L0:XTES:MMS:01'}
+	{attribute 'pytmc' := 'pv: IM2L0:XTES:MMS'}
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[IM2L0-EL7041]^STM Status^Status^Digital input 1;
+	                          .bBrakeRelease        := TIIB[IM2L0-EL2004]^Channel 1^Output'}
 	M24: DUT_MotionStage;
-	{attribute 'pytmc' := 'pv: IM2L0:XTES:CLZ:01'}
+	{attribute 'pytmc' := 'pv: IM2L0:XTES:CLZ'}
+	{attribute 'TcLinkTo' := '.bHome := TIIB[IM2L0-EL1088]^Channel 2^Input'}
 	M25: DUT_MotionStage;
-	{attribute 'pytmc' := 'pv: IM2L0:XTES:CLF:01'}
+	{attribute 'pytmc' := 'pv: IM2L0:XTES:CLF'}
+	{attribute 'TcLinkTo' := '.bHome := TIIB[IM2L0-EL1088]^Channel 4^Input'}
 	M26: DUT_MotionStage;
 	
 	// IM3L0-PPM: 1 Axes
-	{attribute 'pytmc' := 'pv: IM3L0:PPM:MMS:01'}
+	{attribute 'pytmc' := 'pv: IM3L0:PPM:MMS'}
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[IM3L0-EL7041]^STM Status^Status^Digital input 1;
+	                          .bLimitBackwardEnable := TIIB[IM3L0-EL7041]^STM Status^Status^Digital input 2;
+	                          .bBrakeRelease        := TIIB[IM3L0-EL2004]^Channel 1^Output'}
 	M27: DUT_MotionStage;
 	
 	// IM4L0-XTES: 3 Axes
-	{attribute 'pytmc' := 'pv: IM4L0:XTES:MMS:01'}
+	{attribute 'pytmc' := 'pv: IM4L0:XTES:MMS'}
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[IM4L0-EL7041]^STM Status^Status^Digital input 1;
+	                          .bBrakeRelease        := TIIB[IM4L0-EL2004]^Channel 1^Output'}
 	M28: DUT_MotionStage;
-	{attribute 'pytmc' := 'pv: IM4L0:XTES:CLZ:01'}
+	{attribute 'pytmc' := 'pv: IM4L0:XTES:CLZ'}
+	{attribute 'TcLinkTo' := '.bHome := TIIB[IM4L0-EL1088]^Channel 2^Input'}
 	M29: DUT_MotionStage;
-	{attribute 'pytmc' := 'pv: IM4L0:XTES:CLF:01'}
+	{attribute 'pytmc' := 'pv: IM4L0:XTES:CLF'}
+	{attribute 'TcLinkTo' := '.bHome := TIIB[IM4L0-EL1088]^Channel 4^Input'}
 	M30: DUT_MotionStage;
 
 	// PF1L0-WFS: 2 Axes
-	{attribute 'pytmc' := 'pv: PF1L0:WFS:MMS:Y'}
+	{attribute 'pytmc' := 'pv: PF1L0:WFS:MMS:01'}
 	M31: DUT_MotionStage;
-	{attribute 'pytmc' := 'pv: PF1L0:WFS:MMS:Z'}
+	{attribute 'pytmc' := 'pv: PF1L0:WFS:MMS:02'}
 	M32: DUT_MotionStage;
 
 	// RTDSL0: 8 Axes

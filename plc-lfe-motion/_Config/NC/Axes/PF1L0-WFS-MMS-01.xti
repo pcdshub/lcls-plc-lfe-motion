@@ -1321,22 +1321,18 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 	</DataTypes>
-	<Axis Id="25" CreateSymbols="true" AxisType="1" AxisFolder="IM2L0-XTES">
+	<Axis Id="31" CreateSymbols="true" AxisType="1" AxisFolder="PF1L0-WFS">
 		<Name>__FILENAME__</Name>
 		<AxisPara>
-			<General UnitName="%"/>
 			<OtherSettings AllowMotionCmdToSlave="true"/>
 		</AxisPara>
-		<Encoder Name="Enc" EncType="4">
-			<EncPara MaxCount="#x0000ffff">
-				<Inc RefSoftSyncMask="#x0000ffff"/>
-			</EncPara>
+		<Encoder Name="Enc" EncType="1">
 			<Vars VarGrpType="1">
 				<Name>Inputs</Name>
 				<Var>
 					<Name>In</Name>
 					<Type GUID="{901C2423-655B-45CE-B7E3-21F174F0F99F}" Namespace="MC">NCENCODERSTRUCT_IN2B</Type>
-					<BitOffs>40960</BitOffs>
+					<BitOffs>51904</BitOffs>
 					<SubVar TypeFormatIndex="2">
 						<Name>nDataIn1</Name>
 					</SubVar>
@@ -1374,7 +1370,7 @@ External Setpoint Generation:
 				<Var>
 					<Name>Out</Name>
 					<Type GUID="{9CC50AB2-5D79-4869-A3C2-1FA7761BAFEA}" Namespace="MC">NCENCODERSTRUCT_OUT2</Type>
-					<BitOffs>66560</BitOffs>
+					<BitOffs>83648</BitOffs>
 					<SubVar TypeFormatIndex="2">
 						<Name>nDataOut1</Name>
 					</SubVar>
@@ -1396,7 +1392,7 @@ External Setpoint Generation:
 				</Var>
 			</Vars>
 		</Encoder>
-		<Drive Name="Drive" DrvType="23">
+		<Drive Name="Drive" DrvType="5">
 			<DrvPara>
 				<Analog ScaleFactorActTorque="0.1"/>
 				<TimeComp TaskDelayCycles="1"/>
@@ -1406,7 +1402,7 @@ External Setpoint Generation:
 				<Var>
 					<Name>In</Name>
 					<Type GUID="{F95C7C69-0C87-46C4-9559-1285CCA5B23A}" Namespace="MC">NCDRIVESTRUCT_IN2</Type>
-					<BitOffs>41280</BitOffs>
+					<BitOffs>52224</BitOffs>
 					<SubVar TypeFormatIndex="2">
 						<Name>nDataIn1</Name>
 					</SubVar>
@@ -1444,7 +1440,7 @@ Drive Status 4 (manually linked):
 				<Var>
 					<Name>Out</Name>
 					<Type GUID="{644DC4BD-3D15-4DCB-94C7-24F3A5D579AA}" Namespace="MC">NCDRIVESTRUCT_OUT2</Type>
-					<BitOffs>66880</BitOffs>
+					<BitOffs>83968</BitOffs>
 					<SubVar TypeFormatIndex="2">
 						<Name>nDataOut1</Name>
 					</SubVar>
@@ -1496,7 +1492,7 @@ Drive Status 4 (manually linked):
 			<Var>
 				<Name>FromPlc</Name>
 				<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				<BitOffs>39936</BitOffs>
+				<BitOffs>50880</BitOffs>
 			</Var>
 		</Vars>
 		<Vars VarGrpType="2" InsertType="1">
@@ -1504,7 +1500,7 @@ Drive Status 4 (manually linked):
 			<Var>
 				<Name>ToPlc</Name>
 				<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-				<BitOffs>64512</BitOffs>
+				<BitOffs>81600</BitOffs>
 				<SubVar>
 					<Name>AxisState</Name>
 					<Comment>
@@ -1553,46 +1549,4 @@ External Setpoint Generation:
 			</Var>
 		</Vars>
 	</Axis>
-	<Mappings>
-		<OwnerA>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL7342">
-				<Link VarA="Drive^Inputs^In^nState1" VarB="DCM Status Channel 1^Status^Error" Size="1" OffsA="3"/>
-				<Link VarA="Drive^Inputs^In^nState1" VarB="DCM Status Channel 1^Status^Moving negative" Size="1" OffsA="5"/>
-				<Link VarA="Drive^Inputs^In^nState1" VarB="DCM Status Channel 1^Status^Moving positive" Size="1" OffsA="4"/>
-				<Link VarA="Drive^Inputs^In^nState1" VarB="DCM Status Channel 1^Status^Ready" Size="1" OffsA="1"/>
-				<Link VarA="Drive^Inputs^In^nState1" VarB="DCM Status Channel 1^Status^Ready to enable"/>
-				<Link VarA="Drive^Inputs^In^nState1" VarB="DCM Status Channel 1^Status^Torque reduced" Size="1" OffsA="6"/>
-				<Link VarA="Drive^Inputs^In^nState1" VarB="DCM Status Channel 1^Status^Warning" Size="1" OffsA="2"/>
-				<Link VarA="Drive^Inputs^In^nState2" VarB="DCM Status Channel 1^Status^Digital input 1" Size="1" OffsA="3"/>
-				<Link VarA="Drive^Inputs^In^nState2" VarB="DCM Status Channel 1^Status^Digital input 2" Size="1" OffsA="4"/>
-				<Link VarA="Drive^Inputs^In^nState2" VarB="DCM Status Channel 1^Status^Sync error" Size="1" OffsA="5"/>
-				<Link VarA="Drive^Inputs^In^nState2" VarB="DCM Status Channel 1^Status^TxPDO Toggle" Size="1" OffsA="7"/>
-				<Link VarA="Drive^Inputs^In^nState4" VarB="WcState^InputToggle" Size="1" OffsA="1"/>
-				<Link VarA="Drive^Inputs^In^nState4" VarB="WcState^WcState"/>
-				<Link VarA="Drive^Outputs^Out^nCtrl1" VarB="DCM Control Channel 1^Control^Enable"/>
-				<Link VarA="Drive^Outputs^Out^nCtrl1" VarB="DCM Control Channel 1^Control^Reduce torque" Size="1" OffsA="2"/>
-				<Link VarA="Drive^Outputs^Out^nCtrl1" VarB="DCM Control Channel 1^Control^Reset" Size="1" OffsA="1"/>
-				<Link VarA="Drive^Outputs^Out^nCtrl1" VarB="DCM Control Channel 1^Control^Threshold active" Size="1" OffsA="3"/>
-				<Link VarA="Drive^Outputs^Out^nDataOut2[0]" VarB="DCM Velocity Channel 1^Velocity"/>
-				<Link VarA="Enc^Inputs^In^nDataIn1[0]" VarB="ENC Status compact Channel 1^Counter value"/>
-				<Link VarA="Enc^Inputs^In^nDataIn2[0]" VarB="ENC Status compact Channel 1^Latch value"/>
-				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact Channel 1^Status^Counter overflow" Size="1" OffsA="4"/>
-				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact Channel 1^Status^Counter underflow" Size="1" OffsA="3"/>
-				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact Channel 1^Status^Extrapolation stall" Size="1" OffsA="7"/>
-				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact Channel 1^Status^Latch extern valid" Size="1" OffsA="1"/>
-				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact Channel 1^Status^Set counter done" Size="1" OffsA="2"/>
-				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact Channel 1^Status^Status of extern latch" Size="1" OffsA="4"/>
-				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact Channel 1^Status^Status of input A"/>
-				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact Channel 1^Status^Status of input B" Size="1" OffsA="1"/>
-				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact Channel 1^Status^Sync error" Size="1" OffsA="5"/>
-				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact Channel 1^Status^TxPDO Toggle" Size="1" OffsA="7"/>
-				<Link VarA="Enc^Inputs^In^nState4" VarB="WcState^InputToggle" Size="1" OffsA="1"/>
-				<Link VarA="Enc^Inputs^In^nState4" VarB="WcState^WcState"/>
-				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact Channel 1^Control^Enable latch extern on negative edge" Size="1" OffsA="3"/>
-				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact Channel 1^Control^Enable latch extern on positive edge" Size="1" OffsA="1"/>
-				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact Channel 1^Control^Set counter" Size="1" OffsA="2"/>
-				<Link VarA="Enc^Outputs^Out^nDataOut1[0]" VarB="ENC Control compact Channel 1^Set counter value"/>
-			</OwnerB>
-		</OwnerA>
-	</Mappings>
 </TcSmItem>

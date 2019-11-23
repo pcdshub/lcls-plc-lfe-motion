@@ -3,20 +3,31 @@
   <POU Name="PRG_IM2L0_XTES" Id="{86a27ca3-c197-4a69-8332-821ef1b19550}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_IM2L0_XTES
 VAR
-	fbMotion1: FB_SimMotor;
-	fbMotion2: FB_SimMotor;
-	fbMotion3: FB_SimMotor;
+	{attribute 'pytmc' := '
+		pv: IM2L0:XTES
+		io: io
+	'}
+	{attribute 'TcLinkTo' := '.bZoomEndFwd := TIIB[IM2L0-EL1088]^Channel 1^Input;
+	                          .bZoomEndBwd := TIIB[IM2L0-EL1088]^Channel 2^Input;
+							  .bFocusEndFwd := TIIB[IM2L0-EL1088]^Channel 3^Input;
+							  .bFocusEndBwd := TIIB[IM2L0-EL1088]^Channel 4^Input;
+							  .fbOpal.bOpalPower := TIIB[IM2L0-EL2004]^Channel 2^Output'}
+	fbIM2L0: FB_XPIM;
+	stEL6In: EL6InData22b;
+	stEL6Out: EL6OutData22b;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// Placeholder, standard simulated motion for all axes
-fbMotion1(stMotionStage := Main.M24);
-fbMotion2(stMotionStage := Main.M25);
-fbMotion3(stMotionStage := Main.M26);]]></ST>
+      <ST><![CDATA[fbIM2L0(
+	stYStage := Main.M24,
+	stZoomStage := Main.M25,
+	stFocusStage := Main.M26,
+	stEl6In := stEL6In,
+	stEl6Out := stEl6Out,
+	fYag := -87,
+	fDiamond := -57,
+	fReticle := -27,
+	fOut := 0);]]></ST>
     </Implementation>
-    <LineIds Name="PRG_IM2L0_XTES">
-      <LineId Id="3" Count="2" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
