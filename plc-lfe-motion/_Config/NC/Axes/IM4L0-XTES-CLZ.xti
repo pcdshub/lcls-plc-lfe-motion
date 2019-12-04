@@ -1325,18 +1325,14 @@ External Setpoint Generation:
 		<Name>__FILENAME__</Name>
 		<AxisPara>
 			<General UnitName="%"/>
+			<Velo RefSearch="5" RefSync="1" Maximum="10"/>
 			<OtherSettings AllowMotionCmdToSlave="true"/>
-			<ParameterChanged>18</ParameterChanged>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="4">
 			<EncPara ScaleFactorNumerator="0.003" MaxCount="#x0000ffff">
 				<SoftEndMinControl Enable="true"/>
 				<SoftEndMaxControl Enable="true" Range="100"/>
 				<Inc RefSoftSyncMask="#x0000ffff"/>
-				<ParameterChanged>14</ParameterChanged>
-				<ParameterChanged>11</ParameterChanged>
-				<ParameterChanged>35</ParameterChanged>
-				<ParameterChanged>12</ParameterChanged>
 			</EncPara>
 			<Vars VarGrpType="1">
 				<Name>Inputs</Name>
@@ -1407,8 +1403,6 @@ External Setpoint Generation:
 			<DrvPara Inverse="true">
 				<Analog VeloReferenz="33" ScaleFactorActTorque="0.1"/>
 				<TimeComp TaskDelayCycles="1"/>
-				<ParameterChanged>257</ParameterChanged>
-				<ParameterChanged>6</ParameterChanged>
 			</DrvPara>
 			<Vars VarGrpType="1">
 				<Name>Inputs</Name>
@@ -1497,12 +1491,10 @@ Drive Status 4 (manually linked):
 		</Drive>
 		<Controller Name="Ctrl" CtrType="2">
 			<CtrPara PriorControlFactor="1">
-				<PosDiffControl Range="0.1"/>
-				<PID PosKp="20" PosExtKp="20" DeadBandPosition="0.1"/>
+				<PosDiffControl Range="2"/>
+				<PID PosKp="20" PosExtKp="20" DeadBandPosition="0.01"/>
 				<Observer BandWidth="20"/>
 				<ParameterChanged>269</ParameterChanged>
-				<ParameterChanged>262</ParameterChanged>
-				<ParameterChanged>258</ParameterChanged>
 			</CtrPara>
 		</Controller>
 		<Vars VarGrpType="1" InsertType="1">
