@@ -2296,6 +2296,10 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>PRG_IM2L0_XTES.stEL6In</Name>
+					<Type GUID="{63C476CA-3C4F-477E-9C2E-34379B1D490C}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+				</Var>
+				<Var>
 					<Name>PRG_IM3L0_PPM.fbIM3L0.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
@@ -2552,7 +2556,7 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM2L0_XTES.stEL6In</Name>
+					<Name>PRG_IM4L0_XTES.stEL6In</Name>
 					<Type GUID="{63C476CA-3C4F-477E-9C2E-34379B1D490C}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
@@ -7889,10 +7893,6 @@ External Setpoint Generation:
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
-				<Var>
-					<Name>PRG_IM4L0_XTES.stEL6In</Name>
-					<Type GUID="{63C476CA-3C4F-477E-9C2E-34379B1D490C}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
-				</Var>
 			</Vars>
 			<Vars VarGrpType="2">
 				<Name>PlcTask Outputs</Name>
@@ -8047,6 +8047,10 @@ External Setpoint Generation:
 				<Var>
 					<Name>PRG_IM4L0_XTES.fbIM4L0.fbOpal.bOpalPower</Name>
 					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM4L0_XTES.stEL6Out</Name>
+					<Type GUID="{E979BFBF-B5B9-4F4F-BDAF-999835F39B9D}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
 					<Name>PRG_PF1L0_WFS.fbMotion1.fbMotionStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -8737,10 +8741,6 @@ External Setpoint Generation:
 						<![CDATA[ NC Brake Output: TRUE to release brake]]>
 					</Comment>
 					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM4L0_XTES.stEL6Out</Name>
-					<Type GUID="{E979BFBF-B5B9-4F4F-BDAF-999835F39B9D}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 			</Vars>
 			<TaskPouOids>
