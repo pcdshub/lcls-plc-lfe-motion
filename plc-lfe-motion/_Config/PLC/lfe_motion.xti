@@ -8828,38 +8828,14 @@ External Setpoint Generation:
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL7041">
 				<Link VarA="PlcTask Inputs^Main.M24.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM1L1-PPM (EK1100)^IM1L1-EL2004">
-				<Link VarA="PlcTask Outputs^Main.M23.bBrakeRelease" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM1L1_PPM.fbIM1L1.fbGige.bGigePower" VarB="Channel 2^Output" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM1L1-PPM (EK1100)^IM1L1-EL3062">
-				<Link VarA="PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.iVoltageINT" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM1L1-PPM (EK1100)^IM1L1-EL3314">
-				<Link VarA="PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bError" VarB="TC Inputs Channel 1^Status^Error" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bOverrange" VarB="TC Inputs Channel 1^Status^Overrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bUnderrange" VarB="TC Inputs Channel 1^Status^Underrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.iRaw" VarB="TC Inputs Channel 1^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bError" VarB="TC Inputs Channel 2^Status^Error" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bOverrange" VarB="TC Inputs Channel 2^Status^Overrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bUnderrange" VarB="TC Inputs Channel 2^Status^Underrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.iRaw" VarB="TC Inputs Channel 2^Value" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM1L1-PPM (EK1100)^IM1L1-EL4004">
-				<Link VarA="PlcTask Outputs^PRG_IM1L1_PPM.fbIM1L1.fbGige.iIlluminatorINT" VarB="AO Outputs Channel 1^Analog output" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM1L1-PPM (EK1100)^IM1L1-EL7041">
-				<Link VarA="PlcTask Inputs^Main.M23.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^Main.M23.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM3L0-PPM (EK1100)^IM3L0-EL2004">
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL2004">
 				<Link VarA="PlcTask Outputs^Main.M27.bBrakeRelease" VarB="Channel 1^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^PRG_IM3L0_PPM.fbIM3L0.fbGige.bGigePower" VarB="Channel 2^Output" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM3L0-PPM (EK1100)^IM3L0-EL3062">
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL3062">
 				<Link VarA="PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.iVoltageINT" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM3L0-PPM (EK1100)^IM3L0-EL3314">
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL3314">
 				<Link VarA="PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.bError" VarB="TC Inputs Channel 1^Status^Error" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.bOverrange" VarB="TC Inputs Channel 1^Status^Overrange" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.bUnderrange" VarB="TC Inputs Channel 1^Status^Underrange" AutoLink="true"/>
@@ -8869,12 +8845,36 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.bUnderrange" VarB="TC Inputs Channel 2^Status^Underrange" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.iRaw" VarB="TC Inputs Channel 2^Value" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM3L0-PPM (EK1100)^IM3L0-EL4004">
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL4004">
 				<Link VarA="PlcTask Outputs^PRG_IM3L0_PPM.fbIM3L0.fbGige.iIlluminatorINT" VarB="AO Outputs Channel 1^Analog output" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM3L0-PPM (EK1100)^IM3L0-EL7041">
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL7041">
 				<Link VarA="PlcTask Inputs^Main.M27.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M27.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL2004">
+				<Link VarA="PlcTask Outputs^Main.M23.bBrakeRelease" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM1L1_PPM.fbIM1L1.fbGige.bGigePower" VarB="Channel 2^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL3062">
+				<Link VarA="PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.iVoltageINT" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL3314">
+				<Link VarA="PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bError" VarB="TC Inputs Channel 1^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bOverrange" VarB="TC Inputs Channel 1^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bUnderrange" VarB="TC Inputs Channel 1^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.iRaw" VarB="TC Inputs Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bError" VarB="TC Inputs Channel 2^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bOverrange" VarB="TC Inputs Channel 2^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bUnderrange" VarB="TC Inputs Channel 2^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.iRaw" VarB="TC Inputs Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL4004">
+				<Link VarA="PlcTask Outputs^PRG_IM1L1_PPM.fbIM1L1.fbGige.iIlluminatorINT" VarB="AO Outputs Channel 1^Analog output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL7041">
+				<Link VarA="PlcTask Inputs^Main.M23.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M23.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL1088">
 				<Link VarA="PlcTask Inputs^Main.M29.bHome" VarB="Channel 2^Input" AutoLink="true"/>
