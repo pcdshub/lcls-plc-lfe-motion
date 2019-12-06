@@ -36,6 +36,18 @@
 		<Box File="Power (EK1200).xti" Id="1">
 			<EtherCAT PortABoxInfo="#x00ffffff"/>
 		</Box>
-		<EtherCAT EnableVirtualSwitch="true" MaxSwitchPorts="2" MaxSwitchFrames="120"/>
+		<EtherCAT EnableVirtualSwitch="true" MaxSwitchPorts="2" MaxSwitchFrames="120" MaxSwitchMACs="100">
+			<SyncUnit Name="AT2L0" NoDeleteIfUnused="true"/>
+			<SyncUnit Name="IM1L0" NoDeleteIfUnused="true"/>
+			<SyncUnit Name="IM1L1" NoDeleteIfUnused="true"/>
+			<SyncUnit Name="IM2L0" NoDeleteIfUnused="true"/>
+			<SyncUnit Name="IM3L0" NoDeleteIfUnused="true"/>
+			<SyncUnit Name="IM4L0" NoDeleteIfUnused="true"/>
+			<SyncUnit Name="PF1L0" NoDeleteIfUnused="true"/>
+			<SyncUnit Name="RTDSL0" NoDeleteIfUnused="true"/>
+			<SyncUnit Name="SL1L0" NoDeleteIfUnused="true"/>
+			<SyncUnit Name="SL2L0" NoDeleteIfUnused="true"/>
+			<SyncUnit Name="SP1K0" NoDeleteIfUnused="true"/>
+		</EtherCAT>
 	</Device>
 </TcSmItem>
