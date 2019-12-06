@@ -1325,6 +1325,7 @@ External Setpoint Generation:
 		<Name>__FILENAME__</Name>
 		<AxisPara>
 			<General UnitName="%"/>
+			<Velo RefSearch="5" RefSync="1" Maximum="10"/>
 			<OtherSettings AllowMotionCmdToSlave="true"/>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="4">
@@ -1490,8 +1491,8 @@ Drive Status 4 (manually linked):
 		</Drive>
 		<Controller Name="Ctrl" CtrType="2">
 			<CtrPara PriorControlFactor="1">
-				<PosDiffControl Range="0.1"/>
-				<PID PosKp="20" PosExtKp="20" DeadBandPosition="0.1"/>
+				<PosDiffControl Range="2"/>
+				<PID PosKp="20" PosExtKp="20" DeadBandPosition="0.01"/>
 				<Observer BandWidth="20"/>
 			</CtrPara>
 		</Controller>
