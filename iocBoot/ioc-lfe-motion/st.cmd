@@ -1,4 +1,4 @@
-#!/reg/neh/home/mcbrowne/trunk2/ioc/common/ads-ioc/bin/rhel7-x86_64/adsIoc
+#!/reg/g/pcds/epics/ioc/common/ads-ioc/R0.1.6/bin/rhel7-x86_64/adsIoc
 
 < envPaths
 
