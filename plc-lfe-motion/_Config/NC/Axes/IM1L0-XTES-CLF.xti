@@ -1325,10 +1325,13 @@ External Setpoint Generation:
 		<Name>__FILENAME__</Name>
 		<AxisPara>
 			<General UnitName="%"/>
+			<Velo RefSearch="5" RefSync="1" Maximum="10"/>
 			<OtherSettings AllowMotionCmdToSlave="true"/>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="4">
-			<EncPara MaxCount="#x0000ffff">
+			<EncPara ScaleFactorNumerator="0.008" MaxCount="#x0000ffff">
+				<SoftEndMinControl Enable="true"/>
+				<SoftEndMaxControl Enable="true" Range="100"/>
 				<Inc RefSoftSyncMask="#x0000ffff"/>
 			</EncPara>
 			<Vars VarGrpType="1">
@@ -1397,8 +1400,8 @@ External Setpoint Generation:
 			</Vars>
 		</Encoder>
 		<Drive Name="Drive" DrvType="23">
-			<DrvPara>
-				<Analog ScaleFactorActTorque="0.1"/>
+			<DrvPara Inverse="true">
+				<Analog VeloReferenz="70" ScaleFactorActTorque="0.1"/>
 				<TimeComp TaskDelayCycles="1"/>
 			</DrvPara>
 			<Vars VarGrpType="1">
@@ -1486,8 +1489,10 @@ Drive Status 4 (manually linked):
 				</Var>
 			</Vars>
 		</Drive>
-		<Controller Name="Ctrl" CtrType="1">
+		<Controller Name="Ctrl" CtrType="2">
 			<CtrPara PriorControlFactor="1">
+				<PosDiffControl Range="2"/>
+				<PID PosKp="20" PosExtKp="20" DeadBandPosition="0.01"/>
 				<Observer BandWidth="20"/>
 			</CtrPara>
 		</Controller>
@@ -1555,6 +1560,33 @@ External Setpoint Generation:
 	</Axis>
 	<Mappings>
 		<OwnerA>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL5101-02">
+				<Link VarA="Enc^Inputs^In^nDataIn1[0]" VarB="ENC Status compact^Counter value"/>
+				<Link VarA="Enc^Inputs^In^nDataIn2[0]" VarB="ENC Status compact^Latch value"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Counter overflow" Size="1" OffsA="4"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Counter underflow" Size="1" OffsA="3"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Extrapolation stall" Size="1" OffsA="7"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Latch C valid"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Latch extern valid" Size="1" OffsA="1"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Open circuit" Size="1" OffsA="6"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Set counter done" Size="1" OffsA="2"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Status of input status" Size="1" OffsA="5"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Status of extern latch" Size="1" OffsA="4"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Status of input A"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Status of input B" Size="1" OffsA="1"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Status of input C" Size="1" OffsA="2"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Status of input gate" Size="1" OffsA="3"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Sync error" Size="1" OffsA="5"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^TxPDO State" Size="1" OffsA="6"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^TxPDO Toggle" Size="1" OffsA="7"/>
+				<Link VarA="Enc^Inputs^In^nState4" VarB="WcState^InputToggle" Size="1" OffsA="1"/>
+				<Link VarA="Enc^Inputs^In^nState4" VarB="WcState^WcState"/>
+				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact^Control^Enable latch C"/>
+				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact^Control^Enable latch extern on negative edge" Size="1" OffsA="3"/>
+				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact^Control^Enable latch extern on positive edge" Size="1" OffsA="1"/>
+				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact^Control^Set counter" Size="1" OffsA="2"/>
+				<Link VarA="Enc^Outputs^Out^nDataOut1[0]" VarB="ENC Control compact^Set counter value"/>
+			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL7342">
 				<Link VarA="Drive^Inputs^In^nState1" VarB="DCM Status Channel 2^Status^Error" Size="1" OffsA="3"/>
 				<Link VarA="Drive^Inputs^In^nState1" VarB="DCM Status Channel 2^Status^Moving negative" Size="1" OffsA="5"/>
@@ -1574,24 +1606,6 @@ External Setpoint Generation:
 				<Link VarA="Drive^Outputs^Out^nCtrl1" VarB="DCM Control Channel 2^Control^Reset" Size="1" OffsA="1"/>
 				<Link VarA="Drive^Outputs^Out^nCtrl1" VarB="DCM Control Channel 2^Control^Threshold active" Size="1" OffsA="3"/>
 				<Link VarA="Drive^Outputs^Out^nDataOut2[0]" VarB="DCM Velocity Channel 2^Velocity"/>
-				<Link VarA="Enc^Inputs^In^nDataIn1[0]" VarB="ENC Status compact Channel 2^Counter value"/>
-				<Link VarA="Enc^Inputs^In^nDataIn2[0]" VarB="ENC Status compact Channel 2^Latch value"/>
-				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact Channel 2^Status^Counter overflow" Size="1" OffsA="4"/>
-				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact Channel 2^Status^Counter underflow" Size="1" OffsA="3"/>
-				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact Channel 2^Status^Extrapolation stall" Size="1" OffsA="7"/>
-				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact Channel 2^Status^Latch extern valid" Size="1" OffsA="1"/>
-				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact Channel 2^Status^Set counter done" Size="1" OffsA="2"/>
-				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact Channel 2^Status^Status of extern latch" Size="1" OffsA="4"/>
-				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact Channel 2^Status^Status of input A"/>
-				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact Channel 2^Status^Status of input B" Size="1" OffsA="1"/>
-				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact Channel 2^Status^Sync error" Size="1" OffsA="5"/>
-				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact Channel 2^Status^TxPDO Toggle" Size="1" OffsA="7"/>
-				<Link VarA="Enc^Inputs^In^nState4" VarB="WcState^InputToggle" Size="1" OffsA="1"/>
-				<Link VarA="Enc^Inputs^In^nState4" VarB="WcState^WcState"/>
-				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact Channel 2^Control^Enable latch extern on negative edge" Size="1" OffsA="3"/>
-				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact Channel 2^Control^Enable latch extern on positive edge" Size="1" OffsA="1"/>
-				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact Channel 2^Control^Set counter" Size="1" OffsA="2"/>
-				<Link VarA="Enc^Outputs^Out^nDataOut1[0]" VarB="ENC Control compact Channel 2^Set counter value"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>
