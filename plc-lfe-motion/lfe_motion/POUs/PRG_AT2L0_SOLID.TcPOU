@@ -3,25 +3,27 @@
   <POU Name="PRG_AT2L0_SOLID" Id="{6180f524-6468-4c61-b137-11e8cfa13685}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_AT2L0_SOLID
 VAR
-	fbMotion1: FB_SimMotor;
-	fbMotion2: FB_SimMotor;
-	fbMotion3: FB_SimMotor;
-	fbMotion4: FB_SimMotor;
-	fbMotion5: FB_SimMotor;
-	fbMotion6: FB_SimMotor;
-	fbMotion7: FB_SimMotor;
-	fbMotion8: FB_SimMotor;
-	fbMotion9: FB_SimMotor;
-	fbMotion10: FB_SimMotor;
-	fbMotion11: FB_SimMotor;
-	fbMotion12: FB_SimMotor;
-	fbMotion13: FB_SimMotor;
-	fbMotion14: FB_SimMotor;
-	fbMotion15: FB_SimMotor;
-	fbMotion16: FB_SimMotor;
-	fbMotion17: FB_SimMotor;
-	fbMotion18: FB_SimMotor;
-	fbMotion19: FB_SimMotor;
+	fbMotion1: FB_MotionStage;
+	fbMotion2: FB_MotionStage;
+	fbMotion3: FB_MotionStage;
+	fbMotion4: FB_MotionStage;
+	fbMotion5: FB_MotionStage;
+	fbMotion6: FB_MotionStage;
+	fbMotion7: FB_MotionStage;
+	fbMotion8: FB_MotionStage;
+	fbMotion9: FB_MotionStage;
+	fbMotion10: FB_MotionStage;
+	fbMotion11: FB_MotionStage;
+	fbMotion12: FB_MotionStage;
+	fbMotion13: FB_MotionStage;
+	fbMotion14: FB_MotionStage;
+	fbMotion15: FB_MotionStage;
+	fbMotion16: FB_MotionStage;
+	fbMotion17: FB_MotionStage;
+	fbMotion18: FB_MotionStage;
+	fbMotion19: FB_MotionStage;
+	
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -44,11 +46,86 @@ fbMotion15(stMotionStage := Main.M15);
 fbMotion16(stMotionStage := Main.M16);
 fbMotion17(stMotionStage := Main.M17);
 fbMotion18(stMotionStage := Main.M18);
-fbMotion19(stMotionStage := Main.M19);]]></ST>
+fbMotion19(stMotionStage := Main.M19);
+Main.M1.nEnableMode := 0;
+Main.M1.bHardwareEnable := True;
+Main.M2.nEnableMode := 0;
+Main.M2.bHardwareEnable := True;
+Main.M3.nEnableMode := 0;
+Main.M3.bHardwareEnable := True;
+Main.M4.nEnableMode := 0;
+Main.M4.bHardwareEnable := True;
+Main.M5.nEnableMode := 0;
+Main.M5.bHardwareEnable := True;
+Main.M6.nEnableMode := 0;
+Main.M6.bHardwareEnable := True;
+Main.M7.nEnableMode := 0;
+Main.M7.bHardwareEnable := True;
+Main.M8.nEnableMode := 0;
+Main.M8.bHardwareEnable := True;
+Main.M9.nEnableMode := 0;
+Main.M9.bHardwareEnable := True;
+Main.M10.nEnableMode := 0;
+Main.M10.bHardwareEnable := True;
+Main.M11.nEnableMode := 0;
+Main.M11.bHardwareEnable := True;
+Main.M12.nEnableMode := 0;
+Main.M12.bHardwareEnable := True;
+Main.M13.nEnableMode := 0;
+Main.M13.bHardwareEnable := True;
+Main.M14.nEnableMode := 0;
+Main.M14.bHardwareEnable := True;
+Main.M15.nEnableMode := 0;
+Main.M15.bHardwareEnable := True;
+Main.M16.nEnableMode := 0;
+Main.M16.bHardwareEnable := True;
+Main.M17.nEnableMode := 0;
+Main.M17.bHardwareEnable := True;
+Main.M18.nEnableMode := 0;
+Main.M18.bHardwareEnable := True;
+Main.M19.nEnableMode := 0;
+Main.M19.bHardwareEnable := True;]]></ST>
     </Implementation>
     <LineIds Name="PRG_AT2L0_SOLID">
       <LineId Id="3" Count="18" />
       <LineId Id="2" Count="0" />
+      <LineId Id="46" Count="1" />
+      <LineId Id="49" Count="0" />
+      <LineId Id="48" Count="0" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="50" Count="0" />
+      <LineId Id="53" Count="0" />
+      <LineId Id="52" Count="0" />
+      <LineId Id="55" Count="0" />
+      <LineId Id="54" Count="0" />
+      <LineId Id="57" Count="0" />
+      <LineId Id="56" Count="0" />
+      <LineId Id="59" Count="0" />
+      <LineId Id="58" Count="0" />
+      <LineId Id="61" Count="0" />
+      <LineId Id="60" Count="0" />
+      <LineId Id="63" Count="0" />
+      <LineId Id="62" Count="0" />
+      <LineId Id="65" Count="0" />
+      <LineId Id="64" Count="0" />
+      <LineId Id="67" Count="0" />
+      <LineId Id="66" Count="0" />
+      <LineId Id="69" Count="0" />
+      <LineId Id="68" Count="0" />
+      <LineId Id="71" Count="0" />
+      <LineId Id="70" Count="0" />
+      <LineId Id="73" Count="0" />
+      <LineId Id="72" Count="0" />
+      <LineId Id="75" Count="0" />
+      <LineId Id="78" Count="0" />
+      <LineId Id="80" Count="0" />
+      <LineId Id="79" Count="0" />
+      <LineId Id="82" Count="0" />
+      <LineId Id="81" Count="0" />
+      <LineId Id="84" Count="0" />
+      <LineId Id="83" Count="0" />
+      <LineId Id="86" Count="0" />
+      <LineId Id="85" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
