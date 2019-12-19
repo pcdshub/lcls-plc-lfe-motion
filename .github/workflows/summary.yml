@@ -1,0 +1,17 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Clone helpers
+      run: git clone --depth 1 --branch enh_summary git://github.com/klauer/pcds-ci-helpers.git
+    - name: Initialize
+      run: |
+          export TWINCAT_SUMMARY=1
+          source pcds-ci-helpers/travis/init.sh
