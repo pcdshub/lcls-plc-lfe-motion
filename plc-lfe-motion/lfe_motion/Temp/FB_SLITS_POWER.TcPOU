@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+  <POU Name="FB_SLITS_POWER" Id="{f2a7b61c-c24f-40b8-8c2e-4d94fdfd3c86}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_SLITS_POWER
+VAR_IN_OUT
+	stTopBlade: DUT_MotionStage;
+	stBottomBlade: DUT_MotionStage;
+	stNorthBlade: DUT_MotionStage;
+	stSouthBlade: DUT_MotionStage;
+END_VAR
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	fbTopBlade: FB_MotionStage;
+	fbBottomBlade: FB_MotionStage;
+	fbNorthBlade: FB_MotionStage;
+	fbSouthBlade: FB_MotionStage;
+	
+	{attribute 'pytmc' := '
+		pv: SFW
+	'}
+	fbFlowSwitch: FB_XTES_Flowswitch;
+	
+	
+	//RTDs
+	RTD_TOP_1: FB_ThermoCouple;
+	RTD_TOP_2: FB_ThermoCouple;
+	
+	RTD_Bottom_1: FB_ThermoCouple;
+	RTD_Bottom_2: FB_ThermoCouple;
+	
+	
+	RTD_North_1: FB_ThermoCouple;
+	RTD_North_2: FB_ThermoCouple;
+	
+	RTD_South_1: FB_ThermoCouple;
+	RTD_South_2: FB_ThermoCouple;
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Instantiate Function block for all the blades
+fbTopBlade(stMotionStage:=stTopBlade);
+fbBottomBlade(stMotionStage:=stBottomBlade);
+fbNorthBlade(stMotionStage:=stNorthBlade);
+fbSouthBlade(stMotionStage:=stSouthBlade);
+
+//  no STO
+stTopBlade.bHardwareEnable := TRUE;
+stBottomBlade.bHardwareEnable := TRUE;
+stNorthBlade.bHardwareEnable := TRUE;
+stSouthBlade.bHardwareEnable := TRUE;
+
+
+//RTDs
+RTD_TOP_1();
+RTD_TOP_2();
+RTD_Bottom_1();
+RTD_Bottom_2();
+RTD_North_1();
+RTD_North_2();
+RTD_South_1();
+RTD_South_2();
+
+//Flow Switch
+fbFlowSwitch();]]></ST>
+    </Implementation>
+    <LineIds Name="FB_SLITS_POWER">
+      <LineId Id="30" Count="0" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="33" Count="2" />
+      <LineId Id="67" Count="3" />
+      <LineId Id="55" Count="1" />
+      <LineId Id="72" Count="0" />
+      <LineId Id="71" Count="0" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="57" Count="3" />
+      <LineId Id="63" Count="1" />
+      <LineId Id="66" Count="0" />
+      <LineId Id="52" Count="1" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="54" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

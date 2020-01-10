@@ -1,24 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
   <POU Name="PRG_SL2L0_POWER" Id="{b81ede99-2259-4f9f-b687-2b775d0f5c19}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_SL2L0_POWER
 VAR
-	fbMotion1: FB_SimMotor;
+		{attribute 'pytmc' := '
+		pv: SL2L0:POWER
+		io: io
+	'}
+	{attribute 'TcLinkTo' := '.RTD_TOP_1.iRaw := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Value;
+							  .RTD_TOP_1.bError := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Error;
+							  .RTD_TOP_1.bUnderrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Underrange;
+							  .RTD_TOP_1.bOverrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Overrange;
+							  .RTD_TOP_2.iRaw := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Value;
+							  .RTD_TOP_2.bError := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Error;
+							  .RTD_TOP_2.bUnderrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Underrange;
+							  .RTD_TOP_2.bOverrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Overrange;
+							  .RTD_Bottom_1.iRaw := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Value;
+							  .RTD_Bottom_1.bError := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Error;
+							  .RTD_Bottom_1.bUnderrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Underrange;
+							  .RTD_Bottom_1.bOverrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Overrange;
+							  .RTD_Bottom_2.iRaw := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Value;
+							  .RTD_Bottom_2.bError := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Error;
+							  .RTD_Bottom_2.bUnderrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Underrange;
+							  .RTD_Bottom_2.bOverrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Overrange;
+							  .RTD_North_1.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Value;
+							  .RTD_North_1.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Error;
+							  .RTD_North_1.bUnderrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Underrange;
+							  .RTD_North_1.bOverrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Overrange;
+							  .RTD_North_2.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Value;
+							  .RTD_North_2.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Error;
+							  .RTD_North_2.bUnderrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Underrange;
+							  .RTD_North_2.bOverrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Overrange;
+							  .RTD_South_1.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Value;
+							  .RTD_South_1.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Error;
+							  .RTD_South_1.bUnderrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 1^Status^Underrange;
+							  .RTD_South_1.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 1^Status^Overrange;
+							  .RTD_South_2.iRaw := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Value;
+							  .RTD_South_2.bError := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Error;
+							  .RTD_South_2.bUnderrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Underrange;
+							  .RTD_South_2.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange;
+							  '}
+	fbSL2L0: FB_SLITS_POWER;
+	
+
+	(*fbMotion1: FB_SimMotor;
 	fbMotion2: FB_SimMotor;
 	fbMotion3: FB_SimMotor;
-	fbMotion4: FB_SimMotor;
+	fbMotion4: FB_SimMotor;*)
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[// Placeholder, standard simulated motion for all axes
-fbMotion1(stMotionStage := Main.M45);
+(*fbMotion1(stMotionStage := Main.M45);
 fbMotion2(stMotionStage := Main.M46);
 fbMotion3(stMotionStage := Main.M47);
-fbMotion4(stMotionStage := Main.M48);]]></ST>
+fbMotion4(stMotionStage := Main.M48);*)
+
+fbSL2L0(stTopBlade:=  Main.M45, 
+		stBottomBlade:= Main.M46, 
+		stNorthBlade:=  Main.M47, 
+		stSouthBlade:=  Main.M48);]]></ST>
     </Implementation>
     <LineIds Name="PRG_SL2L0_POWER">
       <LineId Id="3" Count="3" />
       <LineId Id="2" Count="0" />
+      <LineId Id="56" Count="3" />
+      <LineId Id="55" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
