@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
   <POU Name="PRG_SL2L0_POWER" Id="{b81ede99-2259-4f9f-b687-2b775d0f5c19}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_SL2L0_POWER
 VAR
@@ -38,8 +38,7 @@ VAR
 							  .RTD_South_2.iRaw := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Value;
 							  .RTD_South_2.bError := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Error;
 							  .RTD_South_2.bUnderrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Underrange;
-							  .RTD_South_2.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange;
-							  '}
+							  .RTD_South_2.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange'}
 	fbSL2L0: FB_SLITS_POWER;
 	
 
@@ -56,14 +55,25 @@ fbMotion2(stMotionStage := Main.M46);
 fbMotion3(stMotionStage := Main.M47);
 fbMotion4(stMotionStage := Main.M48);*)
 
-fbSL2L0(stTopBlade:=  Main.M45, 
-		stBottomBlade:= Main.M46, 
-		stNorthBlade:=  Main.M47, 
-		stSouthBlade:=  Main.M48);]]></ST>
+(*
+--MAPPING TO PHYSICAL TERMINAL--
+Main.45 -> M1	(Bottom)
+Main.46 -> M2	(South)
+Main.47 -> M3	(Top)
+Main.48 -> M4	(North)
+*)
+
+fbSL2L0(stTopBlade:=  Main.M47, 
+		stBottomBlade:= Main.M45, 
+		stNorthBlade:=  Main.M48, 
+		stSouthBlade:=  Main.M46);]]></ST>
     </Implementation>
     <LineIds Name="PRG_SL2L0_POWER">
       <LineId Id="3" Count="3" />
       <LineId Id="2" Count="0" />
+      <LineId Id="107" Count="0" />
+      <LineId Id="109" Count="5" />
+      <LineId Id="108" Count="0" />
       <LineId Id="56" Count="3" />
       <LineId Id="55" Count="0" />
     </LineIds>
