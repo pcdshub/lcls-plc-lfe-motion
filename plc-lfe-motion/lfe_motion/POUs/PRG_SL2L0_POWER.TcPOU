@@ -38,8 +38,7 @@ VAR
 							  .RTD_South_2.iRaw := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Value;
 							  .RTD_South_2.bError := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Error;
 							  .RTD_South_2.bUnderrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Underrange;
-							  .RTD_South_2.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange;
-							  '}
+							  .RTD_South_2.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange'}
 	fbSL2L0: FB_SLITS_POWER;
 	
 
@@ -56,16 +55,26 @@ fbMotion2(stMotionStage := Main.M46);
 fbMotion3(stMotionStage := Main.M47);
 fbMotion4(stMotionStage := Main.M48);*)
 
+
+
+
 fbSL2L0(stTopBlade:=  Main.M45, 
 		stBottomBlade:= Main.M46, 
 		stNorthBlade:=  Main.M47, 
-		stSouthBlade:=  Main.M48);]]></ST>
+		stSouthBlade:=  Main.M48,
+		fPosTopBlade:=,
+		fPosBottomBlade:=,
+		fPosNorthBlade:=,
+		fPosSouthBlade:= );]]></ST>
     </Implementation>
     <LineIds Name="PRG_SL2L0_POWER">
       <LineId Id="3" Count="3" />
       <LineId Id="2" Count="0" />
+      <LineId Id="107" Count="2" />
       <LineId Id="56" Count="3" />
       <LineId Id="55" Count="0" />
+      <LineId Id="110" Count="1" />
+      <LineId Id="113" Count="1" />
     </LineIds>
   </POU>
 </TcPlcObject>
