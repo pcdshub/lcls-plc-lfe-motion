@@ -40,8 +40,41 @@ VAR
 							  .RTD_South_2.bUnderrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Underrange;
 							  .RTD_South_2.bOverrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange'}
 	fbSL1L0: FB_SLITS_POWER;
+	(*T. MATRIX (North-x1,South-x2,Top-y1,Bottom-y2.. appSize-gapX,gapY, Cx, Cy) *)
+	aTMatrix: ARRAY [1..4,1..4] of REAL;
+	{attribute 'pytmc' := '
+    pv: SL1L0:POWER:GO;
+	io: io;
+    '}
+	bExecuteMotion:bool ;
+	{attribute 'pytmc' := '
+    pv: SL1L0:POWER:WIDTH_DES;
+	io: io;
+    '}
+	rReqApertureSizeX : REAL;
+	{attribute 'pytmc' := '
+    pv: SL1L0:POWER:HEIGHT_DES;
+	io: io;
+    '}
+	rReqApertureSizeY : REAL;
+	{attribute 'pytmc' := '
+    pv: SL1L0:POWER:CENTER_X_DES;
+	io: io;
+    '}
+	rReqCenterX: REAL;
+	{attribute 'pytmc' := '
+    pv: SL1L0:POWER:CENTER_Y_DES;
+	io: io;
+    '}
+	rReqCenterY: REAL;
+	bInit:BOOL :=true;
 	
 
+	rMaxX:REAL:=28;
+	rMaxY:REAL:=28;
+	rMaxCx:REAL:=14;
+	rMaxCy:REAL:=14;
+	
 (*fbMotion1: FB_SimMotor;
 	fbMotion2: FB_SimMotor;
 	fbMotion3: FB_SimMotor;
@@ -63,6 +96,7 @@ Main.43 -> M3	(Top)
 Main.44 -> M4	(North)
 *)
 
+<<<<<<< HEAD
 M41.nEnableMode := 1;
 M42.nEnableMode := 1;
 M43.nEnableMode := 1;
@@ -73,11 +107,89 @@ fbSL1L0(stTopBlade:=  Main.M43,
 		stNorthBlade:=  Main.M44, 
 		stSouthBlade:=  Main.M42);	
 ]]></ST>
+=======
+if (bInit) THEN
+	(*Gap*)
+	aTMatrix[1,1]:= 1/2;
+	aTMatrix[2,1]:= -1/2;
+	aTMatrix[3,1]:= 0;
+	aTMatrix[4,1]:= 0;
+	(*GAP Y*)
+	aTMatrix[1,2]:= 0;
+	aTMatrix[2,2]:= 0;
+	aTMatrix[3,2]:= 1/2;
+	aTMatrix[4,2]:= -1/2;
+	(*Center X*)
+	aTMatrix[1,3]:= 1;
+	aTMatrix[2,3]:= 1;
+	aTMatrix[3,3]:= 0;
+	aTMatrix[4,3]:= 0;
+	(*Center Y*)
+	aTMatrix[1,4]:= 0;
+	aTMatrix[2,4]:= 0;
+	aTMatrix[3,4]:= 1;
+	aTMatrix[4,4]:= 1;
+	
+	bInit :=false;
+END_IF
+
+//verigy requested gap and center are within range
+// Needs to be better
+rReqApertureSizeX := LIMIT(0,rReqApertureSizeX, rMaxX);
+rReqApertureSizeY := LIMIT(0,rReqApertureSizeY, rMaxY);
+rReqCenterX := LIMIT(0,rReqCenterX, rMaxCx);
+rReqCenterY := LIMIT(0,rReqCenterY, rMaxCy);
+
+// Calculate the position of every blade based on the transformation Matrix
+
+fbSL1L0.fPosNorthBlade := (aTMatrix[1,1] * rReqApertureSizeX) + (aTMatrix[1,3]*rReqCenterX);
+fbSL1L0.fPosSouthBlade:= (aTMatrix[2,1] * rReqApertureSizeX) + (aTMatrix[2,3]*rReqCenterX);
+
+fbSL1L0.fPosTopBlade := (aTMatrix[3,2] * rReqApertureSizeY) +(aTMatrix[3,4]*rReqCenterY);
+fbSL1L0.fPosBottomBlade :=(aTMatrix[4,2] * rReqApertureSizeY) + (aTMatrix[4,4]*rReqCenterY);
+
+fbSL1L0.bExecuteMotion := bExecuteMotion;
+
+fbSL1L0(stTopBlade:=  Main.M41, 
+		stBottomBlade:= Main.M42 , 
+		stNorthBlade:=  Main.M43, 
+		stSouthBlade:=  Main.M44);]]></ST>
+>>>>>>> upstream/master
     </Implementation>
     <LineIds Name="PRG_SL1L0_POWER">
       <LineId Id="3" Count="3" />
       <LineId Id="2" Count="0" />
+<<<<<<< HEAD
       <LineId Id="73" Count="0" />
+=======
+      <LineId Id="75" Count="0" />
+      <LineId Id="111" Count="1" />
+      <LineId Id="126" Count="0" />
+      <LineId Id="115" Count="0" />
+      <LineId Id="122" Count="1" />
+      <LineId Id="116" Count="0" />
+      <LineId Id="148" Count="3" />
+      <LineId Id="147" Count="0" />
+      <LineId Id="127" Count="3" />
+      <LineId Id="124" Count="0" />
+      <LineId Id="132" Count="3" />
+      <LineId Id="131" Count="0" />
+      <LineId Id="125" Count="0" />
+      <LineId Id="113" Count="1" />
+      <LineId Id="164" Count="0" />
+      <LineId Id="163" Count="0" />
+      <LineId Id="152" Count="1" />
+      <LineId Id="159" Count="0" />
+      <LineId Id="162" Count="0" />
+      <LineId Id="161" Count="0" />
+      <LineId Id="76" Count="1" />
+      <LineId Id="82" Count="0" />
+      <LineId Id="117" Count="0" />
+      <LineId Id="141" Count="0" />
+      <LineId Id="119" Count="1" />
+      <LineId Id="73" Count="0" />
+      <LineId Id="108" Count="0" />
+>>>>>>> upstream/master
       <LineId Id="17" Count="0" />
       <LineId Id="75" Count="0" />
       <LineId Id="78" Count="3" />
