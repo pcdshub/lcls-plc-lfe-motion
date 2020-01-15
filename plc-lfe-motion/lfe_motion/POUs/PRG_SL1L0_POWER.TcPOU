@@ -38,7 +38,8 @@ VAR
 							  .RTD_South_2.iRaw := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Value;
 							  .RTD_South_2.bError := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Error;
 							  .RTD_South_2.bUnderrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Underrange;
-							  .RTD_South_2.bOverrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange'}
+							  .RTD_South_2.bOverrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange;
+							  '}
 	fbSL1L0: FB_SLITS_POWER;
 	(*T. MATRIX (North-x1,South-x2,Top-y1,Bottom-y2.. appSize-gapX,gapY, Cx, Cy) *)
 	aTMatrix: ARRAY [1..4,1..4] of REAL;
@@ -88,26 +89,7 @@ fbMotion2(stMotionStage := Main.M42);
 fbMotion3(stMotionStage := Main.M43);
 fbMotion4(stMotionStage := Main.M44);*)
 
-(*
---MAPPING TO PHYSICAL TERMINAL--
-Main.41 -> M1	(Bottom)
-Main.42 -> M2	(South)
-Main.43 -> M3	(Top)
-Main.44 -> M4	(North)
-*)
 
-<<<<<<< HEAD
-M41.nEnableMode := 1;
-M42.nEnableMode := 1;
-M43.nEnableMode := 1;
-M44.nEnableMode := 1;
-
-fbSL1L0(stTopBlade:=  Main.M43,
-		stBottomBlade:= Main.M41, 
-		stNorthBlade:=  Main.M44, 
-		stSouthBlade:=  Main.M42);	
-]]></ST>
-=======
 if (bInit) THEN
 	(*Gap*)
 	aTMatrix[1,1]:= 1/2;
@@ -150,18 +132,27 @@ fbSL1L0.fPosBottomBlade :=(aTMatrix[4,2] * rReqApertureSizeY) + (aTMatrix[4,4]*r
 
 fbSL1L0.bExecuteMotion := bExecuteMotion;
 
-fbSL1L0(stTopBlade:=  Main.M41, 
-		stBottomBlade:= Main.M42 , 
-		stNorthBlade:=  Main.M43, 
-		stSouthBlade:=  Main.M44);]]></ST>
->>>>>>> upstream/master
+(*
+--MAPPING TO PHYSICAL TERMINAL--
+Main.41 -> M1	(Bottom)
+Main.42 -> M2	(South)
+Main.43 -> M3	(Top)
+Main.44 -> M4	(North)
+*)
+(*		
+Main.M41.nEnableMode := 1;
+Main.M42.nEnableMode := 1;
+Main.M43.nEnableMode := 1;
+Main.M44.nEnableMode := 1;
+*)
+fbSL1L0(stTopBlade:=  Main.M43,
+		stBottomBlade:= Main.M41, 
+		stNorthBlade:=  Main.M44, 
+		stSouthBlade:=  Main.M42);]]></ST>
     </Implementation>
     <LineIds Name="PRG_SL1L0_POWER">
       <LineId Id="3" Count="3" />
       <LineId Id="2" Count="0" />
-<<<<<<< HEAD
-      <LineId Id="73" Count="0" />
-=======
       <LineId Id="75" Count="0" />
       <LineId Id="111" Count="1" />
       <LineId Id="126" Count="0" />
@@ -189,17 +180,15 @@ fbSL1L0(stTopBlade:=  Main.M41,
       <LineId Id="119" Count="1" />
       <LineId Id="73" Count="0" />
       <LineId Id="108" Count="0" />
->>>>>>> upstream/master
       <LineId Id="17" Count="0" />
-      <LineId Id="75" Count="0" />
-      <LineId Id="78" Count="3" />
-      <LineId Id="74" Count="0" />
-      <LineId Id="182" Count="3" />
-      <LineId Id="181" Count="0" />
-      <LineId Id="22" Count="0" />
-      <LineId Id="20" Count="0" />
-      <LineId Id="23" Count="2" />
-      <LineId Id="134" Count="0" />
+      <LineId Id="261" Count="0" />
+      <LineId Id="255" Count="5" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="245" Count="0" />
+      <LineId Id="247" Count="3" />
+      <LineId Id="254" Count="0" />
+      <LineId Id="251" Count="2" />
+      <LineId Id="246" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
