@@ -1329,15 +1329,9 @@ External Setpoint Generation:
 			<PositionAreaControl Range="0.16"/>
 			<TargetPosControl Range="0.08"/>
 			<OtherSettings AllowMotionCmdToSlave="true" PulseDistancePos="0.02" PulseDistanceNeg="0.02"/>
-			<ParameterChanged>25</ParameterChanged>
-			<ParameterChanged>8</ParameterChanged>
-			<ParameterChanged>24</ParameterChanged>
-			<ParameterChanged>7</ParameterChanged>
-			<ParameterChanged>9</ParameterChanged>
-			<ParameterChanged>6</ParameterChanged>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="29">
-			<EncPara ScaleFactorNumerator="5e-05" MaxCount="#xffffffff">
+			<EncPara ScaleFactorNumerator="5e-05" Offset="-29.3954" MaxCount="#xffffffff">
 				<Inc RefSoftSyncMask="#x0000ffff"/>
 			</EncPara>
 			<Vars VarGrpType="1">
@@ -1539,7 +1533,7 @@ External Setpoint Generation:
 	</Axis>
 	<Mappings>
 		<OwnerA>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL5042-E6">
+			<OwnerB Name="TIID^Device 2 (EtherCAT)^X1 SL1L0-Power (EK1100)^SL1L0-EL5042-E6">
 				<Link VarA="Enc^Inputs^In^nComState" VarB="WcState^InputToggle" Size="1" OffsA="1"/>
 				<Link VarA="Enc^Inputs^In^nComState" VarB="WcState^WcState"/>
 				<Link VarA="Enc^Inputs^In^nDataIn1" VarB="FB Inputs Channel 1^Position"/>
@@ -1550,7 +1544,7 @@ External Setpoint Generation:
 				<Link VarA="Enc^Inputs^In^nState1" VarB="FB Inputs Channel 1^Status^TxPDO State" Size="1" OffsA="13"/>
 				<Link VarA="Enc^Inputs^In^nState1" VarB="FB Inputs Channel 1^Status^Warning"/>
 			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL7041-E5">
+			<OwnerB Name="TIID^Device 2 (EtherCAT)^X1 SL1L0-Power (EK1100)^SL1L0-EL7041-E5">
 				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Error" Size="1" OffsA="3"/>
 				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Moving negative" Size="1" OffsA="5"/>
 				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Moving positive" Size="1" OffsA="4"/>
