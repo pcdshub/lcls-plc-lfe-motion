@@ -1,4 +1,4 @@
-#!/reg/neh/home/zlentz/github/ads-ioc/bin/rhel7-x86_64/adsIoc
+#!/reg/g/pcds/epics/ioc/common/ads-ioc/R0.1.6/bin/rhel7-x86_64/adsIoc
 
 < envPaths
 
@@ -16,21 +16,50 @@ epicsEnvSet("IOCSH_PS1", "$(IOCNAME)> " )
 dbLoadDatabase("$(ADS_IOC_TOP)/dbd/adsIoc.dbd")
 adsIoc_registerRecordDeviceDriver(pdbbase)
 
-epicsEnvSet("ASYN_PORT",     "ASYN_PLC")
-epicsEnvSet("IPADDR",        "172.21.88.228")
-epicsEnvSet("AMSID",         "172.21.88.228.1.1")
-epicsEnvSet("IPPORT",        "851")
+epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
+epicsEnvSet("IPADDR",           "172.21.88.228")
+epicsEnvSet("AMSID",            "172.21.88.228.1.1")
+epicsEnvSet("AMS_PORT",         "851")
+epicsEnvSet("ADS_MAX_PARAMS",   "2000")
+epicsEnvSet("ADS_SAMPLE_MS",    "50")
+epicsEnvSet("ADS_MAX_DELAY_MS", "100")
+epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
+epicsEnvSet("ADS_TIME_SOURCE",  "0")
 
-adsAsynPortDriverConfigure("$(ASYN_PORT)","$(IPADDR)","$(AMSID)","$(IPPORT)", 1000, 0, 0, 50, 100, 1000, 0)
+# adsAsynPortDriverConfigure(portName, ipaddr, amsaddr, amsport,
+#    asynParamTableSize, priority, noAutoConnect, defaultSampleTimeMS,
+#    maxDelayTimeMS, adsTimeoutMS, defaultTimeSource)
+# portName            Asyn port name
+# ipAddr              IP address of PLC
+# amsaddr             AMS Address of PLC
+# amsport             Default AMS port in PLC (851 for first PLC)
+# paramTableSize      Maximum parameter/variable count. (1000)
+# priority            Asyn priority (0)
+# noAutoConnect       Enable auto connect (0=enabled)
+# defaultSampleTimeMS Default sample of variable (PLC ams router
+#                     checks if variable changed, if changed then add to send buffer) (50ms)
+# maxDelayTimeMS      Maximum delay before variable that has changed is sent to client
+#                     (Linux). The variable can also be sent sooner if the ams router
+#                     send buffer is filled (100ms)
+# adsTimeoutMS        Timeout for adslib commands (1000ms)
+# defaultTimeSource   Default time stamp source of changed variable (PLC=0):
+#                     PLC=0: The PLC time stamp from when the value was
+#                         changed is used and set as timestamp in the EPICS record
+#                         (if record TSE field is set to -2=enable asyn timestamp).
+#                         This is the preferred setting.
+#                     EPICS=1: The time stamp will be made when the updated data
+#                         arrives in the EPICS client.
+adsAsynPortDriverConfigure("$(ASYN_PORT)", "$(IPADDR)", "$(AMSID)", "$(AMS_PORT)", "$(ADS_MAX_PARAMS)", 0, 0, "$(ADS_SAMPLE_MS)", "$(ADS_MAX_DELAY_MS)", "$(ADS_TIMEOUT_MS)", "$(ADS_TIME_SOURCE)")
 
 cd "$(ADS_IOC_TOP)/db"
 
-epicsEnvSet("MOTOR_PORT",    "PLC_ADS")
-epicsEnvSet("PREFIX",        "PLC:LFE:MOTION:")
-epicsEnvSet("ECM_NUMAXES",   "54")
-epicsEnvSet("NUMAXES",       "54")
+epicsEnvSet("MOTOR_PORT",     "PLC_ADS")
+epicsEnvSet("PREFIX",         "PLC:LFE:MOTION:")
+epicsEnvSet("NUMAXES",        "54")
+epicsEnvSet("MOVE_POLL_RATE", "200")
+epicsEnvSet("IDLE_POLL_RATE", "1000")
 
-EthercatMCCreateController("$(MOTOR_PORT)", "$(ASYN_PORT)", "$(NUMAXES)", "200", "1000")
+EthercatMCCreateController("$(MOTOR_PORT)", "$(ASYN_PORT)", "$(NUMAXES)", "$(MOVE_POLL_RATE)", "$(IDLE_POLL_RATE)")
 
 #define ASYN_TRACE_ERROR     0x0001
 #define ASYN_TRACEIO_DEVICE  0x0002
@@ -868,7 +897,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 cd "$(IOC_TOP)"
-dbLoadRecords("lfe_motion.db", "PORT=ASYN_PLC,")
+dbLoadRecords("lfe_motion.db", "PORT=ASYN_PLC,PREFIX=PLC:LFE:MOTION:,IOCNAME=$(IOCNAME),")
 
 cd "$(IOC_TOP)"
 

@@ -13,8 +13,54 @@ VAR
 							  .bFocusEndBwd := TIIB[IM2L0-EL1088]^Channel 4^Input;
 							  .fbOpal.bOpalPower := TIIB[IM2L0-EL2004]^Channel 2^Output'}
 	fbIM2L0: FB_XPIM;
-	stEL6In: EL6InData22b;
-	stEL6Out: EL6OutData22b;
+	{attribute 'TcLinkTo' := '.Status := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Status;
+							  .D[0] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 0;
+							  .D[1] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 1;
+							  .D[2] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 2;
+							  .D[3] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 3;
+							  .D[4] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 4;
+							  .D[5] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 5;
+							  .D[6] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 6;
+							  .D[7] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 7;
+							  .D[8] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 8;
+							  .D[9] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 9;
+							  .D[10] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 10;
+							  .D[11] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 11;
+							  .D[12] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 12;
+							  .D[13] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 13;
+							  .D[14] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 14;
+							  .D[15] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 15;
+							  .D[16] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 16;
+							  .D[17] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 17;
+							  .D[18] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 18;
+							  .D[19] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 19;
+							  .D[20] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 20;
+							  .D[21] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 21'}
+	stEL6In AT %I*: EL6InData22b;
+	{attribute 'TcLinkTo' := '.Ctrl := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Ctrl;
+							  .D[0] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 0;
+							  .D[1] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 1;
+							  .D[2] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 2;
+							  .D[3] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 3;
+							  .D[4] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 4;
+							  .D[5] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 5;
+							  .D[6] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 6;
+							  .D[7] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 7;
+							  .D[8] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 8;
+							  .D[9] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 9;
+							  .D[10] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 10;
+							  .D[11] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 11;
+							  .D[12] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 12;
+							  .D[13] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 13;
+							  .D[14] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 14;
+							  .D[15] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 15;
+							  .D[16] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 16;
+							  .D[17] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 17;
+							  .D[18] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 18;
+							  .D[19] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 19;
+							  .D[20] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
+							  .D[21] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 21'}
+	stEL6Out AT %Q*: EL6OutData22b;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -24,9 +70,9 @@ END_VAR
 	stFocusStage := Main.M26,
 	stEl6In := stEL6In,
 	stEl6Out := stEl6Out,
-	fYag := -87,
-	fDiamond := -57,
-	fReticle := -27,
+	fYag := -87.65,
+	fDiamond := -57.65,
+	fReticle := -27.65,
 	fOut := 0);]]></ST>
     </Implementation>
   </POU>

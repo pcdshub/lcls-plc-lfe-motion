@@ -1,4 +1,4 @@
-IOC_TOP = /reg/neh/home/zlentz/github/ads-ioc
+IOC_TOP = /reg/g/pcds/epics/ioc/common/ads-ioc/R0.1.6
 IOC_INSTANCE_PATH := $(shell pwd)
 
 PROJECT_NAME = plc-lfe-motion
