@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.27" ClassName="CFlbTermDef" SubType="9099">
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.22" ClassName="CFlbTermDef" SubType="9099">
 	<DataTypes>
 		<DataType>
 			<Name GUID="{18071995-0000-0000-0000-002000000002}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..1] OF BIT</Name>
@@ -95,7 +95,7 @@
 		<Name>__FILENAME__</Name>
 		<ImageId>1000</ImageId>
 		<EtherCAT SlaveType="1" PdiType="#x0d00" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x044c2c52" RevisionNo="#x00120000" PortPhys="305" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EK1100 EtherCAT Coupler (2A E-Bus)" Desc="EK1100"/>
-		<Box BoxType="9099" BoxFlags="#x00000020" Id="72">
+		<Box BoxType="9099" BoxFlags="#x00000020" Id="99">
 			<Name>SL1L0-EL7041-E1</Name>
 			<ImageId>1001</ImageId>
 			<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="39" FoeType="1" VendorId="#x00000002" ProductCode="#x1b813052" RevisionNo="#x00190000" InfoDataAddr="true" InfoDataSoeDS401="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL7041 1Ch. Stepper motor output stage (50V, 5A)" Desc="EL7041" PortABoxInfo="#x01000011">
@@ -527,10 +527,10 @@
 				<CoeProfile ProfileNo="46142345" DisplayName="Positioning interfa"/>
 			</EtherCAT>
 		</Box>
-		<Box BoxType="9099" BoxFlags="#x00000020" Id="73">
+		<Box BoxType="9099" BoxFlags="#x00000020" Id="100">
 			<Name>SL1L0-EL5042-E2</Name>
 			<ImageId>1002</ImageId>
-			<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="39" FoeType="1" VendorId="#x00000002" ProductCode="#x13b23052" RevisionNo="#x00100000" InfoDataAddr="true" TimeoutMailbox2="10000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL5042 2Ch. BiSS-C Encoder" Desc="EL5042" PortABoxInfo="#x01000048">
+			<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="39" FoeType="1" VendorId="#x00000002" ProductCode="#x13b23052" RevisionNo="#x00100000" InfoDataAddr="true" TimeoutMailbox2="10000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL5042 2Ch. BiSS-C Encoder" Desc="EL5042" PortABoxInfo="#x01000063">
 				<SyncMan>001080002600010001000000400080008000001026010000</SyncMan>
 				<SyncMan>801080002200010002000000400080008000801022010000</SyncMan>
 				<SyncMan>001100000400000003000000000000000000001104000000</SyncMan>
@@ -546,6 +546,7 @@
 				<MBoxUserCmdData>020003000900000010000000030000000000000000000000000000000000000020088016010000001a53696e676c657475726e205b4269745d00</MBoxUserCmdData>
 				<MBoxUserCmdData>02000300090000000f00000003000000000000000000000000000000000000002018801501000000004d756c74697475726e205b4269745d00</MBoxUserCmdData>
 				<MBoxUserCmdData>020003000900000010000000030000000000000000000000000000000000000020188016010000001a53696e676c657475726e205b4269745d00</MBoxUserCmdData>
+				<MBoxUserCmdData>0200030009000000190000000300000000000000000000000000000000000000201880010100000001496e7665727420466565646261636b20446972656374696f6e00</MBoxUserCmdData>
 				<Pdo Name="FB Inputs Channel 1" Index="#x1a00" Flags="#x0010" SyncMan="3">
 					<ExcludePdo>#x1a02</ExcludePdo>
 					<Entry Name="Status__Warning" Index="#x6000" Sub="#x01" Flags="#x00008020">
@@ -670,10 +671,10 @@
 				<CoeProfile ProfileNo="33624969"/>
 			</EtherCAT>
 		</Box>
-		<Box BoxType="9099" BoxFlags="#x00000020" Id="74">
+		<Box BoxType="9099" BoxFlags="#x00000020" Id="101">
 			<Name>SL1L0-EL7041-E3</Name>
 			<ImageId>1001</ImageId>
-			<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="39" FoeType="1" VendorId="#x00000002" ProductCode="#x1b813052" RevisionNo="#x00190000" InfoDataAddr="true" InfoDataSoeDS401="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL7041 1Ch. Stepper motor output stage (50V, 5A)" Desc="EL7041" PortABoxInfo="#x01000049">
+			<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="39" FoeType="1" VendorId="#x00000002" ProductCode="#x1b813052" RevisionNo="#x00190000" InfoDataAddr="true" InfoDataSoeDS401="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL7041 1Ch. Stepper motor output stage (50V, 5A)" Desc="EL7041" PortABoxInfo="#x01000064">
 				<SyncMan>001080002600010001000000400080008000001026010000</SyncMan>
 				<SyncMan>801080002200010002000000400080008000801022010000</SyncMan>
 				<SyncMan>001108002400010003000000000000000800001124010000</SyncMan>
@@ -1102,10 +1103,10 @@
 				<CoeProfile ProfileNo="46142345" DisplayName="Positioning interfa"/>
 			</EtherCAT>
 		</Box>
-		<Box BoxType="9099" Id="75">
+		<Box BoxType="9099" Id="102">
 			<Name>SL1L0-EL2004-E4</Name>
 			<ImageId>1003</ImageId>
-			<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x07d43052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2004 4Ch. Dig. Output 24V, 0.5A" Desc="EL2004" PortABoxInfo="#x0100004a">
+			<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x07d43052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2004 4Ch. Dig. Output 24V, 0.5A" Desc="EL2004" PortABoxInfo="#x01000065">
 				<SyncMan>000f01004400010003000000000000000000000f44090000</SyncMan>
 				<Fmmu>0000000000000000000f00020100000001000000000000000000000000000000</Fmmu>
 				<Pdo Name="Channel 1" Index="#x1600" InOut="1" Flags="#x0011" SyncMan="0">
@@ -1130,10 +1131,10 @@
 				</Pdo>
 			</EtherCAT>
 		</Box>
-		<Box BoxType="9099" BoxFlags="#x00000020" Id="76">
+		<Box BoxType="9099" BoxFlags="#x00000020" Id="103">
 			<Name>SL1L0-EL7041-E5</Name>
 			<ImageId>1001</ImageId>
-			<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="39" FoeType="1" VendorId="#x00000002" ProductCode="#x1b813052" RevisionNo="#x00190000" InfoDataAddr="true" InfoDataSoeDS401="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL7041 1Ch. Stepper motor output stage (50V, 5A)" Desc="EL7041" PortABoxInfo="#x0100004b">
+			<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="39" FoeType="1" VendorId="#x00000002" ProductCode="#x1b813052" RevisionNo="#x00190000" InfoDataAddr="true" InfoDataSoeDS401="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL7041 1Ch. Stepper motor output stage (50V, 5A)" Desc="EL7041" PortABoxInfo="#x01000066">
 				<SyncMan>001080002600010001000000400080008000001026010000</SyncMan>
 				<SyncMan>801080002200010002000000400080008000801022010000</SyncMan>
 				<SyncMan>001108002400010003000000000000000800001124010000</SyncMan>
@@ -1562,10 +1563,10 @@
 				<CoeProfile ProfileNo="46142345" DisplayName="Positioning interfa"/>
 			</EtherCAT>
 		</Box>
-		<Box BoxType="9099" BoxFlags="#x00000020" Id="77">
+		<Box BoxType="9099" BoxFlags="#x00000020" Id="104">
 			<Name>SL1L0-EL5042-E6</Name>
 			<ImageId>1002</ImageId>
-			<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="39" FoeType="1" VendorId="#x00000002" ProductCode="#x13b23052" RevisionNo="#x00100000" InfoDataAddr="true" TimeoutMailbox2="10000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL5042 2Ch. BiSS-C Encoder" Desc="EL5042" PortABoxInfo="#x0100004c">
+			<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="39" FoeType="1" VendorId="#x00000002" ProductCode="#x13b23052" RevisionNo="#x00100000" InfoDataAddr="true" TimeoutMailbox2="10000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL5042 2Ch. BiSS-C Encoder" Desc="EL5042" PortABoxInfo="#x01000067">
 				<SyncMan>001080002600010001000000400080008000001026010000</SyncMan>
 				<SyncMan>801080002200010002000000400080008000801022010000</SyncMan>
 				<SyncMan>001100000400000003000000000000000000001104000000</SyncMan>
@@ -1581,6 +1582,7 @@
 				<MBoxUserCmdData>020003000900000010000000030000000000000000000000000000000000000020088016010000001a53696e676c657475726e205b4269745d00</MBoxUserCmdData>
 				<MBoxUserCmdData>02000300090000000f00000003000000000000000000000000000000000000002018801501000000004d756c74697475726e205b4269745d00</MBoxUserCmdData>
 				<MBoxUserCmdData>020003000900000010000000030000000000000000000000000000000000000020188016010000001a53696e676c657475726e205b4269745d00</MBoxUserCmdData>
+				<MBoxUserCmdData>0200030009000000190000000300000000000000000000000000000000000000201880010100000001496e7665727420466565646261636b20446972656374696f6e00</MBoxUserCmdData>
 				<Pdo Name="FB Inputs Channel 1" Index="#x1a00" Flags="#x0010" SyncMan="3">
 					<ExcludePdo>#x1a02</ExcludePdo>
 					<Entry Name="Status__Warning" Index="#x6000" Sub="#x01">
@@ -1705,10 +1707,10 @@
 				<CoeProfile ProfileNo="33624969"/>
 			</EtherCAT>
 		</Box>
-		<Box BoxType="9099" BoxFlags="#x00000020" Id="78">
+		<Box BoxType="9099" BoxFlags="#x00000020" Id="105">
 			<Name>SL1L0-EL7041-E7</Name>
 			<ImageId>1001</ImageId>
-			<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="39" FoeType="1" VendorId="#x00000002" ProductCode="#x1b813052" RevisionNo="#x00190000" InfoDataAddr="true" InfoDataSoeDS401="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL7041 1Ch. Stepper motor output stage (50V, 5A)" Desc="EL7041" PortABoxInfo="#x0100004d">
+			<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="39" FoeType="1" VendorId="#x00000002" ProductCode="#x1b813052" RevisionNo="#x00190000" InfoDataAddr="true" InfoDataSoeDS401="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL7041 1Ch. Stepper motor output stage (50V, 5A)" Desc="EL7041" PortABoxInfo="#x01000068">
 				<SyncMan>001080002600010001000000400080008000001026010000</SyncMan>
 				<SyncMan>801080002200010002000000400080008000801022010000</SyncMan>
 				<SyncMan>001108002400010003000000000000000800001124010000</SyncMan>
@@ -2137,10 +2139,10 @@
 				<CoeProfile ProfileNo="46142345" DisplayName="Positioning interfa"/>
 			</EtherCAT>
 		</Box>
-		<Box BoxType="9099" BoxFlags="#x00000020" Id="79">
+		<Box BoxType="9099" BoxFlags="#x00000020" Id="106">
 			<Name>SL1L0-EL3202-E8</Name>
 			<ImageId>1004</ImageId>
-			<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x0c823052" RevisionNo="#x00160000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3202 2Ch. Ana. Input PT100 (RTD)" Desc="EL3202" PortABoxInfo="#x0100004e">
+			<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x0c823052" RevisionNo="#x00160000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3202 2Ch. Ana. Input PT100 (RTD)" Desc="EL3202" PortABoxInfo="#x01000069">
 				<SyncMan>001080002600010001000000800080008000001026010000</SyncMan>
 				<SyncMan>801080002200010002000000800080008000801022010000</SyncMan>
 				<SyncMan>001100000400000003000000000000000000001104000000</SyncMan>
@@ -2210,10 +2212,10 @@
 				<CoeProfile ProfileNo="20976521"/>
 			</EtherCAT>
 		</Box>
-		<Box BoxType="9099" BoxFlags="#x00000020" Id="80">
+		<Box BoxType="9099" BoxFlags="#x00000020" Id="107">
 			<Name>SL1L0-EL3202-E9</Name>
 			<ImageId>1004</ImageId>
-			<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x0c823052" RevisionNo="#x00160000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3202 2Ch. Ana. Input PT100 (RTD)" Desc="EL3202" PortABoxInfo="#x0100004f">
+			<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x0c823052" RevisionNo="#x00160000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3202 2Ch. Ana. Input PT100 (RTD)" Desc="EL3202" PortABoxInfo="#x0100006a">
 				<SyncMan>001080002600010001000000800080008000001026010000</SyncMan>
 				<SyncMan>801080002200010002000000800080008000801022010000</SyncMan>
 				<SyncMan>001100000400000003000000000000000000001104000000</SyncMan>
@@ -2283,10 +2285,10 @@
 				<CoeProfile ProfileNo="20976521"/>
 			</EtherCAT>
 		</Box>
-		<Box BoxType="9099" BoxFlags="#x00000020" Id="81">
+		<Box BoxType="9099" BoxFlags="#x00000020" Id="108">
 			<Name>SL1L0-EL3202-E10</Name>
 			<ImageId>1004</ImageId>
-			<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x0c823052" RevisionNo="#x00160000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3202 2Ch. Ana. Input PT100 (RTD)" Desc="EL3202" PortABoxInfo="#x01000050">
+			<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x0c823052" RevisionNo="#x00160000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3202 2Ch. Ana. Input PT100 (RTD)" Desc="EL3202" PortABoxInfo="#x0100006b">
 				<SyncMan>001080002600010001000000800080008000001026010000</SyncMan>
 				<SyncMan>801080002200010002000000800080008000801022010000</SyncMan>
 				<SyncMan>001100000400000003000000000000000000001104000000</SyncMan>
@@ -2356,10 +2358,10 @@
 				<CoeProfile ProfileNo="20976521"/>
 			</EtherCAT>
 		</Box>
-		<Box BoxType="9099" BoxFlags="#x00000020" Id="82">
+		<Box BoxType="9099" BoxFlags="#x00000020" Id="109">
 			<Name>SL1L0-EL3202-E11</Name>
 			<ImageId>1004</ImageId>
-			<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x0c823052" RevisionNo="#x00160000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3202 2Ch. Ana. Input PT100 (RTD)" Desc="EL3202" PortABoxInfo="#x01000051">
+			<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x0c823052" RevisionNo="#x00160000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3202 2Ch. Ana. Input PT100 (RTD)" Desc="EL3202" PortABoxInfo="#x0100006c">
 				<SyncMan>001080002600010001000000800080008000001026010000</SyncMan>
 				<SyncMan>801080002200010002000000800080008000801022010000</SyncMan>
 				<SyncMan>001100000400000003000000000000000000001104000000</SyncMan>
@@ -2429,10 +2431,10 @@
 				<CoeProfile ProfileNo="20976521"/>
 			</EtherCAT>
 		</Box>
-		<Box BoxType="9099" Id="83">
+		<Box BoxType="9099" Id="110">
 			<Name>SL1L0-EL1004-E12</Name>
 			<ImageId>7</ImageId>
-			<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x03ec3052" RevisionNo="#x00130000" RepeatSupport="true" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1004 4Ch. Dig. Input 24V, 3ms" Desc="EL1004" PortABoxInfo="#x01000052">
+			<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x03ec3052" RevisionNo="#x00130000" RepeatSupport="true" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1004 4Ch. Dig. Input 24V, 3ms" Desc="EL1004" PortABoxInfo="#x0100006d">
 				<SyncMan>001001000000010004000000000000000100001000010000</SyncMan>
 				<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
 				<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
@@ -2457,10 +2459,10 @@
 				</Pdo>
 			</EtherCAT>
 		</Box>
-		<Box BoxType="9099" Id="84">
+		<Box BoxType="9099" Id="111">
 			<Name>SL1L0-EL9011</Name>
 			<ImageId>1005</ImageId>
-			<EtherCAT CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23333050" InfoDataState="false" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL9011 End Terminal" Desc="EL9011" PortABoxInfo="#x01000053"/>
+			<EtherCAT CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23333050" InfoDataState="false" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL9011 End Terminal" Desc="EL9011" PortABoxInfo="#x0100006e"/>
 		</Box>
 	</Box>
 </TcSmItem>

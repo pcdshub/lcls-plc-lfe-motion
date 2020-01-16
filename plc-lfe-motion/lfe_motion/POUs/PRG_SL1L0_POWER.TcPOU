@@ -38,8 +38,7 @@ VAR
 							  .RTD_South_2.iRaw := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Value;
 							  .RTD_South_2.bError := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Error;
 							  .RTD_South_2.bUnderrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Underrange;
-							  .RTD_South_2.bOverrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange;
-							  '}
+							  .RTD_South_2.bOverrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange'}
 	fbSL1L0: FB_SLITS_POWER;
 	(*T. MATRIX (North-x1,South-x2,Top-y1,Bottom-y2.. appSize-gapX,gapY, Cx, Cy) *)
 	aTMatrix: ARRAY [1..4,1..4] of REAL;
