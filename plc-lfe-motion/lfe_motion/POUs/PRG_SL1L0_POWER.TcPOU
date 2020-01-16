@@ -141,16 +141,18 @@ Main.43 -> M3	(Top)
 Main.44 -> M4	(North)
 *)
 
-(*fbSL1L0(stTopBlade:=  Main.M43,
+fbSL1L0(stTopBlade:=  Main.M43,
 		stBottomBlade:= Main.M41, 
 		stNorthBlade:=  Main.M44, 
-		stSouthBlade:=  Main.M42);*)
+		stSouthBlade:=  Main.M42);
 
 //for testing purposes only. comment-out/delete once done.	
+(*
 mcPower[1](axis:=Main.M41.Axis, Enable:=TRUE, enable_positive:=Main.M41.bLimitForwardEnable, enable_negative:=Main.M41.bLimitBackwardEnable);
 mcPower[2](axis:=Main.M42.Axis, Enable:=TRUE, enable_positive:=Main.M42.bLimitForwardEnable, enable_negative:=Main.M42.bLimitBackwardEnable);
 mcPower[3](axis:=Main.M43.Axis, Enable:=TRUE, enable_positive:=Main.M43.bLimitForwardEnable, enable_negative:=Main.M43.bLimitBackwardEnable);
 mcPower[4](axis:=Main.M44.Axis, Enable:=TRUE, enable_positive:=Main.M44.bLimitForwardEnable, enable_negative:=Main.M44.bLimitBackwardEnable);
+*)
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_SL1L0_POWER">
@@ -191,9 +193,12 @@ mcPower[4](axis:=Main.M44.Axis, Enable:=TRUE, enable_positive:=Main.M44.bLimitFo
       <LineId Id="251" Count="2" />
       <LineId Id="246" Count="0" />
       <LineId Id="352" Count="0" />
-      <LineId Id="266" Count="2" />
+      <LineId Id="266" Count="0" />
+      <LineId Id="436" Count="0" />
+      <LineId Id="267" Count="1" />
       <LineId Id="262" Count="0" />
       <LineId Id="351" Count="0" />
+      <LineId Id="437" Count="0" />
       <LineId Id="263" Count="0" />
     </LineIds>
   </POU>
