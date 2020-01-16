@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
   <POU Name="FB_SLITS_POWER" Id="{f2a7b61c-c24f-40b8-8c2e-4d94fdfd3c86}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_SLITS_POWER
 VAR_IN_OUT
@@ -66,9 +66,9 @@ VAR
 	
 	fSmallDelta: LREAL := 0.01;
 	fBigDelta: LREAL := 10;
-	fMaxVelocity: LREAL := 0.35;
-	fHighAccel: LREAL := 200;
-	fLowAccel: LREAL := 25;
+	fMaxVelocity: LREAL := 0.33;
+	fHighAccel: LREAL := 0.8;
+	fLowAccel: LREAL := 0.1;
 	
 	stTop: DUT_PositionState;
 	stBOTTOM: DUT_PositionState;
@@ -145,7 +145,7 @@ stSouth.fVelocity := fMaxVelocity;
 stSouth.fAccel := fHighAccel;
 stSouth.fDecel := fHighAccel;
 
-fbTop.bExecute := fbBottom.bExecute :=fbNorth.bExecute := fbSouth.bExecute := bExecuteMotion;
+//fbTop.bExecute := fbBottom.bExecute :=fbNorth.bExecute := fbSouth.bExecute := bExecuteMotion;
 
 fbTop(
 	stPositionState:=stTop,
