@@ -942,7 +942,38 @@ External Setpoint Generation:
 			<Vars VarGrpType="1">
 				<Name>PlcTask Inputs</Name>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion1.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.nM1CoilARaw</Name>
+					<Comment>
+						<![CDATA[
+fbMotion1: FB_MotionStage;
+fbMotion2: FB_MotionStage;
+fbMotion3: FB_MotionStage;
+fbMotion4: FB_MotionStage;
+fbMotion5: FB_MotionStage;
+fbMotion6: FB_MotionStage;
+fbMotion7: FB_MotionStage;
+fbMotion8: FB_MotionStage;
+fbMotion9: FB_MotionStage;
+fbMotion10: FB_MotionStage;
+fbMotion11: FB_MotionStage;
+fbMotion12: FB_MotionStage;
+fbMotion13: FB_MotionStage;
+fbMotion14: FB_MotionStage;
+fbMotion15: FB_MotionStage;
+fbMotion16: FB_MotionStage;
+fbMotion17: FB_MotionStage;
+fbMotion18: FB_MotionStage;
+fbMotion19: FB_MotionStage;
+]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM1CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[0].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -991,7 +1022,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion2.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[1].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1040,7 +1071,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion3.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[2].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1089,7 +1120,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion4.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[3].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1138,7 +1169,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion5.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[4].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1187,7 +1218,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion6.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[5].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1236,7 +1267,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion7.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[6].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1285,7 +1316,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion8.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[7].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1334,7 +1365,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion9.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[8].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1383,7 +1414,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion10.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[9].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1432,7 +1463,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion11.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[10].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1481,7 +1512,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion12.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[11].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1530,7 +1561,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion13.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[12].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1579,7 +1610,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion14.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[13].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1628,7 +1659,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion15.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[14].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1677,7 +1708,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion16.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[15].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1726,7 +1757,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion17.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[16].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1775,7 +1806,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion18.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[17].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1824,7 +1855,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion19.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[18].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1871,6 +1902,227 @@ External Setpoint Generation:
 ]]>
 						</Comment>
 					</SubVar>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.tempM.Axis.NcToPlc</Name>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<SubVar>
+						<Name>AxisState</Name>
+						<Comment>
+							<![CDATA[Present State Of The Axis Movement (continuous axis):
+0  = INACTIVE:		axis has no job
+1  = RUNNING:		axis is executing a motion job
+2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
+3  = PHASE_VELOCONST:	axis is moving at constant velocity
+4  = PHASE_ACCPOS:	axis is accelerating
+5  = PHASE_ACCNEG:	axis is decelerating
+Slaves only:
+11 = PREPHASE:		slave axis is in a motion pre-phase
+12 = SYNCHRONIZING:	slave axis is synchronizing
+13 = SYNCHRONOUS:	slave axis is moving synchronously
+External Setpoint Generation:
+41 = EXTSETGEN_MODE1:	external setpoint generation active
+42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>HomingState</Name>
+						<Comment>
+							<![CDATA[Axis Homing Status:
+0: idle
+1: start homing
+2: searching home switch
+3: stopping on home switch
+4: moving off home switch
+5: searching sync pulse
+6: stopping after homing
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>CoupleState</Name>
+						<Comment>
+							<![CDATA[Axis Coupling Status:
+0: axis is a single axis (not coupled)
+1: axis is a master axis
+2: axis is master and slave
+3: axis is a slave axis
+]]>
+						</Comment>
+					</SubVar>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.tempM.bLimitForwardEnable</Name>
+					<Comment>
+						<![CDATA[ NC Forward Limit Switch: TRUE if ok to move]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.tempM.bLimitBackwardEnable</Name>
+					<Comment>
+						<![CDATA[ NC Backward Limit Switch: TRUE if ok to move]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.tempM.bHome</Name>
+					<Comment>
+						<![CDATA[ NO Home Switch: TRUE if at home]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.tempM.bHardwareEnable</Name>
+					<Comment>
+						<![CDATA[ NC STO Input: TRUE if ok to move]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM2CoilARaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM2CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM3CoilARaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM3CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM4CoilARaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM4CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM5CoilARaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM5CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM6CoilARaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM6CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM7CoilARaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM7CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM8CoilARaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM8CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM9CoilARaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM9CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM10CoilARaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM10CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM11CoilARaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM11CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM12CoilARaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM12CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM13CoilARaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM13CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM14CoilARaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM14CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM15CoilARaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM15CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM16CoilARaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM16CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM17CoilARaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM17CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM18CoilARaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM18CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM19CoilARaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM19CoilBRaw</Name>
+					<Type>UINT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_IM1L0_XTES.fbIM1L0.bZoomEndFwd</Name>
@@ -7897,80 +8149,91 @@ External Setpoint Generation:
 			<Vars VarGrpType="2">
 				<Name>PlcTask Outputs</Name>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion1.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[0].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion2.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[1].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion3.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[2].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion4.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[3].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion5.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[4].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion6.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[5].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion7.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[6].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion8.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[7].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion9.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[8].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion10.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[9].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion11.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[10].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion12.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[11].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion13.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[12].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion14.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[13].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion15.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[14].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion16.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[15].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion17.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[16].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion18.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[17].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.fbMotion19.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[18].fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.tempM.Axis.PlcToNc</Name>
+					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.tempM.bBrakeRelease</Name>
+					<Comment>
+						<![CDATA[ NC Brake Output: TRUE to release brake]]>
+					</Comment>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>PRG_IM1L0_XTES.fbIM1L0.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -8768,78 +9031,116 @@ External Setpoint Generation:
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-01">
 				<Link VarA="PlcTask Inputs^Main.M1.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M1.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM1CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM1CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-02">
 				<Link VarA="PlcTask Inputs^Main.M2.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M2.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM2CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM2CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-03">
 				<Link VarA="PlcTask Inputs^Main.M3.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M3.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM3CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM3CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-04">
 				<Link VarA="PlcTask Inputs^Main.M4.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M4.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM4CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM4CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-05">
 				<Link VarA="PlcTask Inputs^Main.M5.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M5.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM5CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM5CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-06">
 				<Link VarA="PlcTask Inputs^Main.M6.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M6.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM6CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM6CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-07">
 				<Link VarA="PlcTask Inputs^Main.M7.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M7.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM7CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM7CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-08">
 				<Link VarA="PlcTask Inputs^Main.M8.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M8.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM8CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM8CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-09">
 				<Link VarA="PlcTask Inputs^Main.M9.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M9.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM9CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM9CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-10">
 				<Link VarA="PlcTask Inputs^Main.M10.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M10.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM10CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM10CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-11">
 				<Link VarA="PlcTask Inputs^Main.M11.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M11.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM11CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM11CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-12">
 				<Link VarA="PlcTask Inputs^Main.M12.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M12.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM12CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM12CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-13">
 				<Link VarA="PlcTask Inputs^Main.M13.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M13.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM13CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM13CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-14">
 				<Link VarA="PlcTask Inputs^Main.M14.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M14.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM14CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM14CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-15">
 				<Link VarA="PlcTask Inputs^Main.M15.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M15.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM15CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM15CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-16">
 				<Link VarA="PlcTask Inputs^Main.M16.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M16.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM16CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM16CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-17">
 				<Link VarA="PlcTask Inputs^Main.M17.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M17.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM17CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM17CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-18">
 				<Link VarA="PlcTask Inputs^Main.M18.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M18.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM18CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM18CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-19">
 				<Link VarA="PlcTask Inputs^Main.M19.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M19.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM19CoilARaw" VarB="STM Synchron info data^Info data 1"/>
+				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM19CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL1088">
 				<Link VarA="PlcTask Inputs^Main.M25.bHome" VarB="Channel 2^Input" AutoLink="true"/>
