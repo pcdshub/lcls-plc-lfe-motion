@@ -5,7 +5,7 @@
   <IsWizardTemplate>false</IsWizardTemplate>
   <LayoutString>&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;Layout&gt;
-  &lt;Window Guid="b1560a06-9992-4c8c-9f35-e7602e22de09" LastFocused="132210933415348617" DockedSize="200" PopupSize="0" FloatingLocation="-1, -1" FloatingSize="550, 400" LastOpenDockSituation="Document" LastFixedDockSituation="Document" LastFixedDockLocation="Right" LastFloatingWindowGuid="00000000-0000-0000-0000-000000000000" LastDockContainerCount="0" LastDockContainerIndex="0" DockedWorkingSize="250, 400" DockedWindowGroupGuid="00000000-0000-0000-0000-000000000000" DockedIndexInWindowGroup="0" DockedSplitPath="0" DocumentWorkingSize="250, 400" DocumentWindowGroupGuid="eb8d551f-2cc7-4025-b2af-4a164df487ad" DocumentIndexInWindowGroup="0" DocumentSplitPath="0" FloatingWorkingSize="250, 400" FloatingWindowGroupGuid="00000000-0000-0000-0000-000000000000" FloatingIndexInWindowGroup="0" FloatingSplitPath="0" /&gt;
+  &lt;Window Guid="b1560a06-9992-4c8c-9f35-e7602e22de09" LastFocused="132233431732583761" DockedSize="200" PopupSize="0" FloatingLocation="-1, -1" FloatingSize="550, 400" LastOpenDockSituation="Document" LastFixedDockSituation="Document" LastFixedDockLocation="Right" LastFloatingWindowGuid="00000000-0000-0000-0000-000000000000" LastDockContainerCount="0" LastDockContainerIndex="0" DockedWorkingSize="250, 400" DockedWindowGroupGuid="00000000-0000-0000-0000-000000000000" DockedIndexInWindowGroup="0" DockedSplitPath="0" DocumentWorkingSize="250, 400" DocumentWindowGroupGuid="eb8d551f-2cc7-4025-b2af-4a164df487ad" DocumentIndexInWindowGroup="0" DocumentSplitPath="0" FloatingWorkingSize="250, 400" FloatingWindowGroupGuid="00000000-0000-0000-0000-000000000000" FloatingIndexInWindowGroup="0" FloatingSplitPath="0" /&gt;
   &lt;DocumentContainer Dock="5"&gt;
     &lt;SplitLayoutSystem WorkingSize="250, 400" SplitMode="0"&gt;
       &lt;ControlLayoutSystem WorkingSize="250, 400" Guid="eb8d551f-2cc7-4025-b2af-4a164df487ad" Collapsed="0" SelectedControl="b1560a06-9992-4c8c-9f35-e7602e22de09"&gt;
@@ -42,7 +42,7 @@
         <BorderColorValue>-1973016</BorderColorValue>
         <IsSmooth>false</IsSmooth>
         <SmoothTime>100</SmoothTime>
-        <YZoom>true</YZoom>
+        <YZoom>false</YZoom>
         <StackedYAxes>true</StackedYAxes>
         <Legend>false</Legend>
         <VisibleToolstrip>true</VisibleToolstrip>
@@ -82,7 +82,7 @@
       </XAxis>
       <YAxes>
         <ScopeYAxisSerializable>
-          <Caption>Position absolute</Caption>
+          <Caption>Position absolute (mm)</Caption>
           <Name>Position absolute</Name>
           <Style>
             <Visible>true</Visible>
@@ -91,9 +91,9 @@
             <UseGrid>true</UseGrid>
             <Ticks>10</Ticks>
             <LineWidth>1</LineWidth>
-            <AutoScale>true</AutoScale>
-            <AxisMin>0</AxisMin>
-            <AxisMax>0</AxisMax>
+            <AutoScale>false</AutoScale>
+            <AxisMin>-3.75</AxisMin>
+            <AxisMax>26.25</AxisMax>
             <ScaleFactor>0</ScaleFactor>
             <ShowCursorValue>true</ShowCursorValue>
             <GridColorValue>-13676721</GridColorValue>
@@ -117,7 +117,7 @@
                 <Unit />
                 <TargetPort>501</TargetPort>
                 <VariableSize>8</VariableSize>
-                <SymbolName>AXES.AXIS 1.ACTPOS</SymbolName>
+                <SymbolName>AXES.AXIS 19.ACTPOS</SymbolName>
                 <SymbolComment></SymbolComment>
                 <IsSymbolBased>true</IsSymbolBased>
                 <FileHandle>99</FileHandle>
@@ -299,7 +299,7 @@
                 <Unit />
                 <TargetPort>501</TargetPort>
                 <VariableSize>8</VariableSize>
-                <SymbolName>AXES.AXIS 1.SETPOS</SymbolName>
+                <SymbolName>AXES.AXIS 19.SETPOS</SymbolName>
                 <SymbolComment></SymbolComment>
                 <IsSymbolBased>true</IsSymbolBased>
                 <FileHandle>100</FileHandle>
@@ -475,7 +475,7 @@
           <SortPriority>0</SortPriority>
         </ScopeYAxisSerializable>
         <ScopeYAxisSerializable>
-          <Caption>Velocity</Caption>
+          <Caption>Velocity (mm/s)</Caption>
           <Name>Velocity</Name>
           <Style>
             <Visible>true</Visible>
@@ -484,9 +484,9 @@
             <UseGrid>true</UseGrid>
             <Ticks>10</Ticks>
             <LineWidth>1</LineWidth>
-            <AutoScale>true</AutoScale>
-            <AxisMin>0</AxisMin>
-            <AxisMax>0</AxisMax>
+            <AutoScale>false</AutoScale>
+            <AxisMin>-20</AxisMin>
+            <AxisMax>20</AxisMax>
             <ScaleFactor>0</ScaleFactor>
             <ShowCursorValue>true</ShowCursorValue>
             <GridColorValue>-13676721</GridColorValue>
@@ -510,7 +510,7 @@
                 <Unit />
                 <TargetPort>501</TargetPort>
                 <VariableSize>8</VariableSize>
-                <SymbolName>AXES.AXIS 1.ACTVELO</SymbolName>
+                <SymbolName>AXES.AXIS 19.ACTVELO</SymbolName>
                 <SymbolComment></SymbolComment>
                 <IsSymbolBased>true</IsSymbolBased>
                 <FileHandle>101</FileHandle>
@@ -692,7 +692,7 @@
                 <Unit />
                 <TargetPort>501</TargetPort>
                 <VariableSize>8</VariableSize>
-                <SymbolName>AXES.AXIS 1.SETVELO</SymbolName>
+                <SymbolName>AXES.AXIS 19.SETVELO</SymbolName>
                 <SymbolComment></SymbolComment>
                 <IsSymbolBased>true</IsSymbolBased>
                 <FileHandle>102</FileHandle>
@@ -868,7 +868,7 @@
           <SortPriority>2</SortPriority>
         </ScopeYAxisSerializable>
         <ScopeYAxisSerializable>
-          <Caption>Acceleration</Caption>
+          <Caption>Acceleration (mm/s/s)</Caption>
           <Name>Acceleration</Name>
           <Style>
             <Visible>true</Visible>
@@ -877,9 +877,9 @@
             <UseGrid>true</UseGrid>
             <Ticks>10</Ticks>
             <LineWidth>1</LineWidth>
-            <AutoScale>true</AutoScale>
-            <AxisMin>0</AxisMin>
-            <AxisMax>0</AxisMax>
+            <AutoScale>false</AutoScale>
+            <AxisMin>-45</AxisMin>
+            <AxisMax>45</AxisMax>
             <ScaleFactor>0</ScaleFactor>
             <ShowCursorValue>true</ShowCursorValue>
             <GridColorValue>-13676721</GridColorValue>
@@ -903,7 +903,7 @@
                 <Unit />
                 <TargetPort>501</TargetPort>
                 <VariableSize>8</VariableSize>
-                <SymbolName>AXES.AXIS 1.ACTACC</SymbolName>
+                <SymbolName>AXES.AXIS 19.ACTACC</SymbolName>
                 <SymbolComment></SymbolComment>
                 <IsSymbolBased>true</IsSymbolBased>
                 <FileHandle>103</FileHandle>
@@ -979,7 +979,7 @@
                 <Offset>0</Offset>
                 <BitMask>18446744073709551615</BitMask>
                 <ShowCursorValue>true</ShowCursorValue>
-                <Visible>true</Visible>
+                <Visible>false</Visible>
                 <MarkColorValue>-23296</MarkColorValue>
                 <MarkSize>5</MarkSize>
                 <TimeShift>0</TimeShift>
@@ -1085,7 +1085,7 @@
                 <Unit />
                 <TargetPort>501</TargetPort>
                 <VariableSize>8</VariableSize>
-                <SymbolName>AXES.AXIS 1.SETACC</SymbolName>
+                <SymbolName>AXES.AXIS 19.SETACC</SymbolName>
                 <SymbolComment></SymbolComment>
                 <IsSymbolBased>true</IsSymbolBased>
                 <FileHandle>104</FileHandle>
@@ -1261,18 +1261,18 @@
           <SortPriority>3</SortPriority>
         </ScopeYAxisSerializable>
         <ScopeYAxisSerializable>
-          <Caption>Position Lag</Caption>
-          <Name>Position Lag</Name>
+          <Caption>Run Current (mA)</Caption>
+          <Name>Current</Name>
           <Style>
             <Visible>true</Visible>
             <Enabled>true</Enabled>
-            <ColorValue>-65281</ColorValue>
+            <ColorValue>-13676721</ColorValue>
             <UseGrid>true</UseGrid>
             <Ticks>10</Ticks>
             <LineWidth>1</LineWidth>
             <AutoScale>false</AutoScale>
-            <AxisMin>-10</AxisMin>
-            <AxisMax>10</AxisMax>
+            <AxisMin>-6000</AxisMin>
+            <AxisMax>6000</AxisMax>
             <ScaleFactor>0</ScaleFactor>
             <ShowCursorValue>true</ShowCursorValue>
             <GridColorValue>-13676721</GridColorValue>
@@ -1287,22 +1287,22 @@
           </Style>
           <Channels>
             <ScopeChannelSerializable>
-              <Name>POSDIFF</Name>
+              <Name>nM19CoilA</Name>
               <IdentHandle>7</IdentHandle>
               <Acquisition>
-                <DataType>REAL64</DataType>
-                <IndexGroup>16641</IndexGroup>
-                <IndexOffset>131087</IndexOffset>
+                <DataType>INT16</DataType>
+                <IndexGroup>16448</IndexGroup>
+                <IndexOffset>895986</IndexOffset>
                 <Unit />
-                <TargetPort>501</TargetPort>
-                <VariableSize>8</VariableSize>
-                <SymbolName>AXES.AXIS 1.POSDIFF</SymbolName>
+                <TargetPort>851</TargetPort>
+                <VariableSize>2</VariableSize>
+                <SymbolName>PRG_AT2L0_SOLID.nM19CoilA</SymbolName>
                 <SymbolComment></SymbolComment>
                 <IsSymbolBased>true</IsSymbolBased>
-                <FileHandle>105</FileHandle>
+                <FileHandle>0</FileHandle>
                 <UseLocalServer>true</UseLocalServer>
                 <AmsNetIdString>172.21.88.228.1.1</AmsNetIdString>
-                <SampleTime>10000</SampleTime>
+                <SampleTime>100000</SampleTime>
                 <Disabled>false</Disabled>
                 <Oversample>0</Oversample>
                 <UseTaskSampletime>true</UseTaskSampletime>
@@ -1336,27 +1336,18 @@
                 <MqttValueByteOffset>4294967295</MqttValueByteOffset>
                 <MqttCmdTopic>unknown</MqttCmdTopic>
                 <OpcUaAddress>
-                  <ServerUrl>
-                  </ServerUrl>
-                  <EndpointName>
-                  </EndpointName>
-                  <SecurityPolicyUri>
-                  </SecurityPolicyUri>
+                  <ServerUrl></ServerUrl>
+                  <EndpointName></EndpointName>
+                  <SecurityPolicyUri></SecurityPolicyUri>
                 </OpcUaAddress>
                 <OpcUaSymbol>
-                  <Name>
-                  </Name>
-                  <Path>
-                  </Path>
+                  <Name></Name>
+                  <Path></Path>
                   <BitSize>0</BitSize>
-                  <BaseType>
-                  </BaseType>
-                  <NodeClass>
-                  </NodeClass>
-                  <NodeId>
-                  </NodeId>
-                  <NamespaceName>
-                  </NamespaceName>
+                  <BaseType></BaseType>
+                  <NodeClass></NodeClass>
+                  <NodeId></NodeId>
+                  <NamespaceName></NamespaceName>
                   <IsArray>false</IsArray>
                   <IsMatrix>false</IsMatrix>
                   <Dimensions>0</Dimensions>
@@ -1364,17 +1355,17 @@
                 </OpcUaSymbol>
               </Acquisition>
               <Style>
-                <ColorValue>-65281</ColorValue>
-                <SolidLine>false</SolidLine>
+                <ColorValue>-9728477</ColorValue>
+                <SolidLine>true</SolidLine>
                 <Marks>false</Marks>
-                <LineWidth>2</LineWidth>
+                <LineWidth>1</LineWidth>
                 <Antialias>true</Antialias>
                 <Offset>0</Offset>
                 <BitMask>18446744073709551615</BitMask>
                 <ShowCursorValue>true</ShowCursorValue>
                 <Visible>true</Visible>
-                <MarkColorValue>-65281</MarkColorValue>
-                <MarkSize>5</MarkSize>
+                <MarkColorValue>-9728477</MarkColorValue>
+                <MarkSize>3</MarkSize>
                 <TimeShift>0</TimeShift>
                 <ScaleFactor>1</ScaleFactor>
                 <Comment></Comment>
@@ -1383,7 +1374,7 @@
                 <XScaleFactor>1</XScaleFactor>
                 <XBitMask>18446744073709551615</XBitMask>
                 <FillMode>0</FillMode>
-                <FillColorValue>838926335</FillColorValue>
+                <FillColorValue>845909539</FillColorValue>
                 <EndCap>false</EndCap>
                 <StartCap>false</StartCap>
                 <CapSize>3</CapSize>
@@ -1420,8 +1411,7 @@
                     <Name>None</Name>
                     <BaseName>UnitOfOne</BaseName>
                     <NameExtension />
-                    <Symbol>
-                    </Symbol>
+                    <Symbol></Symbol>
                     <BaseUnitString />
                     <UserPrefix>none</UserPrefix>
                   </UserUnit>
@@ -1457,8 +1447,178 @@
                     <Name>None</Name>
                     <BaseName>UnitOfOne</BaseName>
                     <NameExtension />
-                    <Symbol>
-                    </Symbol>
+                    <Symbol></Symbol>
+                    <BaseUnitString />
+                    <UserPrefix>none</UserPrefix>
+                  </UserUnit>
+                  <UnitScaleResult>1</UnitScaleResult>
+                  <UnitOffsetResult>0</UnitOffsetResult>
+                </XResultingUnit>
+              </Style>
+              <SortPriority>-1</SortPriority>
+            </ScopeChannelSerializable>
+            <ScopeChannelSerializable>
+              <Name>nM19CoilB</Name>
+              <IdentHandle>8</IdentHandle>
+              <Acquisition>
+                <DataType>INT16</DataType>
+                <IndexGroup>16448</IndexGroup>
+                <IndexOffset>895988</IndexOffset>
+                <Unit />
+                <TargetPort>851</TargetPort>
+                <VariableSize>2</VariableSize>
+                <SymbolName>PRG_AT2L0_SOLID.nM19CoilB</SymbolName>
+                <SymbolComment></SymbolComment>
+                <IsSymbolBased>true</IsSymbolBased>
+                <FileHandle>0</FileHandle>
+                <UseLocalServer>true</UseLocalServer>
+                <AmsNetIdString>172.21.88.228.1.1</AmsNetIdString>
+                <SampleTime>100000</SampleTime>
+                <Disabled>false</Disabled>
+                <Oversample>0</Oversample>
+                <UseTaskSampletime>true</UseTaskSampletime>
+                <ForceOversampling>false</ForceOversampling>
+                <IsArray>false</IsArray>
+                <ArrayLength>0</ArrayLength>
+                <ContextMask>0</ContextMask>
+                <TimeOffset>0</TimeOffset>
+                <DataAccess>
+                  <Source>TwinCAT</Source>
+                  <Protocoll>ADS</Protocoll>
+                  <Format>TcBinary</Format>
+                  <TimeContext>Present</TimeContext>
+                  <TimeRange>
+                    <StartTimeStamp>0</StartTimeStamp>
+                    <EndTimeStamp>0</EndTimeStamp>
+                  </TimeRange>
+                </DataAccess>
+                <DbSelect />
+                <DbColumn />
+                <DbId>0</DbId>
+                <IotFilePath>unknown</IotFilePath>
+                <IotFileTimeRangeId>18446744073709551615</IotFileTimeRangeId>
+                <IotFileSymbolName>unknown</IotFileSymbolName>
+                <IotFileValueByteOffset>4294967295</IotFileValueByteOffset>
+                <MqttHost>unknown</MqttHost>
+                <MqttLayout>00000000-0000-0000-0000-000000000000</MqttLayout>
+                <MqttTopic>unknown</MqttTopic>
+                <MqttTimeRangeId>18446744073709551615</MqttTimeRangeId>
+                <MqttSymbolName>unknown</MqttSymbolName>
+                <MqttValueByteOffset>4294967295</MqttValueByteOffset>
+                <MqttCmdTopic>unknown</MqttCmdTopic>
+                <OpcUaAddress>
+                  <ServerUrl></ServerUrl>
+                  <EndpointName></EndpointName>
+                  <SecurityPolicyUri></SecurityPolicyUri>
+                </OpcUaAddress>
+                <OpcUaSymbol>
+                  <Name></Name>
+                  <Path></Path>
+                  <BitSize>0</BitSize>
+                  <BaseType></BaseType>
+                  <NodeClass></NodeClass>
+                  <NodeId></NodeId>
+                  <NamespaceName></NamespaceName>
+                  <IsArray>false</IsArray>
+                  <IsMatrix>false</IsMatrix>
+                  <Dimensions>0</Dimensions>
+                  <ArrayLength>-1</ArrayLength>
+                </OpcUaSymbol>
+              </Acquisition>
+              <Style>
+                <ColorValue>-16777088</ColorValue>
+                <SolidLine>true</SolidLine>
+                <Marks>false</Marks>
+                <LineWidth>1</LineWidth>
+                <Antialias>true</Antialias>
+                <Offset>0</Offset>
+                <BitMask>18446744073709551615</BitMask>
+                <ShowCursorValue>true</ShowCursorValue>
+                <Visible>true</Visible>
+                <MarkColorValue>-16777088</MarkColorValue>
+                <MarkSize>3</MarkSize>
+                <TimeShift>0</TimeShift>
+                <ScaleFactor>1</ScaleFactor>
+                <Comment></Comment>
+                <AutoMarks>true</AutoMarks>
+                <XOffset>0</XOffset>
+                <XScaleFactor>1</XScaleFactor>
+                <XBitMask>18446744073709551615</XBitMask>
+                <FillMode>0</FillMode>
+                <FillColorValue>838860928</FillColorValue>
+                <EndCap>false</EndCap>
+                <StartCap>false</StartCap>
+                <CapSize>3</CapSize>
+                <CapColorValue>-65536</CapColorValue>
+                <SeriesType>Line</SeriesType>
+                <ShowMin>false</ShowMin>
+                <ShowMax>false</ShowMax>
+                <ResultingUnit>
+                  <Unit>
+                    <BaseUnitValue>0</BaseUnitValue>
+                    <Prefix>none</Prefix>
+                    <ScaleFactor>1</ScaleFactor>
+                    <Offset>0</Offset>
+                    <Symbol>1</Symbol>
+                    <ReturnText>1 (Unit of One) </ReturnText>
+                    <BaseUnitString />
+                    <NameExtension />
+                  </Unit>
+                  <Transformation>
+                    <BaseUnitValue>0</BaseUnitValue>
+                    <TargetUnitValue>0</TargetUnitValue>
+                    <ScaleFactor>1</ScaleFactor>
+                    <Name>None</Name>
+                    <SourceUnitString />
+                    <TargetUnitString />
+                    <SourceUnitPrefix>none</SourceUnitPrefix>
+                    <Symbol>1</Symbol>
+                  </Transformation>
+                  <UserUnit>
+                    <BaseUnitValue>0</BaseUnitValue>
+                    <Prefix>none</Prefix>
+                    <ScaleFactor>1</ScaleFactor>
+                    <Offset>0</Offset>
+                    <Name>None</Name>
+                    <BaseName>UnitOfOne</BaseName>
+                    <NameExtension />
+                    <Symbol></Symbol>
+                    <BaseUnitString />
+                    <UserPrefix>none</UserPrefix>
+                  </UserUnit>
+                  <UnitScaleResult>1</UnitScaleResult>
+                  <UnitOffsetResult>0</UnitOffsetResult>
+                </ResultingUnit>
+                <XResultingUnit>
+                  <Unit>
+                    <BaseUnitValue>0</BaseUnitValue>
+                    <Prefix>none</Prefix>
+                    <ScaleFactor>1</ScaleFactor>
+                    <Offset>0</Offset>
+                    <Symbol>1</Symbol>
+                    <ReturnText>1 (Unit of One) </ReturnText>
+                    <BaseUnitString />
+                    <NameExtension />
+                  </Unit>
+                  <Transformation>
+                    <BaseUnitValue>0</BaseUnitValue>
+                    <TargetUnitValue>0</TargetUnitValue>
+                    <ScaleFactor>1</ScaleFactor>
+                    <Name>None</Name>
+                    <SourceUnitString />
+                    <TargetUnitString />
+                    <SourceUnitPrefix>none</SourceUnitPrefix>
+                    <Symbol>1</Symbol>
+                  </Transformation>
+                  <UserUnit>
+                    <BaseUnitValue>0</BaseUnitValue>
+                    <Prefix>none</Prefix>
+                    <ScaleFactor>1</ScaleFactor>
+                    <Offset>0</Offset>
+                    <Name>None</Name>
+                    <BaseName>UnitOfOne</BaseName>
+                    <NameExtension />
+                    <Symbol></Symbol>
                     <BaseUnitString />
                     <UserPrefix>none</UserPrefix>
                   </UserUnit>
@@ -1469,7 +1629,7 @@
               <SortPriority>-1</SortPriority>
             </ScopeChannelSerializable>
           </Channels>
-          <SortPriority>4</SortPriority>
+          <SortPriority>0</SortPriority>
         </ScopeYAxisSerializable>
       </YAxes>
       <XYAxes />
@@ -1483,7 +1643,7 @@
         <HexValues>false</HexValues>
       </CursorModule>
       <Operating>
-        <DisplayWidth>100</DisplayWidth>
+        <DisplayWidth>180000000</DisplayWidth>
       </Operating>
       <ChartType>XT</ChartType>
       <SortPriority>-1</SortPriority>
