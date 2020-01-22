@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.27" ClassName="CNestedPlcProjDef">
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.30" ClassName="CNestedPlcProjDef">
 	<DataTypes>
 		<DataType>
 			<Name GUID="{4C3FC5AC-D5AA-44C6-AC5A-159774BA0F6D}" Namespace="MC" TcBaseType="true" HideType="true" IecDeclaration="DWORD;">NCTOPLC_AXIS_REF_STATE</Name>
@@ -944,32 +944,15 @@ External Setpoint Generation:
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM1CoilARaw</Name>
 					<Comment>
-						<![CDATA[
-fbMotion1: FB_MotionStage;
-fbMotion2: FB_MotionStage;
-fbMotion3: FB_MotionStage;
-fbMotion4: FB_MotionStage;
-fbMotion5: FB_MotionStage;
-fbMotion6: FB_MotionStage;
-fbMotion7: FB_MotionStage;
-fbMotion8: FB_MotionStage;
-fbMotion9: FB_MotionStage;
-fbMotion10: FB_MotionStage;
-fbMotion11: FB_MotionStage;
-fbMotion12: FB_MotionStage;
-fbMotion13: FB_MotionStage;
-fbMotion14: FB_MotionStage;
-fbMotion15: FB_MotionStage;
-fbMotion16: FB_MotionStage;
-fbMotion17: FB_MotionStage;
-fbMotion18: FB_MotionStage;
-fbMotion19: FB_MotionStage;
-]]>
+						<![CDATA[ For plotting voltage/current during debugging]]>
 					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM1CoilBRaw</Name>
+					<Comment>
+						<![CDATA[ ..CoilBRaw is currently linked to EL7041 'Coil Voltage A']]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -1904,84 +1887,10 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.tempM.Axis.NcToPlc</Name>
-					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-					<SubVar>
-						<Name>AxisState</Name>
-						<Comment>
-							<![CDATA[Present State Of The Axis Movement (continuous axis):
-0  = INACTIVE:		axis has no job
-1  = RUNNING:		axis is executing a motion job
-2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
-3  = PHASE_VELOCONST:	axis is moving at constant velocity
-4  = PHASE_ACCPOS:	axis is accelerating
-5  = PHASE_ACCNEG:	axis is decelerating
-Slaves only:
-11 = PREPHASE:		slave axis is in a motion pre-phase
-12 = SYNCHRONIZING:	slave axis is synchronizing
-13 = SYNCHRONOUS:	slave axis is moving synchronously
-External Setpoint Generation:
-41 = EXTSETGEN_MODE1:	external setpoint generation active
-42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>HomingState</Name>
-						<Comment>
-							<![CDATA[Axis Homing Status:
-0: idle
-1: start homing
-2: searching home switch
-3: stopping on home switch
-4: moving off home switch
-5: searching sync pulse
-6: stopping after homing
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>CoupleState</Name>
-						<Comment>
-							<![CDATA[Axis Coupling Status:
-0: axis is a single axis (not coupled)
-1: axis is a master axis
-2: axis is master and slave
-3: axis is a slave axis
-]]>
-						</Comment>
-					</SubVar>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.tempM.bLimitForwardEnable</Name>
-					<Comment>
-						<![CDATA[ NC Forward Limit Switch: TRUE if ok to move]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.tempM.bLimitBackwardEnable</Name>
-					<Comment>
-						<![CDATA[ NC Backward Limit Switch: TRUE if ok to move]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.tempM.bHome</Name>
-					<Comment>
-						<![CDATA[ NO Home Switch: TRUE if at home]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.tempM.bHardwareEnable</Name>
-					<Comment>
-						<![CDATA[ NC STO Input: TRUE if ok to move]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>PRG_AT2L0_SOLID.nM2CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM1Current: INT;]]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -1990,6 +1899,9 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM3CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM2Current: INT;]]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -1998,6 +1910,9 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM4CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM3Current: INT;]]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -2006,6 +1921,9 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM5CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM4Current: INT;]]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -2014,6 +1932,9 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM6CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM5Current: INT;]]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -2022,6 +1943,9 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM7CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM6Current: INT;]]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -2030,6 +1954,9 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM8CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM7Current: INT;]]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -2038,6 +1965,9 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM9CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM8Current: INT;]]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -2046,6 +1976,9 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM10CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM9Current: INT;]]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -2054,6 +1987,9 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM11CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM10Current: INT;]]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -2062,6 +1998,9 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM12CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM11Current: INT;]]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -2070,6 +2009,9 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM13CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM12Current: INT;]]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -2078,6 +2020,9 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM14CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM13Current: INT;]]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -2086,6 +2031,9 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM15CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM14Current: INT;]]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -2094,6 +2042,9 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM16CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM15Current: INT;]]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -2102,6 +2053,9 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM17CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM16Current: INT;]]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -2110,6 +2064,9 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM18CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM17Current: INT;]]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -2118,6 +2075,9 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM19CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM18Current: INT;]]>
+					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
@@ -3302,7 +3262,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_SL1L0_POWER.fbMotion1.fbMotionStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.fbTopBlade.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -3351,7 +3311,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_SL1L0_POWER.fbMotion2.fbMotionStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.fbBottomBlade.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -3400,7 +3360,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_SL1L0_POWER.fbMotion3.fbMotionStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.fbNorthBlade.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -3449,7 +3409,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_SL1L0_POWER.fbMotion4.fbMotionStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.fbSouthBlade.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -3498,7 +3458,139 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_SL2L0_POWER.fbMotion1.fbMotionStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.fbFlowSwitch.bFlowOk</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.fbTopBlade.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -3547,7 +3639,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_SL2L0_POWER.fbMotion2.fbMotionStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.fbBottomBlade.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -3596,7 +3688,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_SL2L0_POWER.fbMotion3.fbMotionStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.fbNorthBlade.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -3645,7 +3737,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_SL2L0_POWER.fbMotion4.fbMotionStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.fbSouthBlade.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -3692,6 +3784,138 @@ External Setpoint Generation:
 ]]>
 						</Comment>
 					</SubVar>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.fbFlowSwitch.bFlowOk</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.iRaw</Name>
+					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_SP1K0_KMONO.fbMotion1.fbMotionStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -8225,17 +8449,6 @@ External Setpoint Generation:
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.tempM.Axis.PlcToNc</Name>
-					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.tempM.bBrakeRelease</Name>
-					<Comment>
-						<![CDATA[ NC Brake Output: TRUE to release brake]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>PRG_IM1L0_XTES.fbIM1L0.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
@@ -8356,35 +8569,35 @@ External Setpoint Generation:
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_SL1L0_POWER.fbMotion1.fbMotionStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.fbTopBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_SL1L0_POWER.fbMotion2.fbMotionStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.fbBottomBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_SL1L0_POWER.fbMotion3.fbMotionStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.fbNorthBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_SL1L0_POWER.fbMotion4.fbMotionStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_SL1L0_POWER.fbSL1L0.fbSouthBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_SL2L0_POWER.fbMotion1.fbMotionStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.fbTopBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_SL2L0_POWER.fbMotion2.fbMotionStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.fbBottomBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_SL2L0_POWER.fbMotion3.fbMotionStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.fbNorthBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_SL2L0_POWER.fbMotion4.fbMotionStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_SL2L0_POWER.fbSL2L0.fbSouthBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
@@ -9028,6 +9241,46 @@ External Setpoint Generation:
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL7041">
 				<Link VarA="PlcTask Inputs^Main.M20.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E10">
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E11">
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E8">
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E9">
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL7041-E1">
 				<Link VarA="PlcTask Inputs^Main.M41.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M41.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
@@ -9043,6 +9296,7 @@ External Setpoint Generation:
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL7041-E7">
 				<Link VarA="PlcTask Inputs^Main.M44.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M44.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-01">
 				<Link VarA="PlcTask Inputs^Main.M1.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M1.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
@@ -9219,6 +9473,62 @@ External Setpoint Generation:
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL7041">
 				<Link VarA="PlcTask Inputs^Main.M24.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E10">
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E11">
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E8">
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E9">
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL7041-E1">
+				<Link VarA="PlcTask Inputs^Main.M45.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M45.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL7041-E3">
+				<Link VarA="PlcTask Inputs^Main.M46.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M46.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL7041-E5">
+				<Link VarA="PlcTask Inputs^Main.M47.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M47.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL7041-E7">
+				<Link VarA="PlcTask Inputs^Main.M48.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M48.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL2004">
 				<Link VarA="PlcTask Outputs^Main.M27.bBrakeRelease" VarB="Channel 1^Output" AutoLink="true"/>
