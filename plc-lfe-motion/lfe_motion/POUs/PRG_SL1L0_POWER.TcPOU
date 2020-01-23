@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_SL1L0_POWER" Id="{bb2d6beb-8e46-4873-9e1c-8b32c60eb928}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_SL1L0_POWER
 VAR
@@ -48,22 +48,22 @@ VAR
     '}
 	bExecuteMotion:bool ;
 	{attribute 'pytmc' := '
-    pv: SL1L0:POWER:WIDTH_DES;
+    pv: SL1L0:POWER:XWID_REQ;
 	io: io;
     '}
 	rReqApertureSizeX : REAL;
 	{attribute 'pytmc' := '
-    pv: SL1L0:POWER:HEIGHT_DES;
+    pv: SL1L0:POWER:YWID_REQ;
 	io: io;
     '}
 	rReqApertureSizeY : REAL;
 	{attribute 'pytmc' := '
-    pv: SL1L0:POWER:CENTER_X_DES;
+    pv: SL1L0:POWER:XCEN_REQ;
 	io: io;
     '}
 	rReqCenterX: REAL;
 	{attribute 'pytmc' := '
-    pv: SL1L0:POWER:CENTER_Y_DES;
+    pv: SL1L0:POWER:YCEN_REQ;
 	io: io;
     '}
 	rReqCenterY: REAL;
