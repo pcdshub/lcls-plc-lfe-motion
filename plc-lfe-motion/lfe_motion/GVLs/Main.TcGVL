@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="Main" Id="{1042c520-30ed-442b-b556-5a9b26ae9c26}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
@@ -211,12 +211,28 @@ VAR_GLOBAL
 	                          .bLimitBackwardEnable := TIIB[SL2L0-EL7041-E7]^STM Status^Status^Digital input 2'}
 	M48: DUT_MotionStage;
 	
-	// SP1K0-KMONO: 6 Axes
+	// SP1L0-KMONO: 6 Axes
+	{attribute 'pytmc' := 'pv: SP1L0:KMONO:MMS:XTAL_ANGLE'}
 	M49: DUT_MotionStage;
+	{attribute 'pytmc' := 'pv: SP1L0:KMONO:MMS:XTAL_VERT'}
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1;
+	                          .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2'}
 	M50: DUT_MotionStage;
+	{attribute 'pytmc' := 'pv: SP1L0:KMONO:MMS:RET_HORIZ'}
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E3-MOTORS]^STM Status^Status^Digital input 2;
+	                          .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E3-MOTORS]^STM Status^Status^Digital input 1'}
 	M51: DUT_MotionStage;
+	{attribute 'pytmc' := 'pv: SP1L0:KMONO:MMS:RET_VERT'}
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E4-MOTORS]^STM Status^Status^Digital input 1;
+	                          .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E4-MOTORS]^STM Status^Status^Digital input 2'}
 	M52: DUT_MotionStage;
+	{attribute 'pytmc' := 'pv: SP1L0:KMONO:MMS:DIODE_HORIZ'}
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E5-MOTORS]^STM Status^Status^Digital input 2;
+	                          .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E5-MOTORS]^STM Status^Status^Digital input 1'}
 	M53: DUT_MotionStage;
+	{attribute 'pytmc' := 'pv: SP1L0:KMONO:MMS:DIODE_VERT'}
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E6-MOTORS]^STM Status^Status^Digital input 1;
+	                          .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E6-MOTORS]^STM Status^Status^Digital input 2'}
 	M54: DUT_MotionStage;
 END_VAR]]></Declaration>
   </GVL>
