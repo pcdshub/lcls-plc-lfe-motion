@@ -7,11 +7,11 @@
     <title>lfe_motion.tmc &#8212; pcdshub/lcls-plc-lfe-motion  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="PLC Project (1): lfe_motion" href="plc-lfe-motion.tsproj.html" />
@@ -2340,6 +2340,252 @@
  <span class="s2">&quot;SL2L0:POWER:TOP:VELO_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:WIDTH_DES&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:WIDTH_DES_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bAllBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bAllEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bAllForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bBrakeRelease_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bBusy_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bDone_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bEnable&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bEnableDone_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bError_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bExecute&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bExecute_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bGantryAxis_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bGantryBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bGantryForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bHardwareEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bHome_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bLimitBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bLimitForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bPowerSelf_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bReset&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bReset_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fAcceleration&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fAcceleration_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fDeceleration&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fDeceleration_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fHomePosition&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fHomePosition_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fPosition&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fPosition_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fVelocity&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fVelocity_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:nBrakeMode_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:nCmdData&quot;</span> <span class="p">(</span><span class="n">longout</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:nCmdData_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:nCommand&quot;</span> <span class="p">(</span><span class="n">longout</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:nCommand_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:nEnableMode_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:nHomingMode_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:nMotionAxisID_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:sErrorMessage_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bAllBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bAllEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bAllForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bBrakeRelease_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bBusy_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bDone_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bEnable&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bEnableDone_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bError_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bExecute&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bExecute_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bGantryAxis_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bGantryBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bGantryForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bHardwareEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bHome_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bLimitBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bLimitForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bPowerSelf_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bReset&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bReset_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fAcceleration&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fAcceleration_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fDeceleration&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fDeceleration_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fHomePosition&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fHomePosition_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fPosition&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fPosition_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fVelocity&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fVelocity_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:nBrakeMode_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:nCmdData&quot;</span> <span class="p">(</span><span class="n">longout</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:nCmdData_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:nCommand&quot;</span> <span class="p">(</span><span class="n">longout</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:nCommand_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:nEnableMode_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:nHomingMode_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:nMotionAxisID_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:sErrorMessage_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bAllBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bAllEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bAllForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bBrakeRelease_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bBusy_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bDone_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bEnable&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bEnableDone_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bError_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bExecute&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bExecute_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bGantryAxis_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bGantryBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bGantryForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bHardwareEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bHome_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bLimitBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bLimitForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bPowerSelf_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bReset&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bReset_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fAcceleration&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fAcceleration_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fDeceleration&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fDeceleration_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fHomePosition&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fHomePosition_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fPosition&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fPosition_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fVelocity&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fVelocity_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:nBrakeMode_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:nCmdData&quot;</span> <span class="p">(</span><span class="n">longout</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:nCmdData_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:nCommand&quot;</span> <span class="p">(</span><span class="n">longout</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:nCommand_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:nEnableMode_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:nHomingMode_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:nMotionAxisID_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:sErrorMessage_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bAllBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bAllEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bAllForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bBrakeRelease_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bBusy_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bDone_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bEnable&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bEnableDone_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bError_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bExecute&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bExecute_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bGantryAxis_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bGantryBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bGantryForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bHardwareEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bHome_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bLimitBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bLimitForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bPowerSelf_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bReset&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bReset_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fAcceleration&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fAcceleration_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fDeceleration&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fDeceleration_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fHomePosition&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fHomePosition_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fPosition&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fPosition_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fVelocity&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fVelocity_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:nBrakeMode_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:nCmdData&quot;</span> <span class="p">(</span><span class="n">longout</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:nCmdData_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:nCommand&quot;</span> <span class="p">(</span><span class="n">longout</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:nCommand_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:nEnableMode_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:nHomingMode_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:nMotionAxisID_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:RET_VERT:PLC:sErrorMessage_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bAllBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bAllEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bAllForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bBrakeRelease_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bBusy_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bDone_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bEnable&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bEnableDone_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bError_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bExecute&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bExecute_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bGantryAxis_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bGantryBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bGantryForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bHardwareEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bHome_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bLimitBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bLimitForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bPowerSelf_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bReset&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bReset_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fAcceleration&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fAcceleration_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fDeceleration&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fDeceleration_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fHomePosition&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fHomePosition_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fPosition&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fPosition_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fVelocity&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fVelocity_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:nBrakeMode_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:nCmdData&quot;</span> <span class="p">(</span><span class="n">longout</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:nCmdData_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:nCommand&quot;</span> <span class="p">(</span><span class="n">longout</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:nCommand_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:nEnableMode_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:nHomingMode_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:nMotionAxisID_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:sErrorMessage_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bAllBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bAllEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bAllForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bBrakeRelease_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bBusy_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bDone_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bEnable&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bEnableDone_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bError_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bExecute&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bExecute_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bGantryAxis_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bGantryBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bGantryForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bHardwareEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bHome_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bLimitBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bLimitForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bPowerSelf_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bReset&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bReset_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fAcceleration&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fAcceleration_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fDeceleration&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fDeceleration_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fHomePosition&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fHomePosition_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fPosition&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fPosition_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fVelocity&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fVelocity_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:nBrakeMode_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:nCmdData&quot;</span> <span class="p">(</span><span class="n">longout</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:nCmdData_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:nCommand&quot;</span> <span class="p">(</span><span class="n">longout</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:nCommand_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:nEnableMode_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:nHomingMode_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:nMotionAxisID_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:sErrorMessage_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -25765,6 +26011,2466 @@ record(waveform, &quot;SL2L0:POWER:MMS:NORTH:PLC:sErrorMessage_RBV&quot;) {
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M48.sErrorMessage?&quot;)
   field(FTVL, &quot;CHAR&quot;)
   field(NELM, &quot;80&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bLimitForwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bLimitForwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bLimitForwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bLimitBackwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bLimitBackwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bLimitBackwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bHome_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bHome&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bHome?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bBrakeRelease_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bBrakeRelease&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bBrakeRelease?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bHardwareEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bHardwareEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bHardwareEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bAllForwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bAllForwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bAllForwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bAllBackwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bAllBackwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bAllBackwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bAllEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bAllEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bAllEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bGantryForwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bGantryForwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bGantryForwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bGantryBackwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bGantryBackwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bGantryBackwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bPowerSelf_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bPowerSelf&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bPowerSelf?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:nEnableMode_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.nEnableMode&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.nEnableMode?&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:nBrakeMode_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.nBrakeMode&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.nBrakeMode?&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:nHomingMode_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.nHomingMode&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.nHomingMode?&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bGantryAxis_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bGantryAxis&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bGantryAxis?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bEnable&quot;) {
+  field(DESC, &quot;ads:Main.M49.bEnable&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M49.bEnable=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bReset_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bReset&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bReset?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bReset&quot;) {
+  field(DESC, &quot;ads:Main.M49.bReset&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M49.bReset=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bExecute_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bExecute&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bExecute?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bExecute&quot;) {
+  field(DESC, &quot;ads:Main.M49.bExecute&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M49.bExecute=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:nCommand_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.nCommand&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.nCommand?&quot;)
+}
+
+record(longout, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:nCommand&quot;) {
+  field(DESC, &quot;ads:Main.M49.nCommand&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M49.nCommand=&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:nCmdData_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.nCmdData&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.nCmdData?&quot;)
+}
+
+record(longout, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:nCmdData&quot;) {
+  field(DESC, &quot;ads:Main.M49.nCmdData&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M49.nCmdData=&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fPosition_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.fPosition&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.fPosition?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fPosition&quot;) {
+  field(DESC, &quot;ads:Main.M49.fPosition&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M49.fPosition=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fVelocity_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.fVelocity&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.fVelocity?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fVelocity&quot;) {
+  field(DESC, &quot;ads:Main.M49.fVelocity&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M49.fVelocity=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fAcceleration_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.fAcceleration&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.fAcceleration?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fAcceleration&quot;) {
+  field(DESC, &quot;ads:Main.M49.fAcceleration&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M49.fAcceleration=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fDeceleration_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.fDeceleration&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.fDeceleration?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fDeceleration&quot;) {
+  field(DESC, &quot;ads:Main.M49.fDeceleration&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M49.fDeceleration=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fHomePosition_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.fHomePosition&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.fHomePosition?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fHomePosition&quot;) {
+  field(DESC, &quot;ads:Main.M49.fHomePosition&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M49.fHomePosition=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:nMotionAxisID_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.nMotionAxisID&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.nMotionAxisID?&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bEnableDone_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bEnableDone&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bEnableDone?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bBusy_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bBusy&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bBusy?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bDone_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bDone&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bDone?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bError_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.bError&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.bError?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(waveform, &quot;SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:sErrorMessage_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M49.sErrorMessage&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt8ArrayIn&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M49.sErrorMessage?&quot;)
+  field(FTVL, &quot;CHAR&quot;)
+  field(NELM, &quot;80&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bLimitForwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bLimitForwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bLimitForwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bLimitBackwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bLimitBackwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bLimitBackwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bHome_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bHome&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bHome?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bBrakeRelease_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bBrakeRelease&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bBrakeRelease?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bHardwareEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bHardwareEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bHardwareEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bAllForwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bAllForwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bAllForwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bAllBackwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bAllBackwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bAllBackwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bAllEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bAllEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bAllEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bGantryForwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bGantryForwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bGantryForwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bGantryBackwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bGantryBackwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bGantryBackwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bPowerSelf_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bPowerSelf&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bPowerSelf?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:nEnableMode_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.nEnableMode&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.nEnableMode?&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:nBrakeMode_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.nBrakeMode&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.nBrakeMode?&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:nHomingMode_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.nHomingMode&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.nHomingMode?&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bGantryAxis_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bGantryAxis&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bGantryAxis?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bEnable&quot;) {
+  field(DESC, &quot;ads:Main.M50.bEnable&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M50.bEnable=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bReset_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bReset&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bReset?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bReset&quot;) {
+  field(DESC, &quot;ads:Main.M50.bReset&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M50.bReset=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bExecute_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bExecute&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bExecute?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bExecute&quot;) {
+  field(DESC, &quot;ads:Main.M50.bExecute&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M50.bExecute=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:nCommand_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.nCommand&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.nCommand?&quot;)
+}
+
+record(longout, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:nCommand&quot;) {
+  field(DESC, &quot;ads:Main.M50.nCommand&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M50.nCommand=&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:nCmdData_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.nCmdData&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.nCmdData?&quot;)
+}
+
+record(longout, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:nCmdData&quot;) {
+  field(DESC, &quot;ads:Main.M50.nCmdData&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M50.nCmdData=&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fPosition_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.fPosition&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.fPosition?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fPosition&quot;) {
+  field(DESC, &quot;ads:Main.M50.fPosition&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M50.fPosition=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fVelocity_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.fVelocity&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.fVelocity?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fVelocity&quot;) {
+  field(DESC, &quot;ads:Main.M50.fVelocity&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M50.fVelocity=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fAcceleration_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.fAcceleration&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.fAcceleration?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fAcceleration&quot;) {
+  field(DESC, &quot;ads:Main.M50.fAcceleration&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M50.fAcceleration=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fDeceleration_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.fDeceleration&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.fDeceleration?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fDeceleration&quot;) {
+  field(DESC, &quot;ads:Main.M50.fDeceleration&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M50.fDeceleration=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fHomePosition_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.fHomePosition&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.fHomePosition?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:fHomePosition&quot;) {
+  field(DESC, &quot;ads:Main.M50.fHomePosition&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M50.fHomePosition=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:nMotionAxisID_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.nMotionAxisID&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.nMotionAxisID?&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bEnableDone_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bEnableDone&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bEnableDone?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bBusy_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bBusy&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bBusy?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bDone_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bDone&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bDone?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:bError_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.bError&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.bError?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(waveform, &quot;SP1L0:KMONO:MMS:XTAL_VERT:PLC:sErrorMessage_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M50.sErrorMessage&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt8ArrayIn&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M50.sErrorMessage?&quot;)
+  field(FTVL, &quot;CHAR&quot;)
+  field(NELM, &quot;80&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bLimitForwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bLimitForwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bLimitForwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bLimitBackwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bLimitBackwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bLimitBackwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bHome_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bHome&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bHome?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bBrakeRelease_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bBrakeRelease&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bBrakeRelease?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bHardwareEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bHardwareEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bHardwareEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bAllForwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bAllForwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bAllForwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bAllBackwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bAllBackwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bAllBackwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bAllEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bAllEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bAllEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bGantryForwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bGantryForwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bGantryForwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bGantryBackwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bGantryBackwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bGantryBackwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bPowerSelf_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bPowerSelf&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bPowerSelf?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:nEnableMode_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.nEnableMode&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.nEnableMode?&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:nBrakeMode_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.nBrakeMode&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.nBrakeMode?&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:nHomingMode_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.nHomingMode&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.nHomingMode?&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bGantryAxis_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bGantryAxis&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bGantryAxis?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bEnable&quot;) {
+  field(DESC, &quot;ads:Main.M51.bEnable&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M51.bEnable=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bReset_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bReset&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bReset?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bReset&quot;) {
+  field(DESC, &quot;ads:Main.M51.bReset&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M51.bReset=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bExecute_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bExecute&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bExecute?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bExecute&quot;) {
+  field(DESC, &quot;ads:Main.M51.bExecute&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M51.bExecute=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:nCommand_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.nCommand&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.nCommand?&quot;)
+}
+
+record(longout, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:nCommand&quot;) {
+  field(DESC, &quot;ads:Main.M51.nCommand&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M51.nCommand=&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:nCmdData_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.nCmdData&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.nCmdData?&quot;)
+}
+
+record(longout, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:nCmdData&quot;) {
+  field(DESC, &quot;ads:Main.M51.nCmdData&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M51.nCmdData=&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fPosition_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.fPosition&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.fPosition?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fPosition&quot;) {
+  field(DESC, &quot;ads:Main.M51.fPosition&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M51.fPosition=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fVelocity_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.fVelocity&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.fVelocity?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fVelocity&quot;) {
+  field(DESC, &quot;ads:Main.M51.fVelocity&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M51.fVelocity=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fAcceleration_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.fAcceleration&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.fAcceleration?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fAcceleration&quot;) {
+  field(DESC, &quot;ads:Main.M51.fAcceleration&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M51.fAcceleration=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fDeceleration_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.fDeceleration&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.fDeceleration?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fDeceleration&quot;) {
+  field(DESC, &quot;ads:Main.M51.fDeceleration&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M51.fDeceleration=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fHomePosition_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.fHomePosition&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.fHomePosition?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:fHomePosition&quot;) {
+  field(DESC, &quot;ads:Main.M51.fHomePosition&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M51.fHomePosition=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:nMotionAxisID_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.nMotionAxisID&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.nMotionAxisID?&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bEnableDone_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bEnableDone&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bEnableDone?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bBusy_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bBusy&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bBusy?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bDone_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bDone&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bDone?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:bError_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.bError&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.bError?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(waveform, &quot;SP1L0:KMONO:MMS:RET_HORIZ:PLC:sErrorMessage_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M51.sErrorMessage&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt8ArrayIn&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M51.sErrorMessage?&quot;)
+  field(FTVL, &quot;CHAR&quot;)
+  field(NELM, &quot;80&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bLimitForwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bLimitForwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bLimitForwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bLimitBackwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bLimitBackwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bLimitBackwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bHome_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bHome&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bHome?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bBrakeRelease_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bBrakeRelease&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bBrakeRelease?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bHardwareEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bHardwareEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bHardwareEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bAllForwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bAllForwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bAllForwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bAllBackwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bAllBackwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bAllBackwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bAllEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bAllEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bAllEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bGantryForwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bGantryForwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bGantryForwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bGantryBackwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bGantryBackwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bGantryBackwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bPowerSelf_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bPowerSelf&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bPowerSelf?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:nEnableMode_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.nEnableMode&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.nEnableMode?&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:nBrakeMode_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.nBrakeMode&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.nBrakeMode?&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:nHomingMode_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.nHomingMode&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.nHomingMode?&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bGantryAxis_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bGantryAxis&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bGantryAxis?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bEnable&quot;) {
+  field(DESC, &quot;ads:Main.M52.bEnable&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M52.bEnable=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bReset_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bReset&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bReset?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bReset&quot;) {
+  field(DESC, &quot;ads:Main.M52.bReset&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M52.bReset=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bExecute_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bExecute&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bExecute?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bExecute&quot;) {
+  field(DESC, &quot;ads:Main.M52.bExecute&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M52.bExecute=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:nCommand_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.nCommand&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.nCommand?&quot;)
+}
+
+record(longout, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:nCommand&quot;) {
+  field(DESC, &quot;ads:Main.M52.nCommand&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M52.nCommand=&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:nCmdData_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.nCmdData&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.nCmdData?&quot;)
+}
+
+record(longout, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:nCmdData&quot;) {
+  field(DESC, &quot;ads:Main.M52.nCmdData&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M52.nCmdData=&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fPosition_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.fPosition&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.fPosition?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fPosition&quot;) {
+  field(DESC, &quot;ads:Main.M52.fPosition&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M52.fPosition=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fVelocity_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.fVelocity&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.fVelocity?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fVelocity&quot;) {
+  field(DESC, &quot;ads:Main.M52.fVelocity&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M52.fVelocity=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fAcceleration_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.fAcceleration&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.fAcceleration?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fAcceleration&quot;) {
+  field(DESC, &quot;ads:Main.M52.fAcceleration&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M52.fAcceleration=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fDeceleration_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.fDeceleration&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.fDeceleration?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fDeceleration&quot;) {
+  field(DESC, &quot;ads:Main.M52.fDeceleration&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M52.fDeceleration=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fHomePosition_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.fHomePosition&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.fHomePosition?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:fHomePosition&quot;) {
+  field(DESC, &quot;ads:Main.M52.fHomePosition&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M52.fHomePosition=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:nMotionAxisID_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.nMotionAxisID&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.nMotionAxisID?&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bEnableDone_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bEnableDone&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bEnableDone?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bBusy_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bBusy&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bBusy?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bDone_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bDone&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bDone?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:bError_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.bError&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.bError?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(waveform, &quot;SP1L0:KMONO:MMS:RET_VERT:PLC:sErrorMessage_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M52.sErrorMessage&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt8ArrayIn&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M52.sErrorMessage?&quot;)
+  field(FTVL, &quot;CHAR&quot;)
+  field(NELM, &quot;80&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bLimitForwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bLimitForwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bLimitForwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bLimitBackwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bLimitBackwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bLimitBackwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bHome_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bHome&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bHome?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bBrakeRelease_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bBrakeRelease&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bBrakeRelease?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bHardwareEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bHardwareEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bHardwareEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bAllForwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bAllForwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bAllForwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bAllBackwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bAllBackwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bAllBackwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bAllEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bAllEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bAllEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bGantryForwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bGantryForwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bGantryForwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bGantryBackwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bGantryBackwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bGantryBackwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bPowerSelf_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bPowerSelf&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bPowerSelf?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:nEnableMode_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.nEnableMode&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.nEnableMode?&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:nBrakeMode_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.nBrakeMode&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.nBrakeMode?&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:nHomingMode_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.nHomingMode&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.nHomingMode?&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bGantryAxis_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bGantryAxis&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bGantryAxis?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bEnable&quot;) {
+  field(DESC, &quot;ads:Main.M53.bEnable&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M53.bEnable=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bReset_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bReset&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bReset?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bReset&quot;) {
+  field(DESC, &quot;ads:Main.M53.bReset&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M53.bReset=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bExecute_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bExecute&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bExecute?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bExecute&quot;) {
+  field(DESC, &quot;ads:Main.M53.bExecute&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M53.bExecute=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:nCommand_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.nCommand&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.nCommand?&quot;)
+}
+
+record(longout, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:nCommand&quot;) {
+  field(DESC, &quot;ads:Main.M53.nCommand&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M53.nCommand=&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:nCmdData_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.nCmdData&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.nCmdData?&quot;)
+}
+
+record(longout, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:nCmdData&quot;) {
+  field(DESC, &quot;ads:Main.M53.nCmdData&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M53.nCmdData=&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fPosition_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.fPosition&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.fPosition?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fPosition&quot;) {
+  field(DESC, &quot;ads:Main.M53.fPosition&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M53.fPosition=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fVelocity_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.fVelocity&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.fVelocity?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fVelocity&quot;) {
+  field(DESC, &quot;ads:Main.M53.fVelocity&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M53.fVelocity=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fAcceleration_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.fAcceleration&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.fAcceleration?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fAcceleration&quot;) {
+  field(DESC, &quot;ads:Main.M53.fAcceleration&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M53.fAcceleration=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fDeceleration_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.fDeceleration&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.fDeceleration?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fDeceleration&quot;) {
+  field(DESC, &quot;ads:Main.M53.fDeceleration&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M53.fDeceleration=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fHomePosition_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.fHomePosition&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.fHomePosition?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fHomePosition&quot;) {
+  field(DESC, &quot;ads:Main.M53.fHomePosition&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M53.fHomePosition=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:nMotionAxisID_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.nMotionAxisID&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.nMotionAxisID?&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bEnableDone_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bEnableDone&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bEnableDone?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bBusy_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bBusy&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bBusy?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bDone_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bDone&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bDone?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bError_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.bError&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.bError?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(waveform, &quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:sErrorMessage_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M53.sErrorMessage&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt8ArrayIn&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M53.sErrorMessage?&quot;)
+  field(FTVL, &quot;CHAR&quot;)
+  field(NELM, &quot;80&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bLimitForwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bLimitForwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bLimitForwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bLimitBackwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bLimitBackwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bLimitBackwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bHome_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bHome&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bHome?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bBrakeRelease_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bBrakeRelease&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bBrakeRelease?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bHardwareEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bHardwareEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bHardwareEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bAllForwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bAllForwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bAllForwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bAllBackwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bAllBackwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bAllBackwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bAllEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bAllEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bAllEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bGantryForwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bGantryForwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bGantryForwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bGantryBackwardEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bGantryBackwardEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bGantryBackwardEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bPowerSelf_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bPowerSelf&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bPowerSelf?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:nEnableMode_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.nEnableMode&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.nEnableMode?&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:nBrakeMode_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.nBrakeMode&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.nBrakeMode?&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:nHomingMode_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.nHomingMode&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.nHomingMode?&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bGantryAxis_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bGantryAxis&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bGantryAxis?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bEnable_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bEnable&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bEnable?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bEnable&quot;) {
+  field(DESC, &quot;ads:Main.M54.bEnable&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M54.bEnable=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bReset_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bReset&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bReset?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bReset&quot;) {
+  field(DESC, &quot;ads:Main.M54.bReset&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M54.bReset=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bExecute_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bExecute&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bExecute?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bExecute&quot;) {
+  field(DESC, &quot;ads:Main.M54.bExecute&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M54.bExecute=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:nCommand_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.nCommand&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.nCommand?&quot;)
+}
+
+record(longout, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:nCommand&quot;) {
+  field(DESC, &quot;ads:Main.M54.nCommand&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M54.nCommand=&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:nCmdData_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.nCmdData&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.nCmdData?&quot;)
+}
+
+record(longout, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:nCmdData&quot;) {
+  field(DESC, &quot;ads:Main.M54.nCmdData&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M54.nCmdData=&quot;)
+  info(autosave_pass0, &quot;VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fPosition_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.fPosition&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.fPosition?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fPosition&quot;) {
+  field(DESC, &quot;ads:Main.M54.fPosition&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M54.fPosition=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fVelocity_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.fVelocity&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.fVelocity?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fVelocity&quot;) {
+  field(DESC, &quot;ads:Main.M54.fVelocity&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M54.fVelocity=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fAcceleration_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.fAcceleration&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.fAcceleration?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fAcceleration&quot;) {
+  field(DESC, &quot;ads:Main.M54.fAcceleration&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M54.fAcceleration=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fDeceleration_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.fDeceleration&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.fDeceleration?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fDeceleration&quot;) {
+  field(DESC, &quot;ads:Main.M54.fDeceleration&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M54.fDeceleration=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fHomePosition_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.fHomePosition&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.fHomePosition?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:fHomePosition&quot;) {
+  field(DESC, &quot;ads:Main.M54.fHomePosition&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/Main.M54.fHomePosition=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosave_pass0, &quot;PREC VAL&quot;)
+}
+
+record(longin, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:nMotionAxisID_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.nMotionAxisID&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.nMotionAxisID?&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bEnableDone_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bEnableDone&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bEnableDone?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bBusy_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bBusy&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bBusy?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bDone_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bDone&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bDone?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:bError_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.bError&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.bError?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(waveform, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:sErrorMessage_RBV&quot;) {
+  field(DESC, &quot;ads:Main.M54.sErrorMessage&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt8ArrayIn&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.sErrorMessage?&quot;)
+  field(FTVL, &quot;CHAR&quot;)
+  field(NELM, &quot;80&quot;)
 }```
 </pre></div>
 </div>
@@ -25816,7 +28522,7 @@ record(waveform, &quot;SL2L0:POWER:MMS:NORTH:PLC:sErrorMessage_RBV&quot;) {
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -25833,7 +28539,7 @@ record(waveform, &quot;SL2L0:POWER:MMS:NORTH:PLC:sErrorMessage_RBV&quot;) {
       &copy;2019, SLAC National Accelerator Laboratory.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
