@@ -23,7 +23,7 @@ END_VAR
 // Motor 1 XTAL ANGLE X (SP1L0-KMONO-MMS-01)
 Main.M49.bLimitForwardEnable 	:= TRUE;	//TRUE
 Main.M49.bLimitBackwardEnable := TRUE;	//TRUE
-Main.M49.nEnableMode 			:= Enum_StageEnableMode.STAGE_ENABLE_ALWAYS;
+Main.M49.nEnableMode 			:= Enum_StageEnableMode.ALWAYS;
 Main.M49.bHardwareEnable		:= TRUE;
 Main.M49.bPowerSelf			:= TRUE;
 fbMotion1(stMotionStage:=Main.M49);
@@ -31,7 +31,7 @@ fbMotion1(stMotionStage:=Main.M49);
 // Motor 2 XTAL VERT Y (SP1L0-KMONO-MMS-02)
 //Main.M50.bLimitForwardEnable 	:= bM2CCWLimit;	//(+Y)
 //Main.M50.bLimitBackwardEnable := bM2CWLimit;	//(-Y)
-Main.M50.nEnableMode 			:= Enum_StageEnableMode.STAGE_ENABLE_ALWAYS;
+Main.M50.nEnableMode 			:= Enum_StageEnableMode.ALWAYS;
 Main.M50.bHardwareEnable		:= TRUE;
 Main.M50.bPowerSelf			:= TRUE;
 fbMotion2(stMotionStage:=Main.M50);
@@ -39,7 +39,7 @@ fbMotion2(stMotionStage:=Main.M50);
 // Motor 3 RETICLE HORIZ X (SP1L0-KMONO-MMS-03)
 //Main.M51.bLimitForwardEnable 	:= bM3CCWLimit;	//(+X)
 //Main.M51.bLimitBackwardEnable := bM3CWLimit;	//(-X)
-Main.M51.nEnableMode 			:= Enum_StageEnableMode.STAGE_ENABLE_ALWAYS;
+Main.M51.nEnableMode 			:= Enum_StageEnableMode.ALWAYS;
 Main.M51.bHardwareEnable		:= TRUE;
 Main.M51.bPowerSelf			:= TRUE;
 fbMotion3(stMotionStage:=Main.M51);
@@ -47,7 +47,7 @@ fbMotion3(stMotionStage:=Main.M51);
 // Motor 4 RETICLE VERT Y (SP1L0-KMONO-MMS-04)
 //Main.M52.bLimitForwardEnable 	:= bM4CWLimit;	//(+Y)
 //Main.M52.bLimitBackwardEnable := bM4CCWLimit;	//(-Y)
-Main.M52.nEnableMode 			:= Enum_StageEnableMode.STAGE_ENABLE_ALWAYS;
+Main.M52.nEnableMode 			:= Enum_StageEnableMode.ALWAYS;
 Main.M52.bHardwareEnable		:= TRUE;
 Main.M52.bPowerSelf			:= TRUE;
 fbMotion4(stMotionStage:=Main.M52);
@@ -55,7 +55,7 @@ fbMotion4(stMotionStage:=Main.M52);
 // Motor 5 DIODE HORIZ X (SP1L0-KMONO-MMS-05)
 //Main.M53.bLimitForwardEnable 	:= bM5CCWLimit;	//(+X)
 //Main.M53.bLimitBackwardEnable := bM5CWLimit;	//(-X)
-Main.M53.nEnableMode 			:= Enum_StageEnableMode.STAGE_ENABLE_ALWAYS;
+Main.M53.nEnableMode 			:= Enum_StageEnableMode.ALWAYS;
 Main.M53.bHardwareEnable		:= TRUE;
 Main.M53.bPowerSelf			:= TRUE;
 fbMotion5(stMotionStage:=Main.M53);
@@ -63,7 +63,7 @@ fbMotion5(stMotionStage:=Main.M53);
 // Motor 6 DIODE VERT Y (SP1L0-KMONO-MMS-06)
 //Main.M54.bLimitForwardEnable 	:= bM6CWLimit;	//(+Y)
 //Main.M54.bLimitBackwardEnable := bM6CCWLimit;	//(-Y)
-Main.M54.nEnableMode 			:= Enum_StageEnableMode.STAGE_ENABLE_ALWAYS;
+Main.M54.nEnableMode 			:= Enum_StageEnableMode.ALWAYS;
 Main.M54.bHardwareEnable		:= TRUE;
 Main.M54.bPowerSelf			:= TRUE;
 fbMotion6(stMotionStage:=Main.M54);

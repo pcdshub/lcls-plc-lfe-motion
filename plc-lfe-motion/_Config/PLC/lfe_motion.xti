@@ -2,6 +2,24 @@
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.30" ClassName="CNestedPlcProjDef">
 	<DataTypes>
 		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
+			<BitSize>48</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>6</Elements>
+			</ArrayInfo>
+			<Format>
+				<Printf>%d.%d.%d.%d.%d.%d</Printf>
+				<Parameter>[0]</Parameter>
+				<Parameter>[1]</Parameter>
+				<Parameter>[2]</Parameter>
+				<Parameter>[3]</Parameter>
+				<Parameter>[4]</Parameter>
+				<Parameter>[5]</Parameter>
+			</Format>
+		</DataType>
+		<DataType>
 			<Name GUID="{4C3FC5AC-D5AA-44C6-AC5A-159774BA0F6D}" Namespace="MC" TcBaseType="true" HideType="true" IecDeclaration="DWORD;">NCTOPLC_AXIS_REF_STATE</Name>
 			<BitSize>32</BitSize>
 			<SubItem>
@@ -941,6 +959,13 @@ External Setpoint Generation:
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
 				<Name>PlcTask Inputs</Name>
+				<Var>
+					<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
+					<Comment>
+						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
+					</Comment>
+					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM1CoilARaw</Name>
 					<Comment>
@@ -2321,6 +2346,20 @@ External Setpoint Generation:
 					<Type>INT</Type>
 				</Var>
 				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbGetPMVoltage.iRaw</Name>
+					<Comment>
+						<![CDATA[ Connect this input to the terminal]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbGige.fbGetIllPercent.iRaw</Name>
+					<Comment>
+						<![CDATA[ Connect this input to the terminal]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>PRG_IM1L1_PPM.fbIM1L1.fbFlowMeter.fRaw</Name>
 					<Type>INT</Type>
 				</Var>
@@ -2578,6 +2617,20 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbGetPMVoltage.iRaw</Name>
+					<Comment>
+						<![CDATA[ Connect this input to the terminal]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbGige.fbGetIllPercent.iRaw</Name>
+					<Comment>
+						<![CDATA[ Connect this input to the terminal]]>
+					</Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
@@ -8465,6 +8518,10 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>PRG_IM1L0_XTES.fbIM1L0.fbOpal.bLedPower</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>PRG_IM1L1_PPM.fbIM1L1.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
@@ -8475,6 +8532,13 @@ External Setpoint Generation:
 				<Var>
 					<Name>PRG_IM1L1_PPM.fbIM1L1.fbGige.bGigePower</Name>
 					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbGige.fbSetIllPercent.iRaw</Name>
+					<Comment>
+						<![CDATA[ Connect this output to the terminal]]>
+					</Comment>
+					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_IM2L0_XTES.fbIM2L0.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -8490,6 +8554,10 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_IM2L0_XTES.fbIM2L0.fbOpal.bOpalPower</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM2L0_XTES.fbIM2L0.fbOpal.bLedPower</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -8509,6 +8577,13 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbGige.fbSetIllPercent.iRaw</Name>
+					<Comment>
+						<![CDATA[ Connect this output to the terminal]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>PRG_IM4L0_XTES.fbIM4L0.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
@@ -8522,6 +8597,10 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_IM4L0_XTES.fbIM4L0.fbOpal.bOpalPower</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM4L0_XTES.fbIM4L0.fbOpal.bLedPower</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
