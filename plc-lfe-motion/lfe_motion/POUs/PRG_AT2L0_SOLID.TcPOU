@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_AT2L0_SOLID" Id="{6180f524-6468-4c61-b137-11e8cfa13685}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_AT2L0_SOLID
 VAR
 	bAT2L0_debug: BOOL := FALSE;
-	nAT2L0_enableMode: INT := 2;
+	nAT2L0_enableMode: ENUM_StageEnableMode := ENUM_StageEnableMode.DURING_MOTION;
 	bAT2L0_HWEnable: BOOL := FALSE;
 	
 	iIndex: INT;
@@ -131,10 +131,10 @@ fbAT2L0_axes[17]:= ADR(Main.M18);
 fbAT2L0_axes[18]:= ADR(Main.M19);
 
 IF bAT2L0_debug = TRUE THEN
-	nAT2L0_enableMode := 0;
+	nAT2L0_enableMode := ENUM_StageEnableMode.ALWAYS;
 	bAT2L0_HWEnable := TRUE;
 ELSE
-	nAT2L0_enableMode := 2;
+	nAT2L0_enableMode := ENUM_StageEnableMode.DURING_MOTION;
 	bAT2L0_HWEnable := FALSE;
 END_IF
 
