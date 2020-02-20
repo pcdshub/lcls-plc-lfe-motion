@@ -362,7 +362,6 @@ END_VAR
 <span class="n">VAR</span>
 	<span class="n">bAT2L0_debug</span><span class="o">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
 	<span class="n">nAT2L0_enableMode</span><span class="o">:</span> <span class="n">ENUM_StageEnableMode</span> <span class="o">:=</span> <span class="n">ENUM_StageEnableMode</span><span class="p">.</span><span class="n">DURING_MOTION</span><span class="p">;</span>
-	<span class="n">bAT2L0_HWEnable</span><span class="o">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
 	
 	<span class="n">iIndex</span><span class="o">:</span> <span class="n">INT</span><span class="p">;</span>
 	<span class="n">fbAT2L0_motion</span><span class="o">:</span> <span class="k">ARRAY</span> <span class="p">[</span><span class="mi">0</span><span class="p">..</span><span class="mi">18</span><span class="p">]</span> <span class="k">OF</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
@@ -492,16 +491,15 @@ END_VAR
 
 <span class="k">IF</span> <span class="n">bAT2L0_debug</span> <span class="o">=</span> <span class="n">TRUE</span> <span class="k">THEN</span>
 	<span class="n">nAT2L0_enableMode</span> <span class="o">:=</span> <span class="n">ENUM_StageEnableMode</span><span class="p">.</span><span class="n">ALWAYS</span><span class="p">;</span>
-	<span class="n">bAT2L0_HWEnable</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
 <span class="k">ELSE</span>
 	<span class="n">nAT2L0_enableMode</span> <span class="o">:=</span> <span class="n">ENUM_StageEnableMode</span><span class="p">.</span><span class="n">DURING_MOTION</span><span class="p">;</span>
-	<span class="n">bAT2L0_HWEnable</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
 <span class="n">END_IF</span>
 
 <span class="k">FOR</span> <span class="n">iIndex</span> <span class="o">:=</span> <span class="mi">0</span> <span class="k">TO</span> <span class="mi">18</span> <span class="n">BY</span> <span class="mi">1</span> <span class="n">DO</span>
 	<span class="n">fbAT2L0_motion</span><span class="p">[</span><span class="n">iIndex</span><span class="p">](</span><span class="n">stMotionStage</span> <span class="o">:=</span> <span class="n">fbAT2L0_axes</span><span class="p">[</span><span class="n">iIndex</span><span class="p">]</span><span class="o">^</span><span class="p">);</span>
 	<span class="n">fbAT2L0_axes</span><span class="p">[</span><span class="n">iIndex</span><span class="p">]</span><span class="o">^</span><span class="p">.</span><span class="n">nEnableMode</span> <span class="o">:=</span> <span class="n">nAT2L0_enableMode</span><span class="p">;</span>
-	<span class="n">fbAT2L0_axes</span><span class="p">[</span><span class="n">iIndex</span><span class="p">]</span><span class="o">^</span><span class="p">.</span><span class="n">bHardwareEnable</span> <span class="o">:=</span> <span class="n">bAT2L0_HWEnable</span><span class="p">;</span>
+    <span class="n">fbAT2L0_axes</span><span class="p">[</span><span class="n">iIndex</span><span class="p">]</span><span class="o">^</span><span class="p">.</span><span class="n">bHardwareEnable</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+	<span class="n">fbAT2L0_axes</span><span class="p">[</span><span class="n">iIndex</span><span class="p">]</span><span class="o">^</span><span class="p">.</span><span class="n">bPowerSelf</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
 <span class="n">END_FOR</span>
 <span class="n">iIndex</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span>
 

@@ -335,7 +335,6 @@ PROGRAM PRG_AT2L0_SOLID
 VAR
 	bAT2L0_debug: BOOL := FALSE;
 	nAT2L0_enableMode: ENUM_StageEnableMode := ENUM_StageEnableMode.DURING_MOTION;
-	bAT2L0_HWEnable: BOOL := FALSE;
 	
 	iIndex: INT;
 	fbAT2L0_motion: ARRAY [0..18] OF FB_MotionStage;
@@ -465,16 +464,15 @@ fbAT2L0_axes[18]:= ADR(Main.M19);
 
 IF bAT2L0_debug = TRUE THEN
 	nAT2L0_enableMode := ENUM_StageEnableMode.ALWAYS;
-	bAT2L0_HWEnable := TRUE;
 ELSE
 	nAT2L0_enableMode := ENUM_StageEnableMode.DURING_MOTION;
-	bAT2L0_HWEnable := FALSE;
 END_IF
 
 FOR iIndex := 0 TO 18 BY 1 DO
 	fbAT2L0_motion[iIndex](stMotionStage := fbAT2L0_axes[iIndex]^);
 	fbAT2L0_axes[iIndex]^.nEnableMode := nAT2L0_enableMode;
-	fbAT2L0_axes[iIndex]^.bHardwareEnable := bAT2L0_HWEnable;
+    fbAT2L0_axes[iIndex]^.bHardwareEnable := TRUE;
+	fbAT2L0_axes[iIndex]^.bPowerSelf := TRUE;
 END_FOR
 iIndex := 0;
 
