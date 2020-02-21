@@ -3,31 +3,31 @@
   <POU Name="PRG_IM1L0_XTES" Id="{dc3548d0-1688-4ec2-b4ae-fd34a5036e7d}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_IM1L0_XTES
 VAR
-	{attribute 'pytmc' := '
-		pv: IM1L0:XTES
-		io: io
-	'}
-	{attribute 'TcLinkTo' := '.bZoomEndFwd := TIIB[IM1L0-EL1088]^Channel 1^Input;
-	                          .bZoomEndBwd := TIIB[IM1L0-EL1088]^Channel 2^Input;
-							  .bFocusEndFwd := TIIB[IM1L0-EL1088]^Channel 3^Input;
-							  .bFocusEndBwd := TIIB[IM1L0-EL1088]^Channel 4^Input;
-							  .fbOpal.bOpalPower := TIIB[IM1L0-EL2004]^Channel 2^Output'}
-	fbIM1L0: FB_XPIM;
-	stEL6In: EL6InData22b;
-	stEL6Out: EL6OutData22b;
+    {attribute 'pytmc' := '
+        pv: IM1L0:XTES
+        io: io
+    '}
+    {attribute 'TcLinkTo' := '.bZoomEndFwd := TIIB[IM1L0-EL1088]^Channel 1^Input;
+                              .bZoomEndBwd := TIIB[IM1L0-EL1088]^Channel 2^Input;
+                              .bFocusEndFwd := TIIB[IM1L0-EL1088]^Channel 3^Input;
+                              .bFocusEndBwd := TIIB[IM1L0-EL1088]^Channel 4^Input;
+                              .fbOpal.bOpalPower := TIIB[IM1L0-EL2004]^Channel 2^Output'}
+    fbIM1L0: FB_XPIM;
+    stEL6In: EL6InData22b;
+    stEL6Out: EL6OutData22b;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[fbIM1L0(
-	stYStage := Main.M20,
-	stZoomStage := Main.M21,
-	stFocusStage := Main.M22,
-	stEl6In := stEL6In,
-	stEl6Out := stEl6Out,
-	fYag := -86.65,
-	fDiamond := -56.65,
-	fReticle := -26.65,
-	fOut := 0);]]></ST>
+    stYStage := Main.M20,
+    stZoomStage := Main.M21,
+    stFocusStage := Main.M22,
+    stEl6In := stEL6In,
+    stEl6Out := stEl6Out,
+    fYag := -86.65,
+    fDiamond := -56.65,
+    fReticle := -26.65,
+    fOut := 0);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

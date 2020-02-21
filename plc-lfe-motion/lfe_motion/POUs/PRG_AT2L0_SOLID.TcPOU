@@ -3,14 +3,14 @@
   <POU Name="PRG_AT2L0_SOLID" Id="{6180f524-6468-4c61-b137-11e8cfa13685}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_AT2L0_SOLID
 VAR
-	bAT2L0_debug: BOOL := FALSE;
-	nAT2L0_enableMode: ENUM_StageEnableMode := ENUM_StageEnableMode.DURING_MOTION;
-	
-	iIndex: INT;
-	fbAT2L0_motion: ARRAY [0..18] OF FB_MotionStage;
-	fbAT2L0_axes: ARRAY [0..18] OF POINTER TO DUT_MotionStage;
-	
-	// For plotting voltage/current during debugging
+    bAT2L0_debug: BOOL := FALSE;
+    nAT2L0_enableMode: ENUM_StageEnableMode := ENUM_StageEnableMode.DURING_MOTION;
+
+    iIndex: INT;
+    fbAT2L0_motion: ARRAY [0..18] OF FB_MotionStage;
+    fbAT2L0_axes: ARRAY [0..18] OF POINTER TO DUT_MotionStage;
+
+    // For plotting voltage/current during debugging
     nM1CoilARaw AT %I*: UINT;
     nM1CoilBRaw AT %I*: UINT; // ..CoilBRaw is currently linked to EL7041 'Coil Voltage A'
     nM1CoilA: INT;
@@ -130,16 +130,16 @@ fbAT2L0_axes[17]:= ADR(Main.M18);
 fbAT2L0_axes[18]:= ADR(Main.M19);
 
 IF bAT2L0_debug = TRUE THEN
-	nAT2L0_enableMode := ENUM_StageEnableMode.ALWAYS;
+    nAT2L0_enableMode := ENUM_StageEnableMode.ALWAYS;
 ELSE
-	nAT2L0_enableMode := ENUM_StageEnableMode.DURING_MOTION;
+    nAT2L0_enableMode := ENUM_StageEnableMode.DURING_MOTION;
 END_IF
 
 FOR iIndex := 0 TO 18 BY 1 DO
-	fbAT2L0_motion[iIndex](stMotionStage := fbAT2L0_axes[iIndex]^);
-	fbAT2L0_axes[iIndex]^.nEnableMode := nAT2L0_enableMode;
+    fbAT2L0_motion[iIndex](stMotionStage := fbAT2L0_axes[iIndex]^);
+    fbAT2L0_axes[iIndex]^.nEnableMode := nAT2L0_enableMode;
     fbAT2L0_axes[iIndex]^.bHardwareEnable := TRUE;
-	fbAT2L0_axes[iIndex]^.bPowerSelf := TRUE;
+    fbAT2L0_axes[iIndex]^.bPowerSelf := TRUE;
 END_FOR
 iIndex := 0;
 
