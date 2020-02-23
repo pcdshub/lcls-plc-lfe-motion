@@ -15,11 +15,21 @@
     <LibraryReferences>{4c648445-b4af-42d8-9ace-ffcaf55ebefd}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DUTs\DUT_DoubleActPneumaticActuator.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\DUT_PneumaticActuator_Position.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="GVLs\PMPS.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
     </Compile>
     <Compile Include="GVLs\Main.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="GVLs\RTDS.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
     </Compile>
@@ -71,6 +81,9 @@
     <Compile Include="Temp\FB_Arbiter.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Temp\FB_DoubleActingMPA.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Temp\FB_HardwareFFOutput.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -89,6 +102,10 @@
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
+    <PlaceholderReference Include="L2SI Vacuum Library">
+      <DefaultResolution>L2SI Vacuum Library, * (SLAC)</DefaultResolution>
+      <Namespace>L2SI_Vacuum_Library</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="LCLS General">
       <DefaultResolution>LCLS General, * (SLAC)</DefaultResolution>
       <Namespace>LCLS_General</Namespace>
@@ -119,6 +136,9 @@
     </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
+    <PlaceholderResolution Include="L2SI Vacuum Library">
+      <Resolution>L2SI Vacuum Library, * (SLAC)</Resolution>
+    </PlaceholderResolution>
     <PlaceholderResolution Include="LCLS General">
       <Resolution>LCLS General, * (SLAC)</Resolution>
     </PlaceholderResolution>
@@ -137,8 +157,8 @@
   <ProjectExtensions>
     <PlcProjectOptions>
       <XmlArchive>
-  <Data>
-    <o xml:space="preserve" t="OptionKey">
+        <Data>
+          <o xml:space="preserve" t="OptionKey">
       <v n="Name">"&lt;ProjectRoot&gt;"</v>
       <d n="SubKeys" t="Hashtable" ckt="String" cvt="OptionKey">
         <v>{192FAD59-8248-4824-A8DE-9177C94C195A}</v>
@@ -171,13 +191,13 @@
       </d>
       <d n="Values" t="Hashtable" />
     </o>
-  </Data>
-  <TypeList>
-    <Type n="Hashtable">System.Collections.Hashtable</Type>
-    <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
-    <Type n="String">System.String</Type>
-  </TypeList>
-</XmlArchive>
+        </Data>
+        <TypeList>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+          <Type n="String">System.String</Type>
+        </TypeList>
+      </XmlArchive>
     </PlcProjectOptions>
   </ProjectExtensions>
 </Project>

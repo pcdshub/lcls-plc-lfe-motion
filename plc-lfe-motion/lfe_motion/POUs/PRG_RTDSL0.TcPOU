@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_RTDSL0" Id="{0731cf32-d059-4658-a450-fc5e211c2dc2}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_RTDSL0
 VAR
@@ -11,6 +11,9 @@ VAR
 	fbMotion6: FB_SimMotor;
 	fbMotion7: FB_SimMotor;
 	fbMotion8: FB_SimMotor;
+	fbOTR1 : FB_DoubleActingMPA;
+	fbOTR2 : FB_DoubleActingMPA;
+
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -22,11 +25,23 @@ fbMotion4(stMotionStage := Main.M36);
 fbMotion5(stMotionStage := Main.M37);
 fbMotion6(stMotionStage := Main.M38);
 fbMotion7(stMotionStage := Main.M39);
-fbMotion8(stMotionStage := Main.M40);]]></ST>
+//Pneumatic actuators - OTR filters
+fbOTR1(iq_MPA := RTDS.MPA01);
+fbOTR2(iq_MPA := RTDS.MPA02);
+
+
+
+]]></ST>
     </Implementation>
     <LineIds Name="PRG_RTDSL0">
       <LineId Id="3" Count="7" />
       <LineId Id="2" Count="0" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="22" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
