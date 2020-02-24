@@ -3,87 +3,87 @@
   <POU Name="FB_SLITS_POWER" Id="{f2a7b61c-c24f-40b8-8c2e-4d94fdfd3c86}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_SLITS_POWER
 VAR_IN_OUT
-	stTopBlade: DUT_MotionStage;
-	stBottomBlade: DUT_MotionStage;
-	stNorthBlade: DUT_MotionStage;
-	stSouthBlade: DUT_MotionStage;
+    stTopBlade: DUT_MotionStage;
+    stBottomBlade: DUT_MotionStage;
+    stNorthBlade: DUT_MotionStage;
+    stSouthBlade: DUT_MotionStage;
 END_VAR
 VAR_INPUT
-	fPosTopBlade: LREAL;
-	fPosBottomBlade: LREAL;
-	fPosNorthBlade: LREAL;
-	fPosSouthBlade: LREAL;
-	bExecuteMotion:bool ;
+    fPosTopBlade: LREAL;
+    fPosBottomBlade: LREAL;
+    fPosNorthBlade: LREAL;
+    fPosSouthBlade: LREAL;
+    bExecuteMotion:bool ;
 END_VAR
 VAR_OUTPUT
 END_VAR
 VAR
-	fbTopBlade: FB_MotionStage;
-	fbBottomBlade: FB_MotionStage;
-	fbNorthBlade: FB_MotionStage;
-	fbSouthBlade: FB_MotionStage;
-	
-	{attribute 'pytmc' := '
-		pv: FSW
-	'}
-	fbFlowSwitch: FB_XTES_Flowswitch;
-	
-	
-	//RTDs
-	{attribute 'pytmc' := '
-		pv: TOP:RTD:01
-	'}
-	RTD_TOP_1: FB_ThermoCouple;
-	{attribute 'pytmc' := '
-		pv: TOP:RTD:02
-	'}
-	RTD_TOP_2: FB_ThermoCouple;
-	{attribute 'pytmc' := '
-		pv: BOTTOM:RTD:01
-	'}
-	RTD_Bottom_1: FB_ThermoCouple;
-	{attribute 'pytmc' := '
-		pv: BOTTOM:RTD:02
-	'}
-	RTD_Bottom_2: FB_ThermoCouple;
-	
-	{attribute 'pytmc' := '
-		pv: NORTH:RTD:01
-	'}
-	RTD_North_1: FB_ThermoCouple;
-	{attribute 'pytmc' := '
-		pv: NORTH:RTD:02
-	'}
-	RTD_North_2: FB_ThermoCouple;
-	{attribute 'pytmc' := '
-		pv: SOUTH:RTD:01
-	'}
-	RTD_South_1: FB_ThermoCouple;
-	{attribute 'pytmc' := '
-		pv: SOUTH:RTD:02
-	'}
-	RTD_South_2: FB_ThermoCouple;
-	
-	fSmallDelta: LREAL := 0.01;
-	fBigDelta: LREAL := 10;
-	fMaxVelocity: LREAL := 0.33;
-	fHighAccel: LREAL := 0.8;
-	fLowAccel: LREAL := 0.1;
-	
-	stTop: DUT_PositionState;
-	stBOTTOM: DUT_PositionState;
-	stNorth: DUT_PositionState;
-	stSouth: DUT_PositionState;
+    fbTopBlade: FB_MotionStage;
+    fbBottomBlade: FB_MotionStage;
+    fbNorthBlade: FB_MotionStage;
+    fbSouthBlade: FB_MotionStage;
 
-	{attribute 'pytmc' := 'pv: TOP'}
-	fbTop: FB_StatePTPMove;
-	{attribute 'pytmc' := 'pv: BOTTOM'}
-	fbBottom: FB_StatePTPMove;
-	{attribute 'pytmc' := 'pv: NORTH'}
-	fbNorth: FB_StatePTPMove;
-	{attribute 'pytmc' := 'pv: SOUTH'}
-	fbSouth: FB_StatePTPMove;
-	
+    {attribute 'pytmc' := '
+        pv: FSW
+    '}
+    fbFlowSwitch: FB_XTES_Flowswitch;
+
+
+    //RTDs
+    {attribute 'pytmc' := '
+        pv: TOP:RTD:01
+    '}
+    RTD_TOP_1: FB_ThermoCouple;
+    {attribute 'pytmc' := '
+        pv: TOP:RTD:02
+    '}
+    RTD_TOP_2: FB_ThermoCouple;
+    {attribute 'pytmc' := '
+        pv: BOTTOM:RTD:01
+    '}
+    RTD_Bottom_1: FB_ThermoCouple;
+    {attribute 'pytmc' := '
+        pv: BOTTOM:RTD:02
+    '}
+    RTD_Bottom_2: FB_ThermoCouple;
+
+    {attribute 'pytmc' := '
+        pv: NORTH:RTD:01
+    '}
+    RTD_North_1: FB_ThermoCouple;
+    {attribute 'pytmc' := '
+        pv: NORTH:RTD:02
+    '}
+    RTD_North_2: FB_ThermoCouple;
+    {attribute 'pytmc' := '
+        pv: SOUTH:RTD:01
+    '}
+    RTD_South_1: FB_ThermoCouple;
+    {attribute 'pytmc' := '
+        pv: SOUTH:RTD:02
+    '}
+    RTD_South_2: FB_ThermoCouple;
+
+    fSmallDelta: LREAL := 0.01;
+    fBigDelta: LREAL := 10;
+    fMaxVelocity: LREAL := 0.33;
+    fHighAccel: LREAL := 0.8;
+    fLowAccel: LREAL := 0.1;
+
+    stTop: DUT_PositionState;
+    stBOTTOM: DUT_PositionState;
+    stNorth: DUT_PositionState;
+    stSouth: DUT_PositionState;
+
+    {attribute 'pytmc' := 'pv: TOP'}
+    fbTop: FB_StatePTPMove;
+    {attribute 'pytmc' := 'pv: BOTTOM'}
+    fbBottom: FB_StatePTPMove;
+    {attribute 'pytmc' := 'pv: NORTH'}
+    fbNorth: FB_StatePTPMove;
+    {attribute 'pytmc' := 'pv: SOUTH'}
+    fbSouth: FB_StatePTPMove;
+
 
 END_VAR
 ]]></Declaration>
@@ -148,24 +148,24 @@ stSouth.fDecel := fHighAccel;
 //fbTop.bExecute := fbBottom.bExecute :=fbNorth.bExecute := fbSouth.bExecute := bExecuteMotion;
 
 fbTop(
-	stPositionState:=stTop,
-	bMoveOk:=TRUE,
-	stMotionStage:=stTopBlade);
-	
+    stPositionState:=stTop,
+    bMoveOk:=TRUE,
+    stMotionStage:=stTopBlade);
+
 fbBottom(
-	stPositionState:=stBOTTOM,
-	bMoveOk:=TRUE,
-	stMotionStage:=stBottomBlade);
-	
+    stPositionState:=stBOTTOM,
+    bMoveOk:=TRUE,
+    stMotionStage:=stBottomBlade);
+
 fbNorth(
-	stPositionState:=stNorth,
-	bMoveOk:=TRUE,
-	stMotionStage:=stNorthBlade);
-	
+    stPositionState:=stNorth,
+    bMoveOk:=TRUE,
+    stMotionStage:=stNorthBlade);
+
 fbSouth(
-	stPositionState:=stSouth,
-	bMoveOk:=TRUE,
-	stMotionStage:=stSouthBlade);]]></ST>
+    stPositionState:=stSouth,
+    bMoveOk:=TRUE,
+    stMotionStage:=stSouthBlade);]]></ST>
     </Implementation>
     <LineIds Name="FB_SLITS_POWER">
       <LineId Id="30" Count="0" />
