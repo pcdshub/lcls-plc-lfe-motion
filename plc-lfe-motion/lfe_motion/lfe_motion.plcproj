@@ -13,8 +13,16 @@
     <Implicit_KindOfTask>{b0db0546-8cc5-495e-8a52-7b8de67e4edf}</Implicit_KindOfTask>
     <Implicit_Jitter_Distribution>{4e7d601e-6828-4764-a247-e5b129105b1f}</Implicit_Jitter_Distribution>
     <LibraryReferences>{4c648445-b4af-42d8-9ace-ffcaf55ebefd}</LibraryReferences>
+    <CombineIds>true</CombineIds>
+    <Released>true</Released>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DUTs\DUT_DoubleActPneumaticActuator.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\DUT_PneumaticActuator_Position.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="GVLs\PMPS.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
@@ -22,6 +30,9 @@
     <Compile Include="GVLs\Main.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="GVLs\RTDS.TcGVL">
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
