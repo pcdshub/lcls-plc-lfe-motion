@@ -47,7 +47,7 @@ fbMotion3(stMotionStage:=Main.M51);
 // Motor 4 RETICLE VERT Y (SP1L0-KMONO-MMS-04)
 //Main.M52.bLimitForwardEnable     := bM4CWLimit;    //(+Y)
 //Main.M52.bLimitBackwardEnable := bM4CCWLimit;    //(-Y)
-Main.M52.nEnableMode             := Enum_StageEnableMode.ALWAYS;
+Main.M52.nEnableMode             := Enum_StageEnableMode.DURING_MOTION;
 Main.M52.bHardwareEnable        := TRUE;
 Main.M52.bPowerSelf            := TRUE;
 fbMotion4(stMotionStage:=Main.M52);

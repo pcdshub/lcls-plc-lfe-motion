@@ -215,8 +215,8 @@ VAR_GLOBAL
 	{attribute 'pytmc' := 'pv: SP1L0:KMONO:MMS:XTAL_ANGLE'}
 	M49: DUT_MotionStage;
 	{attribute 'pytmc' := 'pv: SP1L0:KMONO:MMS:XTAL_VERT'}
-	{attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1;
-	                          .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2'}
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2;
+	                          .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1'}
 	M50: DUT_MotionStage;
 	{attribute 'pytmc' := 'pv: SP1L0:KMONO:MMS:RET_HORIZ'}
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E3-MOTORS]^STM Status^Status^Digital input 2;
