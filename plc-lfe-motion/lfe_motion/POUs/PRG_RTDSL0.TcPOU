@@ -2,32 +2,43 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_RTDSL0" Id="{0731cf32-d059-4658-a450-fc5e211c2dc2}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_RTDSL0
+VAR_INPUT
+	nVar: INT;
+	
+END_VAR
 VAR
-	fbMotion1: FB_SimMotor;
-	fbMotion2: FB_SimMotor;
-	fbMotion3: FB_SimMotor;
-	fbMotion4: FB_SimMotor;
-	fbMotion5: FB_SimMotor;
-	fbMotion6: FB_SimMotor;
-	fbMotion7: FB_SimMotor;
-	fbMotion8: FB_SimMotor;
-	fbOTR1 : FB_DoubleActingMPA;
-	fbOTR2 : FB_DoubleActingMPA;
+//	fbMotion1: FB_SimMotor;
+//	fbMotion2: FB_SimMotor;
+//	fbMotion3: FB_SimMotor;
+//	fbMotion4: FB_SimMotor;
+//	fbMotion5: FB_SimMotor;
+//	fbMotion6: FB_SimMotor;
+//	fbMotion7: FB_SimMotor;
+//	fbMotion8: FB_SimMotor;
+	fbMPA1 : FB_DoubleActingMPA;
+	fbMPA2 : FB_DoubleActingMPA;
+	fbMPA3 : FB_DoubleActingMPA;
+	fbMPA4 : FB_DoubleActingMPA;
+	
+	
 
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[// Placeholder, standard simulated motion for all axes
-fbMotion1(stMotionStage := Main.M33);
-fbMotion2(stMotionStage := Main.M34);
-fbMotion3(stMotionStage := Main.M35);
-fbMotion4(stMotionStage := Main.M36);
-fbMotion5(stMotionStage := Main.M37);
-fbMotion6(stMotionStage := Main.M38);
-fbMotion7(stMotionStage := Main.M39);
+//fbMotion1(stMotionStage := Main.M33);
+//fbMotion2(stMotionStage := Main.M34);
+//fbMotion3(stMotionStage := Main.M35);
+//fbMotion4(stMotionStage := Main.M36);
+//fbMotion5(stMotionStage := Main.M37);
+//fbMotion6(stMotionStage := Main.M38);
+//fbMotion7(stMotionStage := Main.M39);
+
 //Pneumatic actuators - OTR filters
-fbOTR1(iq_MPA := RTDS.MPA01);
-fbOTR2(iq_MPA := RTDS.MPA02);
+fbMPA1(iq_MPA := RTDSL0.MPA01);
+fbMPA2(iq_MPA := RTDSL0.MPA02);
+fbMPA3(iq_MPA := RTDSL0.MPA03);
+fbMPA4(iq_MPA := RTDSL0.MPA04);
 
 
 
@@ -35,9 +46,11 @@ fbOTR2(iq_MPA := RTDS.MPA02);
     </Implementation>
     <LineIds Name="PRG_RTDSL0">
       <LineId Id="3" Count="7" />
+      <LineId Id="46" Count="0" />
       <LineId Id="2" Count="0" />
       <LineId Id="25" Count="0" />
       <LineId Id="29" Count="0" />
+      <LineId Id="69" Count="1" />
       <LineId Id="31" Count="0" />
       <LineId Id="30" Count="0" />
       <LineId Id="26" Count="0" />
