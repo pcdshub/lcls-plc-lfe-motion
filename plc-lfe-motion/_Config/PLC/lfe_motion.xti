@@ -8031,35 +8031,47 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.MPA01.i_xInsertLS</Name>
+					<Name>RTDSL0.RTDSL0_MPA_01.i_xInsertedLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.MPA01.i_xRetractLS</Name>
+					<Name>RTDSL0.RTDSL0_MPA_01.i_xRetractedLS</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.MPA02.i_xInsertLS</Name>
+					<Name>RTDSL0.RTDSL0_MPA_02.i_xInsertedLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.MPA02.i_xRetractLS</Name>
+					<Name>RTDSL0.RTDSL0_MPA_02.i_xRetractedLS</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.MPA03.i_xInsertLS</Name>
+					<Name>RTDSL0.RTDSL0_MPA_03.i_xInsertedLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.MPA03.i_xRetractLS</Name>
+					<Name>RTDSL0.RTDSL0_MPA_03.i_xRetractedLS</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.MPA04.i_xInsertLS</Name>
+					<Name>RTDSL0.RTDSL0_MPA_04.i_xInsertedLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.MPA04.i_xRetractLS</Name>
+					<Name>RTDSL0.RTDSL0_MPA_04.i_xRetractedLS</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
@@ -8906,35 +8918,35 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.MPA01.q_xInsertDO</Name>
+					<Name>RTDSL0.RTDSL0_MPA_01.q_xInsert_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.MPA01.q_xRetractDO</Name>
+					<Name>RTDSL0.RTDSL0_MPA_01.q_xRetract_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.MPA02.q_xInsertDO</Name>
+					<Name>RTDSL0.RTDSL0_MPA_02.q_xInsert_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.MPA02.q_xRetractDO</Name>
+					<Name>RTDSL0.RTDSL0_MPA_02.q_xRetract_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.MPA03.q_xInsertDO</Name>
+					<Name>RTDSL0.RTDSL0_MPA_03.q_xInsert_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.MPA03.q_xRetractDO</Name>
+					<Name>RTDSL0.RTDSL0_MPA_03.q_xRetract_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.MPA04.q_xInsertDO</Name>
+					<Name>RTDSL0.RTDSL0_MPA_04.q_xInsert_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.MPA04.q_xRetractDO</Name>
+					<Name>RTDSL0.RTDSL0_MPA_04.q_xRetract_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
@@ -8964,24 +8976,24 @@ External Setpoint Generation:
 	<Mappings>
 		<OwnerA Name="lfe_motion Instance">
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL1008">
-				<Link VarA="PlcTask Inputs^RTDSL0.MPA01.i_xInsertLS" VarB="Channel 1^Input"/>
-				<Link VarA="PlcTask Inputs^RTDSL0.MPA01.i_xRetractLS" VarB="Channel 2^Input"/>
-				<Link VarA="PlcTask Inputs^RTDSL0.MPA02.i_xInsertLS" VarB="Channel 3^Input"/>
-				<Link VarA="PlcTask Inputs^RTDSL0.MPA02.i_xRetractLS" VarB="Channel 4^Input"/>
-				<Link VarA="PlcTask Inputs^RTDSL0.MPA03.i_xInsertLS" VarB="Channel 5^Input"/>
-				<Link VarA="PlcTask Inputs^RTDSL0.MPA03.i_xRetractLS" VarB="Channel 6^Input"/>
-				<Link VarA="PlcTask Inputs^RTDSL0.MPA04.i_xInsertLS" VarB="Channel 7^Input"/>
-				<Link VarA="PlcTask Inputs^RTDSL0.MPA04.i_xRetractLS" VarB="Channel 8^Input"/>
+				<Link VarA="PlcTask Inputs^RTDSL0.RTDSL0_MPA_01.i_xInsertedLS" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^RTDSL0.RTDSL0_MPA_01.i_xRetractedLS" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^RTDSL0.RTDSL0_MPA_02.i_xInsertedLS" VarB="Channel 3^Input"/>
+				<Link VarA="PlcTask Inputs^RTDSL0.RTDSL0_MPA_02.i_xRetractedLS" VarB="Channel 4^Input"/>
+				<Link VarA="PlcTask Inputs^RTDSL0.RTDSL0_MPA_03.i_xInsertedLS" VarB="Channel 5^Input"/>
+				<Link VarA="PlcTask Inputs^RTDSL0.RTDSL0_MPA_03.i_xRetractedLS" VarB="Channel 6^Input"/>
+				<Link VarA="PlcTask Inputs^RTDSL0.RTDSL0_MPA_04.i_xInsertedLS" VarB="Channel 7^Input"/>
+				<Link VarA="PlcTask Inputs^RTDSL0.RTDSL0_MPA_04.i_xRetractedLS" VarB="Channel 8^Input"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL2008">
-				<Link VarA="PlcTask Outputs^RTDSL0.MPA01.q_xInsertDO" VarB="Channel 1^Output"/>
-				<Link VarA="PlcTask Outputs^RTDSL0.MPA01.q_xRetractDO" VarB="Channel 2^Output"/>
-				<Link VarA="PlcTask Outputs^RTDSL0.MPA02.q_xInsertDO" VarB="Channel 3^Output"/>
-				<Link VarA="PlcTask Outputs^RTDSL0.MPA02.q_xRetractDO" VarB="Channel 4^Output"/>
-				<Link VarA="PlcTask Outputs^RTDSL0.MPA03.q_xInsertDO" VarB="Channel 5^Output"/>
-				<Link VarA="PlcTask Outputs^RTDSL0.MPA03.q_xRetractDO" VarB="Channel 6^Output"/>
-				<Link VarA="PlcTask Outputs^RTDSL0.MPA04.q_xInsertDO" VarB="Channel 7^Output"/>
-				<Link VarA="PlcTask Outputs^RTDSL0.MPA04.q_xRetractDO" VarB="Channel 8^Output"/>
+				<Link VarA="PlcTask Outputs^RTDSL0.RTDSL0_MPA_01.q_xInsert_DO" VarB="Channel 1^Output"/>
+				<Link VarA="PlcTask Outputs^RTDSL0.RTDSL0_MPA_01.q_xRetract_DO" VarB="Channel 2^Output"/>
+				<Link VarA="PlcTask Outputs^RTDSL0.RTDSL0_MPA_02.q_xInsert_DO" VarB="Channel 3^Output"/>
+				<Link VarA="PlcTask Outputs^RTDSL0.RTDSL0_MPA_02.q_xRetract_DO" VarB="Channel 4^Output"/>
+				<Link VarA="PlcTask Outputs^RTDSL0.RTDSL0_MPA_03.q_xInsert_DO" VarB="Channel 5^Output"/>
+				<Link VarA="PlcTask Outputs^RTDSL0.RTDSL0_MPA_03.q_xRetract_DO" VarB="Channel 6^Output"/>
+				<Link VarA="PlcTask Outputs^RTDSL0.RTDSL0_MPA_04.q_xInsert_DO" VarB="Channel 7^Output"/>
+				<Link VarA="PlcTask Outputs^RTDSL0.RTDSL0_MPA_04.q_xRetract_DO" VarB="Channel 8^Output"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL1088">
 				<Link VarA="PlcTask Inputs^Main.M21.bHome" VarB="Channel 2^Input" AutoLink="true"/>
