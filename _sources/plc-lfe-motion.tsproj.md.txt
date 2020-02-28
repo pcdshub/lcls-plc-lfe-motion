@@ -390,8 +390,8 @@ VAR_GLOBAL
 	{attribute 'pytmc' := 'pv: SP1L0:KMONO:MMS:XTAL_ANGLE'}
 	M49: DUT_MotionStage;
 	{attribute 'pytmc' := 'pv: SP1L0:KMONO:MMS:XTAL_VERT'}
-	{attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1;
-	                          .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2'}
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2;
+	                          .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1'}
 	M50: DUT_MotionStage;
 	{attribute 'pytmc' := 'pv: SP1L0:KMONO:MMS:RET_HORIZ'}
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E3-MOTORS]^STM Status^Status^Digital input 2;
@@ -1888,7 +1888,7 @@ fbMotion3(stMotionStage:=Main.M51);
 // Motor 4 RETICLE VERT Y (SP1L0-KMONO-MMS-04)
 //Main.M52.bLimitForwardEnable     := bM4CWLimit;    //(+Y)
 //Main.M52.bLimitBackwardEnable := bM4CCWLimit;    //(-Y)
-Main.M52.nEnableMode             := Enum_StageEnableMode.ALWAYS;
+Main.M52.nEnableMode             := Enum_StageEnableMode.DURING_MOTION;
 Main.M52.bHardwareEnable        := TRUE;
 Main.M52.bPowerSelf            := TRUE;
 fbMotion4(stMotionStage:=Main.M52);
@@ -4152,8 +4152,10 @@ NC axes
         CreateSymbols = 'true'
         AxisType = 1
         AxisFolder = 'SP1K0-KMONO'
+        General:UnitName = 'steps'
         OtherSettings:AllowMotionCmdToSlave = 'true'
         Enc:EncType = 4
+        Enc:ScaleFactorNumerator = 0.015625
         Enc:MaxCount = '#x0000ffff'
         Enc:Inc:RefSoftSyncMask = '#x0000ffff'
 
@@ -4208,7 +4210,7 @@ NC axes
         Velo:RefSync = 2
         Velo:SlowManual = 3
         Velo:FastManual = 5
-        Velo:Maximum = 0.5
+        Velo:Maximum = 3
         OtherSettings:AllowMotionCmdToSlave = 'true'
         OtherSettings:PulseDistancePos = 3
         OtherSettings:PulseDistanceNeg = 3
@@ -4245,10 +4247,10 @@ NC axes
         AxisFolder = 'SP1K0-KMONO'
         Velo:SlowManual = 2
         Velo:FastManual = 3
-        Velo:Maximum = 4
+        Velo:Maximum = 3
         OtherSettings:AllowMotionCmdToSlave = 'true'
         Enc:EncType = 4
-        Enc:ScaleFactorNumerator = 0.004388516235
+        Enc:ScaleFactorNumerator = 7.9609375e-05
         Enc:MaxCount = '#x0000ffff'
         Enc:Inc:RefMode = 2
         Enc:Inc:RefSoftSyncMask = '#x0000ffff'
@@ -7193,9 +7195,9 @@ Links
     1468.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M48.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL7041-E7', 'STM Status^Status^Digital input 1')
     1469.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M50.bLimitBackwardEnable')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E2-MOTORS', 'STM Status^Status^Digital input 2')
-    1470.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M50.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E2-MOTORS', 'STM Status^Status^Digital input 1')
+    1470.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M50.bLimitForwardEnable')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E2-MOTORS', 'STM Status^Status^Digital input 2')
     1471.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M51.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E3-MOTORS', 'STM Status^Status^Digital input 1')
     1472.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M51.bLimitForwardEnable')

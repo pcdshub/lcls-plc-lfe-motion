@@ -414,8 +414,8 @@ VAR_GLOBAL
 	{attribute &#39;pytmc&#39; := &#39;pv: SP1L0:KMONO:MMS:XTAL_ANGLE&#39;}
 	M49: DUT_MotionStage;
 	{attribute &#39;pytmc&#39; := &#39;pv: SP1L0:KMONO:MMS:XTAL_VERT&#39;}
-	{attribute &#39;TcLinkTo&#39; := &#39;.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1;
-	                          .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2&#39;}
+	{attribute &#39;TcLinkTo&#39; := &#39;.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2;
+	                          .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1&#39;}
 	M50: DUT_MotionStage;
 	{attribute &#39;pytmc&#39; := &#39;pv: SP1L0:KMONO:MMS:RET_HORIZ&#39;}
 	{attribute &#39;TcLinkTo&#39; := &#39;.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E3-MOTORS]^STM Status^Status^Digital input 2;
@@ -1846,7 +1846,7 @@ END_PROGRAM
 <span class="o">//</span> <span class="n">Motor</span> <span class="mi">4</span> <span class="n">RETICLE</span> <span class="n">VERT</span> <span class="n">Y</span> <span class="p">(</span><span class="n">SP1L0</span><span class="o">-</span><span class="n">KMONO</span><span class="o">-</span><span class="n">MMS</span><span class="o">-</span><span class="mi">04</span><span class="p">)</span>
 <span class="o">//</span><span class="n">Main</span><span class="p">.</span><span class="n">M52</span><span class="p">.</span><span class="n">bLimitForwardEnable</span>     <span class="o">:=</span> <span class="n">bM4CWLimit</span><span class="p">;</span>    <span class="o">//</span><span class="p">(</span><span class="o">+</span><span class="n">Y</span><span class="p">)</span>
 <span class="o">//</span><span class="n">Main</span><span class="p">.</span><span class="n">M52</span><span class="p">.</span><span class="n">bLimitBackwardEnable</span> <span class="o">:=</span> <span class="n">bM4CCWLimit</span><span class="p">;</span>    <span class="o">//</span><span class="p">(</span><span class="o">-</span><span class="n">Y</span><span class="p">)</span>
-<span class="n">Main</span><span class="p">.</span><span class="n">M52</span><span class="p">.</span><span class="n">nEnableMode</span>             <span class="o">:=</span> <span class="n">Enum_StageEnableMode</span><span class="p">.</span><span class="n">ALWAYS</span><span class="p">;</span>
+<span class="n">Main</span><span class="p">.</span><span class="n">M52</span><span class="p">.</span><span class="n">nEnableMode</span>             <span class="o">:=</span> <span class="n">Enum_StageEnableMode</span><span class="p">.</span><span class="n">DURING_MOTION</span><span class="p">;</span>
 <span class="n">Main</span><span class="p">.</span><span class="n">M52</span><span class="p">.</span><span class="n">bHardwareEnable</span>        <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
 <span class="n">Main</span><span class="p">.</span><span class="n">M52</span><span class="p">.</span><span class="n">bPowerSelf</span>            <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
 <span class="n">fbMotion4</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">Main</span><span class="p">.</span><span class="n">M52</span><span class="p">);</span>
@@ -4112,8 +4112,10 @@ END_PROGRAM
     <span class="n">CreateSymbols</span> <span class="o">=</span> <span class="s1">&#39;true&#39;</span>
     <span class="n">AxisType</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="n">AxisFolder</span> <span class="o">=</span> <span class="s1">&#39;SP1K0-KMONO&#39;</span>
+    <span class="n">General</span><span class="p">:</span><span class="n">UnitName</span> <span class="o">=</span> <span class="s1">&#39;steps&#39;</span>
     <span class="n">OtherSettings</span><span class="p">:</span><span class="n">AllowMotionCmdToSlave</span> <span class="o">=</span> <span class="s1">&#39;true&#39;</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">EncType</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">Enc</span><span class="p">:</span><span class="n">ScaleFactorNumerator</span> <span class="o">=</span> <span class="mf">0.015625</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">MaxCount</span> <span class="o">=</span> <span class="s1">&#39;#x0000ffff&#39;</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">Inc</span><span class="p">:</span><span class="n">RefSoftSyncMask</span> <span class="o">=</span> <span class="s1">&#39;#x0000ffff&#39;</span>
 
@@ -4168,7 +4170,7 @@ END_PROGRAM
     <span class="n">Velo</span><span class="p">:</span><span class="n">RefSync</span> <span class="o">=</span> <span class="mi">2</span>
     <span class="n">Velo</span><span class="p">:</span><span class="n">SlowManual</span> <span class="o">=</span> <span class="mi">3</span>
     <span class="n">Velo</span><span class="p">:</span><span class="n">FastManual</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="n">Velo</span><span class="p">:</span><span class="n">Maximum</span> <span class="o">=</span> <span class="mf">0.5</span>
+    <span class="n">Velo</span><span class="p">:</span><span class="n">Maximum</span> <span class="o">=</span> <span class="mi">3</span>
     <span class="n">OtherSettings</span><span class="p">:</span><span class="n">AllowMotionCmdToSlave</span> <span class="o">=</span> <span class="s1">&#39;true&#39;</span>
     <span class="n">OtherSettings</span><span class="p">:</span><span class="n">PulseDistancePos</span> <span class="o">=</span> <span class="mi">3</span>
     <span class="n">OtherSettings</span><span class="p">:</span><span class="n">PulseDistanceNeg</span> <span class="o">=</span> <span class="mi">3</span>
@@ -4205,10 +4207,10 @@ END_PROGRAM
     <span class="n">AxisFolder</span> <span class="o">=</span> <span class="s1">&#39;SP1K0-KMONO&#39;</span>
     <span class="n">Velo</span><span class="p">:</span><span class="n">SlowManual</span> <span class="o">=</span> <span class="mi">2</span>
     <span class="n">Velo</span><span class="p">:</span><span class="n">FastManual</span> <span class="o">=</span> <span class="mi">3</span>
-    <span class="n">Velo</span><span class="p">:</span><span class="n">Maximum</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">Velo</span><span class="p">:</span><span class="n">Maximum</span> <span class="o">=</span> <span class="mi">3</span>
     <span class="n">OtherSettings</span><span class="p">:</span><span class="n">AllowMotionCmdToSlave</span> <span class="o">=</span> <span class="s1">&#39;true&#39;</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">EncType</span> <span class="o">=</span> <span class="mi">4</span>
-    <span class="n">Enc</span><span class="p">:</span><span class="n">ScaleFactorNumerator</span> <span class="o">=</span> <span class="mf">0.004388516235</span>
+    <span class="n">Enc</span><span class="p">:</span><span class="n">ScaleFactorNumerator</span> <span class="o">=</span> <span class="mf">7.9609375e-05</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">MaxCount</span> <span class="o">=</span> <span class="s1">&#39;#x0000ffff&#39;</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">Inc</span><span class="p">:</span><span class="n">RefMode</span> <span class="o">=</span> <span class="mi">2</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">Inc</span><span class="p">:</span><span class="n">RefSoftSyncMask</span> <span class="o">=</span> <span class="s1">&#39;#x0000ffff&#39;</span>
@@ -7154,9 +7156,9 @@ END_PROGRAM
 <span class="mf">1468.</span><span class="p">)</span> <span class="n">A</span> <span class="p">(</span><span class="s1">&#39;lfe_motion Instance&#39;</span><span class="p">,</span> <span class="s1">&#39;PlcTask Inputs^Main.M48.bLimitForwardEnable&#39;</span><span class="p">)</span>
       <span class="n">B</span> <span class="p">(</span><span class="s1">&#39;TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL7041-E7&#39;</span><span class="p">,</span> <span class="s1">&#39;STM Status^Status^Digital input 1&#39;</span><span class="p">)</span>
 <span class="mf">1469.</span><span class="p">)</span> <span class="n">A</span> <span class="p">(</span><span class="s1">&#39;lfe_motion Instance&#39;</span><span class="p">,</span> <span class="s1">&#39;PlcTask Inputs^Main.M50.bLimitBackwardEnable&#39;</span><span class="p">)</span>
-      <span class="n">B</span> <span class="p">(</span><span class="s1">&#39;TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E2-MOTORS&#39;</span><span class="p">,</span> <span class="s1">&#39;STM Status^Status^Digital input 2&#39;</span><span class="p">)</span>
-<span class="mf">1470.</span><span class="p">)</span> <span class="n">A</span> <span class="p">(</span><span class="s1">&#39;lfe_motion Instance&#39;</span><span class="p">,</span> <span class="s1">&#39;PlcTask Inputs^Main.M50.bLimitForwardEnable&#39;</span><span class="p">)</span>
       <span class="n">B</span> <span class="p">(</span><span class="s1">&#39;TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E2-MOTORS&#39;</span><span class="p">,</span> <span class="s1">&#39;STM Status^Status^Digital input 1&#39;</span><span class="p">)</span>
+<span class="mf">1470.</span><span class="p">)</span> <span class="n">A</span> <span class="p">(</span><span class="s1">&#39;lfe_motion Instance&#39;</span><span class="p">,</span> <span class="s1">&#39;PlcTask Inputs^Main.M50.bLimitForwardEnable&#39;</span><span class="p">)</span>
+      <span class="n">B</span> <span class="p">(</span><span class="s1">&#39;TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E2-MOTORS&#39;</span><span class="p">,</span> <span class="s1">&#39;STM Status^Status^Digital input 2&#39;</span><span class="p">)</span>
 <span class="mf">1471.</span><span class="p">)</span> <span class="n">A</span> <span class="p">(</span><span class="s1">&#39;lfe_motion Instance&#39;</span><span class="p">,</span> <span class="s1">&#39;PlcTask Inputs^Main.M51.bLimitBackwardEnable&#39;</span><span class="p">)</span>
       <span class="n">B</span> <span class="p">(</span><span class="s1">&#39;TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E3-MOTORS&#39;</span><span class="p">,</span> <span class="s1">&#39;STM Status^Status^Digital input 1&#39;</span><span class="p">)</span>
 <span class="mf">1472.</span><span class="p">)</span> <span class="n">A</span> <span class="p">(</span><span class="s1">&#39;lfe_motion Instance&#39;</span><span class="p">,</span> <span class="s1">&#39;PlcTask Inputs^Main.M51.bLimitForwardEnable&#39;</span><span class="p">)</span>
