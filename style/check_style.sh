@@ -13,4 +13,10 @@ if [ "${bad_whitespace_lines}" -ne 0 ]; then
   exit_code=2
 fi
 
+lineid_lines=$(style/files.sh | xargs grep 'LineId' | wc -l)
+if [ "${lineid_lines}" -ne 0 ]; then
+  echo "Found ${lineid_lines} lines with same-file debug line ids (fix your twincat config)"
+  exit_code=3
+fi
+
 exit $exit_code

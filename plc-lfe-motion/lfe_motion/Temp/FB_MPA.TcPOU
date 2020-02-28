@@ -3,58 +3,58 @@
   <POU Name="FB_MPA" Id="{3965ca68-046c-4858-93f1-aaf5b6059f9e}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_MPA
 VAR_INPUT
-	(*EPS Interlock Bits*)
-	ibInsertOK: BOOL;
-	ibRetractOK: BOOL;
-	ibPMPS_OK:BOOL;
-	ibOverrideInterlock:BOOL; (*if true interlocks are ignored*)
-	// Reset fault
-	{attribute 'pytmc' := '
+    (*EPS Interlock Bits*)
+    ibInsertOK: BOOL;
+    ibRetractOK: BOOL;
+    ibPMPS_OK:BOOL;
+    ibOverrideInterlock:BOOL; (*if true interlocks are ignored*)
+    // Reset fault
+    {attribute 'pytmc' := '
     pv: FF_Reset
-	'}
+    '}
     i_xReset: BOOL;
 END_VAR
 VAR_OUTPUT
-	{attribute 'pytmc' := '
+    {attribute 'pytmc' := '
     pv:
-	'}
-	q_stAct 	:	ST_MPA;
-	{attribute 'pytmc' := '
+    '}
+    q_stAct     :    ST_MPA;
+    {attribute 'pytmc' := '
     pv: MPS_FAULT
-	'}
-	xMPS_OK:BOOL;
-	{attribute 'pytmc' := '
+    '}
+    xMPS_OK:BOOL;
+    {attribute 'pytmc' := '
     pv: MOT_DONE
-	'}
-	xDone:Bool; // Motion is Done 
+    '}
+    xDone:Bool; // Motion is Done
 END_VAR
 VAR_IN_OUT
-	io_fbFFHWO    :    FB_HardwareFFOutput;
+    io_fbFFHWO    :    FB_HardwareFFOutput;
 END_VAR
 VAR
-(*	// PMPS
-	fbFF    :    FB_FastFault :=(
+(*    // PMPS
+    fbFF    :    FB_FastFault :=(
         i_DevName := 'MPA',
         i_Desc := 'Fault occurs when the device is moving',
         i_TypeCode := 16#1010);
-		
-		*)
-		
-	(*Init*)
-	xFirstPass	:	BOOL;
-	fbFSInit		:	R_TRIG;
-	
-	(* Timeouts*)
-	tTimeOutDuration: TIME:= T#5S;
-	tInserttimeout: TON;
-	tRetracttimeout:TON;
-	
-	(*IO*)
-	i_xInsertedLS	AT%I*: BOOL;
-	i_xRetractedLS	AT%I*: BOOL;
-	q_xInsert_DO	AT%Q*: BOOL;
-	q_xRetract_DO	AT%Q*: BOOL;
-	
+
+        *)
+
+    (*Init*)
+    xFirstPass    :    BOOL;
+    fbFSInit        :    R_TRIG;
+
+    (* Timeouts*)
+    tTimeOutDuration: TIME:= T#5S;
+    tInserttimeout: TON;
+    tRetracttimeout:TON;
+
+    (*IO*)
+    i_xInsertedLS    AT%I*: BOOL;
+    i_xRetractedLS    AT%I*: BOOL;
+    q_xInsert_DO    AT%Q*: BOOL;
+    q_xRetract_DO    AT%Q*: BOOL;
+
 END_VAR
 
 
@@ -67,28 +67,28 @@ fbFSInit( CLK := TRUE, Q => xFirstPass);
 ACT_IO();
 
 IF xFirstPass THEN
-	q_stAct.eState := INVALID;
-	q_stAct.bRetract_SW := FALSE;
-	q_stAct.bInsert_SW := FALSE;
+    q_stAct.eState := INVALID;
+    q_stAct.bRetract_SW := FALSE;
+    q_stAct.bInsert_SW := FALSE;
 END_IF
 
 
 (* Manage States*)
 IF q_stAct.i_bInLS AND  q_stAct.i_bOutLS THEN
-	q_stAct.eState:=INVALID;
-ELSIF NOT q_stAct.i_bInLS AND q_stAct.i_bOutLS THEN 
-	q_stAct.eState:=RETRACTED;
-ELSIF q_stAct.i_bInLS AND NOT q_stAct.i_bOutLS THEN 
-	q_stAct.eState:=INSERTED;
-ELSIF NOT q_stAct.i_bInLS AND NOT q_stAct.i_bOutLS THEN 
-	q_stAct.eState:=MOVING;
+    q_stAct.eState:=INVALID;
+ELSIF NOT q_stAct.i_bInLS AND q_stAct.i_bOutLS THEN
+    q_stAct.eState:=RETRACTED;
+ELSIF q_stAct.i_bInLS AND NOT q_stAct.i_bOutLS THEN
+    q_stAct.eState:=INSERTED;
+ELSIF NOT q_stAct.i_bInLS AND NOT q_stAct.i_bOutLS THEN
+    q_stAct.eState:=MOVING;
 ELSE
-	q_stAct.eState:=INVALID;
+    q_stAct.eState:=INVALID;
 END_IF
 
 (*Set the Done signal*)
 xDone := (q_stAct.bRetract_SW AND q_stAct.eState=RETRACTED) OR (q_stAct.eState=INSERTED AND q_stAct.bInsert_SW);
-	
+
 
 (*MPS FAULT*)
 (**)
@@ -100,8 +100,8 @@ xMPS_OK := (q_stAct.eState=RETRACTED) ;
 
 (* Can't have bRetract_SW and  bInsert_SW both be true*)
 (*If (q_stAct.bRetract_SW) and (q_stAct.bInsert_SW) THEN
-	q_stAct.bRetract_SW := FALSE;
-	q_stAct.bInsert_SW := FALSE;
+    q_stAct.bRetract_SW := FALSE;
+    q_stAct.bInsert_SW := FALSE;
 END_IF*)
 
 q_stAct.bRetractOK := ibRetractOK;
@@ -113,11 +113,11 @@ q_stAct.q_bRetract := q_stAct.bRetractOK AND q_stAct.bRetract_SW;
 q_stAct.q_bInsert := q_stAct.bInsertOK AND q_stAct.bInsert_SW;
 
 IF q_stAct.q_bInsert THEN
-	q_stAct.q_bRetract := FALSE;
-	q_stAct.bRetract_SW:= FALSE;
+    q_stAct.q_bRetract := FALSE;
+    q_stAct.bRetract_SW:= FALSE;
 ELSIF q_stAct.q_bRetract THEN
-	q_stAct.q_bInsert := FALSE;
-	q_stAct.bInsert_SW:= FALSE;
+    q_stAct.q_bInsert := FALSE;
+    q_stAct.bInsert_SW:= FALSE;
 END_IF;
 
 
@@ -128,10 +128,10 @@ tInserttimeout(IN:= q_stAct.q_bInsert, PT := tTimeOutDuration );
 tRetracttimeout(IN:= q_stAct.q_bRetract, PT := tTimeOutDuration);
 
 ///Check moving postion timout
-IF NOT q_stAct.i_bInLS AND tInserttimeout.Q THEN 
-	q_stAct.bErrorPresent := TRUE;
-ELSIF NOT q_stAct.i_bOutLS AND tRetracttimeout.Q THEN 
-	q_stAct.bErrorPresent := TRUE; 
+IF NOT q_stAct.i_bInLS AND tInserttimeout.Q THEN
+    q_stAct.bErrorPresent := TRUE;
+ELSIF NOT q_stAct.i_bOutLS AND tRetracttimeout.Q THEN
+    q_stAct.bErrorPresent := TRUE;
 END_IF
 
 (*
@@ -150,61 +150,11 @@ ACT_IO();]]></ST>
         <ST><![CDATA[(*Inputs*)
 q_stAct.i_bInLS :=  i_xInsertedLS;
 q_stAct.i_bOutLS := i_xRetractedLS;
-	
+
 (*outputs*)
 q_xInsert_DO:=q_stAct.q_bInsert;
 q_xRetract_DO:=q_stAct.q_bRetract;]]></ST>
       </Implementation>
     </Action>
-    <LineIds Name="FB_MPA">
-      <LineId Id="94" Count="1" />
-      <LineId Id="98" Count="2" />
-      <LineId Id="102" Count="3" />
-      <LineId Id="111" Count="0" />
-      <LineId Id="97" Count="0" />
-      <LineId Id="263" Count="0" />
-      <LineId Id="78" Count="1" />
-      <LineId Id="84" Count="9" />
-      <LineId Id="81" Count="0" />
-      <LineId Id="155" Count="0" />
-      <LineId Id="154" Count="0" />
-      <LineId Id="158" Count="1" />
-      <LineId Id="80" Count="0" />
-      <LineId Id="82" Count="0" />
-      <LineId Id="337" Count="1" />
-      <LineId Id="113" Count="1" />
-      <LineId Id="112" Count="0" />
-      <LineId Id="272" Count="6" />
-      <LineId Id="280" Count="0" />
-      <LineId Id="279" Count="0" />
-      <LineId Id="281" Count="0" />
-      <LineId Id="83" Count="0" />
-      <LineId Id="398" Count="0" />
-      <LineId Id="397" Count="0" />
-      <LineId Id="22" Count="0" />
-      <LineId Id="24" Count="0" />
-      <LineId Id="213" Count="6" />
-      <LineId Id="9" Count="0" />
-      <LineId Id="60" Count="0" />
-      <LineId Id="394" Count="0" />
-      <LineId Id="393" Count="0" />
-      <LineId Id="63" Count="1" />
-      <LineId Id="76" Count="1" />
-      <LineId Id="75" Count="0" />
-      <LineId Id="66" Count="5" />
-      <LineId Id="327" Count="5" />
-      <LineId Id="65" Count="0" />
-      <LineId Id="402" Count="0" />
-      <LineId Id="61" Count="0" />
-      <LineId Id="59" Count="0" />
-      <LineId Id="62" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_MPA.ACT_IO">
-      <LineId Id="5" Count="0" />
-      <LineId Id="2" Count="1" />
-      <LineId Id="6" Count="1" />
-      <LineId Id="4" Count="0" />
-      <LineId Id="1" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
