@@ -1324,12 +1324,14 @@ External Setpoint Generation:
 	<Axis Id="54" CreateSymbols="true" AxisType="1" AxisFolder="SP1K0-KMONO">
 		<Name>__FILENAME__</Name>
 		<AxisPara>
-			<Velo SlowManual="2" FastManual="3" Maximum="4"/>
+			<Velo SlowManual="2" FastManual="3" Maximum="3"/>
 			<OtherSettings AllowMotionCmdToSlave="true"/>
+			<ParameterChanged>257</ParameterChanged>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="4">
-			<EncPara ScaleFactorNumerator="0.004388516235" MaxCount="#x0000ffff">
+			<EncPara ScaleFactorNumerator="7.9609375e-05" MaxCount="#x0000ffff">
 				<Inc RefMode="2" RefSoftSyncMask="#x0000ffff"/>
+				<ParameterChanged>35</ParameterChanged>
 			</EncPara>
 			<Vars VarGrpType="1">
 				<Name>Inputs</Name>
@@ -1398,7 +1400,7 @@ External Setpoint Generation:
 		</Encoder>
 		<Drive Name="Drive" DrvType="24">
 			<DrvPara>
-				<Analog VeloReferenz="10.16" ScaleFactorActTorque="0.1"/>
+				<Analog VeloReferenz="10.19" ScaleFactorActTorque="0.1"/>
 				<TimeComp TaskDelayCycles="1"/>
 			</DrvPara>
 			<Vars VarGrpType="1">
