@@ -9,67 +9,171 @@ PLC Project (1): lfe_motion
     Port:         851
 
     Source files:
-        1.) lfe_motion/GVLs/PMPS.TcGVL
-        2.) lfe_motion/GVLs/Main.TcGVL
-        3.) lfe_motion/PlcTask.TcTTO
-        4.) lfe_motion/POUs/PRG_3_PMPS_POST.TcPOU
-        5.) lfe_motion/POUs/PRG_AT2L0_SOLID.TcPOU
-        6.) lfe_motion/POUs/PRG_IM1L0_XTES.TcPOU
-        7.) lfe_motion/POUs/PRG_IM1L1_PPM.TcPOU
-        8.) lfe_motion/POUs/PRG_IM2L0_XTES.TcPOU
-        9.) lfe_motion/POUs/PRG_IM3L0_PPM.TcPOU
-        10.) lfe_motion/POUs/PRG_IM4L0_XTES.TcPOU
-        11.) lfe_motion/POUs/PRG_2_PMPS_PRE.TcPOU
-        12.) lfe_motion/POUs/PRG_1_PlcTask.TcPOU
-        13.) lfe_motion/POUs/PRG_RTDSL0.TcPOU
-        14.) lfe_motion/POUs/PRG_SL1L0_POWER.TcPOU
-        15.) lfe_motion/POUs/PRG_SL2L0_POWER.TcPOU
-        16.) lfe_motion/POUs/PRG_SP1L0_KMONO.TcPOU
-        17.) lfe_motion/POUs/PRG_PF1L0_WFS.TcPOU
-        18.) lfe_motion/Temp/FB_Arbiter.TcPOU
-        19.) lfe_motion/Temp/FB_HardwareFFOutput.TcPOU
-        20.) lfe_motion/Temp/FB_SimMotor.TcPOU
-        21.) lfe_motion/Temp/FB_SLITS_POWER.TcPOU
+        1.) lfe_motion/DUTs/ST_MPA.TcDUT
+        2.) lfe_motion/DUTs/E_PositionState.TcDUT
+        3.) lfe_motion/GVLs/PMPS.TcGVL
+        4.) lfe_motion/GVLs/Main.TcGVL
+        5.) lfe_motion/GVLs/RTDSL0.TcGVL
+        6.) lfe_motion/PlcTask.TcTTO
+        7.) lfe_motion/POUs/PRG_3_PMPS_POST.TcPOU
+        8.) lfe_motion/POUs/PRG_AT2L0_SOLID.TcPOU
+        9.) lfe_motion/POUs/PRG_IM1L0_XTES.TcPOU
+        10.) lfe_motion/POUs/PRG_IM1L1_PPM.TcPOU
+        11.) lfe_motion/POUs/PRG_IM2L0_XTES.TcPOU
+        12.) lfe_motion/POUs/PRG_IM3L0_PPM.TcPOU
+        13.) lfe_motion/POUs/PRG_IM4L0_XTES.TcPOU
+        14.) lfe_motion/POUs/PRG_2_PMPS_PRE.TcPOU
+        15.) lfe_motion/POUs/PRG_1_PlcTask.TcPOU
+        16.) lfe_motion/POUs/PRG_RTDSL0.TcPOU
+        17.) lfe_motion/POUs/PRG_SL1L0_POWER.TcPOU
+        18.) lfe_motion/POUs/PRG_SL2L0_POWER.TcPOU
+        19.) lfe_motion/POUs/PRG_SP1L0_KMONO.TcPOU
+        20.) lfe_motion/POUs/PRG_PF1L0_WFS.TcPOU
+        21.) lfe_motion/Temp/FB_Arbiter.TcPOU
+        22.) lfe_motion/Temp/FB_DoubleActingMPA.TcPOU
+        23.) lfe_motion/Temp/FB_HardwareFFOutput.TcPOU
+        24.) lfe_motion/Temp/FB_MPA.TcPOU
+        25.) lfe_motion/Temp/FB_SimMotor.TcPOU
+        26.) lfe_motion/Temp/FB_SLITS_POWER.TcPOU
 
     POUs:
-        1.) PRG_3_PMPS_POST
-        2.) PRG_AT2L0_SOLID
-        3.) PRG_IM1L0_XTES
-        4.) PRG_IM1L1_PPM
-        5.) PRG_IM2L0_XTES
-        6.) PRG_IM3L0_PPM
-        7.) PRG_IM4L0_XTES
+        1.) FB_Arbiter
+        2.) FB_DoubleActingMPA
+        3.) FB_HardwareFFOutput
+        4.) FB_MPA
+        5.) FB_SLITS_POWER
+        6.) FB_SimMotor
+        7.) PRG_1_PlcTask
         8.) PRG_2_PMPS_PRE
-        9.) PRG_1_PlcTask
-        10.) PRG_RTDSL0
-        11.) PRG_SL1L0_POWER
-        12.) PRG_SL2L0_POWER
-        13.) PRG_SP1L0_KMONO
-        14.) PRG_PF1L0_WFS
+        9.) PRG_3_PMPS_POST
+        10.) PRG_AT2L0_SOLID
+        11.) PRG_IM1L0_XTES
+        12.) PRG_IM1L1_PPM
+        13.) PRG_IM2L0_XTES
+        14.) PRG_IM3L0_PPM
+        15.) PRG_IM4L0_XTES
+        16.) PRG_PF1L0_WFS
+        17.) PRG_RTDSL0
+        18.) PRG_SL1L0_POWER
+        19.) PRG_SL2L0_POWER
+        20.) PRG_SP1L0_KMONO
 
     GVLs:
-        1.) PMPS
-        2.) Main
+        1.) Main
+        2.) PMPS
+        3.) RTDSL0
 
-GVLs/PMPS.TcGVL (TcPlcObject)
------------------------------
+DUT: E_PositionState
+--------------------
 
-### PMPS: Declaration
+File: lfe_motion/DUTs/E_PositionState.TcDUT
 
 ```vhdl
-{attribute 'qualified_only'}
-VAR_GLOBAL
-	fbArbiter: FB_Arbiter;
-	fbFastFaultOutput1: FB_HardwareFFOutput;
-	fbFastFaultOutput2: FB_HardwareFFOutput;
-END_VAR
+TYPE E_PositionState :
+(
+RETRACTED	:= 0,
+INSERTED	:= 1,
+MOVING	:= 2,
+INVALID :=3
+);
+END_TYPE
 ```
 
 
-GVLs/Main.TcGVL (TcPlcObject)
------------------------------
+DUT: ST_MPA
+-----------
 
-### Main: Declaration
+File: lfe_motion/DUTs/ST_MPA.TcDUT
+
+```vhdl
+TYPE ST_MPA :
+STRUCT
+//	i_xInsertLS AT %I*: BOOL;
+//	i_xRetractLS AT %I*: BOOL;
+//	_xInsertSW : BOOL;
+//	_xRetractSW : BOOL;
+//	q_xInsertDO AT %Q*: BOOL;
+//	q_xRetractDO AT %Q*: BOOL;
+//	eState : DUT_PneumaticActuator_Position;
+
+	//Readbacks
+	{attribute 'pytmc' := '
+    pv: IN;
+	io: i;
+    '}
+	i_bInLS	:	BOOL;
+	{attribute 'pytmc' := '
+    pv: OUT;
+	io: i;
+    '}
+	i_bOutLS	:	BOOL;
+
+	//Controls
+	{attribute 'pytmc' := '
+    pv: INSERT_DO;
+	io: i;
+    '}
+	q_bRetract	:	BOOL;
+	{attribute 'pytmc' := '
+    pv: RETRACT_DO;
+	io: i;
+    '}
+	q_bInsert	:	BOOL;
+	
+	//Logic and supervisory
+	{attribute 'pytmc' := '
+    pv: ILKOK;
+	io: i;
+    '}
+	bILK_OK: BOOL;
+	{attribute 'pytmc' := '
+    pv: INSERT_OK;
+	io: i;
+    '}
+	bInsertOK	:	BOOL;
+	{attribute 'pytmc' := '
+    pv: RETRACT_OK;
+	io: i;
+    '}
+	bRetractOK	:	BOOL;
+	{attribute 'pytmc' := '
+    pv: IN_CMD;
+	io: io;
+    '}
+
+	bInsert_SW		:	BOOL;
+	{attribute 'pytmc' := '
+    pv: OUT_CMD;
+	io: io;
+    '}
+	bRetract_SW	:	BOOL;
+	{attribute 'pytmc' := '
+    pv: ERROR;
+	io: io;
+    '}
+	bErrorPresent : BOOL;
+	{attribute 'pytmc' := '
+	pv: POS_STATE ;
+	type: mbbi ;
+	field: ZRST RETRACTED ;
+	field: ONST INSERTED ;
+	field: TWST MOVING ;
+	field: THST INVALID ;
+	io: i
+	'}
+		
+	eState	:	E_PositionState := INVALID;
+
+
+END_STRUCT
+END_TYPE
+```
+
+
+GVL: Main
+---------
+
+File: lfe_motion/GVLs/Main.TcGVL
 
 ```vhdl
 {attribute 'qualified_only'}
@@ -309,26 +413,547 @@ END_VAR
 ```
 
 
-PlcTask.TcTTO (TcPlcObject)
----------------------------
+GVL: PMPS
+---------
+
+File: lfe_motion/GVLs/PMPS.TcGVL
+
+```vhdl
+{attribute 'qualified_only'}
+VAR_GLOBAL
+	fbArbiter: FB_Arbiter;
+	fbFastFaultOutput1: FB_HardwareFFOutput;
+	fbFastFaultOutput2: FB_HardwareFFOutput;
+	
+// MPS fault reset, add temporarily to use FB_MPA 	
+	 xFastFaultReset :   BOOL; 
+END_VAR
+```
 
 
-POUs/PRG_3_PMPS_POST.TcPOU (TcPlcObject)
-----------------------------------------
+GVL: RTDSL0
+-----------
 
-### PRG_3_PMPS_POST: Declaration
+File: lfe_motion/GVLs/RTDSL0.TcGVL
+
+```vhdl
+//{attribute 'qualified_only'}
+VAR_GLOBAL
+	{attribute 'pytmc' :=' pv: RTDSL0:MPA:01 '}
+	RTDSL0_MPA_01: FB_MPA;
+	
+	{attribute 'pytmc' :=' pv: RTDSL0:MPA:02 '}
+	RTDSL0_MPA_02: FB_MPA;
+	
+	{attribute 'pytmc' :=' pv: RTDSL0:MPA:03 '}
+	RTDSL0_MPA_03: FB_MPA;
+	
+	{attribute 'pytmc' :=' pv: RTDSL0:MPA:04 '}
+	RTDSL0_MPA_04: FB_MPA;
+END_VAR
+```
+
+
+POU: FB_Arbiter
+---------------
+
+File: lfe_motion/Temp/FB_Arbiter.TcPOU
+
+```vhdl
+FUNCTION_BLOCK FB_Arbiter
+VAR
+END_VAR
+
+
+END_FUNCTION_BLOCK
+```
+
+
+POU: FB_DoubleActingMPA
+-----------------------
+
+File: lfe_motion/Temp/FB_DoubleActingMPA.TcPOU
+
+```vhdl
+FUNCTION_BLOCK FB_DoubleActingMPA
+VAR_IN_OUT
+	iq_MPA : DUT_DoubleActPneumaticActuator;
+END_VAR
+
+VAR
+	
+	
+END_VAR
+///Check valve postion
+
+
+
+IF iq_MPA.i_xInsertLS AND iq_MPA.i_xRetractLS THEN
+	iq_MPA.eState:=INVALID;
+ELSIF NOT iq_MPA.i_xInsertLS AND iq_MPA.i_xRetractLS AND iq_MPA.q_xRetractDO THEN 
+	iq_MPA.eState:=RETRACTED;
+ELSIF iq_MPA.i_xInsertLS AND NOT iq_MPA.i_xRetractLS AND NOT iq_MPA.q_xInsertDO THEN 
+	iq_MPA.eState:=INSERTED;
+ELSIF NOT iq_MPA.i_xInsertLS AND NOT iq_MPA.i_xInsertLS THEN 
+	iq_MPA.eState:=MOVING;
+ELSE
+	iq_MPA.eState:=INVALID;
+END_IF
+
+
+
+IF iq_MPA._xInsertSW  THEN
+	iq_MPA._xRetractSW := FALSE;
+	iq_MPA.q_xRetractDO := FALSE;
+	iq_MPA.q_xInsertDO := TRUE;
+END_IF
+
+IF iq_MPA._xRetractSW THEN
+	iq_MPA._xInsertSW := FALSE;
+	iq_MPA.q_xInsertDO:= FALSE;
+	iq_MPA.q_xRetractDO := TRUE;
+END_IF
+
+END_FUNCTION_BLOCK
+```
+
+
+POU: FB_HardwareFFOutput
+------------------------
+
+File: lfe_motion/Temp/FB_HardwareFFOutput.TcPOU
+
+```vhdl
+FUNCTION_BLOCK FB_HardwareFFOutput
+VAR
+END_VAR
+
+
+END_FUNCTION_BLOCK
+```
+
+
+POU: FB_MPA
+-----------
+
+File: lfe_motion/Temp/FB_MPA.TcPOU
+
+```vhdl
+FUNCTION_BLOCK FB_MPA
+VAR_INPUT
+	(*EPS Interlock Bits*)
+	ibInsertOK: BOOL;
+	ibRetractOK: BOOL;
+	ibPMPS_OK:BOOL;
+	ibOverrideInterlock:BOOL; (*if true interlocks are ignored*)
+	// Reset fault
+	{attribute 'pytmc' := '
+    pv: FF_Reset
+	'}
+    i_xReset: BOOL;
+END_VAR
+VAR_OUTPUT
+	{attribute 'pytmc' := '
+    pv:
+	'}
+	q_stAct 	:	ST_MPA;
+	{attribute 'pytmc' := '
+    pv: MPS_FAULT
+	'}
+	xMPS_OK:BOOL;
+	{attribute 'pytmc' := '
+    pv: MOT_DONE
+	'}
+	xDone:Bool; // Motion is Done 
+END_VAR
+VAR_IN_OUT
+	io_fbFFHWO    :    FB_HardwareFFOutput;
+END_VAR
+VAR
+(*	// PMPS
+	fbFF    :    FB_FastFault :=(
+        i_DevName := 'MPA',
+        i_Desc := 'Fault occurs when the device is moving',
+        i_TypeCode := 16#1010);
+		
+		*)
+		
+	(*Init*)
+	xFirstPass	:	BOOL;
+	fbFSInit		:	R_TRIG;
+	
+	(* Timeouts*)
+	tTimeOutDuration: TIME:= T#5S;
+	tInserttimeout: TON;
+	tRetracttimeout:TON;
+	
+	(*IO*)
+	i_xInsertedLS	AT%I*: BOOL;
+	i_xRetractedLS	AT%I*: BOOL;
+	q_xInsert_DO	AT%Q*: BOOL;
+	q_xRetract_DO	AT%Q*: BOOL;
+	
+END_VAR
+(*Initialize*)
+fbFSInit( CLK := TRUE, Q => xFirstPass);
+(*IO Mapping*)
+ACT_IO();
+
+IF xFirstPass THEN
+	q_stAct.eState := INVALID;
+	q_stAct.bRetract_SW := FALSE;
+	q_stAct.bInsert_SW := FALSE;
+END_IF
+
+
+(* Manage States*)
+IF q_stAct.i_bInLS AND  q_stAct.i_bOutLS THEN
+	q_stAct.eState:=INVALID;
+ELSIF NOT q_stAct.i_bInLS AND q_stAct.i_bOutLS THEN 
+	q_stAct.eState:=RETRACTED;
+ELSIF q_stAct.i_bInLS AND NOT q_stAct.i_bOutLS THEN 
+	q_stAct.eState:=INSERTED;
+ELSIF NOT q_stAct.i_bInLS AND NOT q_stAct.i_bOutLS THEN 
+	q_stAct.eState:=MOVING;
+ELSE
+	q_stAct.eState:=INVALID;
+END_IF
+
+(*Set the Done signal*)
+xDone := (q_stAct.bRetract_SW AND q_stAct.eState=RETRACTED) OR (q_stAct.eState=INSERTED AND q_stAct.bInsert_SW);
+	
+
+(*MPS FAULT*)
+(**)
+//xMPS_OK := (q_stAct.eState=RETRACTED) OR (q_stAct.eState=INSERTED);
+xMPS_OK := (q_stAct.eState=RETRACTED) ;
+
+(*PMPS PERMISSION*)
+
+
+(* Can't have bRetract_SW and  bInsert_SW both be true*)
+(*If (q_stAct.bRetract_SW) and (q_stAct.bInsert_SW) THEN
+	q_stAct.bRetract_SW := FALSE;
+	q_stAct.bInsert_SW := FALSE;
+END_IF*)
+
+q_stAct.bRetractOK := ibRetractOK;
+q_stAct.bInsertOK := ibInsertOK;
+
+
+(*Actuate the device*)
+q_stAct.q_bRetract := q_stAct.bRetractOK AND q_stAct.bRetract_SW;
+q_stAct.q_bInsert := q_stAct.bInsertOK AND q_stAct.bInsert_SW;
+
+IF q_stAct.q_bInsert THEN
+	q_stAct.q_bRetract := FALSE;
+	q_stAct.bRetract_SW:= FALSE;
+ELSIF q_stAct.q_bRetract THEN
+	q_stAct.q_bInsert := FALSE;
+	q_stAct.bInsert_SW:= FALSE;
+END_IF;
+
+
+
+
+(*Timers*)
+tInserttimeout(IN:= q_stAct.q_bInsert, PT := tTimeOutDuration );
+tRetracttimeout(IN:= q_stAct.q_bRetract, PT := tTimeOutDuration);
+
+///Check moving postion timout
+IF NOT q_stAct.i_bInLS AND tInserttimeout.Q THEN 
+	q_stAct.bErrorPresent := TRUE;
+ELSIF NOT q_stAct.i_bOutLS AND tRetracttimeout.Q THEN 
+	q_stAct.bErrorPresent := TRUE; 
+END_IF
+
+(*
+(*FAST FAULT*)
+fbFF(i_xOK := xMPS_OK,
+    i_xReset := i_xReset,
+    io_fbFFHWO := io_fbFFHWO);
+*)
+
+
+(*Soft IO Mapping*)
+ACT_IO();
+
+END_FUNCTION_BLOCK
+ACTION ACT_IO:
+(*Inputs*)
+q_stAct.i_bInLS :=  i_xInsertedLS;
+q_stAct.i_bOutLS := i_xRetractedLS;
+	
+(*outputs*)
+q_xInsert_DO:=q_stAct.q_bInsert;
+q_xRetract_DO:=q_stAct.q_bRetract;
+END_ACTION
+```
+
+
+POU: FB_SLITS_POWER
+-------------------
+
+File: lfe_motion/Temp/FB_SLITS_POWER.TcPOU
+
+```vhdl
+FUNCTION_BLOCK FB_SLITS_POWER
+VAR_IN_OUT
+    stTopBlade: DUT_MotionStage;
+    stBottomBlade: DUT_MotionStage;
+    stNorthBlade: DUT_MotionStage;
+    stSouthBlade: DUT_MotionStage;
+END_VAR
+VAR_INPUT
+    fPosTopBlade: LREAL;
+    fPosBottomBlade: LREAL;
+    fPosNorthBlade: LREAL;
+    fPosSouthBlade: LREAL;
+    bExecuteMotion:bool ;
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+    fbTopBlade: FB_MotionStage;
+    fbBottomBlade: FB_MotionStage;
+    fbNorthBlade: FB_MotionStage;
+    fbSouthBlade: FB_MotionStage;
+
+    {attribute 'pytmc' := '
+        pv: FSW
+    '}
+    fbFlowSwitch: FB_XTES_Flowswitch;
+
+
+    //RTDs
+    {attribute 'pytmc' := '
+        pv: TOP:RTD:01
+    '}
+    RTD_TOP_1: FB_ThermoCouple;
+    {attribute 'pytmc' := '
+        pv: TOP:RTD:02
+    '}
+    RTD_TOP_2: FB_ThermoCouple;
+    {attribute 'pytmc' := '
+        pv: BOTTOM:RTD:01
+    '}
+    RTD_Bottom_1: FB_ThermoCouple;
+    {attribute 'pytmc' := '
+        pv: BOTTOM:RTD:02
+    '}
+    RTD_Bottom_2: FB_ThermoCouple;
+
+    {attribute 'pytmc' := '
+        pv: NORTH:RTD:01
+    '}
+    RTD_North_1: FB_ThermoCouple;
+    {attribute 'pytmc' := '
+        pv: NORTH:RTD:02
+    '}
+    RTD_North_2: FB_ThermoCouple;
+    {attribute 'pytmc' := '
+        pv: SOUTH:RTD:01
+    '}
+    RTD_South_1: FB_ThermoCouple;
+    {attribute 'pytmc' := '
+        pv: SOUTH:RTD:02
+    '}
+    RTD_South_2: FB_ThermoCouple;
+
+    fSmallDelta: LREAL := 0.01;
+    fBigDelta: LREAL := 10;
+    fMaxVelocity: LREAL := 0.33;
+    fHighAccel: LREAL := 0.8;
+    fLowAccel: LREAL := 0.1;
+
+    stTop: DUT_PositionState;
+    stBOTTOM: DUT_PositionState;
+    stNorth: DUT_PositionState;
+    stSouth: DUT_PositionState;
+
+    {attribute 'pytmc' := 'pv: TOP'}
+    fbTop: FB_StatePTPMove;
+    {attribute 'pytmc' := 'pv: BOTTOM'}
+    fbBottom: FB_StatePTPMove;
+    {attribute 'pytmc' := 'pv: NORTH'}
+    fbNorth: FB_StatePTPMove;
+    {attribute 'pytmc' := 'pv: SOUTH'}
+    fbSouth: FB_StatePTPMove;
+
+
+END_VAR
+// Instantiate Function block for all the blades
+fbTopBlade(stMotionStage:=stTopBlade);
+fbBottomBlade(stMotionStage:=stBottomBlade);
+fbNorthBlade(stMotionStage:=stNorthBlade);
+fbSouthBlade(stMotionStage:=stSouthBlade);
+
+//  no STO
+stTopBlade.bHardwareEnable := TRUE;
+stBottomBlade.bHardwareEnable := TRUE;
+stNorthBlade.bHardwareEnable := TRUE;
+stSouthBlade.bHardwareEnable := TRUE;
+
+
+//RTDs
+RTD_TOP_1();
+RTD_TOP_2();
+RTD_Bottom_1();
+RTD_Bottom_2();
+RTD_North_1();
+RTD_North_2();
+RTD_South_1();
+RTD_South_2();
+
+//Flow Switch
+fbFlowSwitch();
+
+
+// PTP Motion for each blade
+
+stTop.sName := 'Top';
+stTop.fPosition := fPosTopBlade;
+stTop.fDelta := fSmallDelta;
+stTop.fVelocity := fMaxVelocity;
+stTop.fAccel := fHighAccel;
+stTop.fDecel := fHighAccel;
+
+stBOTTOM.sName := 'Bottom';
+stBOTTOM.fPosition := fPosBottomBlade;
+stBOTTOM.fDelta := fSmallDelta;
+stBOTTOM.fVelocity := fMaxVelocity;
+stBOTTOM.fAccel := fHighAccel;
+stBOTTOM.fDecel := fHighAccel;
+
+stNorth.sName := 'North';
+stNorth.fPosition := fPosNorthBlade;
+stNorth.fDelta := fSmallDelta;
+stNorth.fVelocity := fMaxVelocity;
+stNorth.fAccel := fHighAccel;
+stNorth.fDecel := fHighAccel;
+
+stSouth.sName := 'South';
+stSouth.fPosition := fPosSouthBlade;
+stSouth.fDelta := fSmallDelta;
+stSouth.fVelocity := fMaxVelocity;
+stSouth.fAccel := fHighAccel;
+stSouth.fDecel := fHighAccel;
+
+//fbTop.bExecute := fbBottom.bExecute :=fbNorth.bExecute := fbSouth.bExecute := bExecuteMotion;
+
+fbTop(
+    stPositionState:=stTop,
+    bMoveOk:=TRUE,
+    stMotionStage:=stTopBlade);
+
+fbBottom(
+    stPositionState:=stBOTTOM,
+    bMoveOk:=TRUE,
+    stMotionStage:=stBottomBlade);
+
+fbNorth(
+    stPositionState:=stNorth,
+    bMoveOk:=TRUE,
+    stMotionStage:=stNorthBlade);
+
+fbSouth(
+    stPositionState:=stSouth,
+    bMoveOk:=TRUE,
+    stMotionStage:=stSouthBlade);
+
+END_FUNCTION_BLOCK
+```
+
+
+POU: FB_SimMotor
+----------------
+
+File: lfe_motion/Temp/FB_SimMotor.TcPOU
+
+```vhdl
+FUNCTION_BLOCK FB_SimMotor
+VAR_IN_OUT
+    stMotionStage: DUT_MotionStage;
+END_VAR
+VAR
+    fbMotionStage: FB_MotionStage;
+END_VAR
+stMotionStage.bLimitBackwardEnable := TRUE;
+stMotionStage.bLimitForwardEnable := TRUE;
+stMotionStage.bHardwareEnable := TRUE;
+stMotionStage.bPowerSelf := TRUE;
+stMotionStage.nEnableMode := ENUM_StageEnableMode.ALWAYS;
+fbMotionStage(stMotionStage := stMotionStage);
+
+END_FUNCTION_BLOCK
+```
+
+
+POU: PRG_1_PlcTask
+------------------
+
+File: lfe_motion/POUs/PRG_1_PlcTask.TcPOU
+
+```vhdl
+PROGRAM PRG_1_PlcTask
+(*
+    Launch site for each component's program
+    Only "fast" programs are allowed here,
+    anything else needs to be relegated to a second task
+*)
+PRG_2_PMPS_PRE();
+PRG_AT2L0_SOLID();
+PRG_IM1L0_XTES();
+PRG_IM1L1_PPM();
+PRG_IM2L0_XTES();
+PRG_IM3L0_PPM();
+PRG_IM4L0_XTES();
+PRG_PF1L0_WFS();
+PRG_RTDSL0();
+PRG_SL1L0_POWER();
+PRG_SL2L0_POWER();
+PRG_SP1L0_KMONO();
+
+PRG_3_PMPS_POST();
+
+END_PROGRAM
+```
+
+
+POU: PRG_2_PMPS_PRE
+-------------------
+
+File: lfe_motion/POUs/PRG_2_PMPS_PRE.TcPOU
+
+```vhdl
+PROGRAM PRG_2_PMPS_PRE
+VAR
+END_VAR
+
+
+END_PROGRAM
+```
+
+
+POU: PRG_3_PMPS_POST
+--------------------
+
+File: lfe_motion/POUs/PRG_3_PMPS_POST.TcPOU
 
 ```vhdl
 PROGRAM PRG_3_PMPS_POST
 VAR
 END_VAR
+
+
+END_PROGRAM
 ```
 
 
-POUs/PRG_AT2L0_SOLID.TcPOU (TcPlcObject)
-----------------------------------------
+POU: PRG_AT2L0_SOLID
+--------------------
 
-### PRG_AT2L0_SOLID: Declaration
+File: lfe_motion/POUs/PRG_AT2L0_SOLID.TcPOU
 
 ```vhdl
 PROGRAM PRG_AT2L0_SOLID
@@ -437,11 +1062,6 @@ VAR
     nM19CoilB: INT;
     //nM19Current: INT;
 END_VAR
-```
-
-### PRG_AT2L0_SOLID: ST
-
-```vhdl
 fbAT2L0_axes[0]:= ADR(Main.M1);
 fbAT2L0_axes[1]:= ADR(Main.M2);
 fbAT2L0_axes[2]:= ADR(Main.M3);
@@ -536,13 +1156,15 @@ nM18CoilB := UINT_TO_INT(nM18CoilBRaw);
 nM19CoilA := UINT_TO_INT(nM19CoilARaw);
 nM19CoilB := UINT_TO_INT(nM19CoilBRaw);
 //nM19Current := ABS(nM2CoilA) + ABS(nM2CoilB);
+
+END_PROGRAM
 ```
 
 
-POUs/PRG_IM1L0_XTES.TcPOU (TcPlcObject)
----------------------------------------
+POU: PRG_IM1L0_XTES
+-------------------
 
-### PRG_IM1L0_XTES: Declaration
+File: lfe_motion/POUs/PRG_IM1L0_XTES.TcPOU
 
 ```vhdl
 PROGRAM PRG_IM1L0_XTES
@@ -560,11 +1182,6 @@ VAR
     stEL6In: EL6InData22b;
     stEL6Out: EL6OutData22b;
 END_VAR
-```
-
-### PRG_IM1L0_XTES: ST
-
-```vhdl
 fbIM1L0(
     stYStage := Main.M20,
     stZoomStage := Main.M21,
@@ -575,13 +1192,15 @@ fbIM1L0(
     fDiamond := -56.65,
     fReticle := -26.65,
     fOut := 0);
+
+END_PROGRAM
 ```
 
 
-POUs/PRG_IM1L1_PPM.TcPOU (TcPlcObject)
---------------------------------------
+POU: PRG_IM1L1_PPM
+------------------
 
-### PRG_IM1L1_PPM: Declaration
+File: lfe_motion/POUs/PRG_IM1L1_PPM.TcPOU
 
 ```vhdl
 PROGRAM PRG_IM1L1_PPM
@@ -603,24 +1222,21 @@ VAR
                               .fbYagThermoCouple.iRaw := TIIB[IM1L1-EL3314]^TC Inputs Channel 2^Value'}
     fbIM1L1: FB_PPM;
 END_VAR
-```
-
-### PRG_IM1L1_PPM: ST
-
-```vhdl
 fbIM1L1(
     stYStage := Main.M23,
     fPolished := -50,
     fFrosted := -60,
     fPower := -70,
     fOut := 0);
+
+END_PROGRAM
 ```
 
 
-POUs/PRG_IM2L0_XTES.TcPOU (TcPlcObject)
----------------------------------------
+POU: PRG_IM2L0_XTES
+-------------------
 
-### PRG_IM2L0_XTES: Declaration
+File: lfe_motion/POUs/PRG_IM2L0_XTES.TcPOU
 
 ```vhdl
 PROGRAM PRG_IM2L0_XTES
@@ -684,11 +1300,6 @@ VAR
                               .D[21] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 21'}
     stEL6Out AT %Q*: EL6OutData22b;
 END_VAR
-```
-
-### PRG_IM2L0_XTES: ST
-
-```vhdl
 fbIM2L0(
     stYStage := Main.M24,
     stZoomStage := Main.M25,
@@ -699,13 +1310,15 @@ fbIM2L0(
     fDiamond := -57.65,
     fReticle := -27.65,
     fOut := 0);
+
+END_PROGRAM
 ```
 
 
-POUs/PRG_IM3L0_PPM.TcPOU (TcPlcObject)
---------------------------------------
+POU: PRG_IM3L0_PPM
+------------------
 
-### PRG_IM3L0_PPM: Declaration
+File: lfe_motion/POUs/PRG_IM3L0_PPM.TcPOU
 
 ```vhdl
 PROGRAM PRG_IM3L0_PPM
@@ -727,24 +1340,21 @@ VAR
                               .fbYagThermoCouple.iRaw := TIIB[IM3L0-EL3314]^TC Inputs Channel 2^Value'}
     fbIM3L0: FB_PPM;
 END_VAR
-```
-
-### PRG_IM3L0_PPM: ST
-
-```vhdl
 fbIM3L0(
     stYStage := Main.M27,
     fPolished := -50,
     fFrosted := -60,
     fPower := -70,
     fOut := 0);
+
+END_PROGRAM
 ```
 
 
-POUs/PRG_IM4L0_XTES.TcPOU (TcPlcObject)
----------------------------------------
+POU: PRG_IM4L0_XTES
+-------------------
 
-### PRG_IM4L0_XTES: Declaration
+File: lfe_motion/POUs/PRG_IM4L0_XTES.TcPOU
 
 ```vhdl
 PROGRAM PRG_IM4L0_XTES
@@ -808,11 +1418,6 @@ VAR
                               .D[21] := TIIB[IM4L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 21'}
     stEL6Out AT %Q*: EL6OutData22b;
 END_VAR
-```
-
-### PRG_IM4L0_XTES: ST
-
-```vhdl
 fbIM4L0(
     stYStage := Main.M28,
     stZoomStage := Main.M29,
@@ -823,93 +1428,106 @@ fbIM4L0(
     fDiamond := -56.65,
     fReticle := -26.65,
     fOut := 0);
+
+END_PROGRAM
 ```
 
 
-POUs/PRG_2_PMPS_PRE.TcPOU (TcPlcObject)
----------------------------------------
+POU: PRG_PF1L0_WFS
+------------------
 
-### PRG_2_PMPS_PRE: Declaration
+File: lfe_motion/POUs/PRG_PF1L0_WFS.TcPOU
 
 ```vhdl
-PROGRAM PRG_2_PMPS_PRE
+PROGRAM PRG_PF1L0_WFS
 VAR
+    fbMotion1: FB_SimMotor;
+    fbMotion2: FB_SimMotor;
 END_VAR
+// Placeholder, standard simulated motion for all axes
+fbMotion1(stMotionStage := Main.M31);
+fbMotion2(stMotionStage := Main.M32);
+
+END_PROGRAM
 ```
 
 
-POUs/PRG_1_PlcTask.TcPOU (TcPlcObject)
---------------------------------------
+POU: PRG_RTDSL0
+---------------
 
-### PRG_1_PlcTask: Declaration
-
-```vhdl
-PROGRAM PRG_1_PlcTask
-(*
-    Launch site for each component's program
-    Only "fast" programs are allowed here,
-    anything else needs to be relegated to a second task
-*)
-```
-
-### PRG_1_PlcTask: ST
-
-```vhdl
-PRG_2_PMPS_PRE();
-PRG_AT2L0_SOLID();
-PRG_IM1L0_XTES();
-PRG_IM1L1_PPM();
-PRG_IM2L0_XTES();
-PRG_IM3L0_PPM();
-PRG_IM4L0_XTES();
-PRG_PF1L0_WFS();
-PRG_RTDSL0();
-PRG_SL1L0_POWER();
-PRG_SL2L0_POWER();
-PRG_SP1L0_KMONO();
-
-PRG_3_PMPS_POST();
-```
-
-
-POUs/PRG_RTDSL0.TcPOU (TcPlcObject)
------------------------------------
-
-### PRG_RTDSL0: Declaration
+File: lfe_motion/POUs/PRG_RTDSL0.TcPOU
 
 ```vhdl
 PROGRAM PRG_RTDSL0
 VAR
-    fbMotion1: FB_SimMotor;
-    fbMotion2: FB_SimMotor;
-    fbMotion3: FB_SimMotor;
-    fbMotion4: FB_SimMotor;
-    fbMotion5: FB_SimMotor;
-    fbMotion6: FB_SimMotor;
-    fbMotion7: FB_SimMotor;
-    fbMotion8: FB_SimMotor;
 END_VAR
-```
-
-### PRG_RTDSL0: ST
-
-```vhdl
 // Placeholder, standard simulated motion for all axes
-fbMotion1(stMotionStage := Main.M33);
-fbMotion2(stMotionStage := Main.M34);
-fbMotion3(stMotionStage := Main.M35);
-fbMotion4(stMotionStage := Main.M36);
-fbMotion5(stMotionStage := Main.M37);
-fbMotion6(stMotionStage := Main.M38);
-fbMotion7(stMotionStage := Main.M39);
-fbMotion8(stMotionStage := Main.M40);
+//fbMotion1(stMotionStage := Main.M33);
+//fbMotion2(stMotionStage := Main.M34);
+//fbMotion3(stMotionStage := Main.M35);
+//fbMotion4(stMotionStage := Main.M36);
+//fbMotion5(stMotionStage := Main.M37);
+//fbMotion6(stMotionStage := Main.M38);
+//fbMotion7(stMotionStage := Main.M39);
+
+//Pneumatic actuators - OTR filters
+
+RTDSL0_MPA_01(
+	ibInsertOK:= TRUE, 
+	ibRetractOK:= TRUE , 
+	ibPMPS_OK:= TRUE , 
+	ibOverrideInterlock:= , 
+	q_stAct=> , 
+	xMPS_OK=> , 
+	xDone=> ,
+	i_xReset := PMPS.xFastFaultReset,
+	io_fbFFHWO := PMPS.fbFastFaultOutput1,
+);
+
+RTDSL0_MPA_02(
+	ibInsertOK:= TRUE, 
+	ibRetractOK:= TRUE , 
+	ibPMPS_OK:= TRUE , 
+	ibOverrideInterlock:= , 
+	q_stAct=> , 
+	xMPS_OK=> , 
+	xDone=> ,
+	i_xReset := PMPS.xFastFaultReset,
+	io_fbFFHWO := PMPS.fbFastFaultOutput1,
+);
+
+RTDSL0_MPA_03(
+	ibInsertOK:= TRUE, 
+	ibRetractOK:= TRUE , 
+	ibPMPS_OK:= TRUE , 
+	ibOverrideInterlock:= , 
+	q_stAct=> , 
+	xMPS_OK=> , 
+	xDone=> ,
+	i_xReset := PMPS.xFastFaultReset,
+	io_fbFFHWO := PMPS.fbFastFaultOutput1,
+);
+
+RTDSL0_MPA_04(
+	ibInsertOK:= TRUE, 
+	ibRetractOK:= TRUE , 
+	ibPMPS_OK:= TRUE , 
+	ibOverrideInterlock:= , 
+	q_stAct=> , 
+	xMPS_OK=> , 
+	xDone=> ,
+	i_xReset := PMPS.xFastFaultReset,
+	io_fbFFHWO := PMPS.fbFastFaultOutput1,
+);
+
+END_PROGRAM
 ```
 
 
-POUs/PRG_SL1L0_POWER.TcPOU (TcPlcObject)
-----------------------------------------
+POU: PRG_SL1L0_POWER
+--------------------
 
-### PRG_SL1L0_POWER: Declaration
+File: lfe_motion/POUs/PRG_SL1L0_POWER.TcPOU
 
 ```vhdl
 PROGRAM PRG_SL1L0_POWER
@@ -993,11 +1611,6 @@ VAR
 
 (*mcPower : ARRAY [1..4] OF MC_POWER;*)
 END_VAR
-```
-
-### PRG_SL1L0_POWER: ST
-
-```vhdl
 // Placeholder, standard simulated motion for all axes
 (*fbMotion1(stMotionStage := Main.M41);
 fbMotion2(stMotionStage := Main.M42);
@@ -1065,13 +1678,15 @@ fbSL1L0(stTopBlade:=  Main.M43,
 mcPower[2](axis:=Main.M42.Axis, Enable:=TRUE, enable_positive:=Main.M42.bLimitForwardEnable, enable_negative:=Main.M42.bLimitBackwardEnable);
 mcPower[3](axis:=Main.M43.Axis, Enable:=TRUE, enable_positive:=Main.M43.bLimitForwardEnable, enable_negative:=Main.M43.bLimitBackwardEnable);
 mcPower[4](axis:=Main.M44.Axis, Enable:=TRUE, enable_positive:=Main.M44.bLimitForwardEnable, enable_negative:=Main.M44.bLimitBackwardEnable);*)
+
+END_PROGRAM
 ```
 
 
-POUs/PRG_SL2L0_POWER.TcPOU (TcPlcObject)
-----------------------------------------
+POU: PRG_SL2L0_POWER
+--------------------
 
-### PRG_SL2L0_POWER: Declaration
+File: lfe_motion/POUs/PRG_SL2L0_POWER.TcPOU
 
 ```vhdl
 PROGRAM PRG_SL2L0_POWER
@@ -1156,11 +1771,6 @@ VAR
     fbMotion4: FB_SimMotor;*)
 
 END_VAR
-```
-
-### PRG_SL2L0_POWER: ST
-
-```vhdl
 // Placeholder, standard simulated motion for all axes
 (*fbMotion1(stMotionStage := Main.M45);
 fbMotion2(stMotionStage := Main.M46);
@@ -1223,13 +1833,15 @@ fbSL2L0(stTopBlade:=  Main.M47,
         stBottomBlade:= Main.M45,
         stNorthBlade:=  Main.M48,
         stSouthBlade:=  Main.M46);
+
+END_PROGRAM
 ```
 
 
-POUs/PRG_SP1L0_KMONO.TcPOU (TcPlcObject)
-----------------------------------------
+POU: PRG_SP1L0_KMONO
+--------------------
 
-### PRG_SP1L0_KMONO: Declaration
+File: lfe_motion/POUs/PRG_SP1L0_KMONO.TcPOU
 
 ```vhdl
 PROGRAM PRG_SP1L0_KMONO
@@ -1241,11 +1853,6 @@ VAR
     fbMotion5: FB_MotionStage;
     fbMotion6: FB_MotionStage;
 END_VAR
-```
-
-### PRG_SP1L0_KMONO: ST
-
-```vhdl
 // Placeholder, standard simulated motion for all axes
 //fbMotion1(stMotionStage := Main.M49);
 //fbMotion2(stMotionStage := Main.M50);
@@ -1301,256 +1908,8 @@ Main.M54.nEnableMode             := Enum_StageEnableMode.ALWAYS;
 Main.M54.bHardwareEnable        := TRUE;
 Main.M54.bPowerSelf            := TRUE;
 fbMotion6(stMotionStage:=Main.M54);
-```
 
-
-POUs/PRG_PF1L0_WFS.TcPOU (TcPlcObject)
---------------------------------------
-
-### PRG_PF1L0_WFS: Declaration
-
-```vhdl
-PROGRAM PRG_PF1L0_WFS
-VAR
-    fbMotion1: FB_SimMotor;
-    fbMotion2: FB_SimMotor;
-END_VAR
-```
-
-### PRG_PF1L0_WFS: ST
-
-```vhdl
-// Placeholder, standard simulated motion for all axes
-fbMotion1(stMotionStage := Main.M31);
-fbMotion2(stMotionStage := Main.M32);
-```
-
-
-Temp/FB_Arbiter.TcPOU (TcPlcObject)
------------------------------------
-
-### FB_Arbiter: Declaration
-
-```vhdl
-FUNCTION_BLOCK FB_Arbiter
-VAR
-END_VAR
-```
-
-
-Temp/FB_HardwareFFOutput.TcPOU (TcPlcObject)
---------------------------------------------
-
-### FB_HardwareFFOutput: Declaration
-
-```vhdl
-FUNCTION_BLOCK FB_HardwareFFOutput
-VAR
-END_VAR
-```
-
-
-Temp/FB_SimMotor.TcPOU (TcPlcObject)
-------------------------------------
-
-### FB_SimMotor: Declaration
-
-```vhdl
-FUNCTION_BLOCK FB_SimMotor
-VAR_IN_OUT
-    stMotionStage: DUT_MotionStage;
-END_VAR
-VAR
-    fbMotionStage: FB_MotionStage;
-END_VAR
-```
-
-### FB_SimMotor: ST
-
-```vhdl
-stMotionStage.bLimitBackwardEnable := TRUE;
-stMotionStage.bLimitForwardEnable := TRUE;
-stMotionStage.bHardwareEnable := TRUE;
-stMotionStage.bPowerSelf := TRUE;
-stMotionStage.nEnableMode := ENUM_StageEnableMode.ALWAYS;
-fbMotionStage(stMotionStage := stMotionStage);
-```
-
-
-Temp/FB_SLITS_POWER.TcPOU (TcPlcObject)
----------------------------------------
-
-### FB_SLITS_POWER: Declaration
-
-```vhdl
-FUNCTION_BLOCK FB_SLITS_POWER
-VAR_IN_OUT
-    stTopBlade: DUT_MotionStage;
-    stBottomBlade: DUT_MotionStage;
-    stNorthBlade: DUT_MotionStage;
-    stSouthBlade: DUT_MotionStage;
-END_VAR
-VAR_INPUT
-    fPosTopBlade: LREAL;
-    fPosBottomBlade: LREAL;
-    fPosNorthBlade: LREAL;
-    fPosSouthBlade: LREAL;
-    bExecuteMotion:bool ;
-END_VAR
-VAR_OUTPUT
-END_VAR
-VAR
-    fbTopBlade: FB_MotionStage;
-    fbBottomBlade: FB_MotionStage;
-    fbNorthBlade: FB_MotionStage;
-    fbSouthBlade: FB_MotionStage;
-
-    {attribute 'pytmc' := '
-        pv: FSW
-    '}
-    fbFlowSwitch: FB_XTES_Flowswitch;
-
-
-    //RTDs
-    {attribute 'pytmc' := '
-        pv: TOP:RTD:01
-    '}
-    RTD_TOP_1: FB_ThermoCouple;
-    {attribute 'pytmc' := '
-        pv: TOP:RTD:02
-    '}
-    RTD_TOP_2: FB_ThermoCouple;
-    {attribute 'pytmc' := '
-        pv: BOTTOM:RTD:01
-    '}
-    RTD_Bottom_1: FB_ThermoCouple;
-    {attribute 'pytmc' := '
-        pv: BOTTOM:RTD:02
-    '}
-    RTD_Bottom_2: FB_ThermoCouple;
-
-    {attribute 'pytmc' := '
-        pv: NORTH:RTD:01
-    '}
-    RTD_North_1: FB_ThermoCouple;
-    {attribute 'pytmc' := '
-        pv: NORTH:RTD:02
-    '}
-    RTD_North_2: FB_ThermoCouple;
-    {attribute 'pytmc' := '
-        pv: SOUTH:RTD:01
-    '}
-    RTD_South_1: FB_ThermoCouple;
-    {attribute 'pytmc' := '
-        pv: SOUTH:RTD:02
-    '}
-    RTD_South_2: FB_ThermoCouple;
-
-    fSmallDelta: LREAL := 0.01;
-    fBigDelta: LREAL := 10;
-    fMaxVelocity: LREAL := 0.33;
-    fHighAccel: LREAL := 0.8;
-    fLowAccel: LREAL := 0.1;
-
-    stTop: DUT_PositionState;
-    stBOTTOM: DUT_PositionState;
-    stNorth: DUT_PositionState;
-    stSouth: DUT_PositionState;
-
-    {attribute 'pytmc' := 'pv: TOP'}
-    fbTop: FB_StatePTPMove;
-    {attribute 'pytmc' := 'pv: BOTTOM'}
-    fbBottom: FB_StatePTPMove;
-    {attribute 'pytmc' := 'pv: NORTH'}
-    fbNorth: FB_StatePTPMove;
-    {attribute 'pytmc' := 'pv: SOUTH'}
-    fbSouth: FB_StatePTPMove;
-
-
-END_VAR
-```
-
-### FB_SLITS_POWER: ST
-
-```vhdl
-// Instantiate Function block for all the blades
-fbTopBlade(stMotionStage:=stTopBlade);
-fbBottomBlade(stMotionStage:=stBottomBlade);
-fbNorthBlade(stMotionStage:=stNorthBlade);
-fbSouthBlade(stMotionStage:=stSouthBlade);
-
-//  no STO
-stTopBlade.bHardwareEnable := TRUE;
-stBottomBlade.bHardwareEnable := TRUE;
-stNorthBlade.bHardwareEnable := TRUE;
-stSouthBlade.bHardwareEnable := TRUE;
-
-
-//RTDs
-RTD_TOP_1();
-RTD_TOP_2();
-RTD_Bottom_1();
-RTD_Bottom_2();
-RTD_North_1();
-RTD_North_2();
-RTD_South_1();
-RTD_South_2();
-
-//Flow Switch
-fbFlowSwitch();
-
-
-// PTP Motion for each blade
-
-stTop.sName := 'Top';
-stTop.fPosition := fPosTopBlade;
-stTop.fDelta := fSmallDelta;
-stTop.fVelocity := fMaxVelocity;
-stTop.fAccel := fHighAccel;
-stTop.fDecel := fHighAccel;
-
-stBOTTOM.sName := 'Bottom';
-stBOTTOM.fPosition := fPosBottomBlade;
-stBOTTOM.fDelta := fSmallDelta;
-stBOTTOM.fVelocity := fMaxVelocity;
-stBOTTOM.fAccel := fHighAccel;
-stBOTTOM.fDecel := fHighAccel;
-
-stNorth.sName := 'North';
-stNorth.fPosition := fPosNorthBlade;
-stNorth.fDelta := fSmallDelta;
-stNorth.fVelocity := fMaxVelocity;
-stNorth.fAccel := fHighAccel;
-stNorth.fDecel := fHighAccel;
-
-stSouth.sName := 'South';
-stSouth.fPosition := fPosSouthBlade;
-stSouth.fDelta := fSmallDelta;
-stSouth.fVelocity := fMaxVelocity;
-stSouth.fAccel := fHighAccel;
-stSouth.fDecel := fHighAccel;
-
-//fbTop.bExecute := fbBottom.bExecute :=fbNorth.bExecute := fbSouth.bExecute := bExecuteMotion;
-
-fbTop(
-    stPositionState:=stTop,
-    bMoveOk:=TRUE,
-    stMotionStage:=stTopBlade);
-
-fbBottom(
-    stPositionState:=stBOTTOM,
-    bMoveOk:=TRUE,
-    stMotionStage:=stBottomBlade);
-
-fbNorth(
-    stPositionState:=stNorth,
-    bMoveOk:=TRUE,
-    stMotionStage:=stNorthBlade);
-
-fbSouth(
-    stPositionState:=stSouth,
-    bMoveOk:=TRUE,
-    stMotionStage:=stSouthBlade);
+END_PROGRAM
 ```
 
 
@@ -1732,8 +2091,8 @@ Symbols
     Global_Variables.FOPEN_MODEREAD : DWORD (4126944 32)
     Global_Variables.FOPEN_MODETEXT : DWORD (4127104 32)
     Global_Variables.FOPEN_MODEWRITE : DWORD (4126976 32)
-    Global_Variables.FORMAT_DECASC_CODES : BYTE (4193504 80)
-    Global_Variables.FORMAT_HEXASC_CODES : BYTE (4193248 256)
+    Global_Variables.FORMAT_DECASC_CODES : ARRAY[0..9] OF BYTE (4193504 80)
+    Global_Variables.FORMAT_HEXASC_CODES : ARRAY[0..1] OF BYTE (4193248 256)
     Global_Variables.FORMAT_MAX_ARGS : INT (4192608 16)
     Global_Variables.GLOBAL_DCF77_PULSE_SPLIT : TIME (4129280 32)
     Global_Variables.GLOBAL_DCF77_SEQUENCE_CHECK : BOOL (4129144 8)
@@ -1796,8 +2155,8 @@ Symbols
     Global_Variables.SYSTEMTIME_DATE_AND_TIME_MAX64 : ULINT (4200448 64)
     Global_Variables.SYSTEMTIME_DATE_AND_TIME_MIN : LCLS_General.Tc2_Utilities.T_ULARGE_INTEGER (4200064 64)
     Global_Variables.SYSTEMTIME_DATE_AND_TIME_MIN64 : ULINT (4200384 64)
-    Global_Variables.SYSTEMTIME_MAX_MONTHDAYS : WORD (4198992 384)
-    Global_Variables.SYSTEMTIME_MAX_YEARSDAY : WORD (4199376 448)
+    Global_Variables.SYSTEMTIME_MAX_MONTHDAYS : ARRAY[0..1] OF WORD (4198992 384)
+    Global_Variables.SYSTEMTIME_MAX_YEARSDAY : ARRAY[0..1] OF WORD (4199376 448)
     Global_Variables.SYSTEMTIME_TICKSPERDAY : LCLS_General.Tc2_Utilities.T_ULARGE_INTEGER (4200000 64)
     Global_Variables.SYSTEMTIME_TICKSPERDAY64 : ULINT (4200320 64)
     Global_Variables.SYSTEMTIME_TICKSPERMSEC : LCLS_General.Tc2_Utilities.T_ULARGE_INTEGER (4199872 64)
@@ -2274,8 +2633,8 @@ Symbols
     PMPS.fbFastFaultOutput1 : FB_HardwareFFOutput (14081024 32)
     PMPS.fbFastFaultOutput2 : FB_HardwareFFOutput (14081056 32)
     PRG_AT2L0_SOLID.bAT2L0_debug : BOOL (4341928 8)
-    PRG_AT2L0_SOLID.fbAT2L0_axes : lcls_twincat_motion.DUT_MotionStage (7260096 608)
-    PRG_AT2L0_SOLID.fbAT2L0_motion : lcls_twincat_motion.FB_MotionStage (4361152 2898944)
+    PRG_AT2L0_SOLID.fbAT2L0_axes : ARRAY[0..18] OF POINTER TO lcls_twincat_motion.DUT_MotionStage (7260096 608)
+    PRG_AT2L0_SOLID.fbAT2L0_motion : ARRAY[0..18] OF lcls_twincat_motion.FB_MotionStage (4361152 2898944)
     PRG_AT2L0_SOLID.fbAT2L0_motion[0].fbDriveVirtual.MasterAxis.NcToPlc : NCTOPLC_AXIS_REF (4363648 2048)
     PRG_AT2L0_SOLID.fbAT2L0_motion[0].fbDriveVirtual.MasterAxis.PlcToNc : PLCTONC_AXIS_REF (4362624 1024)
     PRG_AT2L0_SOLID.fbAT2L0_motion[10].fbDriveVirtual.MasterAxis.NcToPlc : NCTOPLC_AXIS_REF (5889408 2048)
@@ -2506,7 +2865,7 @@ Symbols
     PRG_RTDSL0.fbMotion8 : FB_SimMotor (11758464 152640)
     PRG_RTDSL0.fbMotion8.fbMotionStage.fbDriveVirtual.MasterAxis.NcToPlc : NCTOPLC_AXIS_REF (11761024 2048)
     PRG_RTDSL0.fbMotion8.fbMotionStage.fbDriveVirtual.MasterAxis.PlcToNc : PLCTONC_AXIS_REF (11760000 1024)
-    PRG_SL1L0_POWER.aTMatrix : REAL (12537472 512)
+    PRG_SL1L0_POWER.aTMatrix : ARRAY[1..4] OF REAL (12537472 512)
     PRG_SL1L0_POWER.bExecuteMotion : BOOL (7265120 8)
     PRG_SL1L0_POWER.bInit : BOOL (7265128 8)
     PRG_SL1L0_POWER.fbSL1L0 : FB_SLITS_POWER (11911424 626048)
@@ -2559,7 +2918,7 @@ Symbols
     PRG_SL1L0_POWER.rReqApertureSizeY : REAL (12537984 32)
     PRG_SL1L0_POWER.rReqCenterX : REAL (12538016 32)
     PRG_SL1L0_POWER.rReqCenterY : REAL (12538048 32)
-    PRG_SL2L0_POWER.aTMatrix : REAL (13164288 512)
+    PRG_SL2L0_POWER.aTMatrix : ARRAY[1..4] OF REAL (13164288 512)
     PRG_SL2L0_POWER.bExecuteMotion : BOOL (7265136 8)
     PRG_SL2L0_POWER.bInit : BOOL (7265144 8)
     PRG_SL2L0_POWER.fbSL2L0 : FB_SLITS_POWER (12538240 626048)
@@ -2632,9 +2991,9 @@ Symbols
     PRG_SP1L0_KMONO.fbMotion6.fbDriveVirtual.MasterAxis.PlcToNc : PLCTONC_AXIS_REF (13929408 1024)
     ParameterList.cSourceNameSize : UDINT (4332192 32)
     TC_EVENTS.LCLSGeneralEventClass : ST_LCLSGeneralEventClass (14737856 960)
-    TwinCAT_LicenseInfoVarList._LicenseInfo : PlcLicenseInfo (14689600 1024)
+    TwinCAT_LicenseInfoVarList._LicenseInfo : ARRAY[1..1] OF PlcLicenseInfo (14689600 1024)
     TwinCAT_SystemInfoVarList._AppInfo : PlcAppSystemInfo (14690624 2048)
-    TwinCAT_SystemInfoVarList._TaskInfo : PlcTaskSystemInfo (14692672 1024)
+    TwinCAT_SystemInfoVarList._TaskInfo : ARRAY[1..1] OF PlcTaskSystemInfo (14692672 1024)
     TwinCAT_SystemInfoVarList._TaskOid_PlcTask : OTCID (14693728 32)
     TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask : OTCID (14693696 32)
     TwinCAT_SystemInfoVarList.__PlcTask : _Implicit_Task_Info (14693760 704)
@@ -2663,6 +3022,7 @@ Boxes
     19.) X1 IM2L0-XTES (EK1100)
     20.) X2 SL2L0-Power (EK1100)
     21.) X1 PF1L0-WFS (EK1100)
+    22.) RTDSL0-MPA-EL2008
     23.) X1 IM3L0-PPM (EK1100)
     24.) X2 IM1L1-PPM (EK1100)
     25.) X1 IM4L0-XTES (EK1100)
@@ -2778,7 +3138,7 @@ Boxes
     135.) Term 109 (EL7041)
     136.) Term 110 (EL7041-1000)
     137.) Term 111 (EL7041-1000)
-    138.) Term 112 (EL7041-1000)
+    138.) RTDSL0-MPA-EL1008
     139.) Term 113 (EL3054)
     140.) Term 114 (EL6021)
     141.) Term 115 (EL2008)
@@ -6344,855 +6704,909 @@ Links
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Control compact^Control^Set counter')
     1224.) A (None, 'Enc^Outputs^Out^nDataOut1[0]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Control compact^Set counter value')
-    1225.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M21.bHome')
+    1225.) A ('OutputSrc', 'RTDS.MPA01.q_xInsertDO')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL2008', 'Channel 1^Output')
+    1226.) A ('OutputSrc', 'RTDS.MPA01.q_xRetractDO')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL2008', 'Channel 2^Output')
+    1227.) A ('OutputSrc', 'RTDS.MPA02.q_xInsertDO')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL2008', 'Channel 3^Output')
+    1228.) A ('OutputSrc', 'RTDS.MPA02.q_xRetractDO')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL2008', 'Channel 4^Output')
+    1229.) A ('InputDst', 'RTDS.MPA01.i_xInsertLS')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL1008', 'Channel 1^Input')
+    1230.) A ('InputDst', 'RTDS.MPA01.i_xRetractLS')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL1008', 'Channel 2^Input')
+    1231.) A ('InputDst', 'RTDS.MPA02.i_xInsertLS')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL1008', 'Channel 3^Input')
+    1232.) A ('InputDst', 'RTDS.MPA02.i_xRetractLS')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL1008', 'Channel 4^Input')
+    1233.) A ('lfe_motion Instance', 'PlcTask Inputs^RTDSL0.RTDSL0_MPA_01.i_xInsertedLS')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL1008', 'Channel 1^Input')
+    1234.) A ('lfe_motion Instance', 'PlcTask Inputs^RTDSL0.RTDSL0_MPA_01.i_xRetractedLS')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL1008', 'Channel 2^Input')
+    1235.) A ('lfe_motion Instance', 'PlcTask Inputs^RTDSL0.RTDSL0_MPA_02.i_xInsertedLS')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL1008', 'Channel 3^Input')
+    1236.) A ('lfe_motion Instance', 'PlcTask Inputs^RTDSL0.RTDSL0_MPA_02.i_xRetractedLS')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL1008', 'Channel 4^Input')
+    1237.) A ('lfe_motion Instance', 'PlcTask Inputs^RTDSL0.RTDSL0_MPA_03.i_xInsertedLS')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL1008', 'Channel 5^Input')
+    1238.) A ('lfe_motion Instance', 'PlcTask Inputs^RTDSL0.RTDSL0_MPA_03.i_xRetractedLS')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL1008', 'Channel 6^Input')
+    1239.) A ('lfe_motion Instance', 'PlcTask Inputs^RTDSL0.RTDSL0_MPA_04.i_xInsertedLS')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL1008', 'Channel 7^Input')
+    1240.) A ('lfe_motion Instance', 'PlcTask Inputs^RTDSL0.RTDSL0_MPA_04.i_xRetractedLS')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL1008', 'Channel 8^Input')
+    1241.) A ('lfe_motion Instance', 'PlcTask Outputs^RTDSL0.RTDSL0_MPA_01.q_xInsert_DO')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL2008', 'Channel 1^Output')
+    1242.) A ('lfe_motion Instance', 'PlcTask Outputs^RTDSL0.RTDSL0_MPA_01.q_xRetract_DO')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL2008', 'Channel 2^Output')
+    1243.) A ('lfe_motion Instance', 'PlcTask Outputs^RTDSL0.RTDSL0_MPA_02.q_xInsert_DO')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL2008', 'Channel 3^Output')
+    1244.) A ('lfe_motion Instance', 'PlcTask Outputs^RTDSL0.RTDSL0_MPA_02.q_xRetract_DO')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL2008', 'Channel 4^Output')
+    1245.) A ('lfe_motion Instance', 'PlcTask Outputs^RTDSL0.RTDSL0_MPA_03.q_xInsert_DO')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL2008', 'Channel 5^Output')
+    1246.) A ('lfe_motion Instance', 'PlcTask Outputs^RTDSL0.RTDSL0_MPA_03.q_xRetract_DO')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL2008', 'Channel 6^Output')
+    1247.) A ('lfe_motion Instance', 'PlcTask Outputs^RTDSL0.RTDSL0_MPA_04.q_xInsert_DO')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL2008', 'Channel 7^Output')
+    1248.) A ('lfe_motion Instance', 'PlcTask Outputs^RTDSL0.RTDSL0_MPA_04.q_xRetract_DO')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL2008', 'Channel 8^Output')
+    1249.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M21.bHome')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL1088', 'Channel 2^Input')
-    1226.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M22.bHome')
+    1250.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M22.bHome')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL1088', 'Channel 4^Input')
-    1227.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L0_XTES.fbIM1L0.bFocusEndBwd')
+    1251.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L0_XTES.fbIM1L0.bFocusEndBwd')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL1088', 'Channel 4^Input')
-    1228.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L0_XTES.fbIM1L0.bFocusEndFwd')
+    1252.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L0_XTES.fbIM1L0.bFocusEndFwd')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL1088', 'Channel 3^Input')
-    1229.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L0_XTES.fbIM1L0.bZoomEndBwd')
+    1253.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L0_XTES.fbIM1L0.bZoomEndBwd')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL1088', 'Channel 2^Input')
-    1230.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L0_XTES.fbIM1L0.bZoomEndFwd')
+    1254.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L0_XTES.fbIM1L0.bZoomEndFwd')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL1088', 'Channel 1^Input')
-    1231.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M20.bBrakeRelease')
+    1255.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M20.bBrakeRelease')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL2004', 'Channel 1^Output')
-    1232.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM1L0_XTES.fbIM1L0.fbOpal.bOpalPower')
+    1256.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM1L0_XTES.fbIM1L0.fbOpal.bOpalPower')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL2004', 'Channel 2^Output')
-    1233.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M20.bLimitForwardEnable')
+    1257.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M20.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL7041', 'STM Status^Status^Digital input 1')
-    1234.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bError')
+    1258.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E10', 'RTD Inputs Channel 1^Status^Error')
-    1235.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bOverrange')
+    1259.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E10', 'RTD Inputs Channel 1^Status^Overrange')
-    1236.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bUnderrange')
+    1260.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E10', 'RTD Inputs Channel 1^Status^Underrange')
-    1237.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.iRaw')
+    1261.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E10', 'RTD Inputs Channel 1^Value')
-    1238.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bError')
+    1262.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E10', 'RTD Inputs Channel 2^Status^Error')
-    1239.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bOverrange')
+    1263.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E10', 'RTD Inputs Channel 2^Status^Overrange')
-    1240.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bUnderrange')
+    1264.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E10', 'RTD Inputs Channel 2^Status^Underrange')
-    1241.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.iRaw')
+    1265.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E10', 'RTD Inputs Channel 2^Value')
-    1242.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bError')
+    1266.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E10', 'RTD Inputs Channel 1^Status^Error')
-    1243.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.iRaw')
+    1267.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E10', 'RTD Inputs Channel 1^Value')
-    1244.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bOverrange')
+    1268.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E11', 'RTD Inputs Channel 1^Status^Overrange')
-    1245.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bUnderrange')
+    1269.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E11', 'RTD Inputs Channel 1^Status^Underrange')
-    1246.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bError')
+    1270.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E11', 'RTD Inputs Channel 2^Status^Error')
-    1247.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bOverrange')
+    1271.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E11', 'RTD Inputs Channel 2^Status^Overrange')
-    1248.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bUnderrange')
+    1272.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E11', 'RTD Inputs Channel 2^Status^Underrange')
-    1249.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.iRaw')
+    1273.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E11', 'RTD Inputs Channel 2^Value')
-    1250.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bError')
+    1274.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E8', 'RTD Inputs Channel 1^Status^Error')
-    1251.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bOverrange')
+    1275.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E8', 'RTD Inputs Channel 1^Status^Overrange')
-    1252.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bUnderrange')
+    1276.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E8', 'RTD Inputs Channel 1^Status^Underrange')
-    1253.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.iRaw')
+    1277.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E8', 'RTD Inputs Channel 1^Value')
-    1254.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bError')
+    1278.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E8', 'RTD Inputs Channel 2^Status^Error')
-    1255.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bOverrange')
+    1279.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E8', 'RTD Inputs Channel 2^Status^Overrange')
-    1256.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bUnderrange')
+    1280.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E8', 'RTD Inputs Channel 2^Status^Underrange')
-    1257.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.iRaw')
+    1281.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E8', 'RTD Inputs Channel 2^Value')
-    1258.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bError')
+    1282.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E9', 'RTD Inputs Channel 1^Status^Error')
-    1259.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bOverrange')
+    1283.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E9', 'RTD Inputs Channel 1^Status^Overrange')
-    1260.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bUnderrange')
+    1284.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E9', 'RTD Inputs Channel 1^Status^Underrange')
-    1261.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.iRaw')
+    1285.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E9', 'RTD Inputs Channel 1^Value')
-    1262.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bError')
+    1286.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E9', 'RTD Inputs Channel 2^Status^Error')
-    1263.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bOverrange')
+    1287.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E9', 'RTD Inputs Channel 2^Status^Overrange')
-    1264.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bUnderrange')
+    1288.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E9', 'RTD Inputs Channel 2^Status^Underrange')
-    1265.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.iRaw')
+    1289.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E9', 'RTD Inputs Channel 2^Value')
-    1266.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M41.bLimitBackwardEnable')
+    1290.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M41.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL7041-E1', 'STM Status^Status^Digital input 1')
-    1267.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M41.bLimitForwardEnable')
+    1291.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M41.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL7041-E1', 'STM Status^Status^Digital input 2')
-    1268.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M42.bLimitBackwardEnable')
+    1292.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M42.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL7041-E3', 'STM Status^Status^Digital input 2')
-    1269.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M42.bLimitForwardEnable')
+    1293.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M42.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL7041-E3', 'STM Status^Status^Digital input 1')
-    1270.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M43.bLimitBackwardEnable')
+    1294.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M43.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL7041-E5', 'STM Status^Status^Digital input 1')
-    1271.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M43.bLimitForwardEnable')
+    1295.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M43.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL7041-E5', 'STM Status^Status^Digital input 2')
-    1272.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M44.bLimitBackwardEnable')
+    1296.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M44.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL7041-E7', 'STM Status^Status^Digital input 2')
-    1273.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M44.bLimitForwardEnable')
+    1297.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M44.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL7041-E7', 'STM Status^Status^Digital input 1')
-    1274.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M1.bLimitBackwardEnable')
+    1298.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M1.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-01', 'STM Status^Status^Digital input 1')
-    1275.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M1.bLimitForwardEnable')
+    1299.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M1.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-01', 'STM Status^Status^Digital input 2')
-    1276.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM1CoilARaw')
+    1300.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM1CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-01', 'STM Synchron info data^Info data 1')
-    1277.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM1CoilBRaw')
+    1301.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM1CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-01', 'STM Synchron info data^Info data 2')
-    1278.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M2.bLimitBackwardEnable')
+    1302.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M2.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-02', 'STM Status^Status^Digital input 1')
-    1279.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M2.bLimitForwardEnable')
+    1303.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M2.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-02', 'STM Status^Status^Digital input 2')
-    1280.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM2CoilARaw')
+    1304.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM2CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-02', 'STM Synchron info data^Info data 1')
-    1281.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM2CoilBRaw')
+    1305.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM2CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-02', 'STM Synchron info data^Info data 2')
-    1282.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M3.bLimitBackwardEnable')
+    1306.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M3.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-03', 'STM Status^Status^Digital input 1')
-    1283.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M3.bLimitForwardEnable')
+    1307.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M3.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-03', 'STM Status^Status^Digital input 2')
-    1284.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM3CoilARaw')
+    1308.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM3CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-03', 'STM Synchron info data^Info data 1')
-    1285.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM3CoilBRaw')
+    1309.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM3CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-03', 'STM Synchron info data^Info data 2')
-    1286.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M4.bLimitBackwardEnable')
+    1310.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M4.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-04', 'STM Status^Status^Digital input 1')
-    1287.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M4.bLimitForwardEnable')
+    1311.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M4.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-04', 'STM Status^Status^Digital input 2')
-    1288.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM4CoilARaw')
+    1312.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM4CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-04', 'STM Synchron info data^Info data 1')
-    1289.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM4CoilBRaw')
+    1313.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM4CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-04', 'STM Synchron info data^Info data 2')
-    1290.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M5.bLimitBackwardEnable')
+    1314.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M5.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-05', 'STM Status^Status^Digital input 1')
-    1291.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M5.bLimitForwardEnable')
+    1315.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M5.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-05', 'STM Status^Status^Digital input 2')
-    1292.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM5CoilARaw')
+    1316.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM5CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-05', 'STM Synchron info data^Info data 1')
-    1293.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM5CoilBRaw')
+    1317.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM5CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-05', 'STM Synchron info data^Info data 2')
-    1294.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M6.bLimitBackwardEnable')
+    1318.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M6.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-06', 'STM Status^Status^Digital input 1')
-    1295.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M6.bLimitForwardEnable')
+    1319.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M6.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-06', 'STM Status^Status^Digital input 2')
-    1296.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM6CoilARaw')
+    1320.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM6CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-06', 'STM Synchron info data^Info data 1')
-    1297.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM6CoilBRaw')
+    1321.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM6CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-06', 'STM Synchron info data^Info data 2')
-    1298.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M7.bLimitBackwardEnable')
+    1322.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M7.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-07', 'STM Status^Status^Digital input 1')
-    1299.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M7.bLimitForwardEnable')
+    1323.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M7.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-07', 'STM Status^Status^Digital input 2')
-    1300.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM7CoilARaw')
+    1324.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM7CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-07', 'STM Synchron info data^Info data 1')
-    1301.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM7CoilBRaw')
+    1325.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM7CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-07', 'STM Synchron info data^Info data 2')
-    1302.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M8.bLimitBackwardEnable')
+    1326.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M8.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-08', 'STM Status^Status^Digital input 1')
-    1303.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M8.bLimitForwardEnable')
+    1327.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M8.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-08', 'STM Status^Status^Digital input 2')
-    1304.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM8CoilARaw')
+    1328.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM8CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-08', 'STM Synchron info data^Info data 1')
-    1305.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM8CoilBRaw')
+    1329.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM8CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-08', 'STM Synchron info data^Info data 2')
-    1306.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M9.bLimitBackwardEnable')
+    1330.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M9.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-09', 'STM Status^Status^Digital input 1')
-    1307.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M9.bLimitForwardEnable')
+    1331.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M9.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-09', 'STM Status^Status^Digital input 2')
-    1308.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM9CoilARaw')
+    1332.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM9CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-09', 'STM Synchron info data^Info data 1')
-    1309.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM9CoilBRaw')
+    1333.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM9CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-09', 'STM Synchron info data^Info data 2')
-    1310.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M10.bLimitBackwardEnable')
+    1334.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M10.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-10', 'STM Status^Status^Digital input 1')
-    1311.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M10.bLimitForwardEnable')
+    1335.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M10.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-10', 'STM Status^Status^Digital input 2')
-    1312.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM10CoilARaw')
+    1336.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM10CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-10', 'STM Synchron info data^Info data 1')
-    1313.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM10CoilBRaw')
+    1337.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM10CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-10', 'STM Synchron info data^Info data 2')
-    1314.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M11.bLimitBackwardEnable')
+    1338.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M11.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-11', 'STM Status^Status^Digital input 1')
-    1315.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M11.bLimitForwardEnable')
+    1339.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M11.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-11', 'STM Status^Status^Digital input 2')
-    1316.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM11CoilARaw')
+    1340.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM11CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-11', 'STM Synchron info data^Info data 1')
-    1317.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM11CoilBRaw')
+    1341.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM11CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-11', 'STM Synchron info data^Info data 2')
-    1318.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M12.bLimitBackwardEnable')
+    1342.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M12.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-12', 'STM Status^Status^Digital input 1')
-    1319.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M12.bLimitForwardEnable')
+    1343.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M12.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-12', 'STM Status^Status^Digital input 2')
-    1320.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM12CoilARaw')
+    1344.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM12CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-12', 'STM Synchron info data^Info data 1')
-    1321.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM12CoilBRaw')
+    1345.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM12CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-12', 'STM Synchron info data^Info data 2')
-    1322.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M13.bLimitBackwardEnable')
+    1346.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M13.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-13', 'STM Status^Status^Digital input 1')
-    1323.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M13.bLimitForwardEnable')
+    1347.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M13.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-13', 'STM Status^Status^Digital input 2')
-    1324.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM13CoilARaw')
+    1348.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM13CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-13', 'STM Synchron info data^Info data 1')
-    1325.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM13CoilBRaw')
+    1349.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM13CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-13', 'STM Synchron info data^Info data 2')
-    1326.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M14.bLimitBackwardEnable')
+    1350.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M14.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-14', 'STM Status^Status^Digital input 1')
-    1327.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M14.bLimitForwardEnable')
+    1351.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M14.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-14', 'STM Status^Status^Digital input 2')
-    1328.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM14CoilARaw')
+    1352.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM14CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-14', 'STM Synchron info data^Info data 1')
-    1329.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM14CoilBRaw')
+    1353.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM14CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-14', 'STM Synchron info data^Info data 2')
-    1330.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M15.bLimitBackwardEnable')
+    1354.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M15.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-15', 'STM Status^Status^Digital input 1')
-    1331.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M15.bLimitForwardEnable')
+    1355.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M15.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-15', 'STM Status^Status^Digital input 2')
-    1332.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM15CoilARaw')
+    1356.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM15CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-15', 'STM Synchron info data^Info data 1')
-    1333.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM15CoilBRaw')
+    1357.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM15CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-15', 'STM Synchron info data^Info data 2')
-    1334.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M16.bLimitBackwardEnable')
+    1358.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M16.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-16', 'STM Status^Status^Digital input 1')
-    1335.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M16.bLimitForwardEnable')
+    1359.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M16.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-16', 'STM Status^Status^Digital input 2')
-    1336.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM16CoilARaw')
+    1360.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM16CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-16', 'STM Synchron info data^Info data 1')
-    1337.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM16CoilBRaw')
+    1361.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM16CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-16', 'STM Synchron info data^Info data 2')
-    1338.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M17.bLimitBackwardEnable')
+    1362.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M17.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-17', 'STM Status^Status^Digital input 1')
-    1339.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M17.bLimitForwardEnable')
+    1363.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M17.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-17', 'STM Status^Status^Digital input 2')
-    1340.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM17CoilARaw')
+    1364.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM17CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-17', 'STM Synchron info data^Info data 1')
-    1341.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM17CoilBRaw')
+    1365.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM17CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-17', 'STM Synchron info data^Info data 2')
-    1342.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M18.bLimitBackwardEnable')
+    1366.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M18.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-18', 'STM Status^Status^Digital input 1')
-    1343.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M18.bLimitForwardEnable')
+    1367.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M18.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-18', 'STM Status^Status^Digital input 2')
-    1344.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM18CoilARaw')
+    1368.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM18CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-18', 'STM Synchron info data^Info data 1')
-    1345.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM18CoilBRaw')
+    1369.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM18CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-18', 'STM Synchron info data^Info data 2')
-    1346.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M19.bLimitBackwardEnable')
+    1370.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M19.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-19', 'STM Status^Status^Digital input 1')
-    1347.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M19.bLimitForwardEnable')
+    1371.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M19.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-19', 'STM Status^Status^Digital input 2')
-    1348.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM19CoilARaw')
+    1372.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM19CoilARaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-19', 'STM Synchron info data^Info data 1')
-    1349.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM19CoilBRaw')
+    1373.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_AT2L0_SOLID.nM19CoilBRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-19', 'STM Synchron info data^Info data 2')
-    1350.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M25.bHome')
+    1374.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M25.bHome')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL1088', 'Channel 2^Input')
-    1351.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M26.bHome')
+    1375.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M26.bHome')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL1088', 'Channel 4^Input')
-    1352.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.fbIM2L0.bFocusEndBwd')
+    1376.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.fbIM2L0.bFocusEndBwd')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL1088', 'Channel 4^Input')
-    1353.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.fbIM2L0.bFocusEndFwd')
+    1377.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.fbIM2L0.bFocusEndFwd')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL1088', 'Channel 3^Input')
-    1354.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.fbIM2L0.bZoomEndBwd')
+    1378.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.fbIM2L0.bZoomEndBwd')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL1088', 'Channel 2^Input')
-    1355.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.fbIM2L0.bZoomEndFwd')
+    1379.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.fbIM2L0.bZoomEndFwd')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL1088', 'Channel 1^Input')
-    1356.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M24.bBrakeRelease')
+    1380.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M24.bBrakeRelease')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL2004', 'Channel 1^Output')
-    1357.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.fbIM2L0.fbOpal.bOpalPower')
+    1381.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.fbIM2L0.fbOpal.bOpalPower')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL2004', 'Channel 2^Output')
-    1358.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[0]')
+    1382.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[0]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 0')
-    1359.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[10]')
+    1383.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[10]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 10')
-    1360.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[11]')
+    1384.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[11]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 11')
-    1361.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[12]')
+    1385.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[12]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 12')
-    1362.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[13]')
+    1386.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[13]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 13')
-    1363.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[14]')
+    1387.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[14]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 14')
-    1364.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[15]')
+    1388.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[15]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 15')
-    1365.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[16]')
+    1389.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[16]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 16')
-    1366.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[17]')
+    1390.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[17]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 17')
-    1367.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[18]')
+    1391.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[18]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 18')
-    1368.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[19]')
+    1392.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[19]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 19')
-    1369.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[1]')
+    1393.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[1]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 1')
-    1370.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[20]')
+    1394.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[20]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 20')
-    1371.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[21]')
+    1395.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[21]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 21')
-    1372.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[2]')
+    1396.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[2]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 2')
-    1373.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[3]')
+    1397.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[3]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 3')
-    1374.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[4]')
+    1398.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[4]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 4')
-    1375.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[5]')
+    1399.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[5]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 5')
-    1376.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[6]')
+    1400.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[6]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 6')
-    1377.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[7]')
+    1401.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[7]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 7')
-    1378.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[8]')
+    1402.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[8]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 8')
-    1379.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[9]')
+    1403.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[9]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 9')
-    1380.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^Status')
+    1404.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^Status')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Status')
-    1381.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^Ctrl')
+    1405.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^Ctrl')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Ctrl')
-    1382.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[0]')
+    1406.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[0]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 0')
-    1383.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[10]')
+    1407.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[10]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 10')
-    1384.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[11]')
+    1408.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[11]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 11')
-    1385.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[12]')
+    1409.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[12]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 12')
-    1386.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[13]')
+    1410.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[13]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 13')
-    1387.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[14]')
+    1411.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[14]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 14')
-    1388.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[15]')
+    1412.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[15]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 15')
-    1389.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[16]')
+    1413.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[16]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 16')
-    1390.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[17]')
+    1414.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[17]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 17')
-    1391.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[18]')
+    1415.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[18]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 18')
-    1392.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[19]')
+    1416.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[19]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 19')
-    1393.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[1]')
+    1417.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[1]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 1')
-    1394.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[20]')
+    1418.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[20]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 20')
-    1395.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[21]')
+    1419.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[21]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 21')
-    1396.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[2]')
+    1420.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[2]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 2')
-    1397.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[3]')
+    1421.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[3]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 3')
-    1398.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[4]')
+    1422.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[4]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 4')
-    1399.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[5]')
+    1423.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[5]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 5')
-    1400.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[6]')
+    1424.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[6]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 6')
-    1401.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[7]')
+    1425.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[7]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 7')
-    1402.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[8]')
+    1426.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[8]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 8')
-    1403.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[9]')
+    1427.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[9]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 9')
-    1404.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M24.bLimitForwardEnable')
+    1428.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M24.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL7041', 'STM Status^Status^Digital input 1')
-    1405.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bError')
+    1429.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E10', 'RTD Inputs Channel 1^Status^Error')
-    1406.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bOverrange')
+    1430.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E10', 'RTD Inputs Channel 1^Status^Overrange')
-    1407.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bUnderrange')
+    1431.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E10', 'RTD Inputs Channel 1^Status^Underrange')
-    1408.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.iRaw')
+    1432.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E10', 'RTD Inputs Channel 1^Value')
-    1409.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bError')
+    1433.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E10', 'RTD Inputs Channel 2^Status^Error')
-    1410.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bOverrange')
+    1434.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E10', 'RTD Inputs Channel 2^Status^Overrange')
-    1411.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bUnderrange')
+    1435.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E10', 'RTD Inputs Channel 2^Status^Underrange')
-    1412.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.iRaw')
+    1436.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E10', 'RTD Inputs Channel 2^Value')
-    1413.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bError')
+    1437.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E10', 'RTD Inputs Channel 1^Status^Error')
-    1414.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.iRaw')
+    1438.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E10', 'RTD Inputs Channel 1^Value')
-    1415.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bOverrange')
+    1439.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E11', 'RTD Inputs Channel 1^Status^Overrange')
-    1416.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bUnderrange')
+    1440.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E11', 'RTD Inputs Channel 1^Status^Underrange')
-    1417.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bError')
+    1441.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E11', 'RTD Inputs Channel 2^Status^Error')
-    1418.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bOverrange')
+    1442.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E11', 'RTD Inputs Channel 2^Status^Overrange')
-    1419.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bUnderrange')
+    1443.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E11', 'RTD Inputs Channel 2^Status^Underrange')
-    1420.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.iRaw')
+    1444.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E11', 'RTD Inputs Channel 2^Value')
-    1421.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bError')
+    1445.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E8', 'RTD Inputs Channel 1^Status^Error')
-    1422.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bOverrange')
+    1446.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E8', 'RTD Inputs Channel 1^Status^Overrange')
-    1423.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bUnderrange')
+    1447.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E8', 'RTD Inputs Channel 1^Status^Underrange')
-    1424.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.iRaw')
+    1448.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E8', 'RTD Inputs Channel 1^Value')
-    1425.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bError')
+    1449.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E8', 'RTD Inputs Channel 2^Status^Error')
-    1426.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bOverrange')
+    1450.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E8', 'RTD Inputs Channel 2^Status^Overrange')
-    1427.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bUnderrange')
+    1451.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E8', 'RTD Inputs Channel 2^Status^Underrange')
-    1428.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.iRaw')
+    1452.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E8', 'RTD Inputs Channel 2^Value')
-    1429.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bError')
+    1453.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E9', 'RTD Inputs Channel 1^Status^Error')
-    1430.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bOverrange')
+    1454.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E9', 'RTD Inputs Channel 1^Status^Overrange')
-    1431.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bUnderrange')
+    1455.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E9', 'RTD Inputs Channel 1^Status^Underrange')
-    1432.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.iRaw')
+    1456.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E9', 'RTD Inputs Channel 1^Value')
-    1433.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bError')
+    1457.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E9', 'RTD Inputs Channel 2^Status^Error')
-    1434.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bOverrange')
+    1458.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E9', 'RTD Inputs Channel 2^Status^Overrange')
-    1435.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bUnderrange')
+    1459.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E9', 'RTD Inputs Channel 2^Status^Underrange')
-    1436.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.iRaw')
+    1460.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E9', 'RTD Inputs Channel 2^Value')
-    1437.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M45.bLimitBackwardEnable')
+    1461.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M45.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL7041-E1', 'STM Status^Status^Digital input 1')
-    1438.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M45.bLimitForwardEnable')
+    1462.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M45.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL7041-E1', 'STM Status^Status^Digital input 2')
-    1439.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M46.bLimitBackwardEnable')
+    1463.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M46.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL7041-E3', 'STM Status^Status^Digital input 2')
-    1440.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M46.bLimitForwardEnable')
+    1464.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M46.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL7041-E3', 'STM Status^Status^Digital input 1')
-    1441.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M47.bLimitBackwardEnable')
+    1465.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M47.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL7041-E5', 'STM Status^Status^Digital input 1')
-    1442.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M47.bLimitForwardEnable')
+    1466.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M47.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL7041-E5', 'STM Status^Status^Digital input 2')
-    1443.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M48.bLimitBackwardEnable')
+    1467.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M48.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL7041-E7', 'STM Status^Status^Digital input 2')
-    1444.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M48.bLimitForwardEnable')
+    1468.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M48.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL7041-E7', 'STM Status^Status^Digital input 1')
-    1445.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M50.bLimitBackwardEnable')
+    1469.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M50.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E2-MOTORS', 'STM Status^Status^Digital input 2')
-    1446.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M50.bLimitForwardEnable')
+    1470.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M50.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E2-MOTORS', 'STM Status^Status^Digital input 1')
-    1447.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M51.bLimitBackwardEnable')
+    1471.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M51.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E3-MOTORS', 'STM Status^Status^Digital input 1')
-    1448.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M51.bLimitForwardEnable')
+    1472.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M51.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E3-MOTORS', 'STM Status^Status^Digital input 2')
-    1449.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M52.bLimitBackwardEnable')
+    1473.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M52.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'STM Status^Status^Digital input 2')
-    1450.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M52.bLimitForwardEnable')
+    1474.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M52.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'STM Status^Status^Digital input 1')
-    1451.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M53.bLimitBackwardEnable')
+    1475.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M53.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Digital input 1')
-    1452.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M53.bLimitForwardEnable')
+    1476.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M53.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Digital input 2')
-    1453.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M54.bLimitBackwardEnable')
+    1477.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M54.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Digital input 2')
-    1454.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M54.bLimitForwardEnable')
+    1478.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M54.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Digital input 1')
-    1455.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M27.bBrakeRelease')
+    1479.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M27.bBrakeRelease')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL2004', 'Channel 1^Output')
-    1456.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM3L0_PPM.fbIM3L0.fbGige.bGigePower')
+    1480.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM3L0_PPM.fbIM3L0.fbGige.bGigePower')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL2004', 'Channel 2^Output')
-    1457.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.iVoltageINT')
+    1481.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.iVoltageINT')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL3062', 'AI Standard Channel 1^Value')
-    1458.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.bError')
+    1482.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL3314', 'TC Inputs Channel 1^Status^Error')
-    1459.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.bOverrange')
+    1483.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL3314', 'TC Inputs Channel 1^Status^Overrange')
-    1460.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.bUnderrange')
+    1484.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL3314', 'TC Inputs Channel 1^Status^Underrange')
-    1461.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.iRaw')
+    1485.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL3314', 'TC Inputs Channel 1^Value')
-    1462.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.bError')
+    1486.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL3314', 'TC Inputs Channel 2^Status^Error')
-    1463.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.bOverrange')
+    1487.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL3314', 'TC Inputs Channel 2^Status^Overrange')
-    1464.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.bUnderrange')
+    1488.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL3314', 'TC Inputs Channel 2^Status^Underrange')
-    1465.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.iRaw')
+    1489.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL3314', 'TC Inputs Channel 2^Value')
-    1466.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM3L0_PPM.fbIM3L0.fbGige.iIlluminatorINT')
+    1490.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM3L0_PPM.fbIM3L0.fbGige.iIlluminatorINT')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL4004', 'AO Outputs Channel 1^Analog output')
-    1467.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M27.bLimitBackwardEnable')
+    1491.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M27.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL7041', 'STM Status^Status^Digital input 2')
-    1468.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M27.bLimitForwardEnable')
+    1492.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M27.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL7041', 'STM Status^Status^Digital input 1')
-    1469.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M23.bBrakeRelease')
+    1493.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M23.bBrakeRelease')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL2004', 'Channel 1^Output')
-    1470.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM1L1_PPM.fbIM1L1.fbGige.bGigePower')
+    1494.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM1L1_PPM.fbIM1L1.fbGige.bGigePower')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL2004', 'Channel 2^Output')
-    1471.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.iVoltageINT')
+    1495.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.iVoltageINT')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL3062', 'AI Standard Channel 1^Value')
-    1472.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bError')
+    1496.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL3314', 'TC Inputs Channel 1^Status^Error')
-    1473.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bOverrange')
+    1497.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL3314', 'TC Inputs Channel 1^Status^Overrange')
-    1474.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bUnderrange')
+    1498.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL3314', 'TC Inputs Channel 1^Status^Underrange')
-    1475.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.iRaw')
+    1499.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL3314', 'TC Inputs Channel 1^Value')
-    1476.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bError')
+    1500.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bError')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL3314', 'TC Inputs Channel 2^Status^Error')
-    1477.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bOverrange')
+    1501.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bOverrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL3314', 'TC Inputs Channel 2^Status^Overrange')
-    1478.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bUnderrange')
+    1502.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bUnderrange')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL3314', 'TC Inputs Channel 2^Status^Underrange')
-    1479.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.iRaw')
+    1503.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.iRaw')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL3314', 'TC Inputs Channel 2^Value')
-    1480.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM1L1_PPM.fbIM1L1.fbGige.iIlluminatorINT')
+    1504.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM1L1_PPM.fbIM1L1.fbGige.iIlluminatorINT')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL4004', 'AO Outputs Channel 1^Analog output')
-    1481.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M23.bLimitBackwardEnable')
+    1505.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M23.bLimitBackwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL7041', 'STM Status^Status^Digital input 2')
-    1482.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M23.bLimitForwardEnable')
+    1506.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M23.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL7041', 'STM Status^Status^Digital input 1')
-    1483.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M29.bHome')
+    1507.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M29.bHome')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL1088', 'Channel 2^Input')
-    1484.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M30.bHome')
+    1508.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M30.bHome')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL1088', 'Channel 4^Input')
-    1485.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.fbIM4L0.bFocusEndBwd')
+    1509.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.fbIM4L0.bFocusEndBwd')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL1088', 'Channel 4^Input')
-    1486.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.fbIM4L0.bFocusEndFwd')
+    1510.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.fbIM4L0.bFocusEndFwd')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL1088', 'Channel 3^Input')
-    1487.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.fbIM4L0.bZoomEndBwd')
+    1511.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.fbIM4L0.bZoomEndBwd')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL1088', 'Channel 2^Input')
-    1488.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.fbIM4L0.bZoomEndFwd')
+    1512.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.fbIM4L0.bZoomEndFwd')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL1088', 'Channel 1^Input')
-    1489.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M28.bBrakeRelease')
+    1513.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M28.bBrakeRelease')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL2004', 'Channel 1^Output')
-    1490.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.fbIM4L0.fbOpal.bOpalPower')
+    1514.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.fbIM4L0.fbOpal.bOpalPower')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL2004', 'Channel 2^Output')
-    1491.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[0]')
+    1515.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[0]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 0')
-    1492.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[10]')
+    1516.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[10]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 10')
-    1493.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[11]')
+    1517.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[11]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 11')
-    1494.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[12]')
+    1518.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[12]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 12')
-    1495.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[13]')
+    1519.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[13]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 13')
-    1496.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[14]')
+    1520.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[14]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 14')
-    1497.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[15]')
+    1521.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[15]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 15')
-    1498.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[16]')
+    1522.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[16]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 16')
-    1499.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[17]')
+    1523.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[17]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 17')
-    1500.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[18]')
+    1524.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[18]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 18')
-    1501.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[19]')
+    1525.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[19]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 19')
-    1502.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[1]')
+    1526.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[1]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 1')
-    1503.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[20]')
+    1527.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[20]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 20')
-    1504.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[21]')
+    1528.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[21]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 21')
-    1505.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[2]')
+    1529.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[2]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 2')
-    1506.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[3]')
+    1530.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[3]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 3')
-    1507.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[4]')
+    1531.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[4]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 4')
-    1508.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[5]')
+    1532.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[5]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 5')
-    1509.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[6]')
+    1533.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[6]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 6')
-    1510.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[7]')
+    1534.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[7]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 7')
-    1511.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[8]')
+    1535.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[8]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 8')
-    1512.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[9]')
+    1536.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^D[9]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Data In 9')
-    1513.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^Status')
+    1537.) A ('lfe_motion Instance', 'PlcTask Inputs^PRG_IM4L0_XTES.stEL6In^Status')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM TxPDO-Map Inputs Channel 1^Status')
-    1514.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^Ctrl')
+    1538.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^Ctrl')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Ctrl')
-    1515.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[0]')
+    1539.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[0]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 0')
-    1516.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[10]')
+    1540.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[10]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 10')
-    1517.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[11]')
+    1541.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[11]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 11')
-    1518.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[12]')
+    1542.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[12]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 12')
-    1519.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[13]')
+    1543.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[13]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 13')
-    1520.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[14]')
+    1544.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[14]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 14')
-    1521.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[15]')
+    1545.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[15]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 15')
-    1522.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[16]')
+    1546.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[16]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 16')
-    1523.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[17]')
+    1547.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[17]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 17')
-    1524.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[18]')
+    1548.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[18]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 18')
-    1525.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[19]')
+    1549.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[19]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 19')
-    1526.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[1]')
+    1550.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[1]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 1')
-    1527.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[20]')
+    1551.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[20]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 20')
-    1528.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[21]')
+    1552.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[21]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 21')
-    1529.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[2]')
+    1553.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[2]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 2')
-    1530.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[3]')
+    1554.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[3]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 3')
-    1531.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[4]')
+    1555.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[4]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 4')
-    1532.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[5]')
+    1556.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[5]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 5')
-    1533.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[6]')
+    1557.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[6]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 6')
-    1534.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[7]')
+    1558.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[7]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 7')
-    1535.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[8]')
+    1559.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[8]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 8')
-    1536.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[9]')
+    1560.) A ('lfe_motion Instance', 'PlcTask Outputs^PRG_IM4L0_XTES.stEL6Out^D[9]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002', 'COM RxPDO-Map Outputs Channel 1^Data Out 9')
-    1537.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M28.bLimitForwardEnable')
+    1561.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M28.bLimitForwardEnable')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL7041', 'STM Status^Status^Digital input 1')
-    1538.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M1.Axis.NcToPlc')
+    1562.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M1.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 1', 'Outputs^ToPlc')
-    1539.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M1.Axis.PlcToNc')
+    1563.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M1.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 1', 'Inputs^FromPlc')
-    1540.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M10.Axis.NcToPlc')
+    1564.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M10.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 10', 'Outputs^ToPlc')
-    1541.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M10.Axis.PlcToNc')
+    1565.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M10.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 10', 'Inputs^FromPlc')
-    1542.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M11.Axis.NcToPlc')
+    1566.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M11.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 11', 'Outputs^ToPlc')
-    1543.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M11.Axis.PlcToNc')
+    1567.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M11.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 11', 'Inputs^FromPlc')
-    1544.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M12.Axis.NcToPlc')
+    1568.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M12.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 12', 'Outputs^ToPlc')
-    1545.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M12.Axis.PlcToNc')
+    1569.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M12.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 12', 'Inputs^FromPlc')
-    1546.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M13.Axis.NcToPlc')
+    1570.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M13.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 13', 'Outputs^ToPlc')
-    1547.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M13.Axis.PlcToNc')
+    1571.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M13.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 13', 'Inputs^FromPlc')
-    1548.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M14.Axis.NcToPlc')
+    1572.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M14.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 14', 'Outputs^ToPlc')
-    1549.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M14.Axis.PlcToNc')
+    1573.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M14.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 14', 'Inputs^FromPlc')
-    1550.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M15.Axis.NcToPlc')
+    1574.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M15.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 15', 'Outputs^ToPlc')
-    1551.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M15.Axis.PlcToNc')
+    1575.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M15.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 15', 'Inputs^FromPlc')
-    1552.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M16.Axis.NcToPlc')
+    1576.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M16.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 16', 'Outputs^ToPlc')
-    1553.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M16.Axis.PlcToNc')
+    1577.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M16.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 16', 'Inputs^FromPlc')
-    1554.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M17.Axis.NcToPlc')
+    1578.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M17.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 17', 'Outputs^ToPlc')
-    1555.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M17.Axis.PlcToNc')
+    1579.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M17.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 17', 'Inputs^FromPlc')
-    1556.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M18.Axis.NcToPlc')
+    1580.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M18.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 18', 'Outputs^ToPlc')
-    1557.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M18.Axis.PlcToNc')
+    1581.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M18.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 18', 'Inputs^FromPlc')
-    1558.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M19.Axis.NcToPlc')
+    1582.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M19.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 19', 'Outputs^ToPlc')
-    1559.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M19.Axis.PlcToNc')
+    1583.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M19.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 19', 'Inputs^FromPlc')
-    1560.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M2.Axis.NcToPlc')
+    1584.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M2.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 2', 'Outputs^ToPlc')
-    1561.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M2.Axis.PlcToNc')
+    1585.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M2.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 2', 'Inputs^FromPlc')
-    1562.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M3.Axis.NcToPlc')
+    1586.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M3.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 3', 'Outputs^ToPlc')
-    1563.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M3.Axis.PlcToNc')
+    1587.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M3.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 3', 'Inputs^FromPlc')
-    1564.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M33.Axis.NcToPlc')
+    1588.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M33.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 33', 'Outputs^ToPlc')
-    1565.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M33.Axis.PlcToNc')
+    1589.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M33.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 33', 'Inputs^FromPlc')
-    1566.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M34.Axis.NcToPlc')
+    1590.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M34.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 34', 'Outputs^ToPlc')
-    1567.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M34.Axis.PlcToNc')
+    1591.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M34.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 34', 'Inputs^FromPlc')
-    1568.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M35.Axis.NcToPlc')
+    1592.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M35.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 35', 'Outputs^ToPlc')
-    1569.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M35.Axis.PlcToNc')
+    1593.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M35.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 35', 'Inputs^FromPlc')
-    1570.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M36.Axis.NcToPlc')
+    1594.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M36.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 36', 'Outputs^ToPlc')
-    1571.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M36.Axis.PlcToNc')
+    1595.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M36.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 36', 'Inputs^FromPlc')
-    1572.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M37.Axis.NcToPlc')
+    1596.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M37.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 37', 'Outputs^ToPlc')
-    1573.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M37.Axis.PlcToNc')
+    1597.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M37.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 37', 'Inputs^FromPlc')
-    1574.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M38.Axis.NcToPlc')
+    1598.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M38.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 38', 'Outputs^ToPlc')
-    1575.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M38.Axis.PlcToNc')
+    1599.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M38.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 38', 'Inputs^FromPlc')
-    1576.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M39.Axis.NcToPlc')
+    1600.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M39.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 39', 'Outputs^ToPlc')
-    1577.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M39.Axis.PlcToNc')
+    1601.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M39.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 39', 'Inputs^FromPlc')
-    1578.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M4.Axis.NcToPlc')
+    1602.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M4.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 4', 'Outputs^ToPlc')
-    1579.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M4.Axis.PlcToNc')
+    1603.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M4.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 4', 'Inputs^FromPlc')
-    1580.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M40.Axis.NcToPlc')
+    1604.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M40.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 40', 'Outputs^ToPlc')
-    1581.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M40.Axis.PlcToNc')
+    1605.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M40.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 40', 'Inputs^FromPlc')
-    1582.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M5.Axis.NcToPlc')
+    1606.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M5.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 5', 'Outputs^ToPlc')
-    1583.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M5.Axis.PlcToNc')
+    1607.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M5.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 5', 'Inputs^FromPlc')
-    1584.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M6.Axis.NcToPlc')
+    1608.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M6.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 6', 'Outputs^ToPlc')
-    1585.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M6.Axis.PlcToNc')
+    1609.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M6.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 6', 'Inputs^FromPlc')
-    1586.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M7.Axis.NcToPlc')
+    1610.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M7.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 7', 'Outputs^ToPlc')
-    1587.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M7.Axis.PlcToNc')
+    1611.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M7.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 7', 'Inputs^FromPlc')
-    1588.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M8.Axis.NcToPlc')
+    1612.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M8.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 8', 'Outputs^ToPlc')
-    1589.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M8.Axis.PlcToNc')
+    1613.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M8.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 8', 'Inputs^FromPlc')
-    1590.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M9.Axis.NcToPlc')
+    1614.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M9.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 9', 'Outputs^ToPlc')
-    1591.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M9.Axis.PlcToNc')
+    1615.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M9.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^Axis 9', 'Inputs^FromPlc')
-    1592.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M53.Axis.NcToPlc')
+    1616.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M53.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^DIODE HORIZ X', 'Outputs^ToPlc')
-    1593.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M53.Axis.PlcToNc')
+    1617.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M53.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^DIODE HORIZ X', 'Inputs^FromPlc')
-    1594.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M54.Axis.NcToPlc')
+    1618.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M54.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^DIODE VERT Y', 'Outputs^ToPlc')
-    1595.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M54.Axis.PlcToNc')
+    1619.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M54.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^DIODE VERT Y', 'Inputs^FromPlc')
-    1596.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M22.Axis.NcToPlc')
+    1620.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M22.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^IM1L0-XTES-CLF', 'Outputs^ToPlc')
-    1597.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M22.Axis.PlcToNc')
+    1621.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M22.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^IM1L0-XTES-CLF', 'Inputs^FromPlc')
-    1598.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M21.Axis.NcToPlc')
+    1622.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M21.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^IM1L0-XTES-CLZ', 'Outputs^ToPlc')
-    1599.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M21.Axis.PlcToNc')
+    1623.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M21.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^IM1L0-XTES-CLZ', 'Inputs^FromPlc')
-    1600.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M20.Axis.NcToPlc')
+    1624.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M20.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^IM1L0-XTES-MMS', 'Outputs^ToPlc')
-    1601.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M20.Axis.PlcToNc')
+    1625.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M20.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^IM1L0-XTES-MMS', 'Inputs^FromPlc')
-    1602.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M23.Axis.NcToPlc')
+    1626.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M23.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^IM1L1-PPM-MMS', 'Outputs^ToPlc')
-    1603.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M23.Axis.PlcToNc')
+    1627.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M23.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^IM1L1-PPM-MMS', 'Inputs^FromPlc')
-    1604.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M26.Axis.NcToPlc')
+    1628.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M26.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^IM2L0-XTES-CLF', 'Outputs^ToPlc')
-    1605.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M26.Axis.PlcToNc')
+    1629.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M26.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^IM2L0-XTES-CLF', 'Inputs^FromPlc')
-    1606.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M25.Axis.NcToPlc')
+    1630.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M25.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^IM2L0-XTES-CLZ', 'Outputs^ToPlc')
-    1607.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M25.Axis.PlcToNc')
+    1631.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M25.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^IM2L0-XTES-CLZ', 'Inputs^FromPlc')
-    1608.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M24.Axis.NcToPlc')
+    1632.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M24.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^IM2L0-XTES-MMS', 'Outputs^ToPlc')
-    1609.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M24.Axis.PlcToNc')
+    1633.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M24.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^IM2L0-XTES-MMS', 'Inputs^FromPlc')
-    1610.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M27.Axis.NcToPlc')
+    1634.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M27.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^IM3L0-PPM-MMS', 'Outputs^ToPlc')
-    1611.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M27.Axis.PlcToNc')
+    1635.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M27.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^IM3L0-PPM-MMS', 'Inputs^FromPlc')
-    1612.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M30.Axis.NcToPlc')
+    1636.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M30.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^IM4L0-XTES-CLF', 'Outputs^ToPlc')
-    1613.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M30.Axis.PlcToNc')
+    1637.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M30.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^IM4L0-XTES-CLF', 'Inputs^FromPlc')
-    1614.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M29.Axis.NcToPlc')
+    1638.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M29.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^IM4L0-XTES-CLZ', 'Outputs^ToPlc')
-    1615.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M29.Axis.PlcToNc')
+    1639.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M29.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^IM4L0-XTES-CLZ', 'Inputs^FromPlc')
-    1616.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M28.Axis.NcToPlc')
+    1640.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M28.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^IM4L0-XTES-MMS', 'Outputs^ToPlc')
-    1617.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M28.Axis.PlcToNc')
+    1641.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M28.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^IM4L0-XTES-MMS', 'Inputs^FromPlc')
-    1618.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M31.Axis.NcToPlc')
+    1642.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M31.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^PF1L0-WFS-MMS-01', 'Outputs^ToPlc')
-    1619.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M31.Axis.PlcToNc')
+    1643.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M31.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^PF1L0-WFS-MMS-01', 'Inputs^FromPlc')
-    1620.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M32.Axis.NcToPlc')
+    1644.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M32.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^PF1L0-WFS-MMS-02', 'Outputs^ToPlc')
-    1621.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M32.Axis.PlcToNc')
+    1645.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M32.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^PF1L0-WFS-MMS-02', 'Inputs^FromPlc')
-    1622.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M51.Axis.NcToPlc')
+    1646.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M51.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^RETICLE HORIZ X', 'Outputs^ToPlc')
-    1623.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M51.Axis.PlcToNc')
+    1647.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M51.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^RETICLE HORIZ X', 'Inputs^FromPlc')
-    1624.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M52.Axis.NcToPlc')
+    1648.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M52.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^RETICLE VERT Y', 'Outputs^ToPlc')
-    1625.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M52.Axis.PlcToNc')
+    1649.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M52.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^RETICLE VERT Y', 'Inputs^FromPlc')
-    1626.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M41.Axis.NcToPlc')
+    1650.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M41.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^SL1L0-BOTTOM-M41', 'Outputs^ToPlc')
-    1627.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M41.Axis.PlcToNc')
+    1651.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M41.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^SL1L0-BOTTOM-M41', 'Inputs^FromPlc')
-    1628.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M44.Axis.NcToPlc')
+    1652.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M44.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^SL1L0-NORTH-M44', 'Outputs^ToPlc')
-    1629.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M44.Axis.PlcToNc')
+    1653.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M44.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^SL1L0-NORTH-M44', 'Inputs^FromPlc')
-    1630.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M42.Axis.NcToPlc')
+    1654.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M42.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^SL1L0-SOUTH-M42', 'Outputs^ToPlc')
-    1631.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M42.Axis.PlcToNc')
+    1655.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M42.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^SL1L0-SOUTH-M42', 'Inputs^FromPlc')
-    1632.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M43.Axis.NcToPlc')
+    1656.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M43.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^SL1L0-TOP-M43', 'Outputs^ToPlc')
-    1633.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M43.Axis.PlcToNc')
+    1657.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M43.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^SL1L0-TOP-M43', 'Inputs^FromPlc')
-    1634.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M45.Axis.NcToPlc')
+    1658.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M45.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^SL2L0-BOTTOM-M45', 'Outputs^ToPlc')
-    1635.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M45.Axis.PlcToNc')
+    1659.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M45.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^SL2L0-BOTTOM-M45', 'Inputs^FromPlc')
-    1636.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M48.Axis.NcToPlc')
+    1660.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M48.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^SL2L0-NORTH-M48', 'Outputs^ToPlc')
-    1637.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M48.Axis.PlcToNc')
+    1661.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M48.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^SL2L0-NORTH-M48', 'Inputs^FromPlc')
-    1638.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M46.Axis.NcToPlc')
+    1662.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M46.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^SL2L0-SOUTH-M46', 'Outputs^ToPlc')
-    1639.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M46.Axis.PlcToNc')
+    1663.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M46.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^SL2L0-SOUTH-M46', 'Inputs^FromPlc')
-    1640.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M47.Axis.NcToPlc')
+    1664.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M47.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^SL2L0-TOP-M47', 'Outputs^ToPlc')
-    1641.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M47.Axis.PlcToNc')
+    1665.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M47.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^SL2L0-TOP-M47', 'Inputs^FromPlc')
-    1642.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M49.Axis.NcToPlc')
+    1666.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M49.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^XTAL ANGLE X', 'Outputs^ToPlc')
-    1643.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M49.Axis.PlcToNc')
+    1667.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M49.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^XTAL ANGLE X', 'Inputs^FromPlc')
-    1644.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M50.Axis.NcToPlc')
+    1668.) A ('lfe_motion Instance', 'PlcTask Inputs^Main.M50.Axis.NcToPlc')
           B ('TINC^NC-Task 1 SAF^Axes^XTAL VERT Y', 'Outputs^ToPlc')
-    1645.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M50.Axis.PlcToNc')
+    1669.) A ('lfe_motion Instance', 'PlcTask Outputs^Main.M50.Axis.PlcToNc')
           B ('TINC^NC-Task 1 SAF^Axes^XTAL VERT Y', 'Inputs^FromPlc')
 
 Pragma lint results
 -------------------
 ```
-INFO:pytmc.bin.pragmalint:Total pragmas found: 132 Total linter errors: 0
+INFO:pytmc.bin.pragmalint:Total pragmas found: 152 Total linter errors: 0
 PLC Project (1): lfe_motion
 ===========================
+
+
+DUTs/ST_MPA.TcDUT (TcPlcObject)
+-------------------------------
+
+    - ST_MPA: Declaration - 11 pragmas
 
 
 GVLs/PMPS.TcGVL (TcPlcObject)
@@ -7205,6 +7619,12 @@ GVLs/Main.TcGVL (TcPlcObject)
 -----------------------------
 
     - Main: Declaration - 90 pragmas
+
+
+GVLs/RTDSL0.TcGVL (TcPlcObject)
+-------------------------------
+
+    - RTDSL0: Declaration - 5 pragmas
 
 
 POUs/PRG_IM1L0_XTES.TcPOU (TcPlcObject)
@@ -7247,6 +7667,12 @@ POUs/PRG_SL2L0_POWER.TcPOU (TcPlcObject)
 ----------------------------------------
 
     - PRG_SL2L0_POWER: Declaration - 7 pragmas
+
+
+Temp/FB_MPA.TcPOU (TcPlcObject)
+-------------------------------
+
+    - FB_MPA: Declaration - 4 pragmas
 
 
 Temp/FB_SLITS_POWER.TcPOU (TcPlcObject)
