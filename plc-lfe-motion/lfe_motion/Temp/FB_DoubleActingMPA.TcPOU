@@ -3,12 +3,12 @@
   <POU Name="FB_DoubleActingMPA" Id="{5cc05e41-c378-4cef-9233-38083d82d980}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_DoubleActingMPA
 VAR_IN_OUT
-	iq_MPA : DUT_DoubleActPneumaticActuator;
+    iq_MPA : DUT_DoubleActPneumaticActuator;
 END_VAR
 
 VAR
-	
-	
+
+
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -18,51 +18,32 @@ END_VAR
 
 
 IF iq_MPA.i_xInsertLS AND iq_MPA.i_xRetractLS THEN
-	iq_MPA.eState:=INVALID;
-ELSIF NOT iq_MPA.i_xInsertLS AND iq_MPA.i_xRetractLS AND iq_MPA.q_xRetractDO THEN 
-	iq_MPA.eState:=RETRACTED;
-ELSIF iq_MPA.i_xInsertLS AND NOT iq_MPA.i_xRetractLS AND NOT iq_MPA.q_xInsertDO THEN 
-	iq_MPA.eState:=INSERTED;
-ELSIF NOT iq_MPA.i_xInsertLS AND NOT iq_MPA.i_xInsertLS THEN 
-	iq_MPA.eState:=MOVING;
+    iq_MPA.eState:=INVALID;
+ELSIF NOT iq_MPA.i_xInsertLS AND iq_MPA.i_xRetractLS AND iq_MPA.q_xRetractDO THEN
+    iq_MPA.eState:=RETRACTED;
+ELSIF iq_MPA.i_xInsertLS AND NOT iq_MPA.i_xRetractLS AND NOT iq_MPA.q_xInsertDO THEN
+    iq_MPA.eState:=INSERTED;
+ELSIF NOT iq_MPA.i_xInsertLS AND NOT iq_MPA.i_xInsertLS THEN
+    iq_MPA.eState:=MOVING;
 ELSE
-	iq_MPA.eState:=INVALID;
+    iq_MPA.eState:=INVALID;
 END_IF
 
 
 
 IF iq_MPA._xInsertSW  THEN
-	iq_MPA._xRetractSW := FALSE;
-	iq_MPA.q_xRetractDO := FALSE;
-	iq_MPA.q_xInsertDO := TRUE;
+    iq_MPA._xRetractSW := FALSE;
+    iq_MPA.q_xRetractDO := FALSE;
+    iq_MPA.q_xInsertDO := TRUE;
 END_IF
 
 IF iq_MPA._xRetractSW THEN
-	iq_MPA._xInsertSW := FALSE;
-	iq_MPA.q_xInsertDO:= FALSE;
-	iq_MPA.q_xRetractDO := TRUE;
+    iq_MPA._xInsertSW := FALSE;
+    iq_MPA.q_xInsertDO:= FALSE;
+    iq_MPA.q_xRetractDO := TRUE;
 END_IF
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="FB_DoubleActingMPA">
-      <LineId Id="37" Count="1" />
-      <LineId Id="50" Count="2" />
-      <LineId Id="39" Count="10" />
-      <LineId Id="34" Count="2" />
-      <LineId Id="9" Count="0" />
-      <LineId Id="16" Count="0" />
-      <LineId Id="31" Count="0" />
-      <LineId Id="14" Count="0" />
-      <LineId Id="12" Count="0" />
-      <LineId Id="26" Count="0" />
-      <LineId Id="19" Count="0" />
-      <LineId Id="33" Count="0" />
-      <LineId Id="20" Count="0" />
-      <LineId Id="22" Count="0" />
-      <LineId Id="17" Count="0" />
-      <LineId Id="24" Count="0" />
-      <LineId Id="23" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
