@@ -898,6 +898,8 @@ END_FUNCTION_BLOCK
     <span class="n">Only</span> <span class="s">&quot;fast&quot;</span> <span class="n">programs</span> <span class="n">are</span> <span class="n">allowed</span> <span class="n">here</span><span class="p">,</span>
     <span class="n">anything</span> <span class="k">else</span> <span class="n">needs</span> <span class="k">to</span> <span class="n">be</span> <span class="n">relegated</span> <span class="k">to</span> <span class="n">a</span> <span class="n">second</span> <span class="n">task</span>
 <span class="o">*</span><span class="p">)</span>
+
+<span class="n">fbLogHandler</span> <span class="o">:</span> <span class="n">FB_LogHandler</span><span class="p">;</span>
 <span class="n">PRG_2_PMPS_PRE</span><span class="p">();</span>
 <span class="n">PRG_AT2L0_SOLID</span><span class="p">();</span>
 <span class="n">PRG_IM1L0_XTES</span><span class="p">();</span>
@@ -912,6 +914,8 @@ END_FUNCTION_BLOCK
 <span class="n">PRG_SP1L0_KMONO</span><span class="p">();</span>
 
 <span class="n">PRG_3_PMPS_POST</span><span class="p">();</span>
+
+<span class="n">fbLogHandler</span><span class="p">();</span>
 
 <span class="n">END_PROGRAM</span>
 </pre></div>
