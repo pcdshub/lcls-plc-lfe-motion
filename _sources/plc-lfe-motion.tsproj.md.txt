@@ -901,8 +901,6 @@ PROGRAM PRG_1_PlcTask
     Only "fast" programs are allowed here,
     anything else needs to be relegated to a second task
 *)
-
-fbLogHandler : FB_LogHandler;
 PRG_2_PMPS_PRE();
 PRG_AT2L0_SOLID();
 PRG_IM1L0_XTES();
@@ -917,8 +915,6 @@ PRG_SL2L0_POWER();
 PRG_SP1L0_KMONO();
 
 PRG_3_PMPS_POST();
-
-fbLogHandler();
 
 END_PROGRAM
 ```
