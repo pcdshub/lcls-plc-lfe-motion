@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_IM3L0_PPM" Id="{e4255619-3c3a-488b-9f38-90b77c8df5be}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_IM3L0_PPM
 VAR
@@ -24,10 +24,10 @@ END_VAR
     <Implementation>
       <ST><![CDATA[fbIM3L0(
     stYStage := Main.M27,
-    fPolished := -50,
-    fFrosted := -60,
-    fPower := -70,
-    fOut := 0);]]></ST>
+    fPolished := -71.50,
+    fFrosted := -97.51, // Actually a second polished yag
+    fPower := -37.87,
+    fOut := -8); // 1.13 in doc, but limit is closer]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
