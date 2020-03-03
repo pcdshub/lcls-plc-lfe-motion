@@ -1224,10 +1224,10 @@ VAR
 END_VAR
 fbIM1L1(
     stYStage := Main.M23,
-    fPolished := -50,
-    fFrosted := -60,
-    fPower := -70,
-    fOut := 0);
+    fPolished := -71.69,
+    fFrosted := -97.70, // Actually a second polished yag
+    fPower := -47.59,
+    fOut := -8.59);
 
 END_PROGRAM
 ```
@@ -1342,10 +1342,10 @@ VAR
 END_VAR
 fbIM3L0(
     stYStage := Main.M27,
-    fPolished := -50,
-    fFrosted := -60,
-    fPower := -70,
-    fOut := 0);
+    fPolished := -71.50,
+    fFrosted := -97.51, // Actually a second polished yag
+    fPower := -47.4,
+    fOut := -8.4);
 
 END_PROGRAM
 ```
@@ -3721,12 +3721,13 @@ NC axes
         OtherSettings:AllowMotionCmdToSlave = 'true'
         Enc:EncType = 29
         Enc:ScaleFactorNumerator = 5e-05
-        Enc:Offset = -214675.2262
+        Enc:Offset = -214686.941
         Enc:MaxCount = '#xffffffff'
         Enc:ReferenceSystem = 1
         Enc:SoftEndMinControl:Enable = 'true'
-        Enc:SoftEndMinControl:Range = -89.3751
+        Enc:SoftEndMinControl:Range = -101.12
         Enc:SoftEndMaxControl:Enable = 'true'
+        Enc:SoftEndMaxControl:Range = -11
         Enc:Inc:RefSoftSyncMask = '#x0000ffff'
 
     24.) 'IM2L0-XTES-MMS':
@@ -3797,12 +3798,11 @@ NC axes
         OtherSettings:AllowMotionCmdToSlave = 'true'
         Enc:EncType = 29
         Enc:ScaleFactorNumerator = 5e-05
-        Enc:Offset = -214678.9304
+        Enc:Offset = -214686.941
         Enc:MaxCount = '#xffffffff'
         Enc:ReferenceSystem = 1
-        Enc:SoftEndMinControl:Enable = 'true'
-        Enc:SoftEndMinControl:Range = -84.7752
-        Enc:SoftEndMaxControl:Enable = 'true'
+        Enc:SoftEndMinControl:Range = -92.82
+        Enc:SoftEndMaxControl:Range = -8
         Enc:Inc:RefSoftSyncMask = '#x0000ffff'
 
     28.) 'IM4L0-XTES-MMS':

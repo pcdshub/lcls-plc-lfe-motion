@@ -1206,10 +1206,10 @@ VAR
 END_VAR
 fbIM1L1(
     stYStage := Main.M23,
-    fPolished := -50,
-    fFrosted := -60,
-    fPower := -70,
-    fOut := 0);
+    fPolished := -71.69,
+    fFrosted := -97.70, // Actually a second polished yag
+    fPower := -47.59,
+    fOut := -8.59);
 
 END_PROGRAM
 </pre></div>
@@ -1318,10 +1318,10 @@ VAR
 END_VAR
 fbIM3L0(
     stYStage := Main.M27,
-    fPolished := -50,
-    fFrosted := -60,
-    fPower := -70,
-    fOut := 0);
+    fPolished := -71.50,
+    fFrosted := -97.51, // Actually a second polished yag
+    fPower := -47.4,
+    fOut := -8.4);
 
 END_PROGRAM
 </pre></div>
@@ -3681,12 +3681,13 @@ END_PROGRAM
     <span class="n">OtherSettings</span><span class="p">:</span><span class="n">AllowMotionCmdToSlave</span> <span class="o">=</span> <span class="s1">&#39;true&#39;</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">EncType</span> <span class="o">=</span> <span class="mi">29</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">ScaleFactorNumerator</span> <span class="o">=</span> <span class="mf">5e-05</span>
-    <span class="n">Enc</span><span class="p">:</span><span class="n">Offset</span> <span class="o">=</span> <span class="o">-</span><span class="mf">214675.2262</span>
+    <span class="n">Enc</span><span class="p">:</span><span class="n">Offset</span> <span class="o">=</span> <span class="o">-</span><span class="mf">214686.941</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">MaxCount</span> <span class="o">=</span> <span class="s1">&#39;#xffffffff&#39;</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">ReferenceSystem</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">SoftEndMinControl</span><span class="p">:</span><span class="n">Enable</span> <span class="o">=</span> <span class="s1">&#39;true&#39;</span>
-    <span class="n">Enc</span><span class="p">:</span><span class="n">SoftEndMinControl</span><span class="p">:</span><span class="n">Range</span> <span class="o">=</span> <span class="o">-</span><span class="mf">89.3751</span>
+    <span class="n">Enc</span><span class="p">:</span><span class="n">SoftEndMinControl</span><span class="p">:</span><span class="n">Range</span> <span class="o">=</span> <span class="o">-</span><span class="mf">101.12</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">SoftEndMaxControl</span><span class="p">:</span><span class="n">Enable</span> <span class="o">=</span> <span class="s1">&#39;true&#39;</span>
+    <span class="n">Enc</span><span class="p">:</span><span class="n">SoftEndMaxControl</span><span class="p">:</span><span class="n">Range</span> <span class="o">=</span> <span class="o">-</span><span class="mi">11</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">Inc</span><span class="p">:</span><span class="n">RefSoftSyncMask</span> <span class="o">=</span> <span class="s1">&#39;#x0000ffff&#39;</span>
 
 <span class="mf">24.</span><span class="p">)</span> <span class="s1">&#39;IM2L0-XTES-MMS&#39;</span><span class="p">:</span>
@@ -3757,12 +3758,11 @@ END_PROGRAM
     <span class="n">OtherSettings</span><span class="p">:</span><span class="n">AllowMotionCmdToSlave</span> <span class="o">=</span> <span class="s1">&#39;true&#39;</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">EncType</span> <span class="o">=</span> <span class="mi">29</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">ScaleFactorNumerator</span> <span class="o">=</span> <span class="mf">5e-05</span>
-    <span class="n">Enc</span><span class="p">:</span><span class="n">Offset</span> <span class="o">=</span> <span class="o">-</span><span class="mf">214678.9304</span>
+    <span class="n">Enc</span><span class="p">:</span><span class="n">Offset</span> <span class="o">=</span> <span class="o">-</span><span class="mf">214686.941</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">MaxCount</span> <span class="o">=</span> <span class="s1">&#39;#xffffffff&#39;</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">ReferenceSystem</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">Enc</span><span class="p">:</span><span class="n">SoftEndMinControl</span><span class="p">:</span><span class="n">Enable</span> <span class="o">=</span> <span class="s1">&#39;true&#39;</span>
-    <span class="n">Enc</span><span class="p">:</span><span class="n">SoftEndMinControl</span><span class="p">:</span><span class="n">Range</span> <span class="o">=</span> <span class="o">-</span><span class="mf">84.7752</span>
-    <span class="n">Enc</span><span class="p">:</span><span class="n">SoftEndMaxControl</span><span class="p">:</span><span class="n">Enable</span> <span class="o">=</span> <span class="s1">&#39;true&#39;</span>
+    <span class="n">Enc</span><span class="p">:</span><span class="n">SoftEndMinControl</span><span class="p">:</span><span class="n">Range</span> <span class="o">=</span> <span class="o">-</span><span class="mf">92.82</span>
+    <span class="n">Enc</span><span class="p">:</span><span class="n">SoftEndMaxControl</span><span class="p">:</span><span class="n">Range</span> <span class="o">=</span> <span class="o">-</span><span class="mi">8</span>
     <span class="n">Enc</span><span class="p">:</span><span class="n">Inc</span><span class="p">:</span><span class="n">RefSoftSyncMask</span> <span class="o">=</span> <span class="s1">&#39;#x0000ffff&#39;</span>
 
 <span class="mf">28.</span><span class="p">)</span> <span class="s1">&#39;IM4L0-XTES-MMS&#39;</span><span class="p">:</span>
