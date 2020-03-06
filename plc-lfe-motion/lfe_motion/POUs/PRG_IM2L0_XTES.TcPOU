@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_IM2L0_XTES" Id="{86a27ca3-c197-4a69-8332-821ef1b19550}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_IM2L0_XTES
 VAR
@@ -11,7 +11,8 @@ VAR
                               .bZoomEndBwd := TIIB[IM2L0-EL1088]^Channel 2^Input;
                               .bFocusEndFwd := TIIB[IM2L0-EL1088]^Channel 3^Input;
                               .bFocusEndBwd := TIIB[IM2L0-EL1088]^Channel 4^Input;
-                              .fbOpal.bOpalPower := TIIB[IM2L0-EL2004]^Channel 2^Output'}
+                              .fbOpal.bOpalPower := TIIB[IM2L0-EL2004]^Channel 2^Output;
+                              .fbOpal.bLedPower := TIIB[IM2L0-EL2004]^Channel 3^Output'}
     fbIM2L0: FB_XPIM;
     {attribute 'TcLinkTo' := '.Status := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Status;
                               .D[0] := TIIB[IM2L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 0;
