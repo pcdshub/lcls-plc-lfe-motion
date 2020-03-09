@@ -6158,6 +6158,25 @@ record(bo, &quot;IM1L0:XTES:SFW:FLOW&quot;) {
   info(autosaveFields_pass0, &quot;VAL&quot;)
 }
 
+record(ai, &quot;SL1L0:POWER:WIDTH_DES_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.rReqApertureSizeX&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.rReqApertureSizeX?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SL1L0:POWER:WIDTH_DES&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.rReqApertureSizeX&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.rReqApertureSizeX=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
+}
+
 record(mbbi, &quot;IM1L1:PPM:MMS:STATE:SET_RBV&quot;) {
   field(DESC, &quot;ads:PRG_IM1L1_PPM.fb....fbStates.enumSet&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
@@ -16288,21 +16307,21 @@ record(bo, &quot;IM4L0:XTES:SFW:FLOW&quot;) {
   info(autosaveFields_pass0, &quot;VAL&quot;)
 }
 
-record(ai, &quot;SL1L0:POWER:WIDTH_DES_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER.rReqApertureSizeX&quot;)
+record(ai, &quot;SL1L0:POWER:HEIGHT_DES_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.rReqApertureSizeY&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.rReqApertureSizeX?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.rReqApertureSizeY?&quot;)
   field(PREC, &quot;3&quot;)
   info(autosaveFields_pass0, &quot;PREC&quot;)
 }
 
-record(ao, &quot;SL1L0:POWER:WIDTH_DES&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER.rReqApertureSizeX&quot;)
+record(ao, &quot;SL1L0:POWER:HEIGHT_DES&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.rReqApertureSizeY&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.rReqApertureSizeX=&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.rReqApertureSizeY=&quot;)
   field(PREC, &quot;3&quot;)
   info(autosaveFields_pass0, &quot;PREC VAL&quot;)
 }
@@ -17455,25 +17474,6 @@ record(waveform, &quot;SL1L0:POWER:SOUTH:ERRMSG_RBV&quot;) {
   field(NELM, &quot;80&quot;)
 }
 
-record(ai, &quot;SL1L0:POWER:HEIGHT_DES_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER.rReqApertureSizeY&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.rReqApertureSizeY?&quot;)
-  field(PREC, &quot;3&quot;)
-  info(autosaveFields_pass0, &quot;PREC&quot;)
-}
-
-record(ao, &quot;SL1L0:POWER:HEIGHT_DES&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER.rReqApertureSizeY&quot;)
-  field(DTYP, &quot;asynFloat64&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.rReqApertureSizeY=&quot;)
-  field(PREC, &quot;3&quot;)
-  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
-}
-
 record(ai, &quot;SL1L0:POWER:CENTER_X_DES_RBV&quot;) {
   field(DESC, &quot;ads:PRG_SL1L0_POWER.rReqCenterX&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
@@ -17508,25 +17508,6 @@ record(ao, &quot;SL1L0:POWER:CENTER_Y_DES&quot;) {
   field(DESC, &quot;ads:PRG_SL1L0_POWER.rReqCenterY&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
   field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.rReqCenterY=&quot;)
-  field(PREC, &quot;3&quot;)
-  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
-}
-
-record(ai, &quot;SL2L0:POWER:WIDTH_DES_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER.rReqApertureSizeX&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.rReqApertureSizeX?&quot;)
-  field(PREC, &quot;3&quot;)
-  info(autosaveFields_pass0, &quot;PREC&quot;)
-}
-
-record(ao, &quot;SL2L0:POWER:WIDTH_DES&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER.rReqApertureSizeX&quot;)
-  field(DTYP, &quot;asynFloat64&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.rReqApertureSizeX=&quot;)
   field(PREC, &quot;3&quot;)
   info(autosaveFields_pass0, &quot;PREC VAL&quot;)
 }
@@ -18679,6 +18660,25 @@ record(waveform, &quot;SL2L0:POWER:SOUTH:ERRMSG_RBV&quot;) {
   field(NELM, &quot;80&quot;)
 }
 
+record(ai, &quot;SL2L0:POWER:WIDTH_DES_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.rReqApertureSizeX&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.rReqApertureSizeX?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SL2L0:POWER:WIDTH_DES&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.rReqApertureSizeX&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.rReqApertureSizeX=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
+}
+
 record(ai, &quot;SL2L0:POWER:HEIGHT_DES_RBV&quot;) {
   field(DESC, &quot;ads:PRG_SL2L0_POWER.rReqApertureSizeY&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
@@ -18734,6 +18734,862 @@ record(ao, &quot;SL2L0:POWER:CENTER_Y_DES&quot;) {
   field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.rReqCenterY=&quot;)
   field(PREC, &quot;3&quot;)
   info(autosaveFields_pass0, &quot;PREC VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:01:FF_Reset_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_01.i_xReset&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.i_xReset?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:01:FF_Reset&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_01.i_xReset&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_01.i_xReset=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:01:IN_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_01.q_stAct.i_bInLS&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.i_bInLS?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:01:OUT_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP....q_stAct.i_bOutLS&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.i_bOutLS?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:01:INSERT_DO_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.q_bRetract&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.q_bRetract?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:01:RETRACT_DO_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...q_stAct.q_bInsert&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.q_bInsert?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:01:ILKOK_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_01.q_stAct.bILK_OK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.bILK_OK?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:01:INSERT_OK_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...q_stAct.bInsertOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.bInsertOK?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:01:RETRACT_OK_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bRetractOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.bRetractOK?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:01:IN_CMD_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bInsert_SW&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.bInsert_SW?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:01:IN_CMD&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bInsert_SW&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_01.q_stAct.bInsert_SW=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:01:OUT_CMD_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...stAct.bRetract_SW&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.bRetract_SW?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:01:OUT_CMD&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...stAct.bRetract_SW&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_01.q_stAct.bRetract_SW=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:01:ERROR_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...Act.bErrorPresent&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.bErrorPresent?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:01:ERROR&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...Act.bErrorPresent&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_01.q_stAct.bErrorPresent=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(mbbi, &quot;RTDSL0:MPA:01:POS_STATE_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_01.q_stAct.eState&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.eState?&quot;)
+  field(ZRVL, &quot;0&quot;)
+  field(ONVL, &quot;1&quot;)
+  field(TWVL, &quot;2&quot;)
+  field(THVL, &quot;3&quot;)
+  field(ZRST, &quot;RETRACTED&quot;)
+  field(ONST, &quot;INSERTED&quot;)
+  field(TWST, &quot;MOVING&quot;)
+  field(THST, &quot;INVALID&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:01:MPS_FAULT_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_01.xMPS_OK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.xMPS_OK?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:01:MPS_FAULT&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_01.xMPS_OK&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_01.xMPS_OK=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:01:MOT_DONE_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_01.xDone&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.xDone?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:01:MOT_DONE&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_01.xDone&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_01.xDone=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:02:FF_Reset_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_02.i_xReset&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.i_xReset?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:02:FF_Reset&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_02.i_xReset&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_02.i_xReset=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:02:IN_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_02.q_stAct.i_bInLS&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.i_bInLS?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:02:OUT_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP....q_stAct.i_bOutLS&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.i_bOutLS?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:02:INSERT_DO_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.q_bRetract&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.q_bRetract?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:02:RETRACT_DO_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...q_stAct.q_bInsert&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.q_bInsert?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:02:ILKOK_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_02.q_stAct.bILK_OK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.bILK_OK?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:02:INSERT_OK_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...q_stAct.bInsertOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.bInsertOK?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:02:RETRACT_OK_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bRetractOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.bRetractOK?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:02:IN_CMD_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bInsert_SW&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.bInsert_SW?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:02:IN_CMD&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bInsert_SW&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_02.q_stAct.bInsert_SW=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:02:OUT_CMD_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...stAct.bRetract_SW&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.bRetract_SW?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:02:OUT_CMD&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...stAct.bRetract_SW&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_02.q_stAct.bRetract_SW=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:02:ERROR_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...Act.bErrorPresent&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.bErrorPresent?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:02:ERROR&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...Act.bErrorPresent&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_02.q_stAct.bErrorPresent=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(mbbi, &quot;RTDSL0:MPA:02:POS_STATE_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_02.q_stAct.eState&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.eState?&quot;)
+  field(ZRVL, &quot;0&quot;)
+  field(ONVL, &quot;1&quot;)
+  field(TWVL, &quot;2&quot;)
+  field(THVL, &quot;3&quot;)
+  field(ZRST, &quot;RETRACTED&quot;)
+  field(ONST, &quot;INSERTED&quot;)
+  field(TWST, &quot;MOVING&quot;)
+  field(THST, &quot;INVALID&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:02:MPS_FAULT_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_02.xMPS_OK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.xMPS_OK?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:02:MPS_FAULT&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_02.xMPS_OK&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_02.xMPS_OK=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:02:MOT_DONE_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_02.xDone&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.xDone?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:02:MOT_DONE&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_02.xDone&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_02.xDone=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:03:FF_Reset_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_03.i_xReset&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.i_xReset?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:03:FF_Reset&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_03.i_xReset&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_03.i_xReset=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:03:IN_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_03.q_stAct.i_bInLS&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.i_bInLS?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:03:OUT_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP....q_stAct.i_bOutLS&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.i_bOutLS?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:03:INSERT_DO_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.q_bRetract&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.q_bRetract?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:03:RETRACT_DO_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...q_stAct.q_bInsert&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.q_bInsert?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:03:ILKOK_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_03.q_stAct.bILK_OK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.bILK_OK?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:03:INSERT_OK_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...q_stAct.bInsertOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.bInsertOK?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:03:RETRACT_OK_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bRetractOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.bRetractOK?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:03:IN_CMD_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bInsert_SW&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.bInsert_SW?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:03:IN_CMD&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bInsert_SW&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_03.q_stAct.bInsert_SW=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:03:OUT_CMD_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...stAct.bRetract_SW&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.bRetract_SW?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:03:OUT_CMD&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...stAct.bRetract_SW&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_03.q_stAct.bRetract_SW=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:03:ERROR_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...Act.bErrorPresent&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.bErrorPresent?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:03:ERROR&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...Act.bErrorPresent&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_03.q_stAct.bErrorPresent=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(mbbi, &quot;RTDSL0:MPA:03:POS_STATE_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_03.q_stAct.eState&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.eState?&quot;)
+  field(ZRVL, &quot;0&quot;)
+  field(ONVL, &quot;1&quot;)
+  field(TWVL, &quot;2&quot;)
+  field(THVL, &quot;3&quot;)
+  field(ZRST, &quot;RETRACTED&quot;)
+  field(ONST, &quot;INSERTED&quot;)
+  field(TWST, &quot;MOVING&quot;)
+  field(THST, &quot;INVALID&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:03:MPS_FAULT_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_03.xMPS_OK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.xMPS_OK?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:03:MPS_FAULT&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_03.xMPS_OK&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_03.xMPS_OK=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:03:MOT_DONE_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_03.xDone&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.xDone?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:03:MOT_DONE&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_03.xDone&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_03.xDone=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:04:FF_Reset_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_04.i_xReset&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.i_xReset?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:04:FF_Reset&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_04.i_xReset&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_04.i_xReset=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:04:IN_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_04.q_stAct.i_bInLS&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.i_bInLS?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:04:OUT_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP....q_stAct.i_bOutLS&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.i_bOutLS?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:04:INSERT_DO_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.q_bRetract&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.q_bRetract?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:04:RETRACT_DO_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...q_stAct.q_bInsert&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.q_bInsert?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:04:ILKOK_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_04.q_stAct.bILK_OK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.bILK_OK?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:04:INSERT_OK_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...q_stAct.bInsertOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.bInsertOK?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:04:RETRACT_OK_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bRetractOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.bRetractOK?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:04:IN_CMD_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bInsert_SW&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.bInsert_SW?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:04:IN_CMD&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bInsert_SW&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_04.q_stAct.bInsert_SW=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:04:OUT_CMD_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...stAct.bRetract_SW&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.bRetract_SW?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:04:OUT_CMD&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...stAct.bRetract_SW&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_04.q_stAct.bRetract_SW=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:04:ERROR_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...Act.bErrorPresent&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.bErrorPresent?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:04:ERROR&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...Act.bErrorPresent&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_04.q_stAct.bErrorPresent=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(mbbi, &quot;RTDSL0:MPA:04:POS_STATE_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_04.q_stAct.eState&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.eState?&quot;)
+  field(ZRVL, &quot;0&quot;)
+  field(ONVL, &quot;1&quot;)
+  field(TWVL, &quot;2&quot;)
+  field(THVL, &quot;3&quot;)
+  field(ZRST, &quot;RETRACTED&quot;)
+  field(ONST, &quot;INSERTED&quot;)
+  field(TWST, &quot;MOVING&quot;)
+  field(THST, &quot;INVALID&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:04:MPS_FAULT_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_04.xMPS_OK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.xMPS_OK?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:04:MPS_FAULT&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_04.xMPS_OK&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_04.xMPS_OK=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;RTDSL0:MPA:04:MOT_DONE_RBV&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_04.xDone&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.xDone?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;RTDSL0:MPA:04:MOT_DONE&quot;) {
+  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_04.xDone&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_04.xDone=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
 }
 
 record(bi, &quot;AT2L0:XTES:MMS:01:PLC:bLimitForwardEnable_RBV&quot;) {
@@ -39112,862 +39968,6 @@ record(waveform, &quot;SP1L0:KMONO:MMS:DIODE_VERT:PLC:sErrorMessage_RBV&quot;) {
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M54.sErrorMessage?&quot;)
   field(FTVL, &quot;CHAR&quot;)
   field(NELM, &quot;80&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:01:FF_Reset_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_01.i_xReset&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.i_xReset?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:01:FF_Reset&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_01.i_xReset&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_01.i_xReset=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:01:IN_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_01.q_stAct.i_bInLS&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.i_bInLS?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:01:OUT_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP....q_stAct.i_bOutLS&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.i_bOutLS?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:01:INSERT_DO_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.q_bRetract&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.q_bRetract?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:01:RETRACT_DO_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...q_stAct.q_bInsert&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.q_bInsert?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:01:ILKOK_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_01.q_stAct.bILK_OK&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.bILK_OK?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:01:INSERT_OK_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...q_stAct.bInsertOK&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.bInsertOK?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:01:RETRACT_OK_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bRetractOK&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.bRetractOK?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:01:IN_CMD_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bInsert_SW&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.bInsert_SW?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:01:IN_CMD&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bInsert_SW&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_01.q_stAct.bInsert_SW=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:01:OUT_CMD_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...stAct.bRetract_SW&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.bRetract_SW?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:01:OUT_CMD&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...stAct.bRetract_SW&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_01.q_stAct.bRetract_SW=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:01:ERROR_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...Act.bErrorPresent&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.bErrorPresent?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:01:ERROR&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...Act.bErrorPresent&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_01.q_stAct.bErrorPresent=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(mbbi, &quot;RTDSL0:MPA:01:POS_STATE_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_01.q_stAct.eState&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.q_stAct.eState?&quot;)
-  field(ZRVL, &quot;0&quot;)
-  field(ONVL, &quot;1&quot;)
-  field(TWVL, &quot;2&quot;)
-  field(THVL, &quot;3&quot;)
-  field(ZRST, &quot;RETRACTED&quot;)
-  field(ONST, &quot;INSERTED&quot;)
-  field(TWST, &quot;MOVING&quot;)
-  field(THST, &quot;INVALID&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:01:MPS_FAULT_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_01.xMPS_OK&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.xMPS_OK?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:01:MPS_FAULT&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_01.xMPS_OK&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_01.xMPS_OK=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:01:MOT_DONE_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_01.xDone&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_01.xDone?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:01:MOT_DONE&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_01.xDone&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_01.xDone=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:02:FF_Reset_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_02.i_xReset&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.i_xReset?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:02:FF_Reset&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_02.i_xReset&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_02.i_xReset=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:02:IN_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_02.q_stAct.i_bInLS&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.i_bInLS?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:02:OUT_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP....q_stAct.i_bOutLS&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.i_bOutLS?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:02:INSERT_DO_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.q_bRetract&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.q_bRetract?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:02:RETRACT_DO_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...q_stAct.q_bInsert&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.q_bInsert?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:02:ILKOK_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_02.q_stAct.bILK_OK&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.bILK_OK?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:02:INSERT_OK_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...q_stAct.bInsertOK&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.bInsertOK?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:02:RETRACT_OK_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bRetractOK&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.bRetractOK?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:02:IN_CMD_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bInsert_SW&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.bInsert_SW?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:02:IN_CMD&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bInsert_SW&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_02.q_stAct.bInsert_SW=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:02:OUT_CMD_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...stAct.bRetract_SW&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.bRetract_SW?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:02:OUT_CMD&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...stAct.bRetract_SW&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_02.q_stAct.bRetract_SW=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:02:ERROR_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...Act.bErrorPresent&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.bErrorPresent?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:02:ERROR&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...Act.bErrorPresent&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_02.q_stAct.bErrorPresent=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(mbbi, &quot;RTDSL0:MPA:02:POS_STATE_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_02.q_stAct.eState&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.q_stAct.eState?&quot;)
-  field(ZRVL, &quot;0&quot;)
-  field(ONVL, &quot;1&quot;)
-  field(TWVL, &quot;2&quot;)
-  field(THVL, &quot;3&quot;)
-  field(ZRST, &quot;RETRACTED&quot;)
-  field(ONST, &quot;INSERTED&quot;)
-  field(TWST, &quot;MOVING&quot;)
-  field(THST, &quot;INVALID&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:02:MPS_FAULT_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_02.xMPS_OK&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.xMPS_OK?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:02:MPS_FAULT&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_02.xMPS_OK&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_02.xMPS_OK=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:02:MOT_DONE_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_02.xDone&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_02.xDone?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:02:MOT_DONE&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_02.xDone&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_02.xDone=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:03:FF_Reset_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_03.i_xReset&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.i_xReset?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:03:FF_Reset&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_03.i_xReset&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_03.i_xReset=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:03:IN_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_03.q_stAct.i_bInLS&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.i_bInLS?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:03:OUT_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP....q_stAct.i_bOutLS&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.i_bOutLS?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:03:INSERT_DO_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.q_bRetract&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.q_bRetract?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:03:RETRACT_DO_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...q_stAct.q_bInsert&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.q_bInsert?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:03:ILKOK_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_03.q_stAct.bILK_OK&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.bILK_OK?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:03:INSERT_OK_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...q_stAct.bInsertOK&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.bInsertOK?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:03:RETRACT_OK_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bRetractOK&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.bRetractOK?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:03:IN_CMD_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bInsert_SW&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.bInsert_SW?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:03:IN_CMD&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bInsert_SW&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_03.q_stAct.bInsert_SW=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:03:OUT_CMD_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...stAct.bRetract_SW&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.bRetract_SW?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:03:OUT_CMD&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...stAct.bRetract_SW&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_03.q_stAct.bRetract_SW=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:03:ERROR_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...Act.bErrorPresent&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.bErrorPresent?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:03:ERROR&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...Act.bErrorPresent&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_03.q_stAct.bErrorPresent=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(mbbi, &quot;RTDSL0:MPA:03:POS_STATE_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_03.q_stAct.eState&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.q_stAct.eState?&quot;)
-  field(ZRVL, &quot;0&quot;)
-  field(ONVL, &quot;1&quot;)
-  field(TWVL, &quot;2&quot;)
-  field(THVL, &quot;3&quot;)
-  field(ZRST, &quot;RETRACTED&quot;)
-  field(ONST, &quot;INSERTED&quot;)
-  field(TWST, &quot;MOVING&quot;)
-  field(THST, &quot;INVALID&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:03:MPS_FAULT_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_03.xMPS_OK&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.xMPS_OK?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:03:MPS_FAULT&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_03.xMPS_OK&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_03.xMPS_OK=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:03:MOT_DONE_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_03.xDone&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_03.xDone?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:03:MOT_DONE&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_03.xDone&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_03.xDone=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:04:FF_Reset_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_04.i_xReset&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.i_xReset?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:04:FF_Reset&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_04.i_xReset&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_04.i_xReset=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:04:IN_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_04.q_stAct.i_bInLS&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.i_bInLS?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:04:OUT_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP....q_stAct.i_bOutLS&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.i_bOutLS?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:04:INSERT_DO_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.q_bRetract&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.q_bRetract?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:04:RETRACT_DO_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...q_stAct.q_bInsert&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.q_bInsert?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:04:ILKOK_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_04.q_stAct.bILK_OK&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.bILK_OK?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:04:INSERT_OK_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...q_stAct.bInsertOK&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.bInsertOK?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:04:RETRACT_OK_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bRetractOK&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.bRetractOK?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:04:IN_CMD_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bInsert_SW&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.bInsert_SW?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:04:IN_CMD&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP..._stAct.bInsert_SW&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_04.q_stAct.bInsert_SW=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:04:OUT_CMD_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...stAct.bRetract_SW&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.bRetract_SW?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:04:OUT_CMD&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...stAct.bRetract_SW&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_04.q_stAct.bRetract_SW=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:04:ERROR_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...Act.bErrorPresent&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.bErrorPresent?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:04:ERROR&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MP...Act.bErrorPresent&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_04.q_stAct.bErrorPresent=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(mbbi, &quot;RTDSL0:MPA:04:POS_STATE_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_04.q_stAct.eState&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.q_stAct.eState?&quot;)
-  field(ZRVL, &quot;0&quot;)
-  field(ONVL, &quot;1&quot;)
-  field(TWVL, &quot;2&quot;)
-  field(THVL, &quot;3&quot;)
-  field(ZRST, &quot;RETRACTED&quot;)
-  field(ONST, &quot;INSERTED&quot;)
-  field(TWST, &quot;MOVING&quot;)
-  field(THST, &quot;INVALID&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:04:MPS_FAULT_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_04.xMPS_OK&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.xMPS_OK?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:04:MPS_FAULT&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_04.xMPS_OK&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_04.xMPS_OK=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(bi, &quot;RTDSL0:MPA:04:MOT_DONE_RBV&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_04.xDone&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/RTDSL0.RTDSL0_MPA_04.xDone?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;RTDSL0:MPA:04:MOT_DONE&quot;) {
-  field(DESC, &quot;ads:RTDSL0.RTDSL0_MPA_04.xDone&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/RTDSL0.RTDSL0_MPA_04.xDone=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
 }```
 </pre></div>
 </div>
