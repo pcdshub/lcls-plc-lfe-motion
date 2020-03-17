@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="FB_SLITS_POWER" Id="{f2a7b61c-c24f-40b8-8c2e-4d94fdfd3c86}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_SLITS_POWER
 VAR_IN_OUT
@@ -99,7 +99,10 @@ stTopBlade.bHardwareEnable := TRUE;
 stBottomBlade.bHardwareEnable := TRUE;
 stNorthBlade.bHardwareEnable := TRUE;
 stSouthBlade.bHardwareEnable := TRUE;
-
+stTopBlade.bPowerSelf :=TRUE;
+stBottomBlade.bPowerSelf :=TRUE;
+stNorthBlade.bPowerSelf :=TRUE;
+stSouthBlade.bPowerSelf :=TRUE;
 
 //RTDs
 RTD_TOP_1();
@@ -173,6 +176,7 @@ fbSouth(
       <LineId Id="33" Count="2" />
       <LineId Id="67" Count="3" />
       <LineId Id="55" Count="1" />
+      <LineId Id="300" Count="2" />
       <LineId Id="72" Count="0" />
       <LineId Id="71" Count="0" />
       <LineId Id="51" Count="0" />

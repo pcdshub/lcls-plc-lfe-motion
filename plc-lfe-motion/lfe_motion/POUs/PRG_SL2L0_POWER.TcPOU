@@ -96,15 +96,15 @@ fbMotion4(stMotionStage := Main.M48);*)
 
 if (bInit) THEN
 	(*Gap X*)
-	aTMatrix[1,1]:= 1/2;
-	aTMatrix[2,1]:= -1/2;
+	aTMatrix[1,1]:= 0.5;
+	aTMatrix[2,1]:= -0.5;
 	aTMatrix[3,1]:= 0;
 	aTMatrix[4,1]:= 0;
 	(*GAP Y*)
 	aTMatrix[1,2]:= 0;
 	aTMatrix[2,2]:= 0;
-	aTMatrix[3,2]:= 1/2;
-	aTMatrix[4,2]:= -1/2;
+	aTMatrix[3,2]:= 0.5;
+	aTMatrix[4,2]:= -0.5;
 	(*Center X*)
 	aTMatrix[1,3]:= 1;
 	aTMatrix[2,3]:= 1;
