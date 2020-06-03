@@ -2,86 +2,54 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_SL2L0_POWER" Id="{b81ede99-2259-4f9f-b687-2b775d0f5c19}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_SL2L0_POWER
-VAR
+VAR // linking to rtd in the following order Bottom - South - TOP - NORTH
 	{attribute 'pytmc' := '
 		pv: SL2L0:POWER
 		io: io
 	'}
-	{attribute 'TcLinkTo' := '.RTD_TOP_1.iRaw := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Value;
-							  .RTD_TOP_1.bError := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Error;
-							  .RTD_TOP_1.bUnderrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Underrange;
-							  .RTD_TOP_1.bOverrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Overrange;
-							  .RTD_TOP_2.iRaw := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Value;
-							  .RTD_TOP_2.bError := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Error;
-							  .RTD_TOP_2.bUnderrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Underrange;
-							  .RTD_TOP_2.bOverrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Overrange;
-							  .RTD_Bottom_1.iRaw := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Value;
-							  .RTD_Bottom_1.bError := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Error;
-							  .RTD_Bottom_1.bUnderrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Underrange;
-							  .RTD_Bottom_1.bOverrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Overrange;
-							  .RTD_Bottom_2.iRaw := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Value;
-							  .RTD_Bottom_2.bError := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Error;
-							  .RTD_Bottom_2.bUnderrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Underrange;
-							  .RTD_Bottom_2.bOverrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Overrange;
+	{attribute 'TcLinkTo' := '.RTD_Bottom_1.iRaw := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Value;
+							  .RTD_Bottom_1.bError := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Error;
+							  .RTD_Bottom_1.bUnderrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Underrange;
+							  .RTD_Bottom_1.bOverrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Overrange;
+							  .RTD_Bottom_2.iRaw := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Value;
+							  .RTD_Bottom_2.bError := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Error;
+							  .RTD_Bottom_2.bUnderrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Underrange;
+							  .RTD_Bottom_2.bOverrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Overrange;
+							  .RTD_South_1.iRaw := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Value;
+							  .RTD_South_1.bError := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Error;
+							  .RTD_South_1.bUnderrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Underrange;
+							  .RTD_South_1.bOverrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Overrange;
+							  .RTD_South_2.iRaw := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Value;
+							  .RTD_South_2.bError := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Error;
+							  .RTD_South_2.bUnderrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Underrange;
+							  .RTD_South_2.bOverrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Overrange;
+							  .RTD_TOP_1.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Value;
+							  .RTD_TOP_1.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Error;
+							  .RTD_TOP_1.bUnderrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Underrange;
+							  .RTD_TOP_1.bOverrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Overrange;
+							  .RTD_TOP_2.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Value;
+							  .RTD_TOP_2.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Error;
+							  .RTD_TOP_2.bUnderrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Underrange;
+							  .RTD_TOP_2.bOverrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Overrange;
 							  .RTD_North_1.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Value;
 							  .RTD_North_1.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Error;
-							  .RTD_North_1.bUnderrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Underrange;
-							  .RTD_North_1.bOverrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Overrange;
-							  .RTD_North_2.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Value;
-							  .RTD_North_2.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Error;
-							  .RTD_North_2.bUnderrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Underrange;
-							  .RTD_North_2.bOverrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Overrange;
-							  .RTD_South_1.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Value;
-							  .RTD_South_1.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Error;
-							  .RTD_South_1.bUnderrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 1^Status^Underrange;
-							  .RTD_South_1.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 1^Status^Overrange;
-							  .RTD_South_2.iRaw := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Value;
-							  .RTD_South_2.bError := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Error;
-							  .RTD_South_2.bUnderrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Underrange;
-							  .RTD_South_2.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange'}
+							  .RTD_North_1.bUnderrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 1^Status^Underrange;
+							  .RTD_North_1.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 1^Status^Overrange;
+							  .RTD_North_2.iRaw := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Value;
+							  .RTD_North_2.bError := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Error;
+							  .RTD_North_2.bUnderrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Underrange;
+							  .RTD_North_2.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange'}
 	fbSL2L0: FB_SLITS_POWER;
 	
 
-	(*T. MATRIX (North-x1,South-x2,Top-y1,Bottom-y2.. appSize-gapX,gapY, Cx, Cy) *)
-	aTMatrix: ARRAY [1..4,1..4] of REAL;
-	{attribute 'pytmc' := '
-    pv: SL2L0:POWER:GO;
-	io: io;
-    '}
-	bExecuteMotion:bool ;
-	{attribute 'pytmc' := '
-    pv: SL2L0:POWER:XWID_REQ;
-	io: io;
-    '}
-	rReqApertureSizeX : REAL;
-	{attribute 'pytmc' := '
-    pv: SL2L0:POWER:YWID_REQ;
-	io: io;
-    '}
-	rReqApertureSizeY : REAL;
-	{attribute 'pytmc' := '
-    pv: SL2L0:POWER:XCEN_REQ;
-	io: io;
-    '}
-	rReqCenterX: REAL;
-	{attribute 'pytmc' := '
-    pv: SL2L0:POWER:YCEN_REQ;
-	io: io;
-    '}
-	rReqCenterY: REAL;
-	bInit:BOOL :=true;
-	
 
-	rMaxX:REAL:=28;
-	rMaxY:REAL:=28;
-	rMaxCx:REAL:=14;
-	rMaxCy:REAL:=14;
 	
 	(*fbMotion1: FB_SimMotor;
 	fbMotion2: FB_SimMotor;
 	fbMotion3: FB_SimMotor;
 	fbMotion4: FB_SimMotor;*)
-
+	bMoveOk:BOOL :=TRUE;
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -92,50 +60,6 @@ fbMotion3(stMotionStage := Main.M47);
 fbMotion4(stMotionStage := Main.M48);*)
 
 
-
-
-if (bInit) THEN
-	(*Gap X*)
-	aTMatrix[1,1]:= 0.5;
-	aTMatrix[2,1]:= -0.5;
-	aTMatrix[3,1]:= 0;
-	aTMatrix[4,1]:= 0;
-	(*GAP Y*)
-	aTMatrix[1,2]:= 0;
-	aTMatrix[2,2]:= 0;
-	aTMatrix[3,2]:= 0.5;
-	aTMatrix[4,2]:= -0.5;
-	(*Center X*)
-	aTMatrix[1,3]:= 1;
-	aTMatrix[2,3]:= 1;
-	aTMatrix[3,3]:= 0;
-	aTMatrix[4,3]:= 0;
-	(*Center Y*)
-	aTMatrix[1,4]:= 0;
-	aTMatrix[2,4]:= 0;
-	aTMatrix[3,4]:= 1;
-	aTMatrix[4,4]:= 1;
-	
-	bInit :=false;
-END_IF
-
-//verify requested gap and center are within range
-// Needs to be better
-rReqApertureSizeX := LIMIT(0,rReqApertureSizeX, rMaxX);
-rReqApertureSizeY := LIMIT(0,rReqApertureSizeY, rMaxY);
-rReqCenterX := LIMIT(0,rReqCenterX, rMaxCx);
-rReqCenterY := LIMIT(0,rReqCenterY, rMaxCy);
-
-// Calculate the position of every blade based on the transformation Matrix
-
-fbSL2L0.fPosNorthBlade := (aTMatrix[1,1] * rReqApertureSizeX) + (aTMatrix[1,3]*rReqCenterX);
-fbSL2L0.fPosSouthBlade:= (aTMatrix[2,1] * rReqApertureSizeX) + (aTMatrix[2,3]*rReqCenterX);
-
-fbSL2L0.fPosTopBlade := (aTMatrix[3,2] * rReqApertureSizeY) +(aTMatrix[3,4]*rReqCenterY);
-fbSL2L0.fPosBottomBlade :=(aTMatrix[4,2] * rReqApertureSizeY) + (aTMatrix[4,4]*rReqCenterY);
-
-fbSL2L0.bExecuteMotion := bExecuteMotion;
-
 (*
 --MAPPING TO PHYSICAL TERMINAL--
 Main.M45 -> M1	(Bottom)
@@ -143,16 +67,11 @@ Main.M46 -> M2	(South)
 Main.M47 -> M3	(Top)
 Main.M48 -> M4	(North)
 *)
+fbSL2L0.bMoveOk := bMoveOk;
 fbSL2L0(stTopBlade:=  Main.M47, 
 		stBottomBlade:= Main.M45, 
 		stNorthBlade:=  Main.M48, 
 		stSouthBlade:=  Main.M46);]]></ST>
     </Implementation>
-    <LineIds Name="PRG_SL2L0_POWER">
-      <LineId Id="3" Count="3" />
-      <LineId Id="2" Count="0" />
-      <LineId Id="62" Count="55" />
-      <LineId Id="60" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
