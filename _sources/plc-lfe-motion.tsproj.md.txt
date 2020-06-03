@@ -630,12 +630,11 @@ xMPS_OK := (q_stAct.eState=RETRACTED) ;
 
 (*PMPS PERMISSION*)
 
-
 (* Can't have bRetract_SW and  bInsert_SW both be true*)
-(*If (q_stAct.bRetract_SW) and (q_stAct.bInsert_SW) THEN
+If (q_stAct.bRetract_SW) and (q_stAct.bInsert_SW) THEN
     q_stAct.bRetract_SW := FALSE;
     q_stAct.bInsert_SW := FALSE;
-END_IF*)
+END_IF
 
 q_stAct.bRetractOK := ibRetractOK;
 q_stAct.bInsertOK := ibInsertOK;

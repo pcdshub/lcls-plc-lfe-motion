@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
     <title>PLC Project (1): lfe_motion &#8212; pcdshub/lcls-plc-lfe-motion  documentation</title>
@@ -636,12 +636,11 @@ xMPS_OK := (q_stAct.eState=RETRACTED) ;
 
 (*PMPS PERMISSION*)
 
-
 (* Can&#39;t have bRetract_SW and  bInsert_SW both be true*)
-(*If (q_stAct.bRetract_SW) and (q_stAct.bInsert_SW) THEN
+If (q_stAct.bRetract_SW) and (q_stAct.bInsert_SW) THEN
     q_stAct.bRetract_SW := FALSE;
     q_stAct.bInsert_SW := FALSE;
-END_IF*)
+END_IF
 
 q_stAct.bRetractOK := ibRetractOK;
 q_stAct.bInsertOK := ibInsertOK;
@@ -7856,7 +7855,7 @@ END_PROGRAM
       &copy;2019, SLAC National Accelerator Laboratory.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
