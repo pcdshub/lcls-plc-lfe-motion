@@ -149,7 +149,7 @@ VAR
     fPosClose: LREAL;
     fPosOpen: LREAL;
 
-		
+	stSetPositionOptions:ST_SetPositionOptions;
 	fbSetPosition_TOP: MC_SetPosition;
 	fbSetPosition_Bottom: MC_SetPosition;
 	fbSetPosition_North: MC_SetPosition;
@@ -344,47 +344,77 @@ if (fbSetPosition_South.Done ) THEN
 END_IF
 
 // Set Encoder Position
+//Clear position lag error
+stSetPositionOptions.ClearPositionLag := TRUE;
 fbSetPosition_TOP(
-	Axis:= fbTopBlade.stMotionStage.Axis , 
+	Axis:=  stTopBlade.Axis , 
 	Execute:= , 
 	Position:= 0 , 
 	Mode:= FALSE, 
-	Options:= ST_SetPositionOptions.ClearPositionLag, 
+	Options:= stSetPositionOptions, 
 	Done=> , 
 	Busy=> , 
 	Error=> , 
 	ErrorID=> );
 fbSetPosition_Bottom(
-	Axis:= fbBottomBlade.stMotionStage.Axis , 
+	Axis:= stBottomBlade.Axis , 
 	Execute:= , 
 	Position:= 0 , 
 	Mode:= FALSE, 
-	Options:= ST_SetPositionOptions.ClearPositionLag, 
+	Options:= stSetPositionOptions, 
 	Done=> , 
 	Busy=> , 
 	Error=> , 
 	ErrorID=> );
 fbSetPosition_North(
-	Axis:= fbNorthBlade.stMotionStage.Axis , 
+	Axis:= stNorthBlade.Axis , 
 	Execute:= , 
 	Position:= 0 , 
 	Mode:= FALSE, 
-	Options:= ST_SetPositionOptions.ClearPositionLag, 
+	Options:= stSetPositionOptions, 
 	Done=> , 
 	Busy=> , 
 	Error=> , 
 	ErrorID=> );
 fbSetPosition_South(
-	Axis:= fbSouthBlade.stMotionStage.Axis , 
+	Axis:= stSouthBlade.Axis , 
 	Execute:= , 
 	Position:= 0 , 
 	Mode:= FALSE, 
-	Options:= ST_SetPositionOptions.ClearPositionLag, 
+	Options:= stSetPositionOptions, 
 	Done=> , 
 	Busy=> , 
 	Error=> , 
 	ErrorID=> );]]></ST>
       </Implementation>
     </Action>
+    <LineIds Name="FB_SLITS">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_SLITS.ACT_BLOCK">
+      <LineId Id="2" Count="19" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_SLITS.ACT_CalculatePositions">
+      <LineId Id="2" Count="23" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_SLITS.ACT_Home">
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_SLITS.ACT_Init">
+      <LineId Id="2" Count="14" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_SLITS.ACT_Motion">
+      <LineId Id="2" Count="55" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_SLITS.ACT_Zero">
+      <LineId Id="2" Count="39" />
+      <LineId Id="81" Count="1" />
+      <LineId Id="42" Count="38" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>
