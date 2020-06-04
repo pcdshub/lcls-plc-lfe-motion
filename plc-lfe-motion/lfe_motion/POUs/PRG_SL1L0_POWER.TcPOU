@@ -40,6 +40,14 @@ VAR // fix linking to rtd in the following order Bottom - South - TOP - NORTH
 							  .RTD_North_2.bUnderrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Underrange;
 							  .RTD_North_2.bOverrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange'}
 	fbSL1L0: FB_SLITS_POWER;
+	
+	{attribute 'pytmc' := '
+    pv: SL1L0:POWER:GO;
+    io: io;
+    field: ZNAM False;
+    field: ONAM True;
+    '}
+    bExecuteMotion:BOOL ;
 	(*T. MATRIX (North-x1,South-x2,Top-y1,Bottom-y2.. appSize-gapX,gapY, Cx, Cy) *)
 	(*aTMatrix: ARRAY [1..4,1..4] of REAL;
 	{attribute 'pytmc' := '
@@ -158,7 +166,8 @@ fbSL1L0.bMoveOk := bMoveOk;
 fbSL1L0(stTopBlade:=  Main.M43,
         stBottomBlade:= Main.M41,
         stNorthBlade:=  Main.M44,
-        stSouthBlade:=  Main.M42);
+        stSouthBlade:=  Main.M42,
+		bExecuteMotion:=bExecuteMotion);
 
 //for testing purposes only. comment-out/delete once done.
 (*mcPower[1](axis:=Main.M41.Axis, Enable:=TRUE, enable_positive:=Main.M41.bLimitForwardEnable, enable_negative:=Main.M41.bLimitBackwardEnable);
@@ -167,5 +176,11 @@ mcPower[3](axis:=Main.M43.Axis, Enable:=TRUE, enable_positive:=Main.M43.bLimitFo
 mcPower[4](axis:=Main.M44.Axis, Enable:=TRUE, enable_positive:=Main.M44.bLimitForwardEnable, enable_negative:=Main.M44.bLimitBackwardEnable);*)
 ]]></ST>
     </Implementation>
+    <LineIds Name="PRG_SL1L0_POWER">
+      <LineId Id="3" Count="38" />
+      <LineId Id="173" Count="0" />
+      <LineId Id="42" Count="5" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

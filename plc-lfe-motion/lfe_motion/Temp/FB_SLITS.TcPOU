@@ -7,16 +7,11 @@ VAR_IN_OUT
     stBottomBlade: DUT_MotionStage;
     stNorthBlade: DUT_MotionStage;
     stSouthBlade: DUT_MotionStage;
+    bExecuteMotion:BOOL ;
 END_VAR
 
 VAR_INPUT
-    {attribute 'pytmc' := '
-    pv: GO;
-    io: io;
-    field: ZNAM False
-    field: ONAM True
-    '}
-    bExecuteMotion:BOOL ;
+  
     {attribute 'pytmc' := '
     pv: PMPS_OK;
     io: i;
@@ -278,7 +273,11 @@ stSouth.fVelocity := fMaxVelocity;
 stSouth.fAccel := fHighAccel;
 stSouth.fDecel := fHighAccel;
 
-fbTop.bExecute := fbBottom.bExecute :=fbNorth.bExecute := fbSouth.bExecute := bExecuteMotion;
+if (bExecuteMotion) THEN
+	fbTop.bExecute := fbBottom.bExecute :=fbNorth.bExecute := fbSouth.bExecute := bExecuteMotion;
+	bExecuteMotion:= FALSE;
+END_IF
+
 
 fbTop(
     stPositionState:=stTop,
@@ -407,7 +406,11 @@ fbSetPosition_South(
       <LineId Id="1" Count="0" />
     </LineIds>
     <LineIds Name="FB_SLITS.ACT_Motion">
-      <LineId Id="2" Count="55" />
+      <LineId Id="2" Count="34" />
+      <LineId Id="58" Count="1" />
+      <LineId Id="61" Count="0" />
+      <LineId Id="60" Count="0" />
+      <LineId Id="37" Count="20" />
       <LineId Id="1" Count="0" />
     </LineIds>
     <LineIds Name="FB_SLITS.ACT_Zero">

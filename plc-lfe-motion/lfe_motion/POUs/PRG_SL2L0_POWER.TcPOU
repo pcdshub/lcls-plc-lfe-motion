@@ -41,7 +41,13 @@ VAR // linking to rtd in the following order Bottom - South - TOP - NORTH
 							  .RTD_North_2.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange'}
 	fbSL2L0: FB_SLITS_POWER;
 	
-
+	{attribute 'pytmc' := '
+    pv: SL2L0:POWER:GO;
+    io: io;
+    field: ZNAM False;
+    field: ONAM True;
+    '}
+    bExecuteMotion:BOOL ;
 
 	
 	(*fbMotion1: FB_SimMotor;
@@ -71,7 +77,13 @@ fbSL2L0.bMoveOk := bMoveOk;
 fbSL2L0(stTopBlade:=  Main.M47, 
 		stBottomBlade:= Main.M45, 
 		stNorthBlade:=  Main.M48, 
-		stSouthBlade:=  Main.M46);]]></ST>
+		stSouthBlade:=  Main.M46,
+		bExecuteMotion:=bExecuteMotion);]]></ST>
     </Implementation>
+    <LineIds Name="PRG_SL2L0_POWER">
+      <LineId Id="3" Count="17" />
+      <LineId Id="2" Count="0" />
+      <LineId Id="71" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>
