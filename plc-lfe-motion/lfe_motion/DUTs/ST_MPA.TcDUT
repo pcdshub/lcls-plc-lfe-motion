@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <DUT Name="ST_MPA" Id="{d7277f00-0cc4-4e47-a41c-885bae307c6d}">
+    <Declaration><![CDATA[TYPE ST_MPA :
+STRUCT
+//    i_xInsertLS AT %I*: BOOL;
+//    i_xRetractLS AT %I*: BOOL;
+//    _xInsertSW : BOOL;
+//    _xRetractSW : BOOL;
+//    q_xInsertDO AT %Q*: BOOL;
+//    q_xRetractDO AT %Q*: BOOL;
+//    eState : DUT_PneumaticActuator_Position;
+
+    //Readbacks
+    {attribute 'pytmc' := '
+    pv: IN
+    io: i
+    '}
+    i_bInLS    :    BOOL;
+    {attribute 'pytmc' := '
+    pv: OUT
+    io: i
+    '}
+    i_bOutLS    :    BOOL;
+
+    //Controls
+    {attribute 'pytmc' := '
+    pv: INSERT_DO
+    io: i
+    '}
+    q_bRetract    :    BOOL;
+    {attribute 'pytmc' := '
+    pv: RETRACT_DO
+    io: i
+    '}
+    q_bInsert    :    BOOL;
+
+    //Logic and supervisory
+    {attribute 'pytmc' := '
+    pv: ILKOK
+    io: i
+    '}
+    bILK_OK: BOOL;
+    {attribute 'pytmc' := '
+    pv: INSERT_OK
+    io: i
+    '}
+    bInsertOK    :    BOOL;
+    {attribute 'pytmc' := '
+    pv: RETRACT_OK
+    io: i
+    '}
+    bRetractOK    :    BOOL;
+    {attribute 'pytmc' := '
+    pv: IN_CMD
+    io: io
+    '}
+
+    bInsert_SW        :    BOOL;
+    {attribute 'pytmc' := '
+    pv: OUT_CMD
+    io: io
+    '}
+    bRetract_SW    :    BOOL;
+    {attribute 'pytmc' := '
+    pv: ERROR
+    io: io
+    '}
+    bErrorPresent : BOOL;
+    {attribute 'pytmc' := '
+    pv: POS_STATE
+    type: mbbi
+    field: ZRST RETRACTED
+    field: ONST INSERTED
+    field: TWST MOVING
+    field: THST INVALID
+    io: i
+    '}
+
+    eState    :    E_PositionState := INVALID;
+
+
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="FB_SimMotor" Id="{95f2573d-9f2a-46cf-9236-6b3c25d058e1}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_SimMotor
 VAR_IN_OUT
-	stMotionStage: DUT_MotionStage;
+    stMotionStage: DUT_MotionStage;
 END_VAR
 VAR
-	fbMotionStage: FB_MotionStage;
+    fbMotionStage: FB_MotionStage;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -14,12 +14,8 @@ END_VAR
 stMotionStage.bLimitForwardEnable := TRUE;
 stMotionStage.bHardwareEnable := TRUE;
 stMotionStage.bPowerSelf := TRUE;
-stMotionStage.nEnableMode := ENUM_StageEnableMode.STAGE_ENABLE_ALWAYS;
+stMotionStage.nEnableMode := ENUM_StageEnableMode.ALWAYS;
 fbMotionStage(stMotionStage := stMotionStage);]]></ST>
     </Implementation>
-    <LineIds Name="FB_SimMotor">
-      <LineId Id="3" Count="4" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

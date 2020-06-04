@@ -6,15 +6,23 @@
     <ProjectGuid>{5364ce42-9782-432e-9f8a-838503c1efe8}</ProjectGuid>
     <SubObjectsSortedByName>True</SubObjectsSortedByName>
     <Name>lfe_motion</Name>
-    <ProgramVersion>3.1.4022.3</ProgramVersion>
+    <ProgramVersion>3.1.4023.0</ProgramVersion>
     <Application>{4a523927-f9d3-47af-8583-f1aaeee47788}</Application>
     <TypeSystem>{a459490c-7139-4d30-852e-82a0496970b8}</TypeSystem>
     <Implicit_Task_Info>{4df29778-0f47-4fac-8d59-b397581f2bab}</Implicit_Task_Info>
     <Implicit_KindOfTask>{b0db0546-8cc5-495e-8a52-7b8de67e4edf}</Implicit_KindOfTask>
     <Implicit_Jitter_Distribution>{4e7d601e-6828-4764-a247-e5b129105b1f}</Implicit_Jitter_Distribution>
     <LibraryReferences>{4c648445-b4af-42d8-9ace-ffcaf55ebefd}</LibraryReferences>
+    <CombineIds>true</CombineIds>
+    <Released>false</Released>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DUTs\ST_MPA.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\E_PositionState.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="GVLs\PMPS.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
@@ -22,6 +30,9 @@
     <Compile Include="GVLs\Main.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="GVLs\RTDSL0.TcGVL">
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
@@ -62,7 +73,7 @@
     <Compile Include="POUs\PRG_SL2L0_POWER.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\PRG_SP1K0_KMONO.TcPOU">
+    <Compile Include="POUs\PRG_SP1L0_KMONO.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PRG_PF1L0_WFS.TcPOU">
@@ -71,7 +82,13 @@
     <Compile Include="Temp\FB_Arbiter.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Temp\FB_DoubleActingMPA.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Temp\FB_HardwareFFOutput.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Temp\FB_MPA.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Temp\FB_SimMotor.TcPOU">
@@ -95,6 +112,10 @@
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
+    <PlaceholderReference Include="LCLS General">
+      <DefaultResolution>LCLS General, * (SLAC)</DefaultResolution>
+      <Namespace>LCLS_General</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="lcls-twincat-motion">
       <DefaultResolution>lcls-twincat-motion, * (SLAC)</DefaultResolution>
       <Namespace>lcls_twincat_motion</Namespace>
@@ -125,6 +146,9 @@
     </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
+    <PlaceholderResolution Include="LCLS General">
+      <Resolution>LCLS General, * (SLAC)</Resolution>
+    </PlaceholderResolution>
     <PlaceholderResolution Include="lcls-twincat-motion">
       <Resolution>lcls-twincat-motion, * (SLAC)</Resolution>
     </PlaceholderResolution>

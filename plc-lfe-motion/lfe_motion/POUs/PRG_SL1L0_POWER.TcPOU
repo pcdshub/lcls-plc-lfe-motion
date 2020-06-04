@@ -44,7 +44,7 @@ VAR // fix linking to rtd in the following order Bottom - South - TOP - NORTH
 	(*aTMatrix: ARRAY [1..4,1..4] of REAL;
 	{attribute 'pytmc' := '
     pv: SL1L0:POWER:GO;
-	io: io;
+    io: io;
     '}
 	bExecuteMotion:bool ;
 	{attribute 'pytmc' := '
@@ -171,18 +171,18 @@ fbSL1L0.fPosBottomBlade :=(aTMatrix[4,2] * rReqApertureSizeY) + (aTMatrix[4,4]*r
 
 (*
 --MAPPING TO PHYSICAL TERMINAL--
-Main.41 -> M1	(Bottom)
-Main.42 -> M2	(South)
-Main.43 -> M3	(Top)
-Main.44 -> M4	(North)
+Main.41 -> M1    (Bottom)
+Main.42 -> M2    (South)
+Main.43 -> M3    (Top)
+Main.44 -> M4    (North)
 *)
 fbSL1L0.bMoveOk := bMoveOk;
 fbSL1L0(stTopBlade:=  Main.M43,
-		stBottomBlade:= Main.M41, 
-		stNorthBlade:=  Main.M44, 
-		stSouthBlade:=  Main.M42);
+        stBottomBlade:= Main.M41,
+        stNorthBlade:=  Main.M44,
+        stSouthBlade:=  Main.M42);
 
-//for testing purposes only. comment-out/delete once done.	
+//for testing purposes only. comment-out/delete once done.
 (*mcPower[1](axis:=Main.M41.Axis, Enable:=TRUE, enable_positive:=Main.M41.bLimitForwardEnable, enable_negative:=Main.M41.bLimitBackwardEnable);
 mcPower[2](axis:=Main.M42.Axis, Enable:=TRUE, enable_positive:=Main.M42.bLimitForwardEnable, enable_negative:=Main.M42.bLimitBackwardEnable);
 mcPower[3](axis:=Main.M43.Axis, Enable:=TRUE, enable_positive:=Main.M43.bLimitForwardEnable, enable_negative:=Main.M43.bLimitBackwardEnable);

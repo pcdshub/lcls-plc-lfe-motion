@@ -3,8 +3,8 @@
   <POU Name="PRG_PF1L0_WFS" Id="{ffa57a7d-9d02-44af-b3b1-a3a307e22cab}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_PF1L0_WFS
 VAR
-	fbMotion1: FB_SimMotor;
-	fbMotion2: FB_SimMotor;
+    fbMotion1: FB_SimMotor;
+    fbMotion2: FB_SimMotor;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -12,9 +12,5 @@ END_VAR
 fbMotion1(stMotionStage := Main.M31);
 fbMotion2(stMotionStage := Main.M32);]]></ST>
     </Implementation>
-    <LineIds Name="PRG_PF1L0_WFS">
-      <LineId Id="3" Count="1" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

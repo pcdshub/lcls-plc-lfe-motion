@@ -9,12 +9,26 @@ env:
 matrix:
   include:
     - name: Project summary
+      python: 3.7
       env: TWINCAT_SUMMARY=1
     - name: Pragma linting
+      python: 3.7
       env: TWINCAT_PRAGMALINT=1
-    - name: Build documentation
+    - name: Documentation building
+      python: 3.7
       env: TWINCAT_BUILD_DOCS=1
+    - name: Twincat Style
+      python: 3.7
+      env: TWINCAT_STYLE=1
 
 install:
+  # Import the helper scripts
   - git clone --depth 1 git://github.com/pcdshub/pcds-ci-helpers.git
+  # Start the helper-script initialization + run based on environment variables
   - source pcds-ci-helpers/travis/init.sh
+
+script:
+  - |
+    if [ -n "${TWINCAT_STYLE}" ]; then
+      ./style/check_style.sh
+    fi
