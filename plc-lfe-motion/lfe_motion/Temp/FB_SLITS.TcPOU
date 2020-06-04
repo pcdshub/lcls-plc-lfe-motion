@@ -213,11 +213,7 @@ rActCenterY := ((stTopBlade.stAxisStatus.fActPosition + stBottomBlade.stAxisStat
 
 
 
-//ZERO BIAS
-
-// Set Y center to zero
-
-// Set X center to zero]]></ST>
+]]></ST>
       </Implementation>
     </Action>
     <Action Name="ACT_Home" Id="{9aa6ba6d-6caa-474f-aec7-a0c3c31143fa}">
@@ -308,21 +304,27 @@ fbSouth(
     </Action>
     <Action Name="ACT_Zero" Id="{83bc17e3-de18-41ac-977d-469225db1c59}">
       <Implementation>
-        <ST><![CDATA[if (rSetCenterY)THEN 
+        <ST><![CDATA[//ZERO BIAS
+
+// Set Y center to zero
+
+// Set X center to zero
+
+if (rSetCenterY)THEN 
 		rSetCenterY := false;
 		// Set Current Position
-		fbSetPosition_TOP.Position := 0; 
+		fbSetPosition_TOP.Position :=  stTopBlade.stAxisStatus.fActPosition - rActCenterY ; 
 		fbSetPosition_TOP.Execute := TRUE;
-		fbSetPosition_Bottom.Position := 0; 
+		fbSetPosition_Bottom.Position := stBottomBlade.stAxisStatus.fActPosition - rActCenterY; 
 		fbSetPosition_Bottom.Execute := TRUE;
 END_IF
 
 if (rSetCenterX)THEN 
 		rSetCenterX := false;
 		// Set Current Position
-		fbSetPosition_North.Position := 0; 
+		fbSetPosition_North.Position := stNorthBlade.stAxisStatus.fActPosition - rActCenterX ; 
 		fbSetPosition_North.Execute := TRUE;
-		fbSetPosition_South.Position := 0; 
+		fbSetPosition_South.Position := stSouthBlade.stAxisStatus.fActPosition - rActCenterX ; ; 
 		fbSetPosition_South.Execute := TRUE;
 END_IF
 		
