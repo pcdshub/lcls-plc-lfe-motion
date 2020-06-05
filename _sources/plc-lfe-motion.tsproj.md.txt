@@ -34,29 +34,33 @@ PLC Project (1): lfe_motion
         23.) lfe_motion/Temp/FB_HardwareFFOutput.TcPOU
         24.) lfe_motion/Temp/FB_MPA.TcPOU
         25.) lfe_motion/Temp/FB_SimMotor.TcPOU
-        26.) lfe_motion/Temp/FB_SLITS_POWER.TcPOU
+        26.) lfe_motion/Temp/FB_SLITS.TcPOU
+        27.) lfe_motion/Temp/FB_SLITS_POWER.TcPOU
+        28.) lfe_motion/Temp/FB_SLITS_POWER_1.TcPOU
 
     POUs:
         1.) FB_Arbiter
         2.) FB_DoubleActingMPA
         3.) FB_HardwareFFOutput
         4.) FB_MPA
-        5.) FB_SLITS_POWER
-        6.) FB_SimMotor
-        7.) PRG_1_PlcTask
-        8.) PRG_2_PMPS_PRE
-        9.) PRG_3_PMPS_POST
-        10.) PRG_AT2L0_SOLID
-        11.) PRG_IM1L0_XTES
-        12.) PRG_IM1L1_PPM
-        13.) PRG_IM2L0_XTES
-        14.) PRG_IM3L0_PPM
-        15.) PRG_IM4L0_XTES
-        16.) PRG_PF1L0_WFS
-        17.) PRG_RTDSL0
-        18.) PRG_SL1L0_POWER
-        19.) PRG_SL2L0_POWER
-        20.) PRG_SP1L0_KMONO
+        5.) FB_SLITS
+        6.) FB_SLITS_POWER
+        7.) FB_SLITS_POWER_1
+        8.) FB_SimMotor
+        9.) PRG_1_PlcTask
+        10.) PRG_2_PMPS_PRE
+        11.) PRG_3_PMPS_POST
+        12.) PRG_AT2L0_SOLID
+        13.) PRG_IM1L0_XTES
+        14.) PRG_IM1L1_PPM
+        15.) PRG_IM2L0_XTES
+        16.) PRG_IM3L0_PPM
+        17.) PRG_IM4L0_XTES
+        18.) PRG_PF1L0_WFS
+        19.) PRG_RTDSL0
+        20.) PRG_SL1L0_POWER
+        21.) PRG_SL2L0_POWER
+        22.) PRG_SP1L0_KMONO
 
     GVLs:
         1.) Main
@@ -690,78 +694,46 @@ END_ACTION
 ```
 
 
-POU: FB_SLITS_POWER
--------------------
+POU: FB_SLITS
+-------------
 
-File: lfe_motion/Temp/FB_SLITS_POWER.TcPOU
+File: lfe_motion/Temp/FB_SLITS.TcPOU
 
 ```vhdl
-FUNCTION_BLOCK FB_SLITS_POWER
+FUNCTION_BLOCK FB_SLITS
 VAR_IN_OUT
     stTopBlade: DUT_MotionStage;
     stBottomBlade: DUT_MotionStage;
     stNorthBlade: DUT_MotionStage;
     stSouthBlade: DUT_MotionStage;
+    bExecuteMotion:BOOL ;
 END_VAR
+
 VAR_INPUT
-    fPosTopBlade: LREAL;
-    fPosBottomBlade: LREAL;
-    fPosNorthBlade: LREAL;
-    fPosSouthBlade: LREAL;
-    bExecuteMotion:bool ;
+  
+    {attribute 'pytmc' := '
+    pv: PMPS_OK;
+    io: i;
+    field: ZNAM False
+    field: ONAM True
+    '}
+    bMoveOk:BOOL;
 END_VAR
-VAR_OUTPUT
-END_VAR
+
 VAR
     fbTopBlade: FB_MotionStage;
     fbBottomBlade: FB_MotionStage;
     fbNorthBlade: FB_MotionStage;
     fbSouthBlade: FB_MotionStage;
+    fPosTopBlade: LREAL;
+    fPosBottomBlade: LREAL;
+    fPosNorthBlade: LREAL;
+    fPosSouthBlade: LREAL;
 
-    {attribute 'pytmc' := '
-        pv: FSW
-    '}
-    fbFlowSwitch: FB_XTES_Flowswitch;
-
-
-    //RTDs
-    {attribute 'pytmc' := '
-        pv: TOP:RTD:01
-    '}
-    RTD_TOP_1: FB_ThermoCouple;
-    {attribute 'pytmc' := '
-        pv: TOP:RTD:02
-    '}
-    RTD_TOP_2: FB_ThermoCouple;
-    {attribute 'pytmc' := '
-        pv: BOTTOM:RTD:01
-    '}
-    RTD_Bottom_1: FB_ThermoCouple;
-    {attribute 'pytmc' := '
-        pv: BOTTOM:RTD:02
-    '}
-    RTD_Bottom_2: FB_ThermoCouple;
-
-    {attribute 'pytmc' := '
-        pv: NORTH:RTD:01
-    '}
-    RTD_North_1: FB_ThermoCouple;
-    {attribute 'pytmc' := '
-        pv: NORTH:RTD:02
-    '}
-    RTD_North_2: FB_ThermoCouple;
-    {attribute 'pytmc' := '
-        pv: SOUTH:RTD:01
-    '}
-    RTD_South_1: FB_ThermoCouple;
-    {attribute 'pytmc' := '
-        pv: SOUTH:RTD:02
-    '}
-    RTD_South_2: FB_ThermoCouple;
-
+    (*Motion Parameters*)
     fSmallDelta: LREAL := 0.01;
     fBigDelta: LREAL := 10;
-    fMaxVelocity: LREAL := 0.33;
+    fMaxVelocity: LREAL := 0.2;
     fHighAccel: LREAL := 0.8;
     fLowAccel: LREAL := 0.1;
 
@@ -779,6 +751,492 @@ VAR
     {attribute 'pytmc' := 'pv: SOUTH'}
     fbSouth: FB_StatePTPMove;
 
+    (*EPICS pvs*)
+    {attribute 'pytmc' := '
+    pv: XWID_REQ;
+    io: io;
+    '}
+    rReqApertureSizeX : REAL;
+    {attribute 'pytmc' := '
+    pv: YWID_REQ;
+    io: io;
+    '}
+    rReqApertureSizeY : REAL;
+    {attribute 'pytmc' := '
+    pv: XCEN_REQ;
+    io: io;
+    '}
+    rReqCenterX: REAL;
+    {attribute 'pytmc' := '
+    pv: YCEN_REQ;
+    io: io;
+    '}
+    rReqCenterY: REAL;
+
+    {attribute 'pytmc' := '
+    pv: ACTUAL_XWIDTH;
+    io: io;
+    '}
+    rActApertureSizeX : REAL;
+
+    {attribute 'pytmc' := '
+    pv: ACTUAL_YWIDTH;
+    io: io;
+    '}
+    rActApertureSizeY : REAL;
+    {attribute 'pytmc' := '
+    pv: ACTUAL_XCENTER;
+    io: io;
+    '}
+    rActCenterX: REAL;
+    {attribute 'pytmc' := '
+    pv: ACTUAL_YCENTER;
+    io: io;
+    '}
+    rActCenterY: REAL;
+
+    {attribute 'pytmc' := '
+    pv: XCEN_SETZERO;
+    io: io;
+    '}
+    rSetCenterX: BOOL;
+    {attribute 'pytmc' := '
+    pv: YCEN_SETZERO;
+    io: io;
+    '}
+    rSetCenterY: BOOL;
+
+
+    {attribute 'pytmc' := '
+    pv: OPEN;
+    io: io;
+    field: ZNAM False
+    field: ONAM True
+    '}
+    bOpen: BOOL;
+
+    {attribute 'pytmc' := '
+    pv: CLOSE;
+    io: io;
+    field: ZNAM False
+    field: ONAM True
+    '}
+    bClose: BOOL;
+
+    {attribute 'pytmc' := '
+    pv: BLOCK;
+    io: io;
+    field: ZNAM False
+    field: ONAM True
+    '}
+    bBlock: BOOL;
+
+
+   
+        //Local variables
+    bInit: BOOL :=true;
+    rTrig_Block: R_TRIG;
+    rTrig_Open: R_TRIG;
+    rTrig_Close: R_TRIG;
+
+    fPosBlock: LREAL;
+    fPosClose: LREAL;
+    fPosOpen: LREAL;
+
+	stSetPositionOptions:ST_SetPositionOptions;
+	fbSetPosition_TOP: MC_SetPosition;
+	fbSetPosition_Bottom: MC_SetPosition;
+	fbSetPosition_North: MC_SetPosition;
+	fbSetPosition_South: MC_SetPosition;
+
+END_VAR
+
+
+END_FUNCTION_BLOCK
+ACTION ACT_BLOCK:
+rTrig_Block (CLK:= bBlock);
+rTrig_Open (CLK:= bOpen);
+rTrig_Close (CLK:= bClose);
+
+if (rTrig_Block.Q) THEN
+    //BLOCK
+
+    bBlock := false;
+END_IF
+
+if (rTrig_Open.Q) THEN
+
+
+    bOpen := false;
+END_IF
+
+if (rTrig_Close.Q) THEN
+
+
+    bClose := false;
+END_IF
+END_ACTION
+ACTION ACT_CalculatePositions:
+//Calculate requested Positions
+
+
+fPosTopBlade := (rReqApertureSizeY/2) + rReqCenterY;
+fPosBottomBlade := (-1*rReqApertureSizeY/2) + rReqCenterY;
+
+fPosNorthBlade := (rReqApertureSizeX/2) + rReqCenterX;
+fPosSouthBlade := (-1*rReqApertureSizeX/2) + rReqCenterX;
+
+
+//Calculate Actual Positions
+
+
+rActApertureSizeX := ABS(stNorthBlade.stAxisStatus.fActPosition - stSouthBlade.stAxisStatus.fActPosition);
+
+rActApertureSizeY := ABS(stTopBlade.stAxisStatus.fActPosition - stBottomBlade.stAxisStatus.fActPosition);
+
+rActCenterX := ((stNorthBlade.stAxisStatus.fActPosition + stSouthBlade.stAxisStatus.fActPosition)/2);
+
+rActCenterY := ((stTopBlade.stAxisStatus.fActPosition + stBottomBlade.stAxisStatus.fActPosition)/2);
+END_ACTION
+ACTION ACT_Home:
+
+END_ACTION
+ACTION ACT_Init:
+//  init the motion stages parameters
+IF ( bInit) THEN
+    stTopBlade.bHardwareEnable := TRUE;
+    stBottomBlade.bHardwareEnable := TRUE;
+    stNorthBlade.bHardwareEnable := TRUE;
+    stSouthBlade.bHardwareEnable := TRUE;
+    stTopBlade.bPowerSelf :=TRUE;
+    stBottomBlade.bPowerSelf :=TRUE;
+    stNorthBlade.bPowerSelf :=TRUE;
+    stSouthBlade.bPowerSelf :=TRUE;
+    stTopBlade.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+    stBottomBlade.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+    stNorthBlade.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+    stSouthBlade.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+END_IF
+END_ACTION
+ACTION ACT_Motion:
+// Instantiate Function block for all the blades
+fbTopBlade(stMotionStage:=stTopBlade);
+fbBottomBlade(stMotionStage:=stBottomBlade);
+fbNorthBlade(stMotionStage:=stNorthBlade);
+fbSouthBlade(stMotionStage:=stSouthBlade);
+
+// PTP Motion for each blade
+stTop.sName := 'Top';
+stTop.fPosition := fPosTopBlade;
+stTop.fDelta := fSmallDelta;
+stTop.fVelocity := fMaxVelocity;
+stTop.fAccel := fHighAccel;
+stTop.fDecel := fHighAccel;
+
+stBOTTOM.sName := 'Bottom';
+stBOTTOM.fPosition := fPosBottomBlade;
+stBOTTOM.fDelta := fSmallDelta;
+stBOTTOM.fVelocity := fMaxVelocity;
+stBOTTOM.fAccel := fHighAccel;
+stBOTTOM.fDecel := fHighAccel;
+
+stNorth.sName := 'North';
+stNorth.fPosition := fPosNorthBlade;
+stNorth.fDelta := fSmallDelta;
+stNorth.fVelocity := fMaxVelocity;
+stNorth.fAccel := fHighAccel;
+stNorth.fDecel := fHighAccel;
+
+stSouth.sName := 'South';
+stSouth.fPosition := fPosSouthBlade;
+stSouth.fDelta := fSmallDelta;
+stSouth.fVelocity := fMaxVelocity;
+stSouth.fAccel := fHighAccel;
+stSouth.fDecel := fHighAccel;
+
+if (bExecuteMotion) THEN
+	fbTop.bExecute := fbBottom.bExecute :=fbNorth.bExecute := fbSouth.bExecute := bExecuteMotion;
+	bExecuteMotion:= FALSE;
+END_IF
+
+
+fbTop(
+    stPositionState:=stTop,
+    bMoveOk:=bMoveOk,
+    stMotionStage:=stTopBlade);
+
+fbBottom(
+    stPositionState:=stBOTTOM,
+    bMoveOk:=bMoveOk,
+    stMotionStage:=stBottomBlade);
+
+fbNorth(
+    stPositionState:=stNorth,
+    bMoveOk:=bMoveOk,
+    stMotionStage:=stNorthBlade);
+
+fbSouth(
+    stPositionState:=stSouth,
+    bMoveOk:=bMoveOk,
+    stMotionStage:=stSouthBlade);
+END_ACTION
+ACTION ACT_Zero:
+//ZERO BIAS
+
+// Set Y center to zero
+
+// Set X center to zero
+
+if (rSetCenterY)THEN 
+		rSetCenterY := false;
+		// Set Current Position
+		fbSetPosition_TOP.Position :=  stTopBlade.stAxisStatus.fActPosition - rActCenterY ; 
+		fbSetPosition_TOP.Execute := TRUE;
+		fbSetPosition_Bottom.Position := stBottomBlade.stAxisStatus.fActPosition - rActCenterY; 
+		fbSetPosition_Bottom.Execute := TRUE;
+END_IF
+
+if (rSetCenterX)THEN 
+		rSetCenterX := false;
+		// Set Current Position
+		fbSetPosition_North.Position := stNorthBlade.stAxisStatus.fActPosition - rActCenterX ; 
+		fbSetPosition_North.Execute := TRUE;
+		fbSetPosition_South.Position := stSouthBlade.stAxisStatus.fActPosition - rActCenterX ; ; 
+		fbSetPosition_South.Execute := TRUE;
+END_IF
+		
+	
+//Reset
+if (fbSetPosition_TOP.Done ) THEN
+	fbSetPosition_TOP.Execute := FALSE;	
+END_IF
+if (fbSetPosition_Bottom.Done ) THEN
+	fbSetPosition_Bottom.Execute := FALSE;	
+END_IF
+if (fbSetPosition_North.Done ) THEN
+	fbSetPosition_North.Execute := FALSE;	
+END_IF
+if (fbSetPosition_South.Done ) THEN
+	fbSetPosition_South.Execute := FALSE;	
+END_IF
+
+// Set Encoder Position
+//Clear position lag error
+stSetPositionOptions.ClearPositionLag := TRUE;
+fbSetPosition_TOP(
+	Axis:=  stTopBlade.Axis , 
+	Execute:= , 
+	Position:= 0 , 
+	Mode:= FALSE, 
+	Options:= stSetPositionOptions, 
+	Done=> , 
+	Busy=> , 
+	Error=> , 
+	ErrorID=> );
+fbSetPosition_Bottom(
+	Axis:= stBottomBlade.Axis , 
+	Execute:= , 
+	Position:= 0 , 
+	Mode:= FALSE, 
+	Options:= stSetPositionOptions, 
+	Done=> , 
+	Busy=> , 
+	Error=> , 
+	ErrorID=> );
+fbSetPosition_North(
+	Axis:= stNorthBlade.Axis , 
+	Execute:= , 
+	Position:= 0 , 
+	Mode:= FALSE, 
+	Options:= stSetPositionOptions, 
+	Done=> , 
+	Busy=> , 
+	Error=> , 
+	ErrorID=> );
+fbSetPosition_South(
+	Axis:= stSouthBlade.Axis , 
+	Execute:= , 
+	Position:= 0 , 
+	Mode:= FALSE, 
+	Options:= stSetPositionOptions, 
+	Done=> , 
+	Busy=> , 
+	Error=> , 
+	ErrorID=> );
+END_ACTION
+```
+
+
+POU: FB_SLITS_POWER
+-------------------
+
+File: lfe_motion/Temp/FB_SLITS_POWER.TcPOU
+
+```vhdl
+FUNCTION_BLOCK FB_SLITS_POWER EXTENDS FB_SLITS
+VAR_INPUT
+END_VAR
+VAR
+	 {attribute 'pytmc' := '
+        pv: FSW
+    '}
+    fbFlowSwitch: FB_XTES_Flowswitch;
+
+
+    //RTDs
+    {attribute 'pytmc' := '
+        pv: TOP:RTD:01
+    '}
+    RTD_TOP_1: FB_TempSensor;
+    {attribute 'pytmc' := '
+        pv: TOP:RTD:02
+    '}
+    RTD_TOP_2: FB_TempSensor;
+    {attribute 'pytmc' := '
+        pv: BOTTOM:RTD:01
+    '}
+    RTD_Bottom_1: FB_TempSensor;
+    {attribute 'pytmc' := '
+        pv: BOTTOM:RTD:02
+    '}
+    RTD_Bottom_2: FB_TempSensor;
+
+    {attribute 'pytmc' := '
+        pv: NORTH:RTD:01
+    '}
+    RTD_North_1: FB_TempSensor;
+    {attribute 'pytmc' := '
+        pv: NORTH:RTD:02
+    '}
+    RTD_North_2: FB_TempSensor;
+    {attribute 'pytmc' := '
+        pv: SOUTH:RTD:01
+    '}
+    RTD_South_1: FB_TempSensor;
+    {attribute 'pytmc' := '
+        pv: SOUTH:RTD:02
+    '}
+    RTD_South_2: FB_TempSensor;
+
+
+END_VAR
+ACT_init();
+
+// Instantiate Function block for all the blades
+ACT_Motion();
+//SET and GET the requested and Actual values
+ACT_CalculatePositions();
+ACT_Zero();
+//ACT_BLOCK();
+ACT_RTDs();
+
+END_FUNCTION_BLOCK
+ACTION ACT_RTDs:
+////RTDs
+RTD_TOP_1();
+RTD_TOP_2();
+RTD_Bottom_1();
+RTD_Bottom_2();
+RTD_North_1();
+RTD_North_2();
+RTD_South_1();
+RTD_South_2();
+
+//Flow Switch
+fbFlowSwitch();
+END_ACTION
+```
+
+
+POU: FB_SLITS_POWER_1
+---------------------
+
+File: lfe_motion/Temp/FB_SLITS_POWER_1.TcPOU
+
+```vhdl
+FUNCTION_BLOCK FB_SLITS_POWER_1
+VAR_IN_OUT
+	stTopBlade: DUT_MotionStage;
+	stBottomBlade: DUT_MotionStage;
+	stNorthBlade: DUT_MotionStage;
+	stSouthBlade: DUT_MotionStage;
+END_VAR
+VAR_INPUT
+	fPosTopBlade: LREAL;
+	fPosBottomBlade: LREAL;
+	fPosNorthBlade: LREAL;
+	fPosSouthBlade: LREAL;
+	bExecuteMotion:bool ;
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	fbTopBlade: FB_MotionStage;
+	fbBottomBlade: FB_MotionStage;
+	fbNorthBlade: FB_MotionStage;
+	fbSouthBlade: FB_MotionStage;
+	
+	{attribute 'pytmc' := '
+		pv: FSW
+	'}
+	fbFlowSwitch: FB_XTES_Flowswitch;
+	
+	
+	//RTDs
+	{attribute 'pytmc' := '
+		pv: TOP:RTD:01
+	'}
+	RTD_TOP_1: FB_ThermoCouple;
+	{attribute 'pytmc' := '
+		pv: TOP:RTD:02
+	'}
+	RTD_TOP_2: FB_ThermoCouple;
+	{attribute 'pytmc' := '
+		pv: BOTTOM:RTD:01
+	'}
+	RTD_Bottom_1: FB_ThermoCouple;
+	{attribute 'pytmc' := '
+		pv: BOTTOM:RTD:02
+	'}
+	RTD_Bottom_2: FB_ThermoCouple;
+	
+	{attribute 'pytmc' := '
+		pv: NORTH:RTD:01
+	'}
+	RTD_North_1: FB_ThermoCouple;
+	{attribute 'pytmc' := '
+		pv: NORTH:RTD:02
+	'}
+	RTD_North_2: FB_ThermoCouple;
+	{attribute 'pytmc' := '
+		pv: SOUTH:RTD:01
+	'}
+	RTD_South_1: FB_ThermoCouple;
+	{attribute 'pytmc' := '
+		pv: SOUTH:RTD:02
+	'}
+	RTD_South_2: FB_ThermoCouple;
+	
+	fSmallDelta: LREAL := 0.01;
+	fBigDelta: LREAL := 10;
+	fMaxVelocity: LREAL := 0.33;
+	fHighAccel: LREAL := 0.8;
+	fLowAccel: LREAL := 0.1;
+	
+	stTop: DUT_PositionState;
+	stBOTTOM: DUT_PositionState;
+	stNorth: DUT_PositionState;
+	stSouth: DUT_PositionState;
+
+	{attribute 'pytmc' := 'pv: TOP'}
+	fbTop: FB_StatePTPMove;
+	{attribute 'pytmc' := 'pv: BOTTOM'}
+	fbBottom: FB_StatePTPMove;
+	{attribute 'pytmc' := 'pv: NORTH'}
+	fbNorth: FB_StatePTPMove;
+	{attribute 'pytmc' := 'pv: SOUTH'}
+	fbSouth: FB_StatePTPMove;
+	
 
 END_VAR
 // Instantiate Function block for all the blades
@@ -792,7 +1250,10 @@ stTopBlade.bHardwareEnable := TRUE;
 stBottomBlade.bHardwareEnable := TRUE;
 stNorthBlade.bHardwareEnable := TRUE;
 stSouthBlade.bHardwareEnable := TRUE;
-
+stTopBlade.bPowerSelf :=TRUE;
+stBottomBlade.bPowerSelf :=TRUE;
+stNorthBlade.bPowerSelf :=TRUE;
+stSouthBlade.bPowerSelf :=TRUE;
 
 //RTDs
 RTD_TOP_1();
@@ -841,24 +1302,24 @@ stSouth.fDecel := fHighAccel;
 //fbTop.bExecute := fbBottom.bExecute :=fbNorth.bExecute := fbSouth.bExecute := bExecuteMotion;
 
 fbTop(
-    stPositionState:=stTop,
-    bMoveOk:=TRUE,
-    stMotionStage:=stTopBlade);
-
+	stPositionState:=stTop,
+	bMoveOk:=TRUE,
+	stMotionStage:=stTopBlade);
+	
 fbBottom(
-    stPositionState:=stBOTTOM,
-    bMoveOk:=TRUE,
-    stMotionStage:=stBottomBlade);
-
+	stPositionState:=stBOTTOM,
+	bMoveOk:=TRUE,
+	stMotionStage:=stBottomBlade);
+	
 fbNorth(
-    stPositionState:=stNorth,
-    bMoveOk:=TRUE,
-    stMotionStage:=stNorthBlade);
-
+	stPositionState:=stNorth,
+	bMoveOk:=TRUE,
+	stMotionStage:=stNorthBlade);
+	
 fbSouth(
-    stPositionState:=stSouth,
-    bMoveOk:=TRUE,
-    stMotionStage:=stSouthBlade);
+	stPositionState:=stSouth,
+	bMoveOk:=TRUE,
+	stMotionStage:=stSouthBlade);
 
 END_FUNCTION_BLOCK
 ```
@@ -1579,85 +2040,129 @@ File: lfe_motion/POUs/PRG_SL1L0_POWER.TcPOU
 
 ```vhdl
 PROGRAM PRG_SL1L0_POWER
-VAR
-    {attribute 'pytmc' := '
-        pv: SL1L0:POWER
-        io: io
+VAR // fix linking to rtd in the following order Bottom - South - TOP - NORTH
+	{attribute 'pytmc' := '
+		pv: SL1L0:POWER
+		io: io
+	'}
+	{attribute 'TcLinkTo' := '.RTD_Bottom_1.iRaw := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 1^Value;
+							  .RTD_Bottom_1.bError := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 1^Status^Error;
+							  .RTD_Bottom_1.bUnderrange := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 1^Status^Underrange;
+							  .RTD_Bottom_1.bOverrange := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 1^Status^Overrange;
+							  .RTD_Bottom_2.iRaw := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 2^Value;
+							  .RTD_Bottom_2.bError := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 2^Status^Error;
+							  .RTD_Bottom_2.bUnderrange := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 2^Status^Underrange;
+							  .RTD_Bottom_2.bOverrange := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 2^Status^Overrange;
+							  .RTD_South_1.iRaw := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 1^Value;
+							  .RTD_South_1.bError := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 1^Status^Error;
+							  .RTD_South_1.bUnderrange := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 1^Status^Underrange;
+							  .RTD_South_1.bOverrange := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 1^Status^Overrange;
+							  .RTD_South_2.iRaw := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 2^Value;
+							  .RTD_South_2.bError := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 2^Status^Error;
+							  .RTD_South_2.bUnderrange := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 2^Status^Underrange;
+							  .RTD_South_2.bOverrange := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 2^Status^Overrange;
+							  .RTD_TOP_1.iRaw := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 1^Value;
+							  .RTD_TOP_1.bError := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 1^Status^Error;
+							  .RTD_TOP_1.bUnderrange := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 1^Status^Underrange;
+							  .RTD_TOP_1.bOverrange := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 1^Status^Overrange;
+							  .RTD_TOP_2.iRaw := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 2^Value;
+							  .RTD_TOP_2.bError := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 2^Status^Error;
+							  .RTD_TOP_2.bUnderrange := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 2^Status^Underrange;
+							  .RTD_TOP_2.bOverrange := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 2^Status^Overrange;
+							  .RTD_North_1.iRaw := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 1^Value;
+							  .RTD_North_1.bError := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 1^Status^Error;
+							  .RTD_North_1.bUnderrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 1^Status^Underrange;
+							  .RTD_North_1.bOverrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 1^Status^Overrange;
+							  .RTD_North_2.iRaw := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Value;
+							  .RTD_North_2.bError := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Error;
+							  .RTD_North_2.bUnderrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Underrange;
+							  .RTD_North_2.bOverrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange'}
+	fbSL1L0: FB_SLITS_POWER;
+	
+	{attribute 'pytmc' := '
+    pv: SL1L0:POWER:GO;
+    io: io;
+    field: ZNAM False;
+    field: ONAM True;
     '}
-    {attribute 'TcLinkTo' := '.RTD_TOP_1.iRaw := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 1^Value;
-                              .RTD_TOP_1.bError := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 1^Status^Error;
-                              .RTD_TOP_1.bUnderrange := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 1^Status^Underrange;
-                              .RTD_TOP_1.bOverrange := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 1^Status^Overrange;
-                              .RTD_TOP_2.iRaw := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 2^Value;
-                              .RTD_TOP_2.bError := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 2^Status^Error;
-                              .RTD_TOP_2.bUnderrange := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 2^Status^Underrange;
-                              .RTD_TOP_2.bOverrange := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 2^Status^Overrange;
-                              .RTD_Bottom_1.iRaw := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 1^Value;
-                              .RTD_Bottom_1.bError := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 1^Status^Error;
-                              .RTD_Bottom_1.bUnderrange := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 1^Status^Underrange;
-                              .RTD_Bottom_1.bOverrange := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 1^Status^Overrange;
-                              .RTD_Bottom_2.iRaw := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 2^Value;
-                              .RTD_Bottom_2.bError := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 2^Status^Error;
-                              .RTD_Bottom_2.bUnderrange := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 2^Status^Underrange;
-                              .RTD_Bottom_2.bOverrange := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 2^Status^Overrange;
-                              .RTD_North_1.iRaw := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 1^Value;
-                              .RTD_North_1.bError := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 1^Status^Error;
-                              .RTD_North_1.bUnderrange := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 1^Status^Underrange;
-                              .RTD_North_1.bOverrange := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 1^Status^Overrange;
-                              .RTD_North_2.iRaw := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 2^Value;
-                              .RTD_North_2.bError := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 2^Status^Error;
-                              .RTD_North_2.bUnderrange := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 2^Status^Underrange;
-                              .RTD_North_2.bOverrange := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 2^Status^Overrange;
-                              .RTD_South_1.iRaw := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 1^Value;
-                              .RTD_South_1.bError := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 1^Status^Error;
-                              .RTD_South_1.bUnderrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 1^Status^Underrange;
-                              .RTD_South_1.bOverrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 1^Status^Overrange;
-                              .RTD_South_2.iRaw := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Value;
-                              .RTD_South_2.bError := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Error;
-                              .RTD_South_2.bUnderrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Underrange;
-                              .RTD_South_2.bOverrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange'}
-    fbSL1L0: FB_SLITS_POWER;
-    (*T. MATRIX (North-x1,South-x2,Top-y1,Bottom-y2.. appSize-gapX,gapY, Cx, Cy) *)
-    aTMatrix: ARRAY [1..4,1..4] of REAL;
-    {attribute 'pytmc' := '
+    bExecuteMotion:BOOL ;
+	(*T. MATRIX (North-x1,South-x2,Top-y1,Bottom-y2.. appSize-gapX,gapY, Cx, Cy) *)
+	(*aTMatrix: ARRAY [1..4,1..4] of REAL;
+	{attribute 'pytmc' := '
     pv: SL1L0:POWER:GO;
     io: io;
     '}
-    bExecuteMotion:bool ;
-    {attribute 'pytmc' := '
-    pv: SL1L0:POWER:WIDTH_DES;
-    io: io;
+	bExecuteMotion:bool ;
+	{attribute 'pytmc' := '
+    pv: SL1L0:POWER:XWID_REQ;
+	io: io;
     '}
-    rReqApertureSizeX : REAL;
-    {attribute 'pytmc' := '
-    pv: SL1L0:POWER:HEIGHT_DES;
-    io: io;
+	rReqApertureSizeX : REAL;
+	{attribute 'pytmc' := '
+    pv: SL1L0:POWER:YWID_REQ;
+	io: io;
     '}
-    rReqApertureSizeY : REAL;
-    {attribute 'pytmc' := '
-    pv: SL1L0:POWER:CENTER_X_DES;
-    io: io;
+	rReqApertureSizeY : REAL;
+	{attribute 'pytmc' := '
+    pv: SL1L0:POWER:XCEN_REQ;
+	io: io;
     '}
-    rReqCenterX: REAL;
-    {attribute 'pytmc' := '
-    pv: SL1L0:POWER:CENTER_Y_DES;
-    io: io;
+	rReqCenterX: REAL;
+	{attribute 'pytmc' := '
+    pv: SL1L0:POWER:YCEN_REQ;
+	io: io;
     '}
-    rReqCenterY: REAL;
-    bInit:BOOL :=true;
+	rReqCenterY: REAL;
+	
+	{attribute 'pytmc' := '
+    pv: SL1L0:POWER:ACTUAL_XWIDTH;
+	io: io;
+    '}
+	rActApertureSizeX : REAL;
+	
+	{attribute 'pytmc' := '
+    pv: SL1L0:POWER:ACTUAL_YWIDTH;
+	io: io;
+    '}
+	rActApertureSizeY : REAL;
+	{attribute 'pytmc' := '
+    pv: SL1L0:POWER:ACTUAL_XCENTER;
+	io: io;
+    '}
+	rActCenterX: REAL;
+	{attribute 'pytmc' := '
+    pv: SL1L0:POWER:ACTUAL_YCENTER;
+	io: io;
+    '}
+	rActCenterY: REAL;
+	
+	{attribute 'pytmc' := '
+    pv: SL1L0:POWER:XCEN_SETZERO;
+	io: io;
+    '}
+	rSetCenterX: REAL;
+	{attribute 'pytmc' := '
+    pv: SL1L0:POWER:YCEN_SETZERO;
+	io: io;
+    '}
+	rSetCenterY: REAL;
+	
+	bInit:BOOL :=true;
+	
 
-
-    rMaxX:REAL:=28;
-    rMaxY:REAL:=28;
-    rMaxCx:REAL:=14;
-    rMaxCy:REAL:=14;
-
+	rMaxX:REAL:=28;
+	rMaxY:REAL:=28;
+	rMaxCx:REAL:=14;
+	rMaxCy:REAL:=14;*)
+	//GET PMPS Move Ok bit
+	// Default True until it is properly linked to PMPS bit
+	bMoveOk:BOOL :=TRUE;
 (*fbMotion1: FB_SimMotor;
-    fbMotion2: FB_SimMotor;
-    fbMotion3: FB_SimMotor;
-    fbMotion4: FB_SimMotor;*)
-
-(*mcPower : ARRAY [1..4] OF MC_POWER;*)
+	fbMotion2: FB_SimMotor;
+	fbMotion3: FB_SimMotor;
+	fbMotion4: FB_SimMotor;*)
+	
+mcPower : ARRAY [1..4] OF MC_POWER;
 END_VAR
 // Placeholder, standard simulated motion for all axes
 (*fbMotion1(stMotionStage := Main.M41);
@@ -1666,47 +2171,23 @@ fbMotion3(stMotionStage := Main.M43);
 fbMotion4(stMotionStage := Main.M44);*)
 
 
-if (bInit) THEN
-    (*Gap*)
-    aTMatrix[1,1]:= 1/2;
-    aTMatrix[2,1]:= -1/2;
-    aTMatrix[3,1]:= 0;
-    aTMatrix[4,1]:= 0;
-    (*GAP Y*)
-    aTMatrix[1,2]:= 0;
-    aTMatrix[2,2]:= 0;
-    aTMatrix[3,2]:= 1/2;
-    aTMatrix[4,2]:= -1/2;
-    (*Center X*)
-    aTMatrix[1,3]:= 1;
-    aTMatrix[2,3]:= 1;
-    aTMatrix[3,3]:= 0;
-    aTMatrix[4,3]:= 0;
-    (*Center Y*)
-    aTMatrix[1,4]:= 0;
-    aTMatrix[2,4]:= 0;
-    aTMatrix[3,4]:= 1;
-    aTMatrix[4,4]:= 1;
-
-    bInit :=false;
-END_IF
 
 //verigy requested gap and center are within range
 // Needs to be better, limits are calculated based on the requested center and travel range
-rReqApertureSizeX := LIMIT(0,rReqApertureSizeX, rMaxX);
+(*rReqApertureSizeX := LIMIT(0,rReqApertureSizeX, rMaxX);
 rReqApertureSizeY := LIMIT(0,rReqApertureSizeY, rMaxY);
 rReqCenterX := LIMIT(0,rReqCenterX, rMaxCx);
-rReqCenterY := LIMIT(0,rReqCenterY, rMaxCy);
+rReqCenterY := LIMIT(0,rReqCenterY, rMaxCy);*)
 
 // Calculate the position of every blade based on the transformation Matrix
 
-fbSL1L0.fPosNorthBlade := (aTMatrix[1,1] * rReqApertureSizeX) + (aTMatrix[1,3]*rReqCenterX);
+(*fbSL1L0.fPosNorthBlade := (aTMatrix[1,1] * rReqApertureSizeX) + (aTMatrix[1,3]*rReqCenterX);
 fbSL1L0.fPosSouthBlade:= (aTMatrix[2,1] * rReqApertureSizeX) + (aTMatrix[2,3]*rReqCenterX);
 
 fbSL1L0.fPosTopBlade := (aTMatrix[3,2] * rReqApertureSizeY) +(aTMatrix[3,4]*rReqCenterY);
-fbSL1L0.fPosBottomBlade :=(aTMatrix[4,2] * rReqApertureSizeY) + (aTMatrix[4,4]*rReqCenterY);
+fbSL1L0.fPosBottomBlade :=(aTMatrix[4,2] * rReqApertureSizeY) + (aTMatrix[4,4]*rReqCenterY);*)
 
-//fbSL1L0.bExecuteMotion := bExecuteMotion;
+
 
 (*
 --MAPPING TO PHYSICAL TERMINAL--
@@ -1716,10 +2197,13 @@ Main.43 -> M3    (Top)
 Main.44 -> M4    (North)
 *)
 
+//fbSL1L0.bExecuteMotion := bExecuteMotion;
+fbSL1L0.bMoveOk := bMoveOk;
 fbSL1L0(stTopBlade:=  Main.M43,
         stBottomBlade:= Main.M41,
         stNorthBlade:=  Main.M44,
-        stSouthBlade:=  Main.M42);
+        stSouthBlade:=  Main.M42,
+		bExecuteMotion:=bExecuteMotion);
 
 //for testing purposes only. comment-out/delete once done.
 (*mcPower[1](axis:=Main.M41.Axis, Enable:=TRUE, enable_positive:=Main.M41.bLimitForwardEnable, enable_negative:=Main.M41.bLimitBackwardEnable);
@@ -1738,86 +2222,60 @@ File: lfe_motion/POUs/PRG_SL2L0_POWER.TcPOU
 
 ```vhdl
 PROGRAM PRG_SL2L0_POWER
-VAR
-    {attribute 'pytmc' := '
-        pv: SL2L0:POWER
-        io: io
-    '}
-    {attribute 'TcLinkTo' := '.RTD_TOP_1.iRaw := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Value;
-                              .RTD_TOP_1.bError := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Error;
-                              .RTD_TOP_1.bUnderrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Underrange;
-                              .RTD_TOP_1.bOverrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Overrange;
-                              .RTD_TOP_2.iRaw := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Value;
-                              .RTD_TOP_2.bError := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Error;
-                              .RTD_TOP_2.bUnderrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Underrange;
-                              .RTD_TOP_2.bOverrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Overrange;
-                              .RTD_Bottom_1.iRaw := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Value;
-                              .RTD_Bottom_1.bError := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Error;
-                              .RTD_Bottom_1.bUnderrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Underrange;
-                              .RTD_Bottom_1.bOverrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Overrange;
-                              .RTD_Bottom_2.iRaw := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Value;
-                              .RTD_Bottom_2.bError := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Error;
-                              .RTD_Bottom_2.bUnderrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Underrange;
-                              .RTD_Bottom_2.bOverrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Overrange;
-                              .RTD_North_1.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Value;
-                              .RTD_North_1.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Error;
-                              .RTD_North_1.bUnderrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Underrange;
-                              .RTD_North_1.bOverrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Overrange;
-                              .RTD_North_2.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Value;
-                              .RTD_North_2.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Error;
-                              .RTD_North_2.bUnderrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Underrange;
-                              .RTD_North_2.bOverrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Overrange;
-                              .RTD_South_1.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Value;
-                              .RTD_South_1.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Error;
-                              .RTD_South_1.bUnderrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 1^Status^Underrange;
-                              .RTD_South_1.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 1^Status^Overrange;
-                              .RTD_South_2.iRaw := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Value;
-                              .RTD_South_2.bError := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Error;
-                              .RTD_South_2.bUnderrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Underrange;
-                              .RTD_South_2.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange'}
-    fbSL2L0: FB_SLITS_POWER;
-
-
-    (*T. MATRIX (North-x1,South-x2,Top-y1,Bottom-y2.. appSize-gapX,gapY, Cx, Cy) *)
-    aTMatrix: ARRAY [1..4,1..4] of REAL;
-    {attribute 'pytmc' := '
+VAR // linking to rtd in the following order Bottom - South - TOP - NORTH
+	{attribute 'pytmc' := '
+		pv: SL2L0:POWER
+		io: io
+	'}
+	{attribute 'TcLinkTo' := '.RTD_Bottom_1.iRaw := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Value;
+							  .RTD_Bottom_1.bError := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Error;
+							  .RTD_Bottom_1.bUnderrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Underrange;
+							  .RTD_Bottom_1.bOverrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Overrange;
+							  .RTD_Bottom_2.iRaw := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Value;
+							  .RTD_Bottom_2.bError := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Error;
+							  .RTD_Bottom_2.bUnderrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Underrange;
+							  .RTD_Bottom_2.bOverrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Overrange;
+							  .RTD_South_1.iRaw := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Value;
+							  .RTD_South_1.bError := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Error;
+							  .RTD_South_1.bUnderrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Underrange;
+							  .RTD_South_1.bOverrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Overrange;
+							  .RTD_South_2.iRaw := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Value;
+							  .RTD_South_2.bError := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Error;
+							  .RTD_South_2.bUnderrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Underrange;
+							  .RTD_South_2.bOverrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Overrange;
+							  .RTD_TOP_1.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Value;
+							  .RTD_TOP_1.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Error;
+							  .RTD_TOP_1.bUnderrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Underrange;
+							  .RTD_TOP_1.bOverrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Overrange;
+							  .RTD_TOP_2.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Value;
+							  .RTD_TOP_2.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Error;
+							  .RTD_TOP_2.bUnderrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Underrange;
+							  .RTD_TOP_2.bOverrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Overrange;
+							  .RTD_North_1.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Value;
+							  .RTD_North_1.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Error;
+							  .RTD_North_1.bUnderrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 1^Status^Underrange;
+							  .RTD_North_1.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 1^Status^Overrange;
+							  .RTD_North_2.iRaw := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Value;
+							  .RTD_North_2.bError := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Error;
+							  .RTD_North_2.bUnderrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Underrange;
+							  .RTD_North_2.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange'}
+	fbSL2L0: FB_SLITS_POWER;
+	
+	{attribute 'pytmc' := '
     pv: SL2L0:POWER:GO;
     io: io;
+    field: ZNAM False;
+    field: ONAM True;
     '}
-    bExecuteMotion:bool ;
-    {attribute 'pytmc' := '
-    pv: SL2L0:POWER:WIDTH_DES;
-    io: io;
-    '}
-    rReqApertureSizeX : REAL;
-    {attribute 'pytmc' := '
-    pv: SL2L0:POWER:HEIGHT_DES;
-    io: io;
-    '}
-    rReqApertureSizeY : REAL;
-    {attribute 'pytmc' := '
-    pv: SL2L0:POWER:CENTER_X_DES;
-    io: io;
-    '}
-    rReqCenterX: REAL;
-    {attribute 'pytmc' := '
-    pv: SL2L0:POWER:CENTER_Y_DES;
-    io: io;
-    '}
-    rReqCenterY: REAL;
-    bInit:BOOL :=true;
+    bExecuteMotion:BOOL ;
 
-
-    rMaxX:REAL:=28;
-    rMaxY:REAL:=28;
-    rMaxCx:REAL:=14;
-    rMaxCy:REAL:=14;
-
-    (*fbMotion1: FB_SimMotor;
-    fbMotion2: FB_SimMotor;
-    fbMotion3: FB_SimMotor;
-    fbMotion4: FB_SimMotor;*)
-
+	
+	(*fbMotion1: FB_SimMotor;
+	fbMotion2: FB_SimMotor;
+	fbMotion3: FB_SimMotor;
+	fbMotion4: FB_SimMotor;*)
+	bMoveOk:BOOL :=TRUE;
+	
 END_VAR
 // Placeholder, standard simulated motion for all axes
 (*fbMotion1(stMotionStage := Main.M45);
@@ -1826,50 +2284,6 @@ fbMotion3(stMotionStage := Main.M47);
 fbMotion4(stMotionStage := Main.M48);*)
 
 
-
-
-if (bInit) THEN
-    (*Gap X*)
-    aTMatrix[1,1]:= 1/2;
-    aTMatrix[2,1]:= -1/2;
-    aTMatrix[3,1]:= 0;
-    aTMatrix[4,1]:= 0;
-    (*GAP Y*)
-    aTMatrix[1,2]:= 0;
-    aTMatrix[2,2]:= 0;
-    aTMatrix[3,2]:= 1/2;
-    aTMatrix[4,2]:= -1/2;
-    (*Center X*)
-    aTMatrix[1,3]:= 1;
-    aTMatrix[2,3]:= 1;
-    aTMatrix[3,3]:= 0;
-    aTMatrix[4,3]:= 0;
-    (*Center Y*)
-    aTMatrix[1,4]:= 0;
-    aTMatrix[2,4]:= 0;
-    aTMatrix[3,4]:= 1;
-    aTMatrix[4,4]:= 1;
-
-    bInit :=false;
-END_IF
-
-//verify requested gap and center are within range
-// Needs to be better
-rReqApertureSizeX := LIMIT(0,rReqApertureSizeX, rMaxX);
-rReqApertureSizeY := LIMIT(0,rReqApertureSizeY, rMaxY);
-rReqCenterX := LIMIT(0,rReqCenterX, rMaxCx);
-rReqCenterY := LIMIT(0,rReqCenterY, rMaxCy);
-
-// Calculate the position of every blade based on the transformation Matrix
-
-fbSL2L0.fPosNorthBlade := (aTMatrix[1,1] * rReqApertureSizeX) + (aTMatrix[1,3]*rReqCenterX);
-fbSL2L0.fPosSouthBlade:= (aTMatrix[2,1] * rReqApertureSizeX) + (aTMatrix[2,3]*rReqCenterX);
-
-fbSL2L0.fPosTopBlade := (aTMatrix[3,2] * rReqApertureSizeY) +(aTMatrix[3,4]*rReqCenterY);
-fbSL2L0.fPosBottomBlade :=(aTMatrix[4,2] * rReqApertureSizeY) + (aTMatrix[4,4]*rReqCenterY);
-
-fbSL2L0.bExecuteMotion := bExecuteMotion;
-
 (*
 --MAPPING TO PHYSICAL TERMINAL--
 Main.M45 -> M1    (Bottom)
@@ -1877,10 +2291,12 @@ Main.M46 -> M2    (South)
 Main.M47 -> M3    (Top)
 Main.M48 -> M4    (North)
 *)
-fbSL2L0(stTopBlade:=  Main.M47,
-        stBottomBlade:= Main.M45,
-        stNorthBlade:=  Main.M48,
-        stSouthBlade:=  Main.M46);
+fbSL2L0.bMoveOk := bMoveOk;
+fbSL2L0(stTopBlade:=  Main.M47, 
+		stBottomBlade:= Main.M45, 
+		stNorthBlade:=  Main.M48, 
+		stSouthBlade:=  Main.M46,
+		bExecuteMotion:=bExecuteMotion);
 
 END_PROGRAM
 ```
@@ -4019,8 +4435,9 @@ NC axes
         OtherSettings:PulseDistanceNeg = 0.02
         Enc:EncType = 29
         Enc:ScaleFactorNumerator = 5e-05
-        Enc:Offset = -25.915725
+        Enc:Offset = -39.4145
         Enc:MaxCount = '#xffffffff'
+        Enc:ReferenceSystem = 1
         Enc:Inc:RefSoftSyncMask = '#x0000ffff'
 
     42.) 'SL1L0-SOUTH-M42':
@@ -4045,8 +4462,9 @@ NC axes
         OtherSettings:PulseDistanceNeg = 0.02
         Enc:EncType = 29
         Enc:ScaleFactorNumerator = 5e-05
-        Enc:Offset = -6871913.034
+        Enc:Offset = -214727.5249
         Enc:MaxCount = '#xffffffff'
+        Enc:ReferenceSystem = 1
         Enc:Inc:RefSoftSyncMask = '#x0000ffff'
 
     43.) 'SL1L0-TOP-M43':
@@ -4071,8 +4489,9 @@ NC axes
         OtherSettings:PulseDistanceNeg = 0.02
         Enc:EncType = 29
         Enc:ScaleFactorNumerator = 5e-05
-        Enc:Offset = -29.3954
+        Enc:Offset = -15.2986
         Enc:MaxCount = '#xffffffff'
+        Enc:ReferenceSystem = 1
         Enc:Inc:RefSoftSyncMask = '#x0000ffff'
 
     44.) 'SL1L0-NORTH-M44':
@@ -4097,8 +4516,9 @@ NC axes
         OtherSettings:PulseDistanceNeg = 0.02
         Enc:EncType = 29
         Enc:ScaleFactorNumerator = 5e-05
-        Enc:Offset = -6871918.482
+        Enc:Offset = -214705.4742
         Enc:MaxCount = '#xffffffff'
+        Enc:ReferenceSystem = 1
         Enc:Inc:RefSoftSyncMask = '#x0000ffff'
 
     45.) 'SL2L0-BOTTOM-M45':
@@ -7718,7 +8138,7 @@ Links
 Pragma lint results
 -------------------
 ```
-INFO:pytmc.bin.pragmalint:Total pragmas found: 154 Total linter errors: 0
+INFO:pytmc.bin.pragmalint:Total pragmas found: 184 Total linter errors: 0
 PLC Project (1): lfe_motion
 ===========================
 
@@ -7780,13 +8200,13 @@ POUs/PRG_IM4L0_XTES.TcPOU (TcPlcObject)
 POUs/PRG_SL1L0_POWER.TcPOU (TcPlcObject)
 ----------------------------------------
 
-    - PRG_SL1L0_POWER: Declaration - 7 pragmas
+    - PRG_SL1L0_POWER: Declaration - 14 pragmas
 
 
 POUs/PRG_SL2L0_POWER.TcPOU (TcPlcObject)
 ----------------------------------------
 
-    - PRG_SL2L0_POWER: Declaration - 7 pragmas
+    - PRG_SL2L0_POWER: Declaration - 3 pragmas
 
 
 Temp/FB_MPA.TcPOU (TcPlcObject)
@@ -7795,9 +8215,21 @@ Temp/FB_MPA.TcPOU (TcPlcObject)
     - FB_MPA: Declaration - 4 pragmas
 
 
+Temp/FB_SLITS.TcPOU (TcPlcObject)
+---------------------------------
+
+    - FB_SLITS: Declaration - 18 pragmas
+
+
 Temp/FB_SLITS_POWER.TcPOU (TcPlcObject)
 ---------------------------------------
 
-    - FB_SLITS_POWER: Declaration - 13 pragmas
+    - FB_SLITS_POWER: Declaration - 9 pragmas
+
+
+Temp/FB_SLITS_POWER_1.TcPOU (TcPlcObject)
+-----------------------------------------
+
+    - FB_SLITS_POWER_1: Declaration - 13 pragmas
 
 ```
