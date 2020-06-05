@@ -1,4 +1,4 @@
-record(longin, "$(IOC):LCLSGeneral:LogPort_RBV") {
+record(longin, "$(PREFIX)LCLSGeneral:LogPort_RBV") {
   field(DESC, "The log host UDP port")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7,14 +7,14 @@ record(longin, "$(IOC):LCLSGeneral:LogPort_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Logger.iLogPort?")
 }
 
-record(longout, "$(IOC):LCLSGeneral:LogPort") {
+record(longout, "$(PREFIX)LCLSGeneral:LogPort") {
   field(DESC, "The log host UDP port")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Logger.iLogPort=")
   info(autosaveFields_pass0, "VAL")
 }
 
-record(waveform, "$(IOC):LCLSGeneral:LogHost_RBV") {
+record(waveform, "$(PREFIX)LCLSGeneral:LogHost_RBV") {
   field(DESC, "The log host IP address")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -25,7 +25,7 @@ record(waveform, "$(IOC):LCLSGeneral:LogHost_RBV") {
   field(NELM, "15")
 }
 
-record(waveform, "$(IOC):LCLSGeneral:LogHost") {
+record(waveform, "$(PREFIX)LCLSGeneral:LogHost") {
   field(DESC, "The log host IP address")
   field(DTYP, "asynInt8ArrayOut")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Logger.cLogHost=")
@@ -41,16 +41,16 @@ record(bi, "SL1L0:POWER:GO_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.bExecuteMotion?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "False")
+  field(ONAM, "True")
 }
 
 record(bo, "SL1L0:POWER:GO") {
   field(DESC, "ads:PRG_SL1L0_POWER.bExecuteMotion")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.bExecuteMotion=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "False")
+  field(ONAM, "True")
   info(autosaveFields_pass0, "VAL")
 }
 
@@ -61,16 +61,16 @@ record(bi, "SL2L0:POWER:GO_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.bExecuteMotion?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "False")
+  field(ONAM, "True")
 }
 
 record(bo, "SL2L0:POWER:GO") {
   field(DESC, "ads:PRG_SL2L0_POWER.bExecuteMotion")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.bExecuteMotion=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "False")
+  field(ONAM, "True")
   info(autosaveFields_pass0, "VAL")
 }
 
@@ -12814,307 +12814,15 @@ record(bo, "IM4L0:XTES:SFW:FLOW") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(ai, "SL1L0:POWER:WIDTH_DES_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER.rReqApertureSizeX")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.rReqApertureSizeX?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(ao, "SL1L0:POWER:WIDTH_DES") {
-  field(DESC, "ads:PRG_SL1L0_POWER.rReqApertureSizeX")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.rReqApertureSizeX=")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC VAL")
-}
-
-record(bi, "SL1L0:POWER:FSW:FLOW_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....lowSwitch.bFlowOk")
+record(bi, "SL1L0:POWER:PMPS_OK_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.bMoveOk")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.fbFlowSwitch.bFlowOk?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bo, "SL1L0:POWER:FSW:FLOW") {
-  field(DESC, "ads:PRG_SL1L0_POWER....lowSwitch.bFlowOk")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.fbFlowSwitch.bFlowOk=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(ai, "SL1L0:POWER:TOP:RTD:01:STC:TEMP_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....0.RTD_TOP_1.fTemp")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.fTemp?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(bi, "SL1L0:POWER:TOP:RTD:01:STC:CONN_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER...._TOP_1.bConnected")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bConnected?")
-  field(ZNAM, "Disconnected")
-  field(ONAM, "Connected")
-}
-
-record(bi, "SL1L0:POWER:TOP:RTD:01:STC:ERR_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER.....RTD_TOP_1.bError")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bError?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(ai, "SL1L0:POWER:TOP:RTD:02:STC:TEMP_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....0.RTD_TOP_2.fTemp")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.fTemp?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(bi, "SL1L0:POWER:TOP:RTD:02:STC:CONN_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER...._TOP_2.bConnected")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bConnected?")
-  field(ZNAM, "Disconnected")
-  field(ONAM, "Connected")
-}
-
-record(bi, "SL1L0:POWER:TOP:RTD:02:STC:ERR_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER.....RTD_TOP_2.bError")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bError?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(ai, "SL1L0:POWER:BOTTOM:RTD:01:STC:TEMP_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....TD_Bottom_1.fTemp")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.fTemp?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(bi, "SL1L0:POWER:BOTTOM:RTD:01:STC:CONN_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....ttom_1.bConnected")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bConnected?")
-  field(ZNAM, "Disconnected")
-  field(ONAM, "Connected")
-}
-
-record(bi, "SL1L0:POWER:BOTTOM:RTD:01:STC:ERR_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....D_Bottom_1.bError")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bError?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(ai, "SL1L0:POWER:BOTTOM:RTD:02:STC:TEMP_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....TD_Bottom_2.fTemp")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.fTemp?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(bi, "SL1L0:POWER:BOTTOM:RTD:02:STC:CONN_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....ttom_2.bConnected")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bConnected?")
-  field(ZNAM, "Disconnected")
-  field(ONAM, "Connected")
-}
-
-record(bi, "SL1L0:POWER:BOTTOM:RTD:02:STC:ERR_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....D_Bottom_2.bError")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bError?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(ai, "SL1L0:POWER:NORTH:RTD:01:STC:TEMP_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....RTD_North_1.fTemp")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.fTemp?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(bi, "SL1L0:POWER:NORTH:RTD:01:STC:CONN_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....orth_1.bConnected")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bConnected?")
-  field(ZNAM, "Disconnected")
-  field(ONAM, "Connected")
-}
-
-record(bi, "SL1L0:POWER:NORTH:RTD:01:STC:ERR_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....TD_North_1.bError")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bError?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(ai, "SL1L0:POWER:NORTH:RTD:02:STC:TEMP_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....RTD_North_2.fTemp")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.fTemp?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(bi, "SL1L0:POWER:NORTH:RTD:02:STC:CONN_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....orth_2.bConnected")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bConnected?")
-  field(ZNAM, "Disconnected")
-  field(ONAM, "Connected")
-}
-
-record(bi, "SL1L0:POWER:NORTH:RTD:02:STC:ERR_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....TD_North_2.bError")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bError?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(ai, "SL1L0:POWER:SOUTH:RTD:01:STC:TEMP_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....RTD_South_1.fTemp")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.fTemp?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(bi, "SL1L0:POWER:SOUTH:RTD:01:STC:CONN_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....outh_1.bConnected")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bConnected?")
-  field(ZNAM, "Disconnected")
-  field(ONAM, "Connected")
-}
-
-record(bi, "SL1L0:POWER:SOUTH:RTD:01:STC:ERR_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....TD_South_1.bError")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bError?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(ai, "SL1L0:POWER:SOUTH:RTD:02:STC:TEMP_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....RTD_South_2.fTemp")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.fTemp?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(bi, "SL1L0:POWER:SOUTH:RTD:02:STC:CONN_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....outh_2.bConnected")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bConnected?")
-  field(ZNAM, "Disconnected")
-  field(ONAM, "Connected")
-}
-
-record(bi, "SL1L0:POWER:SOUTH:RTD:02:STC:ERR_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER....TD_South_2.bError")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bError?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.bMoveOk?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
 }
 
 record(waveform, "SL1L0:POWER:TOP:NAME_RBV") {
@@ -13981,364 +13689,559 @@ record(waveform, "SL1L0:POWER:SOUTH:ERRMSG_RBV") {
   field(NELM, "80")
 }
 
-record(ai, "SL1L0:POWER:HEIGHT_DES_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER.rReqApertureSizeY")
+record(ai, "SL1L0:POWER:XWID_REQ_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....rReqApertureSizeX")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.rReqApertureSizeY?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rReqApertureSizeX?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
 }
 
-record(ao, "SL1L0:POWER:HEIGHT_DES") {
-  field(DESC, "ads:PRG_SL1L0_POWER.rReqApertureSizeY")
+record(ao, "SL1L0:POWER:XWID_REQ") {
+  field(DESC, "ads:PRG_SL1L0_POWER....rReqApertureSizeX")
   field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.rReqApertureSizeY=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rReqApertureSizeX=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
 }
 
-record(ai, "SL1L0:POWER:CENTER_X_DES_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER.rReqCenterX")
+record(ai, "SL1L0:POWER:YWID_REQ_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....rReqApertureSizeY")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.rReqCenterX?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rReqApertureSizeY?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
 }
 
-record(ao, "SL1L0:POWER:CENTER_X_DES") {
-  field(DESC, "ads:PRG_SL1L0_POWER.rReqCenterX")
+record(ao, "SL1L0:POWER:YWID_REQ") {
+  field(DESC, "ads:PRG_SL1L0_POWER....rReqApertureSizeY")
   field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.rReqCenterX=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rReqApertureSizeY=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
 }
 
-record(ai, "SL1L0:POWER:CENTER_Y_DES_RBV") {
-  field(DESC, "ads:PRG_SL1L0_POWER.rReqCenterY")
+record(ai, "SL1L0:POWER:XCEN_REQ_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.rReqCenterX")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.rReqCenterY?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rReqCenterX?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
 }
 
-record(ao, "SL1L0:POWER:CENTER_Y_DES") {
-  field(DESC, "ads:PRG_SL1L0_POWER.rReqCenterY")
+record(ao, "SL1L0:POWER:XCEN_REQ") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.rReqCenterX")
   field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.rReqCenterY=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rReqCenterX=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
 }
 
-record(ai, "SL2L0:POWER:WIDTH_DES_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER.rReqApertureSizeX")
+record(ai, "SL1L0:POWER:YCEN_REQ_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.rReqCenterY")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.rReqApertureSizeX?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rReqCenterY?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
 }
 
-record(ao, "SL2L0:POWER:WIDTH_DES") {
-  field(DESC, "ads:PRG_SL2L0_POWER.rReqApertureSizeX")
+record(ao, "SL1L0:POWER:YCEN_REQ") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.rReqCenterY")
   field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.rReqApertureSizeX=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rReqCenterY=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
 }
 
-record(bi, "SL2L0:POWER:FSW:FLOW_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....lowSwitch.bFlowOk")
+record(ai, "SL1L0:POWER:ACTUAL_XWIDTH_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....rActApertureSizeX")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rActApertureSizeX?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "SL1L0:POWER:ACTUAL_XWIDTH") {
+  field(DESC, "ads:PRG_SL1L0_POWER....rActApertureSizeX")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rActApertureSizeX=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(ai, "SL1L0:POWER:ACTUAL_YWIDTH_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....rActApertureSizeY")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rActApertureSizeY?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "SL1L0:POWER:ACTUAL_YWIDTH") {
+  field(DESC, "ads:PRG_SL1L0_POWER....rActApertureSizeY")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rActApertureSizeY=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(ai, "SL1L0:POWER:ACTUAL_XCENTER_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.rActCenterX")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rActCenterX?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "SL1L0:POWER:ACTUAL_XCENTER") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.rActCenterX")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rActCenterX=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(ai, "SL1L0:POWER:ACTUAL_YCENTER_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.rActCenterY")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rActCenterY?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "SL1L0:POWER:ACTUAL_YCENTER") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.rActCenterY")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rActCenterY=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(bi, "SL1L0:POWER:XCEN_SETZERO_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.rSetCenterX")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.fbFlowSwitch.bFlowOk?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rSetCenterX?")
   field(ZNAM, "Zero")
   field(ONAM, "One")
 }
 
-record(bo, "SL2L0:POWER:FSW:FLOW") {
-  field(DESC, "ads:PRG_SL2L0_POWER....lowSwitch.bFlowOk")
+record(bo, "SL1L0:POWER:XCEN_SETZERO") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.rSetCenterX")
   field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.fbFlowSwitch.bFlowOk=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rSetCenterX=")
   field(ZNAM, "Zero")
   field(ONAM, "One")
   info(autosaveFields_pass0, "VAL")
 }
 
-record(ai, "SL2L0:POWER:TOP:RTD:01:STC:TEMP_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....0.RTD_TOP_1.fTemp")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.fTemp?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(bi, "SL2L0:POWER:TOP:RTD:01:STC:CONN_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER...._TOP_1.bConnected")
+record(bi, "SL1L0:POWER:YCEN_SETZERO_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.rSetCenterY")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bConnected?")
-  field(ZNAM, "Disconnected")
-  field(ONAM, "Connected")
-}
-
-record(bi, "SL2L0:POWER:TOP:RTD:01:STC:ERR_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER.....RTD_TOP_1.bError")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bError?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rSetCenterY?")
   field(ZNAM, "Zero")
   field(ONAM, "One")
 }
 
-record(ai, "SL2L0:POWER:TOP:RTD:02:STC:TEMP_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....0.RTD_TOP_2.fTemp")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.fTemp?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
+record(bo, "SL1L0:POWER:YCEN_SETZERO") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.rSetCenterY")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rSetCenterY=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "SL2L0:POWER:TOP:RTD:02:STC:CONN_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER...._TOP_2.bConnected")
+record(bi, "SL1L0:POWER:OPEN_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.bOpen")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bConnected?")
-  field(ZNAM, "Disconnected")
-  field(ONAM, "Connected")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.bOpen?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
 }
 
-record(bi, "SL2L0:POWER:TOP:RTD:02:STC:ERR_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER.....RTD_TOP_2.bError")
+record(bo, "SL1L0:POWER:OPEN") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.bOpen")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.bOpen=")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "SL1L0:POWER:CLOSE_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.bClose")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bError?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.bClose?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+}
+
+record(bo, "SL1L0:POWER:CLOSE") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.bClose")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.bClose=")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "SL1L0:POWER:BLOCK_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.bBlock")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.bBlock?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+}
+
+record(bo, "SL1L0:POWER:BLOCK") {
+  field(DESC, "ads:PRG_SL1L0_POWER.fbSL1L0.bBlock")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.bBlock=")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "SL1L0:POWER:FSW:FLOW_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....lowSwitch.bFlowOk")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.fbFlowSwitch.bFlowOk?")
   field(ZNAM, "Zero")
   field(ONAM, "One")
 }
 
-record(ai, "SL2L0:POWER:BOTTOM:RTD:01:STC:TEMP_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....TD_Bottom_1.fTemp")
+record(bo, "SL1L0:POWER:FSW:FLOW") {
+  field(DESC, "ads:PRG_SL1L0_POWER....lowSwitch.bFlowOk")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.fbFlowSwitch.bFlowOk=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(ai, "SL1L0:POWER:TOP:RTD:01:TEMP_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....0.RTD_TOP_1.fTemp")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.fTemp?")
-  field(PREC, "3")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
   info(autosaveFields_pass0, "PREC")
 }
 
-record(bi, "SL2L0:POWER:BOTTOM:RTD:01:STC:CONN_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....ttom_1.bConnected")
+record(bi, "SL1L0:POWER:TOP:RTD:01:CONN_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER...._TOP_1.bConnected")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bConnected?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bConnected?")
   field(ZNAM, "Disconnected")
   field(ONAM, "Connected")
 }
 
-record(bi, "SL2L0:POWER:BOTTOM:RTD:01:STC:ERR_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....D_Bottom_1.bError")
+record(bi, "SL1L0:POWER:TOP:RTD:01:ERR_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER.....RTD_TOP_1.bError")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bError?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
 }
 
-record(ai, "SL2L0:POWER:BOTTOM:RTD:02:STC:TEMP_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....TD_Bottom_2.fTemp")
+record(ai, "SL1L0:POWER:TOP:RTD:02:TEMP_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....0.RTD_TOP_2.fTemp")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.fTemp?")
-  field(PREC, "3")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
   info(autosaveFields_pass0, "PREC")
 }
 
-record(bi, "SL2L0:POWER:BOTTOM:RTD:02:STC:CONN_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....ttom_2.bConnected")
+record(bi, "SL1L0:POWER:TOP:RTD:02:CONN_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER...._TOP_2.bConnected")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bConnected?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bConnected?")
   field(ZNAM, "Disconnected")
   field(ONAM, "Connected")
 }
 
-record(bi, "SL2L0:POWER:BOTTOM:RTD:02:STC:ERR_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....D_Bottom_2.bError")
+record(bi, "SL1L0:POWER:TOP:RTD:02:ERR_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER.....RTD_TOP_2.bError")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bError?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
 }
 
-record(ai, "SL2L0:POWER:NORTH:RTD:01:STC:TEMP_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....RTD_North_1.fTemp")
+record(ai, "SL1L0:POWER:BOTTOM:RTD:01:TEMP_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....TD_Bottom_1.fTemp")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.fTemp?")
-  field(PREC, "3")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
   info(autosaveFields_pass0, "PREC")
 }
 
-record(bi, "SL2L0:POWER:NORTH:RTD:01:STC:CONN_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....orth_1.bConnected")
+record(bi, "SL1L0:POWER:BOTTOM:RTD:01:CONN_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....ttom_1.bConnected")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bConnected?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bConnected?")
   field(ZNAM, "Disconnected")
   field(ONAM, "Connected")
 }
 
-record(bi, "SL2L0:POWER:NORTH:RTD:01:STC:ERR_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....TD_North_1.bError")
+record(bi, "SL1L0:POWER:BOTTOM:RTD:01:ERR_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....D_Bottom_1.bError")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bError?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
 }
 
-record(ai, "SL2L0:POWER:NORTH:RTD:02:STC:TEMP_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....RTD_North_2.fTemp")
+record(ai, "SL1L0:POWER:BOTTOM:RTD:02:TEMP_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....TD_Bottom_2.fTemp")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.fTemp?")
-  field(PREC, "3")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
   info(autosaveFields_pass0, "PREC")
 }
 
-record(bi, "SL2L0:POWER:NORTH:RTD:02:STC:CONN_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....orth_2.bConnected")
+record(bi, "SL1L0:POWER:BOTTOM:RTD:02:CONN_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....ttom_2.bConnected")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bConnected?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bConnected?")
   field(ZNAM, "Disconnected")
   field(ONAM, "Connected")
 }
 
-record(bi, "SL2L0:POWER:NORTH:RTD:02:STC:ERR_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....TD_North_2.bError")
+record(bi, "SL1L0:POWER:BOTTOM:RTD:02:ERR_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....D_Bottom_2.bError")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bError?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
 }
 
-record(ai, "SL2L0:POWER:SOUTH:RTD:01:STC:TEMP_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....RTD_South_1.fTemp")
+record(ai, "SL1L0:POWER:NORTH:RTD:01:TEMP_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....RTD_North_1.fTemp")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.fTemp?")
-  field(PREC, "3")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
   info(autosaveFields_pass0, "PREC")
 }
 
-record(bi, "SL2L0:POWER:SOUTH:RTD:01:STC:CONN_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....outh_1.bConnected")
+record(bi, "SL1L0:POWER:NORTH:RTD:01:CONN_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....orth_1.bConnected")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bConnected?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bConnected?")
   field(ZNAM, "Disconnected")
   field(ONAM, "Connected")
 }
 
-record(bi, "SL2L0:POWER:SOUTH:RTD:01:STC:ERR_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....TD_South_1.bError")
+record(bi, "SL1L0:POWER:NORTH:RTD:01:ERR_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....TD_North_1.bError")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bError?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
 }
 
-record(ai, "SL2L0:POWER:SOUTH:RTD:02:STC:TEMP_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....RTD_South_2.fTemp")
+record(ai, "SL1L0:POWER:NORTH:RTD:02:TEMP_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....RTD_North_2.fTemp")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.fTemp?")
-  field(PREC, "3")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
   info(autosaveFields_pass0, "PREC")
 }
 
-record(bi, "SL2L0:POWER:SOUTH:RTD:02:STC:CONN_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....outh_2.bConnected")
+record(bi, "SL1L0:POWER:NORTH:RTD:02:CONN_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....orth_2.bConnected")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bConnected?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bConnected?")
   field(ZNAM, "Disconnected")
   field(ONAM, "Connected")
 }
 
-record(bi, "SL2L0:POWER:SOUTH:RTD:02:STC:ERR_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER....TD_South_2.bError")
+record(bi, "SL1L0:POWER:NORTH:RTD:02:ERR_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....TD_North_2.bError")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bError?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+}
+
+record(ai, "SL1L0:POWER:SOUTH:RTD:01:TEMP_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....RTD_South_1.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(bi, "SL1L0:POWER:SOUTH:RTD:01:CONN_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....outh_1.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+}
+
+record(bi, "SL1L0:POWER:SOUTH:RTD:01:ERR_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....TD_South_1.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+}
+
+record(ai, "SL1L0:POWER:SOUTH:RTD:02:TEMP_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....RTD_South_2.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(bi, "SL1L0:POWER:SOUTH:RTD:02:CONN_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....outh_2.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+}
+
+record(bi, "SL1L0:POWER:SOUTH:RTD:02:ERR_RBV") {
+  field(DESC, "ads:PRG_SL1L0_POWER....TD_South_2.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+}
+
+record(bi, "SL2L0:POWER:PMPS_OK_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.bMoveOk")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.bMoveOk?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
 }
 
 record(waveform, "SL2L0:POWER:TOP:NAME_RBV") {
@@ -15205,61 +15108,548 @@ record(waveform, "SL2L0:POWER:SOUTH:ERRMSG_RBV") {
   field(NELM, "80")
 }
 
-record(ai, "SL2L0:POWER:HEIGHT_DES_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER.rReqApertureSizeY")
+record(ai, "SL2L0:POWER:XWID_REQ_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....rReqApertureSizeX")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.rReqApertureSizeY?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rReqApertureSizeX?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
 }
 
-record(ao, "SL2L0:POWER:HEIGHT_DES") {
-  field(DESC, "ads:PRG_SL2L0_POWER.rReqApertureSizeY")
+record(ao, "SL2L0:POWER:XWID_REQ") {
+  field(DESC, "ads:PRG_SL2L0_POWER....rReqApertureSizeX")
   field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.rReqApertureSizeY=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rReqApertureSizeX=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
 }
 
-record(ai, "SL2L0:POWER:CENTER_X_DES_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER.rReqCenterX")
+record(ai, "SL2L0:POWER:YWID_REQ_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....rReqApertureSizeY")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.rReqCenterX?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rReqApertureSizeY?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
 }
 
-record(ao, "SL2L0:POWER:CENTER_X_DES") {
-  field(DESC, "ads:PRG_SL2L0_POWER.rReqCenterX")
+record(ao, "SL2L0:POWER:YWID_REQ") {
+  field(DESC, "ads:PRG_SL2L0_POWER....rReqApertureSizeY")
   field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.rReqCenterX=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rReqApertureSizeY=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
 }
 
-record(ai, "SL2L0:POWER:CENTER_Y_DES_RBV") {
-  field(DESC, "ads:PRG_SL2L0_POWER.rReqCenterY")
+record(ai, "SL2L0:POWER:XCEN_REQ_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.rReqCenterX")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.rReqCenterY?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rReqCenterX?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
 }
 
-record(ao, "SL2L0:POWER:CENTER_Y_DES") {
-  field(DESC, "ads:PRG_SL2L0_POWER.rReqCenterY")
+record(ao, "SL2L0:POWER:XCEN_REQ") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.rReqCenterX")
   field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.rReqCenterY=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rReqCenterX=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(ai, "SL2L0:POWER:YCEN_REQ_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.rReqCenterY")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rReqCenterY?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "SL2L0:POWER:YCEN_REQ") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.rReqCenterY")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rReqCenterY=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(ai, "SL2L0:POWER:ACTUAL_XWIDTH_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....rActApertureSizeX")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rActApertureSizeX?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "SL2L0:POWER:ACTUAL_XWIDTH") {
+  field(DESC, "ads:PRG_SL2L0_POWER....rActApertureSizeX")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rActApertureSizeX=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(ai, "SL2L0:POWER:ACTUAL_YWIDTH_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....rActApertureSizeY")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rActApertureSizeY?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "SL2L0:POWER:ACTUAL_YWIDTH") {
+  field(DESC, "ads:PRG_SL2L0_POWER....rActApertureSizeY")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rActApertureSizeY=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(ai, "SL2L0:POWER:ACTUAL_XCENTER_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.rActCenterX")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rActCenterX?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "SL2L0:POWER:ACTUAL_XCENTER") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.rActCenterX")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rActCenterX=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(ai, "SL2L0:POWER:ACTUAL_YCENTER_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.rActCenterY")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rActCenterY?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "SL2L0:POWER:ACTUAL_YCENTER") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.rActCenterY")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rActCenterY=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(bi, "SL2L0:POWER:XCEN_SETZERO_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.rSetCenterX")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rSetCenterX?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "SL2L0:POWER:XCEN_SETZERO") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.rSetCenterX")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rSetCenterX=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "SL2L0:POWER:YCEN_SETZERO_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.rSetCenterY")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rSetCenterY?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "SL2L0:POWER:YCEN_SETZERO") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.rSetCenterY")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rSetCenterY=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "SL2L0:POWER:OPEN_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.bOpen")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.bOpen?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+}
+
+record(bo, "SL2L0:POWER:OPEN") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.bOpen")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.bOpen=")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "SL2L0:POWER:CLOSE_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.bClose")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.bClose?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+}
+
+record(bo, "SL2L0:POWER:CLOSE") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.bClose")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.bClose=")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "SL2L0:POWER:BLOCK_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.bBlock")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.bBlock?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+}
+
+record(bo, "SL2L0:POWER:BLOCK") {
+  field(DESC, "ads:PRG_SL2L0_POWER.fbSL2L0.bBlock")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.bBlock=")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "SL2L0:POWER:FSW:FLOW_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....lowSwitch.bFlowOk")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.fbFlowSwitch.bFlowOk?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "SL2L0:POWER:FSW:FLOW") {
+  field(DESC, "ads:PRG_SL2L0_POWER....lowSwitch.bFlowOk")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.fbFlowSwitch.bFlowOk=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(ai, "SL2L0:POWER:TOP:RTD:01:TEMP_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....0.RTD_TOP_1.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(bi, "SL2L0:POWER:TOP:RTD:01:CONN_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER...._TOP_1.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+}
+
+record(bi, "SL2L0:POWER:TOP:RTD:01:ERR_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER.....RTD_TOP_1.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+}
+
+record(ai, "SL2L0:POWER:TOP:RTD:02:TEMP_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....0.RTD_TOP_2.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(bi, "SL2L0:POWER:TOP:RTD:02:CONN_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER...._TOP_2.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+}
+
+record(bi, "SL2L0:POWER:TOP:RTD:02:ERR_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER.....RTD_TOP_2.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+}
+
+record(ai, "SL2L0:POWER:BOTTOM:RTD:01:TEMP_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....TD_Bottom_1.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(bi, "SL2L0:POWER:BOTTOM:RTD:01:CONN_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....ttom_1.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+}
+
+record(bi, "SL2L0:POWER:BOTTOM:RTD:01:ERR_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....D_Bottom_1.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+}
+
+record(ai, "SL2L0:POWER:BOTTOM:RTD:02:TEMP_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....TD_Bottom_2.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(bi, "SL2L0:POWER:BOTTOM:RTD:02:CONN_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....ttom_2.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+}
+
+record(bi, "SL2L0:POWER:BOTTOM:RTD:02:ERR_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....D_Bottom_2.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+}
+
+record(ai, "SL2L0:POWER:NORTH:RTD:01:TEMP_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....RTD_North_1.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(bi, "SL2L0:POWER:NORTH:RTD:01:CONN_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....orth_1.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+}
+
+record(bi, "SL2L0:POWER:NORTH:RTD:01:ERR_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....TD_North_1.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+}
+
+record(ai, "SL2L0:POWER:NORTH:RTD:02:TEMP_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....RTD_North_2.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(bi, "SL2L0:POWER:NORTH:RTD:02:CONN_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....orth_2.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+}
+
+record(bi, "SL2L0:POWER:NORTH:RTD:02:ERR_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....TD_North_2.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+}
+
+record(ai, "SL2L0:POWER:SOUTH:RTD:01:TEMP_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....RTD_South_1.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(bi, "SL2L0:POWER:SOUTH:RTD:01:CONN_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....outh_1.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+}
+
+record(bi, "SL2L0:POWER:SOUTH:RTD:01:ERR_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....TD_South_1.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+}
+
+record(ai, "SL2L0:POWER:SOUTH:RTD:02:TEMP_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....RTD_South_2.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(bi, "SL2L0:POWER:SOUTH:RTD:02:CONN_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....outh_2.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+}
+
+record(bi, "SL2L0:POWER:SOUTH:RTD:02:ERR_RBV") {
+  field(DESC, "ads:PRG_SL2L0_POWER....TD_South_2.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
 }
 
 record(bi, "AT2L0:XTES:MMS:01:PLC:bLimitForwardEnable_RBV") {
