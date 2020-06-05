@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="FB_SLITS" Id="{e16e0f37-b04b-4e2b-a3f3-e910fdc91095}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_SLITS
+VAR_IN_OUT
+    stTopBlade: DUT_MotionStage;
+    stBottomBlade: DUT_MotionStage;
+    stNorthBlade: DUT_MotionStage;
+    stSouthBlade: DUT_MotionStage;
+    bExecuteMotion:BOOL ;
+END_VAR
+
+VAR_INPUT
+  
+    {attribute 'pytmc' := '
+    pv: PMPS_OK;
+    io: i;
+    field: ZNAM False
+    field: ONAM True
+    '}
+    bMoveOk:BOOL;
+END_VAR
+
+VAR
+    fbTopBlade: FB_MotionStage;
+    fbBottomBlade: FB_MotionStage;
+    fbNorthBlade: FB_MotionStage;
+    fbSouthBlade: FB_MotionStage;
+    fPosTopBlade: LREAL;
+    fPosBottomBlade: LREAL;
+    fPosNorthBlade: LREAL;
+    fPosSouthBlade: LREAL;
+
+    (*Motion Parameters*)
+    fSmallDelta: LREAL := 0.01;
+    fBigDelta: LREAL := 10;
+    fMaxVelocity: LREAL := 0.2;
+    fHighAccel: LREAL := 0.8;
+    fLowAccel: LREAL := 0.1;
+
+    stTop: DUT_PositionState;
+    stBOTTOM: DUT_PositionState;
+    stNorth: DUT_PositionState;
+    stSouth: DUT_PositionState;
+
+    {attribute 'pytmc' := 'pv: TOP'}
+    fbTop: FB_StatePTPMove;
+    {attribute 'pytmc' := 'pv: BOTTOM'}
+    fbBottom: FB_StatePTPMove;
+    {attribute 'pytmc' := 'pv: NORTH'}
+    fbNorth: FB_StatePTPMove;
+    {attribute 'pytmc' := 'pv: SOUTH'}
+    fbSouth: FB_StatePTPMove;
+
+    (*EPICS pvs*)
+    {attribute 'pytmc' := '
+    pv: XWID_REQ;
+    io: io;
+    '}
+    rReqApertureSizeX : REAL;
+    {attribute 'pytmc' := '
+    pv: YWID_REQ;
+    io: io;
+    '}
+    rReqApertureSizeY : REAL;
+    {attribute 'pytmc' := '
+    pv: XCEN_REQ;
+    io: io;
+    '}
+    rReqCenterX: REAL;
+    {attribute 'pytmc' := '
+    pv: YCEN_REQ;
+    io: io;
+    '}
+    rReqCenterY: REAL;
+
+    {attribute 'pytmc' := '
+    pv: ACTUAL_XWIDTH;
+    io: io;
+    '}
+    rActApertureSizeX : REAL;
+
+    {attribute 'pytmc' := '
+    pv: ACTUAL_YWIDTH;
+    io: io;
+    '}
+    rActApertureSizeY : REAL;
+    {attribute 'pytmc' := '
+    pv: ACTUAL_XCENTER;
+    io: io;
+    '}
+    rActCenterX: REAL;
+    {attribute 'pytmc' := '
+    pv: ACTUAL_YCENTER;
+    io: io;
+    '}
+    rActCenterY: REAL;
+
+    {attribute 'pytmc' := '
+    pv: XCEN_SETZERO;
+    io: io;
+    '}
+    rSetCenterX: BOOL;
+    {attribute 'pytmc' := '
+    pv: YCEN_SETZERO;
+    io: io;
+    '}
+    rSetCenterY: BOOL;
+
+
+    {attribute 'pytmc' := '
+    pv: OPEN;
+    io: io;
+    field: ZNAM False
+    field: ONAM True
+    '}
+    bOpen: BOOL;
+
+    {attribute 'pytmc' := '
+    pv: CLOSE;
+    io: io;
+    field: ZNAM False
+    field: ONAM True
+    '}
+    bClose: BOOL;
+
+    {attribute 'pytmc' := '
+    pv: BLOCK;
+    io: io;
+    field: ZNAM False
+    field: ONAM True
+    '}
+    bBlock: BOOL;
+
+
+   
+        //Local variables
+    bInit: BOOL :=true;
+    rTrig_Block: R_TRIG;
+    rTrig_Open: R_TRIG;
+    rTrig_Close: R_TRIG;
+
+    fPosBlock: LREAL;
+    fPosClose: LREAL;
+    fPosOpen: LREAL;
+
+	stSetPositionOptions:ST_SetPositionOptions;
+	fbSetPosition_TOP: MC_SetPosition;
+	fbSetPosition_Bottom: MC_SetPosition;
+	fbSetPosition_North: MC_SetPosition;
+	fbSetPosition_South: MC_SetPosition;
+
+END_VAR
+
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Action Name="ACT_BLOCK" Id="{c3009c9d-9569-4a50-a724-b9e8e026c19a}">
+      <Implementation>
+        <ST><![CDATA[rTrig_Block (CLK:= bBlock);
+rTrig_Open (CLK:= bOpen);
+rTrig_Close (CLK:= bClose);
+
+if (rTrig_Block.Q) THEN
+    //BLOCK
+
+    bBlock := false;
+END_IF
+
+if (rTrig_Open.Q) THEN
+
+
+    bOpen := false;
+END_IF
+
+if (rTrig_Close.Q) THEN
+
+
+    bClose := false;
+END_IF]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="ACT_CalculatePositions" Id="{725e398a-6162-44d6-8bb7-0ca8a4916528}">
+      <Implementation>
+        <ST><![CDATA[
+//Calculate requested Positions
+
+
+fPosTopBlade := (rReqApertureSizeY/2) + rReqCenterY;
+fPosBottomBlade := (-1*rReqApertureSizeY/2) + rReqCenterY;
+
+fPosNorthBlade := (rReqApertureSizeX/2) + rReqCenterX;
+fPosSouthBlade := (-1*rReqApertureSizeX/2) + rReqCenterX;
+
+
+//Calculate Actual Positions
+
+
+rActApertureSizeX := ABS(stNorthBlade.stAxisStatus.fActPosition - stSouthBlade.stAxisStatus.fActPosition);
+
+rActApertureSizeY := ABS(stTopBlade.stAxisStatus.fActPosition - stBottomBlade.stAxisStatus.fActPosition);
+
+rActCenterX := ((stNorthBlade.stAxisStatus.fActPosition + stSouthBlade.stAxisStatus.fActPosition)/2);
+
+rActCenterY := ((stTopBlade.stAxisStatus.fActPosition + stBottomBlade.stAxisStatus.fActPosition)/2);
+
+
+
+]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="ACT_Home" Id="{9aa6ba6d-6caa-474f-aec7-a0c3c31143fa}">
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="ACT_Init" Id="{842e1910-c1ea-4546-9d7d-b0af418b8862}">
+      <Implementation>
+        <ST><![CDATA[
+//  init the motion stages parameters
+IF ( bInit) THEN
+    stTopBlade.bHardwareEnable := TRUE;
+    stBottomBlade.bHardwareEnable := TRUE;
+    stNorthBlade.bHardwareEnable := TRUE;
+    stSouthBlade.bHardwareEnable := TRUE;
+    stTopBlade.bPowerSelf :=TRUE;
+    stBottomBlade.bPowerSelf :=TRUE;
+    stNorthBlade.bPowerSelf :=TRUE;
+    stSouthBlade.bPowerSelf :=TRUE;
+    stTopBlade.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+    stBottomBlade.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+    stNorthBlade.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+    stSouthBlade.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+END_IF]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="ACT_Motion" Id="{427121be-6264-488e-9c85-a677a52a82fd}">
+      <Implementation>
+        <ST><![CDATA[// Instantiate Function block for all the blades
+fbTopBlade(stMotionStage:=stTopBlade);
+fbBottomBlade(stMotionStage:=stBottomBlade);
+fbNorthBlade(stMotionStage:=stNorthBlade);
+fbSouthBlade(stMotionStage:=stSouthBlade);
+
+// PTP Motion for each blade
+stTop.sName := 'Top';
+stTop.fPosition := fPosTopBlade;
+stTop.fDelta := fSmallDelta;
+stTop.fVelocity := fMaxVelocity;
+stTop.fAccel := fHighAccel;
+stTop.fDecel := fHighAccel;
+
+stBOTTOM.sName := 'Bottom';
+stBOTTOM.fPosition := fPosBottomBlade;
+stBOTTOM.fDelta := fSmallDelta;
+stBOTTOM.fVelocity := fMaxVelocity;
+stBOTTOM.fAccel := fHighAccel;
+stBOTTOM.fDecel := fHighAccel;
+
+stNorth.sName := 'North';
+stNorth.fPosition := fPosNorthBlade;
+stNorth.fDelta := fSmallDelta;
+stNorth.fVelocity := fMaxVelocity;
+stNorth.fAccel := fHighAccel;
+stNorth.fDecel := fHighAccel;
+
+stSouth.sName := 'South';
+stSouth.fPosition := fPosSouthBlade;
+stSouth.fDelta := fSmallDelta;
+stSouth.fVelocity := fMaxVelocity;
+stSouth.fAccel := fHighAccel;
+stSouth.fDecel := fHighAccel;
+
+if (bExecuteMotion) THEN
+	fbTop.bExecute := fbBottom.bExecute :=fbNorth.bExecute := fbSouth.bExecute := bExecuteMotion;
+	bExecuteMotion:= FALSE;
+END_IF
+
+
+fbTop(
+    stPositionState:=stTop,
+    bMoveOk:=bMoveOk,
+    stMotionStage:=stTopBlade);
+
+fbBottom(
+    stPositionState:=stBOTTOM,
+    bMoveOk:=bMoveOk,
+    stMotionStage:=stBottomBlade);
+
+fbNorth(
+    stPositionState:=stNorth,
+    bMoveOk:=bMoveOk,
+    stMotionStage:=stNorthBlade);
+
+fbSouth(
+    stPositionState:=stSouth,
+    bMoveOk:=bMoveOk,
+    stMotionStage:=stSouthBlade);
+]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="ACT_Zero" Id="{83bc17e3-de18-41ac-977d-469225db1c59}">
+      <Implementation>
+        <ST><![CDATA[//ZERO BIAS
+
+// Set Y center to zero
+
+// Set X center to zero
+
+if (rSetCenterY)THEN 
+		rSetCenterY := false;
+		// Set Current Position
+		fbSetPosition_TOP.Position :=  stTopBlade.stAxisStatus.fActPosition - rActCenterY ; 
+		fbSetPosition_TOP.Execute := TRUE;
+		fbSetPosition_Bottom.Position := stBottomBlade.stAxisStatus.fActPosition - rActCenterY; 
+		fbSetPosition_Bottom.Execute := TRUE;
+END_IF
+
+if (rSetCenterX)THEN 
+		rSetCenterX := false;
+		// Set Current Position
+		fbSetPosition_North.Position := stNorthBlade.stAxisStatus.fActPosition - rActCenterX ; 
+		fbSetPosition_North.Execute := TRUE;
+		fbSetPosition_South.Position := stSouthBlade.stAxisStatus.fActPosition - rActCenterX ; ; 
+		fbSetPosition_South.Execute := TRUE;
+END_IF
+		
+	
+//Reset
+if (fbSetPosition_TOP.Done ) THEN
+	fbSetPosition_TOP.Execute := FALSE;	
+END_IF
+if (fbSetPosition_Bottom.Done ) THEN
+	fbSetPosition_Bottom.Execute := FALSE;	
+END_IF
+if (fbSetPosition_North.Done ) THEN
+	fbSetPosition_North.Execute := FALSE;	
+END_IF
+if (fbSetPosition_South.Done ) THEN
+	fbSetPosition_South.Execute := FALSE;	
+END_IF
+
+// Set Encoder Position
+//Clear position lag error
+stSetPositionOptions.ClearPositionLag := TRUE;
+fbSetPosition_TOP(
+	Axis:=  stTopBlade.Axis , 
+	Execute:= , 
+	Position:= 0 , 
+	Mode:= FALSE, 
+	Options:= stSetPositionOptions, 
+	Done=> , 
+	Busy=> , 
+	Error=> , 
+	ErrorID=> );
+fbSetPosition_Bottom(
+	Axis:= stBottomBlade.Axis , 
+	Execute:= , 
+	Position:= 0 , 
+	Mode:= FALSE, 
+	Options:= stSetPositionOptions, 
+	Done=> , 
+	Busy=> , 
+	Error=> , 
+	ErrorID=> );
+fbSetPosition_North(
+	Axis:= stNorthBlade.Axis , 
+	Execute:= , 
+	Position:= 0 , 
+	Mode:= FALSE, 
+	Options:= stSetPositionOptions, 
+	Done=> , 
+	Busy=> , 
+	Error=> , 
+	ErrorID=> );
+fbSetPosition_South(
+	Axis:= stSouthBlade.Axis , 
+	Execute:= , 
+	Position:= 0 , 
+	Mode:= FALSE, 
+	Options:= stSetPositionOptions, 
+	Done=> , 
+	Busy=> , 
+	Error=> , 
+	ErrorID=> );]]></ST>
+      </Implementation>
+    </Action>
+    <LineIds Name="FB_SLITS">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_SLITS.ACT_BLOCK">
+      <LineId Id="2" Count="19" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_SLITS.ACT_CalculatePositions">
+      <LineId Id="2" Count="23" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_SLITS.ACT_Home">
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_SLITS.ACT_Init">
+      <LineId Id="2" Count="14" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_SLITS.ACT_Motion">
+      <LineId Id="2" Count="34" />
+      <LineId Id="58" Count="1" />
+      <LineId Id="61" Count="0" />
+      <LineId Id="60" Count="0" />
+      <LineId Id="37" Count="20" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_SLITS.ACT_Zero">
+      <LineId Id="2" Count="39" />
+      <LineId Id="81" Count="1" />
+      <LineId Id="42" Count="38" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

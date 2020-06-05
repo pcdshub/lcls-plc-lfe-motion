@@ -94,7 +94,13 @@
     <Compile Include="Temp\FB_SimMotor.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Temp\FB_SLITS.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Temp\FB_SLITS_POWER.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Temp\FB_SLITS_POWER_1.TcPOU">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -117,6 +123,10 @@
     <PlaceholderReference Include="lcls2-cc-lib">
       <DefaultResolution>lcls2-cc-lib, * (SLAC)</DefaultResolution>
       <Namespace>lcls2_cc_lib</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_MC2">
+      <DefaultResolution>Tc2_MC2, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_MC2</Namespace>
     </PlaceholderReference>
     <PlaceholderReference Include="Tc2_SerialCom">
       <DefaultResolution>Tc2_SerialCom, * (Beckhoff Automation GmbH)</DefaultResolution>

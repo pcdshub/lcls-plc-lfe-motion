@@ -1,29 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
-  <POU Name="FB_SLITS_POWER" Id="{f2a7b61c-c24f-40b8-8c2e-4d94fdfd3c86}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_SLITS_POWER
-VAR_IN_OUT
-    stTopBlade: DUT_MotionStage;
-    stBottomBlade: DUT_MotionStage;
-    stNorthBlade: DUT_MotionStage;
-    stSouthBlade: DUT_MotionStage;
-END_VAR
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="FB_SLITS_POWER" Id="{8bed7a14-0672-4aae-bddf-b162e55fd9be}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_SLITS_POWER EXTENDS FB_SLITS
 VAR_INPUT
-    fPosTopBlade: LREAL;
-    fPosBottomBlade: LREAL;
-    fPosNorthBlade: LREAL;
-    fPosSouthBlade: LREAL;
-    bExecuteMotion:bool ;
-END_VAR
-VAR_OUTPUT
 END_VAR
 VAR
-    fbTopBlade: FB_MotionStage;
-    fbBottomBlade: FB_MotionStage;
-    fbNorthBlade: FB_MotionStage;
-    fbSouthBlade: FB_MotionStage;
-
-    {attribute 'pytmc' := '
+	 {attribute 'pytmc' := '
         pv: FSW
     '}
     fbFlowSwitch: FB_XTES_Flowswitch;
@@ -33,75 +15,56 @@ VAR
     {attribute 'pytmc' := '
         pv: TOP:RTD:01
     '}
-    RTD_TOP_1: FB_ThermoCouple;
+    RTD_TOP_1: FB_TempSensor;
     {attribute 'pytmc' := '
         pv: TOP:RTD:02
     '}
-    RTD_TOP_2: FB_ThermoCouple;
+    RTD_TOP_2: FB_TempSensor;
     {attribute 'pytmc' := '
         pv: BOTTOM:RTD:01
     '}
-    RTD_Bottom_1: FB_ThermoCouple;
+    RTD_Bottom_1: FB_TempSensor;
     {attribute 'pytmc' := '
         pv: BOTTOM:RTD:02
     '}
-    RTD_Bottom_2: FB_ThermoCouple;
+    RTD_Bottom_2: FB_TempSensor;
 
     {attribute 'pytmc' := '
         pv: NORTH:RTD:01
     '}
-    RTD_North_1: FB_ThermoCouple;
+    RTD_North_1: FB_TempSensor;
     {attribute 'pytmc' := '
         pv: NORTH:RTD:02
     '}
-    RTD_North_2: FB_ThermoCouple;
+    RTD_North_2: FB_TempSensor;
     {attribute 'pytmc' := '
         pv: SOUTH:RTD:01
     '}
-    RTD_South_1: FB_ThermoCouple;
+    RTD_South_1: FB_TempSensor;
     {attribute 'pytmc' := '
         pv: SOUTH:RTD:02
     '}
-    RTD_South_2: FB_ThermoCouple;
-
-    fSmallDelta: LREAL := 0.01;
-    fBigDelta: LREAL := 10;
-    fMaxVelocity: LREAL := 0.33;
-    fHighAccel: LREAL := 0.8;
-    fLowAccel: LREAL := 0.1;
-
-    stTop: DUT_PositionState;
-    stBOTTOM: DUT_PositionState;
-    stNorth: DUT_PositionState;
-    stSouth: DUT_PositionState;
-
-    {attribute 'pytmc' := 'pv: TOP'}
-    fbTop: FB_StatePTPMove;
-    {attribute 'pytmc' := 'pv: BOTTOM'}
-    fbBottom: FB_StatePTPMove;
-    {attribute 'pytmc' := 'pv: NORTH'}
-    fbNorth: FB_StatePTPMove;
-    {attribute 'pytmc' := 'pv: SOUTH'}
-    fbSouth: FB_StatePTPMove;
+    RTD_South_2: FB_TempSensor;
 
 
 END_VAR
-]]></Declaration>
+
+   ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// Instantiate Function block for all the blades
-fbTopBlade(stMotionStage:=stTopBlade);
-fbBottomBlade(stMotionStage:=stBottomBlade);
-fbNorthBlade(stMotionStage:=stNorthBlade);
-fbSouthBlade(stMotionStage:=stSouthBlade);
+      <ST><![CDATA[ACT_init();
 
-//  no STO
-stTopBlade.bHardwareEnable := TRUE;
-stBottomBlade.bHardwareEnable := TRUE;
-stNorthBlade.bHardwareEnable := TRUE;
-stSouthBlade.bHardwareEnable := TRUE;
-
-
-//RTDs
+// Instantiate Function block for all the blades
+ACT_Motion();
+//SET and GET the requested and Actual values
+ACT_CalculatePositions();
+ACT_Zero();
+//ACT_BLOCK();
+ACT_RTDs();
+]]></ST>
+    </Implementation>
+    <Action Name="ACT_RTDs" Id="{7b403c2a-e1f3-488b-b066-f5944e9af6b6}">
+      <Implementation>
+        <ST><![CDATA[////RTDs
 RTD_TOP_1();
 RTD_TOP_2();
 RTD_Bottom_1();
@@ -112,60 +75,8 @@ RTD_South_1();
 RTD_South_2();
 
 //Flow Switch
-fbFlowSwitch();
-
-
-// PTP Motion for each blade
-
-stTop.sName := 'Top';
-stTop.fPosition := fPosTopBlade;
-stTop.fDelta := fSmallDelta;
-stTop.fVelocity := fMaxVelocity;
-stTop.fAccel := fHighAccel;
-stTop.fDecel := fHighAccel;
-
-stBOTTOM.sName := 'Bottom';
-stBOTTOM.fPosition := fPosBottomBlade;
-stBOTTOM.fDelta := fSmallDelta;
-stBOTTOM.fVelocity := fMaxVelocity;
-stBOTTOM.fAccel := fHighAccel;
-stBOTTOM.fDecel := fHighAccel;
-
-stNorth.sName := 'North';
-stNorth.fPosition := fPosNorthBlade;
-stNorth.fDelta := fSmallDelta;
-stNorth.fVelocity := fMaxVelocity;
-stNorth.fAccel := fHighAccel;
-stNorth.fDecel := fHighAccel;
-
-stSouth.sName := 'South';
-stSouth.fPosition := fPosSouthBlade;
-stSouth.fDelta := fSmallDelta;
-stSouth.fVelocity := fMaxVelocity;
-stSouth.fAccel := fHighAccel;
-stSouth.fDecel := fHighAccel;
-
-//fbTop.bExecute := fbBottom.bExecute :=fbNorth.bExecute := fbSouth.bExecute := bExecuteMotion;
-
-fbTop(
-    stPositionState:=stTop,
-    bMoveOk:=TRUE,
-    stMotionStage:=stTopBlade);
-
-fbBottom(
-    stPositionState:=stBOTTOM,
-    bMoveOk:=TRUE,
-    stMotionStage:=stBottomBlade);
-
-fbNorth(
-    stPositionState:=stNorth,
-    bMoveOk:=TRUE,
-    stMotionStage:=stNorthBlade);
-
-fbSouth(
-    stPositionState:=stSouth,
-    bMoveOk:=TRUE,
-    stMotionStage:=stSouthBlade);]]></ST>
-    </Implementation>
+fbFlowSwitch();]]></ST>
+      </Implementation>
+    </Action>
   </POU>
 </TcPlcObject>
