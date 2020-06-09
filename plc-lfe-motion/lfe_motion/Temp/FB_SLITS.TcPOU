@@ -11,7 +11,7 @@ VAR_IN_OUT
 END_VAR
 
 VAR_INPUT
-  
+
     {attribute 'pytmc' := '
     pv: PMPS_OK;
     io: i;
@@ -133,7 +133,7 @@ VAR
     bBlock: BOOL;
 
 
-   
+
         //Local variables
     bInit: BOOL :=true;
     rTrig_Block: R_TRIG;
@@ -144,11 +144,11 @@ VAR
     fPosClose: LREAL;
     fPosOpen: LREAL;
 
-	stSetPositionOptions:ST_SetPositionOptions;
-	fbSetPosition_TOP: MC_SetPosition;
-	fbSetPosition_Bottom: MC_SetPosition;
-	fbSetPosition_North: MC_SetPosition;
-	fbSetPosition_South: MC_SetPosition;
+    stSetPositionOptions:ST_SetPositionOptions;
+    fbSetPosition_TOP: MC_SetPosition;
+    fbSetPosition_Bottom: MC_SetPosition;
+    fbSetPosition_North: MC_SetPosition;
+    fbSetPosition_South: MC_SetPosition;
 
 END_VAR
 
@@ -274,8 +274,8 @@ stSouth.fAccel := fHighAccel;
 stSouth.fDecel := fHighAccel;
 
 if (bExecuteMotion) THEN
-	fbTop.bExecute := fbBottom.bExecute :=fbNorth.bExecute := fbSouth.bExecute := bExecuteMotion;
-	bExecuteMotion:= FALSE;
+    fbTop.bExecute := fbBottom.bExecute :=fbNorth.bExecute := fbSouth.bExecute := bExecuteMotion;
+    bExecuteMotion:= FALSE;
 END_IF
 
 
@@ -309,115 +309,83 @@ fbSouth(
 
 // Set X center to zero
 
-if (rSetCenterY)THEN 
-		rSetCenterY := false;
-		// Set Current Position
-		fbSetPosition_TOP.Position :=  stTopBlade.stAxisStatus.fActPosition - rActCenterY ; 
-		fbSetPosition_TOP.Execute := TRUE;
-		fbSetPosition_Bottom.Position := stBottomBlade.stAxisStatus.fActPosition - rActCenterY; 
-		fbSetPosition_Bottom.Execute := TRUE;
+if (rSetCenterY)THEN
+        rSetCenterY := false;
+        // Set Current Position
+        fbSetPosition_TOP.Position :=  stTopBlade.stAxisStatus.fActPosition - rActCenterY ;
+        fbSetPosition_TOP.Execute := TRUE;
+        fbSetPosition_Bottom.Position := stBottomBlade.stAxisStatus.fActPosition - rActCenterY;
+        fbSetPosition_Bottom.Execute := TRUE;
 END_IF
 
-if (rSetCenterX)THEN 
-		rSetCenterX := false;
-		// Set Current Position
-		fbSetPosition_North.Position := stNorthBlade.stAxisStatus.fActPosition - rActCenterX ; 
-		fbSetPosition_North.Execute := TRUE;
-		fbSetPosition_South.Position := stSouthBlade.stAxisStatus.fActPosition - rActCenterX ; ; 
-		fbSetPosition_South.Execute := TRUE;
+if (rSetCenterX)THEN
+        rSetCenterX := false;
+        // Set Current Position
+        fbSetPosition_North.Position := stNorthBlade.stAxisStatus.fActPosition - rActCenterX ;
+        fbSetPosition_North.Execute := TRUE;
+        fbSetPosition_South.Position := stSouthBlade.stAxisStatus.fActPosition - rActCenterX ; ;
+        fbSetPosition_South.Execute := TRUE;
 END_IF
-		
-	
+
+
 //Reset
 if (fbSetPosition_TOP.Done ) THEN
-	fbSetPosition_TOP.Execute := FALSE;	
+    fbSetPosition_TOP.Execute := FALSE;
 END_IF
 if (fbSetPosition_Bottom.Done ) THEN
-	fbSetPosition_Bottom.Execute := FALSE;	
+    fbSetPosition_Bottom.Execute := FALSE;
 END_IF
 if (fbSetPosition_North.Done ) THEN
-	fbSetPosition_North.Execute := FALSE;	
+    fbSetPosition_North.Execute := FALSE;
 END_IF
 if (fbSetPosition_South.Done ) THEN
-	fbSetPosition_South.Execute := FALSE;	
+    fbSetPosition_South.Execute := FALSE;
 END_IF
 
 // Set Encoder Position
 //Clear position lag error
 stSetPositionOptions.ClearPositionLag := TRUE;
 fbSetPosition_TOP(
-	Axis:=  stTopBlade.Axis , 
-	Execute:= , 
-	Position:= 0 , 
-	Mode:= FALSE, 
-	Options:= stSetPositionOptions, 
-	Done=> , 
-	Busy=> , 
-	Error=> , 
-	ErrorID=> );
+    Axis:=  stTopBlade.Axis ,
+    Execute:= ,
+    Position:= 0 ,
+    Mode:= FALSE,
+    Options:= stSetPositionOptions,
+    Done=> ,
+    Busy=> ,
+    Error=> ,
+    ErrorID=> );
 fbSetPosition_Bottom(
-	Axis:= stBottomBlade.Axis , 
-	Execute:= , 
-	Position:= 0 , 
-	Mode:= FALSE, 
-	Options:= stSetPositionOptions, 
-	Done=> , 
-	Busy=> , 
-	Error=> , 
-	ErrorID=> );
+    Axis:= stBottomBlade.Axis ,
+    Execute:= ,
+    Position:= 0 ,
+    Mode:= FALSE,
+    Options:= stSetPositionOptions,
+    Done=> ,
+    Busy=> ,
+    Error=> ,
+    ErrorID=> );
 fbSetPosition_North(
-	Axis:= stNorthBlade.Axis , 
-	Execute:= , 
-	Position:= 0 , 
-	Mode:= FALSE, 
-	Options:= stSetPositionOptions, 
-	Done=> , 
-	Busy=> , 
-	Error=> , 
-	ErrorID=> );
+    Axis:= stNorthBlade.Axis ,
+    Execute:= ,
+    Position:= 0 ,
+    Mode:= FALSE,
+    Options:= stSetPositionOptions,
+    Done=> ,
+    Busy=> ,
+    Error=> ,
+    ErrorID=> );
 fbSetPosition_South(
-	Axis:= stSouthBlade.Axis , 
-	Execute:= , 
-	Position:= 0 , 
-	Mode:= FALSE, 
-	Options:= stSetPositionOptions, 
-	Done=> , 
-	Busy=> , 
-	Error=> , 
-	ErrorID=> );]]></ST>
+    Axis:= stSouthBlade.Axis ,
+    Execute:= ,
+    Position:= 0 ,
+    Mode:= FALSE,
+    Options:= stSetPositionOptions,
+    Done=> ,
+    Busy=> ,
+    Error=> ,
+    ErrorID=> );]]></ST>
       </Implementation>
     </Action>
-    <LineIds Name="FB_SLITS">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_SLITS.ACT_BLOCK">
-      <LineId Id="2" Count="19" />
-      <LineId Id="1" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_SLITS.ACT_CalculatePositions">
-      <LineId Id="2" Count="23" />
-      <LineId Id="1" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_SLITS.ACT_Home">
-      <LineId Id="1" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_SLITS.ACT_Init">
-      <LineId Id="2" Count="14" />
-      <LineId Id="1" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_SLITS.ACT_Motion">
-      <LineId Id="2" Count="34" />
-      <LineId Id="58" Count="1" />
-      <LineId Id="61" Count="0" />
-      <LineId Id="60" Count="0" />
-      <LineId Id="37" Count="20" />
-      <LineId Id="1" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_SLITS.ACT_Zero">
-      <LineId Id="2" Count="39" />
-      <LineId Id="81" Count="1" />
-      <LineId Id="42" Count="38" />
-      <LineId Id="1" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
