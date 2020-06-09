@@ -967,6 +967,20 @@ External Setpoint Generation:
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
+					<Name>PRG_AT2L0_SOLID.nM1CoilARaw</Name>
+					<Comment>
+						<![CDATA[ For plotting voltage/current during debugging]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM1CoilBRaw</Name>
+					<Comment>
+						<![CDATA[ ..CoilBRaw is currently linked to EL7041 'Coil Voltage A']]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
 					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[0].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
@@ -1896,20 +1910,6 @@ External Setpoint Generation:
 ]]>
 						</Comment>
 					</SubVar>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM1CoilARaw</Name>
-					<Comment>
-						<![CDATA[ For plotting voltage/current during debugging]]>
-					</Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM1CoilBRaw</Name>
-					<Comment>
-						<![CDATA[ ..CoilBRaw is currently linked to EL7041 'Coil Voltage A']]>
-					</Comment>
-					<Type>UINT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM2CoilARaw</Name>
@@ -9068,26 +9068,6 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^Main.M20.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E10">
-				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E11">
-				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E8">
 				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
@@ -9097,7 +9077,17 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E9">
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E11">
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E8">
 				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
@@ -9106,6 +9096,16 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E9">
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL7041-E1">
 				<Link VarA="PlcTask Inputs^Main.M41.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
@@ -9303,25 +9303,7 @@ External Setpoint Generation:
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E10">
 				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E11">
-				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E8">
 				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
@@ -9331,7 +9313,15 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E9">
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E11">
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E8">
 				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
@@ -9340,6 +9330,16 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E9">
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL7041-E1">
 				<Link VarA="PlcTask Inputs^Main.M45.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
