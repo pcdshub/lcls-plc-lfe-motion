@@ -4,6 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lfe_motion.tmc &#8212; pcdshub/lcls-plc-lfe-motion  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -2507,10 +2508,6 @@
  <span class="s2">&quot;IM4L0:XTES:MMS:STATE:SET_RBV&quot;</span> <span class="p">(</span><span class="n">mbbi</span><span class="p">)</span>
  <span class="s2">&quot;IM4L0:XTES:SFW:FLOW&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
  <span class="s2">&quot;IM4L0:XTES:SFW:FLOW_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;$(IOC):LCLSGeneral:LogHost_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
- <span class="s2">&quot;$(IOC):LCLSGeneral:LogHost&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
- <span class="s2">&quot;$(IOC):LCLSGeneral:LogPort&quot;</span> <span class="p">(</span><span class="n">longout</span><span class="p">)</span>
- <span class="s2">&quot;$(IOC):LCLSGeneral:LogPort_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
  <span class="s2">&quot;PF1L0:WFS:MMS:01:PLC:bAllBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;PF1L0:WFS:MMS:01:PLC:bAllEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;PF1L0:WFS:MMS:01:PLC:bAllForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
@@ -2595,6 +2592,10 @@
  <span class="s2">&quot;PF1L0:WFS:MMS:02:PLC:nHomingMode_RBV&quot;</span> <span class="p">(</span><span class="n">mbbi</span><span class="p">)</span>
  <span class="s2">&quot;PF1L0:WFS:MMS:02:PLC:nMotionAxisID_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
  <span class="s2">&quot;PF1L0:WFS:MMS:02:PLC:sErrorMessage_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)LCLSGeneral:LogHost_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)LCLSGeneral:LogHost&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)LCLSGeneral:LogPort&quot;</span> <span class="p">(</span><span class="n">longout</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)LCLSGeneral:LogPort_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
  <span class="s2">&quot;RTDSL0:MPA:01:ERROR&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
  <span class="s2">&quot;RTDSL0:MPA:01:ERROR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;RTDSL0:MPA:01:FF_Reset&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
@@ -2675,6 +2676,16 @@
  <span class="s2">&quot;RTDSL0:MPA:04:POS_STATE_RBV&quot;</span> <span class="p">(</span><span class="n">mbbi</span><span class="p">)</span>
  <span class="s2">&quot;RTDSL0:MPA:04:RETRACT_DO_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;RTDSL0:MPA:04:RETRACT_OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:ACTUAL_XCENTER&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:ACTUAL_XCENTER_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:ACTUAL_XWIDTH&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:ACTUAL_XWIDTH_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:ACTUAL_YCENTER&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:ACTUAL_YCENTER_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:ACTUAL_YWIDTH&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:ACTUAL_YWIDTH_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:BLOCK&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:BLOCK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:BOTTOM:ACCL&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:BOTTOM:ACCL_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:BOTTOM:AT_STATE_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
@@ -2691,27 +2702,23 @@
  <span class="s2">&quot;SL1L0:POWER:BOTTOM:LOCKED_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:BOTTOM:MOVE_OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:BOTTOM:NAME_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:BOTTOM:RTD:01:STC:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:BOTTOM:RTD:01:STC:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:BOTTOM:RTD:01:STC:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:BOTTOM:RTD:02:STC:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:BOTTOM:RTD:02:STC:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:BOTTOM:RTD:02:STC:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:BOTTOM:RTD:01:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:BOTTOM:RTD:01:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:BOTTOM:RTD:01:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:BOTTOM:RTD:02:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:BOTTOM:RTD:02:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:BOTTOM:RTD:02:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:BOTTOM:SETPOINT&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:BOTTOM:SETPOINT_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:BOTTOM:VALID_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:BOTTOM:VELO&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:BOTTOM:VELO_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:CENTER_X_DES&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:CENTER_X_DES_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:CENTER_Y_DES&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:CENTER_Y_DES_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:CLOSE&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:CLOSE_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:FSW:FLOW&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:FSW:FLOW_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:GO&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:GO_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:HEIGHT_DES&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:HEIGHT_DES_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:MMS:BOTTOM:PLC:bAllBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:MMS:BOTTOM:PLC:bAllEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:MMS:BOTTOM:PLC:bAllForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
@@ -2896,17 +2903,20 @@
  <span class="s2">&quot;SL1L0:POWER:NORTH:LOCKED_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:NORTH:MOVE_OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:NORTH:NAME_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:NORTH:RTD:01:STC:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:NORTH:RTD:01:STC:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:NORTH:RTD:01:STC:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:NORTH:RTD:02:STC:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:NORTH:RTD:02:STC:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:NORTH:RTD:02:STC:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:NORTH:RTD:01:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:NORTH:RTD:01:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:NORTH:RTD:01:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:NORTH:RTD:02:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:NORTH:RTD:02:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:NORTH:RTD:02:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:NORTH:SETPOINT&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:NORTH:SETPOINT_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:NORTH:VALID_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:NORTH:VELO&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:NORTH:VELO_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:OPEN&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:OPEN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:PMPS_OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:SOUTH:ACCL&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:SOUTH:ACCL_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:SOUTH:AT_STATE_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
@@ -2923,12 +2933,12 @@
  <span class="s2">&quot;SL1L0:POWER:SOUTH:LOCKED_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:SOUTH:MOVE_OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:SOUTH:NAME_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:SOUTH:RTD:01:STC:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:SOUTH:RTD:01:STC:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:SOUTH:RTD:01:STC:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:SOUTH:RTD:02:STC:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:SOUTH:RTD:02:STC:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:SOUTH:RTD:02:STC:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:SOUTH:RTD:01:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:SOUTH:RTD:01:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:SOUTH:RTD:01:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:SOUTH:RTD:02:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:SOUTH:RTD:02:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:SOUTH:RTD:02:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:SOUTH:SETPOINT&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:SOUTH:SETPOINT_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:SOUTH:VALID_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
@@ -2950,19 +2960,39 @@
  <span class="s2">&quot;SL1L0:POWER:TOP:LOCKED_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:TOP:MOVE_OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:TOP:NAME_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:TOP:RTD:01:STC:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:TOP:RTD:01:STC:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:TOP:RTD:01:STC:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:TOP:RTD:02:STC:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:TOP:RTD:02:STC:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:TOP:RTD:02:STC:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:TOP:RTD:01:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:TOP:RTD:01:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:TOP:RTD:01:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:TOP:RTD:02:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:TOP:RTD:02:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:TOP:RTD:02:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:TOP:SETPOINT&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:TOP:SETPOINT_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:TOP:VALID_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:TOP:VELO&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL1L0:POWER:TOP:VELO_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:WIDTH_DES&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
- <span class="s2">&quot;SL1L0:POWER:WIDTH_DES_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:XCEN_REQ&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:XCEN_REQ_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:XCEN_SETZERO&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:XCEN_SETZERO_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:XWID_REQ&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:XWID_REQ_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:YCEN_REQ&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:YCEN_REQ_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:YCEN_SETZERO&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:YCEN_SETZERO_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:YWID_REQ&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SL1L0:POWER:YWID_REQ_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:ACTUAL_XCENTER&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:ACTUAL_XCENTER_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:ACTUAL_XWIDTH&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:ACTUAL_XWIDTH_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:ACTUAL_YCENTER&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:ACTUAL_YCENTER_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:ACTUAL_YWIDTH&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:ACTUAL_YWIDTH_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:BLOCK&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:BLOCK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:BOTTOM:ACCL&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:BOTTOM:ACCL_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:BOTTOM:AT_STATE_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
@@ -2979,27 +3009,23 @@
  <span class="s2">&quot;SL2L0:POWER:BOTTOM:LOCKED_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:BOTTOM:MOVE_OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:BOTTOM:NAME_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:BOTTOM:RTD:01:STC:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:BOTTOM:RTD:01:STC:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:BOTTOM:RTD:01:STC:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:BOTTOM:RTD:02:STC:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:BOTTOM:RTD:02:STC:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:BOTTOM:RTD:02:STC:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:BOTTOM:RTD:01:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:BOTTOM:RTD:01:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:BOTTOM:RTD:01:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:BOTTOM:RTD:02:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:BOTTOM:RTD:02:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:BOTTOM:RTD:02:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:BOTTOM:SETPOINT&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:BOTTOM:SETPOINT_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:BOTTOM:VALID_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:BOTTOM:VELO&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:BOTTOM:VELO_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:CENTER_X_DES&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:CENTER_X_DES_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:CENTER_Y_DES&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:CENTER_Y_DES_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:CLOSE&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:CLOSE_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:FSW:FLOW&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:FSW:FLOW_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:GO&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:GO_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:HEIGHT_DES&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:HEIGHT_DES_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:MMS:BOTTOM:PLC:bAllBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:MMS:BOTTOM:PLC:bAllEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:MMS:BOTTOM:PLC:bAllForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
@@ -3184,17 +3210,20 @@
  <span class="s2">&quot;SL2L0:POWER:NORTH:LOCKED_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:NORTH:MOVE_OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:NORTH:NAME_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:NORTH:RTD:01:STC:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:NORTH:RTD:01:STC:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:NORTH:RTD:01:STC:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:NORTH:RTD:02:STC:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:NORTH:RTD:02:STC:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:NORTH:RTD:02:STC:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:NORTH:RTD:01:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:NORTH:RTD:01:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:NORTH:RTD:01:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:NORTH:RTD:02:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:NORTH:RTD:02:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:NORTH:RTD:02:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:NORTH:SETPOINT&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:NORTH:SETPOINT_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:NORTH:VALID_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:NORTH:VELO&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:NORTH:VELO_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:OPEN&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:OPEN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:PMPS_OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:SOUTH:ACCL&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:SOUTH:ACCL_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:SOUTH:AT_STATE_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
@@ -3211,12 +3240,12 @@
  <span class="s2">&quot;SL2L0:POWER:SOUTH:LOCKED_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:SOUTH:MOVE_OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:SOUTH:NAME_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:SOUTH:RTD:01:STC:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:SOUTH:RTD:01:STC:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:SOUTH:RTD:01:STC:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:SOUTH:RTD:02:STC:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:SOUTH:RTD:02:STC:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:SOUTH:RTD:02:STC:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:SOUTH:RTD:01:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:SOUTH:RTD:01:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:SOUTH:RTD:01:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:SOUTH:RTD:02:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:SOUTH:RTD:02:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:SOUTH:RTD:02:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:SOUTH:SETPOINT&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:SOUTH:SETPOINT_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:SOUTH:VALID_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
@@ -3238,19 +3267,29 @@
  <span class="s2">&quot;SL2L0:POWER:TOP:LOCKED_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:TOP:MOVE_OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:TOP:NAME_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:TOP:RTD:01:STC:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:TOP:RTD:01:STC:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:TOP:RTD:01:STC:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:TOP:RTD:02:STC:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:TOP:RTD:02:STC:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:TOP:RTD:02:STC:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:TOP:RTD:01:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:TOP:RTD:01:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:TOP:RTD:01:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:TOP:RTD:02:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:TOP:RTD:02:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:TOP:RTD:02:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:TOP:SETPOINT&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:TOP:SETPOINT_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:TOP:VALID_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:TOP:VELO&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;SL2L0:POWER:TOP:VELO_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:WIDTH_DES&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
- <span class="s2">&quot;SL2L0:POWER:WIDTH_DES_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:XCEN_REQ&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:XCEN_REQ_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:XCEN_SETZERO&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:XCEN_SETZERO_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:XWID_REQ&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:XWID_REQ_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:YCEN_REQ&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:YCEN_REQ_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:YCEN_SETZERO&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:YCEN_SETZERO_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:YWID_REQ&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;SL2L0:POWER:YWID_REQ_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bAllBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bAllEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bAllForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
@@ -3508,7 +3547,7 @@
 </div>
 <div class="section" id="epics-database">
 <h2>EPICS database<a class="headerlink" href="#epics-database" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>record(longin, &quot;$(IOC):LCLSGeneral:LogPort_RBV&quot;) {
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>record(longin, &quot;$(PREFIX)LCLSGeneral:LogPort_RBV&quot;) {
   field(DESC, &quot;The log host UDP port&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
@@ -3517,14 +3556,14 @@
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Logger.iLogPort?&quot;)
 }
 
-record(longout, &quot;$(IOC):LCLSGeneral:LogPort&quot;) {
+record(longout, &quot;$(PREFIX)LCLSGeneral:LogPort&quot;) {
   field(DESC, &quot;The log host UDP port&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/GVL_Logger.iLogPort=&quot;)
   info(autosaveFields_pass0, &quot;VAL&quot;)
 }
 
-record(waveform, &quot;$(IOC):LCLSGeneral:LogHost_RBV&quot;) {
+record(waveform, &quot;$(PREFIX)LCLSGeneral:LogHost_RBV&quot;) {
   field(DESC, &quot;The log host IP address&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
@@ -3535,7 +3574,7 @@ record(waveform, &quot;$(IOC):LCLSGeneral:LogHost_RBV&quot;) {
   field(NELM, &quot;15&quot;)
 }
 
-record(waveform, &quot;$(IOC):LCLSGeneral:LogHost&quot;) {
+record(waveform, &quot;$(PREFIX)LCLSGeneral:LogHost&quot;) {
   field(DESC, &quot;The log host IP address&quot;)
   field(DTYP, &quot;asynInt8ArrayOut&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/GVL_Logger.cLogHost=&quot;)
@@ -3551,16 +3590,16 @@ record(bi, &quot;SL1L0:POWER:GO_RBV&quot;) {
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.bExecuteMotion?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
 }
 
 record(bo, &quot;SL1L0:POWER:GO&quot;) {
   field(DESC, &quot;ads:PRG_SL1L0_POWER.bExecuteMotion&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.bExecuteMotion=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
   info(autosaveFields_pass0, &quot;VAL&quot;)
 }
 
@@ -3571,16 +3610,16 @@ record(bi, &quot;SL2L0:POWER:GO_RBV&quot;) {
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.bExecuteMotion?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
 }
 
 record(bo, &quot;SL2L0:POWER:GO&quot;) {
   field(DESC, &quot;ads:PRG_SL2L0_POWER.bExecuteMotion&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.bExecuteMotion=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
   info(autosaveFields_pass0, &quot;VAL&quot;)
 }
 
@@ -16324,307 +16363,15 @@ record(bo, &quot;IM4L0:XTES:SFW:FLOW&quot;) {
   info(autosaveFields_pass0, &quot;VAL&quot;)
 }
 
-record(ai, &quot;SL1L0:POWER:WIDTH_DES_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER.rReqApertureSizeX&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.rReqApertureSizeX?&quot;)
-  field(PREC, &quot;3&quot;)
-  info(autosaveFields_pass0, &quot;PREC&quot;)
-}
-
-record(ao, &quot;SL1L0:POWER:WIDTH_DES&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER.rReqApertureSizeX&quot;)
-  field(DTYP, &quot;asynFloat64&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.rReqApertureSizeX=&quot;)
-  field(PREC, &quot;3&quot;)
-  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
-}
-
-record(bi, &quot;SL1L0:POWER:FSW:FLOW_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....lowSwitch.bFlowOk&quot;)
+record(bi, &quot;SL1L0:POWER:PMPS_OK_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.bMoveOk&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.fbFlowSwitch.bFlowOk?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(bo, &quot;SL1L0:POWER:FSW:FLOW&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....lowSwitch.bFlowOk&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.fbFlowSwitch.bFlowOk=&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
-}
-
-record(ai, &quot;SL1L0:POWER:TOP:RTD:01:STC:TEMP_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....0.RTD_TOP_1.fTemp&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.fTemp?&quot;)
-  field(PREC, &quot;3&quot;)
-  info(autosaveFields_pass0, &quot;PREC&quot;)
-}
-
-record(bi, &quot;SL1L0:POWER:TOP:RTD:01:STC:CONN_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER...._TOP_1.bConnected&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bConnected?&quot;)
-  field(ZNAM, &quot;Disconnected&quot;)
-  field(ONAM, &quot;Connected&quot;)
-}
-
-record(bi, &quot;SL1L0:POWER:TOP:RTD:01:STC:ERR_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER.....RTD_TOP_1.bError&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bError?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(ai, &quot;SL1L0:POWER:TOP:RTD:02:STC:TEMP_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....0.RTD_TOP_2.fTemp&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.fTemp?&quot;)
-  field(PREC, &quot;3&quot;)
-  info(autosaveFields_pass0, &quot;PREC&quot;)
-}
-
-record(bi, &quot;SL1L0:POWER:TOP:RTD:02:STC:CONN_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER...._TOP_2.bConnected&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bConnected?&quot;)
-  field(ZNAM, &quot;Disconnected&quot;)
-  field(ONAM, &quot;Connected&quot;)
-}
-
-record(bi, &quot;SL1L0:POWER:TOP:RTD:02:STC:ERR_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER.....RTD_TOP_2.bError&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bError?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(ai, &quot;SL1L0:POWER:BOTTOM:RTD:01:STC:TEMP_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....TD_Bottom_1.fTemp&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.fTemp?&quot;)
-  field(PREC, &quot;3&quot;)
-  info(autosaveFields_pass0, &quot;PREC&quot;)
-}
-
-record(bi, &quot;SL1L0:POWER:BOTTOM:RTD:01:STC:CONN_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....ttom_1.bConnected&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bConnected?&quot;)
-  field(ZNAM, &quot;Disconnected&quot;)
-  field(ONAM, &quot;Connected&quot;)
-}
-
-record(bi, &quot;SL1L0:POWER:BOTTOM:RTD:01:STC:ERR_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....D_Bottom_1.bError&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bError?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(ai, &quot;SL1L0:POWER:BOTTOM:RTD:02:STC:TEMP_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....TD_Bottom_2.fTemp&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.fTemp?&quot;)
-  field(PREC, &quot;3&quot;)
-  info(autosaveFields_pass0, &quot;PREC&quot;)
-}
-
-record(bi, &quot;SL1L0:POWER:BOTTOM:RTD:02:STC:CONN_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....ttom_2.bConnected&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bConnected?&quot;)
-  field(ZNAM, &quot;Disconnected&quot;)
-  field(ONAM, &quot;Connected&quot;)
-}
-
-record(bi, &quot;SL1L0:POWER:BOTTOM:RTD:02:STC:ERR_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....D_Bottom_2.bError&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bError?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(ai, &quot;SL1L0:POWER:NORTH:RTD:01:STC:TEMP_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....RTD_North_1.fTemp&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.fTemp?&quot;)
-  field(PREC, &quot;3&quot;)
-  info(autosaveFields_pass0, &quot;PREC&quot;)
-}
-
-record(bi, &quot;SL1L0:POWER:NORTH:RTD:01:STC:CONN_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....orth_1.bConnected&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bConnected?&quot;)
-  field(ZNAM, &quot;Disconnected&quot;)
-  field(ONAM, &quot;Connected&quot;)
-}
-
-record(bi, &quot;SL1L0:POWER:NORTH:RTD:01:STC:ERR_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....TD_North_1.bError&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bError?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(ai, &quot;SL1L0:POWER:NORTH:RTD:02:STC:TEMP_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....RTD_North_2.fTemp&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.fTemp?&quot;)
-  field(PREC, &quot;3&quot;)
-  info(autosaveFields_pass0, &quot;PREC&quot;)
-}
-
-record(bi, &quot;SL1L0:POWER:NORTH:RTD:02:STC:CONN_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....orth_2.bConnected&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bConnected?&quot;)
-  field(ZNAM, &quot;Disconnected&quot;)
-  field(ONAM, &quot;Connected&quot;)
-}
-
-record(bi, &quot;SL1L0:POWER:NORTH:RTD:02:STC:ERR_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....TD_North_2.bError&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bError?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(ai, &quot;SL1L0:POWER:SOUTH:RTD:01:STC:TEMP_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....RTD_South_1.fTemp&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.fTemp?&quot;)
-  field(PREC, &quot;3&quot;)
-  info(autosaveFields_pass0, &quot;PREC&quot;)
-}
-
-record(bi, &quot;SL1L0:POWER:SOUTH:RTD:01:STC:CONN_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....outh_1.bConnected&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bConnected?&quot;)
-  field(ZNAM, &quot;Disconnected&quot;)
-  field(ONAM, &quot;Connected&quot;)
-}
-
-record(bi, &quot;SL1L0:POWER:SOUTH:RTD:01:STC:ERR_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....TD_South_1.bError&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bError?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
-}
-
-record(ai, &quot;SL1L0:POWER:SOUTH:RTD:02:STC:TEMP_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....RTD_South_2.fTemp&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.fTemp?&quot;)
-  field(PREC, &quot;3&quot;)
-  info(autosaveFields_pass0, &quot;PREC&quot;)
-}
-
-record(bi, &quot;SL1L0:POWER:SOUTH:RTD:02:STC:CONN_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....outh_2.bConnected&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bConnected?&quot;)
-  field(ZNAM, &quot;Disconnected&quot;)
-  field(ONAM, &quot;Connected&quot;)
-}
-
-record(bi, &quot;SL1L0:POWER:SOUTH:RTD:02:STC:ERR_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER....TD_South_2.bError&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bError?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.bMoveOk?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
 }
 
 record(waveform, &quot;SL1L0:POWER:TOP:NAME_RBV&quot;) {
@@ -17491,364 +17238,559 @@ record(waveform, &quot;SL1L0:POWER:SOUTH:ERRMSG_RBV&quot;) {
   field(NELM, &quot;80&quot;)
 }
 
-record(ai, &quot;SL1L0:POWER:HEIGHT_DES_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER.rReqApertureSizeY&quot;)
+record(ai, &quot;SL1L0:POWER:XWID_REQ_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....rReqApertureSizeX&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.rReqApertureSizeY?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rReqApertureSizeX?&quot;)
   field(PREC, &quot;3&quot;)
   info(autosaveFields_pass0, &quot;PREC&quot;)
 }
 
-record(ao, &quot;SL1L0:POWER:HEIGHT_DES&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER.rReqApertureSizeY&quot;)
+record(ao, &quot;SL1L0:POWER:XWID_REQ&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....rReqApertureSizeX&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.rReqApertureSizeY=&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rReqApertureSizeX=&quot;)
   field(PREC, &quot;3&quot;)
   info(autosaveFields_pass0, &quot;PREC VAL&quot;)
 }
 
-record(ai, &quot;SL1L0:POWER:CENTER_X_DES_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER.rReqCenterX&quot;)
+record(ai, &quot;SL1L0:POWER:YWID_REQ_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....rReqApertureSizeY&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.rReqCenterX?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rReqApertureSizeY?&quot;)
   field(PREC, &quot;3&quot;)
   info(autosaveFields_pass0, &quot;PREC&quot;)
 }
 
-record(ao, &quot;SL1L0:POWER:CENTER_X_DES&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER.rReqCenterX&quot;)
+record(ao, &quot;SL1L0:POWER:YWID_REQ&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....rReqApertureSizeY&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.rReqCenterX=&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rReqApertureSizeY=&quot;)
   field(PREC, &quot;3&quot;)
   info(autosaveFields_pass0, &quot;PREC VAL&quot;)
 }
 
-record(ai, &quot;SL1L0:POWER:CENTER_Y_DES_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER.rReqCenterY&quot;)
+record(ai, &quot;SL1L0:POWER:XCEN_REQ_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.rReqCenterX&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.rReqCenterY?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rReqCenterX?&quot;)
   field(PREC, &quot;3&quot;)
   info(autosaveFields_pass0, &quot;PREC&quot;)
 }
 
-record(ao, &quot;SL1L0:POWER:CENTER_Y_DES&quot;) {
-  field(DESC, &quot;ads:PRG_SL1L0_POWER.rReqCenterY&quot;)
+record(ao, &quot;SL1L0:POWER:XCEN_REQ&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.rReqCenterX&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.rReqCenterY=&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rReqCenterX=&quot;)
   field(PREC, &quot;3&quot;)
   info(autosaveFields_pass0, &quot;PREC VAL&quot;)
 }
 
-record(ai, &quot;SL2L0:POWER:WIDTH_DES_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER.rReqApertureSizeX&quot;)
+record(ai, &quot;SL1L0:POWER:YCEN_REQ_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.rReqCenterY&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.rReqApertureSizeX?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rReqCenterY?&quot;)
   field(PREC, &quot;3&quot;)
   info(autosaveFields_pass0, &quot;PREC&quot;)
 }
 
-record(ao, &quot;SL2L0:POWER:WIDTH_DES&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER.rReqApertureSizeX&quot;)
+record(ao, &quot;SL1L0:POWER:YCEN_REQ&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.rReqCenterY&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.rReqApertureSizeX=&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rReqCenterY=&quot;)
   field(PREC, &quot;3&quot;)
   info(autosaveFields_pass0, &quot;PREC VAL&quot;)
 }
 
-record(bi, &quot;SL2L0:POWER:FSW:FLOW_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....lowSwitch.bFlowOk&quot;)
+record(ai, &quot;SL1L0:POWER:ACTUAL_XWIDTH_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....rActApertureSizeX&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rActApertureSizeX?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SL1L0:POWER:ACTUAL_XWIDTH&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....rActApertureSizeX&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rActApertureSizeX=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SL1L0:POWER:ACTUAL_YWIDTH_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....rActApertureSizeY&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rActApertureSizeY?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SL1L0:POWER:ACTUAL_YWIDTH&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....rActApertureSizeY&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rActApertureSizeY=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SL1L0:POWER:ACTUAL_XCENTER_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.rActCenterX&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rActCenterX?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SL1L0:POWER:ACTUAL_XCENTER&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.rActCenterX&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rActCenterX=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SL1L0:POWER:ACTUAL_YCENTER_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.rActCenterY&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rActCenterY?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SL1L0:POWER:ACTUAL_YCENTER&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.rActCenterY&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rActCenterY=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
+}
+
+record(bi, &quot;SL1L0:POWER:XCEN_SETZERO_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.rSetCenterX&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.fbFlowSwitch.bFlowOk?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rSetCenterX?&quot;)
   field(ZNAM, &quot;Zero&quot;)
   field(ONAM, &quot;One&quot;)
 }
 
-record(bo, &quot;SL2L0:POWER:FSW:FLOW&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....lowSwitch.bFlowOk&quot;)
+record(bo, &quot;SL1L0:POWER:XCEN_SETZERO&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.rSetCenterX&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.fbFlowSwitch.bFlowOk=&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rSetCenterX=&quot;)
   field(ZNAM, &quot;Zero&quot;)
   field(ONAM, &quot;One&quot;)
   info(autosaveFields_pass0, &quot;VAL&quot;)
 }
 
-record(ai, &quot;SL2L0:POWER:TOP:RTD:01:STC:TEMP_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....0.RTD_TOP_1.fTemp&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.fTemp?&quot;)
-  field(PREC, &quot;3&quot;)
-  info(autosaveFields_pass0, &quot;PREC&quot;)
-}
-
-record(bi, &quot;SL2L0:POWER:TOP:RTD:01:STC:CONN_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER...._TOP_1.bConnected&quot;)
+record(bi, &quot;SL1L0:POWER:YCEN_SETZERO_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.rSetCenterY&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bConnected?&quot;)
-  field(ZNAM, &quot;Disconnected&quot;)
-  field(ONAM, &quot;Connected&quot;)
-}
-
-record(bi, &quot;SL2L0:POWER:TOP:RTD:01:STC:ERR_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER.....RTD_TOP_1.bError&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bError?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rSetCenterY?&quot;)
   field(ZNAM, &quot;Zero&quot;)
   field(ONAM, &quot;One&quot;)
 }
 
-record(ai, &quot;SL2L0:POWER:TOP:RTD:02:STC:TEMP_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....0.RTD_TOP_2.fTemp&quot;)
-  field(SCAN, &quot;I/O Intr&quot;)
-  field(PINI, &quot;1&quot;)
-  field(TSE, &quot;-2&quot;)
-  field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.fTemp?&quot;)
-  field(PREC, &quot;3&quot;)
-  info(autosaveFields_pass0, &quot;PREC&quot;)
+record(bo, &quot;SL1L0:POWER:YCEN_SETZERO&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.rSetCenterY&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rSetCenterY=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
 }
 
-record(bi, &quot;SL2L0:POWER:TOP:RTD:02:STC:CONN_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER...._TOP_2.bConnected&quot;)
+record(bi, &quot;SL1L0:POWER:OPEN_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.bOpen&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bConnected?&quot;)
-  field(ZNAM, &quot;Disconnected&quot;)
-  field(ONAM, &quot;Connected&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.bOpen?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
 }
 
-record(bi, &quot;SL2L0:POWER:TOP:RTD:02:STC:ERR_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER.....RTD_TOP_2.bError&quot;)
+record(bo, &quot;SL1L0:POWER:OPEN&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.bOpen&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.bOpen=&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SL1L0:POWER:CLOSE_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.bClose&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bError?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.bClose?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+}
+
+record(bo, &quot;SL1L0:POWER:CLOSE&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.bClose&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.bClose=&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SL1L0:POWER:BLOCK_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.bBlock&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.bBlock?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+}
+
+record(bo, &quot;SL1L0:POWER:BLOCK&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.fbSL1L0.bBlock&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.bBlock=&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SL1L0:POWER:FSW:FLOW_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....lowSwitch.bFlowOk&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.fbFlowSwitch.bFlowOk?&quot;)
   field(ZNAM, &quot;Zero&quot;)
   field(ONAM, &quot;One&quot;)
 }
 
-record(ai, &quot;SL2L0:POWER:BOTTOM:RTD:01:STC:TEMP_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....TD_Bottom_1.fTemp&quot;)
+record(bo, &quot;SL1L0:POWER:FSW:FLOW&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....lowSwitch.bFlowOk&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.fbFlowSwitch.bFlowOk=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(ai, &quot;SL1L0:POWER:TOP:RTD:01:TEMP_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....0.RTD_TOP_1.fTemp&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.fTemp?&quot;)
-  field(PREC, &quot;3&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.fTemp?&quot;)
+  field(PREC, &quot;2&quot;)
+  field(EGU, &quot;C&quot;)
   info(autosaveFields_pass0, &quot;PREC&quot;)
 }
 
-record(bi, &quot;SL2L0:POWER:BOTTOM:RTD:01:STC:CONN_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....ttom_1.bConnected&quot;)
+record(bi, &quot;SL1L0:POWER:TOP:RTD:01:CONN_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER...._TOP_1.bConnected&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bConnected?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bConnected?&quot;)
   field(ZNAM, &quot;Disconnected&quot;)
   field(ONAM, &quot;Connected&quot;)
 }
 
-record(bi, &quot;SL2L0:POWER:BOTTOM:RTD:01:STC:ERR_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....D_Bottom_1.bError&quot;)
+record(bi, &quot;SL1L0:POWER:TOP:RTD:01:ERR_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.....RTD_TOP_1.bError&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bError?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bError?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
 }
 
-record(ai, &quot;SL2L0:POWER:BOTTOM:RTD:02:STC:TEMP_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....TD_Bottom_2.fTemp&quot;)
+record(ai, &quot;SL1L0:POWER:TOP:RTD:02:TEMP_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....0.RTD_TOP_2.fTemp&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.fTemp?&quot;)
-  field(PREC, &quot;3&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.fTemp?&quot;)
+  field(PREC, &quot;2&quot;)
+  field(EGU, &quot;C&quot;)
   info(autosaveFields_pass0, &quot;PREC&quot;)
 }
 
-record(bi, &quot;SL2L0:POWER:BOTTOM:RTD:02:STC:CONN_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....ttom_2.bConnected&quot;)
+record(bi, &quot;SL1L0:POWER:TOP:RTD:02:CONN_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER...._TOP_2.bConnected&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bConnected?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bConnected?&quot;)
   field(ZNAM, &quot;Disconnected&quot;)
   field(ONAM, &quot;Connected&quot;)
 }
 
-record(bi, &quot;SL2L0:POWER:BOTTOM:RTD:02:STC:ERR_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....D_Bottom_2.bError&quot;)
+record(bi, &quot;SL1L0:POWER:TOP:RTD:02:ERR_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER.....RTD_TOP_2.bError&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bError?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bError?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
 }
 
-record(ai, &quot;SL2L0:POWER:NORTH:RTD:01:STC:TEMP_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....RTD_North_1.fTemp&quot;)
+record(ai, &quot;SL1L0:POWER:BOTTOM:RTD:01:TEMP_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....TD_Bottom_1.fTemp&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.fTemp?&quot;)
-  field(PREC, &quot;3&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.fTemp?&quot;)
+  field(PREC, &quot;2&quot;)
+  field(EGU, &quot;C&quot;)
   info(autosaveFields_pass0, &quot;PREC&quot;)
 }
 
-record(bi, &quot;SL2L0:POWER:NORTH:RTD:01:STC:CONN_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....orth_1.bConnected&quot;)
+record(bi, &quot;SL1L0:POWER:BOTTOM:RTD:01:CONN_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....ttom_1.bConnected&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bConnected?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bConnected?&quot;)
   field(ZNAM, &quot;Disconnected&quot;)
   field(ONAM, &quot;Connected&quot;)
 }
 
-record(bi, &quot;SL2L0:POWER:NORTH:RTD:01:STC:ERR_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....TD_North_1.bError&quot;)
+record(bi, &quot;SL1L0:POWER:BOTTOM:RTD:01:ERR_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....D_Bottom_1.bError&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bError?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bError?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
 }
 
-record(ai, &quot;SL2L0:POWER:NORTH:RTD:02:STC:TEMP_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....RTD_North_2.fTemp&quot;)
+record(ai, &quot;SL1L0:POWER:BOTTOM:RTD:02:TEMP_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....TD_Bottom_2.fTemp&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.fTemp?&quot;)
-  field(PREC, &quot;3&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.fTemp?&quot;)
+  field(PREC, &quot;2&quot;)
+  field(EGU, &quot;C&quot;)
   info(autosaveFields_pass0, &quot;PREC&quot;)
 }
 
-record(bi, &quot;SL2L0:POWER:NORTH:RTD:02:STC:CONN_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....orth_2.bConnected&quot;)
+record(bi, &quot;SL1L0:POWER:BOTTOM:RTD:02:CONN_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....ttom_2.bConnected&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bConnected?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bConnected?&quot;)
   field(ZNAM, &quot;Disconnected&quot;)
   field(ONAM, &quot;Connected&quot;)
 }
 
-record(bi, &quot;SL2L0:POWER:NORTH:RTD:02:STC:ERR_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....TD_North_2.bError&quot;)
+record(bi, &quot;SL1L0:POWER:BOTTOM:RTD:02:ERR_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....D_Bottom_2.bError&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bError?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bError?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
 }
 
-record(ai, &quot;SL2L0:POWER:SOUTH:RTD:01:STC:TEMP_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....RTD_South_1.fTemp&quot;)
+record(ai, &quot;SL1L0:POWER:NORTH:RTD:01:TEMP_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....RTD_North_1.fTemp&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.fTemp?&quot;)
-  field(PREC, &quot;3&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.fTemp?&quot;)
+  field(PREC, &quot;2&quot;)
+  field(EGU, &quot;C&quot;)
   info(autosaveFields_pass0, &quot;PREC&quot;)
 }
 
-record(bi, &quot;SL2L0:POWER:SOUTH:RTD:01:STC:CONN_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....outh_1.bConnected&quot;)
+record(bi, &quot;SL1L0:POWER:NORTH:RTD:01:CONN_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....orth_1.bConnected&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bConnected?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bConnected?&quot;)
   field(ZNAM, &quot;Disconnected&quot;)
   field(ONAM, &quot;Connected&quot;)
 }
 
-record(bi, &quot;SL2L0:POWER:SOUTH:RTD:01:STC:ERR_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....TD_South_1.bError&quot;)
+record(bi, &quot;SL1L0:POWER:NORTH:RTD:01:ERR_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....TD_North_1.bError&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bError?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bError?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
 }
 
-record(ai, &quot;SL2L0:POWER:SOUTH:RTD:02:STC:TEMP_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....RTD_South_2.fTemp&quot;)
+record(ai, &quot;SL1L0:POWER:NORTH:RTD:02:TEMP_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....RTD_North_2.fTemp&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.fTemp?&quot;)
-  field(PREC, &quot;3&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.fTemp?&quot;)
+  field(PREC, &quot;2&quot;)
+  field(EGU, &quot;C&quot;)
   info(autosaveFields_pass0, &quot;PREC&quot;)
 }
 
-record(bi, &quot;SL2L0:POWER:SOUTH:RTD:02:STC:CONN_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....outh_2.bConnected&quot;)
+record(bi, &quot;SL1L0:POWER:NORTH:RTD:02:CONN_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....orth_2.bConnected&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bConnected?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bConnected?&quot;)
   field(ZNAM, &quot;Disconnected&quot;)
   field(ONAM, &quot;Connected&quot;)
 }
 
-record(bi, &quot;SL2L0:POWER:SOUTH:RTD:02:STC:ERR_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER....TD_South_2.bError&quot;)
+record(bi, &quot;SL1L0:POWER:NORTH:RTD:02:ERR_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....TD_North_2.bError&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bError?&quot;)
-  field(ZNAM, &quot;Zero&quot;)
-  field(ONAM, &quot;One&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bError?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+}
+
+record(ai, &quot;SL1L0:POWER:SOUTH:RTD:01:TEMP_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....RTD_South_1.fTemp&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.fTemp?&quot;)
+  field(PREC, &quot;2&quot;)
+  field(EGU, &quot;C&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(bi, &quot;SL1L0:POWER:SOUTH:RTD:01:CONN_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....outh_1.bConnected&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bConnected?&quot;)
+  field(ZNAM, &quot;Disconnected&quot;)
+  field(ONAM, &quot;Connected&quot;)
+}
+
+record(bi, &quot;SL1L0:POWER:SOUTH:RTD:01:ERR_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....TD_South_1.bError&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bError?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+}
+
+record(ai, &quot;SL1L0:POWER:SOUTH:RTD:02:TEMP_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....RTD_South_2.fTemp&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.fTemp?&quot;)
+  field(PREC, &quot;2&quot;)
+  field(EGU, &quot;C&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(bi, &quot;SL1L0:POWER:SOUTH:RTD:02:CONN_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....outh_2.bConnected&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bConnected?&quot;)
+  field(ZNAM, &quot;Disconnected&quot;)
+  field(ONAM, &quot;Connected&quot;)
+}
+
+record(bi, &quot;SL1L0:POWER:SOUTH:RTD:02:ERR_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL1L0_POWER....TD_South_2.bError&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bError?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:PMPS_OK_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.bMoveOk&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.bMoveOk?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
 }
 
 record(waveform, &quot;SL2L0:POWER:TOP:NAME_RBV&quot;) {
@@ -18715,61 +18657,548 @@ record(waveform, &quot;SL2L0:POWER:SOUTH:ERRMSG_RBV&quot;) {
   field(NELM, &quot;80&quot;)
 }
 
-record(ai, &quot;SL2L0:POWER:HEIGHT_DES_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER.rReqApertureSizeY&quot;)
+record(ai, &quot;SL2L0:POWER:XWID_REQ_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....rReqApertureSizeX&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.rReqApertureSizeY?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rReqApertureSizeX?&quot;)
   field(PREC, &quot;3&quot;)
   info(autosaveFields_pass0, &quot;PREC&quot;)
 }
 
-record(ao, &quot;SL2L0:POWER:HEIGHT_DES&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER.rReqApertureSizeY&quot;)
+record(ao, &quot;SL2L0:POWER:XWID_REQ&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....rReqApertureSizeX&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.rReqApertureSizeY=&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rReqApertureSizeX=&quot;)
   field(PREC, &quot;3&quot;)
   info(autosaveFields_pass0, &quot;PREC VAL&quot;)
 }
 
-record(ai, &quot;SL2L0:POWER:CENTER_X_DES_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER.rReqCenterX&quot;)
+record(ai, &quot;SL2L0:POWER:YWID_REQ_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....rReqApertureSizeY&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.rReqCenterX?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rReqApertureSizeY?&quot;)
   field(PREC, &quot;3&quot;)
   info(autosaveFields_pass0, &quot;PREC&quot;)
 }
 
-record(ao, &quot;SL2L0:POWER:CENTER_X_DES&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER.rReqCenterX&quot;)
+record(ao, &quot;SL2L0:POWER:YWID_REQ&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....rReqApertureSizeY&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.rReqCenterX=&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rReqApertureSizeY=&quot;)
   field(PREC, &quot;3&quot;)
   info(autosaveFields_pass0, &quot;PREC VAL&quot;)
 }
 
-record(ai, &quot;SL2L0:POWER:CENTER_Y_DES_RBV&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER.rReqCenterY&quot;)
+record(ai, &quot;SL2L0:POWER:XCEN_REQ_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.rReqCenterX&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.rReqCenterY?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rReqCenterX?&quot;)
   field(PREC, &quot;3&quot;)
   info(autosaveFields_pass0, &quot;PREC&quot;)
 }
 
-record(ao, &quot;SL2L0:POWER:CENTER_Y_DES&quot;) {
-  field(DESC, &quot;ads:PRG_SL2L0_POWER.rReqCenterY&quot;)
+record(ao, &quot;SL2L0:POWER:XCEN_REQ&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.rReqCenterX&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.rReqCenterY=&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rReqCenterX=&quot;)
   field(PREC, &quot;3&quot;)
   info(autosaveFields_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SL2L0:POWER:YCEN_REQ_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.rReqCenterY&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rReqCenterY?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SL2L0:POWER:YCEN_REQ&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.rReqCenterY&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rReqCenterY=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SL2L0:POWER:ACTUAL_XWIDTH_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....rActApertureSizeX&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rActApertureSizeX?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SL2L0:POWER:ACTUAL_XWIDTH&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....rActApertureSizeX&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rActApertureSizeX=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SL2L0:POWER:ACTUAL_YWIDTH_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....rActApertureSizeY&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rActApertureSizeY?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SL2L0:POWER:ACTUAL_YWIDTH&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....rActApertureSizeY&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rActApertureSizeY=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SL2L0:POWER:ACTUAL_XCENTER_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.rActCenterX&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rActCenterX?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SL2L0:POWER:ACTUAL_XCENTER&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.rActCenterX&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rActCenterX=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
+}
+
+record(ai, &quot;SL2L0:POWER:ACTUAL_YCENTER_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.rActCenterY&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rActCenterY?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(ao, &quot;SL2L0:POWER:ACTUAL_YCENTER&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.rActCenterY&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rActCenterY=&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:XCEN_SETZERO_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.rSetCenterX&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rSetCenterX?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SL2L0:POWER:XCEN_SETZERO&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.rSetCenterX&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rSetCenterX=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:YCEN_SETZERO_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.rSetCenterY&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rSetCenterY?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SL2L0:POWER:YCEN_SETZERO&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.rSetCenterY&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rSetCenterY=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:OPEN_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.bOpen&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.bOpen?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+}
+
+record(bo, &quot;SL2L0:POWER:OPEN&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.bOpen&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.bOpen=&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:CLOSE_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.bClose&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.bClose?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+}
+
+record(bo, &quot;SL2L0:POWER:CLOSE&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.bClose&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.bClose=&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:BLOCK_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.bBlock&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.bBlock?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+}
+
+record(bo, &quot;SL2L0:POWER:BLOCK&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.fbSL2L0.bBlock&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.bBlock=&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:FSW:FLOW_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....lowSwitch.bFlowOk&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.fbFlowSwitch.bFlowOk?&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+}
+
+record(bo, &quot;SL2L0:POWER:FSW:FLOW&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....lowSwitch.bFlowOk&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.fbFlowSwitch.bFlowOk=&quot;)
+  field(ZNAM, &quot;Zero&quot;)
+  field(ONAM, &quot;One&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+}
+
+record(ai, &quot;SL2L0:POWER:TOP:RTD:01:TEMP_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....0.RTD_TOP_1.fTemp&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.fTemp?&quot;)
+  field(PREC, &quot;2&quot;)
+  field(EGU, &quot;C&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:TOP:RTD:01:CONN_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER...._TOP_1.bConnected&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bConnected?&quot;)
+  field(ZNAM, &quot;Disconnected&quot;)
+  field(ONAM, &quot;Connected&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:TOP:RTD:01:ERR_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.....RTD_TOP_1.bError&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bError?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+}
+
+record(ai, &quot;SL2L0:POWER:TOP:RTD:02:TEMP_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....0.RTD_TOP_2.fTemp&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.fTemp?&quot;)
+  field(PREC, &quot;2&quot;)
+  field(EGU, &quot;C&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:TOP:RTD:02:CONN_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER...._TOP_2.bConnected&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bConnected?&quot;)
+  field(ZNAM, &quot;Disconnected&quot;)
+  field(ONAM, &quot;Connected&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:TOP:RTD:02:ERR_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER.....RTD_TOP_2.bError&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bError?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+}
+
+record(ai, &quot;SL2L0:POWER:BOTTOM:RTD:01:TEMP_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....TD_Bottom_1.fTemp&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.fTemp?&quot;)
+  field(PREC, &quot;2&quot;)
+  field(EGU, &quot;C&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:BOTTOM:RTD:01:CONN_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....ttom_1.bConnected&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bConnected?&quot;)
+  field(ZNAM, &quot;Disconnected&quot;)
+  field(ONAM, &quot;Connected&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:BOTTOM:RTD:01:ERR_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....D_Bottom_1.bError&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bError?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+}
+
+record(ai, &quot;SL2L0:POWER:BOTTOM:RTD:02:TEMP_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....TD_Bottom_2.fTemp&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.fTemp?&quot;)
+  field(PREC, &quot;2&quot;)
+  field(EGU, &quot;C&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:BOTTOM:RTD:02:CONN_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....ttom_2.bConnected&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bConnected?&quot;)
+  field(ZNAM, &quot;Disconnected&quot;)
+  field(ONAM, &quot;Connected&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:BOTTOM:RTD:02:ERR_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....D_Bottom_2.bError&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bError?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+}
+
+record(ai, &quot;SL2L0:POWER:NORTH:RTD:01:TEMP_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....RTD_North_1.fTemp&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.fTemp?&quot;)
+  field(PREC, &quot;2&quot;)
+  field(EGU, &quot;C&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:NORTH:RTD:01:CONN_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....orth_1.bConnected&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bConnected?&quot;)
+  field(ZNAM, &quot;Disconnected&quot;)
+  field(ONAM, &quot;Connected&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:NORTH:RTD:01:ERR_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....TD_North_1.bError&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bError?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+}
+
+record(ai, &quot;SL2L0:POWER:NORTH:RTD:02:TEMP_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....RTD_North_2.fTemp&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.fTemp?&quot;)
+  field(PREC, &quot;2&quot;)
+  field(EGU, &quot;C&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:NORTH:RTD:02:CONN_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....orth_2.bConnected&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bConnected?&quot;)
+  field(ZNAM, &quot;Disconnected&quot;)
+  field(ONAM, &quot;Connected&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:NORTH:RTD:02:ERR_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....TD_North_2.bError&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bError?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+}
+
+record(ai, &quot;SL2L0:POWER:SOUTH:RTD:01:TEMP_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....RTD_South_1.fTemp&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.fTemp?&quot;)
+  field(PREC, &quot;2&quot;)
+  field(EGU, &quot;C&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:SOUTH:RTD:01:CONN_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....outh_1.bConnected&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bConnected?&quot;)
+  field(ZNAM, &quot;Disconnected&quot;)
+  field(ONAM, &quot;Connected&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:SOUTH:RTD:01:ERR_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....TD_South_1.bError&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bError?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
+}
+
+record(ai, &quot;SL2L0:POWER:SOUTH:RTD:02:TEMP_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....RTD_South_2.fTemp&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.fTemp?&quot;)
+  field(PREC, &quot;2&quot;)
+  field(EGU, &quot;C&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:SOUTH:RTD:02:CONN_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....outh_2.bConnected&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bConnected?&quot;)
+  field(ZNAM, &quot;Disconnected&quot;)
+  field(ONAM, &quot;Connected&quot;)
+}
+
+record(bi, &quot;SL2L0:POWER:SOUTH:RTD:02:ERR_RBV&quot;) {
+  field(DESC, &quot;ads:PRG_SL2L0_POWER....TD_South_2.bError&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bError?&quot;)
+  field(ZNAM, &quot;False&quot;)
+  field(ONAM, &quot;True&quot;)
 }
 
 record(bi, &quot;AT2L0:XTES:MMS:01:PLC:bLimitForwardEnable_RBV&quot;) {
@@ -40072,7 +40501,7 @@ record(bo, &quot;RTDSL0:MPA:04:MOT_DONE&quot;) {
       &copy;2019, SLAC National Accelerator Laboratory.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
