@@ -2344,7 +2344,7 @@ fbMotion2(stMotionStage:=Main.M50);
 // Motor 3 RETICLE HORIZ X (SP1L0-KMONO-MMS-03)
 //Main.M51.bLimitForwardEnable     := bM3CCWLimit;    //(+X)
 //Main.M51.bLimitBackwardEnable := bM3CWLimit;    //(-X)
-Main.M51.nEnableMode             := Enum_StageEnableMode.ALWAYS;
+Main.M51.nEnableMode             := Enum_StageEnableMode.DURING_MOTION;
 Main.M51.bHardwareEnable        := TRUE;
 Main.M51.bPowerSelf            := TRUE;
 fbMotion3(stMotionStage:=Main.M51);
@@ -2352,7 +2352,7 @@ fbMotion3(stMotionStage:=Main.M51);
 // Motor 4 RETICLE VERT Y (SP1L0-KMONO-MMS-04)
 //Main.M52.bLimitForwardEnable     := bM4CWLimit;    //(+Y)
 //Main.M52.bLimitBackwardEnable := bM4CCWLimit;    //(-Y)
-Main.M52.nEnableMode             := Enum_StageEnableMode.DURING_MOTION;
+Main.M52.nEnableMode             := Enum_StageEnableMode.ALWAYS;
 Main.M52.bHardwareEnable        := TRUE;
 Main.M52.bPowerSelf            := TRUE;
 fbMotion4(stMotionStage:=Main.M52);
@@ -2360,7 +2360,7 @@ fbMotion4(stMotionStage:=Main.M52);
 // Motor 5 DIODE HORIZ X (SP1L0-KMONO-MMS-05)
 //Main.M53.bLimitForwardEnable     := bM5CCWLimit;    //(+X)
 //Main.M53.bLimitBackwardEnable := bM5CWLimit;    //(-X)
-Main.M53.nEnableMode             := Enum_StageEnableMode.ALWAYS;
+Main.M53.nEnableMode             := Enum_StageEnableMode.DURING_MOTION;
 Main.M53.bHardwareEnable        := TRUE;
 Main.M53.bPowerSelf            := TRUE;
 fbMotion5(stMotionStage:=Main.M53);
@@ -4622,6 +4622,9 @@ NC axes
         CreateSymbols = 'true'
         AxisType = 1
         AxisFolder = 'SP1K0-KMONO'
+        Dynamic:Acceleration = 100
+        Dynamic:Deceleration = 100
+        Dynamic:Jerk = 2500
         Dynamic:DelayTime = 0.008
         Velo:SlowManual = 3
         Velo:FastManual = 5
@@ -4672,10 +4675,10 @@ NC axes
         OtherSettings:AllowMotionCmdToSlave = 'true'
         OtherSettings:PulseDistancePos = 3
         OtherSettings:PulseDistanceNeg = 3
-        Enc:EncType = 7
-        Enc:ScaleFactorNumerator = 0.004388516235
+        Enc:EncType = 4
+        Enc:ScaleFactorNumerator = 7.9609375e-05
         Enc:MaxCount = '#x0000ffff'
-        Enc:ReferenceSystem = 1
+        Enc:Inc:RefMode = 2
         Enc:Inc:RefSoftSyncMask = '#x0000ffff'
 
     53.) 'DIODE HORIZ X':
@@ -4683,8 +4686,8 @@ NC axes
         CreateSymbols = 'true'
         AxisType = 1
         AxisFolder = 'SP1K0-KMONO'
-        Dynamic:Acceleration = 3.69082
-        Dynamic:Deceleration = 3.69082
+        Dynamic:Acceleration = 0.874139
+        Dynamic:Deceleration = 0.178818
         Dynamic:Jerk = 68.11
         Velo:SlowManual = 1
         Velo:FastManual = 3
@@ -4693,7 +4696,7 @@ NC axes
         OtherSettings:PulseDistancePos = 1
         OtherSettings:PulseDistanceNeg = 1
         Enc:EncType = 7
-        Enc:ScaleFactorNumerator = 0.000711517334
+        Enc:ScaleFactorNumerator = 0.00071144104
         Enc:MaxCount = '#x0000ffff'
         Enc:ReferenceSystem = 1
         Enc:Inc:RefSoftSyncMask = '#x0000ffff'
@@ -4703,14 +4706,17 @@ NC axes
         CreateSymbols = 'true'
         AxisType = 1
         AxisFolder = 'SP1K0-KMONO'
+        Dynamic:Acceleration = 0.874139
+        Dynamic:Deceleration = 0.178818
+        Dynamic:Jerk = 152.824
         Velo:SlowManual = 2
         Velo:FastManual = 3
         Velo:Maximum = 3
         OtherSettings:AllowMotionCmdToSlave = 'true'
-        Enc:EncType = 4
-        Enc:ScaleFactorNumerator = 7.9609375e-05
+        Enc:EncType = 7
+        Enc:ScaleFactorNumerator = 0.003008065796
         Enc:MaxCount = '#x0000ffff'
-        Enc:Inc:RefMode = 2
+        Enc:ReferenceSystem = 1
         Enc:Inc:RefSoftSyncMask = '#x0000ffff'
 
 Links
@@ -7007,127 +7013,127 @@ Links
     1145.) A (None, 'Drive^Outputs^Out^nDataOut2[0]')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'STM Velocity^Velocity')
     1146.) A (None, 'Enc^Inputs^In^nDataIn1[0]')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_1 SP1L0-KMONO_LVDT (EK1100)^SP1L0-EL3052-E5-LVDT', 'AI Standard Channel 1^Value')
-    1147.) A (None, 'Enc^Inputs^In^nState4')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_1 SP1L0-KMONO_LVDT (EK1100)^SP1L0-EL3052-E5-LVDT', 'WcState^InputToggle')
-    1148.) A (None, 'Enc^Inputs^In^nState4')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_1 SP1L0-KMONO_LVDT (EK1100)^SP1L0-EL3052-E5-LVDT', 'WcState^WcState')
-    1149.) A (None, 'Drive^Inputs^In^nState1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Status compact^Counter value')
+    1147.) A (None, 'Enc^Inputs^In^nDataIn2[0]')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Status compact^Latch value')
+    1148.) A (None, 'Enc^Inputs^In^nState1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Status compact^Status^Counter overflow')
+    1149.) A (None, 'Enc^Inputs^In^nState1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Status compact^Status^Counter underflow')
+    1150.) A (None, 'Enc^Inputs^In^nState1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Status compact^Status^Extrapolation stall')
+    1151.) A (None, 'Enc^Inputs^In^nState1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Status compact^Status^Latch C valid')
+    1152.) A (None, 'Enc^Inputs^In^nState1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Status compact^Status^Latch extern valid')
+    1153.) A (None, 'Enc^Inputs^In^nState1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Status compact^Status^Set counter done')
+    1154.) A (None, 'Enc^Inputs^In^nState2')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Status compact^Status^Status of extern latch')
+    1155.) A (None, 'Enc^Inputs^In^nState2')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Status compact^Status^Status of input A')
+    1156.) A (None, 'Enc^Inputs^In^nState2')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Status compact^Status^Status of input B')
+    1157.) A (None, 'Enc^Inputs^In^nState2')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Status compact^Status^Status of input C')
+    1158.) A (None, 'Enc^Inputs^In^nState2')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Status compact^Status^Sync error')
+    1159.) A (None, 'Enc^Inputs^In^nState2')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Status compact^Status^TxPDO Toggle')
+    1160.) A (None, 'Enc^Inputs^In^nState4')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'WcState^InputToggle')
+    1161.) A (None, 'Enc^Inputs^In^nState4')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'WcState^WcState')
+    1162.) A (None, 'Enc^Outputs^Out^nCtrl1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Control compact^Control^Enable latch C')
+    1163.) A (None, 'Enc^Outputs^Out^nCtrl1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Control compact^Control^Enable latch extern on negative edge')
+    1164.) A (None, 'Enc^Outputs^Out^nCtrl1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Control compact^Control^Enable latch extern on positive edge')
+    1165.) A (None, 'Enc^Outputs^Out^nCtrl1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Control compact^Control^Set counter')
+    1166.) A (None, 'Enc^Outputs^Out^nDataOut1[0]')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E4-MOTORS', 'ENC Control compact^Set counter value')
+    1167.) A (None, 'Drive^Inputs^In^nState1')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Error')
-    1150.) A (None, 'Drive^Inputs^In^nState1')
+    1168.) A (None, 'Drive^Inputs^In^nState1')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Moving negative')
-    1151.) A (None, 'Drive^Inputs^In^nState1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Moving positive')
-    1152.) A (None, 'Drive^Inputs^In^nState1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Ready')
-    1153.) A (None, 'Drive^Inputs^In^nState1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Ready to enable')
-    1154.) A (None, 'Drive^Inputs^In^nState1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Torque reduced')
-    1155.) A (None, 'Drive^Inputs^In^nState1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Warning')
-    1156.) A (None, 'Drive^Inputs^In^nState2')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Digital input 1')
-    1157.) A (None, 'Drive^Inputs^In^nState2')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Digital input 2')
-    1158.) A (None, 'Drive^Inputs^In^nState2')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Sync error')
-    1159.) A (None, 'Drive^Inputs^In^nState2')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^TxPDO Toggle')
-    1160.) A (None, 'Drive^Inputs^In^nState4')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'WcState^InputToggle')
-    1161.) A (None, 'Drive^Inputs^In^nState4')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'WcState^WcState')
-    1162.) A (None, 'Drive^Outputs^Out^nCtrl1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Control^Control^Enable')
-    1163.) A (None, 'Drive^Outputs^Out^nCtrl1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Control^Control^Reduce torque')
-    1164.) A (None, 'Drive^Outputs^Out^nCtrl1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Control^Control^Reset')
-    1165.) A (None, 'Drive^Outputs^Out^nDataOut2[0]')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Velocity^Velocity')
-    1166.) A (None, 'Enc^Inputs^In^nDataIn1[0]')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_1 SP1L0-KMONO_LVDT (EK1100)^SP1L0-EL3052-E5-LVDT', 'AI Standard Channel 2^Value')
-    1167.) A (None, 'Enc^Inputs^In^nState4')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_1 SP1L0-KMONO_LVDT (EK1100)^SP1L0-EL3052-E5-LVDT', 'WcState^InputToggle')
-    1168.) A (None, 'Enc^Inputs^In^nState4')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_1 SP1L0-KMONO_LVDT (EK1100)^SP1L0-EL3052-E5-LVDT', 'WcState^WcState')
     1169.) A (None, 'Drive^Inputs^In^nState1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Error')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Moving positive')
     1170.) A (None, 'Drive^Inputs^In^nState1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Moving negative')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Ready')
     1171.) A (None, 'Drive^Inputs^In^nState1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Moving positive')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Ready to enable')
     1172.) A (None, 'Drive^Inputs^In^nState1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Ready')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Torque reduced')
     1173.) A (None, 'Drive^Inputs^In^nState1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Ready to enable')
-    1174.) A (None, 'Drive^Inputs^In^nState1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Torque reduced')
-    1175.) A (None, 'Drive^Inputs^In^nState1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Warning')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Warning')
+    1174.) A (None, 'Drive^Inputs^In^nState2')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Digital input 1')
+    1175.) A (None, 'Drive^Inputs^In^nState2')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Digital input 2')
     1176.) A (None, 'Drive^Inputs^In^nState2')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Digital input 1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^Sync error')
     1177.) A (None, 'Drive^Inputs^In^nState2')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Digital input 2')
-    1178.) A (None, 'Drive^Inputs^In^nState2')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Sync error')
-    1179.) A (None, 'Drive^Inputs^In^nState2')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^TxPDO Toggle')
-    1180.) A (None, 'Drive^Inputs^In^nState4')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'WcState^InputToggle')
-    1181.) A (None, 'Drive^Inputs^In^nState4')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'WcState^WcState')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Status^Status^TxPDO Toggle')
+    1178.) A (None, 'Drive^Inputs^In^nState4')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'WcState^InputToggle')
+    1179.) A (None, 'Drive^Inputs^In^nState4')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'WcState^WcState')
+    1180.) A (None, 'Drive^Outputs^Out^nCtrl1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Control^Control^Enable')
+    1181.) A (None, 'Drive^Outputs^Out^nCtrl1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Control^Control^Reduce torque')
     1182.) A (None, 'Drive^Outputs^Out^nCtrl1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Control^Control^Enable')
-    1183.) A (None, 'Drive^Outputs^Out^nCtrl1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Control^Control^Reduce torque')
-    1184.) A (None, 'Drive^Outputs^Out^nCtrl1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Control^Control^Reset')
-    1185.) A (None, 'Drive^Outputs^Out^nDataOut2[0]')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Velocity^Velocity')
-    1186.) A (None, 'Enc^Inputs^In^nDataIn1[0]')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Status compact^Counter value')
-    1187.) A (None, 'Enc^Inputs^In^nDataIn2[0]')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Status compact^Latch value')
-    1188.) A (None, 'Enc^Inputs^In^nState1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Status compact^Status^Counter overflow')
-    1189.) A (None, 'Enc^Inputs^In^nState1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Status compact^Status^Counter underflow')
-    1190.) A (None, 'Enc^Inputs^In^nState1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Status compact^Status^Extrapolation stall')
-    1191.) A (None, 'Enc^Inputs^In^nState1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Status compact^Status^Latch C valid')
-    1192.) A (None, 'Enc^Inputs^In^nState1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Status compact^Status^Latch extern valid')
-    1193.) A (None, 'Enc^Inputs^In^nState1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Status compact^Status^Set counter done')
-    1194.) A (None, 'Enc^Inputs^In^nState2')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Status compact^Status^Status of extern latch')
-    1195.) A (None, 'Enc^Inputs^In^nState2')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Status compact^Status^Status of input A')
-    1196.) A (None, 'Enc^Inputs^In^nState2')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Status compact^Status^Status of input B')
-    1197.) A (None, 'Enc^Inputs^In^nState2')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Status compact^Status^Status of input C')
-    1198.) A (None, 'Enc^Inputs^In^nState2')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Status compact^Status^Sync error')
-    1199.) A (None, 'Enc^Inputs^In^nState2')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Status compact^Status^TxPDO Toggle')
-    1200.) A (None, 'Enc^Inputs^In^nState4')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Control^Control^Reset')
+    1183.) A (None, 'Drive^Outputs^Out^nDataOut2[0]')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E5-MOTORS', 'STM Velocity^Velocity')
+    1184.) A (None, 'Enc^Inputs^In^nDataIn1[0]')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_1 SP1L0-KMONO_LVDT (EK1100)^SP1L0-EL3052-E5-LVDT', 'AI Standard Channel 2^Value')
+    1185.) A (None, 'Enc^Inputs^In^nState4')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_1 SP1L0-KMONO_LVDT (EK1100)^SP1L0-EL3052-E5-LVDT', 'WcState^InputToggle')
+    1186.) A (None, 'Enc^Inputs^In^nState4')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_1 SP1L0-KMONO_LVDT (EK1100)^SP1L0-EL3052-E5-LVDT', 'WcState^WcState')
+    1187.) A (None, 'Drive^Inputs^In^nState1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Error')
+    1188.) A (None, 'Drive^Inputs^In^nState1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Moving negative')
+    1189.) A (None, 'Drive^Inputs^In^nState1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Moving positive')
+    1190.) A (None, 'Drive^Inputs^In^nState1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Ready')
+    1191.) A (None, 'Drive^Inputs^In^nState1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Ready to enable')
+    1192.) A (None, 'Drive^Inputs^In^nState1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Torque reduced')
+    1193.) A (None, 'Drive^Inputs^In^nState1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Warning')
+    1194.) A (None, 'Drive^Inputs^In^nState2')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Digital input 1')
+    1195.) A (None, 'Drive^Inputs^In^nState2')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Digital input 2')
+    1196.) A (None, 'Drive^Inputs^In^nState2')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^Sync error')
+    1197.) A (None, 'Drive^Inputs^In^nState2')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Status^Status^TxPDO Toggle')
+    1198.) A (None, 'Drive^Inputs^In^nState4')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'WcState^InputToggle')
-    1201.) A (None, 'Enc^Inputs^In^nState4')
+    1199.) A (None, 'Drive^Inputs^In^nState4')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'WcState^WcState')
-    1202.) A (None, 'Enc^Outputs^Out^nCtrl1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Control compact^Control^Enable latch C')
-    1203.) A (None, 'Enc^Outputs^Out^nCtrl1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Control compact^Control^Enable latch extern on negative edge')
-    1204.) A (None, 'Enc^Outputs^Out^nCtrl1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Control compact^Control^Enable latch extern on positive edge')
-    1205.) A (None, 'Enc^Outputs^Out^nCtrl1')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Control compact^Control^Set counter')
-    1206.) A (None, 'Enc^Outputs^Out^nDataOut1[0]')
-          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'ENC Control compact^Set counter value')
+    1200.) A (None, 'Drive^Outputs^Out^nCtrl1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Control^Control^Enable')
+    1201.) A (None, 'Drive^Outputs^Out^nCtrl1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Control^Control^Reduce torque')
+    1202.) A (None, 'Drive^Outputs^Out^nCtrl1')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Control^Control^Reset')
+    1203.) A (None, 'Drive^Outputs^Out^nDataOut2[0]')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E6-MOTORS', 'STM Velocity^Velocity')
+    1204.) A (None, 'Enc^Inputs^In^nDataIn1[0]')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_1 SP1L0-KMONO_LVDT (EK1100)^SP1L0-EL3052-E6-LVDT', 'AI Standard Channel 1^Value')
+    1205.) A (None, 'Enc^Inputs^In^nState4')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_1 SP1L0-KMONO_LVDT (EK1100)^SP1L0-EL3052-E6-LVDT', 'WcState^InputToggle')
+    1206.) A (None, 'Enc^Inputs^In^nState4')
+          B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_1 SP1L0-KMONO_LVDT (EK1100)^SP1L0-EL3052-E6-LVDT', 'WcState^WcState')
     1207.) A ('OutputSrc', 'RTDS.MPA01.q_xInsertDO')
           B ('TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL2008', 'Channel 1^Output')
     1208.) A ('OutputSrc', 'RTDS.MPA01.q_xRetractDO')
