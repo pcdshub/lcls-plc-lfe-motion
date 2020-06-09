@@ -1,4 +1,5 @@
-IOC_TOP = /reg/g/pcds/epics/ioc/common/ads-ioc/R0.2.1
+# IOC_TOP = /reg/g/pcds/epics/ioc/common/ads-ioc/R0.2.4
+IOC_TOP = /reg/g/pcds/epics-dev/zlentz/ads-ioc
 IOC_INSTANCE_PATH := $(shell pwd)
 
 # Set PRODUCTION_IOC to 1 to move from a testing to a production IOC:
@@ -15,3 +16,4 @@ include $(IOC_TOP)/iocBoot/templates/Makefile.base
 
 # Override base makefile to always make paths
 all: build paths clean
+
