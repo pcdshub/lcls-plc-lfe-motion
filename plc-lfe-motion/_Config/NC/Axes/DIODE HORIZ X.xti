@@ -1324,13 +1324,14 @@ External Setpoint Generation:
 	<Axis Id="53" CreateSymbols="true" AxisType="1" AxisFolder="SP1K0-KMONO">
 		<Name>__FILENAME__</Name>
 		<AxisPara>
-			<Dynamic Acceleration="3.69082" Deceleration="3.69082" Jerk="68.11"/>
+			<Dynamic Acceleration="0.874139" Deceleration="0.178818" Jerk="68.11"/>
 			<Velo SlowManual="1" FastManual="3" Maximum="4"/>
 			<OtherSettings AllowMotionCmdToSlave="true" PulseDistancePos="1" PulseDistanceNeg="1"/>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="7">
-			<EncPara ScaleFactorNumerator="0.000711517334" MaxCount="#x0000ffff" ReferenceSystem="1">
+			<EncPara ScaleFactorNumerator="0.00071144104" MaxCount="#x0000ffff" ReferenceSystem="1">
 				<Inc RefSoftSyncMask="#x0000ffff"/>
+				<ParameterChanged>35</ParameterChanged>
 			</EncPara>
 			<Vars VarGrpType="1">
 				<Name>Inputs</Name>
