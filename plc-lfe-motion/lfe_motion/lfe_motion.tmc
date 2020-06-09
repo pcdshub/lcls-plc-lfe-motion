@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{770D71D3-8A63-13FB-2D2A-9E010FECDAE8}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{D191AACC-DD1C-8A18-261E-E8F53286F34C}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
@@ -39899,72 +39899,72 @@ Init</Comment>
             <Name>PRG_SL1L0_POWER.bMoveOk</Name>
             <Comment>T. MATRIX (North-x1,South-x2,Top-y1,Bottom-y2.. appSize-gapX,gapY, Cx, Cy) 
 aTMatrix: ARRAY [1..4,1..4] of REAL;
-	{attribute 'pytmc' := '
+    {attribute 'pytmc' := '
     pv: SL1L0:POWER:GO;
     io: io;
     '}
-	bExecuteMotion:bool ;
-	{attribute 'pytmc' := '
+    bExecuteMotion:bool ;
+    {attribute 'pytmc' := '
     pv: SL1L0:POWER:XWID_REQ;
-	io: io;
+    io: io;
     '}
-	rReqApertureSizeX : REAL;
-	{attribute 'pytmc' := '
+    rReqApertureSizeX : REAL;
+    {attribute 'pytmc' := '
     pv: SL1L0:POWER:YWID_REQ;
-	io: io;
+    io: io;
     '}
-	rReqApertureSizeY : REAL;
-	{attribute 'pytmc' := '
+    rReqApertureSizeY : REAL;
+    {attribute 'pytmc' := '
     pv: SL1L0:POWER:XCEN_REQ;
-	io: io;
+    io: io;
     '}
-	rReqCenterX: REAL;
-	{attribute 'pytmc' := '
+    rReqCenterX: REAL;
+    {attribute 'pytmc' := '
     pv: SL1L0:POWER:YCEN_REQ;
-	io: io;
+    io: io;
     '}
-	rReqCenterY: REAL;
-	
-	{attribute 'pytmc' := '
-    pv: SL1L0:POWER:ACTUAL_XWIDTH;
-	io: io;
-    '}
-	rActApertureSizeX : REAL;
-	
-	{attribute 'pytmc' := '
-    pv: SL1L0:POWER:ACTUAL_YWIDTH;
-	io: io;
-    '}
-	rActApertureSizeY : REAL;
-	{attribute 'pytmc' := '
-    pv: SL1L0:POWER:ACTUAL_XCENTER;
-	io: io;
-    '}
-	rActCenterX: REAL;
-	{attribute 'pytmc' := '
-    pv: SL1L0:POWER:ACTUAL_YCENTER;
-	io: io;
-    '}
-	rActCenterY: REAL;
-	
-	{attribute 'pytmc' := '
-    pv: SL1L0:POWER:XCEN_SETZERO;
-	io: io;
-    '}
-	rSetCenterX: REAL;
-	{attribute 'pytmc' := '
-    pv: SL1L0:POWER:YCEN_SETZERO;
-	io: io;
-    '}
-	rSetCenterY: REAL;
-	
-	bInit:BOOL :=true;
-	
+    rReqCenterY: REAL;
 
-	rMaxX:REAL:=28;
-	rMaxY:REAL:=28;
-	rMaxCx:REAL:=14;
-	rMaxCy:REAL:=14;
+    {attribute 'pytmc' := '
+    pv: SL1L0:POWER:ACTUAL_XWIDTH;
+    io: io;
+    '}
+    rActApertureSizeX : REAL;
+
+    {attribute 'pytmc' := '
+    pv: SL1L0:POWER:ACTUAL_YWIDTH;
+    io: io;
+    '}
+    rActApertureSizeY : REAL;
+    {attribute 'pytmc' := '
+    pv: SL1L0:POWER:ACTUAL_XCENTER;
+    io: io;
+    '}
+    rActCenterX: REAL;
+    {attribute 'pytmc' := '
+    pv: SL1L0:POWER:ACTUAL_YCENTER;
+    io: io;
+    '}
+    rActCenterY: REAL;
+
+    {attribute 'pytmc' := '
+    pv: SL1L0:POWER:XCEN_SETZERO;
+    io: io;
+    '}
+    rSetCenterX: REAL;
+    {attribute 'pytmc' := '
+    pv: SL1L0:POWER:YCEN_SETZERO;
+    io: io;
+    '}
+    rSetCenterY: REAL;
+
+    bInit:BOOL :=true;
+
+
+    rMaxX:REAL:=28;
+    rMaxY:REAL:=28;
+    rMaxCx:REAL:=14;
+    rMaxCy:REAL:=14;
 GET PMPS Move Ok bit
  Default True until it is properly linked to PMPS bit</Comment>
             <BitSize>8</BitSize>
@@ -39994,9 +39994,9 @@ GET PMPS Move Ok bit
           <Symbol>
             <Name>PRG_SL2L0_POWER.bMoveOk</Name>
             <Comment>fbMotion1: FB_SimMotor;
-	fbMotion2: FB_SimMotor;
-	fbMotion3: FB_SimMotor;
-	fbMotion4: FB_SimMotor;</Comment>
+    fbMotion2: FB_SimMotor;
+    fbMotion3: FB_SimMotor;
+    fbMotion4: FB_SimMotor;</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
             <Default>
@@ -40006,7 +40006,7 @@ GET PMPS Move Ok bit
           </Symbol>
           <Symbol>
             <Name>PMPS.xFastFaultReset</Name>
-            <Comment> MPS fault reset, add temporarily to use FB_MPA 	</Comment>
+            <Comment> MPS fault reset, add temporarily to use FB_MPA</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
             <Properties>
@@ -40189,44 +40189,44 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>pytmc</Name>
                 <Value>
-		pv: SL1L0:POWER
-		io: io
-	</Value>
+        pv: SL1L0:POWER
+        io: io
+    </Value>
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.RTD_Bottom_1.iRaw := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 1^Value;
-							  .RTD_Bottom_1.bError := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 1^Status^Error;
-							  .RTD_Bottom_1.bUnderrange := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 1^Status^Underrange;
-							  .RTD_Bottom_1.bOverrange := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 1^Status^Overrange;
-							  .RTD_Bottom_2.iRaw := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 2^Value;
-							  .RTD_Bottom_2.bError := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 2^Status^Error;
-							  .RTD_Bottom_2.bUnderrange := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 2^Status^Underrange;
-							  .RTD_Bottom_2.bOverrange := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 2^Status^Overrange;
-							  .RTD_South_1.iRaw := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 1^Value;
-							  .RTD_South_1.bError := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 1^Status^Error;
-							  .RTD_South_1.bUnderrange := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 1^Status^Underrange;
-							  .RTD_South_1.bOverrange := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 1^Status^Overrange;
-							  .RTD_South_2.iRaw := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 2^Value;
-							  .RTD_South_2.bError := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 2^Status^Error;
-							  .RTD_South_2.bUnderrange := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 2^Status^Underrange;
-							  .RTD_South_2.bOverrange := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 2^Status^Overrange;
-							  .RTD_TOP_1.iRaw := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 1^Value;
-							  .RTD_TOP_1.bError := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 1^Status^Error;
-							  .RTD_TOP_1.bUnderrange := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 1^Status^Underrange;
-							  .RTD_TOP_1.bOverrange := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 1^Status^Overrange;
-							  .RTD_TOP_2.iRaw := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 2^Value;
-							  .RTD_TOP_2.bError := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 2^Status^Error;
-							  .RTD_TOP_2.bUnderrange := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 2^Status^Underrange;
-							  .RTD_TOP_2.bOverrange := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 2^Status^Overrange;
-							  .RTD_North_1.iRaw := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 1^Value;
-							  .RTD_North_1.bError := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 1^Status^Error;
-							  .RTD_North_1.bUnderrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 1^Status^Underrange;
-							  .RTD_North_1.bOverrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 1^Status^Overrange;
-							  .RTD_North_2.iRaw := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Value;
-							  .RTD_North_2.bError := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Error;
-							  .RTD_North_2.bUnderrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Underrange;
-							  .RTD_North_2.bOverrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange</Value>
+                              .RTD_Bottom_1.bError := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 1^Status^Error;
+                              .RTD_Bottom_1.bUnderrange := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 1^Status^Underrange;
+                              .RTD_Bottom_1.bOverrange := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 1^Status^Overrange;
+                              .RTD_Bottom_2.iRaw := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 2^Value;
+                              .RTD_Bottom_2.bError := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 2^Status^Error;
+                              .RTD_Bottom_2.bUnderrange := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 2^Status^Underrange;
+                              .RTD_Bottom_2.bOverrange := TIIB[SL1L0-EL3202-E8]^RTD Inputs Channel 2^Status^Overrange;
+                              .RTD_South_1.iRaw := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 1^Value;
+                              .RTD_South_1.bError := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 1^Status^Error;
+                              .RTD_South_1.bUnderrange := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 1^Status^Underrange;
+                              .RTD_South_1.bOverrange := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 1^Status^Overrange;
+                              .RTD_South_2.iRaw := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 2^Value;
+                              .RTD_South_2.bError := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 2^Status^Error;
+                              .RTD_South_2.bUnderrange := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 2^Status^Underrange;
+                              .RTD_South_2.bOverrange := TIIB[SL1L0-EL3202-E9]^RTD Inputs Channel 2^Status^Overrange;
+                              .RTD_TOP_1.iRaw := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 1^Value;
+                              .RTD_TOP_1.bError := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 1^Status^Error;
+                              .RTD_TOP_1.bUnderrange := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 1^Status^Underrange;
+                              .RTD_TOP_1.bOverrange := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 1^Status^Overrange;
+                              .RTD_TOP_2.iRaw := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 2^Value;
+                              .RTD_TOP_2.bError := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 2^Status^Error;
+                              .RTD_TOP_2.bUnderrange := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 2^Status^Underrange;
+                              .RTD_TOP_2.bOverrange := TIIB[SL1L0-EL3202-E10]^RTD Inputs Channel 2^Status^Overrange;
+                              .RTD_North_1.iRaw := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 1^Value;
+                              .RTD_North_1.bError := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 1^Status^Error;
+                              .RTD_North_1.bUnderrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 1^Status^Underrange;
+                              .RTD_North_1.bOverrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 1^Status^Overrange;
+                              .RTD_North_2.iRaw := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Value;
+                              .RTD_North_2.bError := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Error;
+                              .RTD_North_2.bUnderrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Underrange;
+                              .RTD_North_2.bOverrange := TIIB[SL1L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange</Value>
               </Property>
             </Properties>
             <BitOffs>10700928</BitOffs>
@@ -40234,9 +40234,9 @@ GET PMPS Move Ok bit
           <Symbol>
             <Name>PRG_SL1L0_POWER.mcPower</Name>
             <Comment>fbMotion1: FB_SimMotor;
-	fbMotion2: FB_SimMotor;
-	fbMotion3: FB_SimMotor;
-	fbMotion4: FB_SimMotor;</Comment>
+    fbMotion2: FB_SimMotor;
+    fbMotion3: FB_SimMotor;
+    fbMotion4: FB_SimMotor;</Comment>
             <BitSize>3072</BitSize>
             <BaseType Namespace="Tc2_MC2">MC_Power</BaseType>
             <ArrayInfo>
@@ -40254,44 +40254,44 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>pytmc</Name>
                 <Value>
-		pv: SL2L0:POWER
-		io: io
-	</Value>
+        pv: SL2L0:POWER
+        io: io
+    </Value>
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.RTD_Bottom_1.iRaw := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Value;
-							  .RTD_Bottom_1.bError := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Error;
-							  .RTD_Bottom_1.bUnderrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Underrange;
-							  .RTD_Bottom_1.bOverrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Overrange;
-							  .RTD_Bottom_2.iRaw := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Value;
-							  .RTD_Bottom_2.bError := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Error;
-							  .RTD_Bottom_2.bUnderrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Underrange;
-							  .RTD_Bottom_2.bOverrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Overrange;
-							  .RTD_South_1.iRaw := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Value;
-							  .RTD_South_1.bError := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Error;
-							  .RTD_South_1.bUnderrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Underrange;
-							  .RTD_South_1.bOverrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Overrange;
-							  .RTD_South_2.iRaw := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Value;
-							  .RTD_South_2.bError := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Error;
-							  .RTD_South_2.bUnderrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Underrange;
-							  .RTD_South_2.bOverrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Overrange;
-							  .RTD_TOP_1.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Value;
-							  .RTD_TOP_1.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Error;
-							  .RTD_TOP_1.bUnderrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Underrange;
-							  .RTD_TOP_1.bOverrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Overrange;
-							  .RTD_TOP_2.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Value;
-							  .RTD_TOP_2.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Error;
-							  .RTD_TOP_2.bUnderrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Underrange;
-							  .RTD_TOP_2.bOverrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Overrange;
-							  .RTD_North_1.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Value;
-							  .RTD_North_1.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Error;
-							  .RTD_North_1.bUnderrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 1^Status^Underrange;
-							  .RTD_North_1.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 1^Status^Overrange;
-							  .RTD_North_2.iRaw := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Value;
-							  .RTD_North_2.bError := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Error;
-							  .RTD_North_2.bUnderrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Underrange;
-							  .RTD_North_2.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange</Value>
+                              .RTD_Bottom_1.bError := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Error;
+                              .RTD_Bottom_1.bUnderrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Underrange;
+                              .RTD_Bottom_1.bOverrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 1^Status^Overrange;
+                              .RTD_Bottom_2.iRaw := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Value;
+                              .RTD_Bottom_2.bError := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Error;
+                              .RTD_Bottom_2.bUnderrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Underrange;
+                              .RTD_Bottom_2.bOverrange := TIIB[SL2L0-EL3202-E8]^RTD Inputs Channel 2^Status^Overrange;
+                              .RTD_South_1.iRaw := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Value;
+                              .RTD_South_1.bError := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Error;
+                              .RTD_South_1.bUnderrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Underrange;
+                              .RTD_South_1.bOverrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 1^Status^Overrange;
+                              .RTD_South_2.iRaw := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Value;
+                              .RTD_South_2.bError := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Error;
+                              .RTD_South_2.bUnderrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Underrange;
+                              .RTD_South_2.bOverrange := TIIB[SL2L0-EL3202-E9]^RTD Inputs Channel 2^Status^Overrange;
+                              .RTD_TOP_1.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Value;
+                              .RTD_TOP_1.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Error;
+                              .RTD_TOP_1.bUnderrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Underrange;
+                              .RTD_TOP_1.bOverrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Overrange;
+                              .RTD_TOP_2.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Value;
+                              .RTD_TOP_2.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Error;
+                              .RTD_TOP_2.bUnderrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Underrange;
+                              .RTD_TOP_2.bOverrange := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 2^Status^Overrange;
+                              .RTD_North_1.iRaw := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Value;
+                              .RTD_North_1.bError := TIIB[SL2L0-EL3202-E10]^RTD Inputs Channel 1^Status^Error;
+                              .RTD_North_1.bUnderrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 1^Status^Underrange;
+                              .RTD_North_1.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 1^Status^Overrange;
+                              .RTD_North_2.iRaw := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Value;
+                              .RTD_North_2.bError := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Error;
+                              .RTD_North_2.bUnderrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Underrange;
+                              .RTD_North_2.bOverrange := TIIB[SL2L0-EL3202-E11]^RTD Inputs Channel 2^Status^Overrange</Value>
               </Property>
             </Properties>
             <BitOffs>11328256</BitOffs>
@@ -40390,13 +40390,13 @@ GET PMPS Move Ok bit
           <Symbol>
             <Name>Main.M1</Name>
             <Comment>
-	Only includes motor definitions for the IOC
-	These are hard-coded to be Main.M#,
-	but are very convenient to store in a GVL,
-	hence the confusing namespace here
-	
-	This should be refactored once the IOC
-	supports arbitrary ads paths for motors
+    Only includes motor definitions for the IOC
+    These are hard-coded to be Main.M#,
+    but are very convenient to store in a GVL,
+    hence the confusing namespace here
+
+    This should be refactored once the IOC
+    supports arbitrary ads paths for motors
 
  AT2L0-SOLID: 19 Axes</Comment>
             <BitSize>11264</BitSize>
@@ -40409,8 +40409,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-01]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-01]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-01]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40430,8 +40430,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-02]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-02]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-02]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40451,8 +40451,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-03]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-03]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-03]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40472,8 +40472,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-04]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-04]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-04]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40493,8 +40493,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-05]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-05]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-05]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40514,8 +40514,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-06]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-06]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-06]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40535,8 +40535,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-07]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-07]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-07]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40556,8 +40556,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-08]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-08]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-08]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40577,8 +40577,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-09]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-09]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-09]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40598,8 +40598,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-10]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-10]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-10]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40619,8 +40619,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-11]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-11]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-11]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40640,8 +40640,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-12]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-12]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-12]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40661,8 +40661,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-13]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-13]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-13]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40682,8 +40682,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-14]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-14]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-14]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40703,8 +40703,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-15]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-15]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-15]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40724,8 +40724,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-16]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-16]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-16]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40745,8 +40745,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-17]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-17]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-17]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40766,8 +40766,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-18]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-18]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-18]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40787,8 +40787,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[AT2L0-EL7041-19]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[AT2L0-EL7041-19]^STM Status^Status^Digital input 1
-	</Value>
+                              .bLimitBackwardEnable := TIIB[AT2L0-EL7041-19]^STM Status^Status^Digital input 1
+    </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40809,7 +40809,7 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[IM1L0-EL7041]^STM Status^Status^Digital input 1;
-	                          .bBrakeRelease        := TIIB[IM1L0-EL2004]^Channel 1^Output</Value>
+                              .bBrakeRelease        := TIIB[IM1L0-EL2004]^Channel 1^Output</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40868,8 +40868,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[IM1L1-EL7041]^STM Status^Status^Digital input 1;
-	                          .bLimitBackwardEnable := TIIB[IM1L1-EL7041]^STM Status^Status^Digital input 2;
-	                          .bBrakeRelease        := TIIB[IM1L1-EL2004]^Channel 1^Output</Value>
+                              .bLimitBackwardEnable := TIIB[IM1L1-EL7041]^STM Status^Status^Digital input 2;
+                              .bBrakeRelease        := TIIB[IM1L1-EL2004]^Channel 1^Output</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40890,7 +40890,7 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[IM2L0-EL7041]^STM Status^Status^Digital input 1;
-	                          .bBrakeRelease        := TIIB[IM2L0-EL2004]^Channel 1^Output</Value>
+                              .bBrakeRelease        := TIIB[IM2L0-EL2004]^Channel 1^Output</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40949,8 +40949,8 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[IM3L0-EL7041]^STM Status^Status^Digital input 1;
-	                          .bLimitBackwardEnable := TIIB[IM3L0-EL7041]^STM Status^Status^Digital input 2;
-	                          .bBrakeRelease        := TIIB[IM3L0-EL2004]^Channel 1^Output</Value>
+                              .bLimitBackwardEnable := TIIB[IM3L0-EL7041]^STM Status^Status^Digital input 2;
+                              .bBrakeRelease        := TIIB[IM3L0-EL2004]^Channel 1^Output</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -40971,7 +40971,7 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[IM4L0-EL7041]^STM Status^Status^Digital input 1;
-	                          .bBrakeRelease        := TIIB[IM4L0-EL2004]^Channel 1^Output</Value>
+                              .bBrakeRelease        := TIIB[IM4L0-EL2004]^Channel 1^Output</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -41150,7 +41150,7 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[SL1L0-EL7041-E1]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[SL1L0-EL7041-E1]^STM Status^Status^Digital input 1</Value>
+                              .bLimitBackwardEnable := TIIB[SL1L0-EL7041-E1]^STM Status^Status^Digital input 1</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -41170,7 +41170,7 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[SL1L0-EL7041-E3]^STM Status^Status^Digital input 1;
-	                          .bLimitBackwardEnable := TIIB[SL1L0-EL7041-E3]^STM Status^Status^Digital input 2</Value>
+                              .bLimitBackwardEnable := TIIB[SL1L0-EL7041-E3]^STM Status^Status^Digital input 2</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -41190,7 +41190,7 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[SL1L0-EL7041-E5]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[SL1L0-EL7041-E5]^STM Status^Status^Digital input 1</Value>
+                              .bLimitBackwardEnable := TIIB[SL1L0-EL7041-E5]^STM Status^Status^Digital input 1</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -41210,7 +41210,7 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[SL1L0-EL7041-E7]^STM Status^Status^Digital input 1;
-	                          .bLimitBackwardEnable := TIIB[SL1L0-EL7041-E7]^STM Status^Status^Digital input 2</Value>
+                              .bLimitBackwardEnable := TIIB[SL1L0-EL7041-E7]^STM Status^Status^Digital input 2</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -41231,7 +41231,7 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[SL2L0-EL7041-E1]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[SL2L0-EL7041-E1]^STM Status^Status^Digital input 1</Value>
+                              .bLimitBackwardEnable := TIIB[SL2L0-EL7041-E1]^STM Status^Status^Digital input 1</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -41251,7 +41251,7 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[SL2L0-EL7041-E3]^STM Status^Status^Digital input 1;
-	                          .bLimitBackwardEnable := TIIB[SL2L0-EL7041-E3]^STM Status^Status^Digital input 2</Value>
+                              .bLimitBackwardEnable := TIIB[SL2L0-EL7041-E3]^STM Status^Status^Digital input 2</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -41271,7 +41271,7 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[SL2L0-EL7041-E5]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[SL2L0-EL7041-E5]^STM Status^Status^Digital input 1</Value>
+                              .bLimitBackwardEnable := TIIB[SL2L0-EL7041-E5]^STM Status^Status^Digital input 1</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -41291,7 +41291,7 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[SL2L0-EL7041-E7]^STM Status^Status^Digital input 1;
-	                          .bLimitBackwardEnable := TIIB[SL2L0-EL7041-E7]^STM Status^Status^Digital input 2</Value>
+                              .bLimitBackwardEnable := TIIB[SL2L0-EL7041-E7]^STM Status^Status^Digital input 2</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -41327,7 +41327,7 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1</Value>
+                              .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -41347,7 +41347,7 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E3-MOTORS]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E3-MOTORS]^STM Status^Status^Digital input 1</Value>
+                              .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E3-MOTORS]^STM Status^Status^Digital input 1</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -41367,7 +41367,7 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E4-MOTORS]^STM Status^Status^Digital input 1;
-	                          .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E4-MOTORS]^STM Status^Status^Digital input 2</Value>
+                              .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E4-MOTORS]^STM Status^Status^Digital input 2</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -41387,7 +41387,7 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E5-MOTORS]^STM Status^Status^Digital input 2;
-	                          .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E5-MOTORS]^STM Status^Status^Digital input 1</Value>
+                              .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E5-MOTORS]^STM Status^Status^Digital input 1</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -41407,7 +41407,7 @@ GET PMPS Move Ok bit
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E6-MOTORS]^STM Status^Status^Digital input 1;
-	                          .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E6-MOTORS]^STM Status^Status^Digital input 2</Value>
+                              .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E6-MOTORS]^STM Status^Status^Digital input 2</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -41781,7 +41781,7 @@ GET PMPS Move Ok bit
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2020-06-05T12:27:03</Value>
+          <Value>2020-06-08T19:11:25</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
