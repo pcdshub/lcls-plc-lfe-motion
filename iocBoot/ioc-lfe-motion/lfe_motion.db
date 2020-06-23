@@ -34,6 +34,1672 @@ record(waveform, "$(PREFIX)LCLSGeneral:LogHost") {
   info(autosaveFields_pass0, "VAL")
 }
 
+record(ai, "$(PREFIX)RequestedBP:Attenuation_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...amParameters.fAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.fAtt?")
+  field(PREC, "3")
+  field(EGU, "%")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(longin, "$(PREFIX)RequestedBP:Rate_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...mParameters.nRate")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.nRate?")
+  field(EGU, "Hz")
+}
+
+record(ai, "$(PREFIX)RequestedBP:PulseEnergy_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...Parameters.fPP_mJ")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.fPP_mJ?")
+  field(PREC, "3")
+  field(EGU, "mJ")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(longin, "$(PREFIX)RequestedBP:PhotonEnergyRanges_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...rameters.neVRange")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.neVRange?")
+  field(EGU, "eV")
+}
+
+record(longin, "$(PREFIX)RequestedBP:AuxAtt:001:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...tenuators[1].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[1].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)RequestedBP:AuxAtt:002:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...tenuators[2].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[2].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)RequestedBP:AuxAtt:003:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...tenuators[3].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[3].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)RequestedBP:AuxAtt:004:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...tenuators[4].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[4].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)RequestedBP:AuxAtt:005:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...tenuators[5].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[5].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)RequestedBP:AuxAtt:006:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...tenuators[6].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[6].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)RequestedBP:AuxAtt:007:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...tenuators[7].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[7].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)RequestedBP:AuxAtt:008:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...tenuators[8].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[8].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)RequestedBP:AuxAtt:009:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...tenuators[9].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[9].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)RequestedBP:AuxAtt:010:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...enuators[10].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[10].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)RequestedBP:AuxAtt:011:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...enuators[11].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[11].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)RequestedBP:AuxAtt:012:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...enuators[12].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[12].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)RequestedBP:AuxAtt:013:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...enuators[13].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[13].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)RequestedBP:AuxAtt:014:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...enuators[14].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[14].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)RequestedBP:AuxAtt:015:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...enuators[15].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[15].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)RequestedBP:AuxAtt:016:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...enuators[16].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[16].nAtt?")
+  field(EGU, "%")
+}
+
+record(bi, "$(PREFIX)RequestedBP:AuxAtt:001:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...nuators[1].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[1].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)RequestedBP:AuxAtt:002:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...nuators[2].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[2].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)RequestedBP:AuxAtt:003:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...nuators[3].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[3].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)RequestedBP:AuxAtt:004:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...nuators[4].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[4].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)RequestedBP:AuxAtt:005:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...nuators[5].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[5].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)RequestedBP:AuxAtt:006:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...nuators[6].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[6].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)RequestedBP:AuxAtt:007:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...nuators[7].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[7].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)RequestedBP:AuxAtt:008:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...nuators[8].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[8].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)RequestedBP:AuxAtt:009:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...nuators[9].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[9].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)RequestedBP:AuxAtt:010:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...uators[10].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[10].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)RequestedBP:AuxAtt:011:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...uators[11].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[11].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)RequestedBP:AuxAtt:012:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...uators[12].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[12].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)RequestedBP:AuxAtt:013:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...uators[13].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[13].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)RequestedBP:AuxAtt:014:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...uators[14].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[14].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)RequestedBP:AuxAtt:015:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...uators[15].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[15].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)RequestedBP:AuxAtt:016:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...uators[16].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[16].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(waveform, "$(PREFIX)RequestedBP:ST_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...ameters.aStoppers")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.aStoppers?")
+  field(FTVL, "CHAR")
+  field(NELM, "16")
+}
+
+record(bi, "$(PREFIX)RequestedBP:Valid_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...Parameters.xValid")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.xValid?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(longin, "$(PREFIX)RequestedBP:Cohort_RBV") {
+  field(DESC, "Cohort inc on each arb cycle")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.nCohortInt?")
+}
+
+record(ai, "$(PREFIX)CurrentBP:Attenuation_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...amParameters.fAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.fAtt?")
+  field(PREC, "3")
+  field(EGU, "%")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(longin, "$(PREFIX)CurrentBP:Rate_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...mParameters.nRate")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.nRate?")
+  field(EGU, "Hz")
+}
+
+record(ai, "$(PREFIX)CurrentBP:PulseEnergy_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...Parameters.fPP_mJ")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.fPP_mJ?")
+  field(PREC, "3")
+  field(EGU, "mJ")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(longin, "$(PREFIX)CurrentBP:PhotonEnergyRanges_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...rameters.neVRange")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.neVRange?")
+  field(EGU, "eV")
+}
+
+record(longin, "$(PREFIX)CurrentBP:AuxAtt:001:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...tenuators[1].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[1].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)CurrentBP:AuxAtt:002:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...tenuators[2].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[2].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)CurrentBP:AuxAtt:003:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...tenuators[3].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[3].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)CurrentBP:AuxAtt:004:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...tenuators[4].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[4].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)CurrentBP:AuxAtt:005:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...tenuators[5].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[5].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)CurrentBP:AuxAtt:006:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...tenuators[6].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[6].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)CurrentBP:AuxAtt:007:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...tenuators[7].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[7].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)CurrentBP:AuxAtt:008:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...tenuators[8].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[8].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)CurrentBP:AuxAtt:009:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...tenuators[9].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[9].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)CurrentBP:AuxAtt:010:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...enuators[10].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[10].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)CurrentBP:AuxAtt:011:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...enuators[11].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[11].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)CurrentBP:AuxAtt:012:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...enuators[12].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[12].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)CurrentBP:AuxAtt:013:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...enuators[13].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[13].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)CurrentBP:AuxAtt:014:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...enuators[14].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[14].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)CurrentBP:AuxAtt:015:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...enuators[15].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[15].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)CurrentBP:AuxAtt:016:Att_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...enuators[16].nAtt")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[16].nAtt?")
+  field(EGU, "%")
+}
+
+record(bi, "$(PREFIX)CurrentBP:AuxAtt:001:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...nuators[1].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[1].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)CurrentBP:AuxAtt:002:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...nuators[2].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[2].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)CurrentBP:AuxAtt:003:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...nuators[3].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[3].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)CurrentBP:AuxAtt:004:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...nuators[4].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[4].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)CurrentBP:AuxAtt:005:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...nuators[5].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[5].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)CurrentBP:AuxAtt:006:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...nuators[6].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[6].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)CurrentBP:AuxAtt:007:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...nuators[7].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[7].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)CurrentBP:AuxAtt:008:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...nuators[8].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[8].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)CurrentBP:AuxAtt:009:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...nuators[9].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[9].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)CurrentBP:AuxAtt:010:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...uators[10].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[10].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)CurrentBP:AuxAtt:011:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...uators[11].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[11].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)CurrentBP:AuxAtt:012:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...uators[12].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[12].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)CurrentBP:AuxAtt:013:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...uators[13].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[13].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)CurrentBP:AuxAtt:014:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...uators[14].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[14].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)CurrentBP:AuxAtt:015:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...uators[15].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[15].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)CurrentBP:AuxAtt:016:OK_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...uators[16].xAttOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[16].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(waveform, "$(PREFIX)CurrentBP:ST_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...ameters.aStoppers")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.aStoppers?")
+  field(FTVL, "CHAR")
+  field(NELM, "16")
+}
+
+record(bi, "$(PREFIX)CurrentBP:Valid_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...Parameters.xValid")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.xValid?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(longin, "$(PREFIX)CurrentBP:Cohort_RBV") {
+  field(DESC, "Cohort inc on each arb cycle")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.nCohortInt?")
+}
+
+record(ai, "$(PREFIX)FullBeamCnst:Attenuation_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.fAtt?")
+  field(PREC, "3")
+  field(EGU, "%")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:Rate_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.nRate?")
+  field(EGU, "Hz")
+}
+
+record(ai, "$(PREFIX)FullBeamCnst:PulseEnergy_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.fPP_mJ?")
+  field(PREC, "3")
+  field(EGU, "mJ")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:PhotonEnergyRanges_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.neVRange?")
+  field(EGU, "eV")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:001:Att_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[1].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:002:Att_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[2].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:003:Att_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[3].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:004:Att_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[4].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:005:Att_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[5].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:006:Att_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[6].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:007:Att_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[7].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:008:Att_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[8].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:009:Att_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[9].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:010:Att_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[10].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:011:Att_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[11].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:012:Att_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[12].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:013:Att_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[13].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:014:Att_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[14].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:015:Att_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[15].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:016:Att_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[16].nAtt?")
+  field(EGU, "%")
+}
+
+record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:001:OK_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[1].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:002:OK_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[2].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:003:OK_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[3].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:004:OK_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[4].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:005:OK_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[5].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:006:OK_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[6].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:007:OK_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[7].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:008:OK_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[8].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:009:OK_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[9].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:010:OK_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[10].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:011:OK_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[11].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:012:OK_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[12].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:013:OK_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[13].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:014:OK_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[14].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:015:OK_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[15].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:016:OK_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[16].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(waveform, "$(PREFIX)FullBeamCnst:ST_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.aStoppers?")
+  field(FTVL, "CHAR")
+  field(NELM, "16")
+}
+
+record(bi, "$(PREFIX)FullBeamCnst:Valid_RBV") {
+  field(DESC, "Full beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.xValid?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(longin, "$(PREFIX)FullBeamCnst:Cohort_RBV") {
+  field(DESC, "Cohort inc on each arb cycle")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.nCohortInt?")
+}
+
+record(ai, "$(PREFIX)SafeBeamCnst:Attenuation_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.fAtt?")
+  field(PREC, "3")
+  field(EGU, "%")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:Rate_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.nRate?")
+  field(EGU, "Hz")
+}
+
+record(ai, "$(PREFIX)SafeBeamCnst:PulseEnergy_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.fPP_mJ?")
+  field(PREC, "3")
+  field(EGU, "mJ")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:PhotonEnergyRanges_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.neVRange?")
+  field(EGU, "eV")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:001:Att_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[1].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:002:Att_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[2].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:003:Att_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[3].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:004:Att_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[4].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:005:Att_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[5].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:006:Att_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[6].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:007:Att_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[7].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:008:Att_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[8].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:009:Att_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[9].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:010:Att_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[10].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:011:Att_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[11].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:012:Att_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[12].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:013:Att_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[13].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:014:Att_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[14].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:015:Att_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[15].nAtt?")
+  field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:016:Att_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[16].nAtt?")
+  field(EGU, "%")
+}
+
+record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:001:OK_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[1].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:002:OK_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[2].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:003:OK_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[3].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:004:OK_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[4].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:005:OK_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[5].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:006:OK_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[6].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:007:OK_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[7].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:008:OK_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[8].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:009:OK_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[9].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:010:OK_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[10].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:011:OK_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[11].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:012:OK_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[12].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:013:OK_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[13].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:014:OK_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[14].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:015:OK_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[15].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:016:OK_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[16].xAttOK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(waveform, "$(PREFIX)SafeBeamCnst:ST_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.aStoppers?")
+  field(FTVL, "CHAR")
+  field(NELM, "16")
+}
+
+record(bi, "$(PREFIX)SafeBeamCnst:Valid_RBV") {
+  field(DESC, "Safe beam constant")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.xValid?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(longin, "$(PREFIX)SafeBeamCnst:Cohort_RBV") {
+  field(DESC, "Cohort inc on each arb cycle")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.nCohortInt?")
+}
+
+record(waveform, "$(PREFIX)eVRangeCnst_RBV") {
+  field(DESC, "eV Range constants")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat32ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.g_areVBoundaries?")
+  field(FTVL, "FLOAT")
+  field(EGU, "keV")
+  field(NELM, "16")
+}
+
+record(waveform, "$(PREFIX)eVRangeCnst") {
+  field(DESC, "eV Range constants")
+  field(DTYP, "asynFloat32ArrayOut")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PMPS_GVL.g_areVBoundaries=")
+  field(FTVL, "FLOAT")
+  field(EGU, "keV")
+  field(NELM, "16")
+  info(autosaveFields_pass0, "VAL")
+}
+
 record(bi, "SL1L0:POWER:GO_RBV") {
   field(DESC, "ads:PRG_SL1L0_POWER.bExecuteMotion")
   field(SCAN, "I/O Intr")
@@ -74,6 +1740,46 @@ record(bo, "SL2L0:POWER:GO") {
   info(autosaveFields_pass0, "VAL")
 }
 
+record(bi, "IM1L0:XTES:CLZ:LOCK_RBV") {
+  field(DESC, "ads:PRG_IM1L0_XTES.fbIM1L0.bZoomLock")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L0_XTES.fbIM1L0.bZoomLock?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "IM1L0:XTES:CLZ:LOCK") {
+  field(DESC, "ads:PRG_IM1L0_XTES.fbIM1L0.bZoomLock")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.bZoomLock=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "IM1L0:XTES:CLF:LOCK_RBV") {
+  field(DESC, "ads:PRG_IM1L0_XTES.fbIM1L0.bFocusLock")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L0_XTES.fbIM1L0.bFocusLock?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "IM1L0:XTES:CLF:LOCK") {
+  field(DESC, "ads:PRG_IM1L0_XTES.fbIM1L0.bFocusLock")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.bFocusLock=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
 record(mbbi, "IM1L0:XTES:MMS:STATE:SET_RBV") {
   field(DESC, "ads:PRG_IM1L0_XTES.f....fbStates.enumSet")
   field(SCAN, "I/O Intr")
@@ -87,7 +1793,7 @@ record(mbbi, "IM1L0:XTES:MMS:STATE:SET_RBV") {
   field(THVL, "3")
   field(FRVL, "4")
   field(ZRST, "Unknown")
-  field(ONST, "Out")
+  field(ONST, "OUT")
   field(TWST, "Yag")
   field(THST, "Diamond")
   field(FRST, "Reticle")
@@ -102,7 +1808,7 @@ record(mbbo, "IM1L0:XTES:MMS:STATE:SET") {
   field(THVL, "3")
   field(FRVL, "4")
   field(ZRST, "Unknown")
-  field(ONST, "Out")
+  field(ONST, "OUT")
   field(TWST, "Yag")
   field(THST, "Diamond")
   field(FRST, "Reticle")
@@ -123,7 +1829,7 @@ record(mbbi, "IM1L0:XTES:MMS:STATE:GET_RBV") {
   field(THVL, "3")
   field(FRVL, "4")
   field(ZRST, "Unknown")
-  field(ONST, "Out")
+  field(ONST, "OUT")
   field(TWST, "Yag")
   field(THST, "Diamond")
   field(FRST, "Reticle")
@@ -2607,37 +4313,99 @@ record(bi, "IM1L0:XTES:CAM:PWR_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L0_XTES.fbIM1L0.fbOpal.bOpalPower?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
 }
 
 record(bo, "IM1L0:XTES:CAM:PWR") {
   field(DESC, "ads:PRG_IM1L0_XTES.f...fbOpal.bOpalPower")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbOpal.bOpalPower=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "IM1L0:XTES:CAM:CIL:PWR_RBV") {
-  field(DESC, "ads:PRG_IM1L0_XTES.f....fbOpal.bLedPower")
+record(bi, "IM1L0:XTES:CIL:PWR_RBV") {
+  field(DESC, "ads:PRG_IM1L0_XTES.f...0.fbLED.bLEDPower")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L0_XTES.fbIM1L0.fbOpal.bLedPower?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L0_XTES.fbIM1L0.fbLED.bLEDPower?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+}
+
+record(bo, "IM1L0:XTES:CIL:PWR") {
+  field(DESC, "ads:PRG_IM1L0_XTES.f...0.fbLED.bLEDPower")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbLED.bLEDPower=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "IM1L0:XTES:CIL:AUTO_RBV") {
+  field(DESC, "ads:PRG_IM1L0_XTES.f...L0.fbLED.bLEDAuto")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L0_XTES.fbIM1L0.fbLED.bLEDAuto?")
   field(ZNAM, "Zero")
   field(ONAM, "One")
 }
 
-record(bo, "IM1L0:XTES:CAM:CIL:PWR") {
-  field(DESC, "ads:PRG_IM1L0_XTES.f....fbOpal.bLedPower")
+record(bo, "IM1L0:XTES:CIL:AUTO") {
+  field(DESC, "ads:PRG_IM1L0_XTES.f...L0.fbLED.bLEDAuto")
   field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbOpal.bLedPower=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbLED.bLEDAuto=")
   field(ZNAM, "Zero")
   field(ONAM, "One")
   info(autosaveFields_pass0, "VAL")
+}
+
+record(ai, "IM1L0:XTES:CIL:CLK:TIMEOUT_RBV") {
+  field(DESC, "ads:PRG_IM1L0_XTES.f...fbLED.fLEDTimeOut")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L0_XTES.fbIM1L0.fbLED.fLEDTimeOut?")
+  field(PREC, "3")
+  field(EGU, "min")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "IM1L0:XTES:CIL:CLK:TIMEOUT") {
+  field(DESC, "ads:PRG_IM1L0_XTES.f...fbLED.fLEDTimeOut")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbLED.fLEDTimeOut=")
+  field(PREC, "3")
+  field(EGU, "min")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(ai, "IM1L0:XTES:CIL:CLK:REMAINING_RBV") {
+  field(DESC, "ads:PRG_IM1L0_XTES.f...LED.fLEDRemaining")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L0_XTES.fbIM1L0.fbLED.fLEDRemaining?")
+  field(PREC, "3")
+  field(EGU, "min")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "IM1L0:XTES:CIL:CLK:REMAINING") {
+  field(DESC, "ads:PRG_IM1L0_XTES.f...LED.fLEDRemaining")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbLED.fLEDRemaining=")
+  field(PREC, "3")
+  field(EGU, "min")
+  info(autosaveFields_pass0, "PREC VAL")
 }
 
 record(bi, "IM1L0:XTES:SFW:FLOW_RBV") {
@@ -2647,16 +4415,16 @@ record(bi, "IM1L0:XTES:SFW:FLOW_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L0_XTES.fbIM1L0.fbFlowSwitch.bFlowOk?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "LOW")
+  field(ONAM, "OK")
 }
 
 record(bo, "IM1L0:XTES:SFW:FLOW") {
   field(DESC, "ads:PRG_IM1L0_XTES.f...lowSwitch.bFlowOk")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbFlowSwitch.bFlowOk=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "LOW")
+  field(ONAM, "OK")
   info(autosaveFields_pass0, "VAL")
 }
 
@@ -2673,7 +4441,7 @@ record(mbbi, "IM1L1:PPM:MMS:STATE:SET_RBV") {
   field(THVL, "3")
   field(FRVL, "4")
   field(ZRST, "Unknown")
-  field(ONST, "Out")
+  field(ONST, "OUT")
   field(TWST, "PowerMeter")
   field(THST, "PolishedYag")
   field(FRST, "FrostedYag")
@@ -2688,7 +4456,7 @@ record(mbbo, "IM1L1:PPM:MMS:STATE:SET") {
   field(THVL, "3")
   field(FRVL, "4")
   field(ZRST, "Unknown")
-  field(ONST, "Out")
+  field(ONST, "OUT")
   field(TWST, "PowerMeter")
   field(THST, "PolishedYag")
   field(FRST, "FrostedYag")
@@ -2709,7 +4477,7 @@ record(mbbi, "IM1L1:PPM:MMS:STATE:GET_RBV") {
   field(THVL, "3")
   field(FRVL, "4")
   field(ZRST, "Unknown")
-  field(ONST, "Out")
+  field(ONST, "OUT")
   field(TWST, "PowerMeter")
   field(THST, "PolishedYag")
   field(FRST, "FrostedYag")
@@ -4911,6 +6679,7 @@ record(ai, "IM1L1:PPM:SPM:VOLT_RBV") {
   field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fVoltage?")
   field(PREC, "3")
+  field(EGU, "mV")
   info(autosaveFields_pass0, "PREC")
 }
 
@@ -4922,6 +6691,7 @@ record(waveform, "IM1L1:PPM:SPM:VOLT_BUFFER_RBV") {
   field(DTYP, "asynFloat64ArrayIn")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fVoltageBuffer?")
   field(FTVL, "DOUBLE")
+  field(EGU, "mV")
   field(NELM, "1000")
 }
 
@@ -4955,6 +6725,7 @@ record(ai, "IM1L1:PPM:SPM:MJ_RBV") {
   field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fCalibMJ?")
   field(PREC, "3")
+  field(EGU, "mJ")
   info(autosaveFields_pass0, "PREC")
 }
 
@@ -4966,6 +6737,7 @@ record(waveform, "IM1L1:PPM:SPM:MJ_BUFFER_RBV") {
   field(DTYP, "asynFloat64ArrayIn")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fCalibMJBuffer?")
   field(FTVL, "DOUBLE")
+  field(EGU, "mJ")
   field(NELM, "1000")
 }
 
@@ -5066,16 +6838,16 @@ record(bi, "IM1L1:PPM:CAM:PWR_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L1_PPM.fbIM1L1.fbGige.bGigePower?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
 }
 
 record(bo, "IM1L1:PPM:CAM:PWR") {
   field(DESC, "ads:PRG_IM1L1_PPM.fb...fbGige.bGigePower")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbGige.bGigePower=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
   info(autosaveFields_pass0, "VAL")
 }
 
@@ -5151,6 +6923,46 @@ record(bi, "IM1L1:PPM:YAG:STC:ERR_RBV") {
   field(ONAM, "One")
 }
 
+record(bi, "IM2L0:XTES:CLZ:LOCK_RBV") {
+  field(DESC, "ads:PRG_IM2L0_XTES.fbIM2L0.bZoomLock")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM2L0_XTES.fbIM2L0.bZoomLock?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "IM2L0:XTES:CLZ:LOCK") {
+  field(DESC, "ads:PRG_IM2L0_XTES.fbIM2L0.bZoomLock")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.bZoomLock=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "IM2L0:XTES:CLF:LOCK_RBV") {
+  field(DESC, "ads:PRG_IM2L0_XTES.fbIM2L0.bFocusLock")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM2L0_XTES.fbIM2L0.bFocusLock?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "IM2L0:XTES:CLF:LOCK") {
+  field(DESC, "ads:PRG_IM2L0_XTES.fbIM2L0.bFocusLock")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.bFocusLock=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
 record(mbbi, "IM2L0:XTES:MMS:STATE:SET_RBV") {
   field(DESC, "ads:PRG_IM2L0_XTES.f....fbStates.enumSet")
   field(SCAN, "I/O Intr")
@@ -5164,7 +6976,7 @@ record(mbbi, "IM2L0:XTES:MMS:STATE:SET_RBV") {
   field(THVL, "3")
   field(FRVL, "4")
   field(ZRST, "Unknown")
-  field(ONST, "Out")
+  field(ONST, "OUT")
   field(TWST, "Yag")
   field(THST, "Diamond")
   field(FRST, "Reticle")
@@ -5179,7 +6991,7 @@ record(mbbo, "IM2L0:XTES:MMS:STATE:SET") {
   field(THVL, "3")
   field(FRVL, "4")
   field(ZRST, "Unknown")
-  field(ONST, "Out")
+  field(ONST, "OUT")
   field(TWST, "Yag")
   field(THST, "Diamond")
   field(FRST, "Reticle")
@@ -5200,7 +7012,7 @@ record(mbbi, "IM2L0:XTES:MMS:STATE:GET_RBV") {
   field(THVL, "3")
   field(FRVL, "4")
   field(ZRST, "Unknown")
-  field(ONST, "Out")
+  field(ONST, "OUT")
   field(TWST, "Yag")
   field(THST, "Diamond")
   field(FRST, "Reticle")
@@ -7684,37 +9496,99 @@ record(bi, "IM2L0:XTES:CAM:PWR_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM2L0_XTES.fbIM2L0.fbOpal.bOpalPower?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
 }
 
 record(bo, "IM2L0:XTES:CAM:PWR") {
   field(DESC, "ads:PRG_IM2L0_XTES.f...fbOpal.bOpalPower")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbOpal.bOpalPower=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "IM2L0:XTES:CAM:CIL:PWR_RBV") {
-  field(DESC, "ads:PRG_IM2L0_XTES.f....fbOpal.bLedPower")
+record(bi, "IM2L0:XTES:CIL:PWR_RBV") {
+  field(DESC, "ads:PRG_IM2L0_XTES.f...0.fbLED.bLEDPower")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM2L0_XTES.fbIM2L0.fbOpal.bLedPower?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM2L0_XTES.fbIM2L0.fbLED.bLEDPower?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+}
+
+record(bo, "IM2L0:XTES:CIL:PWR") {
+  field(DESC, "ads:PRG_IM2L0_XTES.f...0.fbLED.bLEDPower")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbLED.bLEDPower=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "IM2L0:XTES:CIL:AUTO_RBV") {
+  field(DESC, "ads:PRG_IM2L0_XTES.f...L0.fbLED.bLEDAuto")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM2L0_XTES.fbIM2L0.fbLED.bLEDAuto?")
   field(ZNAM, "Zero")
   field(ONAM, "One")
 }
 
-record(bo, "IM2L0:XTES:CAM:CIL:PWR") {
-  field(DESC, "ads:PRG_IM2L0_XTES.f....fbOpal.bLedPower")
+record(bo, "IM2L0:XTES:CIL:AUTO") {
+  field(DESC, "ads:PRG_IM2L0_XTES.f...L0.fbLED.bLEDAuto")
   field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbOpal.bLedPower=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbLED.bLEDAuto=")
   field(ZNAM, "Zero")
   field(ONAM, "One")
   info(autosaveFields_pass0, "VAL")
+}
+
+record(ai, "IM2L0:XTES:CIL:CLK:TIMEOUT_RBV") {
+  field(DESC, "ads:PRG_IM2L0_XTES.f...fbLED.fLEDTimeOut")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM2L0_XTES.fbIM2L0.fbLED.fLEDTimeOut?")
+  field(PREC, "3")
+  field(EGU, "min")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "IM2L0:XTES:CIL:CLK:TIMEOUT") {
+  field(DESC, "ads:PRG_IM2L0_XTES.f...fbLED.fLEDTimeOut")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbLED.fLEDTimeOut=")
+  field(PREC, "3")
+  field(EGU, "min")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(ai, "IM2L0:XTES:CIL:CLK:REMAINING_RBV") {
+  field(DESC, "ads:PRG_IM2L0_XTES.f...LED.fLEDRemaining")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM2L0_XTES.fbIM2L0.fbLED.fLEDRemaining?")
+  field(PREC, "3")
+  field(EGU, "min")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "IM2L0:XTES:CIL:CLK:REMAINING") {
+  field(DESC, "ads:PRG_IM2L0_XTES.f...LED.fLEDRemaining")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbLED.fLEDRemaining=")
+  field(PREC, "3")
+  field(EGU, "min")
+  info(autosaveFields_pass0, "PREC VAL")
 }
 
 record(bi, "IM2L0:XTES:SFW:FLOW_RBV") {
@@ -7724,16 +9598,16 @@ record(bi, "IM2L0:XTES:SFW:FLOW_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM2L0_XTES.fbIM2L0.fbFlowSwitch.bFlowOk?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "LOW")
+  field(ONAM, "OK")
 }
 
 record(bo, "IM2L0:XTES:SFW:FLOW") {
   field(DESC, "ads:PRG_IM2L0_XTES.f...lowSwitch.bFlowOk")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbFlowSwitch.bFlowOk=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "LOW")
+  field(ONAM, "OK")
   info(autosaveFields_pass0, "VAL")
 }
 
@@ -7750,7 +9624,7 @@ record(mbbi, "IM3L0:PPM:MMS:STATE:SET_RBV") {
   field(THVL, "3")
   field(FRVL, "4")
   field(ZRST, "Unknown")
-  field(ONST, "Out")
+  field(ONST, "OUT")
   field(TWST, "PowerMeter")
   field(THST, "PolishedYag")
   field(FRST, "FrostedYag")
@@ -7765,7 +9639,7 @@ record(mbbo, "IM3L0:PPM:MMS:STATE:SET") {
   field(THVL, "3")
   field(FRVL, "4")
   field(ZRST, "Unknown")
-  field(ONST, "Out")
+  field(ONST, "OUT")
   field(TWST, "PowerMeter")
   field(THST, "PolishedYag")
   field(FRST, "FrostedYag")
@@ -7786,7 +9660,7 @@ record(mbbi, "IM3L0:PPM:MMS:STATE:GET_RBV") {
   field(THVL, "3")
   field(FRVL, "4")
   field(ZRST, "Unknown")
-  field(ONST, "Out")
+  field(ONST, "OUT")
   field(TWST, "PowerMeter")
   field(THST, "PolishedYag")
   field(FRST, "FrostedYag")
@@ -9988,6 +11862,7 @@ record(ai, "IM3L0:PPM:SPM:VOLT_RBV") {
   field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fVoltage?")
   field(PREC, "3")
+  field(EGU, "mV")
   info(autosaveFields_pass0, "PREC")
 }
 
@@ -9999,6 +11874,7 @@ record(waveform, "IM3L0:PPM:SPM:VOLT_BUFFER_RBV") {
   field(DTYP, "asynFloat64ArrayIn")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fVoltageBuffer?")
   field(FTVL, "DOUBLE")
+  field(EGU, "mV")
   field(NELM, "1000")
 }
 
@@ -10032,6 +11908,7 @@ record(ai, "IM3L0:PPM:SPM:MJ_RBV") {
   field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fCalibMJ?")
   field(PREC, "3")
+  field(EGU, "mJ")
   info(autosaveFields_pass0, "PREC")
 }
 
@@ -10043,6 +11920,7 @@ record(waveform, "IM3L0:PPM:SPM:MJ_BUFFER_RBV") {
   field(DTYP, "asynFloat64ArrayIn")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fCalibMJBuffer?")
   field(FTVL, "DOUBLE")
+  field(EGU, "mJ")
   field(NELM, "1000")
 }
 
@@ -10143,16 +12021,16 @@ record(bi, "IM3L0:PPM:CAM:PWR_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM3L0_PPM.fbIM3L0.fbGige.bGigePower?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
 }
 
 record(bo, "IM3L0:PPM:CAM:PWR") {
   field(DESC, "ads:PRG_IM3L0_PPM.fb...fbGige.bGigePower")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbGige.bGigePower=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
   info(autosaveFields_pass0, "VAL")
 }
 
@@ -10228,6 +12106,46 @@ record(bi, "IM3L0:PPM:YAG:STC:ERR_RBV") {
   field(ONAM, "One")
 }
 
+record(bi, "IM4L0:XTES:CLZ:LOCK_RBV") {
+  field(DESC, "ads:PRG_IM4L0_XTES.fbIM4L0.bZoomLock")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM4L0_XTES.fbIM4L0.bZoomLock?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "IM4L0:XTES:CLZ:LOCK") {
+  field(DESC, "ads:PRG_IM4L0_XTES.fbIM4L0.bZoomLock")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.bZoomLock=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "IM4L0:XTES:CLF:LOCK_RBV") {
+  field(DESC, "ads:PRG_IM4L0_XTES.fbIM4L0.bFocusLock")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM4L0_XTES.fbIM4L0.bFocusLock?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "IM4L0:XTES:CLF:LOCK") {
+  field(DESC, "ads:PRG_IM4L0_XTES.fbIM4L0.bFocusLock")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.bFocusLock=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
 record(mbbi, "IM4L0:XTES:MMS:STATE:SET_RBV") {
   field(DESC, "ads:PRG_IM4L0_XTES.f....fbStates.enumSet")
   field(SCAN, "I/O Intr")
@@ -10241,7 +12159,7 @@ record(mbbi, "IM4L0:XTES:MMS:STATE:SET_RBV") {
   field(THVL, "3")
   field(FRVL, "4")
   field(ZRST, "Unknown")
-  field(ONST, "Out")
+  field(ONST, "OUT")
   field(TWST, "Yag")
   field(THST, "Diamond")
   field(FRST, "Reticle")
@@ -10256,7 +12174,7 @@ record(mbbo, "IM4L0:XTES:MMS:STATE:SET") {
   field(THVL, "3")
   field(FRVL, "4")
   field(ZRST, "Unknown")
-  field(ONST, "Out")
+  field(ONST, "OUT")
   field(TWST, "Yag")
   field(THST, "Diamond")
   field(FRST, "Reticle")
@@ -10277,7 +12195,7 @@ record(mbbi, "IM4L0:XTES:MMS:STATE:GET_RBV") {
   field(THVL, "3")
   field(FRVL, "4")
   field(ZRST, "Unknown")
-  field(ONST, "Out")
+  field(ONST, "OUT")
   field(TWST, "Yag")
   field(THST, "Diamond")
   field(FRST, "Reticle")
@@ -12761,37 +14679,99 @@ record(bi, "IM4L0:XTES:CAM:PWR_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM4L0_XTES.fbIM4L0.fbOpal.bOpalPower?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
 }
 
 record(bo, "IM4L0:XTES:CAM:PWR") {
   field(DESC, "ads:PRG_IM4L0_XTES.f...fbOpal.bOpalPower")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbOpal.bOpalPower=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "IM4L0:XTES:CAM:CIL:PWR_RBV") {
-  field(DESC, "ads:PRG_IM4L0_XTES.f....fbOpal.bLedPower")
+record(bi, "IM4L0:XTES:CIL:PWR_RBV") {
+  field(DESC, "ads:PRG_IM4L0_XTES.f...0.fbLED.bLEDPower")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM4L0_XTES.fbIM4L0.fbOpal.bLedPower?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM4L0_XTES.fbIM4L0.fbLED.bLEDPower?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+}
+
+record(bo, "IM4L0:XTES:CIL:PWR") {
+  field(DESC, "ads:PRG_IM4L0_XTES.f...0.fbLED.bLEDPower")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbLED.bLEDPower=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "IM4L0:XTES:CIL:AUTO_RBV") {
+  field(DESC, "ads:PRG_IM4L0_XTES.f...L0.fbLED.bLEDAuto")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM4L0_XTES.fbIM4L0.fbLED.bLEDAuto?")
   field(ZNAM, "Zero")
   field(ONAM, "One")
 }
 
-record(bo, "IM4L0:XTES:CAM:CIL:PWR") {
-  field(DESC, "ads:PRG_IM4L0_XTES.f....fbOpal.bLedPower")
+record(bo, "IM4L0:XTES:CIL:AUTO") {
+  field(DESC, "ads:PRG_IM4L0_XTES.f...L0.fbLED.bLEDAuto")
   field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbOpal.bLedPower=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbLED.bLEDAuto=")
   field(ZNAM, "Zero")
   field(ONAM, "One")
   info(autosaveFields_pass0, "VAL")
+}
+
+record(ai, "IM4L0:XTES:CIL:CLK:TIMEOUT_RBV") {
+  field(DESC, "ads:PRG_IM4L0_XTES.f...fbLED.fLEDTimeOut")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM4L0_XTES.fbIM4L0.fbLED.fLEDTimeOut?")
+  field(PREC, "3")
+  field(EGU, "min")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "IM4L0:XTES:CIL:CLK:TIMEOUT") {
+  field(DESC, "ads:PRG_IM4L0_XTES.f...fbLED.fLEDTimeOut")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbLED.fLEDTimeOut=")
+  field(PREC, "3")
+  field(EGU, "min")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(ai, "IM4L0:XTES:CIL:CLK:REMAINING_RBV") {
+  field(DESC, "ads:PRG_IM4L0_XTES.f...LED.fLEDRemaining")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM4L0_XTES.fbIM4L0.fbLED.fLEDRemaining?")
+  field(PREC, "3")
+  field(EGU, "min")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "IM4L0:XTES:CIL:CLK:REMAINING") {
+  field(DESC, "ads:PRG_IM4L0_XTES.f...LED.fLEDRemaining")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbLED.fLEDRemaining=")
+  field(PREC, "3")
+  field(EGU, "min")
+  info(autosaveFields_pass0, "PREC VAL")
 }
 
 record(bi, "IM4L0:XTES:SFW:FLOW_RBV") {
@@ -12801,16 +14781,16 @@ record(bi, "IM4L0:XTES:SFW:FLOW_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM4L0_XTES.fbIM4L0.fbFlowSwitch.bFlowOk?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "LOW")
+  field(ONAM, "OK")
 }
 
 record(bo, "IM4L0:XTES:SFW:FLOW") {
   field(DESC, "ads:PRG_IM4L0_XTES.f...lowSwitch.bFlowOk")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbFlowSwitch.bFlowOk=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "LOW")
+  field(ONAM, "OK")
   info(autosaveFields_pass0, "VAL")
 }
 
@@ -13948,16 +15928,16 @@ record(bi, "SL1L0:POWER:FSW:FLOW_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.fbFlowSwitch.bFlowOk?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "LOW")
+  field(ONAM, "OK")
 }
 
 record(bo, "SL1L0:POWER:FSW:FLOW") {
   field(DESC, "ads:PRG_SL1L0_POWER....lowSwitch.bFlowOk")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.fbFlowSwitch.bFlowOk=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "LOW")
+  field(ONAM, "OK")
   info(autosaveFields_pass0, "VAL")
 }
 
@@ -15367,16 +17347,16 @@ record(bi, "SL2L0:POWER:FSW:FLOW_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.fbFlowSwitch.bFlowOk?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "LOW")
+  field(ONAM, "OK")
 }
 
 record(bo, "SL2L0:POWER:FSW:FLOW") {
   field(DESC, "ads:PRG_SL2L0_POWER....lowSwitch.bFlowOk")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.fbFlowSwitch.bFlowOk=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
+  field(ZNAM, "LOW")
+  field(ONAM, "OK")
   info(autosaveFields_pass0, "VAL")
 }
 
@@ -36884,4 +38864,22 @@ record(bo, "RTDSL0:MPA:04:MOT_DONE") {
   field(ZNAM, "Zero")
   field(ONAM, "One")
   info(autosaveFields_pass0, "VAL")
+}
+
+record(longin, "$(PREFIX)SuccessfulPreemptions_RBV") {
+  field(DESC, "ads:PMPS_GVL.SuccessfulPreemption")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.SuccessfulPreemption?")
+}
+
+record(longin, "$(PREFIX)AccumulatedFastFaults_RBV") {
+  field(DESC, "ads:PMPS_GVL.AccumulatedFF")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.AccumulatedFF?")
 }
