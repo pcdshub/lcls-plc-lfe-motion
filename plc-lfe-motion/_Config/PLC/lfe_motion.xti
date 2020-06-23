@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.29" ClassName="CNestedPlcProjDef">
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.30" ClassName="CNestedPlcProjDef">
 	<DataTypes>
 		<DataType>
 			<Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
@@ -974,13 +974,6 @@ External Setpoint Generation:
 					<Type>UINT</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.nM1CoilBRaw</Name>
-					<Comment>
-						<![CDATA[ ..CoilBRaw is currently linked to EL7041 'Coil Voltage A']]>
-					</Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
 					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[0].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
@@ -1910,6 +1903,13 @@ External Setpoint Generation:
 ]]>
 						</Comment>
 					</SubVar>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM1CoilBRaw</Name>
+					<Comment>
+						<![CDATA[ ..CoilBRaw is currently linked to EL7041 'Coil Voltage A']]>
+					</Comment>
+					<Type>UINT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM2CoilARaw</Name>
@@ -8174,7 +8174,7 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM1L0_XTES.fbIM1L0.fbOpal.bLedPower</Name>
+					<Name>PRG_IM1L0_XTES.fbIM1L0.fbLED.bLEDPower</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -8217,7 +8217,7 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM2L0_XTES.fbIM2L0.fbOpal.bLedPower</Name>
+					<Name>PRG_IM2L0_XTES.fbIM2L0.fbLED.bLEDPower</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -8260,7 +8260,7 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM4L0_XTES.fbIM4L0.fbOpal.bLedPower</Name>
+					<Name>PRG_IM4L0_XTES.fbIM4L0.fbLED.bLEDPower</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -8958,6 +8958,25 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
+			<Vars VarGrpType="8">
+				<Name>PlcTask Retains</Name>
+				<Var>
+					<Name>PMPS_GVL.SuccessfulPreemption</Name>
+					<Comment>
+						<![CDATA[ Any time BPTM applies a new BP request which is confirmed]]>
+					</Comment>
+					<Type>UDINT</Type>
+					<InOut>7</InOut>
+				</Var>
+				<Var>
+					<Name>PMPS_GVL.AccumulatedFF</Name>
+					<Comment>
+						<![CDATA[ Any time a FF occurs]]>
+					</Comment>
+					<Type>UDINT</Type>
+					<InOut>7</InOut>
+				</Var>
+			</Vars>
 			<UnrestoredVarLinks ImportTime="2020-02-25T19:22:43">
 				<OwnerA Name="OutputSrc" Prefix="TIPC^lfe_motion^lfe_motion Instance" Type="2">
 					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL2008">
@@ -9013,7 +9032,7 @@ External Setpoint Generation:
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL2004">
 				<Link VarA="PlcTask Outputs^Main.M20.bBrakeRelease" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM1L0_XTES.fbIM1L0.fbOpal.bLedPower" VarB="Channel 3^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM1L0_XTES.fbIM1L0.fbLED.bLEDPower" VarB="Channel 3^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^PRG_IM1L0_XTES.fbIM1L0.fbOpal.bOpalPower" VarB="Channel 2^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL6002">
@@ -9247,7 +9266,7 @@ External Setpoint Generation:
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL2004">
 				<Link VarA="PlcTask Outputs^Main.M24.bBrakeRelease" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.fbIM2L0.fbOpal.bLedPower" VarB="Channel 3^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.fbIM2L0.fbLED.bLEDPower" VarB="Channel 3^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.fbIM2L0.fbOpal.bOpalPower" VarB="Channel 2^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002">
@@ -9435,7 +9454,7 @@ External Setpoint Generation:
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL2004">
 				<Link VarA="PlcTask Outputs^Main.M28.bBrakeRelease" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM4L0_XTES.fbIM4L0.fbOpal.bLedPower" VarB="Channel 3^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM4L0_XTES.fbIM4L0.fbLED.bLEDPower" VarB="Channel 3^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^PRG_IM4L0_XTES.fbIM4L0.fbOpal.bOpalPower" VarB="Channel 2^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002">

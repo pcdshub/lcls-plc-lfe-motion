@@ -12,7 +12,7 @@ VAR
                               .bFocusEndFwd := TIIB[IM1L0-EL1088]^Channel 3^Input;
                               .bFocusEndBwd := TIIB[IM1L0-EL1088]^Channel 4^Input;
                               .fbOpal.bOpalPower := TIIB[IM1L0-EL2004]^Channel 2^Output;
-                              .fbOpal.bLedPower := TIIB[IM1L0-EL2004]^Channel 3^Output'}
+                              .fbLED.bLedPower := TIIB[IM1L0-EL2004]^Channel 3^Output'}
     fbIM1L0: FB_XPIM;
     {attribute 'TcLinkTo' := '.Status := TIIB[IM1L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Status;
                               .D[0] := TIIB[IM1L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 0;
