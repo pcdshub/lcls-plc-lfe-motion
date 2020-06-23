@@ -835,10 +835,18 @@
  <span class="s2">&quot;AT2L0:XTES:MMS:19:PLC:nHomingMode_RBV&quot;</span> <span class="p">(</span><span class="n">mbbi</span><span class="p">)</span>
  <span class="s2">&quot;AT2L0:XTES:MMS:19:PLC:nMotionAxisID_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
  <span class="s2">&quot;AT2L0:XTES:MMS:19:PLC:sErrorMessage_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
- <span class="s2">&quot;IM1L0:XTES:CAM:CIL:PWR&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
- <span class="s2">&quot;IM1L0:XTES:CAM:CIL:PWR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM1L0:XTES:CAM:PWR&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
  <span class="s2">&quot;IM1L0:XTES:CAM:PWR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;IM1L0:XTES:CIL:AUTO&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;IM1L0:XTES:CIL:AUTO_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;IM1L0:XTES:CIL:CLK:REMAINING&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;IM1L0:XTES:CIL:CLK:REMAINING_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;IM1L0:XTES:CIL:CLK:TIMEOUT&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;IM1L0:XTES:CIL:CLK:TIMEOUT_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;IM1L0:XTES:CIL:PWR&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;IM1L0:XTES:CIL:PWR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;IM1L0:XTES:CLF:LOCK&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;IM1L0:XTES:CLF:LOCK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM1L0:XTES:CLF:PLC:bAllBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM1L0:XTES:CLF:PLC:bAllEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM1L0:XTES:CLF:PLC:bAllForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
@@ -881,6 +889,8 @@
  <span class="s2">&quot;IM1L0:XTES:CLF:PLC:nHomingMode_RBV&quot;</span> <span class="p">(</span><span class="n">mbbi</span><span class="p">)</span>
  <span class="s2">&quot;IM1L0:XTES:CLF:PLC:nMotionAxisID_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
  <span class="s2">&quot;IM1L0:XTES:CLF:PLC:sErrorMessage_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;IM1L0:XTES:CLZ:LOCK&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;IM1L0:XTES:CLZ:LOCK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM1L0:XTES:CLZ:PLC:bAllBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM1L0:XTES:CLZ:PLC:bAllEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM1L0:XTES:CLZ:PLC:bAllForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
@@ -1488,10 +1498,18 @@
  <span class="s2">&quot;IM1L1:PPM:YAG:STC:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM1L1:PPM:YAG:STC:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM1L1:PPM:YAG:STC:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
- <span class="s2">&quot;IM2L0:XTES:CAM:CIL:PWR&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
- <span class="s2">&quot;IM2L0:XTES:CAM:CIL:PWR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM2L0:XTES:CAM:PWR&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
  <span class="s2">&quot;IM2L0:XTES:CAM:PWR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;IM2L0:XTES:CIL:AUTO&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;IM2L0:XTES:CIL:AUTO_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;IM2L0:XTES:CIL:CLK:REMAINING&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;IM2L0:XTES:CIL:CLK:REMAINING_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;IM2L0:XTES:CIL:CLK:TIMEOUT&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;IM2L0:XTES:CIL:CLK:TIMEOUT_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;IM2L0:XTES:CIL:PWR&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;IM2L0:XTES:CIL:PWR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;IM2L0:XTES:CLF:LOCK&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;IM2L0:XTES:CLF:LOCK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM2L0:XTES:CLF:PLC:bAllBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM2L0:XTES:CLF:PLC:bAllEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM2L0:XTES:CLF:PLC:bAllForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
@@ -1534,6 +1552,8 @@
  <span class="s2">&quot;IM2L0:XTES:CLF:PLC:nHomingMode_RBV&quot;</span> <span class="p">(</span><span class="n">mbbi</span><span class="p">)</span>
  <span class="s2">&quot;IM2L0:XTES:CLF:PLC:nMotionAxisID_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
  <span class="s2">&quot;IM2L0:XTES:CLF:PLC:sErrorMessage_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;IM2L0:XTES:CLZ:LOCK&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;IM2L0:XTES:CLZ:LOCK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM2L0:XTES:CLZ:PLC:bAllBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM2L0:XTES:CLZ:PLC:bAllEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM2L0:XTES:CLZ:PLC:bAllForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
@@ -2141,10 +2161,18 @@
  <span class="s2">&quot;IM3L0:PPM:YAG:STC:CONN_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM3L0:PPM:YAG:STC:ERR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM3L0:PPM:YAG:STC:TEMP_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
- <span class="s2">&quot;IM4L0:XTES:CAM:CIL:PWR&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
- <span class="s2">&quot;IM4L0:XTES:CAM:CIL:PWR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM4L0:XTES:CAM:PWR&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
  <span class="s2">&quot;IM4L0:XTES:CAM:PWR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;IM4L0:XTES:CIL:AUTO&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;IM4L0:XTES:CIL:AUTO_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;IM4L0:XTES:CIL:CLK:REMAINING&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;IM4L0:XTES:CIL:CLK:REMAINING_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;IM4L0:XTES:CIL:CLK:TIMEOUT&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
+ <span class="s2">&quot;IM4L0:XTES:CIL:CLK:TIMEOUT_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;IM4L0:XTES:CIL:PWR&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;IM4L0:XTES:CIL:PWR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;IM4L0:XTES:CLF:LOCK&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;IM4L0:XTES:CLF:LOCK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM4L0:XTES:CLF:PLC:bAllBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM4L0:XTES:CLF:PLC:bAllEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM4L0:XTES:CLF:PLC:bAllForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
@@ -2187,6 +2215,8 @@
  <span class="s2">&quot;IM4L0:XTES:CLF:PLC:nHomingMode_RBV&quot;</span> <span class="p">(</span><span class="n">mbbi</span><span class="p">)</span>
  <span class="s2">&quot;IM4L0:XTES:CLF:PLC:nMotionAxisID_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
  <span class="s2">&quot;IM4L0:XTES:CLF:PLC:sErrorMessage_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;IM4L0:XTES:CLZ:LOCK&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+ <span class="s2">&quot;IM4L0:XTES:CLZ:LOCK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM4L0:XTES:CLZ:PLC:bAllBackwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM4L0:XTES:CLZ:PLC:bAllEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;IM4L0:XTES:CLZ:PLC:bAllForwardEnable_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
@@ -2592,10 +2622,170 @@
  <span class="s2">&quot;PF1L0:WFS:MMS:02:PLC:nHomingMode_RBV&quot;</span> <span class="p">(</span><span class="n">mbbi</span><span class="p">)</span>
  <span class="s2">&quot;PF1L0:WFS:MMS:02:PLC:nMotionAxisID_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
  <span class="s2">&quot;PF1L0:WFS:MMS:02:PLC:sErrorMessage_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)AccumulatedFastFaults_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:Attenuation_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:001:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:001:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:002:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:002:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:003:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:003:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:004:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:004:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:005:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:005:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:006:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:006:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:007:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:007:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:008:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:008:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:009:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:009:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:010:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:010:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:011:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:011:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:012:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:012:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:013:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:013:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:014:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:014:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:015:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:015:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:016:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:AuxAtt:016:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:Cohort_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:PhotonEnergyRanges_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:PulseEnergy_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:Rate_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:ST_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)CurrentBP:Valid_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)eVRangeCnst_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)eVRangeCnst&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:Attenuation_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:001:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:001:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:002:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:002:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:003:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:003:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:004:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:004:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:005:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:005:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:006:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:006:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:007:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:007:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:008:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:008:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:009:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:009:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:010:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:010:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:011:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:011:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:012:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:012:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:013:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:013:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:014:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:014:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:015:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:015:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:016:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:AuxAtt:016:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:Cohort_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:PhotonEnergyRanges_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:PulseEnergy_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:Rate_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:ST_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)FullBeamCnst:Valid_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;$(PREFIX)LCLSGeneral:LogHost_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
  <span class="s2">&quot;$(PREFIX)LCLSGeneral:LogHost&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
  <span class="s2">&quot;$(PREFIX)LCLSGeneral:LogPort&quot;</span> <span class="p">(</span><span class="n">longout</span><span class="p">)</span>
  <span class="s2">&quot;$(PREFIX)LCLSGeneral:LogPort_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:Attenuation_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:001:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:001:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:002:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:002:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:003:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:003:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:004:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:004:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:005:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:005:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:006:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:006:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:007:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:007:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:008:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:008:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:009:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:009:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:010:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:010:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:011:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:011:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:012:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:012:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:013:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:013:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:014:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:014:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:015:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:015:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:016:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:AuxAtt:016:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:Cohort_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:PhotonEnergyRanges_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:PulseEnergy_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:Rate_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:ST_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)RequestedBP:Valid_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:Attenuation_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:001:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:001:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:002:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:002:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:003:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:003:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:004:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:004:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:005:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:005:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:006:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:006:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:007:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:007:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:008:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:008:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:009:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:009:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:010:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:010:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:011:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:011:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:012:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:012:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:013:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:013:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:014:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:014:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:015:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:015:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:016:Att_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:AuxAtt:016:OK_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:Cohort_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:PhotonEnergyRanges_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:PulseEnergy_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:Rate_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:ST_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SafeBeamCnst:Valid_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)SuccessfulPreemptions_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
  <span class="s2">&quot;RTDSL0:MPA:01:ERROR&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
  <span class="s2">&quot;RTDSL0:MPA:01:ERROR_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;RTDSL0:MPA:01:FF_Reset&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
@@ -3587,6 +3777,1966 @@ record(waveform, &quot;$(PREFIX)LCLSGeneral:LogHost&quot;) {
   info(archive, &quot;VAL&quot;)
 }
 
+record(ai, &quot;$(PREFIX)RequestedBP:Attenuation_RBV&quot;) {
+  field(DESC, &quot;PMPS_GVL.stRequestedBeamParameters.fAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.fAtt?&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;%&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:Rate_RBV&quot;) {
+  field(DESC, &quot;PMPS_GVL.stRequestedBeamParameters.nRate&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.nRate?&quot;)
+  field(EGU, &quot;Hz&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(ai, &quot;$(PREFIX)RequestedBP:PulseEnergy_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.fPP_mJ
+  field(DESC, &quot;PMPS_GVL.stRequested...Parameters.fPP_mJ&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.fPP_mJ?&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;mJ&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:PhotonEnergyRanges_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.neVRange
+  field(DESC, &quot;PMPS_GVL.stRequested...rameters.neVRange&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.neVRange?&quot;)
+  field(EGU, &quot;eV&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:AuxAtt:001:Att_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[1].nAtt
+  field(DESC, &quot;PMPS_GVL.stRequested...tenuators[1].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[1].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:AuxAtt:002:Att_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[2].nAtt
+  field(DESC, &quot;PMPS_GVL.stRequested...tenuators[2].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[2].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:AuxAtt:003:Att_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[3].nAtt
+  field(DESC, &quot;PMPS_GVL.stRequested...tenuators[3].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[3].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:AuxAtt:004:Att_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[4].nAtt
+  field(DESC, &quot;PMPS_GVL.stRequested...tenuators[4].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[4].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:AuxAtt:005:Att_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[5].nAtt
+  field(DESC, &quot;PMPS_GVL.stRequested...tenuators[5].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[5].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:AuxAtt:006:Att_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[6].nAtt
+  field(DESC, &quot;PMPS_GVL.stRequested...tenuators[6].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[6].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:AuxAtt:007:Att_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[7].nAtt
+  field(DESC, &quot;PMPS_GVL.stRequested...tenuators[7].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[7].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:AuxAtt:008:Att_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[8].nAtt
+  field(DESC, &quot;PMPS_GVL.stRequested...tenuators[8].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[8].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:AuxAtt:009:Att_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[9].nAtt
+  field(DESC, &quot;PMPS_GVL.stRequested...tenuators[9].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[9].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:AuxAtt:010:Att_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[10].nAtt
+  field(DESC, &quot;PMPS_GVL.stRequested...enuators[10].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[10].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:AuxAtt:011:Att_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[11].nAtt
+  field(DESC, &quot;PMPS_GVL.stRequested...enuators[11].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[11].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:AuxAtt:012:Att_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[12].nAtt
+  field(DESC, &quot;PMPS_GVL.stRequested...enuators[12].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[12].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:AuxAtt:013:Att_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[13].nAtt
+  field(DESC, &quot;PMPS_GVL.stRequested...enuators[13].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[13].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:AuxAtt:014:Att_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[14].nAtt
+  field(DESC, &quot;PMPS_GVL.stRequested...enuators[14].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[14].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:AuxAtt:015:Att_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[15].nAtt
+  field(DESC, &quot;PMPS_GVL.stRequested...enuators[15].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[15].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:AuxAtt:016:Att_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[16].nAtt
+  field(DESC, &quot;PMPS_GVL.stRequested...enuators[16].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[16].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)RequestedBP:AuxAtt:001:OK_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[1].xAttOK
+  field(DESC, &quot;PMPS_GVL.stRequested...nuators[1].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[1].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)RequestedBP:AuxAtt:002:OK_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[2].xAttOK
+  field(DESC, &quot;PMPS_GVL.stRequested...nuators[2].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[2].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)RequestedBP:AuxAtt:003:OK_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[3].xAttOK
+  field(DESC, &quot;PMPS_GVL.stRequested...nuators[3].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[3].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)RequestedBP:AuxAtt:004:OK_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[4].xAttOK
+  field(DESC, &quot;PMPS_GVL.stRequested...nuators[4].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[4].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)RequestedBP:AuxAtt:005:OK_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[5].xAttOK
+  field(DESC, &quot;PMPS_GVL.stRequested...nuators[5].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[5].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)RequestedBP:AuxAtt:006:OK_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[6].xAttOK
+  field(DESC, &quot;PMPS_GVL.stRequested...nuators[6].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[6].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)RequestedBP:AuxAtt:007:OK_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[7].xAttOK
+  field(DESC, &quot;PMPS_GVL.stRequested...nuators[7].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[7].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)RequestedBP:AuxAtt:008:OK_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[8].xAttOK
+  field(DESC, &quot;PMPS_GVL.stRequested...nuators[8].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[8].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)RequestedBP:AuxAtt:009:OK_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[9].xAttOK
+  field(DESC, &quot;PMPS_GVL.stRequested...nuators[9].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[9].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)RequestedBP:AuxAtt:010:OK_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[10].xAttOK
+  field(DESC, &quot;PMPS_GVL.stRequested...uators[10].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[10].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)RequestedBP:AuxAtt:011:OK_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[11].xAttOK
+  field(DESC, &quot;PMPS_GVL.stRequested...uators[11].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[11].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)RequestedBP:AuxAtt:012:OK_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[12].xAttOK
+  field(DESC, &quot;PMPS_GVL.stRequested...uators[12].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[12].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)RequestedBP:AuxAtt:013:OK_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[13].xAttOK
+  field(DESC, &quot;PMPS_GVL.stRequested...uators[13].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[13].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)RequestedBP:AuxAtt:014:OK_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[14].xAttOK
+  field(DESC, &quot;PMPS_GVL.stRequested...uators[14].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[14].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)RequestedBP:AuxAtt:015:OK_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[15].xAttOK
+  field(DESC, &quot;PMPS_GVL.stRequested...uators[15].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[15].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)RequestedBP:AuxAtt:016:OK_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.astAttenuators[16].xAttOK
+  field(DESC, &quot;PMPS_GVL.stRequested...uators[16].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[16].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(waveform, &quot;$(PREFIX)RequestedBP:ST_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.aStoppers
+  field(DESC, &quot;PMPS_GVL.stRequested...ameters.aStoppers&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt8ArrayIn&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.aStoppers?&quot;)
+  field(FTVL, &quot;CHAR&quot;)
+  field(NELM, &quot;16&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)RequestedBP:Valid_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.xValid
+  field(DESC, &quot;PMPS_GVL.stRequested...Parameters.xValid&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.xValid?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)RequestedBP:Cohort_RBV&quot;) {
+  # PMPS_GVL.stRequestedBeamParameters.nCohortInt
+  field(DESC, &quot;Cohort inc on each arb cycle&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.nCohortInt?&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(ai, &quot;$(PREFIX)CurrentBP:Attenuation_RBV&quot;) {
+  field(DESC, &quot;PMPS_GVL.stCurrentBeamParameters.fAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.fAtt?&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;%&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:Rate_RBV&quot;) {
+  field(DESC, &quot;PMPS_GVL.stCurrentBeamParameters.nRate&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.nRate?&quot;)
+  field(EGU, &quot;Hz&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(ai, &quot;$(PREFIX)CurrentBP:PulseEnergy_RBV&quot;) {
+  field(DESC, &quot;PMPS_GVL.stCurrentBeamParameters.fPP_mJ&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.fPP_mJ?&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;mJ&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:PhotonEnergyRanges_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.neVRange
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...rameters.neVRange&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.neVRange?&quot;)
+  field(EGU, &quot;eV&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:AuxAtt:001:Att_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[1].nAtt
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...tenuators[1].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[1].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:AuxAtt:002:Att_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[2].nAtt
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...tenuators[2].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[2].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:AuxAtt:003:Att_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[3].nAtt
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...tenuators[3].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[3].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:AuxAtt:004:Att_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[4].nAtt
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...tenuators[4].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[4].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:AuxAtt:005:Att_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[5].nAtt
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...tenuators[5].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[5].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:AuxAtt:006:Att_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[6].nAtt
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...tenuators[6].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[6].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:AuxAtt:007:Att_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[7].nAtt
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...tenuators[7].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[7].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:AuxAtt:008:Att_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[8].nAtt
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...tenuators[8].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[8].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:AuxAtt:009:Att_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[9].nAtt
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...tenuators[9].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[9].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:AuxAtt:010:Att_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[10].nAtt
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...enuators[10].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[10].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:AuxAtt:011:Att_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[11].nAtt
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...enuators[11].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[11].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:AuxAtt:012:Att_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[12].nAtt
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...enuators[12].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[12].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:AuxAtt:013:Att_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[13].nAtt
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...enuators[13].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[13].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:AuxAtt:014:Att_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[14].nAtt
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...enuators[14].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[14].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:AuxAtt:015:Att_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[15].nAtt
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...enuators[15].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[15].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:AuxAtt:016:Att_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[16].nAtt
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...enuators[16].nAtt&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[16].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)CurrentBP:AuxAtt:001:OK_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[1].xAttOK
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...nuators[1].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[1].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)CurrentBP:AuxAtt:002:OK_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[2].xAttOK
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...nuators[2].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[2].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)CurrentBP:AuxAtt:003:OK_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[3].xAttOK
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...nuators[3].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[3].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)CurrentBP:AuxAtt:004:OK_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[4].xAttOK
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...nuators[4].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[4].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)CurrentBP:AuxAtt:005:OK_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[5].xAttOK
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...nuators[5].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[5].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)CurrentBP:AuxAtt:006:OK_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[6].xAttOK
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...nuators[6].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[6].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)CurrentBP:AuxAtt:007:OK_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[7].xAttOK
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...nuators[7].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[7].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)CurrentBP:AuxAtt:008:OK_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[8].xAttOK
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...nuators[8].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[8].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)CurrentBP:AuxAtt:009:OK_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[9].xAttOK
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...nuators[9].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[9].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)CurrentBP:AuxAtt:010:OK_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[10].xAttOK
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...uators[10].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[10].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)CurrentBP:AuxAtt:011:OK_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[11].xAttOK
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...uators[11].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[11].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)CurrentBP:AuxAtt:012:OK_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[12].xAttOK
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...uators[12].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[12].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)CurrentBP:AuxAtt:013:OK_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[13].xAttOK
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...uators[13].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[13].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)CurrentBP:AuxAtt:014:OK_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[14].xAttOK
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...uators[14].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[14].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)CurrentBP:AuxAtt:015:OK_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[15].xAttOK
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...uators[15].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[15].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)CurrentBP:AuxAtt:016:OK_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.astAttenuators[16].xAttOK
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...uators[16].xAttOK&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[16].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(waveform, &quot;$(PREFIX)CurrentBP:ST_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.aStoppers
+  field(DESC, &quot;PMPS_GVL.stCurrentBe...ameters.aStoppers&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt8ArrayIn&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.aStoppers?&quot;)
+  field(FTVL, &quot;CHAR&quot;)
+  field(NELM, &quot;16&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)CurrentBP:Valid_RBV&quot;) {
+  field(DESC, &quot;PMPS_GVL.stCurrentBeamParameters.xValid&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.xValid?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)CurrentBP:Cohort_RBV&quot;) {
+  # PMPS_GVL.stCurrentBeamParameters.nCohortInt
+  field(DESC, &quot;Cohort inc on each arb cycle&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.nCohortInt?&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(ai, &quot;$(PREFIX)FullBeamCnst:Attenuation_RBV&quot;) {
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.fAtt?&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;%&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:Rate_RBV&quot;) {
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.nRate?&quot;)
+  field(EGU, &quot;Hz&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(ai, &quot;$(PREFIX)FullBeamCnst:PulseEnergy_RBV&quot;) {
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.fPP_mJ?&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;mJ&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:PhotonEnergyRanges_RBV&quot;) {
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.neVRange?&quot;)
+  field(EGU, &quot;eV&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:AuxAtt:001:Att_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[1].nAtt
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[1].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:AuxAtt:002:Att_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[2].nAtt
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[2].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:AuxAtt:003:Att_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[3].nAtt
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[3].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:AuxAtt:004:Att_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[4].nAtt
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[4].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:AuxAtt:005:Att_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[5].nAtt
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[5].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:AuxAtt:006:Att_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[6].nAtt
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[6].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:AuxAtt:007:Att_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[7].nAtt
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[7].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:AuxAtt:008:Att_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[8].nAtt
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[8].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:AuxAtt:009:Att_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[9].nAtt
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[9].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:AuxAtt:010:Att_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[10].nAtt
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[10].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:AuxAtt:011:Att_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[11].nAtt
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[11].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:AuxAtt:012:Att_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[12].nAtt
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[12].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:AuxAtt:013:Att_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[13].nAtt
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[13].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:AuxAtt:014:Att_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[14].nAtt
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[14].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:AuxAtt:015:Att_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[15].nAtt
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[15].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:AuxAtt:016:Att_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[16].nAtt
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[16].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)FullBeamCnst:AuxAtt:001:OK_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[1].xAttOK
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[1].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)FullBeamCnst:AuxAtt:002:OK_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[2].xAttOK
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[2].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)FullBeamCnst:AuxAtt:003:OK_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[3].xAttOK
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[3].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)FullBeamCnst:AuxAtt:004:OK_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[4].xAttOK
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[4].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)FullBeamCnst:AuxAtt:005:OK_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[5].xAttOK
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[5].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)FullBeamCnst:AuxAtt:006:OK_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[6].xAttOK
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[6].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)FullBeamCnst:AuxAtt:007:OK_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[7].xAttOK
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[7].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)FullBeamCnst:AuxAtt:008:OK_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[8].xAttOK
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[8].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)FullBeamCnst:AuxAtt:009:OK_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[9].xAttOK
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[9].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)FullBeamCnst:AuxAtt:010:OK_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[10].xAttOK
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[10].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)FullBeamCnst:AuxAtt:011:OK_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[11].xAttOK
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[11].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)FullBeamCnst:AuxAtt:012:OK_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[12].xAttOK
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[12].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)FullBeamCnst:AuxAtt:013:OK_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[13].xAttOK
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[13].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)FullBeamCnst:AuxAtt:014:OK_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[14].xAttOK
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[14].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)FullBeamCnst:AuxAtt:015:OK_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[15].xAttOK
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[15].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)FullBeamCnst:AuxAtt:016:OK_RBV&quot;) {
+  # PMPS_GVL.cstFullBeam.astAttenuators[16].xAttOK
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[16].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(waveform, &quot;$(PREFIX)FullBeamCnst:ST_RBV&quot;) {
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt8ArrayIn&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.aStoppers?&quot;)
+  field(FTVL, &quot;CHAR&quot;)
+  field(NELM, &quot;16&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)FullBeamCnst:Valid_RBV&quot;) {
+  field(DESC, &quot;Full beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.xValid?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)FullBeamCnst:Cohort_RBV&quot;) {
+  field(DESC, &quot;Cohort inc on each arb cycle&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.nCohortInt?&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(ai, &quot;$(PREFIX)SafeBeamCnst:Attenuation_RBV&quot;) {
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.fAtt?&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;%&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:Rate_RBV&quot;) {
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.nRate?&quot;)
+  field(EGU, &quot;Hz&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(ai, &quot;$(PREFIX)SafeBeamCnst:PulseEnergy_RBV&quot;) {
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.fPP_mJ?&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;mJ&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:PhotonEnergyRanges_RBV&quot;) {
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.neVRange?&quot;)
+  field(EGU, &quot;eV&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:001:Att_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[1].nAtt
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[1].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:002:Att_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[2].nAtt
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[2].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:003:Att_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[3].nAtt
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[3].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:004:Att_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[4].nAtt
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[4].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:005:Att_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[5].nAtt
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[5].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:006:Att_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[6].nAtt
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[6].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:007:Att_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[7].nAtt
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[7].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:008:Att_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[8].nAtt
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[8].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:009:Att_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[9].nAtt
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[9].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:010:Att_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[10].nAtt
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[10].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:011:Att_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[11].nAtt
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[11].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:012:Att_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[12].nAtt
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[12].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:013:Att_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[13].nAtt
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[13].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:014:Att_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[14].nAtt
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[14].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:015:Att_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[15].nAtt
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[15].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:016:Att_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[16].nAtt
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[16].nAtt?&quot;)
+  field(EGU, &quot;%&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:001:OK_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[1].xAttOK
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[1].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:002:OK_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[2].xAttOK
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[2].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:003:OK_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[3].xAttOK
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[3].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:004:OK_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[4].xAttOK
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[4].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:005:OK_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[5].xAttOK
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[5].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:006:OK_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[6].xAttOK
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[6].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:007:OK_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[7].xAttOK
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[7].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:008:OK_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[8].xAttOK
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[8].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:009:OK_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[9].xAttOK
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[9].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:010:OK_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[10].xAttOK
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[10].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:011:OK_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[11].xAttOK
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[11].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:012:OK_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[12].xAttOK
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[12].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:013:OK_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[13].xAttOK
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[13].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:014:OK_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[14].xAttOK
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[14].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:015:OK_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[15].xAttOK
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[15].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)SafeBeamCnst:AuxAtt:016:OK_RBV&quot;) {
+  # PMPS_GVL.cstSafeBeam.astAttenuators[16].xAttOK
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[16].xAttOK?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(waveform, &quot;$(PREFIX)SafeBeamCnst:ST_RBV&quot;) {
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt8ArrayIn&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.aStoppers?&quot;)
+  field(FTVL, &quot;CHAR&quot;)
+  field(NELM, &quot;16&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(bi, &quot;$(PREFIX)SafeBeamCnst:Valid_RBV&quot;) {
+  field(DESC, &quot;Safe beam constant&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.xValid?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SafeBeamCnst:Cohort_RBV&quot;) {
+  field(DESC, &quot;Cohort inc on each arb cycle&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.nCohortInt?&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(waveform, &quot;$(PREFIX)eVRangeCnst_RBV&quot;) {
+  field(DESC, &quot;eV Range constants&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat32ArrayIn&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.g_areVBoundaries?&quot;)
+  field(FTVL, &quot;FLOAT&quot;)
+  field(EGU, &quot;keV&quot;)
+  field(NELM, &quot;16&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(waveform, &quot;$(PREFIX)eVRangeCnst&quot;) {
+  field(DESC, &quot;eV Range constants&quot;)
+  field(DTYP, &quot;asynFloat32ArrayOut&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/PMPS_GVL.g_areVBoundaries=&quot;)
+  field(FTVL, &quot;FLOAT&quot;)
+  field(EGU, &quot;keV&quot;)
+  field(NELM, &quot;16&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
 record(bi, &quot;SL1L0:POWER:GO_RBV&quot;) {
   field(DESC, &quot;PRG_SL1L0_POWER.bExecuteMotion&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
@@ -3631,6 +5781,50 @@ record(bo, &quot;SL2L0:POWER:GO&quot;) {
   info(archive, &quot;VAL&quot;)
 }
 
+record(bi, &quot;IM1L0:XTES:CLZ:LOCK_RBV&quot;) {
+  field(DESC, &quot;PRG_IM1L0_XTES.fbIM1L0.bZoomLock&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L0_XTES.fbIM1L0.bZoomLock?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(bo, &quot;IM1L0:XTES:CLZ:LOCK&quot;) {
+  field(DESC, &quot;PRG_IM1L0_XTES.fbIM1L0.bZoomLock&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.bZoomLock=&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(bi, &quot;IM1L0:XTES:CLF:LOCK_RBV&quot;) {
+  field(DESC, &quot;PRG_IM1L0_XTES.fbIM1L0.bFocusLock&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L0_XTES.fbIM1L0.bFocusLock?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(bo, &quot;IM1L0:XTES:CLF:LOCK&quot;) {
+  field(DESC, &quot;PRG_IM1L0_XTES.fbIM1L0.bFocusLock&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.bFocusLock=&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
 record(mbbi, &quot;IM1L0:XTES:MMS:STATE:SET_RBV&quot;) {
   field(DESC, &quot;PRG_IM1L0_XTES.fbIM1L0.fbStates.enumSet&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
@@ -3644,7 +5838,7 @@ record(mbbi, &quot;IM1L0:XTES:MMS:STATE:SET_RBV&quot;) {
   field(THVL, &quot;3&quot;)
   field(FRVL, &quot;4&quot;)
   field(ZRST, &quot;Unknown&quot;)
-  field(ONST, &quot;Out&quot;)
+  field(ONST, &quot;OUT&quot;)
   field(TWST, &quot;Yag&quot;)
   field(THST, &quot;Diamond&quot;)
   field(FRST, &quot;Reticle&quot;)
@@ -3660,7 +5854,7 @@ record(mbbo, &quot;IM1L0:XTES:MMS:STATE:SET&quot;) {
   field(THVL, &quot;3&quot;)
   field(FRVL, &quot;4&quot;)
   field(ZRST, &quot;Unknown&quot;)
-  field(ONST, &quot;Out&quot;)
+  field(ONST, &quot;OUT&quot;)
   field(TWST, &quot;Yag&quot;)
   field(THST, &quot;Diamond&quot;)
   field(FRST, &quot;Reticle&quot;)
@@ -3682,7 +5876,7 @@ record(mbbi, &quot;IM1L0:XTES:MMS:STATE:GET_RBV&quot;) {
   field(THVL, &quot;3&quot;)
   field(FRVL, &quot;4&quot;)
   field(ZRST, &quot;Unknown&quot;)
-  field(ONST, &quot;Out&quot;)
+  field(ONST, &quot;OUT&quot;)
   field(TWST, &quot;Yag&quot;)
   field(THST, &quot;Diamond&quot;)
   field(FRST, &quot;Reticle&quot;)
@@ -6616,8 +8810,8 @@ record(bi, &quot;IM1L0:XTES:CAM:PWR_RBV&quot;) {
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L0_XTES.fbIM1L0.fbOpal.bOpalPower?&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;OFF&quot;)
+  field(ONAM, &quot;ON&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
@@ -6625,31 +8819,101 @@ record(bo, &quot;IM1L0:XTES:CAM:PWR&quot;) {
   field(DESC, &quot;PRG_IM1L0_XTES.fbIM1L0.fbOpal.bOpalPower&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbOpal.bOpalPower=&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;OFF&quot;)
+  field(ONAM, &quot;ON&quot;)
   info(autosaveFields_pass0, &quot;VAL&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
-record(bi, &quot;IM1L0:XTES:CAM:CIL:PWR_RBV&quot;) {
-  field(DESC, &quot;PRG_IM1L0_XTES.fbIM1L0.fbOpal.bLedPower&quot;)
+record(bi, &quot;IM1L0:XTES:CIL:PWR_RBV&quot;) {
+  field(DESC, &quot;PRG_IM1L0_XTES.fbIM1L0.fbLED.bLEDPower&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L0_XTES.fbIM1L0.fbOpal.bLedPower?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L0_XTES.fbIM1L0.fbLED.bLEDPower?&quot;)
+  field(ZNAM, &quot;OFF&quot;)
+  field(ONAM, &quot;ON&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(bo, &quot;IM1L0:XTES:CIL:PWR&quot;) {
+  field(DESC, &quot;PRG_IM1L0_XTES.fbIM1L0.fbLED.bLEDPower&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbLED.bLEDPower=&quot;)
+  field(ZNAM, &quot;OFF&quot;)
+  field(ONAM, &quot;ON&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(bi, &quot;IM1L0:XTES:CIL:AUTO_RBV&quot;) {
+  field(DESC, &quot;PRG_IM1L0_XTES.fbIM1L0.fbLED.bLEDAuto&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L0_XTES.fbIM1L0.fbLED.bLEDAuto?&quot;)
   field(ZNAM, &quot;FALSE&quot;)
   field(ONAM, &quot;TRUE&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
-record(bo, &quot;IM1L0:XTES:CAM:CIL:PWR&quot;) {
-  field(DESC, &quot;PRG_IM1L0_XTES.fbIM1L0.fbOpal.bLedPower&quot;)
+record(bo, &quot;IM1L0:XTES:CIL:AUTO&quot;) {
+  field(DESC, &quot;PRG_IM1L0_XTES.fbIM1L0.fbLED.bLEDAuto&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbOpal.bLedPower=&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbLED.bLEDAuto=&quot;)
   field(ZNAM, &quot;FALSE&quot;)
   field(ONAM, &quot;TRUE&quot;)
   info(autosaveFields_pass0, &quot;VAL&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(ai, &quot;IM1L0:XTES:CIL:CLK:TIMEOUT_RBV&quot;) {
+  field(DESC, &quot;PRG_IM1L0_XTES.fbIM1L0.fbLED.fLEDTimeOut&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L0_XTES.fbIM1L0.fbLED.fLEDTimeOut?&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;min&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(ao, &quot;IM1L0:XTES:CIL:CLK:TIMEOUT&quot;) {
+  field(DESC, &quot;PRG_IM1L0_XTES.fbIM1L0.fbLED.fLEDTimeOut&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbLED.fLEDTimeOut=&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;min&quot;)
+  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(ai, &quot;IM1L0:XTES:CIL:CLK:REMAINING_RBV&quot;) {
+  # PRG_IM1L0_XTES.fbIM1L0.fbLED.fLEDRemaining
+  field(DESC, &quot;PRG_IM1L0_XTES.fbIM1...LED.fLEDRemaining&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L0_XTES.fbIM1L0.fbLED.fLEDRemaining?&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;min&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(ao, &quot;IM1L0:XTES:CIL:CLK:REMAINING&quot;) {
+  # PRG_IM1L0_XTES.fbIM1L0.fbLED.fLEDRemaining
+  field(DESC, &quot;PRG_IM1L0_XTES.fbIM1...LED.fLEDRemaining&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbLED.fLEDRemaining=&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;min&quot;)
+  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
@@ -6661,8 +8925,8 @@ record(bi, &quot;IM1L0:XTES:SFW:FLOW_RBV&quot;) {
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L0_XTES.fbIM1L0.fbFlowSwitch.bFlowOk?&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;LOW&quot;)
+  field(ONAM, &quot;OK&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
@@ -6671,8 +8935,8 @@ record(bo, &quot;IM1L0:XTES:SFW:FLOW&quot;) {
   field(DESC, &quot;PRG_IM1L0_XTES.fbIM1...lowSwitch.bFlowOk&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbFlowSwitch.bFlowOk=&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;LOW&quot;)
+  field(ONAM, &quot;OK&quot;)
   info(autosaveFields_pass0, &quot;VAL&quot;)
   info(archive, &quot;VAL&quot;)
 }
@@ -6690,7 +8954,7 @@ record(mbbi, &quot;IM1L1:PPM:MMS:STATE:SET_RBV&quot;) {
   field(THVL, &quot;3&quot;)
   field(FRVL, &quot;4&quot;)
   field(ZRST, &quot;Unknown&quot;)
-  field(ONST, &quot;Out&quot;)
+  field(ONST, &quot;OUT&quot;)
   field(TWST, &quot;PowerMeter&quot;)
   field(THST, &quot;PolishedYag&quot;)
   field(FRST, &quot;FrostedYag&quot;)
@@ -6706,7 +8970,7 @@ record(mbbo, &quot;IM1L1:PPM:MMS:STATE:SET&quot;) {
   field(THVL, &quot;3&quot;)
   field(FRVL, &quot;4&quot;)
   field(ZRST, &quot;Unknown&quot;)
-  field(ONST, &quot;Out&quot;)
+  field(ONST, &quot;OUT&quot;)
   field(TWST, &quot;PowerMeter&quot;)
   field(THST, &quot;PolishedYag&quot;)
   field(FRST, &quot;FrostedYag&quot;)
@@ -6728,7 +8992,7 @@ record(mbbi, &quot;IM1L1:PPM:MMS:STATE:GET_RBV&quot;) {
   field(THVL, &quot;3&quot;)
   field(FRVL, &quot;4&quot;)
   field(ZRST, &quot;Unknown&quot;)
-  field(ONST, &quot;Out&quot;)
+  field(ONST, &quot;OUT&quot;)
   field(TWST, &quot;PowerMeter&quot;)
   field(THST, &quot;PolishedYag&quot;)
   field(FRST, &quot;FrostedYag&quot;)
@@ -9351,6 +11615,7 @@ record(ai, &quot;IM1L1:PPM:SPM:VOLT_RBV&quot;) {
   field(DTYP, &quot;asynFloat64&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fVoltage?&quot;)
   field(PREC, &quot;3&quot;)
+  field(EGU, &quot;mV&quot;)
   info(autosaveFields_pass0, &quot;PREC&quot;)
   info(archive, &quot;VAL&quot;)
 }
@@ -9364,6 +11629,7 @@ record(waveform, &quot;IM1L1:PPM:SPM:VOLT_BUFFER_RBV&quot;) {
   field(DTYP, &quot;asynFloat64ArrayIn&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fVoltageBuffer?&quot;)
   field(FTVL, &quot;DOUBLE&quot;)
+  field(EGU, &quot;mV&quot;)
   field(NELM, &quot;1000&quot;)
   info(archive, &quot;VAL&quot;)
 }
@@ -9403,6 +11669,7 @@ record(ai, &quot;IM1L1:PPM:SPM:MJ_RBV&quot;) {
   field(DTYP, &quot;asynFloat64&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fCalibMJ?&quot;)
   field(PREC, &quot;3&quot;)
+  field(EGU, &quot;mJ&quot;)
   info(autosaveFields_pass0, &quot;PREC&quot;)
   info(archive, &quot;VAL&quot;)
 }
@@ -9416,6 +11683,7 @@ record(waveform, &quot;IM1L1:PPM:SPM:MJ_BUFFER_RBV&quot;) {
   field(DTYP, &quot;asynFloat64ArrayIn&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fCalibMJBuffer?&quot;)
   field(FTVL, &quot;DOUBLE&quot;)
+  field(EGU, &quot;mJ&quot;)
   field(NELM, &quot;1000&quot;)
   info(archive, &quot;VAL&quot;)
 }
@@ -9535,8 +11803,8 @@ record(bi, &quot;IM1L1:PPM:CAM:PWR_RBV&quot;) {
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM1L1_PPM.fbIM1L1.fbGige.bGigePower?&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;OFF&quot;)
+  field(ONAM, &quot;ON&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
@@ -9544,8 +11812,8 @@ record(bo, &quot;IM1L1:PPM:CAM:PWR&quot;) {
   field(DESC, &quot;PRG_IM1L1_PPM.fbIM1L1.fbGige.bGigePower&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L1_PPM.fbIM1L1.fbGige.bGigePower=&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;OFF&quot;)
+  field(ONAM, &quot;ON&quot;)
   info(autosaveFields_pass0, &quot;VAL&quot;)
   info(archive, &quot;VAL&quot;)
 }
@@ -9635,6 +11903,50 @@ record(bi, &quot;IM1L1:PPM:YAG:STC:ERR_RBV&quot;) {
   info(archive, &quot;VAL&quot;)
 }
 
+record(bi, &quot;IM2L0:XTES:CLZ:LOCK_RBV&quot;) {
+  field(DESC, &quot;PRG_IM2L0_XTES.fbIM2L0.bZoomLock&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM2L0_XTES.fbIM2L0.bZoomLock?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(bo, &quot;IM2L0:XTES:CLZ:LOCK&quot;) {
+  field(DESC, &quot;PRG_IM2L0_XTES.fbIM2L0.bZoomLock&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.bZoomLock=&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(bi, &quot;IM2L0:XTES:CLF:LOCK_RBV&quot;) {
+  field(DESC, &quot;PRG_IM2L0_XTES.fbIM2L0.bFocusLock&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM2L0_XTES.fbIM2L0.bFocusLock?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(bo, &quot;IM2L0:XTES:CLF:LOCK&quot;) {
+  field(DESC, &quot;PRG_IM2L0_XTES.fbIM2L0.bFocusLock&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.bFocusLock=&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
 record(mbbi, &quot;IM2L0:XTES:MMS:STATE:SET_RBV&quot;) {
   field(DESC, &quot;PRG_IM2L0_XTES.fbIM2L0.fbStates.enumSet&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
@@ -9648,7 +11960,7 @@ record(mbbi, &quot;IM2L0:XTES:MMS:STATE:SET_RBV&quot;) {
   field(THVL, &quot;3&quot;)
   field(FRVL, &quot;4&quot;)
   field(ZRST, &quot;Unknown&quot;)
-  field(ONST, &quot;Out&quot;)
+  field(ONST, &quot;OUT&quot;)
   field(TWST, &quot;Yag&quot;)
   field(THST, &quot;Diamond&quot;)
   field(FRST, &quot;Reticle&quot;)
@@ -9664,7 +11976,7 @@ record(mbbo, &quot;IM2L0:XTES:MMS:STATE:SET&quot;) {
   field(THVL, &quot;3&quot;)
   field(FRVL, &quot;4&quot;)
   field(ZRST, &quot;Unknown&quot;)
-  field(ONST, &quot;Out&quot;)
+  field(ONST, &quot;OUT&quot;)
   field(TWST, &quot;Yag&quot;)
   field(THST, &quot;Diamond&quot;)
   field(FRST, &quot;Reticle&quot;)
@@ -9686,7 +11998,7 @@ record(mbbi, &quot;IM2L0:XTES:MMS:STATE:GET_RBV&quot;) {
   field(THVL, &quot;3&quot;)
   field(FRVL, &quot;4&quot;)
   field(ZRST, &quot;Unknown&quot;)
-  field(ONST, &quot;Out&quot;)
+  field(ONST, &quot;OUT&quot;)
   field(TWST, &quot;Yag&quot;)
   field(THST, &quot;Diamond&quot;)
   field(FRST, &quot;Reticle&quot;)
@@ -12620,8 +14932,8 @@ record(bi, &quot;IM2L0:XTES:CAM:PWR_RBV&quot;) {
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM2L0_XTES.fbIM2L0.fbOpal.bOpalPower?&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;OFF&quot;)
+  field(ONAM, &quot;ON&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
@@ -12629,31 +14941,101 @@ record(bo, &quot;IM2L0:XTES:CAM:PWR&quot;) {
   field(DESC, &quot;PRG_IM2L0_XTES.fbIM2L0.fbOpal.bOpalPower&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbOpal.bOpalPower=&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;OFF&quot;)
+  field(ONAM, &quot;ON&quot;)
   info(autosaveFields_pass0, &quot;VAL&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
-record(bi, &quot;IM2L0:XTES:CAM:CIL:PWR_RBV&quot;) {
-  field(DESC, &quot;PRG_IM2L0_XTES.fbIM2L0.fbOpal.bLedPower&quot;)
+record(bi, &quot;IM2L0:XTES:CIL:PWR_RBV&quot;) {
+  field(DESC, &quot;PRG_IM2L0_XTES.fbIM2L0.fbLED.bLEDPower&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM2L0_XTES.fbIM2L0.fbOpal.bLedPower?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM2L0_XTES.fbIM2L0.fbLED.bLEDPower?&quot;)
+  field(ZNAM, &quot;OFF&quot;)
+  field(ONAM, &quot;ON&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(bo, &quot;IM2L0:XTES:CIL:PWR&quot;) {
+  field(DESC, &quot;PRG_IM2L0_XTES.fbIM2L0.fbLED.bLEDPower&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbLED.bLEDPower=&quot;)
+  field(ZNAM, &quot;OFF&quot;)
+  field(ONAM, &quot;ON&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(bi, &quot;IM2L0:XTES:CIL:AUTO_RBV&quot;) {
+  field(DESC, &quot;PRG_IM2L0_XTES.fbIM2L0.fbLED.bLEDAuto&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM2L0_XTES.fbIM2L0.fbLED.bLEDAuto?&quot;)
   field(ZNAM, &quot;FALSE&quot;)
   field(ONAM, &quot;TRUE&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
-record(bo, &quot;IM2L0:XTES:CAM:CIL:PWR&quot;) {
-  field(DESC, &quot;PRG_IM2L0_XTES.fbIM2L0.fbOpal.bLedPower&quot;)
+record(bo, &quot;IM2L0:XTES:CIL:AUTO&quot;) {
+  field(DESC, &quot;PRG_IM2L0_XTES.fbIM2L0.fbLED.bLEDAuto&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbOpal.bLedPower=&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbLED.bLEDAuto=&quot;)
   field(ZNAM, &quot;FALSE&quot;)
   field(ONAM, &quot;TRUE&quot;)
   info(autosaveFields_pass0, &quot;VAL&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(ai, &quot;IM2L0:XTES:CIL:CLK:TIMEOUT_RBV&quot;) {
+  field(DESC, &quot;PRG_IM2L0_XTES.fbIM2L0.fbLED.fLEDTimeOut&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM2L0_XTES.fbIM2L0.fbLED.fLEDTimeOut?&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;min&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(ao, &quot;IM2L0:XTES:CIL:CLK:TIMEOUT&quot;) {
+  field(DESC, &quot;PRG_IM2L0_XTES.fbIM2L0.fbLED.fLEDTimeOut&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbLED.fLEDTimeOut=&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;min&quot;)
+  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(ai, &quot;IM2L0:XTES:CIL:CLK:REMAINING_RBV&quot;) {
+  # PRG_IM2L0_XTES.fbIM2L0.fbLED.fLEDRemaining
+  field(DESC, &quot;PRG_IM2L0_XTES.fbIM2...LED.fLEDRemaining&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM2L0_XTES.fbIM2L0.fbLED.fLEDRemaining?&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;min&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(ao, &quot;IM2L0:XTES:CIL:CLK:REMAINING&quot;) {
+  # PRG_IM2L0_XTES.fbIM2L0.fbLED.fLEDRemaining
+  field(DESC, &quot;PRG_IM2L0_XTES.fbIM2...LED.fLEDRemaining&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbLED.fLEDRemaining=&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;min&quot;)
+  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
@@ -12665,8 +15047,8 @@ record(bi, &quot;IM2L0:XTES:SFW:FLOW_RBV&quot;) {
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM2L0_XTES.fbIM2L0.fbFlowSwitch.bFlowOk?&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;LOW&quot;)
+  field(ONAM, &quot;OK&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
@@ -12675,8 +15057,8 @@ record(bo, &quot;IM2L0:XTES:SFW:FLOW&quot;) {
   field(DESC, &quot;PRG_IM2L0_XTES.fbIM2...lowSwitch.bFlowOk&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM2L0_XTES.fbIM2L0.fbFlowSwitch.bFlowOk=&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;LOW&quot;)
+  field(ONAM, &quot;OK&quot;)
   info(autosaveFields_pass0, &quot;VAL&quot;)
   info(archive, &quot;VAL&quot;)
 }
@@ -12694,7 +15076,7 @@ record(mbbi, &quot;IM3L0:PPM:MMS:STATE:SET_RBV&quot;) {
   field(THVL, &quot;3&quot;)
   field(FRVL, &quot;4&quot;)
   field(ZRST, &quot;Unknown&quot;)
-  field(ONST, &quot;Out&quot;)
+  field(ONST, &quot;OUT&quot;)
   field(TWST, &quot;PowerMeter&quot;)
   field(THST, &quot;PolishedYag&quot;)
   field(FRST, &quot;FrostedYag&quot;)
@@ -12710,7 +15092,7 @@ record(mbbo, &quot;IM3L0:PPM:MMS:STATE:SET&quot;) {
   field(THVL, &quot;3&quot;)
   field(FRVL, &quot;4&quot;)
   field(ZRST, &quot;Unknown&quot;)
-  field(ONST, &quot;Out&quot;)
+  field(ONST, &quot;OUT&quot;)
   field(TWST, &quot;PowerMeter&quot;)
   field(THST, &quot;PolishedYag&quot;)
   field(FRST, &quot;FrostedYag&quot;)
@@ -12732,7 +15114,7 @@ record(mbbi, &quot;IM3L0:PPM:MMS:STATE:GET_RBV&quot;) {
   field(THVL, &quot;3&quot;)
   field(FRVL, &quot;4&quot;)
   field(ZRST, &quot;Unknown&quot;)
-  field(ONST, &quot;Out&quot;)
+  field(ONST, &quot;OUT&quot;)
   field(TWST, &quot;PowerMeter&quot;)
   field(THST, &quot;PolishedYag&quot;)
   field(FRST, &quot;FrostedYag&quot;)
@@ -15355,6 +17737,7 @@ record(ai, &quot;IM3L0:PPM:SPM:VOLT_RBV&quot;) {
   field(DTYP, &quot;asynFloat64&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fVoltage?&quot;)
   field(PREC, &quot;3&quot;)
+  field(EGU, &quot;mV&quot;)
   info(autosaveFields_pass0, &quot;PREC&quot;)
   info(archive, &quot;VAL&quot;)
 }
@@ -15368,6 +17751,7 @@ record(waveform, &quot;IM3L0:PPM:SPM:VOLT_BUFFER_RBV&quot;) {
   field(DTYP, &quot;asynFloat64ArrayIn&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fVoltageBuffer?&quot;)
   field(FTVL, &quot;DOUBLE&quot;)
+  field(EGU, &quot;mV&quot;)
   field(NELM, &quot;1000&quot;)
   info(archive, &quot;VAL&quot;)
 }
@@ -15407,6 +17791,7 @@ record(ai, &quot;IM3L0:PPM:SPM:MJ_RBV&quot;) {
   field(DTYP, &quot;asynFloat64&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fCalibMJ?&quot;)
   field(PREC, &quot;3&quot;)
+  field(EGU, &quot;mJ&quot;)
   info(autosaveFields_pass0, &quot;PREC&quot;)
   info(archive, &quot;VAL&quot;)
 }
@@ -15420,6 +17805,7 @@ record(waveform, &quot;IM3L0:PPM:SPM:MJ_BUFFER_RBV&quot;) {
   field(DTYP, &quot;asynFloat64ArrayIn&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fCalibMJBuffer?&quot;)
   field(FTVL, &quot;DOUBLE&quot;)
+  field(EGU, &quot;mJ&quot;)
   field(NELM, &quot;1000&quot;)
   info(archive, &quot;VAL&quot;)
 }
@@ -15539,8 +17925,8 @@ record(bi, &quot;IM3L0:PPM:CAM:PWR_RBV&quot;) {
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM3L0_PPM.fbIM3L0.fbGige.bGigePower?&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;OFF&quot;)
+  field(ONAM, &quot;ON&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
@@ -15548,8 +17934,8 @@ record(bo, &quot;IM3L0:PPM:CAM:PWR&quot;) {
   field(DESC, &quot;PRG_IM3L0_PPM.fbIM3L0.fbGige.bGigePower&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM3L0_PPM.fbIM3L0.fbGige.bGigePower=&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;OFF&quot;)
+  field(ONAM, &quot;ON&quot;)
   info(autosaveFields_pass0, &quot;VAL&quot;)
   info(archive, &quot;VAL&quot;)
 }
@@ -15639,6 +18025,50 @@ record(bi, &quot;IM3L0:PPM:YAG:STC:ERR_RBV&quot;) {
   info(archive, &quot;VAL&quot;)
 }
 
+record(bi, &quot;IM4L0:XTES:CLZ:LOCK_RBV&quot;) {
+  field(DESC, &quot;PRG_IM4L0_XTES.fbIM4L0.bZoomLock&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM4L0_XTES.fbIM4L0.bZoomLock?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(bo, &quot;IM4L0:XTES:CLZ:LOCK&quot;) {
+  field(DESC, &quot;PRG_IM4L0_XTES.fbIM4L0.bZoomLock&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.bZoomLock=&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(bi, &quot;IM4L0:XTES:CLF:LOCK_RBV&quot;) {
+  field(DESC, &quot;PRG_IM4L0_XTES.fbIM4L0.bFocusLock&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM4L0_XTES.fbIM4L0.bFocusLock?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(bo, &quot;IM4L0:XTES:CLF:LOCK&quot;) {
+  field(DESC, &quot;PRG_IM4L0_XTES.fbIM4L0.bFocusLock&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.bFocusLock=&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
 record(mbbi, &quot;IM4L0:XTES:MMS:STATE:SET_RBV&quot;) {
   field(DESC, &quot;PRG_IM4L0_XTES.fbIM4L0.fbStates.enumSet&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
@@ -15652,7 +18082,7 @@ record(mbbi, &quot;IM4L0:XTES:MMS:STATE:SET_RBV&quot;) {
   field(THVL, &quot;3&quot;)
   field(FRVL, &quot;4&quot;)
   field(ZRST, &quot;Unknown&quot;)
-  field(ONST, &quot;Out&quot;)
+  field(ONST, &quot;OUT&quot;)
   field(TWST, &quot;Yag&quot;)
   field(THST, &quot;Diamond&quot;)
   field(FRST, &quot;Reticle&quot;)
@@ -15668,7 +18098,7 @@ record(mbbo, &quot;IM4L0:XTES:MMS:STATE:SET&quot;) {
   field(THVL, &quot;3&quot;)
   field(FRVL, &quot;4&quot;)
   field(ZRST, &quot;Unknown&quot;)
-  field(ONST, &quot;Out&quot;)
+  field(ONST, &quot;OUT&quot;)
   field(TWST, &quot;Yag&quot;)
   field(THST, &quot;Diamond&quot;)
   field(FRST, &quot;Reticle&quot;)
@@ -15690,7 +18120,7 @@ record(mbbi, &quot;IM4L0:XTES:MMS:STATE:GET_RBV&quot;) {
   field(THVL, &quot;3&quot;)
   field(FRVL, &quot;4&quot;)
   field(ZRST, &quot;Unknown&quot;)
-  field(ONST, &quot;Out&quot;)
+  field(ONST, &quot;OUT&quot;)
   field(TWST, &quot;Yag&quot;)
   field(THST, &quot;Diamond&quot;)
   field(FRST, &quot;Reticle&quot;)
@@ -18624,8 +21054,8 @@ record(bi, &quot;IM4L0:XTES:CAM:PWR_RBV&quot;) {
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM4L0_XTES.fbIM4L0.fbOpal.bOpalPower?&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;OFF&quot;)
+  field(ONAM, &quot;ON&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
@@ -18633,31 +21063,101 @@ record(bo, &quot;IM4L0:XTES:CAM:PWR&quot;) {
   field(DESC, &quot;PRG_IM4L0_XTES.fbIM4L0.fbOpal.bOpalPower&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbOpal.bOpalPower=&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;OFF&quot;)
+  field(ONAM, &quot;ON&quot;)
   info(autosaveFields_pass0, &quot;VAL&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
-record(bi, &quot;IM4L0:XTES:CAM:CIL:PWR_RBV&quot;) {
-  field(DESC, &quot;PRG_IM4L0_XTES.fbIM4L0.fbOpal.bLedPower&quot;)
+record(bi, &quot;IM4L0:XTES:CIL:PWR_RBV&quot;) {
+  field(DESC, &quot;PRG_IM4L0_XTES.fbIM4L0.fbLED.bLEDPower&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM4L0_XTES.fbIM4L0.fbOpal.bLedPower?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM4L0_XTES.fbIM4L0.fbLED.bLEDPower?&quot;)
+  field(ZNAM, &quot;OFF&quot;)
+  field(ONAM, &quot;ON&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(bo, &quot;IM4L0:XTES:CIL:PWR&quot;) {
+  field(DESC, &quot;PRG_IM4L0_XTES.fbIM4L0.fbLED.bLEDPower&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbLED.bLEDPower=&quot;)
+  field(ZNAM, &quot;OFF&quot;)
+  field(ONAM, &quot;ON&quot;)
+  info(autosaveFields_pass0, &quot;VAL&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(bi, &quot;IM4L0:XTES:CIL:AUTO_RBV&quot;) {
+  field(DESC, &quot;PRG_IM4L0_XTES.fbIM4L0.fbLED.bLEDAuto&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM4L0_XTES.fbIM4L0.fbLED.bLEDAuto?&quot;)
   field(ZNAM, &quot;FALSE&quot;)
   field(ONAM, &quot;TRUE&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
-record(bo, &quot;IM4L0:XTES:CAM:CIL:PWR&quot;) {
-  field(DESC, &quot;PRG_IM4L0_XTES.fbIM4L0.fbOpal.bLedPower&quot;)
+record(bo, &quot;IM4L0:XTES:CIL:AUTO&quot;) {
+  field(DESC, &quot;PRG_IM4L0_XTES.fbIM4L0.fbLED.bLEDAuto&quot;)
   field(DTYP, &quot;asynInt32&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbOpal.bLedPower=&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbLED.bLEDAuto=&quot;)
   field(ZNAM, &quot;FALSE&quot;)
   field(ONAM, &quot;TRUE&quot;)
   info(autosaveFields_pass0, &quot;VAL&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(ai, &quot;IM4L0:XTES:CIL:CLK:TIMEOUT_RBV&quot;) {
+  field(DESC, &quot;PRG_IM4L0_XTES.fbIM4L0.fbLED.fLEDTimeOut&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM4L0_XTES.fbIM4L0.fbLED.fLEDTimeOut?&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;min&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(ao, &quot;IM4L0:XTES:CIL:CLK:TIMEOUT&quot;) {
+  field(DESC, &quot;PRG_IM4L0_XTES.fbIM4L0.fbLED.fLEDTimeOut&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbLED.fLEDTimeOut=&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;min&quot;)
+  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(ai, &quot;IM4L0:XTES:CIL:CLK:REMAINING_RBV&quot;) {
+  # PRG_IM4L0_XTES.fbIM4L0.fbLED.fLEDRemaining
+  field(DESC, &quot;PRG_IM4L0_XTES.fbIM4...LED.fLEDRemaining&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM4L0_XTES.fbIM4L0.fbLED.fLEDRemaining?&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;min&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(ao, &quot;IM4L0:XTES:CIL:CLK:REMAINING&quot;) {
+  # PRG_IM4L0_XTES.fbIM4L0.fbLED.fLEDRemaining
+  field(DESC, &quot;PRG_IM4L0_XTES.fbIM4...LED.fLEDRemaining&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbLED.fLEDRemaining=&quot;)
+  field(PREC, &quot;3&quot;)
+  field(EGU, &quot;min&quot;)
+  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
@@ -18669,8 +21169,8 @@ record(bi, &quot;IM4L0:XTES:SFW:FLOW_RBV&quot;) {
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_IM4L0_XTES.fbIM4L0.fbFlowSwitch.bFlowOk?&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;LOW&quot;)
+  field(ONAM, &quot;OK&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
@@ -18679,8 +21179,8 @@ record(bo, &quot;IM4L0:XTES:SFW:FLOW&quot;) {
   field(DESC, &quot;PRG_IM4L0_XTES.fbIM4...lowSwitch.bFlowOk&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_IM4L0_XTES.fbIM4L0.fbFlowSwitch.bFlowOk=&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;LOW&quot;)
+  field(ONAM, &quot;OK&quot;)
   info(autosaveFields_pass0, &quot;VAL&quot;)
   info(archive, &quot;VAL&quot;)
 }
@@ -19994,8 +22494,8 @@ record(bi, &quot;SL1L0:POWER:FSW:FLOW_RBV&quot;) {
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.fbFlowSwitch.bFlowOk?&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;LOW&quot;)
+  field(ONAM, &quot;OK&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
@@ -20004,8 +22504,8 @@ record(bo, &quot;SL1L0:POWER:FSW:FLOW&quot;) {
   field(DESC, &quot;PRG_SL1L0_POWER.fbSL...lowSwitch.bFlowOk&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.fbFlowSwitch.bFlowOk=&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;LOW&quot;)
+  field(ONAM, &quot;OK&quot;)
   info(autosaveFields_pass0, &quot;VAL&quot;)
   info(archive, &quot;VAL&quot;)
 }
@@ -21635,8 +24135,8 @@ record(bi, &quot;SL2L0:POWER:FSW:FLOW_RBV&quot;) {
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.fbFlowSwitch.bFlowOk?&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;LOW&quot;)
+  field(ONAM, &quot;OK&quot;)
   info(archive, &quot;VAL&quot;)
 }
 
@@ -21645,8 +24145,8 @@ record(bo, &quot;SL2L0:POWER:FSW:FLOW&quot;) {
   field(DESC, &quot;PRG_SL2L0_POWER.fbSL...lowSwitch.bFlowOk&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.fbFlowSwitch.bFlowOk=&quot;)
-  field(ZNAM, &quot;FALSE&quot;)
-  field(ONAM, &quot;TRUE&quot;)
+  field(ZNAM, &quot;LOW&quot;)
+  field(ONAM, &quot;OK&quot;)
   info(autosaveFields_pass0, &quot;VAL&quot;)
   info(archive, &quot;VAL&quot;)
 }
@@ -45219,6 +47719,26 @@ record(bo, &quot;RTDSL0:MPA:04:MOT_DONE&quot;) {
   field(ONAM, &quot;TRUE&quot;)
   info(autosaveFields_pass0, &quot;VAL&quot;)
   info(archive, &quot;VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)SuccessfulPreemptions_RBV&quot;) {
+  field(DESC, &quot;PMPS_GVL.SuccessfulPreemption&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.SuccessfulPreemption?&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)AccumulatedFastFaults_RBV&quot;) {
+  field(DESC, &quot;PMPS_GVL.AccumulatedFF&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.AccumulatedFF?&quot;)
+  info(archive, &quot;VAL&quot;)
 }```
 </pre></div>
 </div>
@@ -45284,7 +47804,7 @@ record(bo, &quot;RTDSL0:MPA:04:MOT_DONE&quot;) {
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2019, SLAC National Accelerator Laboratory.
+      &copy;2020, SLAC National Accelerator Laboratory.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.1</a>
