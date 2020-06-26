@@ -56,6 +56,12 @@ VAR // linking to rtd in the following order Bottom - South - TOP - NORTH
     fbMotion4: FB_SimMotor;*)
     bMoveOk:BOOL :=TRUE;
 
+    fbFFOTop:    FB_BasicMotionStageFFO := (sName := 'SL2L0:POWER:MMS:TOP');
+    fbFFOBottom: FB_BasicMotionStageFFO := (sName := 'SL2L0:POWER:MMS:BOTTOM',
+                                            bForwardIsOut := FALSE);
+    fbFFONorth:  FB_BasicMotionStageFFO := (sName := 'SL2L0:POWER:MMS:NORTH');
+    fbFFOSouth:  FB_BasicMotionStageFFO := (sName := 'SL2L0:POWER:MMS:SOUTH',
+                                            bForwardIsOut := FALSE);
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -78,7 +84,16 @@ fbSL2L0(stTopBlade:=  Main.M47,
         stBottomBlade:= Main.M45,
         stNorthBlade:=  Main.M48,
         stSouthBlade:=  Main.M46,
-        bExecuteMotion:=bExecuteMotion);]]></ST>
+        bExecuteMotion:=bExecuteMotion);
+
+fbFFOTop(stMotionStage := Main.M47,
+         fbFFHWO := GVL.fbFastFaultOutput1);
+fbFFOBottom(stMotionStage := Main.M45,
+            fbFFHWO := GVL.fbFastFaultOutput1);
+fbFFONorth(stMotionStage := Main.M48,
+           fbFFHWO := GVL.fbFastFaultOutput1);
+fbFFOSouth(stMotionStage := Main.M46,
+           fbFFHWO := GVL.fbFastFaultOutput1);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

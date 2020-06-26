@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="FB_BasicAxisFFO" Id="{43d7d8ae-9dd2-073d-2b53-53a6782f7ace}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_BasicAxisFFO
+(*
+    Placeholder FFO logic for no beam allowed, pre-comissioning
+    
+    Fast fault is applied if the axis is moving.
+*)
+VAR_IN_OUT
+    Axis: AXIS_REF;
+    fbFFHWO: FB_HardwareFFOutput;
+END_VAR
+VAR_INPUT
+    sName: STRING;
+END_VAR
+VAR_OUTPUT
+    bIsNotMoving: BOOL;
+END_VAR
+VAR
+    fbFF: FB_FastFault := (i_DevName := sName,
+                           i_Desc := 'Proto-MPS fault that occurs when the axis moves.',
+                           i_TypeCode := 16#2100,
+                           i_xAutoReset := TRUE);
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[bIsNotMoving := NOT Axis.Status.Moving;
+fbFF(i_xOK := bIsNotMoving,
+     io_fbFFHWO := fbFFHWO);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

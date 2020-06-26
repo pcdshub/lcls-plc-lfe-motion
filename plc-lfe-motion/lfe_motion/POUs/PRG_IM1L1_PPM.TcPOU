@@ -19,6 +19,8 @@ VAR
                               .fbYagThermoCouple.bOverrange := TIIB[IM1L1-EL3314]^TC Inputs Channel 2^Status^Overrange;
                               .fbYagThermoCouple.iRaw := TIIB[IM1L1-EL3314]^TC Inputs Channel 2^Value'}
     fbIM1L1: FB_PPM;
+    
+    fbFFO: FB_BasicMotionStageFFO := (sName := 'IM1L1:PPM:MMS');
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -27,7 +29,10 @@ END_VAR
     fPolished := -71.69,
     fFrosted := -97.70, // Actually a second polished yag
     fPower := -47.59,
-    fOut := -8.59);]]></ST>
+    fOut := -8.59);
+
+fbFFO(stMotionStage := Main.M23,
+      fbFFHWO := GVL.fbFastFaultOutput2);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
