@@ -161,7 +161,7 @@ FOR iIndex := 0 TO 18 BY 1 DO
     fbAT2L0_axes[iIndex]^.bHardwareEnable := TRUE;
     fbAT2L0_axes[iIndex]^.bPowerSelf := TRUE;
     fbAT2L0_ffo[iIndex](stMotionStage := fbAT2L0_axes[iIndex]^,
-                        fbFFHWO := GVL.fbFastFaultOutput1);
+                        fbFFHWO := GVL.fbFastFaultOutput2);
 END_FOR
 iIndex := 0;
 
