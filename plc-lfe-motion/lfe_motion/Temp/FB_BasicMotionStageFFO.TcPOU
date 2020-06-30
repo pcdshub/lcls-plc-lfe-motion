@@ -4,7 +4,7 @@
     <Declaration><![CDATA[FUNCTION_BLOCK FB_BasicMotionStageFFO
 (*
     Placeholder FFO logic for no beam allowed, pre-comissioning
-    
+
     Fast fault is applied if the motor is moving or is not at the out switch.
 *)
 VAR_IN_OUT
@@ -30,7 +30,7 @@ END_VAR]]></Declaration>
                fbFFHWO := fbFFHWO,
                sName := sName,
                bIsNotMoving => bIsNotMoving);
-               
+
 IF bForwardIsOut THEN
     bIsOut := NOT stMotionStage.bLimitForwardEnable;
 ELSE
