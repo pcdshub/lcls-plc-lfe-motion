@@ -10,8 +10,7 @@ VAR
     fbMotion5: FB_MotionStage;
     fbMotion6: FB_MotionStage;
     
-    fbFFO2: FB_BasicMotionStageFFO := (sName := 'SP1L0:KMONO:MMS:02',
-                                       bForwardIsOut := FALSE);
+    fbFFO2: FB_BasicMotionStageAltFFO := (sName := 'SP1L0:KMONO:MMS:02');
     fbFFO4: FB_BasicMotionStageFFO := (sName := 'SP1L0:KMONO:MMS:04');
     fbFFO6: FB_BasicMotionStageFFO := (sName := 'SP1L0:KMONO:MMS:06');
 END_VAR
@@ -41,7 +40,8 @@ Main.M50.bHardwareEnable      := TRUE;
 Main.M50.bPowerSelf           := TRUE;
 fbMotion2(stMotionStage:=Main.M50);
 fbFFO2(stMotionStage := Main.M50,
-       fbFFHWO := GVL.fbFastFaultOutput1);
+       fbFFHWO := GVL.fbFastFaultOutput1,
+       bFFOk := Main.M50.stAxisStatus.fActPosition < 0.1);
 
 // Motor 3 RETICLE HORIZ X (SP1L0-KMONO-MMS-03)
 //Main.M51.bLimitForwardEnable  := bM3CCWLimit;    //(+X)

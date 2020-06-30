@@ -18,14 +18,14 @@ VAR_OUTPUT
     bIsNotMoving: BOOL;
 END_VAR
 VAR
-    fbFF: FB_FastFault := (i_DevName := sName,
-                           i_Desc := 'Proto-MPS fault that occurs when the axis moves.',
+    fbFF: FB_FastFault := (i_Desc := 'Device is moving',
                            i_TypeCode := 16#2100,
                            i_xAutoReset := TRUE);
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[bIsNotMoving := NOT Axis.Status.Moving;
-fbFF(i_xOK := bIsNotMoving,
+fbFF(i_DevName := sName,
+     i_xOK := bIsNotMoving,
      io_fbFFHWO := fbFFHWO);]]></ST>
     </Implementation>
   </POU>

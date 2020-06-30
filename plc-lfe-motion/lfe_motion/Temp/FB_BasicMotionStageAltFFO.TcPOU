@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
-  <POU Name="FB_BasicMotionStageFFO" Id="{8193f7c7-f3d4-0859-34a7-297c8245a443}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_BasicMotionStageFFO
+  <POU Name="FB_BasicMotionStageAltFFO" Id="{8f942915-0a51-0487-3226-30df48d4d2b0}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_BasicMotionStageAltFFO
 (*
-    Placeholder FFO logic for no beam allowed, pre-comissioning
+    Alternative to FB_BasicMotionStageFFO for an arbitrary out condition
     
-    Fast fault is applied if the motor is moving or is not at the out switch.
+    Sometimes the out limits is not what we want to use for proto-mps
 *)
 VAR_IN_OUT
     stMotionStage: DUT_MotionStage;
@@ -13,7 +13,7 @@ VAR_IN_OUT
 END_VAR
 VAR_INPUT
     sName: STRING;
-    bForwardIsOut: BOOL := TRUE;
+    bFFOk: BOOL;
 END_VAR
 VAR_OUTPUT
     bIsOut: BOOL;
@@ -30,15 +30,9 @@ END_VAR]]></Declaration>
                fbFFHWO := fbFFHWO,
                sName := sName,
                bIsNotMoving => bIsNotMoving);
-               
-IF bForwardIsOut THEN
-    bIsOut := NOT stMotionStage.bLimitForwardEnable;
-ELSE
-    bIsOut := NOT stMotionStage.bLimitBackwardEnable;
-END_IF
 
 fbFF(i_DevName := sName,
-     i_xOK := bIsOut,
+     i_xOK := bFFOk,
      io_fbFFHWO := fbFFHWO);]]></ST>
     </Implementation>
   </POU>

@@ -4,16 +4,16 @@
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
     {attribute 'pytmc' :=' pv: RTDSL0:MPA:01 '}
-    RTDSL0_MPA_01: FB_MPA;
+    RTDSL0_MPA_01: FB_MPA := (sName := 'RTDSL0:MPA:01');
 
     {attribute 'pytmc' :=' pv: RTDSL0:MPA:02 '}
-    RTDSL0_MPA_02: FB_MPA;
+    RTDSL0_MPA_02: FB_MPA := (sName := 'RTDSL0:MPA:02');
 
     {attribute 'pytmc' :=' pv: RTDSL0:MPA:03 '}
-    RTDSL0_MPA_03: FB_MPA;
+    RTDSL0_MPA_03: FB_MPA := (sName := 'RTDSL0:MPA:03');
 
     {attribute 'pytmc' :=' pv: RTDSL0:MPA:04 '}
-    RTDSL0_MPA_04: FB_MPA;
+    RTDSL0_MPA_04: FB_MPA := (sName := 'RTDSL0:MPA:04');
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
