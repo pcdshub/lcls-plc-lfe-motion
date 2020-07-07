@@ -25,8 +25,8 @@ RTDSL0_MPA_01(
     q_stAct=> ,
     xMPS_OK=> ,
     xDone=> ,
-    i_xReset := PMPS.xFastFaultReset,
-    io_fbFFHWO := PMPS.fbFastFaultOutput1,
+    i_xReset := GVL.xFastFaultReset,
+    io_fbFFHWO := GVL.fbFastFaultOutput1,
 );
 
 RTDSL0_MPA_02(
@@ -37,8 +37,8 @@ RTDSL0_MPA_02(
     q_stAct=> ,
     xMPS_OK=> ,
     xDone=> ,
-    i_xReset := PMPS.xFastFaultReset,
-    io_fbFFHWO := PMPS.fbFastFaultOutput1,
+    i_xReset := GVL.xFastFaultReset,
+    io_fbFFHWO := GVL.fbFastFaultOutput1,
 );
 
 RTDSL0_MPA_03(
@@ -49,10 +49,11 @@ RTDSL0_MPA_03(
     q_stAct=> ,
     xMPS_OK=> ,
     xDone=> ,
-    i_xReset := PMPS.xFastFaultReset,
-    io_fbFFHWO := PMPS.fbFastFaultOutput1,
+    i_xReset := GVL.xFastFaultReset,
+    io_fbFFHWO := GVL.fbFastFaultOutput1,
 );
 
+(*
 RTDSL0_MPA_04(
     ibInsertOK:= TRUE,
     ibRetractOK:= TRUE ,
@@ -61,9 +62,10 @@ RTDSL0_MPA_04(
     q_stAct=> ,
     xMPS_OK=> ,
     xDone=> ,
-    i_xReset := PMPS.xFastFaultReset,
-    io_fbFFHWO := PMPS.fbFastFaultOutput1,
+    i_xReset := GVL.xFastFaultReset,
+    io_fbFFHWO := GVL.fbFastFaultOutput1,
 );
+*)
 ]]></ST>
     </Implementation>
   </POU>

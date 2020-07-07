@@ -13,6 +13,7 @@ VAR_INPUT
     pv: FF_Reset
     '}
     i_xReset: BOOL;
+    sName: STRING;
 END_VAR
 VAR_OUTPUT
     {attribute 'pytmc' := '
@@ -32,13 +33,11 @@ VAR_IN_OUT
     io_fbFFHWO    :    FB_HardwareFFOutput;
 END_VAR
 VAR
-(*    // PMPS
+    // PMPS
     fbFF    :    FB_FastFault :=(
-        i_DevName := 'MPA',
-        i_Desc := 'Fault occurs when the device is moving',
+        i_xAutoReset := TRUE,
+        i_Desc := 'Device is moving',
         i_TypeCode := 16#1010);
-
-        *)
 
     (*Init*)
     xFirstPass    :    BOOL;
@@ -55,6 +54,9 @@ VAR
     q_xInsert_DO    AT%Q*: BOOL;
     q_xRetract_DO    AT%Q*: BOOL;
 
+    (* Reset Triggers *)
+    rtInsert: R_TRIG;
+    rtRemove: R_TRIG;
 END_VAR
 
 
@@ -92,10 +94,22 @@ xDone := (q_stAct.bRetract_SW AND q_stAct.eState=RETRACTED) OR (q_stAct.eState=I
 
 (*MPS FAULT*)
 (**)
+xMPS_OK := (q_stAct.bRetract_SW AND i_xRetractedLS) XOR (i_xInsertedLS AND q_stAct.bInsert_SW);
+//xMPS_OK := i_xRetractedLS XOR i_xInsertedLS;
 //xMPS_OK := (q_stAct.eState=RETRACTED) OR (q_stAct.eState=INSERTED);
-xMPS_OK := (q_stAct.eState=RETRACTED) ;
+//xMPS_OK := (q_stAct.eState=RETRACTED) ;
 
 (*PMPS PERMISSION*)
+
+(* Reset the other command bit when one goes high *)
+rtInsert(CLK:=q_stAct.bInsert_SW);
+IF rtInsert.Q THEN
+    q_stAct.bRetract_SW := FALSE;
+END_IF
+rtRemove(CLK:=q_stAct.bRetract_SW);
+IF rtRemove.Q THEN
+    q_stAct.bInsert_SW := FALSE;
+END_IF
 
 (* Can't have bRetract_SW and  bInsert_SW both be true*)
 If (q_stAct.bRetract_SW) and (q_stAct.bInsert_SW) THEN
@@ -103,9 +117,17 @@ If (q_stAct.bRetract_SW) and (q_stAct.bInsert_SW) THEN
     q_stAct.bInsert_SW := FALSE;
 END_IF
 
+(* Make the state consistent if we can *)
+IF NOT (q_stAct.bRetract_SW OR q_stAct.bInsert_SW) THEN
+    IF q_stAct.eState = RETRACTED THEN
+        q_stAct.bRetract_SW := TRUE;
+    ELSIF q_stAct.eState = INSERTED THEN
+        q_stAct.bInsert_SW := TRUE;
+    END_IF
+END_IF
+
 q_stAct.bRetractOK := ibRetractOK;
 q_stAct.bInsertOK := ibInsertOK;
-
 
 (*Actuate the device*)
 q_stAct.q_bRetract := q_stAct.bRetractOK AND q_stAct.bRetract_SW;
@@ -133,13 +155,11 @@ ELSIF NOT q_stAct.i_bOutLS AND tRetracttimeout.Q THEN
     q_stAct.bErrorPresent := TRUE;
 END_IF
 
-(*
 (*FAST FAULT*)
-fbFF(i_xOK := xMPS_OK,
+fbFF(i_DevName := sName,
+    i_xOK := xMPS_OK,
     i_xReset := i_xReset,
     io_fbFFHWO := io_fbFFHWO);
-*)
-
 
 (*Soft IO Mapping*)
 ACT_IO();]]></ST>

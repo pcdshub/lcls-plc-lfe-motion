@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_3_PMPS_POST" Id="{ae2b5b23-f406-4591-b6ea-00080d408961}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_3_PMPS_POST
 VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[GVL.fbFastFaultOutput1.Execute();
+GVL.fbFastFaultOutput2.Execute();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

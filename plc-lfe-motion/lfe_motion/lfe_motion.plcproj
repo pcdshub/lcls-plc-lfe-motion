@@ -23,7 +23,7 @@
     <Compile Include="DUTs\E_PositionState.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="GVLs\PMPS.TcGVL">
+    <Compile Include="GVLs\GVL.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
     </Compile>
@@ -38,6 +38,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PRG_3_PMPS_POST.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_4_LOG.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PRG_AT2L0_SOLID.TcPOU">
@@ -79,13 +82,16 @@
     <Compile Include="POUs\PRG_PF1L0_WFS.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Temp\FB_Arbiter.TcPOU">
+    <Compile Include="Temp\FB_BasicAxisFFO.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Temp\FB_BasicMotionStageAltFFO.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Temp\FB_BasicMotionStageFFO.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Temp\FB_DoubleActingMPA.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Temp\FB_HardwareFFOutput.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Temp\FB_MPA.TcPOU">
@@ -124,6 +130,10 @@
       <DefaultResolution>lcls2-cc-lib, * (SLAC)</DefaultResolution>
       <Namespace>lcls2_cc_lib</Namespace>
     </PlaceholderReference>
+    <PlaceholderReference Include="PMPS">
+      <DefaultResolution>PMPS, * (SLAC - LCLS)</DefaultResolution>
+      <Namespace>PMPS</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="Tc2_MC2">
       <DefaultResolution>Tc2_MC2, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_MC2</Namespace>
@@ -154,6 +164,9 @@
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls2-cc-lib">
       <Resolution>lcls2-cc-lib, 0.3.0 (SLAC)</Resolution>
+    </PlaceholderResolution>
+    <PlaceholderResolution Include="PMPS">
+      <Resolution>PMPS, 0.0.0 (SLAC - LCLS)</Resolution>
     </PlaceholderResolution>
   </ItemGroup>
   <ItemGroup>

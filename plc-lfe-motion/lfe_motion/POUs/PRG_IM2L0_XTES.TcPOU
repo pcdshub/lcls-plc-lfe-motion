@@ -62,6 +62,8 @@ VAR
                               .D[20] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
                               .D[21] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 21'}
     stEL6Out AT %Q*: EL6OutData22b;
+
+    fbFFO: FB_BasicMotionStageFFO := (sName := 'IM2L0:XTES:MMS');
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -74,7 +76,10 @@ END_VAR
     fYag := -87.65,
     fDiamond := -57.65,
     fReticle := -27.65,
-    fOut := 0);]]></ST>
+    fOut := 0);
+
+fbFFO(stMotionStage := Main.M24,
+      fbFFHWO := GVL.fbFastFaultOutput1);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

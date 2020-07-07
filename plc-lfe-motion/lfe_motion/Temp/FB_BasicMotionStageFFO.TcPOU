@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="FB_BasicMotionStageFFO" Id="{8193f7c7-f3d4-0859-34a7-297c8245a443}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_BasicMotionStageFFO
+(*
+    Placeholder FFO logic for no beam allowed, pre-comissioning
+
+    Fast fault is applied if the motor is moving or is not at the out switch.
+*)
+VAR_IN_OUT
+    stMotionStage: DUT_MotionStage;
+    fbFFHWO: FB_HardwareFFOutput;
+END_VAR
+VAR_INPUT
+    sName: STRING;
+    bForwardIsOut: BOOL := TRUE;
+END_VAR
+VAR_OUTPUT
+    bIsOut: BOOL;
+    bIsNotMoving: BOOL;
+END_VAR
+VAR
+    fbBasicAxisFFO: FB_BasicAxisFFO := (sName := sName);
+    fbFF: FB_FastFault := (i_Desc := 'Device is not out',
+                           i_TypeCode := 16#2200,
+                           i_xAutoReset := TRUE);
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbBasicAxisFFO(Axis := stMotionStage.Axis,
+               fbFFHWO := fbFFHWO,
+               sName := sName,
+               bIsNotMoving => bIsNotMoving);
+
+IF bForwardIsOut THEN
+    bIsOut := NOT stMotionStage.bLimitForwardEnable;
+ELSE
+    bIsOut := NOT stMotionStage.bLimitBackwardEnable;
+END_IF
+
+fbFF(i_DevName := sName,
+     i_xOK := bIsOut,
+     io_fbFFHWO := fbFFHWO);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
