@@ -28,25 +28,29 @@ fbIM1L1.stOut.fPosition := -8.59;
 fbIM1L1.stOut.bUseRawCounts := FALSE;
 fbIM1L1.stOut.nRequestAssertionID := 2111;
 fbIM1L1.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
+fbIM1L1.stOut.bValid := TRUE;
 
 fbIM1L1.stPower.fPosition := -47.59;
 fbIM1L1.stPower.bUseRawCounts := FALSE;
 fbIM1L1.stPower.nRequestAssertionID := 2112;
 fbIM1L1.stPower.stBeamParams := PMPS_GVL.cstFullBeam;
+fbIM1L1.stPower.bValid := TRUE;
 
 fbIM1L1.stYag1.fPosition := -71.69;
 fbIM1L1.stYag1.bUseRawCounts := FALSE;
 fbIM1L1.stYag1.nRequestAssertionID := 2113;
 fbIM1L1.stYag1.stBeamParams := PMPS_GVL.cstFullBeam;
+fbIM1L1.stYag1.bValid := TRUE;
 
 fbIM1L1.stYag2.fPosition := -97.70;
 fbIM1L1.stYag2.bUseRawCounts := FALSE;
 fbIM1L1.stYag2.nRequestAssertionID := 2114;
 fbIM1L1.stYag2.stBeamParams := PMPS_GVL.cstFullBeam;
+fbIM1L1.stYag2.bValid := TRUE;
 
 fbIM1L1(
     fbArbiter := GVL.fbArbiter,
-    fbFFHWO := GVL.fbFastFaultOutput2,
+    fbFFHWO := GVL.fbFastFaultOutput1,
     stYStage := Main.M23);]]></ST>
     </Implementation>
   </POU>

@@ -9,6 +9,7 @@ VAR
     iIndex: INT;
     fbAT2L0_motion: ARRAY [0..18] OF FB_MotionStage;
     fbAT2L0_axes: ARRAY [0..18] OF POINTER TO DUT_MotionStage;
+    fbAT2L0_ffo: ARRAY[0..18] OF FB_AttFFO;
 
     // For plotting voltage/current during debugging
     nM1CoilARaw AT %I*: UINT;
@@ -140,6 +141,9 @@ FOR iIndex := 0 TO 18 BY 1 DO
     fbAT2L0_axes[iIndex]^.nEnableMode := nAT2L0_enableMode;
     fbAT2L0_axes[iIndex]^.bHardwareEnable := TRUE;
     fbAT2L0_axes[iIndex]^.bPowerSelf := TRUE;
+    fbAT2L0_ffo[iIndex](
+        stMotionStage := fbAT2L0_axes[iIndex]^,
+        fbFFHWO := GVL.fbFastFaultOutput2);
 END_FOR
 iIndex := 0;
 

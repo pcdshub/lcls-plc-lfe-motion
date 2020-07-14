@@ -125,13 +125,14 @@ VAR // fix linking to rtd in the following order Bottom - South - TOP - NORTH
     fbMotion4: FB_SimMotor;*)
 
     mcPower : ARRAY [1..4] OF MC_POWER;
-
+(*
     fbFFOTop:    FB_BasicMotionStageFFO := (sName := 'SL1L0:POWER:MMS:TOP');
     fbFFOBottom: FB_BasicMotionStageFFO := (sName := 'SL1L0:POWER:MMS:BOTTOM',
                                             bForwardIsOut := FALSE);
     fbFFONorth:  FB_BasicMotionStageFFO := (sName := 'SL1L0:POWER:MMS:NORTH');
     fbFFOSouth:  FB_BasicMotionStageFFO := (sName := 'SL1L0:POWER:MMS:SOUTH',
                                             bForwardIsOut := FALSE);
+*)
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -181,7 +182,7 @@ fbSL1L0(stTopBlade:=  Main.M43,
 mcPower[2](axis:=Main.M42.Axis, Enable:=TRUE, enable_positive:=Main.M42.bLimitForwardEnable, enable_negative:=Main.M42.bLimitBackwardEnable);
 mcPower[3](axis:=Main.M43.Axis, Enable:=TRUE, enable_positive:=Main.M43.bLimitForwardEnable, enable_negative:=Main.M43.bLimitBackwardEnable);
 mcPower[4](axis:=Main.M44.Axis, Enable:=TRUE, enable_positive:=Main.M44.bLimitForwardEnable, enable_negative:=Main.M44.bLimitBackwardEnable);*)
-
+(*
 fbFFOTop(stMotionStage := Main.M43,
          fbFFHWO := GVL.fbFastFaultOutput1);
 fbFFOBottom(stMotionStage := Main.M41,
@@ -189,7 +190,8 @@ fbFFOBottom(stMotionStage := Main.M41,
 fbFFONorth(stMotionStage := Main.M44,
            fbFFHWO := GVL.fbFastFaultOutput1);
 fbFFOSouth(stMotionStage := Main.M42,
-           fbFFHWO := GVL.fbFastFaultOutput1);]]></ST>
+           fbFFHWO := GVL.fbFastFaultOutput1);
+           *)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -86,12 +86,12 @@ fbMotion4(stMotionStage:=Main.M52);
 // Andy says: trip reticle if not OUT
 // OUT is 1.55843, in is high limit switch
 // NOTE: we don't have an encoder or an LVDT on this axis! We will use a composition with the low limit switch
-bRetOut := Main.M52.stAxisStatus.fActPosition < 2 AND NOT Main.M52.bLimitBackwardEnable;
+bRetOut := Main.M52.stAxisStatus.fActPosition > 0 AND NOT Main.M52.bLimitForwardEnable;
 fbRetFFO(
     i_xOk := bRetOut,
     i_xAutoReset := TRUE,
     i_DevName := Main.M52.sName,
-    i_Desc := 'Reticle not OUT (y=0)',
+    i_Desc := 'Reticle not OUT (y>0)',
     io_fbFFHWO := GVL.fbFastFaultOutput1);
 
 // Motor 5 DIODE HORIZ X (SP1L0-KMONO-MMS-05)
@@ -114,7 +114,7 @@ fbMotion6(stMotionStage:=Main.M54);
 // Andy says trip if NOT IN or NOT OUT
 // Andy says trip if IN AND NOT (7.7 to 8.9 keV)
 // IN is 0, OUT is 98.5
-bDiodeOut := Main.M54.stAxisStatus.fPosition > 96.5;
+bDiodeOut := Main.M54.stAxisStatus.fActPosition > 96.5;
 bDiodeIn := Main.M54.stAxisStatus.fActPosition < 2;
 fbDiodeFFOAtPos(
     i_xOk := bDiodeOut XOR bDiodeIn,
