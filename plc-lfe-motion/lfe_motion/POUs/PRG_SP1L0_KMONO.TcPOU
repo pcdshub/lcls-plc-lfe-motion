@@ -10,19 +10,29 @@ VAR
     fbMotion5: FB_MotionStage;
     fbMotion6: FB_MotionStage;
 
+    (*
     fbFFO2: FB_BasicMotionStageAltFFO := (sName := 'SP1L0:KMONO:MMS:02');
     fbFFO4: FB_BasicMotionStageFFO := (sName := 'SP1L0:KMONO:MMS:04');
     fbFFO6: FB_BasicMotionStageFFO := (sName := 'SP1L0:KMONO:MMS:06');
+    *)
+    bEnergyOk: BOOL;
+
+    fbXTALFFO: FB_FastFault;
+    bXtalOut: BOOL;
+    bXtalIn: BOOL;
+
+    fbRetFFO: FB_FastFault;
+    bRetOut: BOOL;
+
+    fbDiodeFFOAtPos: FB_FastFault;
+    fbDiodeFFOEnergy: FB_FastFault;
+    bDiodeOut: BOOL;
+    bDiodeIn: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// Placeholder, standard simulated motion for all axes
-//fbMotion1(stMotionStage := Main.M49);
-//fbMotion2(stMotionStage := Main.M50);
-//fbMotion3(stMotionStage := Main.M51);
-//fbMotion4(stMotionStage := Main.M52);
-//fbMotion5(stMotionStage := Main.M53);
-//fbMotion6(stMotionStage := Main.M54);
+      <ST><![CDATA[// bEnergyOk := PMPS_GVL.stCurrentBeamParameters.neVRange ??? looks like range is <1.7keV
+bEnergyOK := FALSE;
 
 // Motor 1 XTAL ANGLE X (SP1L0-KMONO-MMS-01)
 Main.M49.bLimitForwardEnable  := TRUE;    //TRUE
@@ -39,9 +49,21 @@ Main.M50.nEnableMode          := Enum_StageEnableMode.ALWAYS;
 Main.M50.bHardwareEnable      := TRUE;
 Main.M50.bPowerSelf           := TRUE;
 fbMotion2(stMotionStage:=Main.M50);
-fbFFO2(stMotionStage := Main.M50,
-       fbFFHWO := GVL.fbFastFaultOutput1,
-       bFFOk := Main.M50.stAxisStatus.fActPosition < 0.1);
+//fbFFO2(stMotionStage := Main.M50,
+//       fbFFHWO := GVL.fbFastFaultOutput1,
+//       bFFOk := Main.M50.stAxisStatus.fActPosition < 0.1);
+// Andy says trip if IN and not between 7.7 and 8.9 keV
+// Andy says reset if IN and between 7.7 and 8.9 keV OR at OUT
+// IN is >50, out is at 0 (+-2)
+bXtalOut := Main.M50.stAxisStatus.fActPosition < 2;
+bXtalIn := Main.M50.stAxisStatus.fActPosition > 50;
+
+fbXTALFFO(
+    i_xOK := bEnergyOk OR NOT bXtalIn,
+    i_xReset := bXtalOut OR (bXtalIn AND bEnergyOk),
+    i_DevName := Main.M50.sName,
+    i_Desc := 'Unsafe eV Range',
+    io_fbFFHWO := GVL.fbFastFaultOutput1);
 
 // Motor 3 RETICLE HORIZ X (SP1L0-KMONO-MMS-03)
 //Main.M51.bLimitForwardEnable  := bM3CCWLimit;    //(+X)
@@ -58,8 +80,18 @@ Main.M52.nEnableMode          := Enum_StageEnableMode.ALWAYS;
 Main.M52.bHardwareEnable      := TRUE;
 Main.M52.bPowerSelf           := TRUE;
 fbMotion4(stMotionStage:=Main.M52);
-fbFFO4(stMotionStage := Main.M52,
-       fbFFHWO := GVL.fbFastFaultOutput1);
+//fbFFO4(stMotionStage := Main.M52,
+//       fbFFHWO := GVL.fbFastFaultOutput1);
+// Andy says: trip reticle if not OUT
+// OUT is 1.55843, in is high limit switch
+// NOTE: we don't have an encoder or an LVDT on this axis! We will use a composition with the low limit switch
+bRetOut := Main.M52.stAxisStatus.fActPosition < 2 AND NOT Main.M52.bLimitBackwardEnable;
+fbRetFFO(
+    i_xOk := bRetOut,
+    i_xAutoReset := TRUE,
+    i_DevName := Main.M52.sName,
+    i_Desc := 'Reticle not OUT',
+    io_fbFFHWO := GVL.fbFastFaultOutput1);
 
 // Motor 5 DIODE HORIZ X (SP1L0-KMONO-MMS-05)
 //Main.M53.bLimitForwardEnable  := bM5CCWLimit;    //(+X)
@@ -76,10 +108,25 @@ Main.M54.nEnableMode          := Enum_StageEnableMode.ALWAYS;
 Main.M54.bHardwareEnable      := TRUE;
 Main.M54.bPowerSelf           := TRUE;
 fbMotion6(stMotionStage:=Main.M54);
-fbFFO6(stMotionStage := Main.M54,
-       fbFFHWO := GVL.fbFastFaultOutput1);
-
-]]></ST>
+//fbFFO6(stMotionStage := Main.M54,
+//       fbFFHWO := GVL.fbFastFaultOutput1);
+// Andy says trip if NOT IN or NOT OUT
+// Andy says trip if IN AND NOT (7.7 to 8.9 keV)
+// IN is 0, OUT is 98.5
+bDiodeOut := Main.M54.stAxisStatus.fPosition > 96.5;
+bDiodeIn := Main.M54.stAxisStatus.fActPosition < 2;
+fbDiodeFFOAtPos(
+    i_xOk := bDiodeOut XOR bDiodeIn,
+    i_xAutoReset := TRUE,
+    i_DevName := Main.M54.sName,
+    i_Desc := 'Diode between states.',
+    io_fbFFHWO := GVL.fbFastFaultOutput1);
+fbDiodeFFOEnergy(
+    i_xOk := bEnergyOk OR NOT bDiodeIn,
+    i_xReset := bDiodeOut OR (bDiodeIn AND bEnergyOk),
+    i_DevName := Main.M54.sName,
+    i_Desc := 'Unsafe eV Range.',
+    io_fbFFHWO := GVL.fbFastFaultOutput1);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
