@@ -62,7 +62,8 @@ fbXTALFFO(
     i_xOK := bEnergyOk OR NOT bXtalIn,
     i_xReset := bXtalOut OR (bXtalIn AND bEnergyOk),
     i_DevName := Main.M50.sName,
-    i_Desc := 'Unsafe eV Range',
+    //i_Desc := 'Unsafe eV Range',
+    i_Desc := 'Override if 7.7-8.9keV',
     io_fbFFHWO := GVL.fbFastFaultOutput1);
 
 // Motor 3 RETICLE HORIZ X (SP1L0-KMONO-MMS-03)
@@ -90,7 +91,7 @@ fbRetFFO(
     i_xOk := bRetOut,
     i_xAutoReset := TRUE,
     i_DevName := Main.M52.sName,
-    i_Desc := 'Reticle not OUT',
+    i_Desc := 'Reticle not OUT (y=0)',
     io_fbFFHWO := GVL.fbFastFaultOutput1);
 
 // Motor 5 DIODE HORIZ X (SP1L0-KMONO-MMS-05)
@@ -125,7 +126,8 @@ fbDiodeFFOEnergy(
     i_xOk := bEnergyOk OR NOT bDiodeIn,
     i_xReset := bDiodeOut OR (bDiodeIn AND bEnergyOk),
     i_DevName := Main.M54.sName,
-    i_Desc := 'Unsafe eV Range.',
+    //i_Desc := 'Unsafe eV Range',
+    i_Desc := 'Override if 7.7-8.9keV',
     io_fbFFHWO := GVL.fbFastFaultOutput1);]]></ST>
     </Implementation>
   </POU>
