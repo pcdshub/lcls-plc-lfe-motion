@@ -3,11 +3,16 @@
   <POU Name="PRG_3_PMPS_POST" Id="{ae2b5b23-f406-4591-b6ea-00080d408961}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_3_PMPS_POST
 VAR
+    fbArbiterIO: FB_SubSysToArbiter_IO;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[GVL.fbFastFaultOutput1.Execute();
-GVL.fbFastFaultOutput2.Execute();]]></ST>
+GVL.fbFastFaultOutput2.Execute();
+
+fbArbiterIO(
+    Arbiter:=GVL.fbArbiter,
+    fbFFHWO:=GVL.fbFastFaultOutput1);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
