@@ -9,7 +9,6 @@ VAR
     iIndex: INT;
     fbAT2L0_motion: ARRAY [0..18] OF FB_MotionStage;
     fbAT2L0_axes: ARRAY [0..18] OF POINTER TO DUT_MotionStage;
-    fbAT2L0_ffo: ARRAY [0..18] OF FB_BasicMotionStageFFO;
 
     // For plotting voltage/current during debugging
     nM1CoilARaw AT %I*: UINT;
@@ -129,25 +128,6 @@ fbAT2L0_axes[15]:= ADR(Main.M16);
 fbAT2L0_axes[16]:= ADR(Main.M17);
 fbAT2L0_axes[17]:= ADR(Main.M18);
 fbAT2L0_axes[18]:= ADR(Main.M19);
-fbAT2L0_ffo[0].sName := 'AT2L0:XTES:MMS:01';
-fbAT2L0_ffo[1].sName := 'AT2L0:XTES:MMS:02';
-fbAT2L0_ffo[2].sName := 'AT2L0:XTES:MMS:03';
-fbAT2L0_ffo[3].sName := 'AT2L0:XTES:MMS:04';
-fbAT2L0_ffo[4].sName := 'AT2L0:XTES:MMS:05';
-fbAT2L0_ffo[5].sName := 'AT2L0:XTES:MMS:06';
-fbAT2L0_ffo[6].sName := 'AT2L0:XTES:MMS:07';
-fbAT2L0_ffo[7].sName := 'AT2L0:XTES:MMS:08';
-fbAT2L0_ffo[8].sName := 'AT2L0:XTES:MMS:09';
-fbAT2L0_ffo[9].sName := 'AT2L0:XTES:MMS:10';
-fbAT2L0_ffo[10].sName := 'AT2L0:XTES:MMS:11';
-fbAT2L0_ffo[11].sName := 'AT2L0:XTES:MMS:12';
-fbAT2L0_ffo[12].sName := 'AT2L0:XTES:MMS:13';
-fbAT2L0_ffo[13].sName := 'AT2L0:XTES:MMS:14';
-fbAT2L0_ffo[14].sName := 'AT2L0:XTES:MMS:15';
-fbAT2L0_ffo[15].sName := 'AT2L0:XTES:MMS:16';
-fbAT2L0_ffo[16].sName := 'AT2L0:XTES:MMS:17';
-fbAT2L0_ffo[17].sName := 'AT2L0:XTES:MMS:18';
-fbAT2L0_ffo[18].sName := 'AT2L0:XTES:MMS:19';
 
 IF bAT2L0_debug = TRUE THEN
     nAT2L0_enableMode := ENUM_StageEnableMode.ALWAYS;
@@ -160,8 +140,6 @@ FOR iIndex := 0 TO 18 BY 1 DO
     fbAT2L0_axes[iIndex]^.nEnableMode := nAT2L0_enableMode;
     fbAT2L0_axes[iIndex]^.bHardwareEnable := TRUE;
     fbAT2L0_axes[iIndex]^.bPowerSelf := TRUE;
-    fbAT2L0_ffo[iIndex](stMotionStage := fbAT2L0_axes[iIndex]^,
-                        fbFFHWO := GVL.fbFastFaultOutput2);
 END_FOR
 iIndex := 0;
 
