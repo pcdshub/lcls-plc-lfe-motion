@@ -62,24 +62,39 @@ VAR
                               .D[20] := TIIB[IM1L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
                               .D[21] := TIIB[IM1L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 21'}
     stEL6Out AT %Q*: EL6OutData22b;
-
-    fbFFO: FB_BasicMotionStageFFO := (sName := 'IM1L0:XTES:MMS');
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbIM1L0(
+      <ST><![CDATA[fbIM1L0.nTransitionAssertionID := 2110;
+
+fbIM1L0.stOut.fPosition := 0;
+fbIM1L0.stOut.bUseRawCounts := FALSE;
+fbIM1L0.stOut.nRequestAssertionID := 2111;
+fbIM1L0.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
+
+fbIM1L0.stYag.fPosition := -86.65;
+fbIM1L0.stYag.bUseRawCounts := FALSE;
+fbIM1L0.stYag.nRequestAssertionID := 2112;
+fbIM1L0.stYag.stBeamParams := PMPS_GVL.cstFullBeam;
+
+fbIM1L0.stDiamond.fPosition := -56.65;
+fbIM1L0.stDiamond.bUseRawCounts := FALSE;
+fbIM1L0.stDiamond.nRequestAssertionID := 2113;
+fbIM1L0.stDiamond.stBeamParams := PMPS_GVL.cstFullBeam;
+
+fbIM1L0.stReticle.fPosition := -26.65;
+fbIM1L0.stReticle.bUseRawCounts := FALSE;
+fbIM1L0.stReticle.nRequestAssertionID := 2114;
+fbIM1L0.stReticle.stBeamParams := PMPS_GVL.cstSafeBeam;
+
+fbIM1L0(
+    fbArbiter := GVL.fbArbiter,
+    fbFFHWO := GVL.fbFastFaultOutput1,
     stYStage := Main.M20,
     stZoomStage := Main.M21,
     stFocusStage := Main.M22,
     stEl6In := stEL6In,
-    stEl6Out := stEl6Out,
-    fYag := -86.65,
-    fDiamond := -56.65,
-    fReticle := -26.65,
-    fOut := 0);
-
-fbFFO(stMotionStage := Main.M20,
-      fbFFHWO := GVL.fbFastFaultOutput1);]]></ST>
+    stEl6Out := stEl6Out);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
