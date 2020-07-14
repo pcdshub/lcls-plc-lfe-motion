@@ -19,20 +19,35 @@ VAR
                               .fbYagThermoCouple.bOverrange := TIIB[IM3L0-EL3314]^TC Inputs Channel 2^Status^Overrange;
                               .fbYagThermoCouple.iRaw := TIIB[IM3L0-EL3314]^TC Inputs Channel 2^Value'}
     fbIM3L0: FB_PPM;
-
-    fbFFO: FB_BasicMotionStageFFO := (sName := 'IM3L0:PPM:MMS');
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbIM3L0(
-    stYStage := Main.M27,
-    fPolished := -71.50,
-    fFrosted := -97.51, // Actually a second polished yag
-    fPower := -47.4,
-    fOut := -8.4);
+      <ST><![CDATA[fbIM3L0.nTransitionAssertionID := 2300;
 
-fbFFO(stMotionStage := Main.M27,
-      fbFFHWO := GVL.fbFastFaultOutput1);]]></ST>
+fbIM3L0.stOut.fPosition := -8.40;
+fbIM3L0.stOut.bUseRawCounts := FALSE;
+fbIM3L0.stOut.nRequestAssertionID := 2301;
+fbIM3L0.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
+
+fbIM3L0.stPower.fPosition := -47.40;
+fbIM3L0.stPower.bUseRawCounts := FALSE;
+fbIM3L0.stPower.nRequestAssertionID := 2302;
+fbIM3L0.stPower.stBeamParams := PMPS_GVL.cstFullBeam;
+
+fbIM3L0.stYag1.fPosition := -71.50;
+fbIM3L0.stYag1.bUseRawCounts := FALSE;
+fbIM3L0.stYag1.nRequestAssertionID := 2303;
+fbIM3L0.stYag1.stBeamParams := PMPS_GVL.cstFullBeam;
+
+fbIM3L0.stYag2.fPosition := -97.51;
+fbIM3L0.stYag2.bUseRawCounts := FALSE;
+fbIM3L0.stYag2.nRequestAssertionID := 2304;
+fbIM3L0.stYag2.stBeamParams := PMPS_GVL.cstFullBeam;
+
+fbIM3L0(
+    fbArbiter := GVL.fbArbiter,
+    fbFFHWO := GVL.fbFastFaultOutput2,
+    stYStage := Main.M27);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
