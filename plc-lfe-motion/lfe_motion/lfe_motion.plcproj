@@ -16,6 +16,8 @@
     <CombineIds>true</CombineIds>
     <Released>false</Released>
     <ProjectVersion>0.0.0</ProjectVersion>
+    <Title>lcls-plc-lfe-motion</Title>
+    <Company>SLAC - LCLS</Company>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DUTs\ST_MPA.TcDUT">
@@ -113,11 +115,15 @@
     <Compile Include="Temp\FB_SLITS_POWER_1.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Version\Global_Version.TcGVL">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DUTs" />
     <Folder Include="GVLs" />
     <Folder Include="Temp" />
+    <Folder Include="Version" />
     <Folder Include="VISUs" />
     <Folder Include="POUs" />
   </ItemGroup>
