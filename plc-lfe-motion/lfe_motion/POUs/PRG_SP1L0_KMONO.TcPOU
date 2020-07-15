@@ -61,6 +61,7 @@ bXtalIn := Main.M50.stAxisStatus.fActPosition > 50;
 fbXTALFFO(
     i_xOK := bEnergyOk OR NOT bXtalIn,
     i_xReset := bXtalOut OR (bXtalIn AND bEnergyOk),
+    i_xAutoReset := TRUE,
     i_DevName := Main.M50.sName,
     //i_Desc := 'Unsafe eV Range',
     i_Desc := 'Override if 7.7-8.9keV',
@@ -125,6 +126,7 @@ fbDiodeFFOAtPos(
 fbDiodeFFOEnergy(
     i_xOk := bEnergyOk OR NOT bDiodeIn,
     i_xReset := bDiodeOut OR (bDiodeIn AND bEnergyOk),
+    i_xAutoReset := TRUE,
     i_DevName := Main.M54.sName,
     //i_Desc := 'Unsafe eV Range',
     i_Desc := 'Override if 7.7-8.9keV',
