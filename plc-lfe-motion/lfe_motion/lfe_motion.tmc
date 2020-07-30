@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{E1B6AD1C-4783-51B1-0096-ADED4577FD9A}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{0F364E6E-F111-997F-4C44-1216941486C8}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
@@ -35875,13 +35875,11 @@ the state </Comment>
       <SubItem>
         <Name>schema</Name>
         <Type GUID="{18071995-0000-0000-0000-000100000050}">STRING(80)</Type>
-        <Comment>
-		Message or Alarm{Cleared,Confirmed,Raised} event information
+        <Comment>Message or Alarm{Cleared,Confirmed,Raised} event information
 
 		Note that elements here do not follow the usual Hungarian notation / 
 		variable-type-prefixing naming convention due to the member names being
-		used directly in the generation of the JSON document.
-	</Comment>
+		used directly in the generation of the JSON document.</Comment>
         <BitSize>648</BitSize>
         <BitOffs>0</BitOffs>
         <Default>
@@ -35986,7 +35984,7 @@ the state </Comment>
       <SubItem>
         <Name>source</Name>
         <Type GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</Type>
-        <Comment> This is actually: T_MaxString
+        <Comment>This is actually: T_MaxString
  which has been expanded due to requirements for pinning global data types.</Comment>
         <BitSize>2048</BitSize>
         <BitOffs>4168</BitOffs>
@@ -36001,7 +35999,7 @@ the state </Comment>
       <SubItem>
         <Name>event_type</Name>
         <Type GUID="{A81A482A-E7CE-49D8-A4DD-8280773A6946}">E_LogEventType</Type>
-        <Comment> This is actually: STRING(Tc3_EventLogger.ParameterList.cSourceNameSize - 1)
+        <Comment>This is actually: STRING(Tc3_EventLogger.ParameterList.cSourceNameSize - 1)
  which has been expanded due to requirements for pinning global data types.</Comment>
         <BitSize>16</BitSize>
         <BitOffs>6224</BitOffs>
@@ -60473,6 +60471,10 @@ Readbacks</Comment>
                 <Value>6</Value>
               </SubItem>
               <SubItem>
+                <Name>.bMoveOk</Name>
+                <Value>1</Value>
+              </SubItem>
+              <SubItem>
                 <Name>.bValid</Name>
                 <Value>1</Value>
               </SubItem>
@@ -60495,6 +60497,10 @@ Readbacks</Comment>
               <SubItem>
                 <Name>.fVelocity</Name>
                 <Value>6</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.bMoveOk</Name>
+                <Value>1</Value>
               </SubItem>
               <SubItem>
                 <Name>.bValid</Name>
@@ -63522,7 +63528,7 @@ GET PMPS Move Ok bit
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2020-07-30T14:34:41</Value>
+          <Value>2020-07-30T14:52:21</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
