@@ -4,6 +4,7 @@
     <Declaration><![CDATA[FUNCTION_BLOCK FB_AttFFO
 VAR_IN_OUT
     stMotionStage: DUT_MotionStage;
+    enumState: ENUM_EpicsInOut;
     fbFFHWO: FB_HardwareFFOutput;
 END_VAR
 VAR_OUTPUT
@@ -18,7 +19,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[bIsNotMoving := NOT stMotionStage.Axis.Status.Moving;
 fbFF(i_DevName := stMotionStage.sName,
-     i_xOK := bIsNotMoving,
+     i_xOK := bIsNotMoving AND enumState <> ENUM_EpicsInOut.UNKNOWN,
      io_fbFFHWO := fbFFHWO);]]></ST>
     </Implementation>
   </POU>

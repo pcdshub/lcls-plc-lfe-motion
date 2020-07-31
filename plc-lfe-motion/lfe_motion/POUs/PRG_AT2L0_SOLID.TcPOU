@@ -161,14 +161,17 @@ FOR iIndex := 1 TO 19 DO
     fbAT2L0_axes[iIndex]^.nEnableMode := nAT2L0_enableMode;
     fbAT2L0_axes[iIndex]^.bHardwareEnable := TRUE;
     fbAT2L0_axes[iIndex]^.bPowerSelf := TRUE;
-    fbAT2L0_ffo[iIndex](
-        stMotionStage := fbAT2L0_axes[iIndex]^,
-        fbFFHWO := GVL.fbFastFaultOutput2);
+
     fbAT2L0_states[iIndex](
         bEnable := TRUE,
         stMotionStage := fbAT2L0_axes[iIndex]^,
         stOut := stOut,
         stIn := stIn);
+
+    fbAT2L0_ffo[iIndex](
+        stMotionStage := fbAT2L0_axes[iIndex]^,
+        enumState := fbAT2L0_states[iIndex].enumGet,
+        fbFFHWO := GVL.fbFastFaultOutput2);
 END_FOR
 iIndex := 0;
 
