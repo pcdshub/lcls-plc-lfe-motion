@@ -3,7 +3,7 @@
   <GVL Name="GVL" Id="{7ed09a37-cf90-49ac-9e4a-5fe59e47274f}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
-    // fbArbiter: FB_Arbiter;
+    fbArbiter: FB_Arbiter(0);
 
     {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:FFO:01'}
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output'}
@@ -13,8 +13,11 @@ VAR_GLOBAL
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output'}
     fbFastFaultOutput2: FB_HardwareFFOutput := (bAutoReset := TRUE);
 
-    // MPS fault reset, add temporarily to use FB_MPA
-    xFastFaultReset:   BOOL;
+    bInitIM1L0: BOOL;
+    bInitIM1L1: BOOL;
+    bInitIM2L0: BOOL;
+    bInitIM3L0: BOOL;
+    bInitIM4L0: BOOL;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

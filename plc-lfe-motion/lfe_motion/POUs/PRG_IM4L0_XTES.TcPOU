@@ -3,6 +3,7 @@
   <POU Name="PRG_IM4L0_XTES" Id="{6a457a34-4929-4680-9285-094630b3c7e5}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_IM4L0_XTES
 VAR
+    fbArbiter: FB_Arbiter(5);
     {attribute 'pytmc' := '
         pv: IM4L0:XTES
         io: io
@@ -62,24 +63,46 @@ VAR
                               .D[20] := TIIB[IM4L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
                               .D[21] := TIIB[IM4L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 21'}
     stEL6Out AT %Q*: EL6OutData22b;
-
-    fbFFO: FB_BasicMotionStageFFO := (sName := 'IM4L0:XTES:MMS');
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbIM4L0(
-    stYStage := Main.M28,
-    stZoomStage := Main.M29,
-    stFocusStage := Main.M30,
-    stEl6In := stEL6In,
-    stEl6Out := stEl6Out,
-    fYag := -86.65,
-    fDiamond := -56.65,
-    fReticle := -26.65,
-    fOut := 0);
+      <ST><![CDATA[fbIM4L0.nTransitionAssertionID := 2400;
+fbIM4L0.nUnknownAssertionID := 2409;
 
-fbFFO(stMotionStage := Main.M28,
-      fbFFHWO := GVL.fbFastFaultOutput1);]]></ST>
+fbIM4L0.stOut.fPosition := 0;
+fbIM4L0.stOut.bUseRawCounts := FALSE;
+fbIM4L0.stOut.nRequestAssertionID := 2401;
+fbIM4L0.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
+fbIM4L0.stOut.bValid := TRUE;
+
+fbIM4L0.stYag.fPosition := -86.65;
+fbIM4L0.stYag.bUseRawCounts := FALSE;
+fbIM4L0.stYag.nRequestAssertionID := 2402;
+fbIM4L0.stYag.stBeamParams := PMPS_GVL.cstFullBeam;
+fbIM4L0.stYag.bValid := TRUE;
+
+fbIM4L0.stDiamond.fPosition := -56.65;
+fbIM4L0.stDiamond.bUseRawCounts := FALSE;
+fbIM4L0.stDiamond.nRequestAssertionID := 2403;
+fbIM4L0.stDiamond.stBeamParams := PMPS_GVL.cstFullBeam;
+fbIM4L0.stDiamond.bValid := TRUE;
+
+fbIM4L0.stReticle.fPosition := -26.65;
+fbIM4L0.stReticle.bUseRawCounts := FALSE;
+fbIM4L0.stReticle.nRequestAssertionID := 2404;
+fbIM4L0.stReticle.stBeamParams := PMPS_GVL.cstSafeBeam;
+fbIM4L0.stReticle.bValid := TRUE;
+
+IF GVL.bInitIM4L0 THEN
+    fbIM4L0(
+        fbArbiter := GVL.fbArbiter,
+        fbFFHWO := GVL.fbFastFaultOutput1,
+        stYStage := Main.M28,
+        stZoomStage := Main.M29,
+        stFocusStage := Main.M30,
+        stEl6In := stEL6In,
+        stEl6Out := stEl6Out);
+END_IF]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

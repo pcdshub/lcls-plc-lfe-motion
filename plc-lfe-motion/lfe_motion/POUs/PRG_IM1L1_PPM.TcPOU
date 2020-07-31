@@ -3,6 +3,8 @@
   <POU Name="PRG_IM1L1_PPM" Id="{280e2bcd-0287-45b1-b768-ade5bf5e5119}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_IM1L1_PPM
 VAR
+    fbArbiter: FB_Arbiter(2);
+
     {attribute 'pytmc' := '
         pv: IM1L1:PPM
         io: io
@@ -19,20 +21,42 @@ VAR
                               .fbYagThermoCouple.bOverrange := TIIB[IM1L1-EL3314]^TC Inputs Channel 2^Status^Overrange;
                               .fbYagThermoCouple.iRaw := TIIB[IM1L1-EL3314]^TC Inputs Channel 2^Value'}
     fbIM1L1: FB_PPM;
-
-    fbFFO: FB_BasicMotionStageFFO := (sName := 'IM1L1:PPM:MMS');
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbIM1L1(
-    stYStage := Main.M23,
-    fPolished := -71.69,
-    fFrosted := -97.70, // Actually a second polished yag
-    fPower := -47.59,
-    fOut := -8.59);
+      <ST><![CDATA[fbIM1L1.nTransitionAssertionID := 2110;
+fbIM1L1.nUnknownAssertionID := 2119;
 
-fbFFO(stMotionStage := Main.M23,
-      fbFFHWO := GVL.fbFastFaultOutput1);]]></ST>
+fbIM1L1.stOut.fPosition := -11;
+fbIM1L1.stOut.bUseRawCounts := FALSE;
+fbIM1L1.stOut.nRequestAssertionID := 2111;
+fbIM1L1.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
+fbIM1L1.stOut.bValid := TRUE;
+
+fbIM1L1.stPower.fPosition := -47.59;
+fbIM1L1.stPower.bUseRawCounts := FALSE;
+fbIM1L1.stPower.nRequestAssertionID := 2112;
+fbIM1L1.stPower.stBeamParams := PMPS_GVL.cstFullBeam;
+fbIM1L1.stPower.bValid := TRUE;
+
+fbIM1L1.stYag1.fPosition := -71.69;
+fbIM1L1.stYag1.bUseRawCounts := FALSE;
+fbIM1L1.stYag1.nRequestAssertionID := 2113;
+fbIM1L1.stYag1.stBeamParams := PMPS_GVL.cstFullBeam;
+fbIM1L1.stYag1.bValid := TRUE;
+
+fbIM1L1.stYag2.fPosition := -97.70;
+fbIM1L1.stYag2.bUseRawCounts := FALSE;
+fbIM1L1.stYag2.nRequestAssertionID := 2114;
+fbIM1L1.stYag2.stBeamParams := PMPS_GVL.cstFullBeam;
+fbIM1L1.stYag2.bValid := TRUE;
+
+IF GVL.bInitIM1L1 THEN
+    fbIM1L1(
+        fbArbiter := GVL.fbArbiter,
+        fbFFHWO := GVL.fbFastFaultOutput1,
+        stYStage := Main.M23);
+END_IF]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

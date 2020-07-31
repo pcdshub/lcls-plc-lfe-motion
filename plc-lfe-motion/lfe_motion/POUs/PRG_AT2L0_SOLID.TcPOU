@@ -7,9 +7,29 @@ VAR
     nAT2L0_enableMode: ENUM_StageEnableMode := ENUM_StageEnableMode.DURING_MOTION;
 
     iIndex: INT;
-    fbAT2L0_motion: ARRAY [0..18] OF FB_MotionStage;
-    fbAT2L0_axes: ARRAY [0..18] OF POINTER TO DUT_MotionStage;
-    fbAT2L0_ffo: ARRAY [0..18] OF FB_BasicMotionStageFFO;
+    fbAT2L0_motion: ARRAY [1..19] OF FB_MotionStage;
+    fbAT2L0_axes: ARRAY [1..19] OF POINTER TO DUT_MotionStage;
+    fbAT2L0_ffo: ARRAY[1..19] OF FB_AttFFO;
+
+    {attribute 'pytmc' := '
+        pv: AT2L0:XTES:MMS
+        expand: :%.2d:STATE
+    '}
+    fbAT2L0_states: ARRAY[1..19] OF FB_PositionStateInOut;
+
+    stOut: DUT_PositionState := (
+        fPosition := 24,
+        fDelta := 2,
+        fVelocity := 6,
+        bMoveOk := TRUE,
+        bValid := TRUE);
+
+    stIn: DUT_PositionState := (
+        fPosition := 0,
+        fDelta := 2,
+        fVelocity := 6,
+        bMoveOk := TRUE,
+        bValid := TRUE);
 
     // For plotting voltage/current during debugging
     nM1CoilARaw AT %I*: UINT;
@@ -110,58 +130,48 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbAT2L0_axes[0]:= ADR(Main.M1);
-fbAT2L0_axes[1]:= ADR(Main.M2);
-fbAT2L0_axes[2]:= ADR(Main.M3);
-fbAT2L0_axes[3]:= ADR(Main.M4);
-fbAT2L0_axes[4]:= ADR(Main.M5);
-fbAT2L0_axes[5]:= ADR(Main.M6);
-fbAT2L0_axes[6]:= ADR(Main.M7);
-fbAT2L0_axes[7]:= ADR(Main.M8);
-fbAT2L0_axes[8]:= ADR(Main.M9);
-fbAT2L0_axes[9]:= ADR(Main.M10);
-fbAT2L0_axes[10]:= ADR(Main.M11);
-fbAT2L0_axes[11]:= ADR(Main.M12);
-fbAT2L0_axes[12]:= ADR(Main.M13);
-fbAT2L0_axes[13]:= ADR(Main.M14);
-fbAT2L0_axes[14]:= ADR(Main.M15);
-fbAT2L0_axes[15]:= ADR(Main.M16);
-fbAT2L0_axes[16]:= ADR(Main.M17);
-fbAT2L0_axes[17]:= ADR(Main.M18);
-fbAT2L0_axes[18]:= ADR(Main.M19);
-fbAT2L0_ffo[0].sName := 'AT2L0:XTES:MMS:01';
-fbAT2L0_ffo[1].sName := 'AT2L0:XTES:MMS:02';
-fbAT2L0_ffo[2].sName := 'AT2L0:XTES:MMS:03';
-fbAT2L0_ffo[3].sName := 'AT2L0:XTES:MMS:04';
-fbAT2L0_ffo[4].sName := 'AT2L0:XTES:MMS:05';
-fbAT2L0_ffo[5].sName := 'AT2L0:XTES:MMS:06';
-fbAT2L0_ffo[6].sName := 'AT2L0:XTES:MMS:07';
-fbAT2L0_ffo[7].sName := 'AT2L0:XTES:MMS:08';
-fbAT2L0_ffo[8].sName := 'AT2L0:XTES:MMS:09';
-fbAT2L0_ffo[9].sName := 'AT2L0:XTES:MMS:10';
-fbAT2L0_ffo[10].sName := 'AT2L0:XTES:MMS:11';
-fbAT2L0_ffo[11].sName := 'AT2L0:XTES:MMS:12';
-fbAT2L0_ffo[12].sName := 'AT2L0:XTES:MMS:13';
-fbAT2L0_ffo[13].sName := 'AT2L0:XTES:MMS:14';
-fbAT2L0_ffo[14].sName := 'AT2L0:XTES:MMS:15';
-fbAT2L0_ffo[15].sName := 'AT2L0:XTES:MMS:16';
-fbAT2L0_ffo[16].sName := 'AT2L0:XTES:MMS:17';
-fbAT2L0_ffo[17].sName := 'AT2L0:XTES:MMS:18';
-fbAT2L0_ffo[18].sName := 'AT2L0:XTES:MMS:19';
+      <ST><![CDATA[fbAT2L0_axes[1]:= ADR(Main.M1);
+fbAT2L0_axes[2]:= ADR(Main.M2);
+fbAT2L0_axes[3]:= ADR(Main.M3);
+fbAT2L0_axes[4]:= ADR(Main.M4);
+fbAT2L0_axes[5]:= ADR(Main.M5);
+fbAT2L0_axes[6]:= ADR(Main.M6);
+fbAT2L0_axes[7]:= ADR(Main.M7);
+fbAT2L0_axes[8]:= ADR(Main.M8);
+fbAT2L0_axes[9]:= ADR(Main.M9);
+fbAT2L0_axes[10]:= ADR(Main.M10);
+fbAT2L0_axes[11]:= ADR(Main.M11);
+fbAT2L0_axes[12]:= ADR(Main.M12);
+fbAT2L0_axes[13]:= ADR(Main.M13);
+fbAT2L0_axes[14]:= ADR(Main.M14);
+fbAT2L0_axes[15]:= ADR(Main.M15);
+fbAT2L0_axes[16]:= ADR(Main.M16);
+fbAT2L0_axes[17]:= ADR(Main.M17);
+fbAT2L0_axes[18]:= ADR(Main.M18);
+fbAT2L0_axes[19]:= ADR(Main.M19);
 
-IF bAT2L0_debug = TRUE THEN
+IF bAT2L0_debug THEN
     nAT2L0_enableMode := ENUM_StageEnableMode.ALWAYS;
 ELSE
     nAT2L0_enableMode := ENUM_StageEnableMode.DURING_MOTION;
 END_IF
 
-FOR iIndex := 0 TO 18 BY 1 DO
+FOR iIndex := 1 TO 19 DO
     fbAT2L0_motion[iIndex](stMotionStage := fbAT2L0_axes[iIndex]^);
     fbAT2L0_axes[iIndex]^.nEnableMode := nAT2L0_enableMode;
     fbAT2L0_axes[iIndex]^.bHardwareEnable := TRUE;
     fbAT2L0_axes[iIndex]^.bPowerSelf := TRUE;
-    fbAT2L0_ffo[iIndex](stMotionStage := fbAT2L0_axes[iIndex]^,
-                        fbFFHWO := GVL.fbFastFaultOutput2);
+
+    fbAT2L0_states[iIndex](
+        bEnable := TRUE,
+        stMotionStage := fbAT2L0_axes[iIndex]^,
+        stOut := stOut,
+        stIn := stIn);
+
+    fbAT2L0_ffo[iIndex](
+        stMotionStage := fbAT2L0_axes[iIndex]^,
+        enumState := fbAT2L0_states[iIndex].enumGet,
+        fbFFHWO := GVL.fbFastFaultOutput2);
 END_FOR
 iIndex := 0;
 
