@@ -51401,6 +51401,28 @@ record(mbbi, "AT2L0:XTES:MMS:19:STATE:GET_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "SL2L0:POWER:GO_RBV") {
+  field(DESC, "PRG_SL2L0_POWER.bExecuteMotion")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.bExecuteMotion?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(archive, "VAL")
+}
+
+record(bo, "SL2L0:POWER:GO") {
+  field(DESC, "PRG_SL2L0_POWER.bExecuteMotion")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.bExecuteMotion=")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
 record(bi, "IM1L0:XTES:CLZ:LOCK_RBV") {
   field(DESC, "PRG_IM1L0_XTES.fbIM1L0.bZoomLock")
   field(SCAN, "I/O Intr")
@@ -54581,28 +54603,6 @@ record(bo, "IM1L0:XTES:SFW:FLOW") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbFlowSwitch.bFlowOk=")
   field(ZNAM, "LOW")
   field(ONAM, "OK")
-  info(autosaveFields_pass0, "VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "SL2L0:POWER:GO_RBV") {
-  field(DESC, "PRG_SL2L0_POWER.bExecuteMotion")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.bExecuteMotion?")
-  field(ZNAM, "False")
-  field(ONAM, "True")
-  info(archive, "VAL")
-}
-
-record(bo, "SL2L0:POWER:GO") {
-  field(DESC, "PRG_SL2L0_POWER.bExecuteMotion")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.bExecuteMotion=")
-  field(ZNAM, "False")
-  field(ONAM, "True")
   info(autosaveFields_pass0, "VAL")
   info(archive, "VAL")
 }
