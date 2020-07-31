@@ -92,14 +92,16 @@ fbIM2L0.stReticle.nRequestAssertionID := 2204;
 fbIM2L0.stReticle.stBeamParams := PMPS_GVL.cstSafeBeam;
 fbIM2L0.stReticle.bValid := TRUE;
 
-fbIM2L0(
-    fbArbiter := GVL.fbArbiter,
-    fbFFHWO := GVL.fbFastFaultOutput1,
-    stYStage := Main.M24,
-    stZoomStage := Main.M25,
-    stFocusStage := Main.M26,
-    stEl6In := stEL6In,
-    stEl6Out := stEl6Out);]]></ST>
+IF GVL.bInitIM2L0 THEN
+    fbIM2L0(
+        fbArbiter := GVL.fbArbiter,
+        fbFFHWO := GVL.fbFastFaultOutput1,
+        stYStage := Main.M24,
+        stZoomStage := Main.M25,
+        stFocusStage := Main.M26,
+        stEl6In := stEL6In,
+        stEl6Out := stEl6Out);
+END_IF]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

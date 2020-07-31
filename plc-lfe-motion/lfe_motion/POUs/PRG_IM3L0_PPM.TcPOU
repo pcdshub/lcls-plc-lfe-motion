@@ -49,10 +49,12 @@ fbIM3L0.stYag2.nRequestAssertionID := 2304;
 fbIM3L0.stYag2.stBeamParams := PMPS_GVL.cstFullBeam;
 fbIM3L0.stYag2.bValid := TRUE;
 
-fbIM3L0(
-    fbArbiter := GVL.fbArbiter,
-    fbFFHWO := GVL.fbFastFaultOutput2,
-    stYStage := Main.M27);]]></ST>
+IF GVL.bInitIM3L0 THEN
+    fbIM3L0(
+        fbArbiter := GVL.fbArbiter,
+        fbFFHWO := GVL.fbFastFaultOutput2,
+        stYStage := Main.M27);
+END_IF]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

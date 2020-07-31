@@ -3,6 +3,7 @@
   <POU Name="PRG_IM4L0_XTES" Id="{6a457a34-4929-4680-9285-094630b3c7e5}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_IM4L0_XTES
 VAR
+    fbArbiter: FB_Arbiter(5);
     {attribute 'pytmc' := '
         pv: IM4L0:XTES
         io: io
@@ -92,14 +93,16 @@ fbIM4L0.stReticle.nRequestAssertionID := 2404;
 fbIM4L0.stReticle.stBeamParams := PMPS_GVL.cstSafeBeam;
 fbIM4L0.stReticle.bValid := TRUE;
 
-fbIM4L0(
-    fbArbiter := GVL.fbArbiter,
-    fbFFHWO := GVL.fbFastFaultOutput1,
-    stYStage := Main.M28,
-    stZoomStage := Main.M29,
-    stFocusStage := Main.M30,
-    stEl6In := stEL6In,
-    stEl6Out := stEl6Out);]]></ST>
+IF GVL.bInitIM4L0 THEN
+    fbIM4L0(
+        fbArbiter := GVL.fbArbiter,
+        fbFFHWO := GVL.fbFastFaultOutput1,
+        stYStage := Main.M28,
+        stZoomStage := Main.M29,
+        stFocusStage := Main.M30,
+        stEl6In := stEL6In,
+        stEl6Out := stEl6Out);
+END_IF]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

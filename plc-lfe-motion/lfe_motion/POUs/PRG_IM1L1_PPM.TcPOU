@@ -3,6 +3,8 @@
   <POU Name="PRG_IM1L1_PPM" Id="{280e2bcd-0287-45b1-b768-ade5bf5e5119}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_IM1L1_PPM
 VAR
+    fbArbiter: FB_Arbiter(2);
+    
     {attribute 'pytmc' := '
         pv: IM1L1:PPM
         io: io
@@ -49,10 +51,12 @@ fbIM1L1.stYag2.nRequestAssertionID := 2114;
 fbIM1L1.stYag2.stBeamParams := PMPS_GVL.cstFullBeam;
 fbIM1L1.stYag2.bValid := TRUE;
 
-fbIM1L1(
-    fbArbiter := GVL.fbArbiter,
-    fbFFHWO := GVL.fbFastFaultOutput1,
-    stYStage := Main.M23);]]></ST>
+IF GVL.bInitIM1L1 THEN
+    fbIM1L1(
+        fbArbiter := GVL.fbArbiter,
+        fbFFHWO := GVL.fbFastFaultOutput1,
+        stYStage := Main.M23);
+END_IF]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
