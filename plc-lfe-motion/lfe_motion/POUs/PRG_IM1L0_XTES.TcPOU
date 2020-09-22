@@ -3,8 +3,6 @@
   <POU Name="PRG_IM1L0_XTES" Id="{dc3548d0-1688-4ec2-b4ae-fd34a5036e7d}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_IM1L0_XTES
 VAR
-    fbArbiter: FB_Arbiter(1);
-
     {attribute 'pytmc' := '
         pv: IM1L0:XTES
         io: io
@@ -91,19 +89,17 @@ fbIM1L0.stDiamond.bValid := TRUE;
 fbIM1L0.stReticle.fPosition := -26.65;
 fbIM1L0.stReticle.bUseRawCounts := FALSE;
 fbIM1L0.stReticle.nRequestAssertionID := 16#2104;
-fbIM1L0.stReticle.stBeamParams := PMPS_GVL.cstSafeBeam;
+fbIM1L0.stReticle.stBeamParams := PMPS_GVL.cst0RateBeam;
 fbIM1L0.stReticle.bValid := TRUE;
 
-IF GVL.bInitIM1L0 THEN
-    fbIM1L0(
-        fbArbiter := GVL.fbArbiter,
-        fbFFHWO := GVL.fbFastFaultOutput1,
-        stYStage := Main.M20,
-        stZoomStage := Main.M21,
-        stFocusStage := Main.M22,
-        stEl6In := stEL6In,
-        stEl6Out := stEl6Out);
-END_IF]]></ST>
+fbIM1L0(
+    fbArbiter := GVL.fbArbiter,
+    fbFFHWO := GVL.fbFastFaultOutput1,
+    stYStage := Main.M20,
+    stZoomStage := Main.M21,
+    stFocusStage := Main.M22,
+    stEl6In := stEL6In,
+    stEl6Out := stEl6Out);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

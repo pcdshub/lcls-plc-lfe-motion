@@ -1223,6 +1223,13 @@ External Setpoint Generation:
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
+					<Name>PRG_AT2L0_SOLID.nM1CoilARaw</Name>
+					<Comment>
+						<![CDATA[ For plotting voltage/current during debugging]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
 					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[1].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
@@ -2154,13 +2161,6 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.nM1CoilARaw</Name>
-					<Comment>
-						<![CDATA[ For plotting voltage/current during debugging]]>
-					</Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
 					<Name>PRG_AT2L0_SOLID.nM1CoilBRaw</Name>
 					<Comment>
 						<![CDATA[ ..CoilBRaw is currently linked to EL7041 'Coil Voltage A']]>
@@ -3085,7 +3085,7 @@ External Setpoint Generation:
 					<Type GUID="{63C476CA-3C4F-477E-9C2E-34379B1D490C}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
-					<Name>PRG_PF1L0_WFS.fbMotion1.fbMotionStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -3134,7 +3134,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_PF1L0_WFS.fbMotion2.fbMotionStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbZStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -3181,6 +3181,38 @@ External Setpoint Generation:
 ]]>
 						</Comment>
 					</SubVar>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.iRaw</Name>
+					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_SL1L0_POWER.fbSL1L0.fbTopBlade.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -9796,11 +9828,11 @@ External Setpoint Generation:
 					<Type GUID="{E979BFBF-B5B9-4F4F-BDAF-999835F39B9D}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
-					<Name>PRG_PF1L0_WFS.fbMotion1.fbMotionStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>PRG_PF1L0_WFS.fbMotion2.fbMotionStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbZStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
@@ -9988,14 +10020,6 @@ External Setpoint Generation:
 							<![CDATA[ Cohort index. Identifies which cohort this BP set was included in arbitration]]>
 						</Comment>
 					</SubVar>
-				</Var>
-				<Var>
-					<Name>GVL.fbFastFaultOutput1.q_xFastFaultOut</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL.fbFastFaultOutput2.q_xFastFaultOut</Name>
-					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1.Axis.PlcToNc</Name>
@@ -10623,6 +10647,14 @@ External Setpoint Generation:
 					<Name>RTDSL0.RTDSL0_MPA_04.q_xRetract_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
+				<Var>
+					<Name>GVL.fbFastFaultOutput1.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL.fbFastFaultOutput2.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
+				</Var>
 			</Vars>
 			<Vars VarGrpType="8">
 				<Name>PlcTask Retains</Name>
@@ -11041,6 +11073,16 @@ External Setpoint Generation:
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL7041-E7">
 				<Link VarA="PlcTask Inputs^Main.M48.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M48.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X1 PF1L0-WFS (EK1100)^PF1L0-EL3314">
+				<Link VarA="PlcTask Inputs^PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.bError" VarB="TC Inputs Channel 1^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.bOverrange" VarB="TC Inputs Channel 1^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.bUnderrange" VarB="TC Inputs Channel 1^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.iRaw" VarB="TC Inputs Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.bError" VarB="TC Inputs Channel 2^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.bOverrange" VarB="TC Inputs Channel 2^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.bUnderrange" VarB="TC Inputs Channel 2^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.iRaw" VarB="TC Inputs Channel 2^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E3 (EK1122)^X2_0 SP1L0-KMONO_MOTOR (EK1100)^SP1L0-EL7041-E2-MOTORS">
 				<Link VarA="PlcTask Inputs^Main.M50.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
