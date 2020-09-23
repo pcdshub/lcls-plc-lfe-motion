@@ -149,6 +149,7 @@ VAR_GLOBAL
 
     // IM4L0-XTES: 3 Axes
     {attribute 'pytmc' := 'pv: IM4L0:XTES:MMS'}
+
     {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[IM4L0-EL7041]^STM Status^Status^Digital input 1;
                               .bBrakeRelease        := TIIB[IM4L0-EL2004]^Channel 1^Output'}
     M28: DUT_MotionStage := (sName := 'IM4L0:XTES:MMS');
@@ -160,9 +161,14 @@ VAR_GLOBAL
     M30: DUT_MotionStage := (sName := 'IM4L0:XTES:CLF');
 
     // PF1L0-WFS: 2 Axes
-    {attribute 'pytmc' := 'pv: PF1L0:WFS:MMS:01'}
+    {attribute 'pytmc' := 'pv: PF1L0:WFS:MMS:Y'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[PF1L0-EL7041-01]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable := TIIB[PF1L0-EL7041-01]^STM Status^Status^Digital input 2;
+                              .bBrakeRelease        := TIIB[PF1L0-EL2004]^Channel 1^Output;
+                              .nRawEncoderULINT     := TIIB[PF1L0-EL5042]^FB Inputs Channel 2^Position'}
     M31: DUT_MotionStage := (sName := 'PF1L0:WFS:MMS:01');
-    {attribute 'pytmc' := 'pv: PF1L0:WFS:MMS:02'}
+    {attribute 'pytmc' := 'pv: PF1L0:WFS:MMS:Z'}
+    {attribute 'TcLinkTo' := '.nRawEncoderULINT     := TIIB[PF1L0-EL5042]^FB Inputs Channel 1^Position'}
     M32: DUT_MotionStage := (sName := 'PF1L0:WFS:MMS:02');
 
     // RTDSL0: 8 Axes
