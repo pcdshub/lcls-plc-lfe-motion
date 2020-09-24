@@ -76303,7 +76303,7 @@ record(waveform, "IM4L0:XTES:CLF:PLC:sErrorMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bLimitForwardEnable_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bLimitForwardEnable_RBV") {
   field(DESC, "FALSE if forward limit hit")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76315,7 +76315,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bLimitForwardEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bLimitBackwardEnable_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bLimitBackwardEnable_RBV") {
   field(DESC, "FALSE if reverse limit hit")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76327,7 +76327,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bLimitBackwardEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bHome_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bHome_RBV") {
   field(DESC, "TRUE if at homing switch")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76339,7 +76339,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bHome_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bBrakeRelease_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bBrakeRelease_RBV") {
   field(DESC, "TRUE if brake released")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76351,7 +76351,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bBrakeRelease_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bHardwareEnable_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bHardwareEnable_RBV") {
   field(DESC, "TRUE if STO not hit")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76363,7 +76363,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bHardwareEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bAllForwardEnable_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bAllForwardEnable_RBV") {
   # Summary of axis permission to move forward
   field(DESC, "Summary of axis perm...n to move forward")
   field(SCAN, "I/O Intr")
@@ -76376,7 +76376,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bAllForwardEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bAllBackwardEnable_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bAllBackwardEnable_RBV") {
   # Summary of axis permission to move backward
   field(DESC, "Summary of axis perm... to move backward")
   field(SCAN, "I/O Intr")
@@ -76389,7 +76389,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bAllBackwardEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bAllEnable_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bAllEnable_RBV") {
   field(DESC, "Summary of axis permission to have power")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76401,7 +76401,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bAllEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bGantryForwardEnable_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bGantryForwardEnable_RBV") {
   field(DESC, "TRUE if gantry ok to move forward")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76413,7 +76413,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bGantryForwardEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bGantryBackwardEnable_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bGantryBackwardEnable_RBV") {
   field(DESC, "TRUE if gantry ok to move backward")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76425,7 +76425,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bGantryBackwardEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "PF1L0:WFS:MMS:01:PLC:nEncoderCount_RBV") {
+record(longin, "PF1L0:WFS:MMS:Y:PLC:nEncoderCount_RBV") {
   field(DESC, "Count from encoder hardware")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76435,7 +76435,7 @@ record(longin, "PF1L0:WFS:MMS:01:PLC:nEncoderCount_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PF1L0:WFS:MMS:01:PLC:sName_RBV") {
+record(waveform, "PF1L0:WFS:MMS:Y:PLC:sName_RBV") {
   field(DESC, "PLC program name")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76447,7 +76447,7 @@ record(waveform, "PF1L0:WFS:MMS:01:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bPowerSelf_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bPowerSelf_RBV") {
   field(DESC, "FALSE if axis is in PMPS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76459,7 +76459,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bPowerSelf_RBV") {
   info(archive, "VAL")
 }
 
-record(mbbi, "PF1L0:WFS:MMS:01:PLC:nEnableMode_RBV") {
+record(mbbi, "PF1L0:WFS:MMS:Y:PLC:nEnableMode_RBV") {
   # Describes when the axis will automatically get power
   field(DESC, "Describes when the a...tically get power")
   field(SCAN, "I/O Intr")
@@ -76476,7 +76476,7 @@ record(mbbi, "PF1L0:WFS:MMS:01:PLC:nEnableMode_RBV") {
   info(archive, "VAL")
 }
 
-record(mbbi, "PF1L0:WFS:MMS:01:PLC:nBrakeMode_RBV") {
+record(mbbi, "PF1L0:WFS:MMS:Y:PLC:nBrakeMode_RBV") {
   # Describes when the brake will be released
   field(DESC, "Describes when the b... will be released")
   field(SCAN, "I/O Intr")
@@ -76493,7 +76493,7 @@ record(mbbi, "PF1L0:WFS:MMS:01:PLC:nBrakeMode_RBV") {
   info(archive, "VAL")
 }
 
-record(mbbi, "PF1L0:WFS:MMS:01:PLC:nHomingMode_RBV") {
+record(mbbi, "PF1L0:WFS:MMS:Y:PLC:nHomingMode_RBV") {
   field(DESC, "Describes our homing strategy")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76515,7 +76515,7 @@ record(mbbi, "PF1L0:WFS:MMS:01:PLC:nHomingMode_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bGantryAxis_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bGantryAxis_RBV") {
   field(DESC, "TRUE if gantry EPS active")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76527,7 +76527,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bGantryAxis_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bEnable_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bEnable_RBV") {
   field(DESC, "Used internally to request enables")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76539,7 +76539,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "PF1L0:WFS:MMS:01:PLC:bEnable") {
+record(bo, "PF1L0:WFS:MMS:Y:PLC:bEnable") {
   field(DESC, "Used internally to request enables")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M31.bEnable=")
@@ -76549,7 +76549,7 @@ record(bo, "PF1L0:WFS:MMS:01:PLC:bEnable") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bReset_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bReset_RBV") {
   field(DESC, "Used internally to reset errors")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76561,7 +76561,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bReset_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "PF1L0:WFS:MMS:01:PLC:bReset") {
+record(bo, "PF1L0:WFS:MMS:Y:PLC:bReset") {
   field(DESC, "Used internally to reset errors")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M31.bReset=")
@@ -76571,7 +76571,7 @@ record(bo, "PF1L0:WFS:MMS:01:PLC:bReset") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bExecute_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bExecute_RBV") {
   # Used internally and by the IOC to start or stop
   field(DESC, "Used internally and ... to start or stop")
   field(SCAN, "I/O Intr")
@@ -76584,7 +76584,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bExecute_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "PF1L0:WFS:MMS:01:PLC:bExecute") {
+record(bo, "PF1L0:WFS:MMS:Y:PLC:bExecute") {
   # Used internally and by the IOC to start or stop
   field(DESC, "Used internally and ... to start or stop")
   field(DTYP, "asynInt32")
@@ -76595,7 +76595,7 @@ record(bo, "PF1L0:WFS:MMS:01:PLC:bExecute") {
   info(archive, "VAL")
 }
 
-record(longin, "PF1L0:WFS:MMS:01:PLC:nCommand_RBV") {
+record(longin, "PF1L0:WFS:MMS:Y:PLC:nCommand_RBV") {
   # Used internally and by the IOC to pick move type
   field(DESC, "Used internally and ...to pick move type")
   field(SCAN, "I/O Intr")
@@ -76606,7 +76606,7 @@ record(longin, "PF1L0:WFS:MMS:01:PLC:nCommand_RBV") {
   info(archive, "VAL")
 }
 
-record(longout, "PF1L0:WFS:MMS:01:PLC:nCommand") {
+record(longout, "PF1L0:WFS:MMS:Y:PLC:nCommand") {
   # Used internally and by the IOC to pick move type
   field(DESC, "Used internally and ...to pick move type")
   field(DTYP, "asynInt32")
@@ -76615,7 +76615,7 @@ record(longout, "PF1L0:WFS:MMS:01:PLC:nCommand") {
   info(archive, "VAL")
 }
 
-record(longin, "PF1L0:WFS:MMS:01:PLC:nCmdData_RBV") {
+record(longin, "PF1L0:WFS:MMS:Y:PLC:nCmdData_RBV") {
   # Used internally and by the IOC to pass extra args
   field(DESC, "Used internally and ...o pass extra args")
   field(SCAN, "I/O Intr")
@@ -76626,7 +76626,7 @@ record(longin, "PF1L0:WFS:MMS:01:PLC:nCmdData_RBV") {
   info(archive, "VAL")
 }
 
-record(longout, "PF1L0:WFS:MMS:01:PLC:nCmdData") {
+record(longout, "PF1L0:WFS:MMS:Y:PLC:nCmdData") {
   # Used internally and by the IOC to pass extra args
   field(DESC, "Used internally and ...o pass extra args")
   field(DTYP, "asynInt32")
@@ -76635,7 +76635,7 @@ record(longout, "PF1L0:WFS:MMS:01:PLC:nCmdData") {
   info(archive, "VAL")
 }
 
-record(ai, "PF1L0:WFS:MMS:01:PLC:fPosition_RBV") {
+record(ai, "PF1L0:WFS:MMS:Y:PLC:fPosition_RBV") {
   # Used internally and by the IOC as the set position
   field(DESC, "Used internally and ... the set position")
   field(SCAN, "I/O Intr")
@@ -76648,7 +76648,7 @@ record(ai, "PF1L0:WFS:MMS:01:PLC:fPosition_RBV") {
   info(archive, "VAL")
 }
 
-record(ao, "PF1L0:WFS:MMS:01:PLC:fPosition") {
+record(ao, "PF1L0:WFS:MMS:Y:PLC:fPosition") {
   # Used internally and by the IOC as the set position
   field(DESC, "Used internally and ... the set position")
   field(DTYP, "asynFloat64")
@@ -76658,7 +76658,7 @@ record(ao, "PF1L0:WFS:MMS:01:PLC:fPosition") {
   info(archive, "VAL")
 }
 
-record(ai, "PF1L0:WFS:MMS:01:PLC:fVelocity_RBV") {
+record(ai, "PF1L0:WFS:MMS:Y:PLC:fVelocity_RBV") {
   # Used internally and by the IOC to set velocity
   field(DESC, "Used internally and ...C to set velocity")
   field(SCAN, "I/O Intr")
@@ -76671,7 +76671,7 @@ record(ai, "PF1L0:WFS:MMS:01:PLC:fVelocity_RBV") {
   info(archive, "VAL")
 }
 
-record(ao, "PF1L0:WFS:MMS:01:PLC:fVelocity") {
+record(ao, "PF1L0:WFS:MMS:Y:PLC:fVelocity") {
   # Used internally and by the IOC to set velocity
   field(DESC, "Used internally and ...C to set velocity")
   field(DTYP, "asynFloat64")
@@ -76681,7 +76681,7 @@ record(ao, "PF1L0:WFS:MMS:01:PLC:fVelocity") {
   info(archive, "VAL")
 }
 
-record(ai, "PF1L0:WFS:MMS:01:PLC:fAcceleration_RBV") {
+record(ai, "PF1L0:WFS:MMS:Y:PLC:fAcceleration_RBV") {
   # Used internally and by the IOC to set acceleration
   field(DESC, "Used internally and ... set acceleration")
   field(SCAN, "I/O Intr")
@@ -76694,7 +76694,7 @@ record(ai, "PF1L0:WFS:MMS:01:PLC:fAcceleration_RBV") {
   info(archive, "VAL")
 }
 
-record(ao, "PF1L0:WFS:MMS:01:PLC:fAcceleration") {
+record(ao, "PF1L0:WFS:MMS:Y:PLC:fAcceleration") {
   # Used internally and by the IOC to set acceleration
   field(DESC, "Used internally and ... set acceleration")
   field(DTYP, "asynFloat64")
@@ -76704,7 +76704,7 @@ record(ao, "PF1L0:WFS:MMS:01:PLC:fAcceleration") {
   info(archive, "VAL")
 }
 
-record(ai, "PF1L0:WFS:MMS:01:PLC:fDeceleration_RBV") {
+record(ai, "PF1L0:WFS:MMS:Y:PLC:fDeceleration_RBV") {
   # Used internally and by the IOC to set deceleration
   field(DESC, "Used internally and ... set deceleration")
   field(SCAN, "I/O Intr")
@@ -76717,7 +76717,7 @@ record(ai, "PF1L0:WFS:MMS:01:PLC:fDeceleration_RBV") {
   info(archive, "VAL")
 }
 
-record(ao, "PF1L0:WFS:MMS:01:PLC:fDeceleration") {
+record(ao, "PF1L0:WFS:MMS:Y:PLC:fDeceleration") {
   # Used internally and by the IOC to set deceleration
   field(DESC, "Used internally and ... set deceleration")
   field(DTYP, "asynFloat64")
@@ -76727,7 +76727,7 @@ record(ao, "PF1L0:WFS:MMS:01:PLC:fDeceleration") {
   info(archive, "VAL")
 }
 
-record(ai, "PF1L0:WFS:MMS:01:PLC:fHomePosition_RBV") {
+record(ai, "PF1L0:WFS:MMS:Y:PLC:fHomePosition_RBV") {
   # Used internally and by the IOC to pick home position
   field(DESC, "Used internally and ...ick home position")
   field(SCAN, "I/O Intr")
@@ -76740,7 +76740,7 @@ record(ai, "PF1L0:WFS:MMS:01:PLC:fHomePosition_RBV") {
   info(archive, "VAL")
 }
 
-record(ao, "PF1L0:WFS:MMS:01:PLC:fHomePosition") {
+record(ao, "PF1L0:WFS:MMS:Y:PLC:fHomePosition") {
   # Used internally and by the IOC to pick home position
   field(DESC, "Used internally and ...ick home position")
   field(DTYP, "asynFloat64")
@@ -76750,7 +76750,7 @@ record(ao, "PF1L0:WFS:MMS:01:PLC:fHomePosition") {
   info(archive, "VAL")
 }
 
-record(longin, "PF1L0:WFS:MMS:01:PLC:nMotionAxisID_RBV") {
+record(longin, "PF1L0:WFS:MMS:Y:PLC:nMotionAxisID_RBV") {
   # Unique ID assigned to each axis in the NC
   field(DESC, "Unique ID assigned t...ch axis in the NC")
   field(SCAN, "I/O Intr")
@@ -76761,7 +76761,7 @@ record(longin, "PF1L0:WFS:MMS:01:PLC:nMotionAxisID_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bEnableDone_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bEnableDone_RBV") {
   field(DESC, "TRUE if done enabling")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76773,7 +76773,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bEnableDone_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bBusy_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bBusy_RBV") {
   field(DESC, "TRUE if in the middle of a command")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76785,7 +76785,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bBusy_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bDone_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bDone_RBV") {
   field(DESC, "TRUE if command finished successfully")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76797,7 +76797,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bDone_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bSafetyReady_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bSafetyReady_RBV") {
   field(DESC, "TRUE if safe to start a move")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76809,7 +76809,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bSafetyReady_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:01:PLC:bError_RBV") {
+record(bi, "PF1L0:WFS:MMS:Y:PLC:bError_RBV") {
   field(DESC, "TRUE if we")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76821,7 +76821,7 @@ record(bi, "PF1L0:WFS:MMS:01:PLC:bError_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "PF1L0:WFS:MMS:01:PLC:nErrorId_RBV") {
+record(longin, "PF1L0:WFS:MMS:Y:PLC:nErrorId_RBV") {
   field(DESC, "Error code if nonzero")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76831,7 +76831,7 @@ record(longin, "PF1L0:WFS:MMS:01:PLC:nErrorId_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PF1L0:WFS:MMS:01:PLC:sErrorMessage_RBV") {
+record(waveform, "PF1L0:WFS:MMS:Y:PLC:sErrorMessage_RBV") {
   field(DESC, "Message to identify the error state")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76843,7 +76843,7 @@ record(waveform, "PF1L0:WFS:MMS:01:PLC:sErrorMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bLimitForwardEnable_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bLimitForwardEnable_RBV") {
   field(DESC, "FALSE if forward limit hit")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76855,7 +76855,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bLimitForwardEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bLimitBackwardEnable_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bLimitBackwardEnable_RBV") {
   field(DESC, "FALSE if reverse limit hit")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76867,7 +76867,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bLimitBackwardEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bHome_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bHome_RBV") {
   field(DESC, "TRUE if at homing switch")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76879,7 +76879,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bHome_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bBrakeRelease_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bBrakeRelease_RBV") {
   field(DESC, "TRUE if brake released")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76891,7 +76891,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bBrakeRelease_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bHardwareEnable_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bHardwareEnable_RBV") {
   field(DESC, "TRUE if STO not hit")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76903,7 +76903,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bHardwareEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bAllForwardEnable_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bAllForwardEnable_RBV") {
   # Summary of axis permission to move forward
   field(DESC, "Summary of axis perm...n to move forward")
   field(SCAN, "I/O Intr")
@@ -76916,7 +76916,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bAllForwardEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bAllBackwardEnable_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bAllBackwardEnable_RBV") {
   # Summary of axis permission to move backward
   field(DESC, "Summary of axis perm... to move backward")
   field(SCAN, "I/O Intr")
@@ -76929,7 +76929,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bAllBackwardEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bAllEnable_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bAllEnable_RBV") {
   field(DESC, "Summary of axis permission to have power")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76941,7 +76941,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bAllEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bGantryForwardEnable_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bGantryForwardEnable_RBV") {
   field(DESC, "TRUE if gantry ok to move forward")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76953,7 +76953,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bGantryForwardEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bGantryBackwardEnable_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bGantryBackwardEnable_RBV") {
   field(DESC, "TRUE if gantry ok to move backward")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76965,7 +76965,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bGantryBackwardEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "PF1L0:WFS:MMS:02:PLC:nEncoderCount_RBV") {
+record(longin, "PF1L0:WFS:MMS:Z:PLC:nEncoderCount_RBV") {
   field(DESC, "Count from encoder hardware")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76975,7 +76975,7 @@ record(longin, "PF1L0:WFS:MMS:02:PLC:nEncoderCount_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PF1L0:WFS:MMS:02:PLC:sName_RBV") {
+record(waveform, "PF1L0:WFS:MMS:Z:PLC:sName_RBV") {
   field(DESC, "PLC program name")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76987,7 +76987,7 @@ record(waveform, "PF1L0:WFS:MMS:02:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bPowerSelf_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bPowerSelf_RBV") {
   field(DESC, "FALSE if axis is in PMPS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -76999,7 +76999,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bPowerSelf_RBV") {
   info(archive, "VAL")
 }
 
-record(mbbi, "PF1L0:WFS:MMS:02:PLC:nEnableMode_RBV") {
+record(mbbi, "PF1L0:WFS:MMS:Z:PLC:nEnableMode_RBV") {
   # Describes when the axis will automatically get power
   field(DESC, "Describes when the a...tically get power")
   field(SCAN, "I/O Intr")
@@ -77016,7 +77016,7 @@ record(mbbi, "PF1L0:WFS:MMS:02:PLC:nEnableMode_RBV") {
   info(archive, "VAL")
 }
 
-record(mbbi, "PF1L0:WFS:MMS:02:PLC:nBrakeMode_RBV") {
+record(mbbi, "PF1L0:WFS:MMS:Z:PLC:nBrakeMode_RBV") {
   # Describes when the brake will be released
   field(DESC, "Describes when the b... will be released")
   field(SCAN, "I/O Intr")
@@ -77033,7 +77033,7 @@ record(mbbi, "PF1L0:WFS:MMS:02:PLC:nBrakeMode_RBV") {
   info(archive, "VAL")
 }
 
-record(mbbi, "PF1L0:WFS:MMS:02:PLC:nHomingMode_RBV") {
+record(mbbi, "PF1L0:WFS:MMS:Z:PLC:nHomingMode_RBV") {
   field(DESC, "Describes our homing strategy")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -77055,7 +77055,7 @@ record(mbbi, "PF1L0:WFS:MMS:02:PLC:nHomingMode_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bGantryAxis_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bGantryAxis_RBV") {
   field(DESC, "TRUE if gantry EPS active")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -77067,7 +77067,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bGantryAxis_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bEnable_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bEnable_RBV") {
   field(DESC, "Used internally to request enables")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -77079,7 +77079,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "PF1L0:WFS:MMS:02:PLC:bEnable") {
+record(bo, "PF1L0:WFS:MMS:Z:PLC:bEnable") {
   field(DESC, "Used internally to request enables")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M32.bEnable=")
@@ -77089,7 +77089,7 @@ record(bo, "PF1L0:WFS:MMS:02:PLC:bEnable") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bReset_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bReset_RBV") {
   field(DESC, "Used internally to reset errors")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -77101,7 +77101,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bReset_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "PF1L0:WFS:MMS:02:PLC:bReset") {
+record(bo, "PF1L0:WFS:MMS:Z:PLC:bReset") {
   field(DESC, "Used internally to reset errors")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M32.bReset=")
@@ -77111,7 +77111,7 @@ record(bo, "PF1L0:WFS:MMS:02:PLC:bReset") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bExecute_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bExecute_RBV") {
   # Used internally and by the IOC to start or stop
   field(DESC, "Used internally and ... to start or stop")
   field(SCAN, "I/O Intr")
@@ -77124,7 +77124,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bExecute_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "PF1L0:WFS:MMS:02:PLC:bExecute") {
+record(bo, "PF1L0:WFS:MMS:Z:PLC:bExecute") {
   # Used internally and by the IOC to start or stop
   field(DESC, "Used internally and ... to start or stop")
   field(DTYP, "asynInt32")
@@ -77135,7 +77135,7 @@ record(bo, "PF1L0:WFS:MMS:02:PLC:bExecute") {
   info(archive, "VAL")
 }
 
-record(longin, "PF1L0:WFS:MMS:02:PLC:nCommand_RBV") {
+record(longin, "PF1L0:WFS:MMS:Z:PLC:nCommand_RBV") {
   # Used internally and by the IOC to pick move type
   field(DESC, "Used internally and ...to pick move type")
   field(SCAN, "I/O Intr")
@@ -77146,7 +77146,7 @@ record(longin, "PF1L0:WFS:MMS:02:PLC:nCommand_RBV") {
   info(archive, "VAL")
 }
 
-record(longout, "PF1L0:WFS:MMS:02:PLC:nCommand") {
+record(longout, "PF1L0:WFS:MMS:Z:PLC:nCommand") {
   # Used internally and by the IOC to pick move type
   field(DESC, "Used internally and ...to pick move type")
   field(DTYP, "asynInt32")
@@ -77155,7 +77155,7 @@ record(longout, "PF1L0:WFS:MMS:02:PLC:nCommand") {
   info(archive, "VAL")
 }
 
-record(longin, "PF1L0:WFS:MMS:02:PLC:nCmdData_RBV") {
+record(longin, "PF1L0:WFS:MMS:Z:PLC:nCmdData_RBV") {
   # Used internally and by the IOC to pass extra args
   field(DESC, "Used internally and ...o pass extra args")
   field(SCAN, "I/O Intr")
@@ -77166,7 +77166,7 @@ record(longin, "PF1L0:WFS:MMS:02:PLC:nCmdData_RBV") {
   info(archive, "VAL")
 }
 
-record(longout, "PF1L0:WFS:MMS:02:PLC:nCmdData") {
+record(longout, "PF1L0:WFS:MMS:Z:PLC:nCmdData") {
   # Used internally and by the IOC to pass extra args
   field(DESC, "Used internally and ...o pass extra args")
   field(DTYP, "asynInt32")
@@ -77175,7 +77175,7 @@ record(longout, "PF1L0:WFS:MMS:02:PLC:nCmdData") {
   info(archive, "VAL")
 }
 
-record(ai, "PF1L0:WFS:MMS:02:PLC:fPosition_RBV") {
+record(ai, "PF1L0:WFS:MMS:Z:PLC:fPosition_RBV") {
   # Used internally and by the IOC as the set position
   field(DESC, "Used internally and ... the set position")
   field(SCAN, "I/O Intr")
@@ -77188,7 +77188,7 @@ record(ai, "PF1L0:WFS:MMS:02:PLC:fPosition_RBV") {
   info(archive, "VAL")
 }
 
-record(ao, "PF1L0:WFS:MMS:02:PLC:fPosition") {
+record(ao, "PF1L0:WFS:MMS:Z:PLC:fPosition") {
   # Used internally and by the IOC as the set position
   field(DESC, "Used internally and ... the set position")
   field(DTYP, "asynFloat64")
@@ -77198,7 +77198,7 @@ record(ao, "PF1L0:WFS:MMS:02:PLC:fPosition") {
   info(archive, "VAL")
 }
 
-record(ai, "PF1L0:WFS:MMS:02:PLC:fVelocity_RBV") {
+record(ai, "PF1L0:WFS:MMS:Z:PLC:fVelocity_RBV") {
   # Used internally and by the IOC to set velocity
   field(DESC, "Used internally and ...C to set velocity")
   field(SCAN, "I/O Intr")
@@ -77211,7 +77211,7 @@ record(ai, "PF1L0:WFS:MMS:02:PLC:fVelocity_RBV") {
   info(archive, "VAL")
 }
 
-record(ao, "PF1L0:WFS:MMS:02:PLC:fVelocity") {
+record(ao, "PF1L0:WFS:MMS:Z:PLC:fVelocity") {
   # Used internally and by the IOC to set velocity
   field(DESC, "Used internally and ...C to set velocity")
   field(DTYP, "asynFloat64")
@@ -77221,7 +77221,7 @@ record(ao, "PF1L0:WFS:MMS:02:PLC:fVelocity") {
   info(archive, "VAL")
 }
 
-record(ai, "PF1L0:WFS:MMS:02:PLC:fAcceleration_RBV") {
+record(ai, "PF1L0:WFS:MMS:Z:PLC:fAcceleration_RBV") {
   # Used internally and by the IOC to set acceleration
   field(DESC, "Used internally and ... set acceleration")
   field(SCAN, "I/O Intr")
@@ -77234,7 +77234,7 @@ record(ai, "PF1L0:WFS:MMS:02:PLC:fAcceleration_RBV") {
   info(archive, "VAL")
 }
 
-record(ao, "PF1L0:WFS:MMS:02:PLC:fAcceleration") {
+record(ao, "PF1L0:WFS:MMS:Z:PLC:fAcceleration") {
   # Used internally and by the IOC to set acceleration
   field(DESC, "Used internally and ... set acceleration")
   field(DTYP, "asynFloat64")
@@ -77244,7 +77244,7 @@ record(ao, "PF1L0:WFS:MMS:02:PLC:fAcceleration") {
   info(archive, "VAL")
 }
 
-record(ai, "PF1L0:WFS:MMS:02:PLC:fDeceleration_RBV") {
+record(ai, "PF1L0:WFS:MMS:Z:PLC:fDeceleration_RBV") {
   # Used internally and by the IOC to set deceleration
   field(DESC, "Used internally and ... set deceleration")
   field(SCAN, "I/O Intr")
@@ -77257,7 +77257,7 @@ record(ai, "PF1L0:WFS:MMS:02:PLC:fDeceleration_RBV") {
   info(archive, "VAL")
 }
 
-record(ao, "PF1L0:WFS:MMS:02:PLC:fDeceleration") {
+record(ao, "PF1L0:WFS:MMS:Z:PLC:fDeceleration") {
   # Used internally and by the IOC to set deceleration
   field(DESC, "Used internally and ... set deceleration")
   field(DTYP, "asynFloat64")
@@ -77267,7 +77267,7 @@ record(ao, "PF1L0:WFS:MMS:02:PLC:fDeceleration") {
   info(archive, "VAL")
 }
 
-record(ai, "PF1L0:WFS:MMS:02:PLC:fHomePosition_RBV") {
+record(ai, "PF1L0:WFS:MMS:Z:PLC:fHomePosition_RBV") {
   # Used internally and by the IOC to pick home position
   field(DESC, "Used internally and ...ick home position")
   field(SCAN, "I/O Intr")
@@ -77280,7 +77280,7 @@ record(ai, "PF1L0:WFS:MMS:02:PLC:fHomePosition_RBV") {
   info(archive, "VAL")
 }
 
-record(ao, "PF1L0:WFS:MMS:02:PLC:fHomePosition") {
+record(ao, "PF1L0:WFS:MMS:Z:PLC:fHomePosition") {
   # Used internally and by the IOC to pick home position
   field(DESC, "Used internally and ...ick home position")
   field(DTYP, "asynFloat64")
@@ -77290,7 +77290,7 @@ record(ao, "PF1L0:WFS:MMS:02:PLC:fHomePosition") {
   info(archive, "VAL")
 }
 
-record(longin, "PF1L0:WFS:MMS:02:PLC:nMotionAxisID_RBV") {
+record(longin, "PF1L0:WFS:MMS:Z:PLC:nMotionAxisID_RBV") {
   # Unique ID assigned to each axis in the NC
   field(DESC, "Unique ID assigned t...ch axis in the NC")
   field(SCAN, "I/O Intr")
@@ -77301,7 +77301,7 @@ record(longin, "PF1L0:WFS:MMS:02:PLC:nMotionAxisID_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bEnableDone_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bEnableDone_RBV") {
   field(DESC, "TRUE if done enabling")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -77313,7 +77313,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bEnableDone_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bBusy_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bBusy_RBV") {
   field(DESC, "TRUE if in the middle of a command")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -77325,7 +77325,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bBusy_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bDone_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bDone_RBV") {
   field(DESC, "TRUE if command finished successfully")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -77337,7 +77337,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bDone_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bSafetyReady_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bSafetyReady_RBV") {
   field(DESC, "TRUE if safe to start a move")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -77349,7 +77349,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bSafetyReady_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "PF1L0:WFS:MMS:02:PLC:bError_RBV") {
+record(bi, "PF1L0:WFS:MMS:Z:PLC:bError_RBV") {
   field(DESC, "TRUE if we")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -77361,7 +77361,7 @@ record(bi, "PF1L0:WFS:MMS:02:PLC:bError_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "PF1L0:WFS:MMS:02:PLC:nErrorId_RBV") {
+record(longin, "PF1L0:WFS:MMS:Z:PLC:nErrorId_RBV") {
   field(DESC, "Error code if nonzero")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -77371,7 +77371,7 @@ record(longin, "PF1L0:WFS:MMS:02:PLC:nErrorId_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PF1L0:WFS:MMS:02:PLC:sErrorMessage_RBV") {
+record(waveform, "PF1L0:WFS:MMS:Z:PLC:sErrorMessage_RBV") {
   field(DESC, "Message to identify the error state")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
