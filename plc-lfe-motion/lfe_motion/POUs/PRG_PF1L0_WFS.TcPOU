@@ -1,16 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_PF1L0_WFS" Id="{ffa57a7d-9d02-44af-b3b1-a3a307e22cab}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_PF1L0_WFS
 VAR
-    fbMotion1: FB_SimMotor;
-    fbMotion2: FB_SimMotor;
+    {attribute 'pytmc' := '
+        pv: PF1L0:WFS
+        io: io
+    '}
+    {attribute 'TcLinkTo' := '.fbThermoCouple1.bError := TIIB[PF1L0-EL3314]^TC Inputs Channel 1^Status^Error;
+                              .fbThermoCouple1.bUnderrange := TIIB[PF1L0-EL3314]^TC Inputs Channel 1^Status^Underrange;
+                              .fbThermoCouple1.bOverrange := TIIB[PF1L0-EL3314]^TC Inputs Channel 1^Status^Overrange;
+                              .fbThermoCouple1.iRaw := TIIB[PF1L0-EL3314]^TC Inputs Channel 1^Value;
+                              .fbThermoCouple2.bError := TIIB[PF1L0-EL3314]^TC Inputs Channel 2^Status^Error;
+                              .fbThermoCouple2.bUnderrange := TIIB[PF1L0-EL3314]^TC Inputs Channel 2^Status^Underrange;
+                              .fbThermoCouple2.bOverrange := TIIB[PF1L0-EL3314]^TC Inputs Channel 2^Status^Overrange;
+                              .fbThermoCouple2.iRaw := TIIB[PF1L0-EL3314]^TC Inputs Channel 2^Value'}
+    fbPF1L0: FB_WFS;
+    stSiBP: ST_BeamParams := PMPS_GVL.cstFullBeam;
+    stFoilBP: ST_BeamParams := PMPS_GVL.cstFullBeam;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// Placeholder, standard simulated motion for all axes
-fbMotion1(stMotionStage := Main.M31);
-fbMotion2(stMotionStage := Main.M32);]]></ST>
+      <ST><![CDATA[(*
+   Avoid damage peak between 1.6 keV and 3.2 keV
+   Boundaries are upper boundary of eV range
+    1.7E3,  2.5E3,  5.0E3,  7.0E3,  7.7E3,  8.9E3, 10.0E3, 11.1E3,
+   12.0E3, 14.0E3, 16.0E3, 16.9E3, 18.0E3, 20.0E3, 22.0E3, 24.0E3
+   0       0       0       1       1      1       1       1
+   1       1       1       1       1      1       1       1
+*)
+stSiBP.neVRange := 2#0001_1111_1111_1111;
+// Drop transmission to 20%
+stSiBP.nTran := 20;
+
+fbPF1L0.nTransitionAssertionID := 16#3100;
+fbPF1L0.nUnknownAssertionID := 16#3109;
+
+fbPF1L0.stOut.fPosition := -13;
+fbPF1L0.stOut.bUseRawCounts := FALSE;
+fbPF1L0.stOut.nRequestAssertionID := 16#3101;
+fbPF1L0.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
+fbPF1L0.stOut.bValid := TRUE;
+
+fbPF1L0.stTarget1.fPosition := -93.77;
+fbPF1L0.stTarget1.bUseRawCounts := FALSE;
+fbPF1L0.stTarget1.nRequestAssertionID := 16#3102;
+fbPF1L0.stTarget1.stBeamParams := stSiBP;
+fbPF1L0.stTarget1.bValid := TRUE;
+
+fbPF1L0.stTarget2.fPosition := -79.402;
+fbPF1L0.stTarget2.bUseRawCounts := FALSE;
+fbPF1L0.stTarget2.nRequestAssertionID := 16#3103;
+fbPF1L0.stTarget2.stBeamParams := stSiBP;
+fbPF1L0.stTarget2.bValid := TRUE;
+
+fbPF1L0.stTarget3.fPosition := -65.028;
+fbPF1L0.stTarget3.bUseRawCounts := FALSE;
+fbPF1L0.stTarget3.nRequestAssertionID := 16#3104;
+fbPF1L0.stTarget3.stBeamParams := stSiBP;
+fbPF1L0.stTarget3.bValid := TRUE;
+
+fbPF1L0.stTarget4.fPosition := -50.652;
+fbPF1L0.stTarget4.bUseRawCounts := FALSE;
+fbPF1L0.stTarget4.nRequestAssertionID := 16#3105;
+fbPF1L0.stTarget4.stBeamParams := stSiBP;
+fbPF1L0.stTarget4.bValid := TRUE;
+
+fbPF1L0.stTarget5.fPosition := -36.277;
+fbPF1L0.stTarget5.bUseRawCounts := FALSE;
+fbPF1L0.stTarget5.nRequestAssertionID := 16#3106;
+fbPF1L0.stTarget5.stBeamParams := stSiBP;
+fbPF1L0.stTarget5.bValid := TRUE;
+
+(*
+Currently disconnected
+fbPF1L0(
+    fbArbiter := GVL.fbArbiter,
+    fbFFHWO := GVL.fbFastFaultOutput1,
+    stYStage := Main.M31,
+    stZStage := Main.M32);
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

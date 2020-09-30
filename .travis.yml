@@ -20,6 +20,11 @@ jobs:
       env: TWINCAT_STYLE=1
     - name: Pre-commit Checks
       env: PRE_COMMIT=1
+  allow_failures:
+    - name: Twincat Style
+      env: TWINCAT_STYLE=1
+    - name: Pre-commit Checks
+      env: PRE_COMMIT=1
 
 install:
   # Import the helper scripts
