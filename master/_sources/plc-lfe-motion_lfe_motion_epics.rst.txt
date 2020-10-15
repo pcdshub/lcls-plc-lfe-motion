@@ -2728,13 +2728,13 @@ lcls2_cc_lib.FB_PPM
 
     * - $(PREFIX):MMS:STATE:PMPS:ARB:ENABLE
       - bo
-      - $(SYMBOL).fbStates.fbStatePMPS.bArbiterEnabled
+      - $(SYMBOL).fbStates.bArbiterEnabled
       - | io: output
 
 
     * - $(PREFIX):MMS:STATE:PMPS:ARB:ENABLE_RBV
       - bi
-      - $(SYMBOL).fbStates.fbStatePMPS.bArbiterEnabled
+      - $(SYMBOL).fbStates.bArbiterEnabled
       - | io: output
 
 
@@ -3790,13 +3790,13 @@ lcls2_cc_lib.FB_PPM_States
 
     * - $(PREFIX):PMPS:ARB:ENABLE
       - bo
-      - $(SYMBOL).fbStatePMPS.bArbiterEnabled
+      - $(SYMBOL).bArbiterEnabled
       - | io: output
 
 
     * - $(PREFIX):PMPS:ARB:ENABLE_RBV
       - bi
-      - $(SYMBOL).fbStatePMPS.bArbiterEnabled
+      - $(SYMBOL).bArbiterEnabled
       - | io: output
 
 
@@ -4574,13 +4574,13 @@ lcls2_cc_lib.FB_WFS
 
     * - $(PREFIX):MMS:STATE:PMPS:ARB:ENABLE
       - bo
-      - $(SYMBOL).fbStates.fbStatePMPS.bArbiterEnabled
+      - $(SYMBOL).fbStates.bArbiterEnabled
       - | io: output
 
 
     * - $(PREFIX):MMS:STATE:PMPS:ARB:ENABLE_RBV
       - bi
-      - $(SYMBOL).fbStates.fbStatePMPS.bArbiterEnabled
+      - $(SYMBOL).fbStates.bArbiterEnabled
       - | io: output
 
 
@@ -5406,13 +5406,13 @@ lcls2_cc_lib.FB_WFS_States
 
     * - $(PREFIX):PMPS:ARB:ENABLE
       - bo
-      - $(SYMBOL).fbStatePMPS.bArbiterEnabled
+      - $(SYMBOL).bArbiterEnabled
       - | io: output
 
 
     * - $(PREFIX):PMPS:ARB:ENABLE_RBV
       - bi
-      - $(SYMBOL).fbStatePMPS.bArbiterEnabled
+      - $(SYMBOL).bArbiterEnabled
       - | io: output
 
 
@@ -6384,13 +6384,13 @@ lcls2_cc_lib.FB_XPIM
 
     * - $(PREFIX):MMS:STATE:PMPS:ARB:ENABLE
       - bo
-      - $(SYMBOL).fbStates.fbStatePMPS.bArbiterEnabled
+      - $(SYMBOL).fbStates.bArbiterEnabled
       - | io: output
 
 
     * - $(PREFIX):MMS:STATE:PMPS:ARB:ENABLE_RBV
       - bi
-      - $(SYMBOL).fbStates.fbStatePMPS.bArbiterEnabled
+      - $(SYMBOL).fbStates.bArbiterEnabled
       - | io: output
 
 
@@ -7382,13 +7382,13 @@ lcls2_cc_lib.FB_XPIM_States
 
     * - $(PREFIX):PMPS:ARB:ENABLE
       - bo
-      - $(SYMBOL).fbStatePMPS.bArbiterEnabled
+      - $(SYMBOL).bArbiterEnabled
       - | io: output
 
 
     * - $(PREFIX):PMPS:ARB:ENABLE_RBV
       - bi
-      - $(SYMBOL).fbStatePMPS.bArbiterEnabled
+      - $(SYMBOL).bArbiterEnabled
       - | io: output
 
 
@@ -10416,13 +10416,13 @@ lcls_twincat_motion.FB_PositionStateBase_WithPMPS
 
     * - $(PREFIX):PMPS:ARB:ENABLE
       - bo
-      - $(SYMBOL).fbStatePMPS.bArbiterEnabled
+      - $(SYMBOL).bArbiterEnabled
       - | io: output
 
 
     * - $(PREFIX):PMPS:ARB:ENABLE_RBV
       - bi
-      - $(SYMBOL).fbStatePMPS.bArbiterEnabled
+      - $(SYMBOL).bArbiterEnabled
       - | io: output
 
 
@@ -11412,18 +11412,6 @@ lcls_twincat_motion.FB_PositionStatePMPS
       - Type
       - Description
       - Pragma
-    * - $(PREFIX):ARB:ENABLE
-      - bo
-      - $(SYMBOL).bArbiterEnabled
-      - | io: output
-
-
-    * - $(PREFIX):ARB:ENABLE_RBV
-      - bi
-      - $(SYMBOL).bArbiterEnabled
-      - | io: output
-
-
     * - $(PREFIX):MAINT
       - bo
       - $(SYMBOL).bMaintMode
@@ -11448,18 +11436,6 @@ lcls_twincat_motion.FB_PositionStatePMPS_Base
       - Type
       - Description
       - Pragma
-    * - $(PREFIX):ARB:ENABLE
-      - bo
-      - $(SYMBOL).bArbiterEnabled
-      - | io: output
-
-
-    * - $(PREFIX):ARB:ENABLE_RBV
-      - bi
-      - $(SYMBOL).bArbiterEnabled
-      - | io: output
-
-
     * - $(PREFIX):MAINT
       - bo
       - $(SYMBOL).bMaintMode
@@ -19828,7 +19804,7 @@ PMPS.FB_SubSysToArbiter_IO
       - | io: input
 
 
-    
+     
 PMPS.ST_BeamParams
 ^^^^^^^^^^^^^^^^^^
 
@@ -43136,13 +43112,13 @@ Database Records
 
     * - IM1L0:XTES:MMS:STATE:PMPS:ARB:ENABLE
       - bo
-      - PRG_IM1L0_XTES.fbIM1L0.fbStates.fbStatePMPS.bArbiterEnabled
+      - PRG_IM1L0_XTES.fbIM1L0.fbStates.bArbiterEnabled
       - | io: output
 
 
     * - IM1L0:XTES:MMS:STATE:PMPS:ARB:ENABLE_RBV
       - bi
-      - PRG_IM1L0_XTES.fbIM1L0.fbStates.fbStatePMPS.bArbiterEnabled
+      - PRG_IM1L0_XTES.fbIM1L0.fbStates.bArbiterEnabled
       - | io: output
 
 
@@ -44270,13 +44246,13 @@ Database Records
 
     * - IM1L1:PPM:MMS:STATE:PMPS:ARB:ENABLE
       - bo
-      - PRG_IM1L1_PPM.fbIM1L1.fbStates.fbStatePMPS.bArbiterEnabled
+      - PRG_IM1L1_PPM.fbIM1L1.fbStates.bArbiterEnabled
       - | io: output
 
 
     * - IM1L1:PPM:MMS:STATE:PMPS:ARB:ENABLE_RBV
       - bi
-      - PRG_IM1L1_PPM.fbIM1L1.fbStates.fbStatePMPS.bArbiterEnabled
+      - PRG_IM1L1_PPM.fbIM1L1.fbStates.bArbiterEnabled
       - | io: output
 
 
@@ -46312,13 +46288,13 @@ Database Records
 
     * - IM2L0:XTES:MMS:STATE:PMPS:ARB:ENABLE
       - bo
-      - PRG_IM2L0_XTES.fbIM2L0.fbStates.fbStatePMPS.bArbiterEnabled
+      - PRG_IM2L0_XTES.fbIM2L0.fbStates.bArbiterEnabled
       - | io: output
 
 
     * - IM2L0:XTES:MMS:STATE:PMPS:ARB:ENABLE_RBV
       - bi
-      - PRG_IM2L0_XTES.fbIM2L0.fbStates.fbStatePMPS.bArbiterEnabled
+      - PRG_IM2L0_XTES.fbIM2L0.fbStates.bArbiterEnabled
       - | io: output
 
 
@@ -47446,13 +47422,13 @@ Database Records
 
     * - IM3L0:PPM:MMS:STATE:PMPS:ARB:ENABLE
       - bo
-      - PRG_IM3L0_PPM.fbIM3L0.fbStates.fbStatePMPS.bArbiterEnabled
+      - PRG_IM3L0_PPM.fbIM3L0.fbStates.bArbiterEnabled
       - | io: output
 
 
     * - IM3L0:PPM:MMS:STATE:PMPS:ARB:ENABLE_RBV
       - bi
-      - PRG_IM3L0_PPM.fbIM3L0.fbStates.fbStatePMPS.bArbiterEnabled
+      - PRG_IM3L0_PPM.fbIM3L0.fbStates.bArbiterEnabled
       - | io: output
 
 
@@ -49488,13 +49464,13 @@ Database Records
 
     * - IM4L0:XTES:MMS:STATE:PMPS:ARB:ENABLE
       - bo
-      - PRG_IM4L0_XTES.fbIM4L0.fbStates.fbStatePMPS.bArbiterEnabled
+      - PRG_IM4L0_XTES.fbIM4L0.fbStates.bArbiterEnabled
       - | io: output
 
 
     * - IM4L0:XTES:MMS:STATE:PMPS:ARB:ENABLE_RBV
       - bi
-      - PRG_IM4L0_XTES.fbIM4L0.fbStates.fbStatePMPS.bArbiterEnabled
+      - PRG_IM4L0_XTES.fbIM4L0.fbStates.bArbiterEnabled
       - | io: output
 
 
@@ -50276,13 +50252,13 @@ Database Records
 
     * - PF1L0:WFS:MMS:STATE:PMPS:ARB:ENABLE
       - bo
-      - PRG_PF1L0_WFS.fbPF1L0.fbStates.fbStatePMPS.bArbiterEnabled
+      - PRG_PF1L0_WFS.fbPF1L0.fbStates.bArbiterEnabled
       - | io: output
 
 
     * - PF1L0:WFS:MMS:STATE:PMPS:ARB:ENABLE_RBV
       - bi
-      - PRG_PF1L0_WFS.fbPF1L0.fbStates.fbStatePMPS.bArbiterEnabled
+      - PRG_PF1L0_WFS.fbPF1L0.fbStates.bArbiterEnabled
       - | io: output
 
 
