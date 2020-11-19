@@ -15,6 +15,7 @@ VAR
     fbFFO4: FB_BasicMotionStageFFO := (sName := 'SP1L0:KMONO:MMS:04');
     fbFFO6: FB_BasicMotionStageFFO := (sName := 'SP1L0:KMONO:MMS:06');
     *)
+    stOkBeam: ST_BeamParams := PMPS_GVL.cstFullBeam;
     bEnergyOk: BOOL;
 
     fbXTALFFO: FB_FastFault;
@@ -31,8 +32,16 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// bEnergyOk := PMPS_GVL.stCurrentBeamParameters.neVRange ??? looks like range is <1.7keV
-bEnergyOK := FALSE;
+      <ST><![CDATA[(*
+   Only allow 7.7-8.9 keV
+   Boundaries are upper boundary of eV range
+   24.0E3, 22.0E3, 20.0E3, 18.0E3, 16.9E3, 16.0E3, 14.0E3, 12.0E3,
+   11.1E3, 10.0E3, 8.9E3,  7.7E3,  7.0E3,  5.0E3,  2.5E3,  1.7E3,
+   0       0       0       0       0       0       0       0
+   0       0       1       1       0       0       0       0
+*)
+stOkBeam.neVRange := 2#0000_0000_0011_0000;
+bEnergyOK := F_SafeBPCompare(PMPS_GVL.stCurrentBeamParameters, stOkBeam);
 
 // Motor 1 XTAL ANGLE X (SP1L0-KMONO-MMS-01)
 Main.M49.bLimitForwardEnable  := TRUE;    //TRUE
@@ -63,8 +72,7 @@ fbXTALFFO(
     i_xReset := bXtalOut OR (bXtalIn AND bEnergyOk),
     i_xAutoReset := TRUE,
     i_DevName := Main.M50.sName,
-    //i_Desc := 'Unsafe eV Range',
-    i_Desc := 'Override if 7.7-8.9keV',
+    i_Desc := 'Unsafe eV Range: needs 7.7-8.9keV',
     io_fbFFHWO := GVL.fbFastFaultOutput1);
 
 // Motor 3 RETICLE HORIZ X (SP1L0-KMONO-MMS-03)
@@ -86,8 +94,8 @@ fbMotion4(stMotionStage:=Main.M52);
 //       fbFFHWO := GVL.fbFastFaultOutput1);
 // Andy says: trip reticle if not OUT
 // OUT is 1.55843, in is high limit switch
-// NOTE: we don't have an encoder or an LVDT on this axis! We will use a composition with the low limit switch
-bRetOut := Main.M52.stAxisStatus.fActPosition > 0 AND NOT Main.M52.bLimitForwardEnable;
+// NOTE: we don't have an encoder or an LVDT on this axis! We will use the out switch
+bRetOut := NOT Main.M52.bLimitForwardEnable;
 fbRetFFO(
     i_xOk := bRetOut,
     i_xAutoReset := TRUE,
