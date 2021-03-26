@@ -10589,16 +10589,16 @@ lcls_twincat_motion.DUT_MotionStage
     * - $(PREFIX):PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - $(PREFIX):PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -10621,16 +10621,16 @@ lcls_twincat_motion.DUT_MotionStage
     * - $(PREFIX):PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - $(PREFIX):PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -10763,9 +10763,25 @@ lcls_twincat_motion.DUT_MotionStage
     * - $(PREFIX):PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - $(PREFIX):PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - $(PREFIX):PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - $(PREFIX):PLC:fAcceleration
@@ -10802,6 +10818,12 @@ lcls_twincat_motion.DUT_MotionStage
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - $(PREFIX):PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - $(PREFIX):PLC:fPosition
@@ -23958,16 +23980,16 @@ Database Records
     * - AT2L0:XTES:MMS:01:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:01:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -23990,16 +24012,16 @@ Database Records
     * - AT2L0:XTES:MMS:01:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:01:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -24132,9 +24154,25 @@ Database Records
     * - AT2L0:XTES:MMS:01:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:01:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:01:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:01:PLC:fAcceleration
@@ -24171,6 +24209,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:01:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:01:PLC:fPosition
@@ -25401,16 +25445,16 @@ Database Records
     * - AT2L0:XTES:MMS:02:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:02:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -25433,16 +25477,16 @@ Database Records
     * - AT2L0:XTES:MMS:02:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:02:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -25575,9 +25619,25 @@ Database Records
     * - AT2L0:XTES:MMS:02:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:02:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:02:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:02:PLC:fAcceleration
@@ -25614,6 +25674,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:02:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:02:PLC:fPosition
@@ -26844,16 +26910,16 @@ Database Records
     * - AT2L0:XTES:MMS:03:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:03:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -26876,16 +26942,16 @@ Database Records
     * - AT2L0:XTES:MMS:03:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:03:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -27018,9 +27084,25 @@ Database Records
     * - AT2L0:XTES:MMS:03:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:03:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:03:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:03:PLC:fAcceleration
@@ -27057,6 +27139,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:03:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:03:PLC:fPosition
@@ -28287,16 +28375,16 @@ Database Records
     * - AT2L0:XTES:MMS:04:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:04:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -28319,16 +28407,16 @@ Database Records
     * - AT2L0:XTES:MMS:04:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:04:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -28461,9 +28549,25 @@ Database Records
     * - AT2L0:XTES:MMS:04:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:04:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:04:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:04:PLC:fAcceleration
@@ -28500,6 +28604,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:04:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:04:PLC:fPosition
@@ -29730,16 +29840,16 @@ Database Records
     * - AT2L0:XTES:MMS:05:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:05:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -29762,16 +29872,16 @@ Database Records
     * - AT2L0:XTES:MMS:05:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:05:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -29904,9 +30014,25 @@ Database Records
     * - AT2L0:XTES:MMS:05:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:05:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:05:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:05:PLC:fAcceleration
@@ -29943,6 +30069,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:05:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:05:PLC:fPosition
@@ -31173,16 +31305,16 @@ Database Records
     * - AT2L0:XTES:MMS:06:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:06:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -31205,16 +31337,16 @@ Database Records
     * - AT2L0:XTES:MMS:06:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:06:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -31347,9 +31479,25 @@ Database Records
     * - AT2L0:XTES:MMS:06:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:06:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:06:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:06:PLC:fAcceleration
@@ -31386,6 +31534,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:06:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:06:PLC:fPosition
@@ -32616,16 +32770,16 @@ Database Records
     * - AT2L0:XTES:MMS:07:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:07:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -32648,16 +32802,16 @@ Database Records
     * - AT2L0:XTES:MMS:07:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:07:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -32790,9 +32944,25 @@ Database Records
     * - AT2L0:XTES:MMS:07:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:07:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:07:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:07:PLC:fAcceleration
@@ -32829,6 +32999,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:07:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:07:PLC:fPosition
@@ -34059,16 +34235,16 @@ Database Records
     * - AT2L0:XTES:MMS:08:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:08:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -34091,16 +34267,16 @@ Database Records
     * - AT2L0:XTES:MMS:08:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:08:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -34233,9 +34409,25 @@ Database Records
     * - AT2L0:XTES:MMS:08:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:08:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:08:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:08:PLC:fAcceleration
@@ -34272,6 +34464,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:08:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:08:PLC:fPosition
@@ -35502,16 +35700,16 @@ Database Records
     * - AT2L0:XTES:MMS:09:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:09:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -35534,16 +35732,16 @@ Database Records
     * - AT2L0:XTES:MMS:09:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:09:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -35676,9 +35874,25 @@ Database Records
     * - AT2L0:XTES:MMS:09:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:09:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:09:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:09:PLC:fAcceleration
@@ -35715,6 +35929,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:09:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:09:PLC:fPosition
@@ -36945,16 +37165,16 @@ Database Records
     * - AT2L0:XTES:MMS:10:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:10:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -36977,16 +37197,16 @@ Database Records
     * - AT2L0:XTES:MMS:10:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:10:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -37119,9 +37339,25 @@ Database Records
     * - AT2L0:XTES:MMS:10:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:10:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:10:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:10:PLC:fAcceleration
@@ -37158,6 +37394,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:10:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:10:PLC:fPosition
@@ -38388,16 +38630,16 @@ Database Records
     * - AT2L0:XTES:MMS:11:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:11:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -38420,16 +38662,16 @@ Database Records
     * - AT2L0:XTES:MMS:11:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:11:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -38562,9 +38804,25 @@ Database Records
     * - AT2L0:XTES:MMS:11:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:11:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:11:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:11:PLC:fAcceleration
@@ -38601,6 +38859,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:11:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:11:PLC:fPosition
@@ -39831,16 +40095,16 @@ Database Records
     * - AT2L0:XTES:MMS:12:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:12:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -39863,16 +40127,16 @@ Database Records
     * - AT2L0:XTES:MMS:12:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:12:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -40005,9 +40269,25 @@ Database Records
     * - AT2L0:XTES:MMS:12:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:12:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:12:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:12:PLC:fAcceleration
@@ -40044,6 +40324,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:12:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:12:PLC:fPosition
@@ -41274,16 +41560,16 @@ Database Records
     * - AT2L0:XTES:MMS:13:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:13:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -41306,16 +41592,16 @@ Database Records
     * - AT2L0:XTES:MMS:13:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:13:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -41448,9 +41734,25 @@ Database Records
     * - AT2L0:XTES:MMS:13:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:13:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:13:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:13:PLC:fAcceleration
@@ -41487,6 +41789,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:13:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:13:PLC:fPosition
@@ -42717,16 +43025,16 @@ Database Records
     * - AT2L0:XTES:MMS:14:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:14:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -42749,16 +43057,16 @@ Database Records
     * - AT2L0:XTES:MMS:14:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:14:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -42891,9 +43199,25 @@ Database Records
     * - AT2L0:XTES:MMS:14:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:14:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:14:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:14:PLC:fAcceleration
@@ -42930,6 +43254,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:14:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:14:PLC:fPosition
@@ -44160,16 +44490,16 @@ Database Records
     * - AT2L0:XTES:MMS:15:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:15:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -44192,16 +44522,16 @@ Database Records
     * - AT2L0:XTES:MMS:15:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:15:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -44334,9 +44664,25 @@ Database Records
     * - AT2L0:XTES:MMS:15:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:15:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:15:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:15:PLC:fAcceleration
@@ -44373,6 +44719,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:15:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:15:PLC:fPosition
@@ -45603,16 +45955,16 @@ Database Records
     * - AT2L0:XTES:MMS:16:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:16:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -45635,16 +45987,16 @@ Database Records
     * - AT2L0:XTES:MMS:16:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:16:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -45777,9 +46129,25 @@ Database Records
     * - AT2L0:XTES:MMS:16:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:16:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:16:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:16:PLC:fAcceleration
@@ -45816,6 +46184,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:16:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:16:PLC:fPosition
@@ -47046,16 +47420,16 @@ Database Records
     * - AT2L0:XTES:MMS:17:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:17:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -47078,16 +47452,16 @@ Database Records
     * - AT2L0:XTES:MMS:17:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:17:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -47220,9 +47594,25 @@ Database Records
     * - AT2L0:XTES:MMS:17:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:17:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:17:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:17:PLC:fAcceleration
@@ -47259,6 +47649,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:17:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:17:PLC:fPosition
@@ -48489,16 +48885,16 @@ Database Records
     * - AT2L0:XTES:MMS:18:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:18:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -48521,16 +48917,16 @@ Database Records
     * - AT2L0:XTES:MMS:18:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:18:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -48663,9 +49059,25 @@ Database Records
     * - AT2L0:XTES:MMS:18:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:18:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:18:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:18:PLC:fAcceleration
@@ -48702,6 +49114,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:18:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:18:PLC:fPosition
@@ -49932,16 +50350,16 @@ Database Records
     * - AT2L0:XTES:MMS:19:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:19:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -49964,16 +50382,16 @@ Database Records
     * - AT2L0:XTES:MMS:19:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - AT2L0:XTES:MMS:19:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -50106,9 +50524,25 @@ Database Records
     * - AT2L0:XTES:MMS:19:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - AT2L0:XTES:MMS:19:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - AT2L0:XTES:MMS:19:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - AT2L0:XTES:MMS:19:PLC:fAcceleration
@@ -50145,6 +50579,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - AT2L0:XTES:MMS:19:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - AT2L0:XTES:MMS:19:PLC:fPosition
@@ -51463,16 +51903,16 @@ Database Records
     * - IM1L0:XTES:CLF:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM1L0:XTES:CLF:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -51495,16 +51935,16 @@ Database Records
     * - IM1L0:XTES:CLF:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM1L0:XTES:CLF:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -51637,9 +52077,25 @@ Database Records
     * - IM1L0:XTES:CLF:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - IM1L0:XTES:CLF:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - IM1L0:XTES:CLF:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - IM1L0:XTES:CLF:PLC:fAcceleration
@@ -51676,6 +52132,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - IM1L0:XTES:CLF:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - IM1L0:XTES:CLF:PLC:fPosition
@@ -51825,16 +52287,16 @@ Database Records
     * - IM1L0:XTES:CLZ:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM1L0:XTES:CLZ:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -51857,16 +52319,16 @@ Database Records
     * - IM1L0:XTES:CLZ:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM1L0:XTES:CLZ:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -51999,9 +52461,25 @@ Database Records
     * - IM1L0:XTES:CLZ:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - IM1L0:XTES:CLZ:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - IM1L0:XTES:CLZ:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - IM1L0:XTES:CLZ:PLC:fAcceleration
@@ -52038,6 +52516,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - IM1L0:XTES:CLZ:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - IM1L0:XTES:CLZ:PLC:fPosition
@@ -52261,16 +52745,16 @@ Database Records
     * - IM1L0:XTES:MMS:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM1L0:XTES:MMS:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -52293,16 +52777,16 @@ Database Records
     * - IM1L0:XTES:MMS:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM1L0:XTES:MMS:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -52435,9 +52919,25 @@ Database Records
     * - IM1L0:XTES:MMS:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - IM1L0:XTES:MMS:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - IM1L0:XTES:MMS:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - IM1L0:XTES:MMS:PLC:fAcceleration
@@ -52474,6 +52974,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - IM1L0:XTES:MMS:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - IM1L0:XTES:MMS:PLC:fPosition
@@ -53764,16 +54270,16 @@ Database Records
     * - IM1L1:PPM:MMS:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM1L1:PPM:MMS:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -53796,16 +54302,16 @@ Database Records
     * - IM1L1:PPM:MMS:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM1L1:PPM:MMS:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -53938,9 +54444,25 @@ Database Records
     * - IM1L1:PPM:MMS:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - IM1L1:PPM:MMS:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - IM1L1:PPM:MMS:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - IM1L1:PPM:MMS:PLC:fAcceleration
@@ -53977,6 +54499,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - IM1L1:PPM:MMS:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - IM1L1:PPM:MMS:PLC:fPosition
@@ -55437,16 +55965,16 @@ Database Records
     * - IM2L0:XTES:CLF:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM2L0:XTES:CLF:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -55469,16 +55997,16 @@ Database Records
     * - IM2L0:XTES:CLF:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM2L0:XTES:CLF:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -55611,9 +56139,25 @@ Database Records
     * - IM2L0:XTES:CLF:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - IM2L0:XTES:CLF:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - IM2L0:XTES:CLF:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - IM2L0:XTES:CLF:PLC:fAcceleration
@@ -55650,6 +56194,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - IM2L0:XTES:CLF:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - IM2L0:XTES:CLF:PLC:fPosition
@@ -55799,16 +56349,16 @@ Database Records
     * - IM2L0:XTES:CLZ:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM2L0:XTES:CLZ:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -55831,16 +56381,16 @@ Database Records
     * - IM2L0:XTES:CLZ:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM2L0:XTES:CLZ:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -55973,9 +56523,25 @@ Database Records
     * - IM2L0:XTES:CLZ:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - IM2L0:XTES:CLZ:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - IM2L0:XTES:CLZ:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - IM2L0:XTES:CLZ:PLC:fAcceleration
@@ -56012,6 +56578,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - IM2L0:XTES:CLZ:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - IM2L0:XTES:CLZ:PLC:fPosition
@@ -56235,16 +56807,16 @@ Database Records
     * - IM2L0:XTES:MMS:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM2L0:XTES:MMS:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -56267,16 +56839,16 @@ Database Records
     * - IM2L0:XTES:MMS:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM2L0:XTES:MMS:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -56409,9 +56981,25 @@ Database Records
     * - IM2L0:XTES:MMS:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - IM2L0:XTES:MMS:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - IM2L0:XTES:MMS:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - IM2L0:XTES:MMS:PLC:fAcceleration
@@ -56448,6 +57036,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - IM2L0:XTES:MMS:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - IM2L0:XTES:MMS:PLC:fPosition
@@ -57738,16 +58332,16 @@ Database Records
     * - IM3L0:PPM:MMS:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM3L0:PPM:MMS:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -57770,16 +58364,16 @@ Database Records
     * - IM3L0:PPM:MMS:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM3L0:PPM:MMS:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -57912,9 +58506,25 @@ Database Records
     * - IM3L0:PPM:MMS:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - IM3L0:PPM:MMS:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - IM3L0:PPM:MMS:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - IM3L0:PPM:MMS:PLC:fAcceleration
@@ -57951,6 +58561,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - IM3L0:PPM:MMS:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - IM3L0:PPM:MMS:PLC:fPosition
@@ -59411,16 +60027,16 @@ Database Records
     * - IM4L0:XTES:CLF:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM4L0:XTES:CLF:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -59443,16 +60059,16 @@ Database Records
     * - IM4L0:XTES:CLF:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM4L0:XTES:CLF:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -59585,9 +60201,25 @@ Database Records
     * - IM4L0:XTES:CLF:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - IM4L0:XTES:CLF:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - IM4L0:XTES:CLF:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - IM4L0:XTES:CLF:PLC:fAcceleration
@@ -59624,6 +60256,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - IM4L0:XTES:CLF:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - IM4L0:XTES:CLF:PLC:fPosition
@@ -59773,16 +60411,16 @@ Database Records
     * - IM4L0:XTES:CLZ:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM4L0:XTES:CLZ:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -59805,16 +60443,16 @@ Database Records
     * - IM4L0:XTES:CLZ:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM4L0:XTES:CLZ:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -59947,9 +60585,25 @@ Database Records
     * - IM4L0:XTES:CLZ:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - IM4L0:XTES:CLZ:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - IM4L0:XTES:CLZ:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - IM4L0:XTES:CLZ:PLC:fAcceleration
@@ -59986,6 +60640,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - IM4L0:XTES:CLZ:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - IM4L0:XTES:CLZ:PLC:fPosition
@@ -60209,16 +60869,16 @@ Database Records
     * - IM4L0:XTES:MMS:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM4L0:XTES:MMS:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -60241,16 +60901,16 @@ Database Records
     * - IM4L0:XTES:MMS:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - IM4L0:XTES:MMS:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -60383,9 +61043,25 @@ Database Records
     * - IM4L0:XTES:MMS:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - IM4L0:XTES:MMS:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - IM4L0:XTES:MMS:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - IM4L0:XTES:MMS:PLC:fAcceleration
@@ -60422,6 +61098,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - IM4L0:XTES:MMS:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - IM4L0:XTES:MMS:PLC:fPosition
@@ -62793,16 +63475,16 @@ Database Records
     * - PF1L0:WFS:MMS:Y:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - PF1L0:WFS:MMS:Y:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -62825,16 +63507,16 @@ Database Records
     * - PF1L0:WFS:MMS:Y:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - PF1L0:WFS:MMS:Y:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -62967,9 +63649,25 @@ Database Records
     * - PF1L0:WFS:MMS:Y:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - PF1L0:WFS:MMS:Y:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - PF1L0:WFS:MMS:Y:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - PF1L0:WFS:MMS:Y:PLC:fAcceleration
@@ -63006,6 +63704,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - PF1L0:WFS:MMS:Y:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - PF1L0:WFS:MMS:Y:PLC:fPosition
@@ -63139,16 +63843,16 @@ Database Records
     * - PF1L0:WFS:MMS:Z:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - PF1L0:WFS:MMS:Z:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -63171,16 +63875,16 @@ Database Records
     * - PF1L0:WFS:MMS:Z:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - PF1L0:WFS:MMS:Z:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -63313,9 +64017,25 @@ Database Records
     * - PF1L0:WFS:MMS:Z:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - PF1L0:WFS:MMS:Z:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - PF1L0:WFS:MMS:Z:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - PF1L0:WFS:MMS:Z:PLC:fAcceleration
@@ -63352,6 +64072,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - PF1L0:WFS:MMS:Z:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - PF1L0:WFS:MMS:Z:PLC:fPosition
@@ -77065,16 +77791,16 @@ Database Records
     * - SL1L0:POWER:MMS:BOTTOM:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SL1L0:POWER:MMS:BOTTOM:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -77097,16 +77823,16 @@ Database Records
     * - SL1L0:POWER:MMS:BOTTOM:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SL1L0:POWER:MMS:BOTTOM:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -77239,9 +77965,25 @@ Database Records
     * - SL1L0:POWER:MMS:BOTTOM:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - SL1L0:POWER:MMS:BOTTOM:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - SL1L0:POWER:MMS:BOTTOM:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - SL1L0:POWER:MMS:BOTTOM:PLC:fAcceleration
@@ -77278,6 +78020,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - SL1L0:POWER:MMS:BOTTOM:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - SL1L0:POWER:MMS:BOTTOM:PLC:fPosition
@@ -77411,16 +78159,16 @@ Database Records
     * - SL1L0:POWER:MMS:NORTH:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SL1L0:POWER:MMS:NORTH:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -77443,16 +78191,16 @@ Database Records
     * - SL1L0:POWER:MMS:NORTH:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SL1L0:POWER:MMS:NORTH:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -77585,9 +78333,25 @@ Database Records
     * - SL1L0:POWER:MMS:NORTH:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - SL1L0:POWER:MMS:NORTH:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - SL1L0:POWER:MMS:NORTH:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - SL1L0:POWER:MMS:NORTH:PLC:fAcceleration
@@ -77624,6 +78388,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - SL1L0:POWER:MMS:NORTH:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - SL1L0:POWER:MMS:NORTH:PLC:fPosition
@@ -77757,16 +78527,16 @@ Database Records
     * - SL1L0:POWER:MMS:SOUTH:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SL1L0:POWER:MMS:SOUTH:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -77789,16 +78559,16 @@ Database Records
     * - SL1L0:POWER:MMS:SOUTH:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SL1L0:POWER:MMS:SOUTH:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -77931,9 +78701,25 @@ Database Records
     * - SL1L0:POWER:MMS:SOUTH:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - SL1L0:POWER:MMS:SOUTH:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - SL1L0:POWER:MMS:SOUTH:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - SL1L0:POWER:MMS:SOUTH:PLC:fAcceleration
@@ -77970,6 +78756,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - SL1L0:POWER:MMS:SOUTH:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - SL1L0:POWER:MMS:SOUTH:PLC:fPosition
@@ -78103,16 +78895,16 @@ Database Records
     * - SL1L0:POWER:MMS:TOP:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SL1L0:POWER:MMS:TOP:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -78135,16 +78927,16 @@ Database Records
     * - SL1L0:POWER:MMS:TOP:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SL1L0:POWER:MMS:TOP:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -78277,9 +79069,25 @@ Database Records
     * - SL1L0:POWER:MMS:TOP:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - SL1L0:POWER:MMS:TOP:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - SL1L0:POWER:MMS:TOP:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - SL1L0:POWER:MMS:TOP:PLC:fAcceleration
@@ -78316,6 +79124,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - SL1L0:POWER:MMS:TOP:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - SL1L0:POWER:MMS:TOP:PLC:fPosition
@@ -79457,16 +80271,16 @@ Database Records
     * - SL2L0:POWER:MMS:BOTTOM:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SL2L0:POWER:MMS:BOTTOM:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -79489,16 +80303,16 @@ Database Records
     * - SL2L0:POWER:MMS:BOTTOM:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SL2L0:POWER:MMS:BOTTOM:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -79631,9 +80445,25 @@ Database Records
     * - SL2L0:POWER:MMS:BOTTOM:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - SL2L0:POWER:MMS:BOTTOM:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - SL2L0:POWER:MMS:BOTTOM:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - SL2L0:POWER:MMS:BOTTOM:PLC:fAcceleration
@@ -79670,6 +80500,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - SL2L0:POWER:MMS:BOTTOM:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - SL2L0:POWER:MMS:BOTTOM:PLC:fPosition
@@ -79803,16 +80639,16 @@ Database Records
     * - SL2L0:POWER:MMS:NORTH:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SL2L0:POWER:MMS:NORTH:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -79835,16 +80671,16 @@ Database Records
     * - SL2L0:POWER:MMS:NORTH:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SL2L0:POWER:MMS:NORTH:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -79977,9 +80813,25 @@ Database Records
     * - SL2L0:POWER:MMS:NORTH:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - SL2L0:POWER:MMS:NORTH:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - SL2L0:POWER:MMS:NORTH:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - SL2L0:POWER:MMS:NORTH:PLC:fAcceleration
@@ -80016,6 +80868,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - SL2L0:POWER:MMS:NORTH:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - SL2L0:POWER:MMS:NORTH:PLC:fPosition
@@ -80149,16 +81007,16 @@ Database Records
     * - SL2L0:POWER:MMS:SOUTH:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SL2L0:POWER:MMS:SOUTH:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -80181,16 +81039,16 @@ Database Records
     * - SL2L0:POWER:MMS:SOUTH:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SL2L0:POWER:MMS:SOUTH:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -80323,9 +81181,25 @@ Database Records
     * - SL2L0:POWER:MMS:SOUTH:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - SL2L0:POWER:MMS:SOUTH:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - SL2L0:POWER:MMS:SOUTH:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - SL2L0:POWER:MMS:SOUTH:PLC:fAcceleration
@@ -80362,6 +81236,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - SL2L0:POWER:MMS:SOUTH:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - SL2L0:POWER:MMS:SOUTH:PLC:fPosition
@@ -80495,16 +81375,16 @@ Database Records
     * - SL2L0:POWER:MMS:TOP:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SL2L0:POWER:MMS:TOP:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -80527,16 +81407,16 @@ Database Records
     * - SL2L0:POWER:MMS:TOP:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SL2L0:POWER:MMS:TOP:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -80669,9 +81549,25 @@ Database Records
     * - SL2L0:POWER:MMS:TOP:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - SL2L0:POWER:MMS:TOP:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - SL2L0:POWER:MMS:TOP:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - SL2L0:POWER:MMS:TOP:PLC:fAcceleration
@@ -80708,6 +81604,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - SL2L0:POWER:MMS:TOP:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - SL2L0:POWER:MMS:TOP:PLC:fPosition
@@ -81537,16 +82439,16 @@ Database Records
     * - SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -81569,16 +82471,16 @@ Database Records
     * - SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -81711,9 +82613,25 @@ Database Records
     * - SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fAcceleration
@@ -81750,6 +82668,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:fPosition
@@ -81883,16 +82807,16 @@ Database Records
     * - SP1L0:KMONO:MMS:DIODE_VERT:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SP1L0:KMONO:MMS:DIODE_VERT:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -81915,16 +82839,16 @@ Database Records
     * - SP1L0:KMONO:MMS:DIODE_VERT:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SP1L0:KMONO:MMS:DIODE_VERT:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -82057,9 +82981,25 @@ Database Records
     * - SP1L0:KMONO:MMS:DIODE_VERT:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - SP1L0:KMONO:MMS:DIODE_VERT:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - SP1L0:KMONO:MMS:DIODE_VERT:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - SP1L0:KMONO:MMS:DIODE_VERT:PLC:fAcceleration
@@ -82096,6 +83036,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - SP1L0:KMONO:MMS:DIODE_VERT:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - SP1L0:KMONO:MMS:DIODE_VERT:PLC:fPosition
@@ -82229,16 +83175,16 @@ Database Records
     * - SP1L0:KMONO:MMS:RET_HORIZ:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SP1L0:KMONO:MMS:RET_HORIZ:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -82261,16 +83207,16 @@ Database Records
     * - SP1L0:KMONO:MMS:RET_HORIZ:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SP1L0:KMONO:MMS:RET_HORIZ:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -82403,9 +83349,25 @@ Database Records
     * - SP1L0:KMONO:MMS:RET_HORIZ:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - SP1L0:KMONO:MMS:RET_HORIZ:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - SP1L0:KMONO:MMS:RET_HORIZ:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - SP1L0:KMONO:MMS:RET_HORIZ:PLC:fAcceleration
@@ -82442,6 +83404,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - SP1L0:KMONO:MMS:RET_HORIZ:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - SP1L0:KMONO:MMS:RET_HORIZ:PLC:fPosition
@@ -82575,16 +83543,16 @@ Database Records
     * - SP1L0:KMONO:MMS:RET_VERT:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SP1L0:KMONO:MMS:RET_VERT:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -82607,16 +83575,16 @@ Database Records
     * - SP1L0:KMONO:MMS:RET_VERT:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SP1L0:KMONO:MMS:RET_VERT:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -82749,9 +83717,25 @@ Database Records
     * - SP1L0:KMONO:MMS:RET_VERT:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - SP1L0:KMONO:MMS:RET_VERT:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - SP1L0:KMONO:MMS:RET_VERT:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - SP1L0:KMONO:MMS:RET_VERT:PLC:fAcceleration
@@ -82788,6 +83772,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - SP1L0:KMONO:MMS:RET_VERT:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - SP1L0:KMONO:MMS:RET_VERT:PLC:fPosition
@@ -82921,16 +83911,16 @@ Database Records
     * - SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -82953,16 +83943,16 @@ Database Records
     * - SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -83095,9 +84085,25 @@ Database Records
     * - SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fAcceleration
@@ -83134,6 +84140,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:fPosition
@@ -83267,16 +84279,16 @@ Database Records
     * - SP1L0:KMONO:MMS:XTAL_VERT:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SP1L0:KMONO:MMS:XTAL_VERT:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -83299,16 +84311,16 @@ Database Records
     * - SP1L0:KMONO:MMS:XTAL_VERT:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
     * - SP1L0:KMONO:MMS:XTAL_VERT:PLC:bError_RBV
       - bi
       - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
 
 
@@ -83441,9 +84453,25 @@ Database Records
     * - SP1L0:KMONO:MMS:XTAL_VERT:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
         | io: input
+
+
+    * - SP1L0:KMONO:MMS:XTAL_VERT:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - SP1L0:KMONO:MMS:XTAL_VERT:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
 
 
     * - SP1L0:KMONO:MMS:XTAL_VERT:PLC:fAcceleration
@@ -83480,6 +84508,12 @@ Database Records
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
+
+
+    * - SP1L0:KMONO:MMS:XTAL_VERT:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
 
 
     * - SP1L0:KMONO:MMS:XTAL_VERT:PLC:fPosition
