@@ -56,24 +56,18 @@ VAR // linking to rtd in the following order Bottom - South - TOP - NORTH
     fbMotion4: FB_SimMotor;*)
     bMoveOk:BOOL :=TRUE;
 
-    (*
-    fbFFOTop:    FB_BasicMotionStageFFO := (sName := 'SL2L0:POWER:MMS:TOP');
-    fbFFOBottom: FB_BasicMotionStageFFO := (sName := 'SL2L0:POWER:MMS:BOTTOM',
-                                            bForwardIsOut := FALSE);
-    fbFFONorth:  FB_BasicMotionStageFFO := (sName := 'SL2L0:POWER:MMS:NORTH');
-    fbFFOSouth:  FB_BasicMotionStageFFO := (sName := 'SL2L0:POWER:MMS:SOUTH',
-                                            bForwardIsOut := FALSE);
-    *)
+     (*Offsets*)
+    (* Absolute encoder value at the HLS + Absolure eoncoder value at the centered beam *)
+    rEncoderOffsetTop: REAL := 0;
+    rEncoderOffsetBottom: REAL := 0;
+    rEncoderOffsetNorth: REAL := 0;
+    rEncoderOffsetSouth: REAL := 0;
+
+	fbSL1L0: INT;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// Placeholder, standard simulated motion for all axes
-(*fbMotion1(stMotionStage := Main.M45);
-fbMotion2(stMotionStage := Main.M46);
-fbMotion3(stMotionStage := Main.M47);
-fbMotion4(stMotionStage := Main.M48);*)
-
-
+      <ST><![CDATA[
 (*
 --MAPPING TO PHYSICAL TERMINAL--
 Main.M45 -> M1    (Bottom)
@@ -81,23 +75,19 @@ Main.M46 -> M2    (South)
 Main.M47 -> M3    (Top)
 Main.M48 -> M4    (North)
 *)
+
+fbSL2L0.rEncoderOffsetTop := rEncoderOffsetTop;
+fbSL2L0.rEncoderOffsetBottom := rEncoderOffsetBottom;
+fbSL2L0.rEncoderOffsetNorth := rEncoderOffsetNorth;
+fbSL2L0.rEncoderOffsetSouth := rEncoderOffsetSouth;
+
 fbSL2L0.bMoveOk := bMoveOk;
 fbSL2L0(stTopBlade:=  Main.M47,
         stBottomBlade:= Main.M45,
         stNorthBlade:=  Main.M48,
         stSouthBlade:=  Main.M46,
         bExecuteMotion:=bExecuteMotion);
-
-(*
-fbFFOTop(stMotionStage := Main.M47,
-         fbFFHWO := GVL.fbFastFaultOutput1);
-fbFFOBottom(stMotionStage := Main.M45,
-            fbFFHWO := GVL.fbFastFaultOutput1);
-fbFFONorth(stMotionStage := Main.M48,
-           fbFFHWO := GVL.fbFastFaultOutput1);
-fbFFOSouth(stMotionStage := Main.M46,
-           fbFFHWO := GVL.fbFastFaultOutput1);
-*)]]></ST>
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

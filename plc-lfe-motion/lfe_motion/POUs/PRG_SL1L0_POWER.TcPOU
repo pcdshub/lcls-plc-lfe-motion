@@ -48,118 +48,24 @@ VAR // fix linking to rtd in the following order Bottom - South - TOP - NORTH
     field: ONAM True;
     '}
     bExecuteMotion:BOOL ;
-    (*T. MATRIX (North-x1,South-x2,Top-y1,Bottom-y2.. appSize-gapX,gapY, Cx, Cy) *)
-    (*aTMatrix: ARRAY [1..4,1..4] of REAL;
-    {attribute 'pytmc' := '
-    pv: SL1L0:POWER:GO;
-    io: io;
-    '}
-    bExecuteMotion:bool ;
-    {attribute 'pytmc' := '
-    pv: SL1L0:POWER:XWID_REQ;
-    io: io;
-    '}
-    rReqApertureSizeX : REAL;
-    {attribute 'pytmc' := '
-    pv: SL1L0:POWER:YWID_REQ;
-    io: io;
-    '}
-    rReqApertureSizeY : REAL;
-    {attribute 'pytmc' := '
-    pv: SL1L0:POWER:XCEN_REQ;
-    io: io;
-    '}
-    rReqCenterX: REAL;
-    {attribute 'pytmc' := '
-    pv: SL1L0:POWER:YCEN_REQ;
-    io: io;
-    '}
-    rReqCenterY: REAL;
 
-    {attribute 'pytmc' := '
-    pv: SL1L0:POWER:ACTUAL_XWIDTH;
-    io: io;
-    '}
-    rActApertureSizeX : REAL;
-
-    {attribute 'pytmc' := '
-    pv: SL1L0:POWER:ACTUAL_YWIDTH;
-    io: io;
-    '}
-    rActApertureSizeY : REAL;
-    {attribute 'pytmc' := '
-    pv: SL1L0:POWER:ACTUAL_XCENTER;
-    io: io;
-    '}
-    rActCenterX: REAL;
-    {attribute 'pytmc' := '
-    pv: SL1L0:POWER:ACTUAL_YCENTER;
-    io: io;
-    '}
-    rActCenterY: REAL;
-
-    {attribute 'pytmc' := '
-    pv: SL1L0:POWER:XCEN_SETZERO;
-    io: io;
-    '}
-    rSetCenterX: REAL;
-    {attribute 'pytmc' := '
-    pv: SL1L0:POWER:YCEN_SETZERO;
-    io: io;
-    '}
-    rSetCenterY: REAL;
-
-    bInit:BOOL :=true;
-
-
-    rMaxX:REAL:=28;
-    rMaxY:REAL:=28;
-    rMaxCx:REAL:=14;
-    rMaxCy:REAL:=14;*)
-    //GET PMPS Move Ok bit
     // Default True until it is properly linked to PMPS bit
     bMoveOk:BOOL :=TRUE;
-(*fbMotion1: FB_SimMotor;
-    fbMotion2: FB_SimMotor;
-    fbMotion3: FB_SimMotor;
-    fbMotion4: FB_SimMotor;*)
+
 
     mcPower : ARRAY [1..4] OF MC_POWER;
-(*
-    fbFFOTop:    FB_BasicMotionStageFFO := (sName := 'SL1L0:POWER:MMS:TOP');
-    fbFFOBottom: FB_BasicMotionStageFFO := (sName := 'SL1L0:POWER:MMS:BOTTOM',
-                                            bForwardIsOut := FALSE);
-    fbFFONorth:  FB_BasicMotionStageFFO := (sName := 'SL1L0:POWER:MMS:NORTH');
-    fbFFOSouth:  FB_BasicMotionStageFFO := (sName := 'SL1L0:POWER:MMS:SOUTH',
-                                            bForwardIsOut := FALSE);
-*)
+	
+	    (*Offsets*)
+    (* Absolute encoder value at the HLS + Absolure eoncoder value at the centered beam *)
+    rEncoderOffsetTop: REAL := 0;
+    rEncoderOffsetBottom: REAL := 0;
+    rEncoderOffsetNorth: REAL := 0;
+    rEncoderOffsetSouth: REAL := 0;
+
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// Placeholder, standard simulated motion for all axes
-(*fbMotion1(stMotionStage := Main.M41);
-fbMotion2(stMotionStage := Main.M42);
-fbMotion3(stMotionStage := Main.M43);
-fbMotion4(stMotionStage := Main.M44);*)
-
-
-
-//verigy requested gap and center are within range
-// Needs to be better, limits are calculated based on the requested center and travel range
-(*rReqApertureSizeX := LIMIT(0,rReqApertureSizeX, rMaxX);
-rReqApertureSizeY := LIMIT(0,rReqApertureSizeY, rMaxY);
-rReqCenterX := LIMIT(0,rReqCenterX, rMaxCx);
-rReqCenterY := LIMIT(0,rReqCenterY, rMaxCy);*)
-
-// Calculate the position of every blade based on the transformation Matrix
-
-(*fbSL1L0.fPosNorthBlade := (aTMatrix[1,1] * rReqApertureSizeX) + (aTMatrix[1,3]*rReqCenterX);
-fbSL1L0.fPosSouthBlade:= (aTMatrix[2,1] * rReqApertureSizeX) + (aTMatrix[2,3]*rReqCenterX);
-
-fbSL1L0.fPosTopBlade := (aTMatrix[3,2] * rReqApertureSizeY) +(aTMatrix[3,4]*rReqCenterY);
-fbSL1L0.fPosBottomBlade :=(aTMatrix[4,2] * rReqApertureSizeY) + (aTMatrix[4,4]*rReqCenterY);*)
-
-
+      <ST><![CDATA[
 
 (*
 --MAPPING TO PHYSICAL TERMINAL--
@@ -168,6 +74,11 @@ Main.42 -> M2    (South)
 Main.43 -> M3    (Top)
 Main.44 -> M4    (North)
 *)
+
+fbSL1L0.rEncoderOffsetTop := rEncoderOffsetTop;
+fbSL1L0.rEncoderOffsetBottom := rEncoderOffsetBottom;
+fbSL1L0.rEncoderOffsetNorth := rEncoderOffsetNorth;
+fbSL1L0.rEncoderOffsetSouth := rEncoderOffsetSouth;
 
 //fbSL1L0.bExecuteMotion := bExecuteMotion;
 fbSL1L0.bMoveOk := bMoveOk;
@@ -182,16 +93,7 @@ fbSL1L0(stTopBlade:=  Main.M43,
 mcPower[2](axis:=Main.M42.Axis, Enable:=TRUE, enable_positive:=Main.M42.bLimitForwardEnable, enable_negative:=Main.M42.bLimitBackwardEnable);
 mcPower[3](axis:=Main.M43.Axis, Enable:=TRUE, enable_positive:=Main.M43.bLimitForwardEnable, enable_negative:=Main.M43.bLimitBackwardEnable);
 mcPower[4](axis:=Main.M44.Axis, Enable:=TRUE, enable_positive:=Main.M44.bLimitForwardEnable, enable_negative:=Main.M44.bLimitBackwardEnable);*)
-(*
-fbFFOTop(stMotionStage := Main.M43,
-         fbFFHWO := GVL.fbFastFaultOutput1);
-fbFFOBottom(stMotionStage := Main.M41,
-            fbFFHWO := GVL.fbFastFaultOutput1);
-fbFFONorth(stMotionStage := Main.M44,
-           fbFFHWO := GVL.fbFastFaultOutput1);
-fbFFOSouth(stMotionStage := Main.M42,
-           fbFFHWO := GVL.fbFastFaultOutput1);
-           *)]]></ST>
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
