@@ -43,14 +43,16 @@ fbIM3L0.stYag1.fPosition := -71.50;
 fbIM3L0.stYag1.bUseRawCounts := FALSE;
 fbIM3L0.stYag1.nRequestAssertionID := 16#2303;
 fbIM3L0.stYag1.stBeamParams := PMPS_GVL.cstFullBeam;
-fbIM3L0.stYag1.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
+// For now, do not have restrictions on this YAG. Eventually we want to add exclusion ranges where we need to limit transmission to 0.1 (10%) within those ranges. Currently we do not have transmission control via PMPS on LFE.
+// fbIM3L0.stYag1.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
 fbIM3L0.stYag1.bValid := TRUE;
 
 fbIM3L0.stYag2.fPosition := -97.51;
 fbIM3L0.stYag2.bUseRawCounts := FALSE;
 fbIM3L0.stYag2.nRequestAssertionID := 16#2304;
 fbIM3L0.stYag2.stBeamParams := PMPS_GVL.cstFullBeam;
-fbIM3L0.stYag2.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
+// For now, do not have restrictions on this YAG. Eventually we want to add exclusion ranges where we need to limit transmission to 0.1 (10%) within those ranges. Currently we do not have transmission control via PMPS on LFE.
+// fbIM3L0.stYag2.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
 fbIM3L0.stYag2.bValid := TRUE;
 
 fbIM3L0(
