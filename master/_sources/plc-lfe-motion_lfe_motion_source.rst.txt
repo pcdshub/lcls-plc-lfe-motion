@@ -840,6 +840,27 @@ FB_SLITS
         field: ONAM True
         '}
         bMoveOk:BOOL;
+        (*Offsets*)
+        {attribute 'pytmc' := '
+        pv: Offset_Top;
+        io: io;
+        '}
+        rEncoderOffsetTop: REAL;
+        {attribute 'pytmc' := '
+        pv: ZeroOffset_Bottom;
+        io: io;
+        '}
+        rEncoderOffsetBottom: REAL;
+        {attribute 'pytmc' := '
+        pv: ZeroOffset_North;
+        io: io;
+        '}
+        rEncoderOffsetNorth: REAL;
+        {attribute 'pytmc' := '
+        pv: ZeroOffset_South;
+        io: io;
+        '}
+        rEncoderOffsetSouth: REAL;
     END_VAR
 
     VAR
@@ -961,6 +982,16 @@ FB_SLITS
         rTrig_Open: R_TRIG;
         rTrig_Close: R_TRIG;
 
+            //old values
+        rOldReqApertureSizeX : REAL;
+        rOldReqApertureSizeY : REAL;
+        rOldReqCenterX: REAL;
+        rOldReqCenterY: REAL;
+
+        bExecuteMotionX: BOOL;
+        bExecuteMotionY: BOOL;
+
+
         fPosBlock: LREAL;
         fPosClose: LREAL;
         fPosOpen: LREAL;
@@ -970,6 +1001,9 @@ FB_SLITS
         fbSetPosition_Bottom: MC_SetPosition;
         fbSetPosition_North: MC_SetPosition;
         fbSetPosition_South: MC_SetPosition;
+
+        // For logging
+        fbLogger : FB_LogMessage := (eSubsystem:=E_SubSystem.MOTION);
 
     END_VAR
 
@@ -999,26 +1033,55 @@ FB_SLITS
     END_IF
     END_ACTION
     ACTION ACT_CalculatePositions:
-    //Calculate requested Positions
+    //check if requested center or gap has changed
+    //check that the requested values are within acceptable motion range
+    IF (rOldReqApertureSizeX <> rReqApertureSizeX) THEN
+        rOldReqApertureSizeX := rReqApertureSizeX;
+        bExecuteMotionX := TRUE;
+        fbLogger(sMsg:='Requested new X gap.', eSevr:=TcEventSeverity.Verbose);
+    END_IF
+
+    IF (rOldReqCenterX <> rReqCenterX) THEN
+        rOldReqCenterX := rReqCenterX;
+        bExecuteMotionX := TRUE;
+        fbLogger(sMsg:='Requested new X center', eSevr:=TcEventSeverity.Verbose);
+
+    END_IF
+
+    IF (rOldReqApertureSizeY <> rReqApertureSizeY) THEN
+        rOldReqApertureSizeY := rReqApertureSizeY;
+        bExecuteMotionY := TRUE;
+        fbLogger(sMsg:='Requested new Y gap.', eSevr:=TcEventSeverity.Verbose);
+    END_IF
+
+    IF (rOldReqCenterY <> rReqCenterY) THEN
+       rOldReqCenterY := rReqCenterY;
+       bExecuteMotionY := TRUE;
+       fbLogger(sMsg:='Requested new Y center.', eSevr:=TcEventSeverity.Verbose);
+
+    END_IF
 
 
-    fPosTopBlade := (rReqApertureSizeY/2) + rReqCenterY;
-    fPosBottomBlade := (-1*rReqApertureSizeY/2) + rReqCenterY;
+    //Calculate requested target positions from requested gap and center
+    fPosTopBlade := (rReqApertureSizeY/2) + (rReqCenterY + rEncoderOffsetTop) ;
+    fPosBottomBlade := (-1*rReqApertureSizeY/2) + (rReqCenterY+rEncoderOffsetBottom);
 
-    fPosNorthBlade := (rReqApertureSizeX/2) + rReqCenterX;
-    fPosSouthBlade := (-1*rReqApertureSizeX/2) + rReqCenterX;
-
-
-    //Calculate Actual Positions
+    fPosNorthBlade := (rReqApertureSizeX/2) + (rReqCenterX + rEncoderOffsetNorth);
+    fPosSouthBlade := (-1*rReqApertureSizeX/2) + (rReqCenterX + rEncoderOffsetSouth);
 
 
-    rActApertureSizeX := ABS(stNorthBlade.stAxisStatus.fActPosition - stSouthBlade.stAxisStatus.fActPosition);
+    //Calculate actual gap and center from actual stages positions
+    rActApertureSizeX := LREAL_TO_REAL((stNorthBlade.stAxisStatus.fActPosition - rEncoderOffsetNorth) - (stSouthBlade.stAxisStatus.fActPosition- rEncoderOffsetSouth));
 
-    rActApertureSizeY := ABS(stTopBlade.stAxisStatus.fActPosition - stBottomBlade.stAxisStatus.fActPosition);
+    rActApertureSizeY := LREAL_TO_REAL((stTopBlade.stAxisStatus.fActPosition - rEncoderOffsetTop) - (stBottomBlade.stAxisStatus.fActPosition - rEncoderOffsetBottom));
 
-    rActCenterX := ((stNorthBlade.stAxisStatus.fActPosition + stSouthBlade.stAxisStatus.fActPosition)/2);
+    rActCenterX := LREAL_TO_REAL((((stNorthBlade.stAxisStatus.fActPosition - rEncoderOffsetNorth)  + (stSouthBlade.stAxisStatus.fActPosition - rEncoderOffsetSouth ))/2));
 
-    rActCenterY := ((stTopBlade.stAxisStatus.fActPosition + stBottomBlade.stAxisStatus.fActPosition)/2);
+    rActCenterY := LREAL_TO_REAL((((stTopBlade.stAxisStatus.fActPosition - rEncoderOffsetTop) + (stBottomBlade.stAxisStatus.fActPosition - rEncoderOffsetBottom))/2));
+
+
+
+    //Update PMPS Arbiter with the Actual Size and Center of the Aperture
     END_ACTION
     ACTION ACT_Home:
 
@@ -1076,9 +1139,14 @@ FB_SLITS
     stSouth.fAccel := fHighAccel;
     stSouth.fDecel := fHighAccel;
 
-    if (bExecuteMotion) THEN
-        fbTop.bExecute := fbBottom.bExecute :=fbNorth.bExecute := fbSouth.bExecute := bExecuteMotion;
-        bExecuteMotion:= FALSE;
+    IF (bExecuteMotionY) THEN
+        fbTop.bExecute := fbBottom.bExecute := bExecuteMotionY;
+        bExecuteMotionY:= FALSE;
+    END_IF
+
+    IF (bExecuteMotionX) THEN
+        fbNorth.bExecute := fbSouth.bExecute := bExecuteMotionX;
+        bExecuteMotionX:= FALSE;
     END_IF
 
 
@@ -1246,7 +1314,7 @@ FB_SLITS_POWER
     ACT_Motion();
     //SET and GET the requested and Actual values
     ACT_CalculatePositions();
-    ACT_Zero();
+    //ACT_Zero();
     //ACT_BLOCK();
     ACT_RTDs();
 
@@ -2467,117 +2535,21 @@ PRG_SL1L0_POWER
         field: ONAM True;
         '}
         bExecuteMotion:BOOL ;
-        (*T. MATRIX (North-x1,South-x2,Top-y1,Bottom-y2.. appSize-gapX,gapY, Cx, Cy) *)
-        (*aTMatrix: ARRAY [1..4,1..4] of REAL;
-        {attribute 'pytmc' := '
-        pv: SL1L0:POWER:GO;
-        io: io;
-        '}
-        bExecuteMotion:bool ;
-        {attribute 'pytmc' := '
-        pv: SL1L0:POWER:XWID_REQ;
-        io: io;
-        '}
-        rReqApertureSizeX : REAL;
-        {attribute 'pytmc' := '
-        pv: SL1L0:POWER:YWID_REQ;
-        io: io;
-        '}
-        rReqApertureSizeY : REAL;
-        {attribute 'pytmc' := '
-        pv: SL1L0:POWER:XCEN_REQ;
-        io: io;
-        '}
-        rReqCenterX: REAL;
-        {attribute 'pytmc' := '
-        pv: SL1L0:POWER:YCEN_REQ;
-        io: io;
-        '}
-        rReqCenterY: REAL;
 
-        {attribute 'pytmc' := '
-        pv: SL1L0:POWER:ACTUAL_XWIDTH;
-        io: io;
-        '}
-        rActApertureSizeX : REAL;
-
-        {attribute 'pytmc' := '
-        pv: SL1L0:POWER:ACTUAL_YWIDTH;
-        io: io;
-        '}
-        rActApertureSizeY : REAL;
-        {attribute 'pytmc' := '
-        pv: SL1L0:POWER:ACTUAL_XCENTER;
-        io: io;
-        '}
-        rActCenterX: REAL;
-        {attribute 'pytmc' := '
-        pv: SL1L0:POWER:ACTUAL_YCENTER;
-        io: io;
-        '}
-        rActCenterY: REAL;
-
-        {attribute 'pytmc' := '
-        pv: SL1L0:POWER:XCEN_SETZERO;
-        io: io;
-        '}
-        rSetCenterX: REAL;
-        {attribute 'pytmc' := '
-        pv: SL1L0:POWER:YCEN_SETZERO;
-        io: io;
-        '}
-        rSetCenterY: REAL;
-
-        bInit:BOOL :=true;
-
-
-        rMaxX:REAL:=28;
-        rMaxY:REAL:=28;
-        rMaxCx:REAL:=14;
-        rMaxCy:REAL:=14;*)
-        //GET PMPS Move Ok bit
         // Default True until it is properly linked to PMPS bit
         bMoveOk:BOOL :=TRUE;
-    (*fbMotion1: FB_SimMotor;
-        fbMotion2: FB_SimMotor;
-        fbMotion3: FB_SimMotor;
-        fbMotion4: FB_SimMotor;*)
+
 
         mcPower : ARRAY [1..4] OF MC_POWER;
-    (*
-        fbFFOTop:    FB_BasicMotionStageFFO := (sName := 'SL1L0:POWER:MMS:TOP');
-        fbFFOBottom: FB_BasicMotionStageFFO := (sName := 'SL1L0:POWER:MMS:BOTTOM',
-                                                bForwardIsOut := FALSE);
-        fbFFONorth:  FB_BasicMotionStageFFO := (sName := 'SL1L0:POWER:MMS:NORTH');
-        fbFFOSouth:  FB_BasicMotionStageFFO := (sName := 'SL1L0:POWER:MMS:SOUTH',
-                                                bForwardIsOut := FALSE);
-    *)
+
+            (*Offsets*)
+        (* Absolute encoder value at the HLS + Absolute encoder value at the centered beam *)
+        rEncoderOffsetTop: REAL := 15.55;
+        rEncoderOffsetBottom: REAL := -12.99;
+        rEncoderOffsetNorth: REAL := 12.2;
+        rEncoderOffsetSouth: REAL := -16.8;
+
     END_VAR
-    // Placeholder, standard simulated motion for all axes
-    (*fbMotion1(stMotionStage := Main.M41);
-    fbMotion2(stMotionStage := Main.M42);
-    fbMotion3(stMotionStage := Main.M43);
-    fbMotion4(stMotionStage := Main.M44);*)
-
-
-
-    //verigy requested gap and center are within range
-    // Needs to be better, limits are calculated based on the requested center and travel range
-    (*rReqApertureSizeX := LIMIT(0,rReqApertureSizeX, rMaxX);
-    rReqApertureSizeY := LIMIT(0,rReqApertureSizeY, rMaxY);
-    rReqCenterX := LIMIT(0,rReqCenterX, rMaxCx);
-    rReqCenterY := LIMIT(0,rReqCenterY, rMaxCy);*)
-
-    // Calculate the position of every blade based on the transformation Matrix
-
-    (*fbSL1L0.fPosNorthBlade := (aTMatrix[1,1] * rReqApertureSizeX) + (aTMatrix[1,3]*rReqCenterX);
-    fbSL1L0.fPosSouthBlade:= (aTMatrix[2,1] * rReqApertureSizeX) + (aTMatrix[2,3]*rReqCenterX);
-
-    fbSL1L0.fPosTopBlade := (aTMatrix[3,2] * rReqApertureSizeY) +(aTMatrix[3,4]*rReqCenterY);
-    fbSL1L0.fPosBottomBlade :=(aTMatrix[4,2] * rReqApertureSizeY) + (aTMatrix[4,4]*rReqCenterY);*)
-
-
-
     (*
     --MAPPING TO PHYSICAL TERMINAL--
     Main.41 -> M1    (Bottom)
@@ -2585,6 +2557,11 @@ PRG_SL1L0_POWER
     Main.43 -> M3    (Top)
     Main.44 -> M4    (North)
     *)
+
+    fbSL1L0.rEncoderOffsetTop := rEncoderOffsetTop;
+    fbSL1L0.rEncoderOffsetBottom := rEncoderOffsetBottom;
+    fbSL1L0.rEncoderOffsetNorth := rEncoderOffsetNorth;
+    fbSL1L0.rEncoderOffsetSouth := rEncoderOffsetSouth;
 
     //fbSL1L0.bExecuteMotion := bExecuteMotion;
     fbSL1L0.bMoveOk := bMoveOk;
@@ -2599,16 +2576,6 @@ PRG_SL1L0_POWER
     mcPower[2](axis:=Main.M42.Axis, Enable:=TRUE, enable_positive:=Main.M42.bLimitForwardEnable, enable_negative:=Main.M42.bLimitBackwardEnable);
     mcPower[3](axis:=Main.M43.Axis, Enable:=TRUE, enable_positive:=Main.M43.bLimitForwardEnable, enable_negative:=Main.M43.bLimitBackwardEnable);
     mcPower[4](axis:=Main.M44.Axis, Enable:=TRUE, enable_positive:=Main.M44.bLimitForwardEnable, enable_negative:=Main.M44.bLimitBackwardEnable);*)
-    (*
-    fbFFOTop(stMotionStage := Main.M43,
-             fbFFHWO := GVL.fbFastFaultOutput1);
-    fbFFOBottom(stMotionStage := Main.M41,
-                fbFFHWO := GVL.fbFastFaultOutput1);
-    fbFFONorth(stMotionStage := Main.M44,
-               fbFFHWO := GVL.fbFastFaultOutput1);
-    fbFFOSouth(stMotionStage := Main.M42,
-               fbFFHWO := GVL.fbFastFaultOutput1);
-               *)
 
     END_PROGRAM
 
@@ -2673,22 +2640,15 @@ PRG_SL2L0_POWER
         fbMotion4: FB_SimMotor;*)
         bMoveOk:BOOL :=TRUE;
 
-        (*
-        fbFFOTop:    FB_BasicMotionStageFFO := (sName := 'SL2L0:POWER:MMS:TOP');
-        fbFFOBottom: FB_BasicMotionStageFFO := (sName := 'SL2L0:POWER:MMS:BOTTOM',
-                                                bForwardIsOut := FALSE);
-        fbFFONorth:  FB_BasicMotionStageFFO := (sName := 'SL2L0:POWER:MMS:NORTH');
-        fbFFOSouth:  FB_BasicMotionStageFFO := (sName := 'SL2L0:POWER:MMS:SOUTH',
-                                                bForwardIsOut := FALSE);
-        *)
+         (*Offsets*)
+        (* Absolute encoder value at the HLS + Absolute encoder value at the centered beam *)
+        rEncoderOffsetTop: REAL := 0;
+        rEncoderOffsetBottom: REAL := 0;
+        rEncoderOffsetNorth: REAL := 0;
+        rEncoderOffsetSouth: REAL := 0;
+
+        fbSL1L0: INT;
     END_VAR
-    // Placeholder, standard simulated motion for all axes
-    (*fbMotion1(stMotionStage := Main.M45);
-    fbMotion2(stMotionStage := Main.M46);
-    fbMotion3(stMotionStage := Main.M47);
-    fbMotion4(stMotionStage := Main.M48);*)
-
-
     (*
     --MAPPING TO PHYSICAL TERMINAL--
     Main.M45 -> M1    (Bottom)
@@ -2696,23 +2656,18 @@ PRG_SL2L0_POWER
     Main.M47 -> M3    (Top)
     Main.M48 -> M4    (North)
     *)
+
+    fbSL2L0.rEncoderOffsetTop := rEncoderOffsetTop;
+    fbSL2L0.rEncoderOffsetBottom := rEncoderOffsetBottom;
+    fbSL2L0.rEncoderOffsetNorth := rEncoderOffsetNorth;
+    fbSL2L0.rEncoderOffsetSouth := rEncoderOffsetSouth;
+
     fbSL2L0.bMoveOk := bMoveOk;
     fbSL2L0(stTopBlade:=  Main.M47,
             stBottomBlade:= Main.M45,
             stNorthBlade:=  Main.M48,
             stSouthBlade:=  Main.M46,
             bExecuteMotion:=bExecuteMotion);
-
-    (*
-    fbFFOTop(stMotionStage := Main.M47,
-             fbFFHWO := GVL.fbFastFaultOutput1);
-    fbFFOBottom(stMotionStage := Main.M45,
-                fbFFHWO := GVL.fbFastFaultOutput1);
-    fbFFONorth(stMotionStage := Main.M48,
-               fbFFHWO := GVL.fbFastFaultOutput1);
-    fbFFOSouth(stMotionStage := Main.M46,
-               fbFFHWO := GVL.fbFastFaultOutput1);
-    *)
 
     END_PROGRAM
 
