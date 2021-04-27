@@ -62,35 +62,44 @@ VAR
                               .D[20] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
                               .D[21] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 21'}
     stEL6Out AT %Q*: EL6OutData22b;
+
+    bInit: BOOL := TRUE;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbIM2L0.nTransitionAssertionID := 16#2200;
-fbIM2L0.nUnknownAssertionID := 16#2209;
+      <ST><![CDATA[
+IF bInit THEN
+    fbIM2L0.nTransitionAssertionID := 16#2200;
+    fbIM2L0.nUnknownAssertionID := 16#2209;
 
-fbIM2L0.stOut.fPosition := 0;
-fbIM2L0.stOut.bUseRawCounts := FALSE;
-fbIM2L0.stOut.nRequestAssertionID := 16#2201;
-fbIM2L0.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
-fbIM2L0.stOut.bValid := TRUE;
+    fbIM2L0.stOut.fPosition := 0;
+    fbIM2L0.stOut.bUseRawCounts := FALSE;
+    fbIM2L0.stOut.nRequestAssertionID := 16#2201;
+    fbIM2L0.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
+    fbIM2L0.stOut.bValid := TRUE;
 
-fbIM2L0.stYag.fPosition := -87.65;
-fbIM2L0.stYag.bUseRawCounts := FALSE;
-fbIM2L0.stYag.nRequestAssertionID := 16#2202;
-fbIM2L0.stYag.stBeamParams := PMPS_GVL.cstFullBeam;
-fbIM2L0.stYag.bValid := TRUE;
+    fbIM2L0.stYag.fPosition := -87.65;
+    fbIM2L0.stYag.bUseRawCounts := FALSE;
+    fbIM2L0.stYag.nRequestAssertionID := 16#2202;
+    fbIM2L0.stYag.stBeamParams := PMPS_GVL.cstFullBeam;
+    // For now, do not have restrictions on this YAG. Eventually we want to add exclusion ranges where we need to limit transmission to 0.1 (10%) within those ranges. Currently we do not have transmission control via PMPS on LFE.
+    // fbIM2L0.stYag.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
+    fbIM2L0.stYag.bValid := TRUE;
 
-fbIM2L0.stDiamond.fPosition := -57.65;
-fbIM2L0.stDiamond.bUseRawCounts := FALSE;
-fbIM2L0.stDiamond.nRequestAssertionID := 16#2203;
-fbIM2L0.stDiamond.stBeamParams := PMPS_GVL.cstFullBeam;
-fbIM2L0.stDiamond.bValid := TRUE;
+    fbIM2L0.stDiamond.fPosition := -57.65;
+    fbIM2L0.stDiamond.bUseRawCounts := FALSE;
+    fbIM2L0.stDiamond.nRequestAssertionID := 16#2203;
+    fbIM2L0.stDiamond.stBeamParams := PMPS_GVL.cstFullBeam;
+    fbIM2L0.stDiamond.bValid := TRUE;
 
-fbIM2L0.stReticle.fPosition := -27.65;
-fbIM2L0.stReticle.bUseRawCounts := FALSE;
-fbIM2L0.stReticle.nRequestAssertionID := 16#2204;
-fbIM2L0.stReticle.stBeamParams := PMPS_GVL.cst0RateBeam;
-fbIM2L0.stReticle.bValid := TRUE;
+    fbIM2L0.stReticle.fPosition := -27.65;
+    fbIM2L0.stReticle.bUseRawCounts := FALSE;
+    fbIM2L0.stReticle.nRequestAssertionID := 16#2204;
+    fbIM2L0.stReticle.stBeamParams := PMPS_GVL.cst0RateBeam;
+    fbIM2L0.stReticle.bValid := TRUE;
+
+    bInit := FALSE;
+END_IF
 
 fbIM2L0(
     fbArbiter := GVL.fbArbiter,
