@@ -22,7 +22,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbIM1L1.nTransitionAssertionID := 16#2110;
+      <ST><![CDATA[
+fbIM1L1.nTransitionAssertionID := 16#2110;
 fbIM1L1.nUnknownAssertionID := 16#2119;
 
 fbIM1L1.stOut.fPosition := -11;
@@ -35,18 +36,21 @@ fbIM1L1.stPower.fPosition := -47.59;
 fbIM1L1.stPower.bUseRawCounts := FALSE;
 fbIM1L1.stPower.nRequestAssertionID := 16#2112;
 fbIM1L1.stPower.stBeamParams := PMPS_GVL.cstFullBeam;
+fbIM1L1.stPower.stBeamParams := F_eVExcludeRange(1, 5000);
 fbIM1L1.stPower.bValid := TRUE;
 
 fbIM1L1.stYag1.fPosition := -71.69;
 fbIM1L1.stYag1.bUseRawCounts := FALSE;
 fbIM1L1.stYag1.nRequestAssertionID := 16#2113;
 fbIM1L1.stYag1.stBeamParams := PMPS_GVL.cstFullBeam;
+fbIM1L1.stYag1.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
 fbIM1L1.stYag1.bValid := TRUE;
 
 fbIM1L1.stYag2.fPosition := -97.70;
 fbIM1L1.stYag2.bUseRawCounts := FALSE;
 fbIM1L1.stYag2.nRequestAssertionID := 16#2114;
 fbIM1L1.stYag2.stBeamParams := PMPS_GVL.cstFullBeam;
+fbIM1L1.stYag2.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
 fbIM1L1.stYag2.bValid := TRUE;
 
 fbIM1L1(

@@ -32,7 +32,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// Only allow 7.7-8.9 keV
+      <ST><![CDATA[
+// Only allow 7.7-8.9 keV
 stOkBeam.neVRange := F_eVIncludeRange(7700, 8900);
 bEnergyOK := F_SafeBPCompare(PMPS_GVL.stCurrentBeamParameters, stOkBeam);
 

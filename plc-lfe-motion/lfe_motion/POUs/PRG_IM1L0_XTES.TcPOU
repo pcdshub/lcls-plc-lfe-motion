@@ -65,7 +65,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbIM1L0.nTransitionAssertionID := 16#2100;
+      <ST><![CDATA[
+fbIM1L0.nTransitionAssertionID := 16#2100;
 fbIM1L0.nUnknownAssertionID := 16#2109;
 
 fbIM1L0.stOut.fPosition := 0;
@@ -78,6 +79,7 @@ fbIM1L0.stYag.fPosition := -86.65;
 fbIM1L0.stYag.bUseRawCounts := FALSE;
 fbIM1L0.stYag.nRequestAssertionID := 16#2102;
 fbIM1L0.stYag.stBeamParams := PMPS_GVL.cstFullBeam;
+fbIM1L0.stYag.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
 fbIM1L0.stYag.bValid := TRUE;
 
 fbIM1L0.stDiamond.fPosition := -56.65;
