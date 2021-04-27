@@ -44607,6 +44607,98 @@ record(bi, "SL1L0:POWER:PMPS_OK_RBV") {
   info(archive, "VAL")
 }
 
+record(ai, "SL1L0:POWER:Offset_Top_RBV") {
+  # PRG_SL1L0_POWER.fbSL1L0.rEncoderOffsetTop
+  field(DESC, "PRG_SL1L0_POWER.fbSL...rEncoderOffsetTop")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rEncoderOffsetTop?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ao, "SL1L0:POWER:Offset_Top") {
+  # PRG_SL1L0_POWER.fbSL1L0.rEncoderOffsetTop
+  field(DESC, "PRG_SL1L0_POWER.fbSL...rEncoderOffsetTop")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rEncoderOffsetTop=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "SL1L0:POWER:ZeroOffset_Bottom_RBV") {
+  # PRG_SL1L0_POWER.fbSL1L0.rEncoderOffsetBottom
+  field(DESC, "PRG_SL1L0_POWER.fbSL...coderOffsetBottom")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rEncoderOffsetBottom?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ao, "SL1L0:POWER:ZeroOffset_Bottom") {
+  # PRG_SL1L0_POWER.fbSL1L0.rEncoderOffsetBottom
+  field(DESC, "PRG_SL1L0_POWER.fbSL...coderOffsetBottom")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rEncoderOffsetBottom=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "SL1L0:POWER:ZeroOffset_North_RBV") {
+  # PRG_SL1L0_POWER.fbSL1L0.rEncoderOffsetNorth
+  field(DESC, "PRG_SL1L0_POWER.fbSL...ncoderOffsetNorth")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rEncoderOffsetNorth?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ao, "SL1L0:POWER:ZeroOffset_North") {
+  # PRG_SL1L0_POWER.fbSL1L0.rEncoderOffsetNorth
+  field(DESC, "PRG_SL1L0_POWER.fbSL...ncoderOffsetNorth")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rEncoderOffsetNorth=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "SL1L0:POWER:ZeroOffset_South_RBV") {
+  # PRG_SL1L0_POWER.fbSL1L0.rEncoderOffsetSouth
+  field(DESC, "PRG_SL1L0_POWER.fbSL...ncoderOffsetSouth")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.fbSL1L0.rEncoderOffsetSouth?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ao, "SL1L0:POWER:ZeroOffset_South") {
+  # PRG_SL1L0_POWER.fbSL1L0.rEncoderOffsetSouth
+  field(DESC, "PRG_SL1L0_POWER.fbSL...ncoderOffsetSouth")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.fbSL1L0.rEncoderOffsetSouth=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
+}
+
 record(waveform, "SL1L0:POWER:TOP:NAME_RBV") {
   field(DESC, "Name of this position state")
   field(SCAN, "I/O Intr")
@@ -46253,6 +46345,98 @@ record(bi, "SL2L0:POWER:PMPS_OK_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.bMoveOk?")
   field(ZNAM, "False")
   field(ONAM, "True")
+  info(archive, "VAL")
+}
+
+record(ai, "SL2L0:POWER:Offset_Top_RBV") {
+  # PRG_SL2L0_POWER.fbSL2L0.rEncoderOffsetTop
+  field(DESC, "PRG_SL2L0_POWER.fbSL...rEncoderOffsetTop")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rEncoderOffsetTop?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ao, "SL2L0:POWER:Offset_Top") {
+  # PRG_SL2L0_POWER.fbSL2L0.rEncoderOffsetTop
+  field(DESC, "PRG_SL2L0_POWER.fbSL...rEncoderOffsetTop")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rEncoderOffsetTop=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "SL2L0:POWER:ZeroOffset_Bottom_RBV") {
+  # PRG_SL2L0_POWER.fbSL2L0.rEncoderOffsetBottom
+  field(DESC, "PRG_SL2L0_POWER.fbSL...coderOffsetBottom")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rEncoderOffsetBottom?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ao, "SL2L0:POWER:ZeroOffset_Bottom") {
+  # PRG_SL2L0_POWER.fbSL2L0.rEncoderOffsetBottom
+  field(DESC, "PRG_SL2L0_POWER.fbSL...coderOffsetBottom")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rEncoderOffsetBottom=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "SL2L0:POWER:ZeroOffset_North_RBV") {
+  # PRG_SL2L0_POWER.fbSL2L0.rEncoderOffsetNorth
+  field(DESC, "PRG_SL2L0_POWER.fbSL...ncoderOffsetNorth")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rEncoderOffsetNorth?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ao, "SL2L0:POWER:ZeroOffset_North") {
+  # PRG_SL2L0_POWER.fbSL2L0.rEncoderOffsetNorth
+  field(DESC, "PRG_SL2L0_POWER.fbSL...ncoderOffsetNorth")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rEncoderOffsetNorth=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "SL2L0:POWER:ZeroOffset_South_RBV") {
+  # PRG_SL2L0_POWER.fbSL2L0.rEncoderOffsetSouth
+  field(DESC, "PRG_SL2L0_POWER.fbSL...ncoderOffsetSouth")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.fbSL2L0.rEncoderOffsetSouth?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ao, "SL2L0:POWER:ZeroOffset_South") {
+  # PRG_SL2L0_POWER.fbSL2L0.rEncoderOffsetSouth
+  field(DESC, "PRG_SL2L0_POWER.fbSL...ncoderOffsetSouth")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.fbSL2L0.rEncoderOffsetSouth=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
   info(archive, "VAL")
 }
 
