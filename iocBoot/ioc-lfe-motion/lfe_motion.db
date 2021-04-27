@@ -60,14 +60,17 @@ record(longin, "$(PREFIX)LCLSGeneral:LogMessageCount_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)RequestedBP:Transmission_RBV") {
+record(ai, "$(PREFIX)RequestedBP:Transmission_RBV") {
   field(DESC, "PMPS_GVL.stRequestedBeamParameters.nTran")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "monitor 1: VAL")
 }
 
@@ -79,19 +82,6 @@ record(longin, "$(PREFIX)RequestedBP:Rate_RBV") {
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.nRate?")
   field(EGU, "Hz")
-  info(archive, "monitor 1: VAL")
-}
-
-record(ai, "$(PREFIX)RequestedBP:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
   info(archive, "monitor 1: VAL")
 }
 
@@ -107,14 +97,14 @@ record(longin, "$(PREFIX)RequestedBP:PhotonEnergyRanges_RBV") {
   info(archive, "monitor 1: VAL")
 }
 
-record(waveform, "$(PREFIX)RequestedBP:ST_RBV") {
-  # PMPS_GVL.stRequestedBeamParameters.aStoppers
-  field(DESC, "PMPS_GVL.stRequested...ameters.aStoppers")
+record(waveform, "$(PREFIX)RequestedBP:Veto_RBV") {
+  # PMPS_GVL.stRequestedBeamParameters.aVetoDevices
+  field(DESC, "PMPS_GVL.stRequested...ters.aVetoDevices")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -145,14 +135,17 @@ record(longin, "$(PREFIX)RequestedBP:Cohort_RBV") {
   info(archive, "monitor 1: VAL")
 }
 
-record(longin, "$(PREFIX)CurrentBP:Transmission_RBV") {
+record(ai, "$(PREFIX)CurrentBP:Transmission_RBV") {
   field(DESC, "PMPS_GVL.stCurrentBeamParameters.nTran")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "monitor 1: VAL")
 }
 
@@ -164,19 +157,6 @@ record(longin, "$(PREFIX)CurrentBP:Rate_RBV") {
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.nRate?")
   field(EGU, "Hz")
-  info(archive, "monitor 1: VAL")
-}
-
-record(ai, "$(PREFIX)CurrentBP:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
   info(archive, "monitor 1: VAL")
 }
 
@@ -192,14 +172,14 @@ record(longin, "$(PREFIX)CurrentBP:PhotonEnergyRanges_RBV") {
   info(archive, "monitor 1: VAL")
 }
 
-record(waveform, "$(PREFIX)CurrentBP:ST_RBV") {
-  # PMPS_GVL.stCurrentBeamParameters.aStoppers
-  field(DESC, "PMPS_GVL.stCurrentBe...ameters.aStoppers")
+record(waveform, "$(PREFIX)CurrentBP:Veto_RBV") {
+  # PMPS_GVL.stCurrentBeamParameters.aVetoDevices
+  field(DESC, "PMPS_GVL.stCurrentBe...ters.aVetoDevices")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -238,20 +218,23 @@ record(waveform, "$(PREFIX)eVRangeCnst_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.g_areVBoundaries?")
   field(FTVL, "FLOAT")
   field(EGU, "eV")
-  field(NELM, "16")
+  field(NELM, "32")
   field(MPST, "On Change")
   field(APST, "On Change")
   info(archive, "monitor 1: VAL")
 }
 
-record(longin, "$(PREFIX)FullBeamCnst:Transmission_RBV") {
+record(ai, "$(PREFIX)FullBeamCnst:Transmission_RBV") {
   field(DESC, "Full beam constant")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "monitor 1: VAL")
 }
 
@@ -266,19 +249,6 @@ record(longin, "$(PREFIX)FullBeamCnst:Rate_RBV") {
   info(archive, "monitor 1: VAL")
 }
 
-record(ai, "$(PREFIX)FullBeamCnst:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "monitor 1: VAL")
-}
-
 record(longin, "$(PREFIX)FullBeamCnst:PhotonEnergyRanges_RBV") {
   field(DESC, "Full beam constant")
   field(SCAN, "I/O Intr")
@@ -290,13 +260,13 @@ record(longin, "$(PREFIX)FullBeamCnst:PhotonEnergyRanges_RBV") {
   info(archive, "monitor 1: VAL")
 }
 
-record(waveform, "$(PREFIX)FullBeamCnst:ST_RBV") {
+record(waveform, "$(PREFIX)FullBeamCnst:Veto_RBV") {
   field(DESC, "Full beam constant")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstFullBeam.aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -326,14 +296,17 @@ record(longin, "$(PREFIX)FullBeamCnst:Cohort_RBV") {
   info(archive, "monitor 1: VAL")
 }
 
-record(longin, "$(PREFIX)0RateBeamCnst:Transmission_RBV") {
+record(ai, "$(PREFIX)0RateBeamCnst:Transmission_RBV") {
   field(DESC, "0-rate beam constant")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cst0RateBeam.nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "monitor 1: VAL")
 }
 
@@ -348,19 +321,6 @@ record(longin, "$(PREFIX)0RateBeamCnst:Rate_RBV") {
   info(archive, "monitor 1: VAL")
 }
 
-record(ai, "$(PREFIX)0RateBeamCnst:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cst0RateBeam.fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "monitor 1: VAL")
-}
-
 record(longin, "$(PREFIX)0RateBeamCnst:PhotonEnergyRanges_RBV") {
   field(DESC, "0-rate beam constant")
   field(SCAN, "I/O Intr")
@@ -372,13 +332,13 @@ record(longin, "$(PREFIX)0RateBeamCnst:PhotonEnergyRanges_RBV") {
   info(archive, "monitor 1: VAL")
 }
 
-record(waveform, "$(PREFIX)0RateBeamCnst:ST_RBV") {
+record(waveform, "$(PREFIX)0RateBeamCnst:Veto_RBV") {
   field(DESC, "0-rate beam constant")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cst0RateBeam.aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cst0RateBeam.aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -408,14 +368,17 @@ record(longin, "$(PREFIX)0RateBeamCnst:Cohort_RBV") {
   info(archive, "monitor 1: VAL")
 }
 
-record(longin, "$(PREFIX)SafeBeamCnst:Transmission_RBV") {
+record(ai, "$(PREFIX)SafeBeamCnst:Transmission_RBV") {
   field(DESC, "Safe beam constant")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "monitor 1: VAL")
 }
 
@@ -430,19 +393,6 @@ record(longin, "$(PREFIX)SafeBeamCnst:Rate_RBV") {
   info(archive, "monitor 1: VAL")
 }
 
-record(ai, "$(PREFIX)SafeBeamCnst:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "monitor 1: VAL")
-}
-
 record(longin, "$(PREFIX)SafeBeamCnst:PhotonEnergyRanges_RBV") {
   field(DESC, "Safe beam constant")
   field(SCAN, "I/O Intr")
@@ -454,13 +404,13 @@ record(longin, "$(PREFIX)SafeBeamCnst:PhotonEnergyRanges_RBV") {
   info(archive, "monitor 1: VAL")
 }
 
-record(waveform, "$(PREFIX)SafeBeamCnst:ST_RBV") {
+record(waveform, "$(PREFIX)SafeBeamCnst:Veto_RBV") {
   field(DESC, "Safe beam constant")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -512,7 +462,7 @@ record(waveform, "$(PREFIX)L:eVRangeCnst_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.g_areVBoundariesL?")
   field(FTVL, "FLOAT")
   field(EGU, "eV")
-  field(NELM, "16")
+  field(NELM, "32")
   field(MPST, "On Change")
   field(APST, "On Change")
   info(archive, "monitor 1: VAL")
@@ -527,32 +477,10 @@ record(waveform, "$(PREFIX)K:eVRangeCnst_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.g_areVBoundariesK?")
   field(FTVL, "FLOAT")
   field(EGU, "eV")
-  field(NELM, "16")
+  field(NELM, "32")
   field(MPST, "On Change")
   field(APST, "On Change")
   info(archive, "monitor 1: VAL")
-}
-
-record(bi, "SL1L0:POWER:GO_RBV") {
-  field(DESC, "PRG_SL1L0_POWER.bExecuteMotion")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.bExecuteMotion?")
-  field(ZNAM, "False")
-  field(ONAM, "True")
-  info(archive, "VAL")
-}
-
-record(bo, "SL1L0:POWER:GO") {
-  field(DESC, "PRG_SL1L0_POWER.bExecuteMotion")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.bExecuteMotion=")
-  field(ZNAM, "False")
-  field(ONAM, "True")
-  info(autosaveFields_pass0, "VAL")
-  info(archive, "VAL")
 }
 
 record(bi, "AT2L0:XTES:MMS:01:STATE:RESET_RBV") {
@@ -32144,22 +32072,22 @@ record(mbbi, "AT2L0:XTES:MMS:19:STATE:GET_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2L0:POWER:GO_RBV") {
-  field(DESC, "PRG_SL2L0_POWER.bExecuteMotion")
+record(bi, "SL1L0:POWER:GO_RBV") {
+  field(DESC, "PRG_SL1L0_POWER.bExecuteMotion")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.bExecuteMotion?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL1L0_POWER.bExecuteMotion?")
   field(ZNAM, "False")
   field(ONAM, "True")
   info(archive, "VAL")
 }
 
-record(bo, "SL2L0:POWER:GO") {
-  field(DESC, "PRG_SL2L0_POWER.bExecuteMotion")
+record(bo, "SL1L0:POWER:GO") {
+  field(DESC, "PRG_SL1L0_POWER.bExecuteMotion")
   field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.bExecuteMotion=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL1L0_POWER.bExecuteMotion=")
   field(ZNAM, "False")
   field(ONAM, "True")
   info(autosaveFields_pass0, "VAL")
@@ -34374,6 +34302,28 @@ record(bo, "IM1L0:XTES:SFW:FLOW") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_IM1L0_XTES.fbIM1L0.fbFlowSwitch.bFlowOk=")
   field(ZNAM, "LOW")
   field(ONAM, "OK")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "SL2L0:POWER:GO_RBV") {
+  field(DESC, "PRG_SL2L0_POWER.bExecuteMotion")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_SL2L0_POWER.bExecuteMotion?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(archive, "VAL")
+}
+
+record(bo, "SL2L0:POWER:GO") {
+  field(DESC, "PRG_SL2L0_POWER.bExecuteMotion")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_SL2L0_POWER.bExecuteMotion=")
+  field(ZNAM, "False")
+  field(ONAM, "True")
   info(autosaveFields_pass0, "VAL")
   info(archive, "VAL")
 }
@@ -47943,223 +47893,283 @@ record(bi, "SL2L0:POWER:SOUTH:RTD:02:ERR_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:001:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:001:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[1].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:002:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:002:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[2].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:003:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:003:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[3].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:004:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:004:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[4].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:005:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:005:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[5].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:006:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:006:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[6].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:007:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:007:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[7].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:008:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:008:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[8].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:009:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:009:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[9].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:010:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:010:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[10].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:011:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:011:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[11].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:012:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:012:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[12].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:013:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:013:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[13].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:014:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:014:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[14].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:015:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:015:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[15].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:016:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:016:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[16].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:017:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:017:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[17].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:018:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:018:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[18].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:019:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:019:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[19].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
-record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:020:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:020:Transmission_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[20].nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
@@ -48383,266 +48393,6 @@ record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:020:Rate_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:001:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[1].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:002:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[2].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:003:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[3].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:004:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[4].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:005:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[5].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:006:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[6].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:007:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[7].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:008:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[8].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:009:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[9].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:010:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[10].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:011:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[11].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:012:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[12].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:013:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[13].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:014:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[14].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:015:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[15].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:016:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[16].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:017:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[17].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:018:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[18].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:019:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[19].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "PLC:LFE:MOTION:ARB:AP:Entry:020:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[20].fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
 record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:001:PhotonEnergyRanges_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
@@ -48863,13 +48613,13 @@ record(longin, "PLC:LFE:MOTION:ARB:AP:Entry:020:PhotonEnergyRanges_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:001:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:001:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[1].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[1].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -48877,13 +48627,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:001:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:002:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:002:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[2].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[2].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -48891,13 +48641,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:002:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:003:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:003:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[3].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[3].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -48905,13 +48655,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:003:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:004:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:004:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[4].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[4].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -48919,13 +48669,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:004:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:005:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:005:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[5].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[5].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -48933,13 +48683,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:005:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:006:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:006:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[6].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[6].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -48947,13 +48697,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:006:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:007:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:007:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[7].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[7].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -48961,13 +48711,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:007:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:008:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:008:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[8].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[8].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -48975,13 +48725,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:008:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:009:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:009:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[9].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[9].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -48989,13 +48739,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:009:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:010:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:010:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[10].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[10].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -49003,13 +48753,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:010:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:011:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:011:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[11].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[11].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -49017,13 +48767,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:011:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:012:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:012:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[12].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[12].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -49031,13 +48781,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:012:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:013:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:013:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[13].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[13].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -49045,13 +48795,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:013:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:014:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:014:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[14].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[14].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -49059,13 +48809,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:014:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:015:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:015:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[15].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[15].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -49073,13 +48823,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:015:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:016:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:016:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[16].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[16].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -49087,13 +48837,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:016:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:017:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:017:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[17].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[17].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -49101,13 +48851,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:017:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:018:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:018:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[18].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[18].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -49115,13 +48865,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:018:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:019:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:019:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[19].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[19].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -49129,13 +48879,13 @@ record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:019:ST_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:020:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:AP:Entry:020:Veto_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[20].aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.fbBPAssertionPool.epicsDataPool[20].aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -50039,30 +49789,21 @@ record(longin, "PLC:LFE:MOTION:ARB:CohortCounter_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.nArbiterCohort?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.nActiveCohort?")
   info(archive, "VAL")
 }
 
-record(bi, "PLC:LFE:MOTION:ARB:ActiveInArbitration_RBV") {
-  field(DESC, "True if this arbiter")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.xActiveInArbitration?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(longin, "PLC:LFE:MOTION:ARB:ArbitratedBP:Transmission_RBV") {
+record(ai, "PLC:LFE:MOTION:ARB:ArbitratedBP:Transmission_RBV") {
   field(DESC, "Arbitrated BP")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynInt32")
+  field(DTYP, "asynFloat64")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.q_stBeamParams.nTran?")
-  field(EGU, "%")
+  field(PREC, "2")
+  field(HOPR, "1")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
   info(archive, "VAL")
 }
 
@@ -50077,19 +49818,6 @@ record(longin, "PLC:LFE:MOTION:ARB:ArbitratedBP:Rate_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "PLC:LFE:MOTION:ARB:ArbitratedBP:PulseEnergy_RBV") {
-  field(DESC, "This beam parameter is non-op for now.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.q_stBeamParams.fPP_mJ?")
-  field(PREC, "3")
-  field(EGU, "mJ")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
 record(longin, "PLC:LFE:MOTION:ARB:ArbitratedBP:PhotonEnergyRanges_RBV") {
   field(DESC, "Arbitrated BP")
   field(SCAN, "I/O Intr")
@@ -50101,13 +49829,13 @@ record(longin, "PLC:LFE:MOTION:ARB:ArbitratedBP:PhotonEnergyRanges_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "PLC:LFE:MOTION:ARB:ArbitratedBP:ST_RBV") {
+record(waveform, "PLC:LFE:MOTION:ARB:ArbitratedBP:Veto_RBV") {
   field(DESC, "Arbitrated BP")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.q_stBeamParams.aStoppers?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL.fbArbiter.q_stBeamParams.aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
