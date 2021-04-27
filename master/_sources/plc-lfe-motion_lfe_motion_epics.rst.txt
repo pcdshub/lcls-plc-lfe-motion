@@ -10542,7 +10542,7 @@ LCLS_General.ST_PendingEvent
       - | io: input
 
 
-                                                            
+                                                                    
 lcls_twincat_motion.DUT_MotionStage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -14727,12 +14727,6 @@ PMPS.FB_Arbiter
       - Type
       - Description
       - Pragma
-    * - $(PREFIX):ActiveInArbitration_RBV
-      - bi
-      - True if this arbiter
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:001:Cohort_RBV
       - longin
       - Cohort inc on each arb cycle
@@ -14758,13 +14752,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:001:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:001:Rate_RBV
       - longin
       - Assertion Pool
@@ -14772,21 +14759,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:001:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:001:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:001:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:001:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -14816,13 +14805,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:002:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:002:Rate_RBV
       - longin
       - Assertion Pool
@@ -14830,21 +14812,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:002:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:002:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:002:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:002:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -14874,13 +14858,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:003:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:003:Rate_RBV
       - longin
       - Assertion Pool
@@ -14888,21 +14865,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:003:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:003:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:003:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:003:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -14932,13 +14911,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:004:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:004:Rate_RBV
       - longin
       - Assertion Pool
@@ -14946,21 +14918,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:004:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:004:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:004:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:004:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -14990,13 +14964,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:005:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:005:Rate_RBV
       - longin
       - Assertion Pool
@@ -15004,21 +14971,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:005:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:005:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:005:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:005:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -15048,13 +15017,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:006:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:006:Rate_RBV
       - longin
       - Assertion Pool
@@ -15062,21 +15024,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:006:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:006:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:006:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:006:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -15106,13 +15070,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:007:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:007:Rate_RBV
       - longin
       - Assertion Pool
@@ -15120,21 +15077,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:007:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:007:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:007:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:007:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -15164,13 +15123,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:008:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:008:Rate_RBV
       - longin
       - Assertion Pool
@@ -15178,21 +15130,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:008:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:008:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:008:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:008:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -15222,13 +15176,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:009:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:009:Rate_RBV
       - longin
       - Assertion Pool
@@ -15236,21 +15183,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:009:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:009:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:009:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:009:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -15280,13 +15229,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:010:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:010:Rate_RBV
       - longin
       - Assertion Pool
@@ -15294,21 +15236,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:010:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:010:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:010:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:010:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -15338,13 +15282,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:011:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:011:Rate_RBV
       - longin
       - Assertion Pool
@@ -15352,21 +15289,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:011:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:011:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:011:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:011:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -15396,13 +15335,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:012:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:012:Rate_RBV
       - longin
       - Assertion Pool
@@ -15410,21 +15342,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:012:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:012:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:012:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:012:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -15454,13 +15388,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:013:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:013:Rate_RBV
       - longin
       - Assertion Pool
@@ -15468,21 +15395,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:013:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:013:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:013:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:013:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -15512,13 +15441,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:014:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:014:Rate_RBV
       - longin
       - Assertion Pool
@@ -15526,21 +15448,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:014:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:014:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:014:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:014:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -15570,13 +15494,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:015:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:015:Rate_RBV
       - longin
       - Assertion Pool
@@ -15584,21 +15501,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:015:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:015:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:015:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:015:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -15628,13 +15547,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:016:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:016:Rate_RBV
       - longin
       - Assertion Pool
@@ -15642,21 +15554,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:016:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:016:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:016:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:016:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -15686,13 +15600,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:017:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:017:Rate_RBV
       - longin
       - Assertion Pool
@@ -15700,21 +15607,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:017:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:017:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:017:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:017:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -15744,13 +15653,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:018:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:018:Rate_RBV
       - longin
       - Assertion Pool
@@ -15758,21 +15660,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:018:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:018:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:018:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:018:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -15802,13 +15706,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:019:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:019:Rate_RBV
       - longin
       - Assertion Pool
@@ -15816,21 +15713,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:019:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:019:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:019:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:019:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -15860,13 +15759,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:020:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):AP:Entry:020:Rate_RBV
       - longin
       - Assertion Pool
@@ -15874,21 +15766,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):AP:Entry:020:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - $(PREFIX):AP:Entry:020:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):AP:Entry:020:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - $(PREFIX):AP:Entry:020:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -15912,13 +15806,6 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):ArbitratedBP:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):ArbitratedBP:Rate_RBV
       - longin
       - Arbitrated BP
@@ -15926,21 +15813,23 @@ PMPS.FB_Arbiter
         | io: input
 
 
-    * - $(PREFIX):ArbitratedBP:ST_RBV
-      - waveform
-      - Arbitrated BP
-      - | io: input
-
-
     * - $(PREFIX):ArbitratedBP:Transmission_RBV
-      - longin
+      - ai
       - Arbitrated BP
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):ArbitratedBP:Valid_RBV
       - bi
+      - Arbitrated BP
+      - | io: input
+
+
+    * - $(PREFIX):ArbitratedBP:Veto_RBV
+      - waveform
       - Arbitrated BP
       - | io: input
 
@@ -15988,13 +15877,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:001:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:001:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[1].nRate
@@ -16002,22 +15884,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:001:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[1].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:001:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[1].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:001:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[1].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:001:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[1].aVetoDevices
       - | io: input
 
 
@@ -16046,13 +15930,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:002:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:002:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[2].nRate
@@ -16060,22 +15937,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:002:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[2].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:002:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[2].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:002:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[2].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:002:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[2].aVetoDevices
       - | io: input
 
 
@@ -16104,13 +15983,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:003:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:003:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[3].nRate
@@ -16118,22 +15990,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:003:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[3].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:003:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[3].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:003:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[3].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:003:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[3].aVetoDevices
       - | io: input
 
 
@@ -16162,13 +16036,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:004:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:004:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[4].nRate
@@ -16176,22 +16043,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:004:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[4].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:004:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[4].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:004:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[4].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:004:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[4].aVetoDevices
       - | io: input
 
 
@@ -16220,13 +16089,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:005:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:005:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[5].nRate
@@ -16234,22 +16096,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:005:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[5].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:005:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[5].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:005:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[5].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:005:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[5].aVetoDevices
       - | io: input
 
 
@@ -16278,13 +16142,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:006:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:006:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[6].nRate
@@ -16292,22 +16149,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:006:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[6].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:006:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[6].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:006:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[6].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:006:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[6].aVetoDevices
       - | io: input
 
 
@@ -16336,13 +16195,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:007:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:007:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[7].nRate
@@ -16350,22 +16202,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:007:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[7].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:007:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[7].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:007:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[7].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:007:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[7].aVetoDevices
       - | io: input
 
 
@@ -16394,13 +16248,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:008:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:008:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[8].nRate
@@ -16408,22 +16255,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:008:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[8].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:008:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[8].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:008:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[8].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:008:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[8].aVetoDevices
       - | io: input
 
 
@@ -16452,13 +16301,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:009:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:009:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[9].nRate
@@ -16466,22 +16308,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:009:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[9].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:009:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[9].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:009:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[9].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:009:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[9].aVetoDevices
       - | io: input
 
 
@@ -16510,13 +16354,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:010:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:010:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[10].nRate
@@ -16524,22 +16361,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:010:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[10].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:010:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[10].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:010:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[10].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:010:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[10].aVetoDevices
       - | io: input
 
 
@@ -16568,13 +16407,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:011:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:011:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[11].nRate
@@ -16582,22 +16414,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:011:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[11].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:011:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[11].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:011:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[11].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:011:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[11].aVetoDevices
       - | io: input
 
 
@@ -16626,13 +16460,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:012:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:012:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[12].nRate
@@ -16640,22 +16467,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:012:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[12].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:012:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[12].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:012:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[12].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:012:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[12].aVetoDevices
       - | io: input
 
 
@@ -16684,13 +16513,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:013:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:013:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[13].nRate
@@ -16698,22 +16520,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:013:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[13].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:013:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[13].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:013:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[13].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:013:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[13].aVetoDevices
       - | io: input
 
 
@@ -16742,13 +16566,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:014:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:014:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[14].nRate
@@ -16756,22 +16573,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:014:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[14].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:014:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[14].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:014:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[14].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:014:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[14].aVetoDevices
       - | io: input
 
 
@@ -16800,13 +16619,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:015:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:015:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[15].nRate
@@ -16814,22 +16626,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:015:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[15].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:015:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[15].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:015:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[15].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:015:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[15].aVetoDevices
       - | io: input
 
 
@@ -16858,13 +16672,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:016:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:016:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[16].nRate
@@ -16872,22 +16679,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:016:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[16].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:016:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[16].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:016:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[16].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:016:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[16].aVetoDevices
       - | io: input
 
 
@@ -16916,13 +16725,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:017:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:017:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[17].nRate
@@ -16930,22 +16732,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:017:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[17].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:017:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[17].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:017:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[17].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:017:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[17].aVetoDevices
       - | io: input
 
 
@@ -16974,13 +16778,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:018:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:018:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[18].nRate
@@ -16988,22 +16785,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:018:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[18].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:018:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[18].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:018:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[18].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:018:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[18].aVetoDevices
       - | io: input
 
 
@@ -17032,13 +16831,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:019:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:019:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[19].nRate
@@ -17046,22 +16838,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:019:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[19].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:019:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[19].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:019:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[19].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:019:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[19].aVetoDevices
       - | io: input
 
 
@@ -17090,13 +16884,6 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:020:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Entry:020:Rate_RBV
       - longin
       - $(SYMBOL).epicsDataPool[20].nRate
@@ -17104,22 +16891,24 @@ PMPS.FB_BeamParamAssertionPool
         | io: input
 
 
-    * - $(PREFIX):Entry:020:ST_RBV
-      - waveform
-      - $(SYMBOL).epicsDataPool[20].aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Entry:020:Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).epicsDataPool[20].nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Entry:020:Valid_RBV
       - bi
       - $(SYMBOL).epicsDataPool[20].xValid
+      - | io: input
+
+
+    * - $(PREFIX):Entry:020:Veto_RBV
+      - waveform
+      - $(SYMBOL).epicsDataPool[20].aVetoDevices
       - | io: input
 
 
@@ -22932,13 +22721,6 @@ PMPS.ST_BeamParams
         | io: input
 
 
-    * - $(PREFIX):PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Rate_RBV
       - longin
       - $(SYMBOL).nRate
@@ -22946,22 +22728,24 @@ PMPS.ST_BeamParams
         | io: input
 
 
-    * - $(PREFIX):ST_RBV
-      - waveform
-      - $(SYMBOL).aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Valid_RBV
       - bi
       - $(SYMBOL).xValid
+      - | io: input
+
+
+    * - $(PREFIX):Veto_RBV
+      - waveform
+      - $(SYMBOL).aVetoDevices
       - | io: input
 
 
@@ -23002,13 +22786,6 @@ PMPS.ST_BP_ArbInternal
         | io: input
 
 
-    * - $(PREFIX):PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX):Rate_RBV
       - longin
       - $(SYMBOL).nRate
@@ -23016,22 +22793,24 @@ PMPS.ST_BP_ArbInternal
         | io: input
 
 
-    * - $(PREFIX):ST_RBV
-      - waveform
-      - $(SYMBOL).aStoppers
-      - | io: input
-
-
     * - $(PREFIX):Transmission_RBV
-      - longin
+      - ai
       - $(SYMBOL).nTran
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX):Valid_RBV
       - bi
       - $(SYMBOL).xValid
+      - | io: input
+
+
+    * - $(PREFIX):Veto_RBV
+      - waveform
+      - $(SYMBOL).aVetoDevices
       - | io: input
 
 
@@ -23338,7 +23117,7 @@ ST_BeamParams_IO
       - Description
       - Pragma
     * - $(PREFIX):Attenuation_RBV
-      - longin
+      - ai
       - $(SYMBOL).nTran
       - | io: input
 
@@ -23351,19 +23130,13 @@ ST_BeamParams_IO
 
     * - $(PREFIX):AuxAttenuator_RBV
       - waveform
-      - $(SYMBOL).aStoppers
+      - $(SYMBOL).aVetoDevices
       - | io: input
 
 
     * - $(PREFIX):PhotonEnergy_RBV
       - longin
       - $(SYMBOL).neVRange
-      - | io: input
-
-
-    * - $(PREFIX):PulseEnergy_RBV
-      - ai
-      - $(SYMBOL).fPP_mJ
       - | io: input
 
 
@@ -23588,7 +23361,7 @@ ST_PMPS_Aperture_IO
         | io: input
 
 
-                                                                                  
+                                                                                    
 Database Records
 ----------------
 
@@ -23615,14 +23388,6 @@ Database Records
         | io: input
 
 
-    * - $(PREFIX)0RateBeamCnst:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | archive: 1s monitor
-        | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX)0RateBeamCnst:Rate_RBV
       - longin
       - 0-rate beam constant
@@ -23631,23 +23396,25 @@ Database Records
         | io: input
 
 
-    * - $(PREFIX)0RateBeamCnst:ST_RBV
-      - waveform
-      - 0-rate beam constant
-      - | archive: 1s monitor
-        | io: input
-
-
     * - $(PREFIX)0RateBeamCnst:Transmission_RBV
-      - longin
+      - ai
       - 0-rate beam constant
       - | archive: 1s monitor
-        | field: EGU %
+        | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX)0RateBeamCnst:Valid_RBV
       - bi
+      - 0-rate beam constant
+      - | archive: 1s monitor
+        | io: input
+
+
+    * - $(PREFIX)0RateBeamCnst:Veto_RBV
+      - waveform
       - 0-rate beam constant
       - | archive: 1s monitor
         | io: input
@@ -23674,14 +23441,6 @@ Database Records
         | io: input
 
 
-    * - $(PREFIX)CurrentBP:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | archive: 1s monitor
-        | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX)CurrentBP:Rate_RBV
       - longin
       - PMPS_GVL.stCurrentBeamParameters.nRate
@@ -23690,24 +23449,26 @@ Database Records
         | io: input
 
 
-    * - $(PREFIX)CurrentBP:ST_RBV
-      - waveform
-      - PMPS_GVL.stCurrentBeamParameters.aStoppers
-      - | archive: 1s monitor
-        | io: input
-
-
     * - $(PREFIX)CurrentBP:Transmission_RBV
-      - longin
+      - ai
       - PMPS_GVL.stCurrentBeamParameters.nTran
       - | archive: 1s monitor
-        | field: EGU %
+        | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX)CurrentBP:Valid_RBV
       - bi
       - PMPS_GVL.stCurrentBeamParameters.xValid
+      - | archive: 1s monitor
+        | io: input
+
+
+    * - $(PREFIX)CurrentBP:Veto_RBV
+      - waveform
+      - PMPS_GVL.stCurrentBeamParameters.aVetoDevices
       - | archive: 1s monitor
         | io: input
 
@@ -23743,14 +23504,6 @@ Database Records
         | io: input
 
 
-    * - $(PREFIX)FullBeamCnst:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | archive: 1s monitor
-        | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX)FullBeamCnst:Rate_RBV
       - longin
       - Full beam constant
@@ -23759,23 +23512,25 @@ Database Records
         | io: input
 
 
-    * - $(PREFIX)FullBeamCnst:ST_RBV
-      - waveform
-      - Full beam constant
-      - | archive: 1s monitor
-        | io: input
-
-
     * - $(PREFIX)FullBeamCnst:Transmission_RBV
-      - longin
+      - ai
       - Full beam constant
       - | archive: 1s monitor
-        | field: EGU %
+        | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX)FullBeamCnst:Valid_RBV
       - bi
+      - Full beam constant
+      - | archive: 1s monitor
+        | io: input
+
+
+    * - $(PREFIX)FullBeamCnst:Veto_RBV
+      - waveform
       - Full beam constant
       - | archive: 1s monitor
         | io: input
@@ -23848,14 +23603,6 @@ Database Records
         | io: input
 
 
-    * - $(PREFIX)RequestedBP:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | archive: 1s monitor
-        | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX)RequestedBP:Rate_RBV
       - longin
       - PMPS_GVL.stRequestedBeamParameters.nRate
@@ -23864,24 +23611,26 @@ Database Records
         | io: input
 
 
-    * - $(PREFIX)RequestedBP:ST_RBV
-      - waveform
-      - PMPS_GVL.stRequestedBeamParameters.aStoppers
-      - | archive: 1s monitor
-        | io: input
-
-
     * - $(PREFIX)RequestedBP:Transmission_RBV
-      - longin
+      - ai
       - PMPS_GVL.stRequestedBeamParameters.nTran
       - | archive: 1s monitor
-        | field: EGU %
+        | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX)RequestedBP:Valid_RBV
       - bi
       - PMPS_GVL.stRequestedBeamParameters.xValid
+      - | archive: 1s monitor
+        | io: input
+
+
+    * - $(PREFIX)RequestedBP:Veto_RBV
+      - waveform
+      - PMPS_GVL.stRequestedBeamParameters.aVetoDevices
       - | archive: 1s monitor
         | io: input
 
@@ -23901,14 +23650,6 @@ Database Records
         | io: input
 
 
-    * - $(PREFIX)SafeBeamCnst:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | archive: 1s monitor
-        | field: EGU mJ
-        | io: input
-
-
     * - $(PREFIX)SafeBeamCnst:Rate_RBV
       - longin
       - Safe beam constant
@@ -23917,23 +23658,25 @@ Database Records
         | io: input
 
 
-    * - $(PREFIX)SafeBeamCnst:ST_RBV
-      - waveform
-      - Safe beam constant
-      - | archive: 1s monitor
-        | io: input
-
-
     * - $(PREFIX)SafeBeamCnst:Transmission_RBV
-      - longin
+      - ai
       - Safe beam constant
       - | archive: 1s monitor
-        | field: EGU %
+        | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - $(PREFIX)SafeBeamCnst:Valid_RBV
       - bi
+      - Safe beam constant
+      - | archive: 1s monitor
+        | io: input
+
+
+    * - $(PREFIX)SafeBeamCnst:Veto_RBV
+      - waveform
       - Safe beam constant
       - | archive: 1s monitor
         | io: input
@@ -64224,12 +63967,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:ActiveInArbitration_RBV
-      - bi
-      - True if this arbiter
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:001:Cohort_RBV
       - longin
       - Cohort inc on each arb cycle
@@ -64255,13 +63992,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:001:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:001:Rate_RBV
       - longin
       - Assertion Pool
@@ -64269,21 +63999,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:001:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:001:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:001:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:001:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -64313,13 +64045,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:002:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:002:Rate_RBV
       - longin
       - Assertion Pool
@@ -64327,21 +64052,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:002:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:002:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:002:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:002:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -64371,13 +64098,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:003:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:003:Rate_RBV
       - longin
       - Assertion Pool
@@ -64385,21 +64105,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:003:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:003:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:003:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:003:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -64429,13 +64151,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:004:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:004:Rate_RBV
       - longin
       - Assertion Pool
@@ -64443,21 +64158,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:004:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:004:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:004:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:004:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -64487,13 +64204,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:005:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:005:Rate_RBV
       - longin
       - Assertion Pool
@@ -64501,21 +64211,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:005:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:005:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:005:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:005:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -64545,13 +64257,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:006:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:006:Rate_RBV
       - longin
       - Assertion Pool
@@ -64559,21 +64264,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:006:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:006:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:006:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:006:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -64603,13 +64310,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:007:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:007:Rate_RBV
       - longin
       - Assertion Pool
@@ -64617,21 +64317,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:007:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:007:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:007:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:007:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -64661,13 +64363,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:008:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:008:Rate_RBV
       - longin
       - Assertion Pool
@@ -64675,21 +64370,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:008:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:008:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:008:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:008:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -64719,13 +64416,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:009:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:009:Rate_RBV
       - longin
       - Assertion Pool
@@ -64733,21 +64423,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:009:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:009:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:009:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:009:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -64777,13 +64469,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:010:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:010:Rate_RBV
       - longin
       - Assertion Pool
@@ -64791,21 +64476,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:010:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:010:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:010:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:010:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -64835,13 +64522,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:011:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:011:Rate_RBV
       - longin
       - Assertion Pool
@@ -64849,21 +64529,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:011:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:011:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:011:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:011:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -64893,13 +64575,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:012:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:012:Rate_RBV
       - longin
       - Assertion Pool
@@ -64907,21 +64582,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:012:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:012:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:012:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:012:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -64951,13 +64628,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:013:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:013:Rate_RBV
       - longin
       - Assertion Pool
@@ -64965,21 +64635,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:013:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:013:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:013:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:013:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -65009,13 +64681,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:014:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:014:Rate_RBV
       - longin
       - Assertion Pool
@@ -65023,21 +64688,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:014:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:014:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:014:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:014:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -65067,13 +64734,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:015:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:015:Rate_RBV
       - longin
       - Assertion Pool
@@ -65081,21 +64741,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:015:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:015:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:015:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:015:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -65125,13 +64787,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:016:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:016:Rate_RBV
       - longin
       - Assertion Pool
@@ -65139,21 +64794,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:016:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:016:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:016:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:016:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -65183,13 +64840,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:017:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:017:Rate_RBV
       - longin
       - Assertion Pool
@@ -65197,21 +64847,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:017:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:017:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:017:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:017:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -65241,13 +64893,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:018:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:018:Rate_RBV
       - longin
       - Assertion Pool
@@ -65255,21 +64900,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:018:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:018:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:018:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:018:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -65299,13 +64946,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:019:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:019:Rate_RBV
       - longin
       - Assertion Pool
@@ -65313,21 +64953,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:019:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:019:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:019:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:019:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -65357,13 +64999,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:020:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:020:Rate_RBV
       - longin
       - Assertion Pool
@@ -65371,21 +65006,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:AP:Entry:020:ST_RBV
-      - waveform
-      - Assertion Pool
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:AP:Entry:020:Transmission_RBV
-      - longin
+      - ai
       - Assertion Pool
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:AP:Entry:020:Valid_RBV
       - bi
+      - Assertion Pool
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:AP:Entry:020:Veto_RBV
+      - waveform
       - Assertion Pool
       - | io: input
 
@@ -65409,13 +65046,6 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:ArbitratedBP:PulseEnergy_RBV
-      - ai
-      - This beam parameter is non-op for now.
-      - | field: EGU mJ
-        | io: input
-
-
     * - PLC:LFE:MOTION:ARB:ArbitratedBP:Rate_RBV
       - longin
       - Arbitrated BP
@@ -65423,21 +65053,23 @@ Database Records
         | io: input
 
 
-    * - PLC:LFE:MOTION:ARB:ArbitratedBP:ST_RBV
-      - waveform
-      - Arbitrated BP
-      - | io: input
-
-
     * - PLC:LFE:MOTION:ARB:ArbitratedBP:Transmission_RBV
-      - longin
+      - ai
       - Arbitrated BP
-      - | field: EGU %
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
         | io: input
 
 
     * - PLC:LFE:MOTION:ARB:ArbitratedBP:Valid_RBV
       - bi
+      - Arbitrated BP
+      - | io: input
+
+
+    * - PLC:LFE:MOTION:ARB:ArbitratedBP:Veto_RBV
+      - waveform
       - Arbitrated BP
       - | io: input
 
