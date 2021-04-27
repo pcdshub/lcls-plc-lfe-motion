@@ -19,42 +19,48 @@ VAR
                               .fbYagThermoCouple.bOverrange := TIIB[IM1L1-EL3314]^TC Inputs Channel 2^Status^Overrange;
                               .fbYagThermoCouple.iRaw := TIIB[IM1L1-EL3314]^TC Inputs Channel 2^Value'}
     fbIM1L1: FB_PPM;
+
+    bInit: BOOL := TRUE;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[
-fbIM1L1.nTransitionAssertionID := 16#2110;
-fbIM1L1.nUnknownAssertionID := 16#2119;
-
-fbIM1L1.stOut.fPosition := -11;
-fbIM1L1.stOut.bUseRawCounts := FALSE;
-fbIM1L1.stOut.nRequestAssertionID := 16#2111;
-fbIM1L1.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
-fbIM1L1.stOut.bValid := TRUE;
-
-fbIM1L1.stPower.fPosition := -47.59;
-fbIM1L1.stPower.bUseRawCounts := FALSE;
-fbIM1L1.stPower.nRequestAssertionID := 16#2112;
-fbIM1L1.stPower.stBeamParams := PMPS_GVL.cstFullBeam;
-// For now, leave this restriction out (doesn't even take beam yet)
-// fbIM1L1.stPower.stBeamParams := F_eVExcludeRange(1, 5000);
-fbIM1L1.stPower.bValid := TRUE;
-
-fbIM1L1.stYag1.fPosition := -71.69;
-fbIM1L1.stYag1.bUseRawCounts := FALSE;
-fbIM1L1.stYag1.nRequestAssertionID := 16#2113;
-fbIM1L1.stYag1.stBeamParams := PMPS_GVL.cstFullBeam;
-// For now, do not have restrictions on this YAG. Eventually we want to add exclusion ranges where we need to limit transmission to 0.1 (10%) within those ranges. Currently we do not have transmission control via PMPS on LFE.
-// fbIM1L1.stYag1.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
-fbIM1L1.stYag1.bValid := TRUE;
-
-fbIM1L1.stYag2.fPosition := -97.70;
-fbIM1L1.stYag2.bUseRawCounts := FALSE;
-fbIM1L1.stYag2.nRequestAssertionID := 16#2114;
-fbIM1L1.stYag2.stBeamParams := PMPS_GVL.cstFullBeam;
-// For now, do not have restrictions on this YAG. Eventually we want to add exclusion ranges where we need to limit transmission to 0.1 (10%) within those ranges. Currently we do not have transmission control via PMPS on LFE.
-// fbIM1L1.stYag2.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
-fbIM1L1.stYag2.bValid := TRUE;
+IF bInit THEN
+    fbIM1L1.nTransitionAssertionID := 16#2110;
+    fbIM1L1.nUnknownAssertionID := 16#2119;
+    
+    fbIM1L1.stOut.fPosition := -11;
+    fbIM1L1.stOut.bUseRawCounts := FALSE;
+    fbIM1L1.stOut.nRequestAssertionID := 16#2111;
+    fbIM1L1.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
+    fbIM1L1.stOut.bValid := TRUE;
+    
+    fbIM1L1.stPower.fPosition := -47.59;
+    fbIM1L1.stPower.bUseRawCounts := FALSE;
+    fbIM1L1.stPower.nRequestAssertionID := 16#2112;
+    fbIM1L1.stPower.stBeamParams := PMPS_GVL.cstFullBeam;
+    // For now, leave this restriction out (doesn't even take beam yet)
+    // fbIM1L1.stPower.stBeamParams := F_eVExcludeRange(1, 5000);
+    fbIM1L1.stPower.bValid := TRUE;
+    
+    fbIM1L1.stYag1.fPosition := -71.69;
+    fbIM1L1.stYag1.bUseRawCounts := FALSE;
+    fbIM1L1.stYag1.nRequestAssertionID := 16#2113;
+    fbIM1L1.stYag1.stBeamParams := PMPS_GVL.cstFullBeam;
+    // For now, do not have restrictions on this YAG. Eventually we want to add exclusion ranges where we need to limit transmission to 0.1 (10%) within those ranges. Currently we do not have transmission control via PMPS on LFE.
+    // fbIM1L1.stYag1.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
+    fbIM1L1.stYag1.bValid := TRUE;
+    
+    fbIM1L1.stYag2.fPosition := -97.70;
+    fbIM1L1.stYag2.bUseRawCounts := FALSE;
+    fbIM1L1.stYag2.nRequestAssertionID := 16#2114;
+    fbIM1L1.stYag2.stBeamParams := PMPS_GVL.cstFullBeam;
+    // For now, do not have restrictions on this YAG. Eventually we want to add exclusion ranges where we need to limit transmission to 0.1 (10%) within those ranges. Currently we do not have transmission control via PMPS on LFE.
+    // fbIM1L1.stYag2.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
+    fbIM1L1.stYag2.bValid := TRUE;
+    
+    bInit := FALSE;
+END_IF
 
 fbIM1L1(
     fbArbiter := GVL.fbArbiter,

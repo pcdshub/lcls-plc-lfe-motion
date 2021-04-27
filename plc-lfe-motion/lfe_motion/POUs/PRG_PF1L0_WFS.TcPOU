@@ -18,53 +18,59 @@ VAR
     fbPF1L0: FB_WFS;
     stSiBP: ST_BeamParams := PMPS_GVL.cstFullBeam;
     stFoilBP: ST_BeamParams := PMPS_GVL.cstFullBeam;
+    
+    bInit: BOOL := TRUE;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[
-// Avoid damage peak between 3.2 keV and 1.6 keV
-stSiBP.neVRange := F_evExcludeRange(1600, 3200);
-// Drop transmission to 20%
-stSiBP.nTran := 20;
-
-fbPF1L0.nTransitionAssertionID := 16#3100;
-fbPF1L0.nUnknownAssertionID := 16#3109;
-
-fbPF1L0.stOut.fPosition := -13;
-fbPF1L0.stOut.bUseRawCounts := FALSE;
-fbPF1L0.stOut.nRequestAssertionID := 16#3101;
-fbPF1L0.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
-fbPF1L0.stOut.bValid := TRUE;
-
-fbPF1L0.stTarget1.fPosition := -93.77;
-fbPF1L0.stTarget1.bUseRawCounts := FALSE;
-fbPF1L0.stTarget1.nRequestAssertionID := 16#3102;
-fbPF1L0.stTarget1.stBeamParams := stSiBP;
-fbPF1L0.stTarget1.bValid := TRUE;
-
-fbPF1L0.stTarget2.fPosition := -79.402;
-fbPF1L0.stTarget2.bUseRawCounts := FALSE;
-fbPF1L0.stTarget2.nRequestAssertionID := 16#3103;
-fbPF1L0.stTarget2.stBeamParams := stSiBP;
-fbPF1L0.stTarget2.bValid := TRUE;
-
-fbPF1L0.stTarget3.fPosition := -65.028;
-fbPF1L0.stTarget3.bUseRawCounts := FALSE;
-fbPF1L0.stTarget3.nRequestAssertionID := 16#3104;
-fbPF1L0.stTarget3.stBeamParams := stSiBP;
-fbPF1L0.stTarget3.bValid := TRUE;
-
-fbPF1L0.stTarget4.fPosition := -50.652;
-fbPF1L0.stTarget4.bUseRawCounts := FALSE;
-fbPF1L0.stTarget4.nRequestAssertionID := 16#3105;
-fbPF1L0.stTarget4.stBeamParams := stSiBP;
-fbPF1L0.stTarget4.bValid := TRUE;
-
-fbPF1L0.stTarget5.fPosition := -36.277;
-fbPF1L0.stTarget5.bUseRawCounts := FALSE;
-fbPF1L0.stTarget5.nRequestAssertionID := 16#3106;
-fbPF1L0.stTarget5.stBeamParams := stSiBP;
-fbPF1L0.stTarget5.bValid := TRUE;
+IF bInit THEN
+    // Avoid damage peak between 3.2 keV and 1.6 keV
+    stSiBP.neVRange := F_evExcludeRange(1600, 3200);
+    // Drop transmission to 20%
+    stSiBP.nTran := 20;
+    
+    fbPF1L0.nTransitionAssertionID := 16#3100;
+    fbPF1L0.nUnknownAssertionID := 16#3109;
+    
+    fbPF1L0.stOut.fPosition := -13;
+    fbPF1L0.stOut.bUseRawCounts := FALSE;
+    fbPF1L0.stOut.nRequestAssertionID := 16#3101;
+    fbPF1L0.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
+    fbPF1L0.stOut.bValid := TRUE;
+    
+    fbPF1L0.stTarget1.fPosition := -93.77;
+    fbPF1L0.stTarget1.bUseRawCounts := FALSE;
+    fbPF1L0.stTarget1.nRequestAssertionID := 16#3102;
+    fbPF1L0.stTarget1.stBeamParams := stSiBP;
+    fbPF1L0.stTarget1.bValid := TRUE;
+    
+    fbPF1L0.stTarget2.fPosition := -79.402;
+    fbPF1L0.stTarget2.bUseRawCounts := FALSE;
+    fbPF1L0.stTarget2.nRequestAssertionID := 16#3103;
+    fbPF1L0.stTarget2.stBeamParams := stSiBP;
+    fbPF1L0.stTarget2.bValid := TRUE;
+    
+    fbPF1L0.stTarget3.fPosition := -65.028;
+    fbPF1L0.stTarget3.bUseRawCounts := FALSE;
+    fbPF1L0.stTarget3.nRequestAssertionID := 16#3104;
+    fbPF1L0.stTarget3.stBeamParams := stSiBP;
+    fbPF1L0.stTarget3.bValid := TRUE;
+    
+    fbPF1L0.stTarget4.fPosition := -50.652;
+    fbPF1L0.stTarget4.bUseRawCounts := FALSE;
+    fbPF1L0.stTarget4.nRequestAssertionID := 16#3105;
+    fbPF1L0.stTarget4.stBeamParams := stSiBP;
+    fbPF1L0.stTarget4.bValid := TRUE;
+    
+    fbPF1L0.stTarget5.fPosition := -36.277;
+    fbPF1L0.stTarget5.bUseRawCounts := FALSE;
+    fbPF1L0.stTarget5.nRequestAssertionID := 16#3106;
+    fbPF1L0.stTarget5.stBeamParams := stSiBP;
+    fbPF1L0.stTarget5.bValid := TRUE;
+    
+    bInit := FALSE;
+END_IF
 
 (*
 Currently disconnected

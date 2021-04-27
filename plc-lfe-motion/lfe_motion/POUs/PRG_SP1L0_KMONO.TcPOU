@@ -29,12 +29,17 @@ VAR
     fbDiodeFFOEnergy: FB_FastFault;
     bDiodeOut: BOOL;
     bDiodeIn: BOOL;
+    
+    bInit: BOOL := TRUE;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[
-// Only allow 7.7-8.9 keV
-stOkBeam.neVRange := F_eVIncludeRange(7700, 8900);
+IF bInit THEN
+    // Only allow 7.7-8.9 keV
+    stOkBeam.neVRange := F_eVIncludeRange(7700, 8900);
+    bInit := FALSE;
+END_IF
 bEnergyOK := F_SafeBPCompare(PMPS_GVL.stCurrentBeamParameters, stOkBeam);
 
 // Motor 1 XTAL ANGLE X (SP1L0-KMONO-MMS-01)
