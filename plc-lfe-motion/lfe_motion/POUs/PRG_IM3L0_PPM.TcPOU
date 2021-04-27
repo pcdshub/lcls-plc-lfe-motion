@@ -36,7 +36,7 @@ fbIM3L0.stPower.fPosition := -47.40;
 fbIM3L0.stPower.bUseRawCounts := FALSE;
 fbIM3L0.stPower.nRequestAssertionID := 16#2302;
 fbIM3L0.stPower.stBeamParams := PMPS_GVL.cstFullBeam;
-fbIM3L0.stPower.stBeamParams := F_eVExcludeRange(0, 5000);
+fbIM3L0.stPower.stBeamParams.neVRange := F_eVExcludeRange(0, 5000);
 fbIM3L0.stPower.bValid := TRUE;
 
 fbIM3L0.stYag1.fPosition := -71.50;
