@@ -19,7 +19,7 @@ VAR_INPUT
     field: ONAM True
     '}
     bMoveOk:BOOL;
-	(*Offsets*)
+    (*Offsets*)
     {attribute 'pytmc' := '
     pv: Offset_Top;
     io: io;
@@ -160,8 +160,8 @@ VAR
     rTrig_Block: R_TRIG;
     rTrig_Open: R_TRIG;
     rTrig_Close: R_TRIG;
-	
-	    //old values
+
+        //old values
     rOldReqApertureSizeX : REAL;
     rOldReqApertureSizeY : REAL;
     rOldReqCenterX: REAL;
@@ -181,9 +181,9 @@ VAR
     fbSetPosition_North: MC_SetPosition;
     fbSetPosition_South: MC_SetPosition;
 
-	// For logging
+    // For logging
     fbLogger : FB_LogMessage := (eSubsystem:=E_SubSystem.MOTION);
-    
+
 END_VAR
 
 
@@ -221,8 +221,8 @@ END_IF]]></ST>
         <ST><![CDATA[//check if requested center or gap has changed
 //check that the requested values are within acceptable motion range
 IF (rOldReqApertureSizeX <> rReqApertureSizeX) THEN
-	rOldReqApertureSizeX := rReqApertureSizeX;
-	bExecuteMotionX := TRUE;
+    rOldReqApertureSizeX := rReqApertureSizeX;
+    bExecuteMotionX := TRUE;
     fbLogger(sMsg:='Requested new X gap.', eSevr:=TcEventSeverity.Verbose);
 END_IF
 
@@ -230,20 +230,20 @@ IF (rOldReqCenterX <> rReqCenterX) THEN
     rOldReqCenterX := rReqCenterX;
     bExecuteMotionX := TRUE;
     fbLogger(sMsg:='Requested new X center', eSevr:=TcEventSeverity.Verbose);
-  
+
 END_IF
 
 IF (rOldReqApertureSizeY <> rReqApertureSizeY) THEN
-	rOldReqApertureSizeY := rReqApertureSizeY;
-	bExecuteMotionY := TRUE;
-	fbLogger(sMsg:='Requested new Y gap.', eSevr:=TcEventSeverity.Verbose);
+    rOldReqApertureSizeY := rReqApertureSizeY;
+    bExecuteMotionY := TRUE;
+    fbLogger(sMsg:='Requested new Y gap.', eSevr:=TcEventSeverity.Verbose);
 END_IF
 
 IF (rOldReqCenterY <> rReqCenterY) THEN
    rOldReqCenterY := rReqCenterY;
    bExecuteMotionY := TRUE;
    fbLogger(sMsg:='Requested new Y center.', eSevr:=TcEventSeverity.Verbose);
-   
+
 END_IF
 
 
