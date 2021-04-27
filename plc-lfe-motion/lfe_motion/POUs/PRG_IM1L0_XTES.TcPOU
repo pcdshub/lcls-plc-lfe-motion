@@ -62,7 +62,7 @@ VAR
                               .D[20] := TIIB[IM1L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
                               .D[21] := TIIB[IM1L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 21'}
     stEL6Out AT %Q*: EL6OutData22b;
-    
+
     bInit: BOOL := TRUE;
 END_VAR
 ]]></Declaration>
@@ -71,32 +71,32 @@ END_VAR
 IF bInit THEN
     fbIM1L0.nTransitionAssertionID := 16#2100;
     fbIM1L0.nUnknownAssertionID := 16#2109;
-    
+
     fbIM1L0.stOut.fPosition := 0;
     fbIM1L0.stOut.bUseRawCounts := FALSE;
     fbIM1L0.stOut.nRequestAssertionID := 16#2101;
     fbIM1L0.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
     fbIM1L0.stOut.bValid := TRUE;
-    
+
     fbIM1L0.stYag.fPosition := -86.65;
     fbIM1L0.stYag.bUseRawCounts := FALSE;
     fbIM1L0.stYag.nRequestAssertionID := 16#2102;
     fbIM1L0.stYag.stBeamParams := PMPS_GVL.cstFullBeam;
     fbIM1L0.stYag.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
     fbIM1L0.stYag.bValid := TRUE;
-    
+
     fbIM1L0.stDiamond.fPosition := -56.65;
     fbIM1L0.stDiamond.bUseRawCounts := FALSE;
     fbIM1L0.stDiamond.nRequestAssertionID := 16#2103;
     fbIM1L0.stDiamond.stBeamParams := PMPS_GVL.cstFullBeam;
     fbIM1L0.stDiamond.bValid := TRUE;
-    
+
     fbIM1L0.stReticle.fPosition := -26.65;
     fbIM1L0.stReticle.bUseRawCounts := FALSE;
     fbIM1L0.stReticle.nRequestAssertionID := 16#2104;
     fbIM1L0.stReticle.stBeamParams := PMPS_GVL.cst0RateBeam;
     fbIM1L0.stReticle.bValid := TRUE;
-    
+
     bInit := FALSE;
 END_IF
 
