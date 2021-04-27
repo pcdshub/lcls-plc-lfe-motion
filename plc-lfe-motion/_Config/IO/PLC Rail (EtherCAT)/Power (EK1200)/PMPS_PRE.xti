@@ -104,18 +104,20 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name GUID="{5FC92061-002A-45B0-B954-CD8F28B5CE49}">ST_BeamParams_IO</Name>
+			<Name GUID="{6E597FBD-95E0-4E3A-8361-F15F77CF10FA}">ST_BeamParams_IO</Name>
 			<BitSize>1216</BitSize>
 			<SubItem>
 				<Name>nTran</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
-				<Comment>
-					<![CDATA[  Requested pre-optic attenuation %  ]]>
+				<Type GUID="{18071995-0000-0000-0000-00000000000D}">REAL</Type>
+				<Comment TxtId="">
+					<![CDATA[Requested pre-optic attenuation - 1 is full transmission]]>
 				</Comment>
-				<BitSize>16</BitSize>
+				<BitSize>32</BitSize>
 				<BitOffs>0</BitOffs>
 				<Default>
-					<Value>100</Value>
+					<Min>0</Min>
+					<Max>1</Max>
+					<Value>1</Value>
 				</Default>
 				<Properties>
 					<Property>
@@ -129,12 +131,12 @@
 				<Name>nRate</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
 				<Comment>
-					<![CDATA[ Pulse-rate ]]>
+					<![CDATA[Pulse-rate]]>
 				</Comment>
 				<BitSize>32</BitSize>
 				<BitOffs>32</BitOffs>
 				<Default>
-					<Value>10</Value>
+					<Value>120</Value>
 				</Default>
 				<Properties>
 					<Property>
@@ -145,34 +147,15 @@
 				</Properties>
 			</SubItem>
 			<SubItem>
-				<Name>fPP_mJ</Name>
-				<Type GUID="{18071995-0000-0000-0000-00000000000D}">REAL</Type>
+				<Name>neVRange</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000007}">DWORD</Type>
 				<Comment>
-					<![CDATA[ Per pulse max energy (mJ) ]]>
+					<![CDATA[Photon energy ranges]]>
 				</Comment>
 				<BitSize>32</BitSize>
 				<BitOffs>64</BitOffs>
 				<Default>
-					<Value>20</Value>
-				</Default>
-				<Properties>
-					<Property>
-						<Name>plcAttribute_pytmc</Name>
-						<Value>pv: PulseEnergy
-        io: i</Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>neVRange</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000004}">WORD</Type>
-				<Comment>
-					<![CDATA[ Photon energy ranges ]]>
-				</Comment>
-				<BitSize>16</BitSize>
-				<BitOffs>96</BitOffs>
-				<Default>
-					<Value>65535</Value>
+					<Value>4294967295</Value>
 				</Default>
 				<Properties>
 					<Property>
@@ -194,7 +177,7 @@
 					<Elements>16</Elements>
 				</ArrayInfo>
 				<Comment>
-					<![CDATA[ Beamline attenuators ]]>
+					<![CDATA[Beamline attenuators]]>
 				</Comment>
 				<BitSize>512</BitSize>
 				<BitOffs>112</BitOffs>
@@ -217,14 +200,14 @@
 				<BitOffs>640</BitOffs>
 			</SubItem>
 			<SubItem>
-				<Name>aStoppers</Name>
+				<Name>aVetoDevices</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
 				<ArrayInfo>
 					<LBound>1</LBound>
 					<Elements>16</Elements>
 				</ArrayInfo>
 				<Comment>
-					<![CDATA[ Stopper statuses ]]>
+					<![CDATA[Stopper statuses]]>
 				</Comment>
 				<BitSize>128</BitSize>
 				<BitOffs>1024</BitOffs>
@@ -240,7 +223,7 @@
 				<Name>xValidToggle</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
 				<Comment>
-					<![CDATA[ Toggle for watchdog]]>
+					<![CDATA[Toggle for watchdog]]>
 				</Comment>
 				<BitSize>8</BitSize>
 				<BitOffs>1152</BitOffs>
@@ -249,7 +232,7 @@
 				<Name>xValid</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
 				<Comment>
-					<![CDATA[ Beam parameter set is valid (if readback), or acknowledged (if request)]]>
+					<![CDATA[Beam parameter set is valid (if readback), or acknowledged (if request)]]>
 				</Comment>
 				<BitSize>8</BitSize>
 				<BitOffs>1160</BitOffs>
@@ -265,7 +248,7 @@
 				<Name>nCohortInt</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
 				<Comment>
-					<![CDATA[ Cohort index. Identifies which cohort this BP set was included in arbitration]]>
+					<![CDATA[Cohort index. Identifies which cohort this BP set was included in arbitration]]>
 				</Comment>
 				<BitSize>32</BitSize>
 				<BitOffs>1184</BitOffs>
@@ -282,6 +265,12 @@
 				<Hide GUID="{729DFDAA-EB68-494E-B247-D86DA3C0AE5E}"/>
 				<Hide GUID="{41059C79-1015-4C2C-AFF4-697A824775D7}"/>
 				<Hide GUID="{80E871EC-0C36-49B0-AD5D-F1F0FB351299}"/>
+				<Hide GUID="{5FC92061-002A-45B0-B954-CD8F28B5CE49}"/>
+				<Hide GUID="{C64C88BE-2BD8-4AC6-ACD6-2A08570B4923}"/>
+				<Hide GUID="{B472A77E-9430-445F-AD24-21E649F6ACD1}"/>
+				<Hide GUID="{559ADF00-CB27-4B7D-8DEA-9DBCF390B12B}"/>
+				<Hide GUID="{E1A510FA-6CE5-40B2-9617-7C29C5B7C692}"/>
+				<Hide GUID="{3F6D5E74-4433-4A11-8ADE-14BBEED361D6}"/>
 			</Hides>
 		</DataType>
 	</DataTypes>
@@ -440,12 +429,12 @@
 			</Pdo>
 			<Pdo Name="IO Inputs" Index="#x1a08" Flags="#x0020" SyncMan="3">
 				<Entry Name="CurrentBP" Index="#x6000" Sub="#x01">
-					<Type GUID="{5FC92061-002A-45B0-B954-CD8F28B5CE49}">ST_BeamParams_IO</Type>
+					<Type GUID="{6E597FBD-95E0-4E3A-8361-F15F77CF10FA}">ST_BeamParams_IO</Type>
 				</Entry>
 			</Pdo>
 			<Pdo Name="IO Outputs" Index="#x1608" InOut="1" Flags="#x0020" SyncMan="2">
 				<Entry Name="RequestedBP" Index="#x7000" Sub="#x01">
-					<Type GUID="{5FC92061-002A-45B0-B954-CD8F28B5CE49}">ST_BeamParams_IO</Type>
+					<Type GUID="{6E597FBD-95E0-4E3A-8361-F15F77CF10FA}">ST_BeamParams_IO</Type>
 				</Entry>
 			</Pdo>
 			<CoeProfile ProfileNo="5001"/>
