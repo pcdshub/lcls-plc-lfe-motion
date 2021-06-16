@@ -64,6 +64,9 @@ VAR
     stEL6Out AT %Q*: EL6OutData22b;
 
     bInit: BOOL := TRUE;
+
+    {attribute 'TcLinkTo' := 'TIIB[IM2L0-EL7041]^STM Status^Status^Digital input 1'}
+    bDefectiveLimitSwitch AT %I*: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -100,6 +103,8 @@ IF bInit THEN
 
     bInit := FALSE;
 END_IF
+
+Main.M24.bLimitForwardEnable := bDefectiveLimitSwitch OR (Main.M24.stAxisStatus.fActPosition < 0);
 
 fbIM2L0(
     fbArbiter := GVL.fbArbiter,

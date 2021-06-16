@@ -2538,6 +2538,10 @@ External Setpoint Generation:
 					<Type GUID="{63C476CA-3C4F-477E-9C2E-34379B1D490C}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
+					<Name>PRG_IM2L0_XTES.bDefectiveLimitSwitch</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>PRG_IM1L1_PPM.fbIM1L1.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
@@ -4296,6 +4300,50 @@ External Setpoint Generation:
 				<Var>
 					<Name>PRG_3_PMPS_POST.fbArbiterIO.xTxPDO_state</Name>
 					<Type>BIT</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_01.i_xInsertedLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_01.i_xRetractedLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_02.i_xInsertedLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_02.i_xRetractedLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_03.i_xInsertedLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_03.i_xRetractedLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_04.i_xInsertedLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_04.i_xRetractedLS</Name>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1.Axis.NcToPlc</Name>
@@ -9589,50 +9637,6 @@ External Setpoint Generation:
 					</Comment>
 					<Type>INT</Type>
 				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_01.i_xInsertedLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_01.i_xRetractedLS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_02.i_xInsertedLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_02.i_xRetractedLS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_03.i_xInsertedLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_03.i_xRetractedLS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_04.i_xInsertedLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_04.i_xRetractedLS</Name>
-					<Type>BOOL</Type>
-				</Var>
 			</Vars>
 			<Vars VarGrpType="2">
 				<Name>PlcTask Outputs</Name>
@@ -10016,6 +10020,38 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>GVL.fbFastFaultOutput2.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_01.q_xInsert_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_01.q_xRetract_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_02.q_xInsert_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_02.q_xRetract_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_03.q_xInsert_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_03.q_xRetract_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_04.q_xInsert_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_04.q_xRetract_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -10612,38 +10648,6 @@ External Setpoint Generation:
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_01.q_xInsert_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_01.q_xRetract_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_02.q_xInsert_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_02.q_xRetract_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_03.q_xInsert_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_03.q_xRetract_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_04.q_xInsert_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_04.q_xRetract_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
 			</Vars>
 			<Vars VarGrpType="8">
 				<Name>PlcTask Retains</Name>
@@ -11005,7 +11009,7 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[9]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 9" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL7041">
-				<Link VarA="PlcTask Inputs^Main.M24.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.bDefectiveLimitSwitch" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E10">
 				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
