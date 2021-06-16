@@ -28,7 +28,7 @@ IF bInit THEN
     // Avoid damage peak between 3.2 keV and 1.6 keV
     stSiBP.neVRange := F_evExcludeRange(1600, 3200);
     // Drop transmission to 20%
-    stSiBP.nTran := 20;
+    stSiBP.nTran := 0.2;
 
     fbPF1L0.nTransitionAssertionID := 16#3100;
     fbPF1L0.nUnknownAssertionID := 16#3109;
