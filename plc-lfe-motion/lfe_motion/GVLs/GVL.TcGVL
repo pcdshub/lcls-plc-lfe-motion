@@ -8,11 +8,11 @@ VAR_GLOBAL
 
     {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:FFO:01'}
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output'}
-    fbFastFaultOutput1: FB_HardwareFFOutput := (bAutoReset := TRUE);
+    fbFastFaultOutput1: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID := '172.21.88.66.1.1');
 
     {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:FFO:02'}
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output'}
-    fbFastFaultOutput2: FB_HardwareFFOutput := (bAutoReset := TRUE);
+    fbFastFaultOutput2: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID := '172.21.88.66.1.1');
 
     bInitIM1L0: BOOL;
     bInitIM1L1: BOOL;

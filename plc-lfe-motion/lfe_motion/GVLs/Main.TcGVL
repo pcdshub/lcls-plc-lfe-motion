@@ -130,8 +130,7 @@ VAR_GLOBAL
 
     // IM2L0-XTES: 3 Axes
     {attribute 'pytmc' := 'pv: IM2L0:XTES:MMS'}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[IM2L0-EL7041]^STM Status^Status^Digital input 1;
-                              .bBrakeRelease        := TIIB[IM2L0-EL2004]^Channel 1^Output'}
+    {attribute 'TcLinkTo' := '.bBrakeRelease        := TIIB[IM2L0-EL2004]^Channel 1^Output'}
     M24: DUT_MotionStage := (sName := 'IM2L0:XTES:MMS');
     {attribute 'pytmc' := 'pv: IM2L0:XTES:CLZ'}
     {attribute 'TcLinkTo' := '.bHome := TIIB[IM2L0-EL1088]^Channel 2^Input'}
