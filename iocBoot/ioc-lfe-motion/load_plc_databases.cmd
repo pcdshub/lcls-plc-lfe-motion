@@ -1,3 +1,3 @@
-# Total records: 8742
-callbackSetQueueSize(19484)
+# Total records: 9162
+callbackSetQueueSize(20324)
 dbLoadRecords("lfe_motion.db", "PORT=ASYN_PLC,PREFIX=PLC:LFE:MOTION:,IOCNAME=$(IOC),IOC=$(IOC)")
