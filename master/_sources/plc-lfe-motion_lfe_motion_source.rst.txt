@@ -138,11 +138,11 @@ GVL
 
         {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:FFO:01'}
         {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output'}
-        fbFastFaultOutput1: FB_HardwareFFOutput := (bAutoReset := TRUE);
+        fbFastFaultOutput1: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID := '172.21.88.66.1.1');
 
         {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:FFO:02'}
         {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output'}
-        fbFastFaultOutput2: FB_HardwareFFOutput := (bAutoReset := TRUE);
+        fbFastFaultOutput2: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID := '172.21.88.66.1.1');
 
         bInitIM1L0: BOOL;
         bInitIM1L1: BOOL;
@@ -286,8 +286,7 @@ Main
 
         // IM2L0-XTES: 3 Axes
         {attribute 'pytmc' := 'pv: IM2L0:XTES:MMS'}
-        {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[IM2L0-EL7041]^STM Status^Status^Digital input 1;
-                                  .bBrakeRelease        := TIIB[IM2L0-EL2004]^Channel 1^Output'}
+        {attribute 'TcLinkTo' := '.bBrakeRelease        := TIIB[IM2L0-EL2004]^Channel 1^Output'}
         M24: DUT_MotionStage := (sName := 'IM2L0:XTES:MMS');
         {attribute 'pytmc' := 'pv: IM2L0:XTES:CLZ'}
         {attribute 'TcLinkTo' := '.bHome := TIIB[IM2L0-EL1088]^Channel 2^Input'}
@@ -2096,6 +2095,9 @@ PRG_IM2L0_XTES
         stEL6Out AT %Q*: EL6OutData22b;
 
         bInit: BOOL := TRUE;
+
+        {attribute 'TcLinkTo' := 'TIIB[IM2L0-EL7041]^STM Status^Status^Digital input 1'}
+        bDefectiveLimitSwitch AT %I*: BOOL;
     END_VAR
     IF bInit THEN
         fbIM2L0.nTransitionAssertionID := 16#2200;
@@ -2129,6 +2131,8 @@ PRG_IM2L0_XTES
 
         bInit := FALSE;
     END_IF
+
+    Main.M24.bLimitForwardEnable := bDefectiveLimitSwitch OR (Main.M24.stAxisStatus.fActPosition < 0);
 
     fbIM2L0(
         fbArbiter := GVL.fbArbiter,
@@ -2355,7 +2359,7 @@ PRG_PF1L0_WFS
         // Avoid damage peak between 3.2 keV and 1.6 keV
         stSiBP.neVRange := F_evExcludeRange(1600, 3200);
         // Drop transmission to 20%
-        stSiBP.nTran := 20;
+        stSiBP.nTran := 0.2;
 
         fbPF1L0.nTransitionAssertionID := 16#3100;
         fbPF1L0.nUnknownAssertionID := 16#3109;
