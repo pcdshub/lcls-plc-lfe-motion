@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="FB_AttenuatorElementDensity" Id="{c75d4e8b-6511-0f47-11ec-eb170c35a35b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_AttenuatorElementDensity
+VAR_INPUT
+    sName : STRING;
+END_VAR
+VAR_OUTPUT
+    fDensity : LREAL;
+    bFound : BOOL;
+END_VAR
+VAR
+    fbElementDensity : FB_ElementDensity;
+    fDensity_gm3 : LREAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF sName = 'C' THEN
+    (* Special-case diamond here *)
+    fDensity := 3.51E6;  (* C (Diamond) g/m^3 *)
+ELSE
+    fbElementDensity(sName:=sName);
+    IF fbElementDensity.bFound THEN
+        fDensity := fbElementDensity.fValue * 1.0E6; (* g/cm^3 -> g/m^3 *)
+    ELSE
+        fDensity := 0.0;
+    END_IF
+END_IF
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

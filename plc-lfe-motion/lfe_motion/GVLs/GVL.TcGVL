@@ -19,6 +19,15 @@ VAR_GLOBAL
     bInitIM2L0: BOOL;
     bInitIM3L0: BOOL;
     bInitIM4L0: BOOL;
+	
+	(* Photon energy comes from the arbiter (see PMPS_PRE.IO Inputs.rPhotonEnergy!) *)
+	{attribute 'pytmc' := 'pv: PLC:LFE:MOTION:PhotonEnergy'}
+    fPhotonEnergy_eV AT %I* : REAL;
+	{attribute 'pytmc' := 'pv: PLC:LFE:MOTION:PMPS:ReqTrans'}
+	rReqTrans AT %I*		: ARRAY [1..2] OF ST_PMPS_Attenuator_IO;
+	{attribute 'pytmc' := 'pv: PLC:LFE:MOTION:PMPS:CurTrans'}
+	rCurTrans AT %Q*		: ARRAY [1..2] OF ST_PMPS_Attenuator_IO;
+	
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
