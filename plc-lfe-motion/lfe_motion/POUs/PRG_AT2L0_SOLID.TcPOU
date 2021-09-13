@@ -265,6 +265,9 @@ FOR iIndex := 1 TO 19 DO
 	
 	fTransmission := fTransmission * stFilter.fTransmission;
 END_FOR
+
+GVL.rCurTrans[PMPS.L_Attenuators.AT2L0].nTran := LREAL_TO_REAL(fTransmission);
+
 iIndex := 0;
 
 nM1CoilA := UINT_TO_INT(nM1CoilARaw);
