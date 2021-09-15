@@ -10,16 +10,16 @@ VAR
     fbAT2L0_motion: ARRAY [1..19] OF FB_MotionStage;
     fbAT2L0_axes: ARRAY [1..19] OF POINTER TO DUT_MotionStage;
     fbAT2L0_ffo: ARRAY[1..19] OF FB_AttFFO;
-	
-	{attribute 'pytmc' := '
+
+    {attribute 'pytmc' := '
         pv: AT2L0:XTES:MMS
         expand: :%.2d:FILTER
     '}
     fbAT2L0_filters: ARRAY[1..19] OF DUT_SATT_Filter;
 
-	{attribute 'pytmc' := '
+    {attribute 'pytmc' := '
         pv: AT2L0:XTES:TRANSMISSION
-		field: DESC Overall transmission of AT2L0
+        field: DESC Overall transmission of AT2L0
     '}
     fTransmission: LREAL;
 
@@ -140,13 +140,13 @@ VAR
     nM19CoilB: INT;
     //nM19Current: INT;
 
-	stFilter : REFERENCE TO DUT_SATT_Filter;
-	fFilterDensity : LREAL;
+    stFilter : REFERENCE TO DUT_SATT_Filter;
+    fFilterDensity : LREAL;
     fFilterAtomicMass : LREAL;
     fbAtomicMass : FB_AtomicMass;
     fbAttenuatorElementDensity : FB_AttenuatorElementDensity;
     fAbsorptionConstant : LREAL;
-	bError : BOOL;
+    bError : BOOL;
 
 END_VAR
 ]]></Declaration>
@@ -173,7 +173,7 @@ fbAT2L0_axes[18]:= ADR(Main.M18);
 fbAT2L0_axes[19]:= ADR(Main.M19);
 
 (* Not a filter *)
-fbAT2L0_filters[ 1].fFilterThickness_um := 0; 
+fbAT2L0_filters[ 1].fFilterThickness_um := 0;
 fbAT2L0_filters[ 1].sFilterMaterial     := '';
 
 fbAT2L0_filters[ 2].fFilterThickness_um := 1280.0;
@@ -229,7 +229,7 @@ FOR iIndex := 1 TO 19 DO
     fbAT2L0_axes[iIndex]^.nEnableMode := nAT2L0_enableMode;
     fbAT2L0_axes[iIndex]^.bHardwareEnable := TRUE;
     fbAT2L0_axes[iIndex]^.bPowerSelf := TRUE;
-	stFilter REF= fbAT2L0_filters[iIndex];
+    stFilter REF= fbAT2L0_filters[iIndex];
 
     fbAT2L0_states[iIndex](
         bEnable := TRUE,
@@ -241,37 +241,37 @@ FOR iIndex := 1 TO 19 DO
         stMotionStage := fbAT2L0_axes[iIndex]^,
         enumState := fbAT2L0_states[iIndex].enumGet,
         fbFFHWO := GVL.fbFastFaultOutput2);
-		
-	IF fbAT2L0_states[iIndex].enumGet = ENUM_EpicsInOut.UNKNOWN THEN
-		stFilter.fTransmission := 0.0;
-	ELSIF fbAT2L0_states[iIndex].enumGet = ENUM_EpicsInOut.OUT OR stFilter.sFilterMaterial = '' THEN
-		stFilter.fTransmission := 1.0;
-	ELSE
-		fbAtomicMass(sName:=stFilter.sFilterMaterial, fValue=>fFilterAtomicMass);
-		fbAttenuatorElementDensity(sName:=stFilter.sFilterMaterial, fDensity=>fFilterDensity);
-		
-		fAbsorptionConstant := F_CalculateAbsorptionConstant(
-			sElement:=stFilter.sFilterMaterial,
-			fEnergyEV:=GVL.fPhotonEnergy_eV, (* TODO double-check link *)
-			fDensity_gm3:=fFilterDensity,
-			fAtomicWeight:=fFilterAtomicMass,
-			bError=>bError,
-		);
-		stFilter.fTransmission := F_CalculateTransmission(
-			fAbsorptionConstant:=fAbsorptionConstant,
-			fThickness_in_m:=stFilter.fFilterThickness_um * 1.0E-6
-		);
-	END_IF
-	
-	fTransmission := fTransmission * stFilter.fTransmission;
+
+    IF fbAT2L0_states[iIndex].enumGet = ENUM_EpicsInOut.UNKNOWN THEN
+        stFilter.fTransmission := 0.0;
+    ELSIF fbAT2L0_states[iIndex].enumGet = ENUM_EpicsInOut.OUT OR stFilter.sFilterMaterial = '' THEN
+        stFilter.fTransmission := 1.0;
+    ELSE
+        fbAtomicMass(sName:=stFilter.sFilterMaterial, fValue=>fFilterAtomicMass);
+        fbAttenuatorElementDensity(sName:=stFilter.sFilterMaterial, fDensity=>fFilterDensity);
+
+        fAbsorptionConstant := F_CalculateAbsorptionConstant(
+            sElement:=stFilter.sFilterMaterial,
+            fEnergyEV:=GVL.fPhotonEnergy_eV, (* TODO double-check link *)
+            fDensity_gm3:=fFilterDensity,
+            fAtomicWeight:=fFilterAtomicMass,
+            bError=>bError,
+        );
+        stFilter.fTransmission := F_CalculateTransmission(
+            fAbsorptionConstant:=fAbsorptionConstant,
+            fThickness_in_m:=stFilter.fFilterThickness_um * 1.0E-6
+        );
+    END_IF
+
+    fTransmission := fTransmission * stFilter.fTransmission;
 END_FOR
 
 IF fbAT2L0_states[1].enumGet = ENUM_EpicsInOut.IN THEN
-	(* Inspection mirror blocks the beam *)
-	GVL.rCurTrans[PMPS.L_Attenuators.AT2L0].nTran := 0.0;
-	(* TODO fast fault as well *)
+    (* Inspection mirror blocks the beam *)
+    GVL.rCurTrans[PMPS.L_Attenuators.AT2L0].nTran := 0.0;
+    (* TODO fast fault as well *)
 ELSE
-	GVL.rCurTrans[PMPS.L_Attenuators.AT2L0].nTran := LREAL_TO_REAL(fTransmission);
+    GVL.rCurTrans[PMPS.L_Attenuators.AT2L0].nTran := LREAL_TO_REAL(fTransmission);
 END_IF
 
 iIndex := 0;
