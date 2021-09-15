@@ -266,7 +266,13 @@ FOR iIndex := 1 TO 19 DO
 	fTransmission := fTransmission * stFilter.fTransmission;
 END_FOR
 
-GVL.rCurTrans[PMPS.L_Attenuators.AT2L0].nTran := LREAL_TO_REAL(fTransmission);
+IF fbAT2L0_states[1].enumGet = ENUM_EpicsInOut.IN THEN
+	(* Inspection mirror blocks the beam *)
+	GVL.rCurTrans[PMPS.L_Attenuators.AT2L0].nTran := 0.0;
+	(* TODO fast fault as well *)
+ELSE
+	GVL.rCurTrans[PMPS.L_Attenuators.AT2L0].nTran := LREAL_TO_REAL(fTransmission);
+END_IF
 
 iIndex := 0;
 
