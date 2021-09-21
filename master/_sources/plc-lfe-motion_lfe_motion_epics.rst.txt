@@ -3,7 +3,38 @@ Data Types
 ----------
 
 
-    
+   
+DUT_SATT_Filter
+^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | io: input
+
+
+    * - $(PREFIX):THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | field: EGU um
+        | io: input
+
+
+    * - $(PREFIX):TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | io: input
+
+
+   
 FB_MPA
 ^^^^^^
 
@@ -14811,7 +14842,7 @@ lcls_twincat_motion.FB_StatePTPMove
       - | io: output
 
 
-                
+                   
 PMPS.FB_Arbiter
 ^^^^^^^^^^^^^^^
 
@@ -25278,6 +25309,28 @@ Database Records
       - | io: input
 
 
+    * - AT2L0:XTES:MMS:01:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:01:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:01:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
     * - AT2L0:XTES:MMS:01:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -26741,6 +26794,28 @@ Database Records
       - PRG_AT2L0_SOLID.fbAT2L0_states[1].enumSet
       - | expand: :%.2d:STATE
         | io: output
+
+
+    * - AT2L0:XTES:MMS:02:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:02:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:02:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
 
 
     * - AT2L0:XTES:MMS:02:PLC:bAllBackwardEnable_RBV
@@ -28208,6 +28283,28 @@ Database Records
         | io: output
 
 
+    * - AT2L0:XTES:MMS:03:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:03:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:03:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
     * - AT2L0:XTES:MMS:03:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -29671,6 +29768,28 @@ Database Records
       - PRG_AT2L0_SOLID.fbAT2L0_states[3].enumSet
       - | expand: :%.2d:STATE
         | io: output
+
+
+    * - AT2L0:XTES:MMS:04:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:04:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:04:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
 
 
     * - AT2L0:XTES:MMS:04:PLC:bAllBackwardEnable_RBV
@@ -31138,6 +31257,28 @@ Database Records
         | io: output
 
 
+    * - AT2L0:XTES:MMS:05:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:05:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:05:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
     * - AT2L0:XTES:MMS:05:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -32601,6 +32742,28 @@ Database Records
       - PRG_AT2L0_SOLID.fbAT2L0_states[5].enumSet
       - | expand: :%.2d:STATE
         | io: output
+
+
+    * - AT2L0:XTES:MMS:06:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:06:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:06:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
 
 
     * - AT2L0:XTES:MMS:06:PLC:bAllBackwardEnable_RBV
@@ -34068,6 +34231,28 @@ Database Records
         | io: output
 
 
+    * - AT2L0:XTES:MMS:07:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:07:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:07:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
     * - AT2L0:XTES:MMS:07:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -35531,6 +35716,28 @@ Database Records
       - PRG_AT2L0_SOLID.fbAT2L0_states[7].enumSet
       - | expand: :%.2d:STATE
         | io: output
+
+
+    * - AT2L0:XTES:MMS:08:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:08:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:08:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
 
 
     * - AT2L0:XTES:MMS:08:PLC:bAllBackwardEnable_RBV
@@ -36998,6 +37205,28 @@ Database Records
         | io: output
 
 
+    * - AT2L0:XTES:MMS:09:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:09:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:09:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
     * - AT2L0:XTES:MMS:09:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -38461,6 +38690,28 @@ Database Records
       - PRG_AT2L0_SOLID.fbAT2L0_states[9].enumSet
       - | expand: :%.2d:STATE
         | io: output
+
+
+    * - AT2L0:XTES:MMS:10:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:10:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:10:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
 
 
     * - AT2L0:XTES:MMS:10:PLC:bAllBackwardEnable_RBV
@@ -39928,6 +40179,28 @@ Database Records
         | io: output
 
 
+    * - AT2L0:XTES:MMS:11:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:11:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:11:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
     * - AT2L0:XTES:MMS:11:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -41391,6 +41664,28 @@ Database Records
       - PRG_AT2L0_SOLID.fbAT2L0_states[11].enumSet
       - | expand: :%.2d:STATE
         | io: output
+
+
+    * - AT2L0:XTES:MMS:12:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:12:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:12:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
 
 
     * - AT2L0:XTES:MMS:12:PLC:bAllBackwardEnable_RBV
@@ -42858,6 +43153,28 @@ Database Records
         | io: output
 
 
+    * - AT2L0:XTES:MMS:13:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:13:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:13:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
     * - AT2L0:XTES:MMS:13:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -44321,6 +44638,28 @@ Database Records
       - PRG_AT2L0_SOLID.fbAT2L0_states[13].enumSet
       - | expand: :%.2d:STATE
         | io: output
+
+
+    * - AT2L0:XTES:MMS:14:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:14:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:14:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
 
 
     * - AT2L0:XTES:MMS:14:PLC:bAllBackwardEnable_RBV
@@ -45788,6 +46127,28 @@ Database Records
         | io: output
 
 
+    * - AT2L0:XTES:MMS:15:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:15:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:15:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
     * - AT2L0:XTES:MMS:15:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -47251,6 +47612,28 @@ Database Records
       - PRG_AT2L0_SOLID.fbAT2L0_states[15].enumSet
       - | expand: :%.2d:STATE
         | io: output
+
+
+    * - AT2L0:XTES:MMS:16:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:16:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:16:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
 
 
     * - AT2L0:XTES:MMS:16:PLC:bAllBackwardEnable_RBV
@@ -48718,6 +49101,28 @@ Database Records
         | io: output
 
 
+    * - AT2L0:XTES:MMS:17:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:17:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:17:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
     * - AT2L0:XTES:MMS:17:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -50181,6 +50586,28 @@ Database Records
       - PRG_AT2L0_SOLID.fbAT2L0_states[17].enumSet
       - | expand: :%.2d:STATE
         | io: output
+
+
+    * - AT2L0:XTES:MMS:18:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:18:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:18:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
 
 
     * - AT2L0:XTES:MMS:18:PLC:bAllBackwardEnable_RBV
@@ -51648,6 +52075,28 @@ Database Records
         | io: output
 
 
+    * - AT2L0:XTES:MMS:19:FILTER:MATERIAL_RBV
+      - waveform
+      - Filter material name
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:19:FILTER:THICKNESS_RBV
+      - ai
+      - Filter material thickness
+      - | expand: :%.2d:FILTER
+        | field: EGU um
+        | io: input
+
+
+    * - AT2L0:XTES:MMS:19:FILTER:TRANSMISSION_RBV
+      - ai
+      - Current transmission value
+      - | expand: :%.2d:FILTER
+        | io: input
+
+
     * - AT2L0:XTES:MMS:19:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -53111,6 +53560,18 @@ Database Records
       - PRG_AT2L0_SOLID.fbAT2L0_states[19].enumSet
       - | expand: :%.2d:STATE
         | io: output
+
+
+    * - AT2L0:XTES:TRANSMISSION
+      - ao
+      - Overall transmission of AT2L0
+      - | io: output
+
+
+    * - AT2L0:XTES:TRANSMISSION_RBV
+      - ai
+      - Overall transmission of AT2L0
+      - | io: output
 
 
     * - IM1L0:XTES:CAM:PWR
@@ -80683,6 +81144,18 @@ Database Records
     * - PLC:LFE:MOTION:FFO:02:RegistrationFailure_RBV
       - bi
       - GVL.fbFastFaultOutput2.xFastFaultRegFail
+      - | io: output
+
+
+    * - PLC:LFE:MOTION:PhotonEnergy
+      - ao
+      - GVL.fPhotonEnergy_eV
+      - | io: output
+
+
+    * - PLC:LFE:MOTION:PhotonEnergy_RBV
+      - ai
+      - GVL.fPhotonEnergy_eV
       - | io: output
 
 

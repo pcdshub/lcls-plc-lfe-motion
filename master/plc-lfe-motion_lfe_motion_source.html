@@ -1,73 +1,34 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>DUTs &mdash; pcdshub/lcls-plc-lfe-motion  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/doctr-versions-menu.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Data Types" href="plc-lfe-motion_lfe_motion_epics.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> pcdshub/lcls-plc-lfe-motion
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -75,26 +36,15 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">plc-lfe-motion</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">plc-lfe-motion</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_pragmas.html">Pragmas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_nc.html">NC Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_boxes.html">Boxes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_links.html">Links</a></li>
 </ul>
-<p class="caption"><span class="caption-text">lfe_motion</span></p>
+<p class="caption" role="heading"><span class="caption-text">lfe_motion</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_lfe_motion_summary.html">Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_lfe_motion_summary.html#pragmas">Pragmas</a></li>
@@ -103,6 +53,7 @@
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_lfe_motion_epics.html">Data Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_lfe_motion_epics.html#database-records">Database Records</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">DUTs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dut-satt-filter">DUT_SATT_Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#e-positionstate">E_PositionState</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#st-mpa">ST_MPA</a></li>
 </ul>
@@ -115,6 +66,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#pous">POUs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#fb-attenuatorelementdensity">FB_AttenuatorElementDensity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#fb-attffo">FB_AttFFO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#fb-basicaxisffo">FB_BasicAxisFFO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#fb-basicmotionstagealtffo">FB_BasicMotionStageAltFFO</a></li>
@@ -144,75 +96,71 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pcdshub/lcls-plc-lfe-motion</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>DUTs</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="_sources/plc-lfe-motion_lfe_motion_source.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="duts">
-<h1>DUTs<a class="headerlink" href="#duts" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="e-positionstate">
-<h2>E_PositionState<a class="headerlink" href="#e-positionstate" title="Permalink to this headline">¶</a></h2>
+             
+  <section id="duts">
+<h1>DUTs<a class="headerlink" href="#duts" title="Permalink to this headline"></a></h1>
+<section id="dut-satt-filter">
+<h2>DUT_SATT_Filter<a class="headerlink" href="#dut-satt-filter" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TYPE</span> <span class="n">DUT_SATT_Filter</span> <span class="p">:</span>
+<span class="n">STRUCT</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+        <span class="n">pv</span><span class="p">:</span> <span class="n">MATERIAL</span>
+        <span class="n">io</span><span class="p">:</span> <span class="nb">input</span>
+        <span class="n">field</span><span class="p">:</span> <span class="n">DESC</span> <span class="n">Filter</span> <span class="n">material</span> <span class="n">name</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">sFilterMaterial</span> <span class="p">:</span> <span class="n">STRING</span><span class="p">;</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+        <span class="n">pv</span><span class="p">:</span> <span class="n">THICKNESS</span>
+        <span class="n">io</span><span class="p">:</span> <span class="nb">input</span>
+        <span class="n">field</span><span class="p">:</span> <span class="n">DESC</span> <span class="n">Filter</span> <span class="n">material</span> <span class="n">thickness</span>
+        <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">um</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">fFilterThickness_um</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+        <span class="n">pv</span><span class="p">:</span> <span class="n">TRANSMISSION</span>
+        <span class="n">io</span><span class="p">:</span> <span class="nb">input</span>
+        <span class="n">field</span><span class="p">:</span> <span class="n">DESC</span> <span class="n">Current</span> <span class="n">transmission</span> <span class="n">value</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">fTransmission</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+
+<span class="n">END_STRUCT</span>
+<span class="n">END_TYPE</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#dut-satt-filter">DUT_SATT_Filter</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="e-positionstate">
+<h2>E_PositionState<a class="headerlink" href="#e-positionstate" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TYPE</span> <span class="n">E_PositionState</span> <span class="p">:</span>
 <span class="p">(</span>
 <span class="n">RETRACTED</span>    <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span>
@@ -223,9 +171,9 @@
 <span class="n">END_TYPE</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="st-mpa">
-<h2>ST_MPA<a class="headerlink" href="#st-mpa" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="st-mpa">
+<h2>ST_MPA<a class="headerlink" href="#st-mpa" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TYPE</span> <span class="n">ST_MPA</span> <span class="p">:</span>
 <span class="n">STRUCT</span>
 <span class="o">//</span>    <span class="n">i_xInsertLS</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
@@ -309,12 +257,18 @@
 <span class="n">END_TYPE</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="gvls">
-<h1>GVLs<a class="headerlink" href="#gvls" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="global-version">
-<h2>Global_Version<a class="headerlink" href="#global-version" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#e-positionstate">E_PositionState</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+<section id="gvls">
+<h1>GVLs<a class="headerlink" href="#gvls" title="Permalink to this headline"></a></h1>
+<section id="global-version">
+<h2>Global_Version<a class="headerlink" href="#global-version" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcGenerated&#39;</span><span class="p">}</span>
 <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;no-analysis&#39;</span><span class="p">}</span>
 <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;linkalways&#39;</span><span class="p">}</span>
@@ -325,33 +279,42 @@
 <span class="n">END_VAR</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="gvl">
-<h2>GVL<a class="headerlink" href="#gvl" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
-<span class="n">VAR_GLOBAL</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: PLC:LFE:MOTION:ARB&#39;</span><span class="p">}</span>
-    <span class="n">fbArbiter</span><span class="p">:</span> <span class="n">FB_Arbiter</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</section>
+<section id="gvl">
+<h2>GVL<a class="headerlink" href="#gvl" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{attribute &#39;qualified_only&#39;}
+VAR_GLOBAL
+    {attribute &#39;pytmc&#39; := &#39;pv: PLC:LFE:MOTION:ARB&#39;}
+    fbArbiter: FB_Arbiter(1);
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: PLC:LFE:MOTION:FFO:01&#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output&#39;</span><span class="p">}</span>
-    <span class="n">fbFastFaultOutput1</span><span class="p">:</span> <span class="n">FB_HardwareFFOutput</span> <span class="o">:=</span> <span class="p">(</span><span class="n">bAutoReset</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">i_sNetID</span> <span class="o">:=</span> <span class="s1">&#39;172.21.88.66.1.1&#39;</span><span class="p">);</span>
+    {attribute &#39;pytmc&#39; := &#39;pv: PLC:LFE:MOTION:FFO:01&#39;}
+    {attribute &#39;TcLinkTo&#39; := &#39;.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output&#39;}
+    fbFastFaultOutput1: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID := &#39;172.21.88.66.1.1&#39;);
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: PLC:LFE:MOTION:FFO:02&#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output&#39;</span><span class="p">}</span>
-    <span class="n">fbFastFaultOutput2</span><span class="p">:</span> <span class="n">FB_HardwareFFOutput</span> <span class="o">:=</span> <span class="p">(</span><span class="n">bAutoReset</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">i_sNetID</span> <span class="o">:=</span> <span class="s1">&#39;172.21.88.66.1.1&#39;</span><span class="p">);</span>
+    {attribute &#39;pytmc&#39; := &#39;pv: PLC:LFE:MOTION:FFO:02&#39;}
+    {attribute &#39;TcLinkTo&#39; := &#39;.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output&#39;}
+    fbFastFaultOutput2: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID := &#39;172.21.88.66.1.1&#39;);
 
-    <span class="n">bInitIM1L0</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
-    <span class="n">bInitIM1L1</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
-    <span class="n">bInitIM2L0</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
-    <span class="n">bInitIM3L0</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
-    <span class="n">bInitIM4L0</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
-<span class="n">END_VAR</span>
+    bInitIM1L0: BOOL;
+    bInitIM1L1: BOOL;
+    bInitIM2L0: BOOL;
+    bInitIM3L0: BOOL;
+    bInitIM4L0: BOOL;
+
+    (* Photon energy comes from the arbiter (see PMPS_PRE.IO Inputs.rPhotonEnergy!) *)
+    {attribute &#39;pytmc&#39; := &#39;pv: PLC:LFE:MOTION:PhotonEnergy&#39;}
+    fPhotonEnergy_eV AT %I* : REAL;
+    {attribute &#39;pytmc&#39; := &#39;pv: PLC:LFE:MOTION:PMPS:ReqTrans&#39;}
+    rReqTrans AT %I*                : ARRAY [1..PMPS_GVL.AUX_ATTENUATORS] OF ST_PMPS_Attenuator_IO;
+    {attribute &#39;pytmc&#39; := &#39;pv: PLC:LFE:MOTION:PMPS:CurTrans&#39;}
+    rCurTrans AT %Q*                : ARRAY [1..PMPS_GVL.AUX_ATTENUATORS] OF ST_PMPS_Attenuator_IO;
+
+END_VAR
 </pre></div>
 </div>
-</div>
-<div class="section" id="main">
-<h2>Main<a class="headerlink" href="#main" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="main">
+<h2>Main<a class="headerlink" href="#main" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
 <span class="p">(</span><span class="o">*</span>
@@ -593,9 +556,16 @@
 <span class="n">END_VAR</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="rtdsl0">
-<h2>RTDSL0<a class="headerlink" href="#rtdsl0" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#gvl">GVL</a></p></li>
+<li><p><a class="reference internal" href="#rtdsl0">RTDSL0</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="rtdsl0">
+<h2>RTDSL0<a class="headerlink" href="#rtdsl0" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: RTDSL0:MPA:01 &#39;</span><span class="p">}</span>
@@ -612,12 +582,48 @@
 <span class="n">END_VAR</span>
 </pre></div>
 </div>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#fb-mpa">FB_MPA</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+<section id="pous">
+<h1>POUs<a class="headerlink" href="#pous" title="Permalink to this headline"></a></h1>
+<section id="fb-attenuatorelementdensity">
+<h2>FB_AttenuatorElementDensity<a class="headerlink" href="#fb-attenuatorelementdensity" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_AttenuatorElementDensity</span>
+<span class="n">VAR_INPUT</span>
+    <span class="n">sName</span> <span class="p">:</span> <span class="n">STRING</span><span class="p">;</span>
+<span class="n">END_VAR</span>
+<span class="n">VAR_OUTPUT</span>
+    <span class="n">fDensity</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+    <span class="n">bFound</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+<span class="n">END_VAR</span>
+<span class="n">VAR</span>
+    <span class="n">fbElementDensity</span> <span class="p">:</span> <span class="n">FB_ElementDensity</span><span class="p">;</span>
+    <span class="n">fDensity_gm3</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+<span class="n">END_VAR</span>
+<span class="n">IF</span> <span class="n">sName</span> <span class="o">=</span> <span class="s1">&#39;C&#39;</span> <span class="n">THEN</span>
+    <span class="p">(</span><span class="o">*</span> <span class="n">Special</span><span class="o">-</span><span class="n">case</span> <span class="n">diamond</span> <span class="n">here</span> <span class="o">*</span><span class="p">)</span>
+    <span class="n">fDensity</span> <span class="o">:=</span> <span class="mf">3.51E6</span><span class="p">;</span>  <span class="p">(</span><span class="o">*</span> <span class="n">C</span> <span class="p">(</span><span class="n">Diamond</span><span class="p">)</span> <span class="n">g</span><span class="o">/</span><span class="n">m</span><span class="o">^</span><span class="mi">3</span> <span class="o">*</span><span class="p">)</span>
+<span class="n">ELSE</span>
+    <span class="n">fbElementDensity</span><span class="p">(</span><span class="n">sName</span><span class="o">:=</span><span class="n">sName</span><span class="p">);</span>
+    <span class="n">IF</span> <span class="n">fbElementDensity</span><span class="o">.</span><span class="n">bFound</span> <span class="n">THEN</span>
+        <span class="n">fDensity</span> <span class="o">:=</span> <span class="n">fbElementDensity</span><span class="o">.</span><span class="n">fValue</span> <span class="o">*</span> <span class="mf">1.0E6</span><span class="p">;</span> <span class="p">(</span><span class="o">*</span> <span class="n">g</span><span class="o">/</span><span class="n">cm</span><span class="o">^</span><span class="mi">3</span> <span class="o">-&gt;</span> <span class="n">g</span><span class="o">/</span><span class="n">m</span><span class="o">^</span><span class="mi">3</span> <span class="o">*</span><span class="p">)</span>
+    <span class="n">ELSE</span>
+        <span class="n">fDensity</span> <span class="o">:=</span> <span class="mf">0.0</span><span class="p">;</span>
+    <span class="n">END_IF</span>
+<span class="n">END_IF</span>
+
+<span class="n">END_FUNCTION_BLOCK</span>
+</pre></div>
 </div>
-</div>
-<div class="section" id="pous">
-<h1>POUs<a class="headerlink" href="#pous" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="fb-attffo">
-<h2>FB_AttFFO<a class="headerlink" href="#fb-attffo" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="fb-attffo">
+<h2>FB_AttFFO<a class="headerlink" href="#fb-attffo" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_AttFFO</span>
 <span class="n">VAR_IN_OUT</span>
     <span class="n">stMotionStage</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
@@ -640,9 +646,9 @@
 <span class="n">END_FUNCTION_BLOCK</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="fb-basicaxisffo">
-<h2>FB_BasicAxisFFO<a class="headerlink" href="#fb-basicaxisffo" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="fb-basicaxisffo">
+<h2>FB_BasicAxisFFO<a class="headerlink" href="#fb-basicaxisffo" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_BasicAxisFFO</span>
 <span class="p">(</span><span class="o">*</span>
     <span class="n">Placeholder</span> <span class="n">FFO</span> <span class="n">logic</span> <span class="k">for</span> <span class="n">no</span> <span class="n">beam</span> <span class="n">allowed</span><span class="p">,</span> <span class="n">pre</span><span class="o">-</span><span class="n">comissioning</span>
@@ -672,9 +678,9 @@
 <span class="n">END_FUNCTION_BLOCK</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="fb-basicmotionstagealtffo">
-<h2>FB_BasicMotionStageAltFFO<a class="headerlink" href="#fb-basicmotionstagealtffo" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="fb-basicmotionstagealtffo">
+<h2>FB_BasicMotionStageAltFFO<a class="headerlink" href="#fb-basicmotionstagealtffo" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_BasicMotionStageAltFFO</span>
 <span class="p">(</span><span class="o">*</span>
     <span class="n">Alternative</span> <span class="n">to</span> <span class="n">FB_BasicMotionStageFFO</span> <span class="k">for</span> <span class="n">an</span> <span class="n">arbitrary</span> <span class="n">out</span> <span class="n">condition</span>
@@ -711,9 +717,16 @@
 <span class="n">END_FUNCTION_BLOCK</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="fb-basicmotionstageffo">
-<h2>FB_BasicMotionStageFFO<a class="headerlink" href="#fb-basicmotionstageffo" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#fb-basicaxisffo">FB_BasicAxisFFO</a></p></li>
+<li><p><a class="reference internal" href="#fb-basicmotionstageffo">FB_BasicMotionStageFFO</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="fb-basicmotionstageffo">
+<h2>FB_BasicMotionStageFFO<a class="headerlink" href="#fb-basicmotionstageffo" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_BasicMotionStageFFO</span>
 <span class="p">(</span><span class="o">*</span>
     <span class="n">Placeholder</span> <span class="n">FFO</span> <span class="n">logic</span> <span class="k">for</span> <span class="n">no</span> <span class="n">beam</span> <span class="n">allowed</span><span class="p">,</span> <span class="n">pre</span><span class="o">-</span><span class="n">comissioning</span>
@@ -756,9 +769,15 @@
 <span class="n">END_FUNCTION_BLOCK</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="fb-doubleactingmpa">
-<h2>FB_DoubleActingMPA<a class="headerlink" href="#fb-doubleactingmpa" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#fb-basicaxisffo">FB_BasicAxisFFO</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="fb-doubleactingmpa">
+<h2>FB_DoubleActingMPA<a class="headerlink" href="#fb-doubleactingmpa" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_DoubleActingMPA</span>
 <span class="n">VAR_IN_OUT</span>
     <span class="n">iq_MPA</span> <span class="p">:</span> <span class="n">DUT_DoubleActPneumaticActuator</span><span class="p">;</span>
@@ -801,9 +820,9 @@
 <span class="n">END_FUNCTION_BLOCK</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="fb-mpa">
-<h2>FB_MPA<a class="headerlink" href="#fb-mpa" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="fb-mpa">
+<h2>FB_MPA<a class="headerlink" href="#fb-mpa" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_MPA</span>
 <span class="n">VAR_INPUT</span>
     <span class="p">(</span><span class="o">*</span><span class="n">EPS</span> <span class="n">Interlock</span> <span class="n">Bits</span><span class="o">*</span><span class="p">)</span>
@@ -974,9 +993,15 @@
 <span class="n">END_ACTION</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="fb-simmotor">
-<h2>FB_SimMotor<a class="headerlink" href="#fb-simmotor" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#st-mpa">ST_MPA</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="fb-simmotor">
+<h2>FB_SimMotor<a class="headerlink" href="#fb-simmotor" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_SimMotor</span>
 <span class="n">VAR_IN_OUT</span>
     <span class="n">stMotionStage</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
@@ -994,9 +1019,9 @@
 <span class="n">END_FUNCTION_BLOCK</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="fb-slits">
-<h2>FB_SLITS<a class="headerlink" href="#fb-slits" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="fb-slits">
+<h2>FB_SLITS<a class="headerlink" href="#fb-slits" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_SLITS</span>
 <span class="n">VAR_IN_OUT</span>
     <span class="n">stTopBlade</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
@@ -1431,9 +1456,9 @@
 <span class="n">END_ACTION</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="fb-slits-power">
-<h2>FB_SLITS_POWER<a class="headerlink" href="#fb-slits-power" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="fb-slits-power">
+<h2>FB_SLITS_POWER<a class="headerlink" href="#fb-slits-power" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_SLITS_POWER</span> <span class="n">EXTENDS</span> <span class="n">FB_SLITS</span>
 <span class="n">VAR_INPUT</span>
 <span class="n">END_VAR</span>
@@ -1508,9 +1533,15 @@
 <span class="n">END_ACTION</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="fb-slits-power-1">
-<h2>FB_SLITS_POWER_1<a class="headerlink" href="#fb-slits-power-1" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#fb-slits">FB_SLITS</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="fb-slits-power-1">
+<h2>FB_SLITS_POWER_1<a class="headerlink" href="#fb-slits-power-1" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_SLITS_POWER_1</span>
 <span class="n">VAR_IN_OUT</span>
     <span class="n">stTopBlade</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
@@ -1681,9 +1712,9 @@
 <span class="n">END_FUNCTION_BLOCK</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="prg-1-plctask">
-<h2>PRG_1_PlcTask<a class="headerlink" href="#prg-1-plctask" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="prg-1-plctask">
+<h2>PRG_1_PlcTask<a class="headerlink" href="#prg-1-plctask" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_1_PlcTask</span>
 <span class="p">(</span><span class="o">*</span>
     <span class="n">Launch</span> <span class="n">site</span> <span class="k">for</span> <span class="n">each</span> <span class="n">component</span><span class="s1">&#39;s program</span>
@@ -1710,9 +1741,28 @@
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="prg-2-pmps-pre">
-<h2>PRG_2_PMPS_PRE<a class="headerlink" href="#prg-2-pmps-pre" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#prg-2-pmps-pre">PRG_2_PMPS_PRE</a></p></li>
+<li><p><a class="reference internal" href="#prg-3-pmps-post">PRG_3_PMPS_POST</a></p></li>
+<li><p><a class="reference internal" href="#prg-4-log">PRG_4_LOG</a></p></li>
+<li><p><a class="reference internal" href="#prg-at2l0-solid">PRG_AT2L0_SOLID</a></p></li>
+<li><p><a class="reference internal" href="#prg-im1l0-xtes">PRG_IM1L0_XTES</a></p></li>
+<li><p><a class="reference internal" href="#prg-im1l1-ppm">PRG_IM1L1_PPM</a></p></li>
+<li><p><a class="reference internal" href="#prg-im2l0-xtes">PRG_IM2L0_XTES</a></p></li>
+<li><p><a class="reference internal" href="#prg-im3l0-ppm">PRG_IM3L0_PPM</a></p></li>
+<li><p><a class="reference internal" href="#prg-im4l0-xtes">PRG_IM4L0_XTES</a></p></li>
+<li><p><a class="reference internal" href="#prg-pf1l0-wfs">PRG_PF1L0_WFS</a></p></li>
+<li><p><a class="reference internal" href="#prg-rtdsl0">PRG_RTDSL0</a></p></li>
+<li><p><a class="reference internal" href="#prg-sl1l0-power">PRG_SL1L0_POWER</a></p></li>
+<li><p><a class="reference internal" href="#prg-sl2l0-power">PRG_SL2L0_POWER</a></p></li>
+<li><p><a class="reference internal" href="#prg-sp1l0-kmono">PRG_SP1L0_KMONO</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="prg-2-pmps-pre">
+<h2>PRG_2_PMPS_PRE<a class="headerlink" href="#prg-2-pmps-pre" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_2_PMPS_PRE</span>
 <span class="n">VAR</span>
     <span class="n">nCycles</span><span class="p">:</span> <span class="n">UDINT</span> <span class="o">:=</span> <span class="mi">200</span><span class="p">;</span>
@@ -1737,9 +1787,15 @@
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="prg-3-pmps-post">
-<h2>PRG_3_PMPS_POST<a class="headerlink" href="#prg-3-pmps-post" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#gvl">GVL</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="prg-3-pmps-post">
+<h2>PRG_3_PMPS_POST<a class="headerlink" href="#prg-3-pmps-post" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_3_PMPS_POST</span>
 <span class="n">VAR</span>
     <span class="n">fbArbiterIO</span><span class="p">:</span> <span class="n">FB_SubSysToArbiter_IO</span><span class="p">;</span>
@@ -1754,9 +1810,15 @@
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="prg-4-log">
-<h2>PRG_4_LOG<a class="headerlink" href="#prg-4-log" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#gvl">GVL</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="prg-4-log">
+<h2>PRG_4_LOG<a class="headerlink" href="#prg-4-log" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_4_LOG</span>
 <span class="n">VAR</span>
     <span class="n">fbLogHandler</span><span class="p">:</span> <span class="n">FB_LogHandler</span><span class="p">;</span>
@@ -1766,9 +1828,9 @@
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="prg-at2l0-solid">
-<h2>PRG_AT2L0_SOLID<a class="headerlink" href="#prg-at2l0-solid" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="prg-at2l0-solid">
+<h2>PRG_AT2L0_SOLID<a class="headerlink" href="#prg-at2l0-solid" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_AT2L0_SOLID</span>
 <span class="n">VAR</span>
     <span class="n">bAT2L0_debug</span><span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
@@ -1778,6 +1840,18 @@
     <span class="n">fbAT2L0_motion</span><span class="p">:</span> <span class="n">ARRAY</span> <span class="p">[</span><span class="mf">1..19</span><span class="p">]</span> <span class="n">OF</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="n">fbAT2L0_axes</span><span class="p">:</span> <span class="n">ARRAY</span> <span class="p">[</span><span class="mf">1..19</span><span class="p">]</span> <span class="n">OF</span> <span class="n">POINTER</span> <span class="n">TO</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
     <span class="n">fbAT2L0_ffo</span><span class="p">:</span> <span class="n">ARRAY</span><span class="p">[</span><span class="mf">1..19</span><span class="p">]</span> <span class="n">OF</span> <span class="n">FB_AttFFO</span><span class="p">;</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+        <span class="n">pv</span><span class="p">:</span> <span class="n">AT2L0</span><span class="p">:</span><span class="n">XTES</span><span class="p">:</span><span class="n">MMS</span>
+        <span class="n">expand</span><span class="p">:</span> <span class="p">:</span><span class="o">%</span><span class="mf">.2</span><span class="n">d</span><span class="p">:</span><span class="n">FILTER</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">fbAT2L0_filters</span><span class="p">:</span> <span class="n">ARRAY</span><span class="p">[</span><span class="mf">1..19</span><span class="p">]</span> <span class="n">OF</span> <span class="n">DUT_SATT_Filter</span><span class="p">;</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+        <span class="n">pv</span><span class="p">:</span> <span class="n">AT2L0</span><span class="p">:</span><span class="n">XTES</span><span class="p">:</span><span class="n">TRANSMISSION</span>
+        <span class="n">field</span><span class="p">:</span> <span class="n">DESC</span> <span class="n">Overall</span> <span class="n">transmission</span> <span class="n">of</span> <span class="n">AT2L0</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">fTransmission</span><span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
 
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">AT2L0</span><span class="p">:</span><span class="n">XTES</span><span class="p">:</span><span class="n">MMS</span>
@@ -1895,6 +1969,15 @@
     <span class="n">nM19CoilA</span><span class="p">:</span> <span class="n">INT</span><span class="p">;</span>
     <span class="n">nM19CoilB</span><span class="p">:</span> <span class="n">INT</span><span class="p">;</span>
     <span class="o">//</span><span class="n">nM19Current</span><span class="p">:</span> <span class="n">INT</span><span class="p">;</span>
+
+    <span class="n">stFilter</span> <span class="p">:</span> <span class="n">REFERENCE</span> <span class="n">TO</span> <span class="n">DUT_SATT_Filter</span><span class="p">;</span>
+    <span class="n">fFilterDensity</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+    <span class="n">fFilterAtomicMass</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+    <span class="n">fbAtomicMass</span> <span class="p">:</span> <span class="n">FB_AtomicMass</span><span class="p">;</span>
+    <span class="n">fbAttenuatorElementDensity</span> <span class="p">:</span> <span class="n">FB_AttenuatorElementDensity</span><span class="p">;</span>
+    <span class="n">fAbsorptionConstant</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+    <span class="n">bError</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+
 <span class="n">END_VAR</span>
 <span class="n">fbAT2L0_axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">:=</span> <span class="n">ADR</span><span class="p">(</span><span class="n">Main</span><span class="o">.</span><span class="n">M1</span><span class="p">);</span>
 <span class="n">fbAT2L0_axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">:=</span> <span class="n">ADR</span><span class="p">(</span><span class="n">Main</span><span class="o">.</span><span class="n">M2</span><span class="p">);</span>
@@ -1916,17 +1999,64 @@
 <span class="n">fbAT2L0_axes</span><span class="p">[</span><span class="mi">18</span><span class="p">]</span><span class="o">:=</span> <span class="n">ADR</span><span class="p">(</span><span class="n">Main</span><span class="o">.</span><span class="n">M18</span><span class="p">);</span>
 <span class="n">fbAT2L0_axes</span><span class="p">[</span><span class="mi">19</span><span class="p">]</span><span class="o">:=</span> <span class="n">ADR</span><span class="p">(</span><span class="n">Main</span><span class="o">.</span><span class="n">M19</span><span class="p">);</span>
 
+<span class="p">(</span><span class="o">*</span> <span class="n">Not</span> <span class="n">a</span> <span class="nb">filter</span> <span class="o">*</span><span class="p">)</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+
+<span class="n">fbAT2L0_filters</span><span class="p">[</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mf">1280.0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;C&#39;</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span> <span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mf">320.0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span> <span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;C&#39;</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span> <span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mf">640.0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span> <span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;C&#39;</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span> <span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mf">160.0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span> <span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;C&#39;</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span> <span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mf">80.0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span> <span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;C&#39;</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span> <span class="mi">7</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mf">40.0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span> <span class="mi">7</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;C&#39;</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span> <span class="mi">8</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mf">20.0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span> <span class="mi">8</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;C&#39;</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span> <span class="mi">9</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mf">10.0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span> <span class="mi">9</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;C&#39;</span><span class="p">;</span>
+
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mf">10240.0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mf">5120.0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mf">2560.0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mf">1280.0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mf">640.0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mf">320.0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mf">160.0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mf">80.0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">18</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mf">40.0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">18</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">19</span><span class="p">]</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">:=</span> <span class="mf">20.0</span><span class="p">;</span>
+<span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="mi">19</span><span class="p">]</span><span class="o">.</span><span class="n">sFilterMaterial</span>     <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">;</span>
+
 <span class="n">IF</span> <span class="n">bAT2L0_debug</span> <span class="n">THEN</span>
     <span class="n">nAT2L0_enableMode</span> <span class="o">:=</span> <span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">;</span>
 <span class="n">ELSE</span>
     <span class="n">nAT2L0_enableMode</span> <span class="o">:=</span> <span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">DURING_MOTION</span><span class="p">;</span>
 <span class="n">END_IF</span>
 
+
+<span class="p">(</span><span class="o">*</span> <span class="n">Recalculate</span> <span class="n">the</span> <span class="n">overall</span> <span class="n">transmission</span> <span class="n">below</span> <span class="o">*</span><span class="p">)</span>
+<span class="n">fTransmission</span> <span class="o">:=</span> <span class="mf">1.0</span><span class="p">;</span>
+
 <span class="n">FOR</span> <span class="n">iIndex</span> <span class="o">:=</span> <span class="mi">1</span> <span class="n">TO</span> <span class="mi">19</span> <span class="n">DO</span>
     <span class="n">fbAT2L0_motion</span><span class="p">[</span><span class="n">iIndex</span><span class="p">](</span><span class="n">stMotionStage</span> <span class="o">:=</span> <span class="n">fbAT2L0_axes</span><span class="p">[</span><span class="n">iIndex</span><span class="p">]</span><span class="o">^</span><span class="p">);</span>
     <span class="n">fbAT2L0_axes</span><span class="p">[</span><span class="n">iIndex</span><span class="p">]</span><span class="o">^.</span><span class="n">nEnableMode</span> <span class="o">:=</span> <span class="n">nAT2L0_enableMode</span><span class="p">;</span>
     <span class="n">fbAT2L0_axes</span><span class="p">[</span><span class="n">iIndex</span><span class="p">]</span><span class="o">^.</span><span class="n">bHardwareEnable</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
     <span class="n">fbAT2L0_axes</span><span class="p">[</span><span class="n">iIndex</span><span class="p">]</span><span class="o">^.</span><span class="n">bPowerSelf</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+    <span class="n">stFilter</span> <span class="n">REF</span><span class="o">=</span> <span class="n">fbAT2L0_filters</span><span class="p">[</span><span class="n">iIndex</span><span class="p">];</span>
 
     <span class="n">fbAT2L0_states</span><span class="p">[</span><span class="n">iIndex</span><span class="p">](</span>
         <span class="n">bEnable</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
@@ -1938,7 +2068,39 @@
         <span class="n">stMotionStage</span> <span class="o">:=</span> <span class="n">fbAT2L0_axes</span><span class="p">[</span><span class="n">iIndex</span><span class="p">]</span><span class="o">^</span><span class="p">,</span>
         <span class="n">enumState</span> <span class="o">:=</span> <span class="n">fbAT2L0_states</span><span class="p">[</span><span class="n">iIndex</span><span class="p">]</span><span class="o">.</span><span class="n">enumGet</span><span class="p">,</span>
         <span class="n">fbFFHWO</span> <span class="o">:=</span> <span class="n">GVL</span><span class="o">.</span><span class="n">fbFastFaultOutput2</span><span class="p">);</span>
+
+    <span class="n">IF</span> <span class="n">fbAT2L0_states</span><span class="p">[</span><span class="n">iIndex</span><span class="p">]</span><span class="o">.</span><span class="n">enumGet</span> <span class="o">=</span> <span class="n">ENUM_EpicsInOut</span><span class="o">.</span><span class="n">UNKNOWN</span> <span class="n">THEN</span>
+        <span class="n">stFilter</span><span class="o">.</span><span class="n">fTransmission</span> <span class="o">:=</span> <span class="mf">0.0</span><span class="p">;</span>
+    <span class="n">ELSIF</span> <span class="n">fbAT2L0_states</span><span class="p">[</span><span class="n">iIndex</span><span class="p">]</span><span class="o">.</span><span class="n">enumGet</span> <span class="o">=</span> <span class="n">ENUM_EpicsInOut</span><span class="o">.</span><span class="n">OUT</span> <span class="n">OR</span> <span class="n">stFilter</span><span class="o">.</span><span class="n">sFilterMaterial</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="n">THEN</span>
+        <span class="n">stFilter</span><span class="o">.</span><span class="n">fTransmission</span> <span class="o">:=</span> <span class="mf">1.0</span><span class="p">;</span>
+    <span class="n">ELSE</span>
+        <span class="n">fbAtomicMass</span><span class="p">(</span><span class="n">sName</span><span class="o">:=</span><span class="n">stFilter</span><span class="o">.</span><span class="n">sFilterMaterial</span><span class="p">,</span> <span class="n">fValue</span><span class="o">=&gt;</span><span class="n">fFilterAtomicMass</span><span class="p">);</span>
+        <span class="n">fbAttenuatorElementDensity</span><span class="p">(</span><span class="n">sName</span><span class="o">:=</span><span class="n">stFilter</span><span class="o">.</span><span class="n">sFilterMaterial</span><span class="p">,</span> <span class="n">fDensity</span><span class="o">=&gt;</span><span class="n">fFilterDensity</span><span class="p">);</span>
+
+        <span class="n">fAbsorptionConstant</span> <span class="o">:=</span> <span class="n">F_CalculateAbsorptionConstant</span><span class="p">(</span>
+            <span class="n">sElement</span><span class="o">:=</span><span class="n">stFilter</span><span class="o">.</span><span class="n">sFilterMaterial</span><span class="p">,</span>
+            <span class="n">fEnergyEV</span><span class="o">:=</span><span class="n">GVL</span><span class="o">.</span><span class="n">fPhotonEnergy_eV</span><span class="p">,</span> <span class="p">(</span><span class="o">*</span> <span class="n">TODO</span> <span class="n">double</span><span class="o">-</span><span class="n">check</span> <span class="n">link</span> <span class="o">*</span><span class="p">)</span>
+            <span class="n">fDensity_gm3</span><span class="o">:=</span><span class="n">fFilterDensity</span><span class="p">,</span>
+            <span class="n">fAtomicWeight</span><span class="o">:=</span><span class="n">fFilterAtomicMass</span><span class="p">,</span>
+            <span class="n">bError</span><span class="o">=&gt;</span><span class="n">bError</span><span class="p">,</span>
+        <span class="p">);</span>
+        <span class="n">stFilter</span><span class="o">.</span><span class="n">fTransmission</span> <span class="o">:=</span> <span class="n">F_CalculateTransmission</span><span class="p">(</span>
+            <span class="n">fAbsorptionConstant</span><span class="o">:=</span><span class="n">fAbsorptionConstant</span><span class="p">,</span>
+            <span class="n">fThickness_in_m</span><span class="o">:=</span><span class="n">stFilter</span><span class="o">.</span><span class="n">fFilterThickness_um</span> <span class="o">*</span> <span class="mf">1.0E-6</span>
+        <span class="p">);</span>
+    <span class="n">END_IF</span>
+
+    <span class="n">fTransmission</span> <span class="o">:=</span> <span class="n">fTransmission</span> <span class="o">*</span> <span class="n">stFilter</span><span class="o">.</span><span class="n">fTransmission</span><span class="p">;</span>
 <span class="n">END_FOR</span>
+
+<span class="n">IF</span> <span class="n">fbAT2L0_states</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">enumGet</span> <span class="o">=</span> <span class="n">ENUM_EpicsInOut</span><span class="o">.</span><span class="n">IN</span> <span class="n">THEN</span>
+    <span class="p">(</span><span class="o">*</span> <span class="n">Inspection</span> <span class="n">mirror</span> <span class="n">blocks</span> <span class="n">the</span> <span class="n">beam</span> <span class="o">*</span><span class="p">)</span>
+    <span class="n">GVL</span><span class="o">.</span><span class="n">rCurTrans</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">L_Attenuators</span><span class="o">.</span><span class="n">AT2L0</span><span class="p">]</span><span class="o">.</span><span class="n">nTran</span> <span class="o">:=</span> <span class="mf">0.0</span><span class="p">;</span>
+    <span class="p">(</span><span class="o">*</span> <span class="n">TODO</span> <span class="n">fast</span> <span class="n">fault</span> <span class="k">as</span> <span class="n">well</span> <span class="o">*</span><span class="p">)</span>
+<span class="n">ELSE</span>
+    <span class="n">GVL</span><span class="o">.</span><span class="n">rCurTrans</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">L_Attenuators</span><span class="o">.</span><span class="n">AT2L0</span><span class="p">]</span><span class="o">.</span><span class="n">nTran</span> <span class="o">:=</span> <span class="n">LREAL_TO_REAL</span><span class="p">(</span><span class="n">fTransmission</span><span class="p">);</span>
+<span class="n">END_IF</span>
+
 <span class="n">iIndex</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span>
 
 <span class="n">nM1CoilA</span> <span class="o">:=</span> <span class="n">UINT_TO_INT</span><span class="p">(</span><span class="n">nM1CoilARaw</span><span class="p">);</span>
@@ -2005,9 +2167,19 @@
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="prg-im1l0-xtes">
-<h2>PRG_IM1L0_XTES<a class="headerlink" href="#prg-im1l0-xtes" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#dut-satt-filter">DUT_SATT_Filter</a></p></li>
+<li><p><a class="reference internal" href="#fb-attffo">FB_AttFFO</a></p></li>
+<li><p><a class="reference internal" href="#fb-attenuatorelementdensity">FB_AttenuatorElementDensity</a></p></li>
+<li><p><a class="reference internal" href="#gvl">GVL</a></p></li>
+<li><p><a class="reference internal" href="#main">Main</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="prg-im1l0-xtes">
+<h2>PRG_IM1L0_XTES<a class="headerlink" href="#prg-im1l0-xtes" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_IM1L0_XTES</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2116,9 +2288,16 @@
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="prg-im1l1-ppm">
-<h2>PRG_IM1L1_PPM<a class="headerlink" href="#prg-im1l1-ppm" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#gvl">GVL</a></p></li>
+<li><p><a class="reference internal" href="#main">Main</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="prg-im1l1-ppm">
+<h2>PRG_IM1L1_PPM<a class="headerlink" href="#prg-im1l1-ppm" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_IM1L1_PPM</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2185,9 +2364,16 @@
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="prg-im2l0-xtes">
-<h2>PRG_IM2L0_XTES<a class="headerlink" href="#prg-im2l0-xtes" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#gvl">GVL</a></p></li>
+<li><p><a class="reference internal" href="#main">Main</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="prg-im2l0-xtes">
+<h2>PRG_IM2L0_XTES<a class="headerlink" href="#prg-im2l0-xtes" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_IM2L0_XTES</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2302,9 +2488,16 @@
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="prg-im3l0-ppm">
-<h2>PRG_IM3L0_PPM<a class="headerlink" href="#prg-im3l0-ppm" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#gvl">GVL</a></p></li>
+<li><p><a class="reference internal" href="#main">Main</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="prg-im3l0-ppm">
+<h2>PRG_IM3L0_PPM<a class="headerlink" href="#prg-im3l0-ppm" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_IM3L0_PPM</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2370,9 +2563,16 @@
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="prg-im4l0-xtes">
-<h2>PRG_IM4L0_XTES<a class="headerlink" href="#prg-im4l0-xtes" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#gvl">GVL</a></p></li>
+<li><p><a class="reference internal" href="#main">Main</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="prg-im4l0-xtes">
+<h2>PRG_IM4L0_XTES<a class="headerlink" href="#prg-im4l0-xtes" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_IM4L0_XTES</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2482,9 +2682,16 @@
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="prg-pf1l0-wfs">
-<h2>PRG_PF1L0_WFS<a class="headerlink" href="#prg-pf1l0-wfs" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#gvl">GVL</a></p></li>
+<li><p><a class="reference internal" href="#main">Main</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="prg-pf1l0-wfs">
+<h2>PRG_PF1L0_WFS<a class="headerlink" href="#prg-pf1l0-wfs" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_PF1L0_WFS</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2565,9 +2772,16 @@
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="prg-rtdsl0">
-<h2>PRG_RTDSL0<a class="headerlink" href="#prg-rtdsl0" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#gvl">GVL</a></p></li>
+<li><p><a class="reference internal" href="#main">Main</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="prg-rtdsl0">
+<h2>PRG_RTDSL0<a class="headerlink" href="#prg-rtdsl0" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_RTDSL0</span>
 <span class="n">VAR</span>
 <span class="n">END_VAR</span>
@@ -2635,9 +2849,16 @@
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="prg-sl1l0-power">
-<h2>PRG_SL1L0_POWER<a class="headerlink" href="#prg-sl1l0-power" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#gvl">GVL</a></p></li>
+<li><p><a class="reference internal" href="#main">Main</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="prg-sl1l0-power">
+<h2>PRG_SL1L0_POWER<a class="headerlink" href="#prg-sl1l0-power" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_SL1L0_POWER</span>
 <span class="n">VAR</span> <span class="o">//</span> <span class="n">fix</span> <span class="n">linking</span> <span class="n">to</span> <span class="n">rtd</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">following</span> <span class="n">order</span> <span class="n">Bottom</span> <span class="o">-</span> <span class="n">South</span> <span class="o">-</span> <span class="n">TOP</span> <span class="o">-</span> <span class="n">NORTH</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2730,9 +2951,16 @@
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="prg-sl2l0-power">
-<h2>PRG_SL2L0_POWER<a class="headerlink" href="#prg-sl2l0-power" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#fb-slits-power">FB_SLITS_POWER</a></p></li>
+<li><p><a class="reference internal" href="#main">Main</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="prg-sl2l0-power">
+<h2>PRG_SL2L0_POWER<a class="headerlink" href="#prg-sl2l0-power" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_SL2L0_POWER</span>
 <span class="n">VAR</span> <span class="o">//</span> <span class="n">linking</span> <span class="n">to</span> <span class="n">rtd</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">following</span> <span class="n">order</span> <span class="n">Bottom</span> <span class="o">-</span> <span class="n">South</span> <span class="o">-</span> <span class="n">TOP</span> <span class="o">-</span> <span class="n">NORTH</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2820,9 +3048,17 @@
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="prg-sp1l0-kmono">
-<h2>PRG_SP1L0_KMONO<a class="headerlink" href="#prg-sp1l0-kmono" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#fb-slits-power">FB_SLITS_POWER</a></p></li>
+<li><p><a class="reference internal" href="#fb-simmotor">FB_SimMotor</a></p></li>
+<li><p><a class="reference internal" href="#main">Main</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="prg-sp1l0-kmono">
+<h2>PRG_SP1L0_KMONO<a class="headerlink" href="#prg-sp1l0-kmono" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_SP1L0_KMONO</span>
 <span class="n">VAR</span>
     <span class="n">fbMotion1</span><span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
@@ -2961,54 +3197,46 @@
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
-</div>
-</div>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#fb-basicmotionstagealtffo">FB_BasicMotionStageAltFFO</a></p></li>
+<li><p><a class="reference internal" href="#fb-basicmotionstageffo">FB_BasicMotionStageFFO</a></p></li>
+<li><p><a class="reference internal" href="#gvl">GVL</a></p></li>
+<li><p><a class="reference internal" href="#main">Main</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="plc-lfe-motion_lfe_motion_epics.html" class="btn btn-neutral float-left" title="Data Types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, SLAC National Accelerator Laboratory.
-
-    </p>
+    <p>&#169; Copyright 2021, SLAC National Accelerator Laboratory.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

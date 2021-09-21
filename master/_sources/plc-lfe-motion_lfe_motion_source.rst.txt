@@ -4,6 +4,43 @@ DUTs
 ----
 
 
+DUT_SATT_Filter
+^^^^^^^^^^^^^^^
+
+::
+
+    TYPE DUT_SATT_Filter :
+    STRUCT
+        {attribute 'pytmc' := '
+            pv: MATERIAL
+            io: input
+            field: DESC Filter material name
+        '}
+        sFilterMaterial : STRING;
+
+        {attribute 'pytmc' := '
+            pv: THICKNESS
+            io: input
+            field: DESC Filter material thickness
+            field: EGU um
+        '}
+        fFilterThickness_um : LREAL;
+
+        {attribute 'pytmc' := '
+            pv: TRANSMISSION
+            io: input
+            field: DESC Current transmission value
+        '}
+        fTransmission : LREAL;
+
+    END_STRUCT
+    END_TYPE
+
+
+Related:
+    * `DUT_SATT_Filter`_
+
+
 E_PositionState
 ^^^^^^^^^^^^^^^
 
@@ -17,6 +54,8 @@ E_PositionState
     INVALID :=3
     );
     END_TYPE
+
+
 
 
 ST_MPA
@@ -107,6 +146,10 @@ ST_MPA
     END_TYPE
 
 
+Related:
+    * `E_PositionState`_
+
+
 GVLs
 ----
 
@@ -124,6 +167,8 @@ Global_Version
         {attribute 'const_non_replaced'}
         stLibVersion_lcls_plc_lfe_motion : ST_LibVersion := (iMajor := 0, iMinor := 0, iBuild := 0, iRevision := 0, sVersion := '0.0.0');
     END_VAR
+
+
 
 
 GVL
@@ -149,7 +194,18 @@ GVL
         bInitIM2L0: BOOL;
         bInitIM3L0: BOOL;
         bInitIM4L0: BOOL;
+
+        (* Photon energy comes from the arbiter (see PMPS_PRE.IO Inputs.rPhotonEnergy!) *)
+        {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:PhotonEnergy'}
+        fPhotonEnergy_eV AT %I* : REAL;
+        {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:PMPS:ReqTrans'}
+        rReqTrans AT %I*		: ARRAY [1..PMPS_GVL.AUX_ATTENUATORS] OF ST_PMPS_Attenuator_IO;
+        {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:PMPS:CurTrans'}
+        rCurTrans AT %Q*		: ARRAY [1..PMPS_GVL.AUX_ATTENUATORS] OF ST_PMPS_Attenuator_IO;
+
     END_VAR
+
+
 
 
 Main
@@ -398,6 +454,11 @@ Main
     END_VAR
 
 
+Related:
+    * `GVL`_
+    * `RTDSL0`_
+
+
 RTDSL0
 ^^^^^^
 
@@ -419,8 +480,46 @@ RTDSL0
     END_VAR
 
 
+Related:
+    * `FB_MPA`_
+
+
 POUs
 ----
+
+
+FB_AttenuatorElementDensity
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    FUNCTION_BLOCK FB_AttenuatorElementDensity
+    VAR_INPUT
+        sName : STRING;
+    END_VAR
+    VAR_OUTPUT
+        fDensity : LREAL;
+        bFound : BOOL;
+    END_VAR
+    VAR
+        fbElementDensity : FB_ElementDensity;
+        fDensity_gm3 : LREAL;
+    END_VAR
+    IF sName = 'C' THEN
+        (* Special-case diamond here *)
+        fDensity := 3.51E6;  (* C (Diamond) g/m^3 *)
+    ELSE
+        fbElementDensity(sName:=sName);
+        IF fbElementDensity.bFound THEN
+            fDensity := fbElementDensity.fValue * 1.0E6; (* g/cm^3 -> g/m^3 *)
+        ELSE
+            fDensity := 0.0;
+        END_IF
+    END_IF
+
+    END_FUNCTION_BLOCK
+
+
 
 
 FB_AttFFO
@@ -448,6 +547,8 @@ FB_AttFFO
          io_fbFFHWO := fbFFHWO);
 
     END_FUNCTION_BLOCK
+
+
 
 
 FB_BasicAxisFFO
@@ -482,6 +583,8 @@ FB_BasicAxisFFO
          io_fbFFHWO := fbFFHWO);
 
     END_FUNCTION_BLOCK
+
+
 
 
 FB_BasicMotionStageAltFFO
@@ -523,6 +626,11 @@ FB_BasicMotionStageAltFFO
          io_fbFFHWO := fbFFHWO);
 
     END_FUNCTION_BLOCK
+
+
+Related:
+    * `FB_BasicAxisFFO`_
+    * `FB_BasicMotionStageFFO`_
 
 
 FB_BasicMotionStageFFO
@@ -572,6 +680,10 @@ FB_BasicMotionStageFFO
     END_FUNCTION_BLOCK
 
 
+Related:
+    * `FB_BasicAxisFFO`_
+
+
 FB_DoubleActingMPA
 ^^^^^^^^^^^^^^^^^^
 
@@ -617,6 +729,8 @@ FB_DoubleActingMPA
     END_IF
 
     END_FUNCTION_BLOCK
+
+
 
 
 FB_MPA
@@ -794,6 +908,10 @@ FB_MPA
     END_ACTION
 
 
+Related:
+    * `ST_MPA`_
+
+
 FB_SimMotor
 ^^^^^^^^^^^
 
@@ -814,6 +932,8 @@ FB_SimMotor
     fbMotionStage(stMotionStage := stMotionStage);
 
     END_FUNCTION_BLOCK
+
+
 
 
 FB_SLITS
@@ -1255,6 +1375,8 @@ FB_SLITS
     END_ACTION
 
 
+
+
 FB_SLITS_POWER
 ^^^^^^^^^^^^^^
 
@@ -1332,6 +1454,10 @@ FB_SLITS_POWER
     //Flow Switch
     fbFlowSwitch();
     END_ACTION
+
+
+Related:
+    * `FB_SLITS`_
 
 
 FB_SLITS_POWER_1
@@ -1509,6 +1635,8 @@ FB_SLITS_POWER_1
     END_FUNCTION_BLOCK
 
 
+
+
 PRG_1_PlcTask
 ^^^^^^^^^^^^^
 
@@ -1540,6 +1668,23 @@ PRG_1_PlcTask
     END_PROGRAM
 
 
+Related:
+    * `PRG_2_PMPS_PRE`_
+    * `PRG_3_PMPS_POST`_
+    * `PRG_4_LOG`_
+    * `PRG_AT2L0_SOLID`_
+    * `PRG_IM1L0_XTES`_
+    * `PRG_IM1L1_PPM`_
+    * `PRG_IM2L0_XTES`_
+    * `PRG_IM3L0_PPM`_
+    * `PRG_IM4L0_XTES`_
+    * `PRG_PF1L0_WFS`_
+    * `PRG_RTDSL0`_
+    * `PRG_SL1L0_POWER`_
+    * `PRG_SL2L0_POWER`_
+    * `PRG_SP1L0_KMONO`_
+
+
 PRG_2_PMPS_PRE
 ^^^^^^^^^^^^^^
 
@@ -1569,6 +1714,10 @@ PRG_2_PMPS_PRE
     END_PROGRAM
 
 
+Related:
+    * `GVL`_
+
+
 PRG_3_PMPS_POST
 ^^^^^^^^^^^^^^^
 
@@ -1588,6 +1737,10 @@ PRG_3_PMPS_POST
     END_PROGRAM
 
 
+Related:
+    * `GVL`_
+
+
 PRG_4_LOG
 ^^^^^^^^^
 
@@ -1600,6 +1753,8 @@ PRG_4_LOG
     fbLogHandler();
 
     END_PROGRAM
+
+
 
 
 PRG_AT2L0_SOLID
@@ -1616,6 +1771,18 @@ PRG_AT2L0_SOLID
         fbAT2L0_motion: ARRAY [1..19] OF FB_MotionStage;
         fbAT2L0_axes: ARRAY [1..19] OF POINTER TO DUT_MotionStage;
         fbAT2L0_ffo: ARRAY[1..19] OF FB_AttFFO;
+
+        {attribute 'pytmc' := '
+            pv: AT2L0:XTES:MMS
+            expand: :%.2d:FILTER
+        '}
+        fbAT2L0_filters: ARRAY[1..19] OF DUT_SATT_Filter;
+
+        {attribute 'pytmc' := '
+            pv: AT2L0:XTES:TRANSMISSION
+            field: DESC Overall transmission of AT2L0
+        '}
+        fTransmission: LREAL;
 
         {attribute 'pytmc' := '
             pv: AT2L0:XTES:MMS
@@ -1733,6 +1900,15 @@ PRG_AT2L0_SOLID
         nM19CoilA: INT;
         nM19CoilB: INT;
         //nM19Current: INT;
+
+        stFilter : REFERENCE TO DUT_SATT_Filter;
+        fFilterDensity : LREAL;
+        fFilterAtomicMass : LREAL;
+        fbAtomicMass : FB_AtomicMass;
+        fbAttenuatorElementDensity : FB_AttenuatorElementDensity;
+        fAbsorptionConstant : LREAL;
+        bError : BOOL;
+
     END_VAR
     fbAT2L0_axes[1]:= ADR(Main.M1);
     fbAT2L0_axes[2]:= ADR(Main.M2);
@@ -1754,17 +1930,64 @@ PRG_AT2L0_SOLID
     fbAT2L0_axes[18]:= ADR(Main.M18);
     fbAT2L0_axes[19]:= ADR(Main.M19);
 
+    (* Not a filter *)
+    fbAT2L0_filters[ 1].fFilterThickness_um := 0;
+    fbAT2L0_filters[ 1].sFilterMaterial     := '';
+
+    fbAT2L0_filters[ 2].fFilterThickness_um := 1280.0;
+    fbAT2L0_filters[ 2].sFilterMaterial     := 'C';
+    fbAT2L0_filters[ 3].fFilterThickness_um := 320.0;
+    fbAT2L0_filters[ 3].sFilterMaterial     := 'C';
+    fbAT2L0_filters[ 4].fFilterThickness_um := 640.0;
+    fbAT2L0_filters[ 4].sFilterMaterial     := 'C';
+    fbAT2L0_filters[ 5].fFilterThickness_um := 160.0;
+    fbAT2L0_filters[ 5].sFilterMaterial     := 'C';
+    fbAT2L0_filters[ 6].fFilterThickness_um := 80.0;
+    fbAT2L0_filters[ 6].sFilterMaterial     := 'C';
+    fbAT2L0_filters[ 7].fFilterThickness_um := 40.0;
+    fbAT2L0_filters[ 7].sFilterMaterial     := 'C';
+    fbAT2L0_filters[ 8].fFilterThickness_um := 20.0;
+    fbAT2L0_filters[ 8].sFilterMaterial     := 'C';
+    fbAT2L0_filters[ 9].fFilterThickness_um := 10.0;
+    fbAT2L0_filters[ 9].sFilterMaterial     := 'C';
+
+    fbAT2L0_filters[10].fFilterThickness_um := 10240.0;
+    fbAT2L0_filters[10].sFilterMaterial     := 'Si';
+    fbAT2L0_filters[11].fFilterThickness_um := 5120.0;
+    fbAT2L0_filters[11].sFilterMaterial     := 'Si';
+    fbAT2L0_filters[12].fFilterThickness_um := 2560.0;
+    fbAT2L0_filters[12].sFilterMaterial     := 'Si';
+    fbAT2L0_filters[13].fFilterThickness_um := 1280.0;
+    fbAT2L0_filters[13].sFilterMaterial     := 'Si';
+    fbAT2L0_filters[14].fFilterThickness_um := 640.0;
+    fbAT2L0_filters[14].sFilterMaterial     := 'Si';
+    fbAT2L0_filters[15].fFilterThickness_um := 320.0;
+    fbAT2L0_filters[15].sFilterMaterial     := 'Si';
+    fbAT2L0_filters[16].fFilterThickness_um := 160.0;
+    fbAT2L0_filters[16].sFilterMaterial     := 'Si';
+    fbAT2L0_filters[17].fFilterThickness_um := 80.0;
+    fbAT2L0_filters[17].sFilterMaterial     := 'Si';
+    fbAT2L0_filters[18].fFilterThickness_um := 40.0;
+    fbAT2L0_filters[18].sFilterMaterial     := 'Si';
+    fbAT2L0_filters[19].fFilterThickness_um := 20.0;
+    fbAT2L0_filters[19].sFilterMaterial     := 'Si';
+
     IF bAT2L0_debug THEN
         nAT2L0_enableMode := ENUM_StageEnableMode.ALWAYS;
     ELSE
         nAT2L0_enableMode := ENUM_StageEnableMode.DURING_MOTION;
     END_IF
 
+
+    (* Recalculate the overall transmission below *)
+    fTransmission := 1.0;
+
     FOR iIndex := 1 TO 19 DO
         fbAT2L0_motion[iIndex](stMotionStage := fbAT2L0_axes[iIndex]^);
         fbAT2L0_axes[iIndex]^.nEnableMode := nAT2L0_enableMode;
         fbAT2L0_axes[iIndex]^.bHardwareEnable := TRUE;
         fbAT2L0_axes[iIndex]^.bPowerSelf := TRUE;
+        stFilter REF= fbAT2L0_filters[iIndex];
 
         fbAT2L0_states[iIndex](
             bEnable := TRUE,
@@ -1776,7 +1999,39 @@ PRG_AT2L0_SOLID
             stMotionStage := fbAT2L0_axes[iIndex]^,
             enumState := fbAT2L0_states[iIndex].enumGet,
             fbFFHWO := GVL.fbFastFaultOutput2);
+
+        IF fbAT2L0_states[iIndex].enumGet = ENUM_EpicsInOut.UNKNOWN THEN
+            stFilter.fTransmission := 0.0;
+        ELSIF fbAT2L0_states[iIndex].enumGet = ENUM_EpicsInOut.OUT OR stFilter.sFilterMaterial = '' THEN
+            stFilter.fTransmission := 1.0;
+        ELSE
+            fbAtomicMass(sName:=stFilter.sFilterMaterial, fValue=>fFilterAtomicMass);
+            fbAttenuatorElementDensity(sName:=stFilter.sFilterMaterial, fDensity=>fFilterDensity);
+
+            fAbsorptionConstant := F_CalculateAbsorptionConstant(
+                sElement:=stFilter.sFilterMaterial,
+                fEnergyEV:=GVL.fPhotonEnergy_eV, (* TODO double-check link *)
+                fDensity_gm3:=fFilterDensity,
+                fAtomicWeight:=fFilterAtomicMass,
+                bError=>bError,
+            );
+            stFilter.fTransmission := F_CalculateTransmission(
+                fAbsorptionConstant:=fAbsorptionConstant,
+                fThickness_in_m:=stFilter.fFilterThickness_um * 1.0E-6
+            );
+        END_IF
+
+        fTransmission := fTransmission * stFilter.fTransmission;
     END_FOR
+
+    IF fbAT2L0_states[1].enumGet = ENUM_EpicsInOut.IN THEN
+        (* Inspection mirror blocks the beam *)
+        GVL.rCurTrans[PMPS.L_Attenuators.AT2L0].nTran := 0.0;
+        (* TODO fast fault as well *)
+    ELSE
+        GVL.rCurTrans[PMPS.L_Attenuators.AT2L0].nTran := LREAL_TO_REAL(fTransmission);
+    END_IF
+
     iIndex := 0;
 
     nM1CoilA := UINT_TO_INT(nM1CoilARaw);
@@ -1841,6 +2096,14 @@ PRG_AT2L0_SOLID
     //nM19Current := ABS(nM2CoilA) + ABS(nM2CoilB);
 
     END_PROGRAM
+
+
+Related:
+    * `DUT_SATT_Filter`_
+    * `FB_AttFFO`_
+    * `FB_AttenuatorElementDensity`_
+    * `GVL`_
+    * `Main`_
 
 
 PRG_IM1L0_XTES
@@ -1956,6 +2219,11 @@ PRG_IM1L0_XTES
     END_PROGRAM
 
 
+Related:
+    * `GVL`_
+    * `Main`_
+
+
 PRG_IM1L1_PPM
 ^^^^^^^^^^^^^
 
@@ -2025,6 +2293,11 @@ PRG_IM1L1_PPM
         stYStage := Main.M23);
 
     END_PROGRAM
+
+
+Related:
+    * `GVL`_
+    * `Main`_
 
 
 PRG_IM2L0_XTES
@@ -2146,6 +2419,11 @@ PRG_IM2L0_XTES
     END_PROGRAM
 
 
+Related:
+    * `GVL`_
+    * `Main`_
+
+
 PRG_IM3L0_PPM
 ^^^^^^^^^^^^^
 
@@ -2214,6 +2492,11 @@ PRG_IM3L0_PPM
         stYStage := Main.M27);
 
     END_PROGRAM
+
+
+Related:
+    * `GVL`_
+    * `Main`_
 
 
 PRG_IM4L0_XTES
@@ -2330,6 +2613,11 @@ PRG_IM4L0_XTES
     END_PROGRAM
 
 
+Related:
+    * `GVL`_
+    * `Main`_
+
+
 PRG_PF1L0_WFS
 ^^^^^^^^^^^^^
 
@@ -2415,6 +2703,11 @@ PRG_PF1L0_WFS
     END_PROGRAM
 
 
+Related:
+    * `GVL`_
+    * `Main`_
+
+
 PRG_RTDSL0
 ^^^^^^^^^^
 
@@ -2485,6 +2778,11 @@ PRG_RTDSL0
     *)
 
     END_PROGRAM
+
+
+Related:
+    * `GVL`_
+    * `Main`_
 
 
 PRG_SL1L0_POWER
@@ -2584,6 +2882,11 @@ PRG_SL1L0_POWER
     END_PROGRAM
 
 
+Related:
+    * `FB_SLITS_POWER`_
+    * `Main`_
+
+
 PRG_SL2L0_POWER
 ^^^^^^^^^^^^^^^
 
@@ -2674,6 +2977,12 @@ PRG_SL2L0_POWER
             bExecuteMotion:=bExecuteMotion);
 
     END_PROGRAM
+
+
+Related:
+    * `FB_SLITS_POWER`_
+    * `FB_SimMotor`_
+    * `Main`_
 
 
 PRG_SP1L0_KMONO
@@ -2817,4 +3126,11 @@ PRG_SP1L0_KMONO
         io_fbFFHWO := GVL.fbFastFaultOutput1);
 
     END_PROGRAM
+
+
+Related:
+    * `FB_BasicMotionStageAltFFO`_
+    * `FB_BasicMotionStageFFO`_
+    * `GVL`_
+    * `Main`_
 

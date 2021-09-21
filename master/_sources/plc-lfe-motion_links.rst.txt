@@ -1272,6 +1272,8 @@ Links
         OutputSrc, RTDS.MPA01.q_xRetractDO, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL2008, Channel 2^Output
         OutputSrc, RTDS.MPA02.q_xInsertDO, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL2008, Channel 3^Output
         OutputSrc, RTDS.MPA02.q_xRetractDO, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL2008, Channel 4^Output
+        lfe_motion Instance, PlcTask Inputs^GVL.fPhotonEnergy_eV, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PMPS_PRE, IO Inputs^rPhotonEnergy
+        lfe_motion Instance, PlcTask Inputs^GVL.rReqTrans, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PMPS_PRE, IO Inputs^SattArrayReq
         lfe_motion Instance, PlcTask Inputs^Main.M1.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^Axis 1, Outputs^ToPlc
         lfe_motion Instance, PlcTask Inputs^Main.M1.bLimitBackwardEnable, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-01, STM Status^Status^Digital input 1
         lfe_motion Instance, PlcTask Inputs^Main.M1.bLimitForwardEnable, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-01, STM Status^Status^Digital input 2
@@ -1629,6 +1631,7 @@ Links
         lfe_motion Instance, PlcTask Inputs^RTDSL0.RTDSL0_MPA_04.i_xRetractedLS, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X1 RTDSL0 (EK1100)^RTDSL0-MPA-EL1008, Channel 8^Input
         lfe_motion Instance, PlcTask Outputs^GVL.fbFastFaultOutput1.q_xFastFaultOut, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PMPS_FFO, Channel 1^Output
         lfe_motion Instance, PlcTask Outputs^GVL.fbFastFaultOutput2.q_xFastFaultOut, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PMPS_FFO, Channel 2^Output
+        lfe_motion Instance, PlcTask Outputs^GVL.rCurTrans, TIID^PLC Rail (EtherCAT)^Power (EK1200)^PMPS_PRE, IO Outputs^SattArrayStatus
         lfe_motion Instance, PlcTask Outputs^Main.M1.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Axis 1, Inputs^FromPlc
         lfe_motion Instance, PlcTask Outputs^Main.M10.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Axis 10, Inputs^FromPlc
         lfe_motion Instance, PlcTask Outputs^Main.M11.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Axis 11, Inputs^FromPlc
