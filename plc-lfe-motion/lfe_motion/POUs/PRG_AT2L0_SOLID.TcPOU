@@ -13,6 +13,18 @@ VAR
 
     {attribute 'pytmc' := '
         pv: AT2L0:XTES:MMS
+        expand: :%.2d:FILTER
+    '}
+    fbAT2L0_filters: ARRAY[1..19] OF DUT_SATT_Filter;
+
+    {attribute 'pytmc' := '
+        pv: AT2L0:XTES:TRANSMISSION
+        field: DESC Overall transmission of AT2L0
+    '}
+    fTransmission: LREAL;
+
+    {attribute 'pytmc' := '
+        pv: AT2L0:XTES:MMS
         expand: :%.2d:STATE
     '}
     fbAT2L0_states: ARRAY[1..19] OF FB_PositionStateInOut;
@@ -127,6 +139,15 @@ VAR
     nM19CoilA: INT;
     nM19CoilB: INT;
     //nM19Current: INT;
+
+    stFilter : REFERENCE TO DUT_SATT_Filter;
+    fFilterDensity : LREAL;
+    fFilterAtomicMass : LREAL;
+    fbAtomicMass : FB_AtomicMass;
+    fbAttenuatorElementDensity : FB_AttenuatorElementDensity;
+    fAbsorptionConstant : LREAL;
+    bError : BOOL;
+
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -151,17 +172,64 @@ fbAT2L0_axes[17]:= ADR(Main.M17);
 fbAT2L0_axes[18]:= ADR(Main.M18);
 fbAT2L0_axes[19]:= ADR(Main.M19);
 
+(* Not a filter *)
+fbAT2L0_filters[ 1].fFilterThickness_um := 0;
+fbAT2L0_filters[ 1].sFilterMaterial     := '';
+
+fbAT2L0_filters[ 2].fFilterThickness_um := 1280.0;
+fbAT2L0_filters[ 2].sFilterMaterial     := 'C';
+fbAT2L0_filters[ 3].fFilterThickness_um := 320.0;
+fbAT2L0_filters[ 3].sFilterMaterial     := 'C';
+fbAT2L0_filters[ 4].fFilterThickness_um := 640.0;
+fbAT2L0_filters[ 4].sFilterMaterial     := 'C';
+fbAT2L0_filters[ 5].fFilterThickness_um := 160.0;
+fbAT2L0_filters[ 5].sFilterMaterial     := 'C';
+fbAT2L0_filters[ 6].fFilterThickness_um := 80.0;
+fbAT2L0_filters[ 6].sFilterMaterial     := 'C';
+fbAT2L0_filters[ 7].fFilterThickness_um := 40.0;
+fbAT2L0_filters[ 7].sFilterMaterial     := 'C';
+fbAT2L0_filters[ 8].fFilterThickness_um := 20.0;
+fbAT2L0_filters[ 8].sFilterMaterial     := 'C';
+fbAT2L0_filters[ 9].fFilterThickness_um := 10.0;
+fbAT2L0_filters[ 9].sFilterMaterial     := 'C';
+
+fbAT2L0_filters[10].fFilterThickness_um := 10240.0;
+fbAT2L0_filters[10].sFilterMaterial     := 'Si';
+fbAT2L0_filters[11].fFilterThickness_um := 5120.0;
+fbAT2L0_filters[11].sFilterMaterial     := 'Si';
+fbAT2L0_filters[12].fFilterThickness_um := 2560.0;
+fbAT2L0_filters[12].sFilterMaterial     := 'Si';
+fbAT2L0_filters[13].fFilterThickness_um := 1280.0;
+fbAT2L0_filters[13].sFilterMaterial     := 'Si';
+fbAT2L0_filters[14].fFilterThickness_um := 640.0;
+fbAT2L0_filters[14].sFilterMaterial     := 'Si';
+fbAT2L0_filters[15].fFilterThickness_um := 320.0;
+fbAT2L0_filters[15].sFilterMaterial     := 'Si';
+fbAT2L0_filters[16].fFilterThickness_um := 160.0;
+fbAT2L0_filters[16].sFilterMaterial     := 'Si';
+fbAT2L0_filters[17].fFilterThickness_um := 80.0;
+fbAT2L0_filters[17].sFilterMaterial     := 'Si';
+fbAT2L0_filters[18].fFilterThickness_um := 40.0;
+fbAT2L0_filters[18].sFilterMaterial     := 'Si';
+fbAT2L0_filters[19].fFilterThickness_um := 20.0;
+fbAT2L0_filters[19].sFilterMaterial     := 'Si';
+
 IF bAT2L0_debug THEN
     nAT2L0_enableMode := ENUM_StageEnableMode.ALWAYS;
 ELSE
     nAT2L0_enableMode := ENUM_StageEnableMode.DURING_MOTION;
 END_IF
 
+
+(* Recalculate the overall transmission below *)
+fTransmission := 1.0;
+
 FOR iIndex := 1 TO 19 DO
     fbAT2L0_motion[iIndex](stMotionStage := fbAT2L0_axes[iIndex]^);
     fbAT2L0_axes[iIndex]^.nEnableMode := nAT2L0_enableMode;
     fbAT2L0_axes[iIndex]^.bHardwareEnable := TRUE;
     fbAT2L0_axes[iIndex]^.bPowerSelf := TRUE;
+    stFilter REF= fbAT2L0_filters[iIndex];
 
     fbAT2L0_states[iIndex](
         bEnable := TRUE,
@@ -173,7 +241,39 @@ FOR iIndex := 1 TO 19 DO
         stMotionStage := fbAT2L0_axes[iIndex]^,
         enumState := fbAT2L0_states[iIndex].enumGet,
         fbFFHWO := GVL.fbFastFaultOutput2);
+
+    IF fbAT2L0_states[iIndex].enumGet = ENUM_EpicsInOut.UNKNOWN THEN
+        stFilter.fTransmission := 0.0;
+    ELSIF fbAT2L0_states[iIndex].enumGet = ENUM_EpicsInOut.OUT OR stFilter.sFilterMaterial = '' THEN
+        stFilter.fTransmission := 1.0;
+    ELSE
+        fbAtomicMass(sName:=stFilter.sFilterMaterial, fValue=>fFilterAtomicMass);
+        fbAttenuatorElementDensity(sName:=stFilter.sFilterMaterial, fDensity=>fFilterDensity);
+
+        fAbsorptionConstant := F_CalculateAbsorptionConstant(
+            sElement:=stFilter.sFilterMaterial,
+            fEnergyEV:=GVL.fPhotonEnergy_eV, (* TODO double-check link *)
+            fDensity_gm3:=fFilterDensity,
+            fAtomicWeight:=fFilterAtomicMass,
+            bError=>bError,
+        );
+        stFilter.fTransmission := F_CalculateTransmission(
+            fAbsorptionConstant:=fAbsorptionConstant,
+            fThickness_in_m:=stFilter.fFilterThickness_um * 1.0E-6
+        );
+    END_IF
+
+    fTransmission := fTransmission * stFilter.fTransmission;
 END_FOR
+
+IF fbAT2L0_states[1].enumGet = ENUM_EpicsInOut.IN THEN
+    (* Inspection mirror blocks the beam *)
+    GVL.rCurTrans[PMPS.L_Attenuators.AT2L0].nTran := 0.0;
+    (* TODO fast fault as well *)
+ELSE
+    GVL.rCurTrans[PMPS.L_Attenuators.AT2L0].nTran := LREAL_TO_REAL(fTransmission);
+END_IF
+
 iIndex := 0;
 
 nM1CoilA := UINT_TO_INT(nM1CoilARaw);

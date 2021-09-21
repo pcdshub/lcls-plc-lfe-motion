@@ -1004,6 +1004,15 @@ External Setpoint Generation:
 			</Hides>
 		</DataType>
 		<DataType>
+			<Name GUID="{6D319B26-4590-2152-3DE7-3BA9B629CA65}" IecBaseType="true" AutoDeleteType="true">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Name>
+			<BitSize>1024</BitSize>
+			<BaseType GUID="{7E016B85-166E-4B4F-AAC4-ECA8DDD44F13}">ST_PMPS_Attenuator_IO</BaseType>
+			<ArrayInfo>
+				<LBound>1</LBound>
+				<Elements>16</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
 			<Name GUID="{875D2B22-B7EB-497E-B933-0C004593CCF3}" Namespace="MC" TcBaseType="true" HideType="true" IecDeclaration="DWORD;">PLCTONC_AXIS_REF_CTRL</Name>
 			<BitSize>32</BitSize>
 			<SubItem>
@@ -1229,6 +1238,222 @@ External Setpoint Generation:
 						<![CDATA[ For plotting voltage/current during debugging]]>
 					</Comment>
 					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM1CoilBRaw</Name>
+					<Comment>
+						<![CDATA[ ..CoilBRaw is currently linked to EL7041 'Coil Voltage A']]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM2CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM1Current: INT;]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM2CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM2L0_XTES.bDefectiveLimitSwitch</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM3CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM2Current: INT;]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM3CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM4CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM3Current: INT;]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM4CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM5CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM4Current: INT;]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM5CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM6CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM5Current: INT;]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM6CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM7CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM6Current: INT;]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM7CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM8CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM7Current: INT;]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM8CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM9CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM8Current: INT;]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM9CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM10CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM9Current: INT;]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM10CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM11CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM10Current: INT;]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM11CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM12CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM11Current: INT;]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM12CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM13CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM12Current: INT;]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM13CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM14CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM13Current: INT;]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM14CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM15CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM14Current: INT;]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM15CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM16CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM15Current: INT;]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM16CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM17CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM16Current: INT;]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM17CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM18CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM17Current: INT;]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM18CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM19CoilARaw</Name>
+					<Comment>
+						<![CDATA[nM18Current: INT;]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_AT2L0_SOLID.nM19CoilBRaw</Name>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>GVL.fPhotonEnergy_eV</Name>
+					<Comment>
+						<![CDATA[ Photon energy comes from the arbiter (see PMPS_PRE.IO Inputs.rPhotonEnergy!) ]]>
+					</Comment>
+					<Type>REAL</Type>
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[1].fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -2162,216 +2387,444 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.nM1CoilBRaw</Name>
-					<Comment>
-						<![CDATA[ ..CoilBRaw is currently linked to EL7041 'Coil Voltage A']]>
-					</Comment>
-					<Type>UINT</Type>
+					<Name>PRG_IM1L0_XTES.fbIM1L0.bZoomEndFwd</Name>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.nM2CoilARaw</Name>
-					<Comment>
-						<![CDATA[nM1Current: INT;]]>
-					</Comment>
-					<Type>UINT</Type>
+					<Name>PRG_IM1L0_XTES.fbIM1L0.bZoomEndBwd</Name>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.nM2CoilBRaw</Name>
-					<Type>UINT</Type>
+					<Name>PRG_IM1L0_XTES.fbIM1L0.bFocusEndFwd</Name>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.nM3CoilARaw</Name>
-					<Comment>
-						<![CDATA[nM2Current: INT;]]>
-					</Comment>
-					<Type>UINT</Type>
+					<Name>PRG_IM1L0_XTES.fbIM1L0.bFocusEndBwd</Name>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.nM3CoilBRaw</Name>
-					<Type>UINT</Type>
+					<Name>PRG_IM1L0_XTES.fbIM1L0.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<SubVar>
+						<Name>AxisState</Name>
+						<Comment>
+							<![CDATA[Present State Of The Axis Movement (continuous axis):
+0  = INACTIVE:		axis has no job
+1  = RUNNING:		axis is executing a motion job
+2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
+3  = PHASE_VELOCONST:	axis is moving at constant velocity
+4  = PHASE_ACCPOS:	axis is accelerating
+5  = PHASE_ACCNEG:	axis is decelerating
+Slaves only:
+11 = PREPHASE:		slave axis is in a motion pre-phase
+12 = SYNCHRONIZING:	slave axis is synchronizing
+13 = SYNCHRONOUS:	slave axis is moving synchronously
+External Setpoint Generation:
+41 = EXTSETGEN_MODE1:	external setpoint generation active
+42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>HomingState</Name>
+						<Comment>
+							<![CDATA[Axis Homing Status:
+0: idle
+1: start homing
+2: searching home switch
+3: stopping on home switch
+4: moving off home switch
+5: searching sync pulse
+6: stopping after homing
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>CoupleState</Name>
+						<Comment>
+							<![CDATA[Axis Coupling Status:
+0: axis is a single axis (not coupled)
+1: axis is a master axis
+2: axis is master and slave
+3: axis is a slave axis
+]]>
+						</Comment>
+					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.nM4CoilARaw</Name>
-					<Comment>
-						<![CDATA[nM3Current: INT;]]>
-					</Comment>
-					<Type>UINT</Type>
+					<Name>PRG_IM1L0_XTES.fbIM1L0.fbZoom.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<SubVar>
+						<Name>AxisState</Name>
+						<Comment>
+							<![CDATA[Present State Of The Axis Movement (continuous axis):
+0  = INACTIVE:		axis has no job
+1  = RUNNING:		axis is executing a motion job
+2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
+3  = PHASE_VELOCONST:	axis is moving at constant velocity
+4  = PHASE_ACCPOS:	axis is accelerating
+5  = PHASE_ACCNEG:	axis is decelerating
+Slaves only:
+11 = PREPHASE:		slave axis is in a motion pre-phase
+12 = SYNCHRONIZING:	slave axis is synchronizing
+13 = SYNCHRONOUS:	slave axis is moving synchronously
+External Setpoint Generation:
+41 = EXTSETGEN_MODE1:	external setpoint generation active
+42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>HomingState</Name>
+						<Comment>
+							<![CDATA[Axis Homing Status:
+0: idle
+1: start homing
+2: searching home switch
+3: stopping on home switch
+4: moving off home switch
+5: searching sync pulse
+6: stopping after homing
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>CoupleState</Name>
+						<Comment>
+							<![CDATA[Axis Coupling Status:
+0: axis is a single axis (not coupled)
+1: axis is a master axis
+2: axis is master and slave
+3: axis is a slave axis
+]]>
+						</Comment>
+					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.nM4CoilBRaw</Name>
-					<Type>UINT</Type>
+					<Name>PRG_IM1L0_XTES.fbIM1L0.fbFocus.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<SubVar>
+						<Name>AxisState</Name>
+						<Comment>
+							<![CDATA[Present State Of The Axis Movement (continuous axis):
+0  = INACTIVE:		axis has no job
+1  = RUNNING:		axis is executing a motion job
+2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
+3  = PHASE_VELOCONST:	axis is moving at constant velocity
+4  = PHASE_ACCPOS:	axis is accelerating
+5  = PHASE_ACCNEG:	axis is decelerating
+Slaves only:
+11 = PREPHASE:		slave axis is in a motion pre-phase
+12 = SYNCHRONIZING:	slave axis is synchronizing
+13 = SYNCHRONOUS:	slave axis is moving synchronously
+External Setpoint Generation:
+41 = EXTSETGEN_MODE1:	external setpoint generation active
+42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>HomingState</Name>
+						<Comment>
+							<![CDATA[Axis Homing Status:
+0: idle
+1: start homing
+2: searching home switch
+3: stopping on home switch
+4: moving off home switch
+5: searching sync pulse
+6: stopping after homing
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>CoupleState</Name>
+						<Comment>
+							<![CDATA[Axis Coupling Status:
+0: axis is a single axis (not coupled)
+1: axis is a master axis
+2: axis is master and slave
+3: axis is a slave axis
+]]>
+						</Comment>
+					</SubVar>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.nM5CoilARaw</Name>
-					<Comment>
-						<![CDATA[nM4Current: INT;]]>
-					</Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM5CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM6CoilARaw</Name>
-					<Comment>
-						<![CDATA[nM5Current: INT;]]>
-					</Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM6CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM7CoilARaw</Name>
-					<Comment>
-						<![CDATA[nM6Current: INT;]]>
-					</Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM7CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM8CoilARaw</Name>
-					<Comment>
-						<![CDATA[nM7Current: INT;]]>
-					</Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM8CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM9CoilARaw</Name>
-					<Comment>
-						<![CDATA[nM8Current: INT;]]>
-					</Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM9CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM10CoilARaw</Name>
-					<Comment>
-						<![CDATA[nM9Current: INT;]]>
-					</Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM10CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM11CoilARaw</Name>
-					<Comment>
-						<![CDATA[nM10Current: INT;]]>
-					</Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM11CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM12CoilARaw</Name>
-					<Comment>
-						<![CDATA[nM11Current: INT;]]>
-					</Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM12CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM13CoilARaw</Name>
-					<Comment>
-						<![CDATA[nM12Current: INT;]]>
-					</Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM13CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM14CoilARaw</Name>
-					<Comment>
-						<![CDATA[nM13Current: INT;]]>
-					</Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM14CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM15CoilARaw</Name>
-					<Comment>
-						<![CDATA[nM14Current: INT;]]>
-					</Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM15CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM16CoilARaw</Name>
-					<Comment>
-						<![CDATA[nM15Current: INT;]]>
-					</Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM16CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM17CoilARaw</Name>
-					<Comment>
-						<![CDATA[nM16Current: INT;]]>
-					</Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM17CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM18CoilARaw</Name>
-					<Comment>
-						<![CDATA[nM17Current: INT;]]>
-					</Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM18CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM19CoilARaw</Name>
-					<Comment>
-						<![CDATA[nM18Current: INT;]]>
-					</Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM19CoilBRaw</Name>
-					<Type>UINT</Type>
+					<Name>PRG_IM1L0_XTES.fbIM1L0.fbFlowSwitch.bFlowOk</Name>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>PRG_IM1L0_XTES.stEL6In</Name>
 					<Type GUID="{63C476CA-3C4F-477E-9C2E-34379B1D490C}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM2L0_XTES.bDefectiveLimitSwitch</Name>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<SubVar>
+						<Name>AxisState</Name>
+						<Comment>
+							<![CDATA[Present State Of The Axis Movement (continuous axis):
+0  = INACTIVE:		axis has no job
+1  = RUNNING:		axis is executing a motion job
+2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
+3  = PHASE_VELOCONST:	axis is moving at constant velocity
+4  = PHASE_ACCPOS:	axis is accelerating
+5  = PHASE_ACCNEG:	axis is decelerating
+Slaves only:
+11 = PREPHASE:		slave axis is in a motion pre-phase
+12 = SYNCHRONIZING:	slave axis is synchronizing
+13 = SYNCHRONOUS:	slave axis is moving synchronously
+External Setpoint Generation:
+41 = EXTSETGEN_MODE1:	external setpoint generation active
+42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>HomingState</Name>
+						<Comment>
+							<![CDATA[Axis Homing Status:
+0: idle
+1: start homing
+2: searching home switch
+3: stopping on home switch
+4: moving off home switch
+5: searching sync pulse
+6: stopping after homing
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>CoupleState</Name>
+						<Comment>
+							<![CDATA[Axis Coupling Status:
+0: axis is a single axis (not coupled)
+1: axis is a master axis
+2: axis is master and slave
+3: axis is a slave axis
+]]>
+						</Comment>
+					</SubVar>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.iVoltageINT</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbGetPMVoltage.iRaw</Name>
+					<Comment>
+						<![CDATA[ Connect this input to the terminal]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbGige.fbGetIllPercent.iRaw</Name>
+					<Comment>
+						<![CDATA[ Connect this input to the terminal]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbFlowMeter.fRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM2L0_XTES.fbIM2L0.bZoomEndFwd</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM2L0_XTES.fbIM2L0.bZoomEndBwd</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM2L0_XTES.fbIM2L0.bFocusEndFwd</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM2L0_XTES.fbIM2L0.bFocusEndBwd</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM2L0_XTES.fbIM2L0.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<SubVar>
+						<Name>AxisState</Name>
+						<Comment>
+							<![CDATA[Present State Of The Axis Movement (continuous axis):
+0  = INACTIVE:		axis has no job
+1  = RUNNING:		axis is executing a motion job
+2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
+3  = PHASE_VELOCONST:	axis is moving at constant velocity
+4  = PHASE_ACCPOS:	axis is accelerating
+5  = PHASE_ACCNEG:	axis is decelerating
+Slaves only:
+11 = PREPHASE:		slave axis is in a motion pre-phase
+12 = SYNCHRONIZING:	slave axis is synchronizing
+13 = SYNCHRONOUS:	slave axis is moving synchronously
+External Setpoint Generation:
+41 = EXTSETGEN_MODE1:	external setpoint generation active
+42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>HomingState</Name>
+						<Comment>
+							<![CDATA[Axis Homing Status:
+0: idle
+1: start homing
+2: searching home switch
+3: stopping on home switch
+4: moving off home switch
+5: searching sync pulse
+6: stopping after homing
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>CoupleState</Name>
+						<Comment>
+							<![CDATA[Axis Coupling Status:
+0: axis is a single axis (not coupled)
+1: axis is a master axis
+2: axis is master and slave
+3: axis is a slave axis
+]]>
+						</Comment>
+					</SubVar>
+				</Var>
+				<Var>
+					<Name>PRG_IM2L0_XTES.fbIM2L0.fbZoom.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<SubVar>
+						<Name>AxisState</Name>
+						<Comment>
+							<![CDATA[Present State Of The Axis Movement (continuous axis):
+0  = INACTIVE:		axis has no job
+1  = RUNNING:		axis is executing a motion job
+2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
+3  = PHASE_VELOCONST:	axis is moving at constant velocity
+4  = PHASE_ACCPOS:	axis is accelerating
+5  = PHASE_ACCNEG:	axis is decelerating
+Slaves only:
+11 = PREPHASE:		slave axis is in a motion pre-phase
+12 = SYNCHRONIZING:	slave axis is synchronizing
+13 = SYNCHRONOUS:	slave axis is moving synchronously
+External Setpoint Generation:
+41 = EXTSETGEN_MODE1:	external setpoint generation active
+42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>HomingState</Name>
+						<Comment>
+							<![CDATA[Axis Homing Status:
+0: idle
+1: start homing
+2: searching home switch
+3: stopping on home switch
+4: moving off home switch
+5: searching sync pulse
+6: stopping after homing
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>CoupleState</Name>
+						<Comment>
+							<![CDATA[Axis Coupling Status:
+0: axis is a single axis (not coupled)
+1: axis is a master axis
+2: axis is master and slave
+3: axis is a slave axis
+]]>
+						</Comment>
+					</SubVar>
+				</Var>
+				<Var>
+					<Name>PRG_IM2L0_XTES.fbIM2L0.fbFocus.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<SubVar>
+						<Name>AxisState</Name>
+						<Comment>
+							<![CDATA[Present State Of The Axis Movement (continuous axis):
+0  = INACTIVE:		axis has no job
+1  = RUNNING:		axis is executing a motion job
+2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
+3  = PHASE_VELOCONST:	axis is moving at constant velocity
+4  = PHASE_ACCPOS:	axis is accelerating
+5  = PHASE_ACCNEG:	axis is decelerating
+Slaves only:
+11 = PREPHASE:		slave axis is in a motion pre-phase
+12 = SYNCHRONIZING:	slave axis is synchronizing
+13 = SYNCHRONOUS:	slave axis is moving synchronously
+External Setpoint Generation:
+41 = EXTSETGEN_MODE1:	external setpoint generation active
+42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>HomingState</Name>
+						<Comment>
+							<![CDATA[Axis Homing Status:
+0: idle
+1: start homing
+2: searching home switch
+3: stopping on home switch
+4: moving off home switch
+5: searching sync pulse
+6: stopping after homing
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>CoupleState</Name>
+						<Comment>
+							<![CDATA[Axis Coupling Status:
+0: axis is a single axis (not coupled)
+1: axis is a master axis
+2: axis is master and slave
+3: axis is a slave axis
+]]>
+						</Comment>
+					</SubVar>
+				</Var>
+				<Var>
+					<Name>PRG_IM2L0_XTES.fbIM2L0.fbFlowSwitch.bFlowOk</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -2379,8 +2832,408 @@ External Setpoint Generation:
 					<Type GUID="{63C476CA-3C4F-477E-9C2E-34379B1D490C}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<SubVar>
+						<Name>AxisState</Name>
+						<Comment>
+							<![CDATA[Present State Of The Axis Movement (continuous axis):
+0  = INACTIVE:		axis has no job
+1  = RUNNING:		axis is executing a motion job
+2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
+3  = PHASE_VELOCONST:	axis is moving at constant velocity
+4  = PHASE_ACCPOS:	axis is accelerating
+5  = PHASE_ACCNEG:	axis is decelerating
+Slaves only:
+11 = PREPHASE:		slave axis is in a motion pre-phase
+12 = SYNCHRONIZING:	slave axis is synchronizing
+13 = SYNCHRONOUS:	slave axis is moving synchronously
+External Setpoint Generation:
+41 = EXTSETGEN_MODE1:	external setpoint generation active
+42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>HomingState</Name>
+						<Comment>
+							<![CDATA[Axis Homing Status:
+0: idle
+1: start homing
+2: searching home switch
+3: stopping on home switch
+4: moving off home switch
+5: searching sync pulse
+6: stopping after homing
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>CoupleState</Name>
+						<Comment>
+							<![CDATA[Axis Coupling Status:
+0: axis is a single axis (not coupled)
+1: axis is a master axis
+2: axis is master and slave
+3: axis is a slave axis
+]]>
+						</Comment>
+					</SubVar>
+				</Var>
+				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.iVoltageINT</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbGetPMVoltage.iRaw</Name>
+					<Comment>
+						<![CDATA[ Connect this input to the terminal]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbGige.fbGetIllPercent.iRaw</Name>
+					<Comment>
+						<![CDATA[ Connect this input to the terminal]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbFlowMeter.fRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM4L0_XTES.fbIM4L0.bZoomEndFwd</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM4L0_XTES.fbIM4L0.bZoomEndBwd</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM4L0_XTES.fbIM4L0.bFocusEndFwd</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM4L0_XTES.fbIM4L0.bFocusEndBwd</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM4L0_XTES.fbIM4L0.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<SubVar>
+						<Name>AxisState</Name>
+						<Comment>
+							<![CDATA[Present State Of The Axis Movement (continuous axis):
+0  = INACTIVE:		axis has no job
+1  = RUNNING:		axis is executing a motion job
+2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
+3  = PHASE_VELOCONST:	axis is moving at constant velocity
+4  = PHASE_ACCPOS:	axis is accelerating
+5  = PHASE_ACCNEG:	axis is decelerating
+Slaves only:
+11 = PREPHASE:		slave axis is in a motion pre-phase
+12 = SYNCHRONIZING:	slave axis is synchronizing
+13 = SYNCHRONOUS:	slave axis is moving synchronously
+External Setpoint Generation:
+41 = EXTSETGEN_MODE1:	external setpoint generation active
+42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>HomingState</Name>
+						<Comment>
+							<![CDATA[Axis Homing Status:
+0: idle
+1: start homing
+2: searching home switch
+3: stopping on home switch
+4: moving off home switch
+5: searching sync pulse
+6: stopping after homing
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>CoupleState</Name>
+						<Comment>
+							<![CDATA[Axis Coupling Status:
+0: axis is a single axis (not coupled)
+1: axis is a master axis
+2: axis is master and slave
+3: axis is a slave axis
+]]>
+						</Comment>
+					</SubVar>
+				</Var>
+				<Var>
+					<Name>PRG_IM4L0_XTES.fbIM4L0.fbZoom.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<SubVar>
+						<Name>AxisState</Name>
+						<Comment>
+							<![CDATA[Present State Of The Axis Movement (continuous axis):
+0  = INACTIVE:		axis has no job
+1  = RUNNING:		axis is executing a motion job
+2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
+3  = PHASE_VELOCONST:	axis is moving at constant velocity
+4  = PHASE_ACCPOS:	axis is accelerating
+5  = PHASE_ACCNEG:	axis is decelerating
+Slaves only:
+11 = PREPHASE:		slave axis is in a motion pre-phase
+12 = SYNCHRONIZING:	slave axis is synchronizing
+13 = SYNCHRONOUS:	slave axis is moving synchronously
+External Setpoint Generation:
+41 = EXTSETGEN_MODE1:	external setpoint generation active
+42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>HomingState</Name>
+						<Comment>
+							<![CDATA[Axis Homing Status:
+0: idle
+1: start homing
+2: searching home switch
+3: stopping on home switch
+4: moving off home switch
+5: searching sync pulse
+6: stopping after homing
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>CoupleState</Name>
+						<Comment>
+							<![CDATA[Axis Coupling Status:
+0: axis is a single axis (not coupled)
+1: axis is a master axis
+2: axis is master and slave
+3: axis is a slave axis
+]]>
+						</Comment>
+					</SubVar>
+				</Var>
+				<Var>
+					<Name>PRG_IM4L0_XTES.fbIM4L0.fbFocus.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<SubVar>
+						<Name>AxisState</Name>
+						<Comment>
+							<![CDATA[Present State Of The Axis Movement (continuous axis):
+0  = INACTIVE:		axis has no job
+1  = RUNNING:		axis is executing a motion job
+2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
+3  = PHASE_VELOCONST:	axis is moving at constant velocity
+4  = PHASE_ACCPOS:	axis is accelerating
+5  = PHASE_ACCNEG:	axis is decelerating
+Slaves only:
+11 = PREPHASE:		slave axis is in a motion pre-phase
+12 = SYNCHRONIZING:	slave axis is synchronizing
+13 = SYNCHRONOUS:	slave axis is moving synchronously
+External Setpoint Generation:
+41 = EXTSETGEN_MODE1:	external setpoint generation active
+42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>HomingState</Name>
+						<Comment>
+							<![CDATA[Axis Homing Status:
+0: idle
+1: start homing
+2: searching home switch
+3: stopping on home switch
+4: moving off home switch
+5: searching sync pulse
+6: stopping after homing
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>CoupleState</Name>
+						<Comment>
+							<![CDATA[Axis Coupling Status:
+0: axis is a single axis (not coupled)
+1: axis is a master axis
+2: axis is master and slave
+3: axis is a slave axis
+]]>
+						</Comment>
+					</SubVar>
+				</Var>
+				<Var>
+					<Name>PRG_IM4L0_XTES.fbIM4L0.fbFlowSwitch.bFlowOk</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>PRG_IM4L0_XTES.stEL6In</Name>
 					<Type GUID="{63C476CA-3C4F-477E-9C2E-34379B1D490C}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<SubVar>
+						<Name>AxisState</Name>
+						<Comment>
+							<![CDATA[Present State Of The Axis Movement (continuous axis):
+0  = INACTIVE:		axis has no job
+1  = RUNNING:		axis is executing a motion job
+2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
+3  = PHASE_VELOCONST:	axis is moving at constant velocity
+4  = PHASE_ACCPOS:	axis is accelerating
+5  = PHASE_ACCNEG:	axis is decelerating
+Slaves only:
+11 = PREPHASE:		slave axis is in a motion pre-phase
+12 = SYNCHRONIZING:	slave axis is synchronizing
+13 = SYNCHRONOUS:	slave axis is moving synchronously
+External Setpoint Generation:
+41 = EXTSETGEN_MODE1:	external setpoint generation active
+42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>HomingState</Name>
+						<Comment>
+							<![CDATA[Axis Homing Status:
+0: idle
+1: start homing
+2: searching home switch
+3: stopping on home switch
+4: moving off home switch
+5: searching sync pulse
+6: stopping after homing
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>CoupleState</Name>
+						<Comment>
+							<![CDATA[Axis Coupling Status:
+0: axis is a single axis (not coupled)
+1: axis is a master axis
+2: axis is master and slave
+3: axis is a slave axis
+]]>
+						</Comment>
+					</SubVar>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbZStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<SubVar>
+						<Name>AxisState</Name>
+						<Comment>
+							<![CDATA[Present State Of The Axis Movement (continuous axis):
+0  = INACTIVE:		axis has no job
+1  = RUNNING:		axis is executing a motion job
+2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
+3  = PHASE_VELOCONST:	axis is moving at constant velocity
+4  = PHASE_ACCPOS:	axis is accelerating
+5  = PHASE_ACCNEG:	axis is decelerating
+Slaves only:
+11 = PREPHASE:		slave axis is in a motion pre-phase
+12 = SYNCHRONIZING:	slave axis is synchronizing
+13 = SYNCHRONOUS:	slave axis is moving synchronously
+External Setpoint Generation:
+41 = EXTSETGEN_MODE1:	external setpoint generation active
+42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>HomingState</Name>
+						<Comment>
+							<![CDATA[Axis Homing Status:
+0: idle
+1: start homing
+2: searching home switch
+3: stopping on home switch
+4: moving off home switch
+5: searching sync pulse
+6: stopping after homing
+]]>
+						</Comment>
+					</SubVar>
+					<SubVar>
+						<Name>CoupleState</Name>
+						<Comment>
+							<![CDATA[Axis Coupling Status:
+0: axis is a single axis (not coupled)
+1: axis is a master axis
+2: axis is master and slave
+3: axis is a slave axis
+]]>
+						</Comment>
+					</SubVar>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.iRaw</Name>
+					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_SL1L0_POWER.fbSL1L0.fbTopBlade.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -3465,48 +4318,8 @@ External Setpoint Generation:
 					<Type>BIT</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_01.i_xInsertedLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_01.i_xRetractedLS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_02.i_xInsertedLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_02.i_xRetractedLS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_03.i_xInsertedLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_03.i_xRetractedLS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_04.i_xInsertedLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_04.i_xRetractedLS</Name>
-					<Type>BOOL</Type>
+					<Name>GVL.rReqTrans</Name>
+					<Type GUID="{6D319B26-4590-2152-3DE7-3BA9B629CA65}">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1.Axis.NcToPlc</Name>
@@ -8801,841 +9614,48 @@ External Setpoint Generation:
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM1L0_XTES.fbIM1L0.bZoomEndFwd</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L0_XTES.fbIM1L0.bZoomEndBwd</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L0_XTES.fbIM1L0.bFocusEndFwd</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L0_XTES.fbIM1L0.bFocusEndBwd</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L0_XTES.fbIM1L0.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
-					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-					<SubVar>
-						<Name>AxisState</Name>
-						<Comment>
-							<![CDATA[Present State Of The Axis Movement (continuous axis):
-0  = INACTIVE:		axis has no job
-1  = RUNNING:		axis is executing a motion job
-2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
-3  = PHASE_VELOCONST:	axis is moving at constant velocity
-4  = PHASE_ACCPOS:	axis is accelerating
-5  = PHASE_ACCNEG:	axis is decelerating
-Slaves only:
-11 = PREPHASE:		slave axis is in a motion pre-phase
-12 = SYNCHRONIZING:	slave axis is synchronizing
-13 = SYNCHRONOUS:	slave axis is moving synchronously
-External Setpoint Generation:
-41 = EXTSETGEN_MODE1:	external setpoint generation active
-42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>HomingState</Name>
-						<Comment>
-							<![CDATA[Axis Homing Status:
-0: idle
-1: start homing
-2: searching home switch
-3: stopping on home switch
-4: moving off home switch
-5: searching sync pulse
-6: stopping after homing
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>CoupleState</Name>
-						<Comment>
-							<![CDATA[Axis Coupling Status:
-0: axis is a single axis (not coupled)
-1: axis is a master axis
-2: axis is master and slave
-3: axis is a slave axis
-]]>
-						</Comment>
-					</SubVar>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L0_XTES.fbIM1L0.fbZoom.fbDriveVirtual.MasterAxis.NcToPlc</Name>
-					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-					<SubVar>
-						<Name>AxisState</Name>
-						<Comment>
-							<![CDATA[Present State Of The Axis Movement (continuous axis):
-0  = INACTIVE:		axis has no job
-1  = RUNNING:		axis is executing a motion job
-2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
-3  = PHASE_VELOCONST:	axis is moving at constant velocity
-4  = PHASE_ACCPOS:	axis is accelerating
-5  = PHASE_ACCNEG:	axis is decelerating
-Slaves only:
-11 = PREPHASE:		slave axis is in a motion pre-phase
-12 = SYNCHRONIZING:	slave axis is synchronizing
-13 = SYNCHRONOUS:	slave axis is moving synchronously
-External Setpoint Generation:
-41 = EXTSETGEN_MODE1:	external setpoint generation active
-42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>HomingState</Name>
-						<Comment>
-							<![CDATA[Axis Homing Status:
-0: idle
-1: start homing
-2: searching home switch
-3: stopping on home switch
-4: moving off home switch
-5: searching sync pulse
-6: stopping after homing
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>CoupleState</Name>
-						<Comment>
-							<![CDATA[Axis Coupling Status:
-0: axis is a single axis (not coupled)
-1: axis is a master axis
-2: axis is master and slave
-3: axis is a slave axis
-]]>
-						</Comment>
-					</SubVar>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L0_XTES.fbIM1L0.fbFocus.fbDriveVirtual.MasterAxis.NcToPlc</Name>
-					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-					<SubVar>
-						<Name>AxisState</Name>
-						<Comment>
-							<![CDATA[Present State Of The Axis Movement (continuous axis):
-0  = INACTIVE:		axis has no job
-1  = RUNNING:		axis is executing a motion job
-2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
-3  = PHASE_VELOCONST:	axis is moving at constant velocity
-4  = PHASE_ACCPOS:	axis is accelerating
-5  = PHASE_ACCNEG:	axis is decelerating
-Slaves only:
-11 = PREPHASE:		slave axis is in a motion pre-phase
-12 = SYNCHRONIZING:	slave axis is synchronizing
-13 = SYNCHRONOUS:	slave axis is moving synchronously
-External Setpoint Generation:
-41 = EXTSETGEN_MODE1:	external setpoint generation active
-42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>HomingState</Name>
-						<Comment>
-							<![CDATA[Axis Homing Status:
-0: idle
-1: start homing
-2: searching home switch
-3: stopping on home switch
-4: moving off home switch
-5: searching sync pulse
-6: stopping after homing
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>CoupleState</Name>
-						<Comment>
-							<![CDATA[Axis Coupling Status:
-0: axis is a single axis (not coupled)
-1: axis is a master axis
-2: axis is master and slave
-3: axis is a slave axis
-]]>
-						</Comment>
-					</SubVar>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L0_XTES.fbIM1L0.fbFlowSwitch.bFlowOk</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L1_PPM.fbIM1L1.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
-					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-					<SubVar>
-						<Name>AxisState</Name>
-						<Comment>
-							<![CDATA[Present State Of The Axis Movement (continuous axis):
-0  = INACTIVE:		axis has no job
-1  = RUNNING:		axis is executing a motion job
-2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
-3  = PHASE_VELOCONST:	axis is moving at constant velocity
-4  = PHASE_ACCPOS:	axis is accelerating
-5  = PHASE_ACCNEG:	axis is decelerating
-Slaves only:
-11 = PREPHASE:		slave axis is in a motion pre-phase
-12 = SYNCHRONIZING:	slave axis is synchronizing
-13 = SYNCHRONOUS:	slave axis is moving synchronously
-External Setpoint Generation:
-41 = EXTSETGEN_MODE1:	external setpoint generation active
-42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>HomingState</Name>
-						<Comment>
-							<![CDATA[Axis Homing Status:
-0: idle
-1: start homing
-2: searching home switch
-3: stopping on home switch
-4: moving off home switch
-5: searching sync pulse
-6: stopping after homing
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>CoupleState</Name>
-						<Comment>
-							<![CDATA[Axis Coupling Status:
-0: axis is a single axis (not coupled)
-1: axis is a master axis
-2: axis is master and slave
-3: axis is a slave axis
-]]>
-						</Comment>
-					</SubVar>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.iVoltageINT</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbThermoCouple.iRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbGetPMVoltage.iRaw</Name>
+					<Name>RTDSL0.RTDSL0_MPA_01.i_xInsertedLS</Name>
 					<Comment>
-						<![CDATA[ Connect this input to the terminal]]>
+						<![CDATA[IO]]>
 					</Comment>
-					<Type>INT</Type>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM1L1_PPM.fbIM1L1.fbGige.fbGetIllPercent.iRaw</Name>
+					<Name>RTDSL0.RTDSL0_MPA_01.i_xRetractedLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_02.i_xInsertedLS</Name>
 					<Comment>
-						<![CDATA[ Connect this input to the terminal]]>
+						<![CDATA[IO]]>
 					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L1_PPM.fbIM1L1.fbFlowMeter.fRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bError</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bUnderrange</Name>
+					<Name>RTDSL0.RTDSL0_MPA_02.i_xRetractedLS</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L1_PPM.fbIM1L1.fbYagThermoCouple.iRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM2L0_XTES.fbIM2L0.bZoomEndFwd</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM2L0_XTES.fbIM2L0.bZoomEndBwd</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM2L0_XTES.fbIM2L0.bFocusEndFwd</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM2L0_XTES.fbIM2L0.bFocusEndBwd</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM2L0_XTES.fbIM2L0.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
-					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-					<SubVar>
-						<Name>AxisState</Name>
-						<Comment>
-							<![CDATA[Present State Of The Axis Movement (continuous axis):
-0  = INACTIVE:		axis has no job
-1  = RUNNING:		axis is executing a motion job
-2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
-3  = PHASE_VELOCONST:	axis is moving at constant velocity
-4  = PHASE_ACCPOS:	axis is accelerating
-5  = PHASE_ACCNEG:	axis is decelerating
-Slaves only:
-11 = PREPHASE:		slave axis is in a motion pre-phase
-12 = SYNCHRONIZING:	slave axis is synchronizing
-13 = SYNCHRONOUS:	slave axis is moving synchronously
-External Setpoint Generation:
-41 = EXTSETGEN_MODE1:	external setpoint generation active
-42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>HomingState</Name>
-						<Comment>
-							<![CDATA[Axis Homing Status:
-0: idle
-1: start homing
-2: searching home switch
-3: stopping on home switch
-4: moving off home switch
-5: searching sync pulse
-6: stopping after homing
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>CoupleState</Name>
-						<Comment>
-							<![CDATA[Axis Coupling Status:
-0: axis is a single axis (not coupled)
-1: axis is a master axis
-2: axis is master and slave
-3: axis is a slave axis
-]]>
-						</Comment>
-					</SubVar>
-				</Var>
-				<Var>
-					<Name>PRG_IM2L0_XTES.fbIM2L0.fbZoom.fbDriveVirtual.MasterAxis.NcToPlc</Name>
-					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-					<SubVar>
-						<Name>AxisState</Name>
-						<Comment>
-							<![CDATA[Present State Of The Axis Movement (continuous axis):
-0  = INACTIVE:		axis has no job
-1  = RUNNING:		axis is executing a motion job
-2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
-3  = PHASE_VELOCONST:	axis is moving at constant velocity
-4  = PHASE_ACCPOS:	axis is accelerating
-5  = PHASE_ACCNEG:	axis is decelerating
-Slaves only:
-11 = PREPHASE:		slave axis is in a motion pre-phase
-12 = SYNCHRONIZING:	slave axis is synchronizing
-13 = SYNCHRONOUS:	slave axis is moving synchronously
-External Setpoint Generation:
-41 = EXTSETGEN_MODE1:	external setpoint generation active
-42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>HomingState</Name>
-						<Comment>
-							<![CDATA[Axis Homing Status:
-0: idle
-1: start homing
-2: searching home switch
-3: stopping on home switch
-4: moving off home switch
-5: searching sync pulse
-6: stopping after homing
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>CoupleState</Name>
-						<Comment>
-							<![CDATA[Axis Coupling Status:
-0: axis is a single axis (not coupled)
-1: axis is a master axis
-2: axis is master and slave
-3: axis is a slave axis
-]]>
-						</Comment>
-					</SubVar>
-				</Var>
-				<Var>
-					<Name>PRG_IM2L0_XTES.fbIM2L0.fbFocus.fbDriveVirtual.MasterAxis.NcToPlc</Name>
-					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-					<SubVar>
-						<Name>AxisState</Name>
-						<Comment>
-							<![CDATA[Present State Of The Axis Movement (continuous axis):
-0  = INACTIVE:		axis has no job
-1  = RUNNING:		axis is executing a motion job
-2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
-3  = PHASE_VELOCONST:	axis is moving at constant velocity
-4  = PHASE_ACCPOS:	axis is accelerating
-5  = PHASE_ACCNEG:	axis is decelerating
-Slaves only:
-11 = PREPHASE:		slave axis is in a motion pre-phase
-12 = SYNCHRONIZING:	slave axis is synchronizing
-13 = SYNCHRONOUS:	slave axis is moving synchronously
-External Setpoint Generation:
-41 = EXTSETGEN_MODE1:	external setpoint generation active
-42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>HomingState</Name>
-						<Comment>
-							<![CDATA[Axis Homing Status:
-0: idle
-1: start homing
-2: searching home switch
-3: stopping on home switch
-4: moving off home switch
-5: searching sync pulse
-6: stopping after homing
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>CoupleState</Name>
-						<Comment>
-							<![CDATA[Axis Coupling Status:
-0: axis is a single axis (not coupled)
-1: axis is a master axis
-2: axis is master and slave
-3: axis is a slave axis
-]]>
-						</Comment>
-					</SubVar>
-				</Var>
-				<Var>
-					<Name>PRG_IM2L0_XTES.fbIM2L0.fbFlowSwitch.bFlowOk</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM3L0_PPM.fbIM3L0.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
-					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-					<SubVar>
-						<Name>AxisState</Name>
-						<Comment>
-							<![CDATA[Present State Of The Axis Movement (continuous axis):
-0  = INACTIVE:		axis has no job
-1  = RUNNING:		axis is executing a motion job
-2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
-3  = PHASE_VELOCONST:	axis is moving at constant velocity
-4  = PHASE_ACCPOS:	axis is accelerating
-5  = PHASE_ACCNEG:	axis is decelerating
-Slaves only:
-11 = PREPHASE:		slave axis is in a motion pre-phase
-12 = SYNCHRONIZING:	slave axis is synchronizing
-13 = SYNCHRONOUS:	slave axis is moving synchronously
-External Setpoint Generation:
-41 = EXTSETGEN_MODE1:	external setpoint generation active
-42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>HomingState</Name>
-						<Comment>
-							<![CDATA[Axis Homing Status:
-0: idle
-1: start homing
-2: searching home switch
-3: stopping on home switch
-4: moving off home switch
-5: searching sync pulse
-6: stopping after homing
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>CoupleState</Name>
-						<Comment>
-							<![CDATA[Axis Coupling Status:
-0: axis is a single axis (not coupled)
-1: axis is a master axis
-2: axis is master and slave
-3: axis is a slave axis
-]]>
-						</Comment>
-					</SubVar>
-				</Var>
-				<Var>
-					<Name>PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.iVoltageINT</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbThermoCouple.iRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbGetPMVoltage.iRaw</Name>
+					<Name>RTDSL0.RTDSL0_MPA_03.i_xInsertedLS</Name>
 					<Comment>
-						<![CDATA[ Connect this input to the terminal]]>
+						<![CDATA[IO]]>
 					</Comment>
-					<Type>INT</Type>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM3L0_PPM.fbIM3L0.fbGige.fbGetIllPercent.iRaw</Name>
+					<Name>RTDSL0.RTDSL0_MPA_03.i_xRetractedLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_04.i_xInsertedLS</Name>
 					<Comment>
-						<![CDATA[ Connect this input to the terminal]]>
+						<![CDATA[IO]]>
 					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM3L0_PPM.fbIM3L0.fbFlowMeter.fRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.bError</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.bUnderrange</Name>
+					<Name>RTDSL0.RTDSL0_MPA_04.i_xRetractedLS</Name>
 					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM3L0_PPM.fbIM3L0.fbYagThermoCouple.iRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM4L0_XTES.fbIM4L0.bZoomEndFwd</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM4L0_XTES.fbIM4L0.bZoomEndBwd</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM4L0_XTES.fbIM4L0.bFocusEndFwd</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM4L0_XTES.fbIM4L0.bFocusEndBwd</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM4L0_XTES.fbIM4L0.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
-					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-					<SubVar>
-						<Name>AxisState</Name>
-						<Comment>
-							<![CDATA[Present State Of The Axis Movement (continuous axis):
-0  = INACTIVE:		axis has no job
-1  = RUNNING:		axis is executing a motion job
-2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
-3  = PHASE_VELOCONST:	axis is moving at constant velocity
-4  = PHASE_ACCPOS:	axis is accelerating
-5  = PHASE_ACCNEG:	axis is decelerating
-Slaves only:
-11 = PREPHASE:		slave axis is in a motion pre-phase
-12 = SYNCHRONIZING:	slave axis is synchronizing
-13 = SYNCHRONOUS:	slave axis is moving synchronously
-External Setpoint Generation:
-41 = EXTSETGEN_MODE1:	external setpoint generation active
-42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>HomingState</Name>
-						<Comment>
-							<![CDATA[Axis Homing Status:
-0: idle
-1: start homing
-2: searching home switch
-3: stopping on home switch
-4: moving off home switch
-5: searching sync pulse
-6: stopping after homing
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>CoupleState</Name>
-						<Comment>
-							<![CDATA[Axis Coupling Status:
-0: axis is a single axis (not coupled)
-1: axis is a master axis
-2: axis is master and slave
-3: axis is a slave axis
-]]>
-						</Comment>
-					</SubVar>
-				</Var>
-				<Var>
-					<Name>PRG_IM4L0_XTES.fbIM4L0.fbZoom.fbDriveVirtual.MasterAxis.NcToPlc</Name>
-					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-					<SubVar>
-						<Name>AxisState</Name>
-						<Comment>
-							<![CDATA[Present State Of The Axis Movement (continuous axis):
-0  = INACTIVE:		axis has no job
-1  = RUNNING:		axis is executing a motion job
-2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
-3  = PHASE_VELOCONST:	axis is moving at constant velocity
-4  = PHASE_ACCPOS:	axis is accelerating
-5  = PHASE_ACCNEG:	axis is decelerating
-Slaves only:
-11 = PREPHASE:		slave axis is in a motion pre-phase
-12 = SYNCHRONIZING:	slave axis is synchronizing
-13 = SYNCHRONOUS:	slave axis is moving synchronously
-External Setpoint Generation:
-41 = EXTSETGEN_MODE1:	external setpoint generation active
-42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>HomingState</Name>
-						<Comment>
-							<![CDATA[Axis Homing Status:
-0: idle
-1: start homing
-2: searching home switch
-3: stopping on home switch
-4: moving off home switch
-5: searching sync pulse
-6: stopping after homing
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>CoupleState</Name>
-						<Comment>
-							<![CDATA[Axis Coupling Status:
-0: axis is a single axis (not coupled)
-1: axis is a master axis
-2: axis is master and slave
-3: axis is a slave axis
-]]>
-						</Comment>
-					</SubVar>
-				</Var>
-				<Var>
-					<Name>PRG_IM4L0_XTES.fbIM4L0.fbFocus.fbDriveVirtual.MasterAxis.NcToPlc</Name>
-					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-					<SubVar>
-						<Name>AxisState</Name>
-						<Comment>
-							<![CDATA[Present State Of The Axis Movement (continuous axis):
-0  = INACTIVE:		axis has no job
-1  = RUNNING:		axis is executing a motion job
-2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
-3  = PHASE_VELOCONST:	axis is moving at constant velocity
-4  = PHASE_ACCPOS:	axis is accelerating
-5  = PHASE_ACCNEG:	axis is decelerating
-Slaves only:
-11 = PREPHASE:		slave axis is in a motion pre-phase
-12 = SYNCHRONIZING:	slave axis is synchronizing
-13 = SYNCHRONOUS:	slave axis is moving synchronously
-External Setpoint Generation:
-41 = EXTSETGEN_MODE1:	external setpoint generation active
-42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>HomingState</Name>
-						<Comment>
-							<![CDATA[Axis Homing Status:
-0: idle
-1: start homing
-2: searching home switch
-3: stopping on home switch
-4: moving off home switch
-5: searching sync pulse
-6: stopping after homing
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>CoupleState</Name>
-						<Comment>
-							<![CDATA[Axis Coupling Status:
-0: axis is a single axis (not coupled)
-1: axis is a master axis
-2: axis is master and slave
-3: axis is a slave axis
-]]>
-						</Comment>
-					</SubVar>
-				</Var>
-				<Var>
-					<Name>PRG_IM4L0_XTES.fbIM4L0.fbFlowSwitch.bFlowOk</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_PF1L0_WFS.fbPF1L0.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
-					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-					<SubVar>
-						<Name>AxisState</Name>
-						<Comment>
-							<![CDATA[Present State Of The Axis Movement (continuous axis):
-0  = INACTIVE:		axis has no job
-1  = RUNNING:		axis is executing a motion job
-2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
-3  = PHASE_VELOCONST:	axis is moving at constant velocity
-4  = PHASE_ACCPOS:	axis is accelerating
-5  = PHASE_ACCNEG:	axis is decelerating
-Slaves only:
-11 = PREPHASE:		slave axis is in a motion pre-phase
-12 = SYNCHRONIZING:	slave axis is synchronizing
-13 = SYNCHRONOUS:	slave axis is moving synchronously
-External Setpoint Generation:
-41 = EXTSETGEN_MODE1:	external setpoint generation active
-42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>HomingState</Name>
-						<Comment>
-							<![CDATA[Axis Homing Status:
-0: idle
-1: start homing
-2: searching home switch
-3: stopping on home switch
-4: moving off home switch
-5: searching sync pulse
-6: stopping after homing
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>CoupleState</Name>
-						<Comment>
-							<![CDATA[Axis Coupling Status:
-0: axis is a single axis (not coupled)
-1: axis is a master axis
-2: axis is master and slave
-3: axis is a slave axis
-]]>
-						</Comment>
-					</SubVar>
-				</Var>
-				<Var>
-					<Name>PRG_PF1L0_WFS.fbPF1L0.fbZStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
-					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-					<SubVar>
-						<Name>AxisState</Name>
-						<Comment>
-							<![CDATA[Present State Of The Axis Movement (continuous axis):
-0  = INACTIVE:		axis has no job
-1  = RUNNING:		axis is executing a motion job
-2  = OVERRIDE_ZERO:	axis is executing a job but override is zero
-3  = PHASE_VELOCONST:	axis is moving at constant velocity
-4  = PHASE_ACCPOS:	axis is accelerating
-5  = PHASE_ACCNEG:	axis is decelerating
-Slaves only:
-11 = PREPHASE:		slave axis is in a motion pre-phase
-12 = SYNCHRONIZING:	slave axis is synchronizing
-13 = SYNCHRONOUS:	slave axis is moving synchronously
-External Setpoint Generation:
-41 = EXTSETGEN_MODE1:	external setpoint generation active
-42 = EXTSETGEN_MODE2:	internal and external setpoint gen. active
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>HomingState</Name>
-						<Comment>
-							<![CDATA[Axis Homing Status:
-0: idle
-1: start homing
-2: searching home switch
-3: stopping on home switch
-4: moving off home switch
-5: searching sync pulse
-6: stopping after homing
-]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>CoupleState</Name>
-						<Comment>
-							<![CDATA[Axis Coupling Status:
-0: axis is a single axis (not coupled)
-1: axis is a master axis
-2: axis is master and slave
-3: axis is a slave axis
-]]>
-						</Comment>
-					</SubVar>
-				</Var>
-				<Var>
-					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.iRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.iRaw</Name>
-					<Type>INT</Type>
 				</Var>
 			</Vars>
 			<Vars VarGrpType="2">
@@ -9717,16 +9737,122 @@ External Setpoint Generation:
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
+					<Name>PRG_IM1L0_XTES.fbIM1L0.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L0_XTES.fbIM1L0.fbZoom.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L0_XTES.fbIM1L0.fbFocus.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L0_XTES.fbIM1L0.fbOpal.bOpalPower</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L0_XTES.fbIM1L0.fbLED.bLEDPower</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>PRG_IM1L0_XTES.stEL6Out</Name>
 					<Type GUID="{E979BFBF-B5B9-4F4F-BDAF-999835F39B9D}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbGige.iIlluminatorINT</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbGige.bGigePower</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM1L1_PPM.fbIM1L1.fbGige.fbSetIllPercent.iRaw</Name>
+					<Comment>
+						<![CDATA[ Connect this output to the terminal]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM2L0_XTES.fbIM2L0.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM2L0_XTES.fbIM2L0.fbZoom.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM2L0_XTES.fbIM2L0.fbFocus.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM2L0_XTES.fbIM2L0.fbOpal.bOpalPower</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM2L0_XTES.fbIM2L0.fbLED.bLEDPower</Name>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>PRG_IM2L0_XTES.stEL6Out</Name>
 					<Type GUID="{E979BFBF-B5B9-4F4F-BDAF-999835F39B9D}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbGige.iIlluminatorINT</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbGige.bGigePower</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM3L0_PPM.fbIM3L0.fbGige.fbSetIllPercent.iRaw</Name>
+					<Comment>
+						<![CDATA[ Connect this output to the terminal]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM4L0_XTES.fbIM4L0.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM4L0_XTES.fbIM4L0.fbZoom.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM4L0_XTES.fbIM4L0.fbFocus.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM4L0_XTES.fbIM4L0.fbOpal.bOpalPower</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM4L0_XTES.fbIM4L0.fbLED.bLEDPower</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>PRG_IM4L0_XTES.stEL6Out</Name>
 					<Type GUID="{E979BFBF-B5B9-4F4F-BDAF-999835F39B9D}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_PF1L0_WFS.fbPF1L0.fbZStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
 					<Name>PRG_SL1L0_POWER.fbSL1L0.fbTopBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -9909,36 +10035,16 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_01.q_xInsert_DO</Name>
+					<Name>GVL.fbFastFaultOutput1.q_xFastFaultOut</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_01.q_xRetract_DO</Name>
+					<Name>GVL.fbFastFaultOutput2.q_xFastFaultOut</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_02.q_xInsert_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_02.q_xRetract_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_03.q_xInsert_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_03.q_xRetract_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_04.q_xInsert_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_04.q_xRetract_DO</Name>
-					<Type>BOOL</Type>
+					<Name>GVL.rCurTrans</Name>
+					<Type GUID="{6D319B26-4590-2152-3DE7-3BA9B629CA65}">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1.Axis.PlcToNc</Name>
@@ -10535,117 +10641,35 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM1L0_XTES.fbIM1L0.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L0_XTES.fbIM1L0.fbZoom.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L0_XTES.fbIM1L0.fbFocus.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L0_XTES.fbIM1L0.fbOpal.bOpalPower</Name>
+					<Name>RTDSL0.RTDSL0_MPA_01.q_xInsert_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM1L0_XTES.fbIM1L0.fbLED.bLEDPower</Name>
+					<Name>RTDSL0.RTDSL0_MPA_01.q_xRetract_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM1L1_PPM.fbIM1L1.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L1_PPM.fbIM1L1.fbGige.iIlluminatorINT</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM1L1_PPM.fbIM1L1.fbGige.bGigePower</Name>
+					<Name>RTDSL0.RTDSL0_MPA_02.q_xInsert_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM1L1_PPM.fbIM1L1.fbGige.fbSetIllPercent.iRaw</Name>
-					<Comment>
-						<![CDATA[ Connect this output to the terminal]]>
-					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM2L0_XTES.fbIM2L0.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM2L0_XTES.fbIM2L0.fbZoom.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM2L0_XTES.fbIM2L0.fbFocus.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM2L0_XTES.fbIM2L0.fbOpal.bOpalPower</Name>
+					<Name>RTDSL0.RTDSL0_MPA_02.q_xRetract_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM2L0_XTES.fbIM2L0.fbLED.bLEDPower</Name>
+					<Name>RTDSL0.RTDSL0_MPA_03.q_xInsert_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM3L0_PPM.fbIM3L0.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM3L0_PPM.fbIM3L0.fbGige.iIlluminatorINT</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM3L0_PPM.fbIM3L0.fbGige.bGigePower</Name>
+					<Name>RTDSL0.RTDSL0_MPA_03.q_xRetract_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM3L0_PPM.fbIM3L0.fbGige.fbSetIllPercent.iRaw</Name>
-					<Comment>
-						<![CDATA[ Connect this output to the terminal]]>
-					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM4L0_XTES.fbIM4L0.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM4L0_XTES.fbIM4L0.fbZoom.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM4L0_XTES.fbIM4L0.fbFocus.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>PRG_IM4L0_XTES.fbIM4L0.fbOpal.bOpalPower</Name>
+					<Name>RTDSL0.RTDSL0_MPA_04.q_xInsert_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM4L0_XTES.fbIM4L0.fbLED.bLEDPower</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_PF1L0_WFS.fbPF1L0.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>PRG_PF1L0_WFS.fbPF1L0.fbZStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>GVL.fbFastFaultOutput1.q_xFastFaultOut</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL.fbFastFaultOutput2.q_xFastFaultOut</Name>
+					<Name>RTDSL0.RTDSL0_MPA_04.q_xRetract_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
@@ -11225,9 +11249,12 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Outputs^GVL.fbFastFaultOutput2.q_xFastFaultOut" VarB="Channel 2^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PMPS_PRE">
+				<Link VarA="PlcTask Inputs^GVL.fPhotonEnergy_eV" VarB="IO Inputs^rPhotonEnergy"/>
+				<Link VarA="PlcTask Inputs^GVL.rReqTrans" VarB="IO Inputs^SattArrayReq"/>
 				<Link VarA="PlcTask Inputs^PRG_3_PMPS_POST.fbArbiterIO.i_stCurrentBP" VarB="IO Inputs^CurrentBP" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_3_PMPS_POST.fbArbiterIO.xTxPDO_state" VarB="SYNC Inputs^TxPDO state" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_3_PMPS_POST.fbArbiterIO.xTxPDO_toggle" VarB="SYNC Inputs^TxPDO toggle" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL.rCurTrans" VarB="IO Outputs^SattArrayStatus"/>
 				<Link VarA="PlcTask Outputs^PRG_3_PMPS_POST.fbArbiterIO.q_stRequestedBP" VarB="IO Outputs^RequestedBP" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^Axis 1">

@@ -21,6 +21,9 @@
     <CompilerDefines>L</CompilerDefines>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DUTs\DUT_SATT_Filter.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DUTs\ST_MPA.TcDUT">
       <SubType>Code</SubType>
     </Compile>
@@ -39,6 +42,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="PlcTask.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\FB_AttenuatorElementDensity.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PRG_3_PMPS_POST.TcPOU">
@@ -137,6 +143,10 @@
       <DefaultResolution>lcls-twincat-motion, * (SLAC)</DefaultResolution>
       <Namespace>lcls_twincat_motion</Namespace>
     </PlaceholderReference>
+    <PlaceholderReference Include="lcls-twincat-physics">
+      <DefaultResolution>lcls-twincat-physics, * (SLAC)</DefaultResolution>
+      <Namespace>lcls_twincat_physics</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="lcls2-cc-lib">
       <DefaultResolution>lcls2-cc-lib, * (SLAC)</DefaultResolution>
       <Namespace>lcls2_cc_lib</Namespace>
@@ -173,11 +183,14 @@
     <PlaceholderResolution Include="lcls-twincat-motion">
       <Resolution>lcls-twincat-motion, 1.5.1 (SLAC)</Resolution>
     </PlaceholderResolution>
+    <PlaceholderResolution Include="lcls-twincat-physics">
+      <Resolution>lcls-twincat-physics, * (SLAC)</Resolution>
+    </PlaceholderResolution>
     <PlaceholderResolution Include="lcls2-cc-lib">
       <Resolution>lcls2-cc-lib, 1.1.2 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="PMPS">
-      <Resolution>PMPS, 2.0.0 (SLAC - LCLS)</Resolution>
+      <Resolution>PMPS, 2.1.0 (SLAC - LCLS)</Resolution>
     </PlaceholderResolution>
   </ItemGroup>
   <ItemGroup>
