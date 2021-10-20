@@ -14,6 +14,7 @@ VAR_INPUT
     '}
     i_xReset: BOOL;
     sName: STRING;
+    bEnableFF: BOOL := TRUE;
 END_VAR
 VAR_OUTPUT
     {attribute 'pytmc' := '
@@ -156,10 +157,12 @@ ELSIF NOT q_stAct.i_bOutLS AND tRetracttimeout.Q THEN
 END_IF
 
 (*FAST FAULT*)
-fbFF(i_DevName := sName,
-    i_xOK := xMPS_OK,
-    i_xReset := i_xReset,
-    io_fbFFHWO := io_fbFFHWO);
+IF bEnableFF THEN
+    fbFF(i_DevName := sName,
+        i_xOK := xMPS_OK,
+        i_xReset := i_xReset,
+        io_fbFFHWO := io_fbFFHWO);
+END_IF
 
 (*Soft IO Mapping*)
 ACT_IO();]]></ST>
