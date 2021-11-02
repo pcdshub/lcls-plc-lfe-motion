@@ -14005,11 +14005,12 @@
 </tr>
 <tr class="row-odd"><td><p>$(PREFIX):PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -14352,6 +14353,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -14376,6 +14378,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -33099,65 +33102,6 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX)SafeBeamCnst:Cohort_RBV</p></td>
-<td><p>longin</p></td>
-<td><p>Cohort inc on each arb cycle</p></td>
-<td><div class="line-block">
-<div class="line">archive: 1s monitor</div>
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-even"><td><p>$(PREFIX)SafeBeamCnst:PhotonEnergyRanges_RBV</p></td>
-<td><p>longin</p></td>
-<td><p>Safe beam constant</p></td>
-<td><div class="line-block">
-<div class="line">archive: 1s monitor</div>
-<div class="line">field: EGU eV</div>
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-odd"><td><p>$(PREFIX)SafeBeamCnst:Rate_RBV</p></td>
-<td><p>longin</p></td>
-<td><p>Safe beam constant</p></td>
-<td><div class="line-block">
-<div class="line">archive: 1s monitor</div>
-<div class="line">field: EGU Hz</div>
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-even"><td><p>$(PREFIX)SafeBeamCnst:Transmission_RBV</p></td>
-<td><p>ai</p></td>
-<td><p>Safe beam constant</p></td>
-<td><div class="line-block">
-<div class="line">archive: 1s monitor</div>
-<div class="line">field: HOPR 1</div>
-<div class="line">field: LOPR 0</div>
-<div class="line">field: PREC 2</div>
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-odd"><td><p>$(PREFIX)SafeBeamCnst:Valid_RBV</p></td>
-<td><p>bi</p></td>
-<td><p>Safe beam constant</p></td>
-<td><div class="line-block">
-<div class="line">archive: 1s monitor</div>
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-even"><td><p>$(PREFIX)SafeBeamCnst:Veto_RBV</p></td>
-<td><p>waveform</p></td>
-<td><p>Safe beam constant</p></td>
-<td><div class="line-block">
-<div class="line">archive: 1s monitor</div>
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
 <tr class="row-odd"><td><p>$(PREFIX)SuccessfulPreemptions_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>PMPS_GVL.SuccessfulPreemption</p></td>
@@ -33286,11 +33230,12 @@
 </tr>
 <tr class="row-even"><td><p>AT2L0:XTES:MMS:01:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -33633,6 +33578,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -33657,6 +33603,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -35175,11 +35122,12 @@
 </tr>
 <tr class="row-odd"><td><p>AT2L0:XTES:MMS:02:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -35522,6 +35470,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -35546,6 +35495,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -37064,11 +37014,12 @@
 </tr>
 <tr class="row-even"><td><p>AT2L0:XTES:MMS:03:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -37411,6 +37362,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -37435,6 +37387,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -38953,11 +38906,12 @@
 </tr>
 <tr class="row-odd"><td><p>AT2L0:XTES:MMS:04:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -39300,6 +39254,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -39324,6 +39279,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -40842,11 +40798,12 @@
 </tr>
 <tr class="row-even"><td><p>AT2L0:XTES:MMS:05:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -41189,6 +41146,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -41213,6 +41171,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -42731,11 +42690,12 @@
 </tr>
 <tr class="row-odd"><td><p>AT2L0:XTES:MMS:06:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -43078,6 +43038,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -43102,6 +43063,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -44620,11 +44582,12 @@
 </tr>
 <tr class="row-even"><td><p>AT2L0:XTES:MMS:07:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -44967,6 +44930,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -44991,6 +44955,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -46509,11 +46474,12 @@
 </tr>
 <tr class="row-odd"><td><p>AT2L0:XTES:MMS:08:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -46856,6 +46822,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -46880,6 +46847,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -48398,11 +48366,12 @@
 </tr>
 <tr class="row-even"><td><p>AT2L0:XTES:MMS:09:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -48745,6 +48714,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -48769,6 +48739,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -50287,11 +50258,12 @@
 </tr>
 <tr class="row-odd"><td><p>AT2L0:XTES:MMS:10:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -50634,6 +50606,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -50658,6 +50631,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -52176,11 +52150,12 @@
 </tr>
 <tr class="row-even"><td><p>AT2L0:XTES:MMS:11:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -52523,6 +52498,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -52547,6 +52523,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -54065,11 +54042,12 @@
 </tr>
 <tr class="row-odd"><td><p>AT2L0:XTES:MMS:12:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -54412,6 +54390,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -54436,6 +54415,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -55954,11 +55934,12 @@
 </tr>
 <tr class="row-even"><td><p>AT2L0:XTES:MMS:13:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -56301,6 +56282,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -56325,6 +56307,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -57843,11 +57826,12 @@
 </tr>
 <tr class="row-odd"><td><p>AT2L0:XTES:MMS:14:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -58190,6 +58174,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -58214,6 +58199,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -59732,11 +59718,12 @@
 </tr>
 <tr class="row-even"><td><p>AT2L0:XTES:MMS:15:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -60079,6 +60066,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -60103,6 +60091,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -61621,11 +61610,12 @@
 </tr>
 <tr class="row-odd"><td><p>AT2L0:XTES:MMS:16:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -61968,6 +61958,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -61992,6 +61983,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -63510,11 +63502,12 @@
 </tr>
 <tr class="row-even"><td><p>AT2L0:XTES:MMS:17:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -63857,6 +63850,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -63881,6 +63875,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -65399,11 +65394,12 @@
 </tr>
 <tr class="row-odd"><td><p>AT2L0:XTES:MMS:18:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -65746,6 +65742,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -65770,6 +65767,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -67288,11 +67286,12 @@
 </tr>
 <tr class="row-even"><td><p>AT2L0:XTES:MMS:19:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -67635,6 +67634,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -67659,6 +67659,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -69277,11 +69278,12 @@
 </tr>
 <tr class="row-even"><td><p>IM1L0:XTES:CLF:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -69624,6 +69626,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -69648,6 +69651,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -69771,11 +69775,12 @@
 </tr>
 <tr class="row-odd"><td><p>IM1L0:XTES:CLZ:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -70118,6 +70123,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -70142,6 +70148,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -70365,11 +70372,12 @@
 </tr>
 <tr class="row-odd"><td><p>IM1L0:XTES:MMS:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -70712,6 +70720,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -70736,6 +70745,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -72306,11 +72316,12 @@
 </tr>
 <tr class="row-odd"><td><p>IM1L1:PPM:MMS:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -72653,6 +72664,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -72677,6 +72689,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -74469,11 +74482,12 @@
 </tr>
 <tr class="row-odd"><td><p>IM2L0:XTES:CLF:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -74816,6 +74830,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -74840,6 +74855,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -74963,11 +74979,12 @@
 </tr>
 <tr class="row-even"><td><p>IM2L0:XTES:CLZ:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -75310,6 +75327,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -75334,6 +75352,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -75557,11 +75576,12 @@
 </tr>
 <tr class="row-even"><td><p>IM2L0:XTES:MMS:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -75904,6 +75924,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -75928,6 +75949,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -77498,11 +77520,12 @@
 </tr>
 <tr class="row-even"><td><p>IM3L0:PPM:MMS:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -77845,6 +77868,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -77869,6 +77893,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -79661,11 +79686,12 @@
 </tr>
 <tr class="row-even"><td><p>IM4L0:XTES:CLF:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -80008,6 +80034,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -80032,6 +80059,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -80155,11 +80183,12 @@
 </tr>
 <tr class="row-odd"><td><p>IM4L0:XTES:CLZ:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -80502,6 +80531,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -80526,6 +80556,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -80749,11 +80780,12 @@
 </tr>
 <tr class="row-odd"><td><p>IM4L0:XTES:MMS:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -81096,6 +81128,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -81120,6 +81153,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -84061,11 +84095,12 @@
 </tr>
 <tr class="row-even"><td><p>PF1L0:WFS:MMS:Y:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -84408,6 +84443,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -84432,6 +84468,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -84535,11 +84572,12 @@
 </tr>
 <tr class="row-odd"><td><p>PF1L0:WFS:MMS:Z:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -84882,6 +84920,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -84906,6 +84945,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -106282,11 +106322,12 @@
 </tr>
 <tr class="row-even"><td><p>SL1L0:POWER:MMS:BOTTOM:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -106629,6 +106670,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -106653,6 +106695,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -106756,11 +106799,12 @@
 </tr>
 <tr class="row-odd"><td><p>SL1L0:POWER:MMS:NORTH:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -107103,6 +107147,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -107127,6 +107172,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -107230,11 +107276,12 @@
 </tr>
 <tr class="row-even"><td><p>SL1L0:POWER:MMS:SOUTH:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -107577,6 +107624,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -107601,6 +107649,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -107704,11 +107753,12 @@
 </tr>
 <tr class="row-odd"><td><p>SL1L0:POWER:MMS:TOP:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -108051,6 +108101,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -108075,6 +108126,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -109536,11 +109588,12 @@
 </tr>
 <tr class="row-odd"><td><p>SL2L0:POWER:MMS:BOTTOM:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -109883,6 +109936,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -109907,6 +109961,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -110010,11 +110065,12 @@
 </tr>
 <tr class="row-even"><td><p>SL2L0:POWER:MMS:NORTH:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -110357,6 +110413,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -110381,6 +110438,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -110484,11 +110542,12 @@
 </tr>
 <tr class="row-odd"><td><p>SL2L0:POWER:MMS:SOUTH:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -110831,6 +110890,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -110855,6 +110915,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -110958,11 +111019,12 @@
 </tr>
 <tr class="row-even"><td><p>SL2L0:POWER:MMS:TOP:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -111305,6 +111367,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -111329,6 +111392,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -112390,11 +112454,12 @@
 </tr>
 <tr class="row-even"><td><p>SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -112737,6 +112802,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -112761,6 +112827,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -112864,11 +112931,12 @@
 </tr>
 <tr class="row-odd"><td><p>SP1L0:KMONO:MMS:DIODE_VERT:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -113211,6 +113279,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -113235,6 +113304,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -113338,11 +113408,12 @@
 </tr>
 <tr class="row-even"><td><p>SP1L0:KMONO:MMS:RET_HORIZ:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -113685,6 +113756,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -113709,6 +113781,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -113812,11 +113885,12 @@
 </tr>
 <tr class="row-odd"><td><p>SP1L0:KMONO:MMS:RET_VERT:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -114159,6 +114233,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -114183,6 +114258,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -114286,11 +114362,12 @@
 </tr>
 <tr class="row-even"><td><p>SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -114633,6 +114710,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -114657,6 +114735,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -114760,11 +114839,12 @@
 </tr>
 <tr class="row-odd"><td><p>SP1L0:KMONO:MMS:XTAL_VERT:PLC:bError_RBV</p></td>
 <td><p>bi</p></td>
-<td><p>TRUE if we</p></td>
+<td><p>TRUE if we are in an error state</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -115107,6 +115187,7 @@
 <td><p>Error code if nonzero</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>
@@ -115131,6 +115212,7 @@
 <td><p>Message to identify the error state</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
+<div class="line">update: 100hz notify</div>
 </div>
 </td>
 </tr>

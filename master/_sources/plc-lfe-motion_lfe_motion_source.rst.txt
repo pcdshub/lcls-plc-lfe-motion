@@ -751,6 +751,7 @@ FB_MPA
         '}
         i_xReset: BOOL;
         sName: STRING;
+        bEnableFF: BOOL := TRUE;
     END_VAR
     VAR_OUTPUT
         {attribute 'pytmc' := '
@@ -888,10 +889,12 @@ FB_MPA
     END_IF
 
     (*FAST FAULT*)
-    fbFF(i_DevName := sName,
-        i_xOK := xMPS_OK,
-        i_xReset := i_xReset,
-        io_fbFFHWO := io_fbFFHWO);
+    IF bEnableFF THEN
+        fbFF(i_DevName := sName,
+            i_xOK := xMPS_OK,
+            i_xReset := i_xReset,
+            io_fbFFHWO := io_fbFFHWO);
+    END_IF
 
     (*Soft IO Mapping*)
     ACT_IO();
@@ -2734,6 +2737,7 @@ PRG_RTDSL0
         xDone=> ,
         i_xReset := ,
         io_fbFFHWO := GVL.fbFastFaultOutput1,
+        bEnableFF := TRUE,
     );
 
     RTDSL0_MPA_02(
@@ -2746,6 +2750,7 @@ PRG_RTDSL0
         xDone=> ,
         i_xReset := ,
         io_fbFFHWO := GVL.fbFastFaultOutput1,
+        bEnableFF := TRUE,
     );
 
     RTDSL0_MPA_03(
@@ -2758,6 +2763,7 @@ PRG_RTDSL0
         xDone=> ,
         i_xReset := ,
         io_fbFFHWO := GVL.fbFastFaultOutput1,
+        bEnableFF := FALSE,
     );
 
     (*
@@ -2771,6 +2777,7 @@ PRG_RTDSL0
         xDone=> ,
         i_xReset := ,
         io_fbFFHWO := GVL.fbFastFaultOutput1,
+        bEnableFF := TRUE,
     );
     *)
 

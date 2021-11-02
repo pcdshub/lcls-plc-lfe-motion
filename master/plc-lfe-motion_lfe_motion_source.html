@@ -836,6 +836,7 @@ END_VAR
     <span class="s1">&#39;}</span>
     <span class="n">i_xReset</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
     <span class="n">sName</span><span class="p">:</span> <span class="n">STRING</span><span class="p">;</span>
+    <span class="n">bEnableFF</span><span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
 <span class="n">END_VAR</span>
 <span class="n">VAR_OUTPUT</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -973,10 +974,12 @@ END_VAR
 <span class="n">END_IF</span>
 
 <span class="p">(</span><span class="o">*</span><span class="n">FAST</span> <span class="n">FAULT</span><span class="o">*</span><span class="p">)</span>
-<span class="n">fbFF</span><span class="p">(</span><span class="n">i_DevName</span> <span class="o">:=</span> <span class="n">sName</span><span class="p">,</span>
-    <span class="n">i_xOK</span> <span class="o">:=</span> <span class="n">xMPS_OK</span><span class="p">,</span>
-    <span class="n">i_xReset</span> <span class="o">:=</span> <span class="n">i_xReset</span><span class="p">,</span>
-    <span class="n">io_fbFFHWO</span> <span class="o">:=</span> <span class="n">io_fbFFHWO</span><span class="p">);</span>
+<span class="n">IF</span> <span class="n">bEnableFF</span> <span class="n">THEN</span>
+    <span class="n">fbFF</span><span class="p">(</span><span class="n">i_DevName</span> <span class="o">:=</span> <span class="n">sName</span><span class="p">,</span>
+        <span class="n">i_xOK</span> <span class="o">:=</span> <span class="n">xMPS_OK</span><span class="p">,</span>
+        <span class="n">i_xReset</span> <span class="o">:=</span> <span class="n">i_xReset</span><span class="p">,</span>
+        <span class="n">io_fbFFHWO</span> <span class="o">:=</span> <span class="n">io_fbFFHWO</span><span class="p">);</span>
+<span class="n">END_IF</span>
 
 <span class="p">(</span><span class="o">*</span><span class="n">Soft</span> <span class="n">IO</span> <span class="n">Mapping</span><span class="o">*</span><span class="p">)</span>
 <span class="n">ACT_IO</span><span class="p">();</span>
@@ -2803,6 +2806,7 @@ END_VAR
     <span class="n">xDone</span><span class="o">=&gt;</span> <span class="p">,</span>
     <span class="n">i_xReset</span> <span class="o">:=</span> <span class="p">,</span>
     <span class="n">io_fbFFHWO</span> <span class="o">:=</span> <span class="n">GVL</span><span class="o">.</span><span class="n">fbFastFaultOutput1</span><span class="p">,</span>
+    <span class="n">bEnableFF</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
 <span class="p">);</span>
 
 <span class="n">RTDSL0_MPA_02</span><span class="p">(</span>
@@ -2815,6 +2819,7 @@ END_VAR
     <span class="n">xDone</span><span class="o">=&gt;</span> <span class="p">,</span>
     <span class="n">i_xReset</span> <span class="o">:=</span> <span class="p">,</span>
     <span class="n">io_fbFFHWO</span> <span class="o">:=</span> <span class="n">GVL</span><span class="o">.</span><span class="n">fbFastFaultOutput1</span><span class="p">,</span>
+    <span class="n">bEnableFF</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
 <span class="p">);</span>
 
 <span class="n">RTDSL0_MPA_03</span><span class="p">(</span>
@@ -2827,6 +2832,7 @@ END_VAR
     <span class="n">xDone</span><span class="o">=&gt;</span> <span class="p">,</span>
     <span class="n">i_xReset</span> <span class="o">:=</span> <span class="p">,</span>
     <span class="n">io_fbFFHWO</span> <span class="o">:=</span> <span class="n">GVL</span><span class="o">.</span><span class="n">fbFastFaultOutput1</span><span class="p">,</span>
+    <span class="n">bEnableFF</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">,</span>
 <span class="p">);</span>
 
 <span class="p">(</span><span class="o">*</span>
@@ -2840,6 +2846,7 @@ END_VAR
     <span class="n">xDone</span><span class="o">=&gt;</span> <span class="p">,</span>
     <span class="n">i_xReset</span> <span class="o">:=</span> <span class="p">,</span>
     <span class="n">io_fbFFHWO</span> <span class="o">:=</span> <span class="n">GVL</span><span class="o">.</span><span class="n">fbFastFaultOutput1</span><span class="p">,</span>
+    <span class="n">bEnableFF</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
 <span class="p">);</span>
 <span class="o">*</span><span class="p">)</span>
 

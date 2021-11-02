@@ -10755,10 +10755,11 @@ lcls_twincat_motion.DUT_MotionStage
 
     * - $(PREFIX):PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - $(PREFIX):PLC:bExecute
@@ -11023,6 +11024,7 @@ lcls_twincat_motion.DUT_MotionStage
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - $(PREFIX):PLC:nHomingMode_RBV
@@ -11041,6 +11043,7 @@ lcls_twincat_motion.DUT_MotionStage
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - $(PREFIX):PLC:sName_RBV
@@ -11159,7 +11162,7 @@ lcls_twincat_motion.DUT_PositionState
       - | io: output
 
 
-                   
+                    
 lcls_twincat_motion.FB_PositionStateBase
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -25256,53 +25259,6 @@ Database Records
         | io: input
 
 
-    * - $(PREFIX)SafeBeamCnst:Cohort_RBV
-      - longin
-      - Cohort inc on each arb cycle
-      - | archive: 1s monitor
-        | io: input
-
-
-    * - $(PREFIX)SafeBeamCnst:PhotonEnergyRanges_RBV
-      - longin
-      - Safe beam constant
-      - | archive: 1s monitor
-        | field: EGU eV
-        | io: input
-
-
-    * - $(PREFIX)SafeBeamCnst:Rate_RBV
-      - longin
-      - Safe beam constant
-      - | archive: 1s monitor
-        | field: EGU Hz
-        | io: input
-
-
-    * - $(PREFIX)SafeBeamCnst:Transmission_RBV
-      - ai
-      - Safe beam constant
-      - | archive: 1s monitor
-        | field: HOPR 1
-        | field: LOPR 0
-        | field: PREC 2
-        | io: input
-
-
-    * - $(PREFIX)SafeBeamCnst:Valid_RBV
-      - bi
-      - Safe beam constant
-      - | archive: 1s monitor
-        | io: input
-
-
-    * - $(PREFIX)SafeBeamCnst:Veto_RBV
-      - waveform
-      - Safe beam constant
-      - | archive: 1s monitor
-        | io: input
-
-
     * - $(PREFIX)SuccessfulPreemptions_RBV
       - longin
       - PMPS_GVL.SuccessfulPreemption
@@ -25405,10 +25361,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:01:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:01:PLC:bExecute
@@ -25673,6 +25630,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:01:PLC:nHomingMode_RBV
@@ -25691,6 +25649,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:01:PLC:sName_RBV
@@ -26892,10 +26851,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:02:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:02:PLC:bExecute
@@ -27160,6 +27120,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:02:PLC:nHomingMode_RBV
@@ -27178,6 +27139,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:02:PLC:sName_RBV
@@ -28379,10 +28341,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:03:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:03:PLC:bExecute
@@ -28647,6 +28610,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:03:PLC:nHomingMode_RBV
@@ -28665,6 +28629,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:03:PLC:sName_RBV
@@ -29866,10 +29831,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:04:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:04:PLC:bExecute
@@ -30134,6 +30100,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:04:PLC:nHomingMode_RBV
@@ -30152,6 +30119,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:04:PLC:sName_RBV
@@ -31353,10 +31321,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:05:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:05:PLC:bExecute
@@ -31621,6 +31590,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:05:PLC:nHomingMode_RBV
@@ -31639,6 +31609,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:05:PLC:sName_RBV
@@ -32840,10 +32811,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:06:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:06:PLC:bExecute
@@ -33108,6 +33080,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:06:PLC:nHomingMode_RBV
@@ -33126,6 +33099,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:06:PLC:sName_RBV
@@ -34327,10 +34301,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:07:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:07:PLC:bExecute
@@ -34595,6 +34570,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:07:PLC:nHomingMode_RBV
@@ -34613,6 +34589,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:07:PLC:sName_RBV
@@ -35814,10 +35791,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:08:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:08:PLC:bExecute
@@ -36082,6 +36060,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:08:PLC:nHomingMode_RBV
@@ -36100,6 +36079,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:08:PLC:sName_RBV
@@ -37301,10 +37281,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:09:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:09:PLC:bExecute
@@ -37569,6 +37550,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:09:PLC:nHomingMode_RBV
@@ -37587,6 +37569,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:09:PLC:sName_RBV
@@ -38788,10 +38771,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:10:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:10:PLC:bExecute
@@ -39056,6 +39040,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:10:PLC:nHomingMode_RBV
@@ -39074,6 +39059,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:10:PLC:sName_RBV
@@ -40275,10 +40261,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:11:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:11:PLC:bExecute
@@ -40543,6 +40530,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:11:PLC:nHomingMode_RBV
@@ -40561,6 +40549,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:11:PLC:sName_RBV
@@ -41762,10 +41751,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:12:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:12:PLC:bExecute
@@ -42030,6 +42020,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:12:PLC:nHomingMode_RBV
@@ -42048,6 +42039,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:12:PLC:sName_RBV
@@ -43249,10 +43241,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:13:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:13:PLC:bExecute
@@ -43517,6 +43510,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:13:PLC:nHomingMode_RBV
@@ -43535,6 +43529,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:13:PLC:sName_RBV
@@ -44736,10 +44731,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:14:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:14:PLC:bExecute
@@ -45004,6 +45000,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:14:PLC:nHomingMode_RBV
@@ -45022,6 +45019,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:14:PLC:sName_RBV
@@ -46223,10 +46221,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:15:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:15:PLC:bExecute
@@ -46491,6 +46490,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:15:PLC:nHomingMode_RBV
@@ -46509,6 +46509,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:15:PLC:sName_RBV
@@ -47710,10 +47711,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:16:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:16:PLC:bExecute
@@ -47978,6 +47980,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:16:PLC:nHomingMode_RBV
@@ -47996,6 +47999,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:16:PLC:sName_RBV
@@ -49197,10 +49201,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:17:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:17:PLC:bExecute
@@ -49465,6 +49470,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:17:PLC:nHomingMode_RBV
@@ -49483,6 +49489,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:17:PLC:sName_RBV
@@ -50684,10 +50691,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:18:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:18:PLC:bExecute
@@ -50952,6 +50960,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:18:PLC:nHomingMode_RBV
@@ -50970,6 +50979,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:18:PLC:sName_RBV
@@ -52171,10 +52181,11 @@ Database Records
 
     * - AT2L0:XTES:MMS:19:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:19:PLC:bExecute
@@ -52439,6 +52450,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:19:PLC:nHomingMode_RBV
@@ -52457,6 +52469,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - AT2L0:XTES:MMS:19:PLC:sName_RBV
@@ -53736,10 +53749,11 @@ Database Records
 
     * - IM1L0:XTES:CLF:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - IM1L0:XTES:CLF:PLC:bExecute
@@ -54004,6 +54018,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - IM1L0:XTES:CLF:PLC:nHomingMode_RBV
@@ -54022,6 +54037,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - IM1L0:XTES:CLF:PLC:sName_RBV
@@ -54120,10 +54136,11 @@ Database Records
 
     * - IM1L0:XTES:CLZ:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - IM1L0:XTES:CLZ:PLC:bExecute
@@ -54388,6 +54405,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - IM1L0:XTES:CLZ:PLC:nHomingMode_RBV
@@ -54406,6 +54424,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - IM1L0:XTES:CLZ:PLC:sName_RBV
@@ -54578,10 +54597,11 @@ Database Records
 
     * - IM1L0:XTES:MMS:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - IM1L0:XTES:MMS:PLC:bExecute
@@ -54846,6 +54866,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - IM1L0:XTES:MMS:PLC:nHomingMode_RBV
@@ -54864,6 +54885,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - IM1L0:XTES:MMS:PLC:sName_RBV
@@ -56103,10 +56125,11 @@ Database Records
 
     * - IM1L1:PPM:MMS:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - IM1L1:PPM:MMS:PLC:bExecute
@@ -56371,6 +56394,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - IM1L1:PPM:MMS:PLC:nHomingMode_RBV
@@ -56389,6 +56413,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - IM1L1:PPM:MMS:PLC:sName_RBV
@@ -57798,10 +57823,11 @@ Database Records
 
     * - IM2L0:XTES:CLF:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - IM2L0:XTES:CLF:PLC:bExecute
@@ -58066,6 +58092,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - IM2L0:XTES:CLF:PLC:nHomingMode_RBV
@@ -58084,6 +58111,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - IM2L0:XTES:CLF:PLC:sName_RBV
@@ -58182,10 +58210,11 @@ Database Records
 
     * - IM2L0:XTES:CLZ:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - IM2L0:XTES:CLZ:PLC:bExecute
@@ -58450,6 +58479,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - IM2L0:XTES:CLZ:PLC:nHomingMode_RBV
@@ -58468,6 +58498,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - IM2L0:XTES:CLZ:PLC:sName_RBV
@@ -58640,10 +58671,11 @@ Database Records
 
     * - IM2L0:XTES:MMS:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - IM2L0:XTES:MMS:PLC:bExecute
@@ -58908,6 +58940,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - IM2L0:XTES:MMS:PLC:nHomingMode_RBV
@@ -58926,6 +58959,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - IM2L0:XTES:MMS:PLC:sName_RBV
@@ -60165,10 +60199,11 @@ Database Records
 
     * - IM3L0:PPM:MMS:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - IM3L0:PPM:MMS:PLC:bExecute
@@ -60433,6 +60468,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - IM3L0:PPM:MMS:PLC:nHomingMode_RBV
@@ -60451,6 +60487,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - IM3L0:PPM:MMS:PLC:sName_RBV
@@ -61860,10 +61897,11 @@ Database Records
 
     * - IM4L0:XTES:CLF:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - IM4L0:XTES:CLF:PLC:bExecute
@@ -62128,6 +62166,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - IM4L0:XTES:CLF:PLC:nHomingMode_RBV
@@ -62146,6 +62185,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - IM4L0:XTES:CLF:PLC:sName_RBV
@@ -62244,10 +62284,11 @@ Database Records
 
     * - IM4L0:XTES:CLZ:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - IM4L0:XTES:CLZ:PLC:bExecute
@@ -62512,6 +62553,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - IM4L0:XTES:CLZ:PLC:nHomingMode_RBV
@@ -62530,6 +62572,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - IM4L0:XTES:CLZ:PLC:sName_RBV
@@ -62702,10 +62745,11 @@ Database Records
 
     * - IM4L0:XTES:MMS:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - IM4L0:XTES:MMS:PLC:bExecute
@@ -62970,6 +63014,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - IM4L0:XTES:MMS:PLC:nHomingMode_RBV
@@ -62988,6 +63033,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - IM4L0:XTES:MMS:PLC:sName_RBV
@@ -65308,10 +65354,11 @@ Database Records
 
     * - PF1L0:WFS:MMS:Y:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - PF1L0:WFS:MMS:Y:PLC:bExecute
@@ -65576,6 +65623,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - PF1L0:WFS:MMS:Y:PLC:nHomingMode_RBV
@@ -65594,6 +65642,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - PF1L0:WFS:MMS:Y:PLC:sName_RBV
@@ -65676,10 +65725,11 @@ Database Records
 
     * - PF1L0:WFS:MMS:Z:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - PF1L0:WFS:MMS:Z:PLC:bExecute
@@ -65944,6 +65994,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - PF1L0:WFS:MMS:Z:PLC:nHomingMode_RBV
@@ -65962,6 +66013,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - PF1L0:WFS:MMS:Z:PLC:sName_RBV
@@ -82045,10 +82097,11 @@ Database Records
 
     * - SL1L0:POWER:MMS:BOTTOM:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - SL1L0:POWER:MMS:BOTTOM:PLC:bExecute
@@ -82313,6 +82366,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - SL1L0:POWER:MMS:BOTTOM:PLC:nHomingMode_RBV
@@ -82331,6 +82385,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - SL1L0:POWER:MMS:BOTTOM:PLC:sName_RBV
@@ -82413,10 +82468,11 @@ Database Records
 
     * - SL1L0:POWER:MMS:NORTH:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - SL1L0:POWER:MMS:NORTH:PLC:bExecute
@@ -82681,6 +82737,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - SL1L0:POWER:MMS:NORTH:PLC:nHomingMode_RBV
@@ -82699,6 +82756,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - SL1L0:POWER:MMS:NORTH:PLC:sName_RBV
@@ -82781,10 +82839,11 @@ Database Records
 
     * - SL1L0:POWER:MMS:SOUTH:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - SL1L0:POWER:MMS:SOUTH:PLC:bExecute
@@ -83049,6 +83108,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - SL1L0:POWER:MMS:SOUTH:PLC:nHomingMode_RBV
@@ -83067,6 +83127,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - SL1L0:POWER:MMS:SOUTH:PLC:sName_RBV
@@ -83149,10 +83210,11 @@ Database Records
 
     * - SL1L0:POWER:MMS:TOP:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - SL1L0:POWER:MMS:TOP:PLC:bExecute
@@ -83417,6 +83479,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - SL1L0:POWER:MMS:TOP:PLC:nHomingMode_RBV
@@ -83435,6 +83498,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - SL1L0:POWER:MMS:TOP:PLC:sName_RBV
@@ -84573,10 +84637,11 @@ Database Records
 
     * - SL2L0:POWER:MMS:BOTTOM:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - SL2L0:POWER:MMS:BOTTOM:PLC:bExecute
@@ -84841,6 +84906,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - SL2L0:POWER:MMS:BOTTOM:PLC:nHomingMode_RBV
@@ -84859,6 +84925,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - SL2L0:POWER:MMS:BOTTOM:PLC:sName_RBV
@@ -84941,10 +85008,11 @@ Database Records
 
     * - SL2L0:POWER:MMS:NORTH:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - SL2L0:POWER:MMS:NORTH:PLC:bExecute
@@ -85209,6 +85277,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - SL2L0:POWER:MMS:NORTH:PLC:nHomingMode_RBV
@@ -85227,6 +85296,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - SL2L0:POWER:MMS:NORTH:PLC:sName_RBV
@@ -85309,10 +85379,11 @@ Database Records
 
     * - SL2L0:POWER:MMS:SOUTH:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - SL2L0:POWER:MMS:SOUTH:PLC:bExecute
@@ -85577,6 +85648,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - SL2L0:POWER:MMS:SOUTH:PLC:nHomingMode_RBV
@@ -85595,6 +85667,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - SL2L0:POWER:MMS:SOUTH:PLC:sName_RBV
@@ -85677,10 +85750,11 @@ Database Records
 
     * - SL2L0:POWER:MMS:TOP:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - SL2L0:POWER:MMS:TOP:PLC:bExecute
@@ -85945,6 +86019,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - SL2L0:POWER:MMS:TOP:PLC:nHomingMode_RBV
@@ -85963,6 +86038,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - SL2L0:POWER:MMS:TOP:PLC:sName_RBV
@@ -86789,10 +86865,11 @@ Database Records
 
     * - SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:bExecute
@@ -87057,6 +87134,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:nHomingMode_RBV
@@ -87075,6 +87153,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - SP1L0:KMONO:MMS:DIODE_HORIZ:PLC:sName_RBV
@@ -87157,10 +87236,11 @@ Database Records
 
     * - SP1L0:KMONO:MMS:DIODE_VERT:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - SP1L0:KMONO:MMS:DIODE_VERT:PLC:bExecute
@@ -87425,6 +87505,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - SP1L0:KMONO:MMS:DIODE_VERT:PLC:nHomingMode_RBV
@@ -87443,6 +87524,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - SP1L0:KMONO:MMS:DIODE_VERT:PLC:sName_RBV
@@ -87525,10 +87607,11 @@ Database Records
 
     * - SP1L0:KMONO:MMS:RET_HORIZ:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - SP1L0:KMONO:MMS:RET_HORIZ:PLC:bExecute
@@ -87793,6 +87876,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - SP1L0:KMONO:MMS:RET_HORIZ:PLC:nHomingMode_RBV
@@ -87811,6 +87895,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - SP1L0:KMONO:MMS:RET_HORIZ:PLC:sName_RBV
@@ -87893,10 +87978,11 @@ Database Records
 
     * - SP1L0:KMONO:MMS:RET_VERT:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - SP1L0:KMONO:MMS:RET_VERT:PLC:bExecute
@@ -88161,6 +88247,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - SP1L0:KMONO:MMS:RET_VERT:PLC:nHomingMode_RBV
@@ -88179,6 +88266,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - SP1L0:KMONO:MMS:RET_VERT:PLC:sName_RBV
@@ -88261,10 +88349,11 @@ Database Records
 
     * - SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:bExecute
@@ -88529,6 +88618,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:nHomingMode_RBV
@@ -88547,6 +88637,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - SP1L0:KMONO:MMS:XTAL_ANGLE:PLC:sName_RBV
@@ -88629,10 +88720,11 @@ Database Records
 
     * - SP1L0:KMONO:MMS:XTAL_VERT:PLC:bError_RBV
       - bi
-      - TRUE if we
+      - TRUE if we are in an error state
       - | field: ONAM TRUE
         | field: ZNAM FALSE
         | io: input
+        | update: 100hz notify
 
 
     * - SP1L0:KMONO:MMS:XTAL_VERT:PLC:bExecute
@@ -88897,6 +88989,7 @@ Database Records
       - longin
       - Error code if nonzero
       - | io: input
+        | update: 100hz notify
 
 
     * - SP1L0:KMONO:MMS:XTAL_VERT:PLC:nHomingMode_RBV
@@ -88915,6 +89008,7 @@ Database Records
       - waveform
       - Message to identify the error state
       - | io: input
+        | update: 100hz notify
 
 
     * - SP1L0:KMONO:MMS:XTAL_VERT:PLC:sName_RBV
