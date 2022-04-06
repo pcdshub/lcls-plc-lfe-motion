@@ -3,10 +3,7 @@
   <POU Name="PRG_RTDSL0" Id="{0731cf32-d059-4658-a450-fc5e211c2dc2}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_RTDSL0
 VAR
-  {attribute 'pytmc' := '
-        pv: RTDSL0:DIODE:MMS:01
-        expand: :%.2d:FILTER
-    '}
+
     fbRTDSL0_Diode_MMS_01: FB_MotionStage;
 
 END_VAR
