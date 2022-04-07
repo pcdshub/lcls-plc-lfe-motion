@@ -6,6 +6,7 @@ VAR
 
     fbRTDSL0_Diode_MMS_01: FB_MotionStage;
 
+	bInit: BOOL := TRUE;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -58,6 +59,14 @@ RTDSL0_MPA_03(
     io_fbFFHWO := GVL.fbFastFaultOutput1,
     bEnableFF := FALSE,
 );
+//  init the motion stages parameters
+IF ( bInit) THEN
+    Main.M33.bHardwareEnable := TRUE;
+    Main.M33.bPowerSelf :=TRUE;
+    Main.M33.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+	//Main.M33.
+	bInit := FALSE;
+END_IF
 
 fbRTDSL0_Diode_MMS_01 (stMotionStage := Main.M33);
 	
