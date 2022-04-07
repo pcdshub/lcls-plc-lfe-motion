@@ -3,6 +3,10 @@
   <POU Name="PRG_RTDSL0" Id="{0731cf32-d059-4658-a450-fc5e211c2dc2}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_RTDSL0
 VAR
+
+    fbRTDSL0_Diode_MMS_01: FB_MotionStage;
+
+	bInit: BOOL := TRUE;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -55,21 +59,17 @@ RTDSL0_MPA_03(
     io_fbFFHWO := GVL.fbFastFaultOutput1,
     bEnableFF := FALSE,
 );
+//  init the motion stages parameters
+IF ( bInit) THEN
+    Main.M33.bHardwareEnable := TRUE;
+    Main.M33.bPowerSelf :=TRUE;
+    Main.M33.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+	//Main.M33.
+	bInit := FALSE;
+END_IF
 
-(*
-RTDSL0_MPA_04(
-    ibInsertOK:= TRUE,
-    ibRetractOK:= TRUE ,
-    ibPMPS_OK:= TRUE ,
-    ibOverrideInterlock:= ,
-    q_stAct=> ,
-    xMPS_OK=> ,
-    xDone=> ,
-    i_xReset := ,
-    io_fbFFHWO := GVL.fbFastFaultOutput1,
-    bEnableFF := TRUE,
-);
-*)
+fbRTDSL0_Diode_MMS_01 (stMotionStage := Main.M33);
+	
 ]]></ST>
     </Implementation>
   </POU>
