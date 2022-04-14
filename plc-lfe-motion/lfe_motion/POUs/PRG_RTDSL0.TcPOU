@@ -66,7 +66,11 @@ IF ( bInit) THEN
     Main.M33.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
 	//Main.M33.
 	bInit := FALSE;
+	
+	Main.M33.nHomingMode := ENUM_EpicsHomeCmd.HIGH_LIMIT;
+
 END_IF
+
 
 fbRTDSL0_Diode_MMS_01 (stMotionStage := Main.M33);
 	
