@@ -1324,13 +1324,13 @@ External Setpoint Generation:
 	<Axis Id="33" CreateSymbols="true" AxisType="1" AxisFolder="RTDSL0">
 		<Name>__FILENAME__</Name>
 		<AxisPara>
-			<Velo RefSearch="1" RefSync="0.1" SlowManual="5" FastManual="20" Maximum="5"/>
+			<Velo RefSearch="1" RefSync="0.1" SlowManual="5" FastManual="20" Maximum="2"/>
 			<OtherSettings AllowMotionCmdToSlave="true" PulseDistancePos="100" PulseDistanceNeg="50"/>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="4">
 			<EncPara ScaleFactorNumerator="4.53125e-05" MaxCount="#x0000ffff">
 				<SoftEndMinControl Enable="true" Range="-35"/>
-				<SoftEndMaxControl Enable="true" Range="0.1"/>
+				<SoftEndMaxControl Enable="true" Range="1"/>
 				<Inc RefSoftSyncMask="#x0000ffff"/>
 			</EncPara>
 			<Vars VarGrpType="1">
