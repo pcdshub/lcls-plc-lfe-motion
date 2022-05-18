@@ -1324,8 +1324,10 @@ External Setpoint Generation:
 	<Axis Id="27" CreateSymbols="true" AxisType="1" AxisFolder="IM3L0-PPM">
 		<Name>__FILENAME__</Name>
 		<AxisPara>
-			<Dynamic AccelerationMaximum="200" DecelerationMaximum="200" Acceleration="200" Deceleration="200" Jerk="500"/>
+			<Dynamic AccelerationMaximum="200" DecelerationMaximum="200" Acceleration="200" Deceleration="200" Jerk="1000" DelayTime="0.004"/>
 			<Velo Maximum="65"/>
+			<MotionControl Enable="true" Range="0.0005" Time="1"/>
+			<TargetPosControl Range="0.01" Time="1"/>
 			<OtherSettings AllowMotionCmdToSlave="true"/>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="29">
@@ -1333,8 +1335,6 @@ External Setpoint Generation:
 				<SoftEndMinControl Range="-92.82"/>
 				<SoftEndMaxControl Range="-8"/>
 				<Inc RefSoftSyncMask="#x0000ffff"/>
-				<ParameterChanged>14</ParameterChanged>
-				<ParameterChanged>13</ParameterChanged>
 			</EncPara>
 			<Vars VarGrpType="1">
 				<Name>Inputs</Name>
@@ -1467,8 +1467,8 @@ Drive Status 4 (manually linked):
 		</Drive>
 		<Controller Name="Ctrl" CtrType="2">
 			<CtrPara PriorControlFactor="1">
-				<PosDiffControl Range="1"/>
-				<PID PosKp="20" PosExtKp="1" DeadBandPosition="0.002"/>
+				<PosDiffControl Range="10" Time="0.1"/>
+				<PID PosKp="10" PosExtKp="0.01" PosExtVelo="0.0005" DeadBandPosition="0.0001"/>
 				<Observer BandWidth="20"/>
 			</CtrPara>
 		</Controller>
