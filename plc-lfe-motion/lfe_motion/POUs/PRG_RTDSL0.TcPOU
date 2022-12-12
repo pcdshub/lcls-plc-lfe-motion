@@ -64,15 +64,45 @@ IF ( bInit) THEN
     Main.M33.bHardwareEnable := TRUE;
     Main.M33.bPowerSelf :=TRUE;
     Main.M33.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
-	//Main.M33.
-	bInit := FALSE;
-	
+	(* uncomment when mccallister goes from RTDSK0 -> RTDSL0
+    Main.M34.bHardwareEnable := TRUE;
+    Main.M34.bPowerSelf :=TRUE;
+    Main.M34.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+    
+    Main.M35.bHardwareEnable := TRUE;
+    Main.M35.bPowerSelf :=TRUE;
+    Main.M35.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+    
+    Main.M36.bHardwareEnable := TRUE;
+    Main.M36.bPowerSelf :=TRUE;
+    Main.M36.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+    
+    //LDM motor 
+    Main.M37.bHardwareEnable := TRUE;
+    Main.M37.bPowerSelf :=TRUE;
+    Main.M37.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+    *)	
 	Main.M33.nHomingMode := ENUM_EpicsHomeCmd.HIGH_LIMIT;
+    //uncomment when mccallister gets moved RTDSK0->RTDSL0
+    //Main.M34.nHomingMode := ENUM_EpicsHomeCmd.HIGH_LIMIT;
+    //Main.M35.nHomingMode := ENUM_EpicsHomeCmd.HIGH_LIMIT;
+    //Main.M36.nHomingMode := ENUM_EpicsHomeCmd.HIGH_LIMIT;
+    Main.M37.nHomingMode := ENUM_EpicsHomeCmd.HIGH_LIMIT;
+    
+    	bInit := FALSE;
 
 END_IF
 
 
 fbRTDSL0_Diode_MMS_01 (stMotionStage := Main.M33);
+//uncomment when mccallister stage RTDSK0 -> RTDSL0
+//fbRTDSL0_SCRP_MMS_01 (stMotionStage := Main.M34);
+//fbRTDSL0_SCRP_MMS_02 (stMotionStage := Main.M35);
+//fbRTDSL0_SCRP_MMS_03 (stMotionStage := Main.M36);
+//fbRTDSL0_LDM_MMS_01 (stMotionStage := Main.M37);
+//uncomment when mccallister stage RTDSK0->RTDSL0
+//fbRTDSK0_SCRP_LED_01 (enumXPIM := Main.LED1);
+
 	
 ]]></ST>
     </Implementation>
