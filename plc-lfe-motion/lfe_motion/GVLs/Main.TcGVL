@@ -275,17 +275,17 @@ VAR_GLOBAL
 
         // Three_Stage_RTDSX0: 3 Axes
      (*   to uncomment when stage is moved to RTDSL0
-    {attribute 'pytmc' := 'pv: 'RTDSX0:MMS:01}
+    {attribute 'pytmc' := 'pv: RTDSX0:MMS:01'}
     {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2;
                               .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1'}
     M55: DUT_MotionStage := (sName := 'RTDSX0:MMS:01');
 
-     {attribute 'pytmc' := 'pv: 'RTDSX0:MMS:02}
+     {attribute 'pytmc' := 'pv: RTDSX0:MMS:02'}
     {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2;
                               .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1'}
     M56: DUT_MotionStage := (sName := 'RTDSX0:MMS:02');
 
-    {attribute 'pytmc' := 'pv: 'RTDSX0:MMS:03}
+    {attribute 'pytmc' := 'pv: RTDSX0:MMS:03'}
     {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2;
                               .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1'}
     M57: DUT_MotionStage := (sName := 'RTDSX0:MMS:03');
