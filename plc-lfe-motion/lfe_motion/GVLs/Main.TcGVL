@@ -171,7 +171,7 @@ VAR_GLOBAL
     M32: DUT_MotionStage := (sName := 'PF1L0:WFS:MMS:02');
 
     // RTDSL0: 8 Axes
-	{attribute 'pytmc' := 'pv: RTDSL0:DIODE:MMS:01'}
+    {attribute 'pytmc' := 'pv: RTDSL0:DIODE:MMS:01'}
     {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[RTDSL0-EL7041-01]^STM Status^Status^Digital input 1;
                               .bLimitBackwardEnable := TIIB[RTDSL0-EL7041-01]^STM Status^Status^Digital input 2'}
     M33: DUT_MotionStage := (sName := 'RTDSL0:DIODE:MMS:01');
@@ -180,7 +180,7 @@ VAR_GLOBAL
     M36: DUT_MotionStage;
     M37: DUT_MotionStage;
     //to be uncommented when the mccallister stage on RTDSK0 is moved to RTDSLo
-    (* 
+    (*
     {attribute 'pytmc' := 'pv: RTDSL0:SCRP:MMS:01'}
     {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[RTDSL0-EL7041-02]^STM Status^Status^Digital input 1;
                               .bLimitBackwardEnable := TIIB[RTDSL0-EL7041-02]^STM Status^Status^Digital input 2'}
@@ -203,7 +203,7 @@ VAR_GLOBAL
     M38: DUT_MotionStage;
     M39: DUT_MotionStage;
     M40: DUT_MotionStage;
-    
+
     // to be uncommented when mccallister stage is moved from RTDSK0 -> RTDSL0
     (*
     {attribute 'pytmc' := 'pv: RTDSL0:SCRP:LED:01'}
@@ -211,7 +211,7 @@ VAR_GLOBAL
                               .bLimitBackwardEnable := TIIB[RTDSK0-EL7041-04]^STM Status^Status^Digital input 2'}
     LED1: ENUM_XPIM_States;
     *)
-    
+
 
     // SL1L0-POWER: 4 Axes
     {attribute 'pytmc' := 'pv: SL1L0:POWER:MMS:BOTTOM'}
@@ -272,20 +272,20 @@ VAR_GLOBAL
     {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E6-MOTORS]^STM Status^Status^Digital input 1;
                               .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E6-MOTORS]^STM Status^Status^Digital input 2'}
     M54: DUT_MotionStage := (sName := 'SP1L0:KMONO:MMS:DIODE_VERT');
-    
+
         // Three_Stage_RTDSX0: 3 Axes
      (*   to uncomment when stage is moved to RTDSL0
-    {attribute 'pytmc' := 'pv: 'RTDSX0:MMS:01}
+    {attribute 'pytmc' := 'pv: RTDSX0:MMS:01'}
     {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2;
                               .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1'}
     M55: DUT_MotionStage := (sName := 'RTDSX0:MMS:01');
-    
-     {attribute 'pytmc' := 'pv: 'RTDSX0:MMS:02}
+
+     {attribute 'pytmc' := 'pv: RTDSX0:MMS:02'}
     {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2;
                               .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1'}
     M56: DUT_MotionStage := (sName := 'RTDSX0:MMS:02');
-    
-    {attribute 'pytmc' := 'pv: 'RTDSX0:MMS:03}
+
+    {attribute 'pytmc' := 'pv: RTDSX0:MMS:03'}
     {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2;
                               .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1'}
     M57: DUT_MotionStage := (sName := 'RTDSX0:MMS:03');
