@@ -1488,13 +1488,6 @@ External Setpoint Generation:
 					<Type>UINT</Type>
 				</Var>
 				<Var>
-					<Name>GVL.fPhotonEnergy_eV</Name>
-					<Comment>
-						<![CDATA[ Photon energy comes from the arbiter (see PMPS_PRE.IO Inputs.rPhotonEnergy!) ]]>
-					</Comment>
-					<Type>REAL</Type>
-				</Var>
-				<Var>
 					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[1].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
@@ -4410,10 +4403,6 @@ External Setpoint Generation:
 				<Var>
 					<Name>PRG_3_PMPS_POST.fbArbiterIO.xTxPDO_state</Name>
 					<Type>BIT</Type>
-				</Var>
-				<Var>
-					<Name>GVL.rReqTrans</Name>
-					<Type GUID="{6D319B26-4590-2152-3DE7-3BA9B629CA65}">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1.Axis.NcToPlc</Name>
@@ -9751,6 +9740,10 @@ External Setpoint Generation:
 					<Name>RTDSL0.RTDSL0_MPA_04.i_xRetractedLS</Name>
 					<Type>BOOL</Type>
 				</Var>
+				<Var>
+					<Name>GVL.rReqTrans</Name>
+					<Type GUID="{6D319B26-4590-2152-3DE7-3BA9B629CA65}">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Type>
+				</Var>
 			</Vars>
 			<Vars VarGrpType="2">
 				<Name>PlcTask Outputs</Name>
@@ -10141,18 +10134,6 @@ External Setpoint Generation:
 							<![CDATA[ Cohort index. Identifies which cohort this BP set was included in arbitration]]>
 						</Comment>
 					</SubVar>
-				</Var>
-				<Var>
-					<Name>GVL.fbFastFaultOutput1.q_xFastFaultOut</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL.fbFastFaultOutput2.q_xFastFaultOut</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL.rCurTrans</Name>
-					<Type GUID="{6D319B26-4590-2152-3DE7-3BA9B629CA65}">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1.Axis.PlcToNc</Name>
@@ -10780,6 +10761,18 @@ External Setpoint Generation:
 					<Name>RTDSL0.RTDSL0_MPA_04.q_xRetract_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
+				<Var>
+					<Name>GVL.fbFastFaultOutput1.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL.fbFastFaultOutput2.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL.rCurTrans</Name>
+					<Type GUID="{6D319B26-4590-2152-3DE7-3BA9B629CA65}">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Type>
+				</Var>
 			</Vars>
 			<Vars VarGrpType="8">
 				<Name>PlcTask Retains</Name>
@@ -11374,7 +11367,6 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Outputs^GVL.fbFastFaultOutput2.q_xFastFaultOut" VarB="Channel 2^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PMPS_PRE">
-				<Link VarA="PlcTask Inputs^GVL.fPhotonEnergy_eV" VarB="IO Inputs^rPhotonEnergy"/>
 				<Link VarA="PlcTask Inputs^GVL.rReqTrans" VarB="IO Inputs^SattArrayReq"/>
 				<Link VarA="PlcTask Inputs^PRG_3_PMPS_POST.fbArbiterIO.i_stCurrentBP" VarB="IO Inputs^CurrentBP" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_3_PMPS_POST.fbArbiterIO.xTxPDO_state" VarB="SYNC Inputs^TxPDO state" AutoLink="true"/>

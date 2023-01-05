@@ -252,7 +252,7 @@ FOR iIndex := 1 TO 19 DO
 
         fAbsorptionConstant := F_CalculateAbsorptionConstant(
             sElement:=stFilter.sFilterMaterial,
-            fEnergyEV:=GVL.fPhotonEnergy_eV, (* TODO double-check link *)
+            fEnergyEV:=PMPS_GVL.stCurrentBeamParameters.neV,
             fDensity_gm3:=fFilterDensity,
             fAtomicWeight:=fFilterAtomicMass,
             bError=>bError,
