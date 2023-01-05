@@ -4,8 +4,8 @@
 #         Project: plc-lfe-motion.tsproj
 #        PLC name: lfe_motion (lfe_motion Instance)
 # Generated using: pytmc 2.14.1
-# Project version: v1.2.1-80-g0f7d8a2
-#    Project hash: 0f7d8a281a043acc4d71ae02bfc1d3897871f648
+# Project version: v1.2.1-84-g392805c
+#    Project hash: 392805c322a35a10484015d5e7ae910197615190
 #     PLC IP/host: 172.21.88.228
 #      PLC Net ID: 172.21.88.228.1.1
 #  ** Production mode IOC **
@@ -45,7 +45,7 @@ epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
 epicsEnvSet("IPADDR",           "172.21.88.228")
 epicsEnvSet("AMSID",            "172.21.88.228.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "10401")
+epicsEnvSet("ADS_MAX_PARAMS",   "10399")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
@@ -844,7 +844,7 @@ dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:LFE:MOTION,IDX=1")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:LFE:MOTION")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:LFE:MOTION,PROJECT=plc-lfe-motion.tsproj,HASH=0f7d8a2,VERSION=v1.2.1-80-g0f7d8a2,PYTMC=2.14.1,PLC_HOST=172.21.88.228")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:LFE:MOTION,PROJECT=plc-lfe-motion.tsproj,HASH=392805c,VERSION=v1.2.1-84-g392805c,PYTMC=2.14.1,PLC_HOST=172.21.88.228")
 
 #   LCLS General: * -> 2.4.2 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:LFE:MOTION,DEPENDENCY=LCLS_General,VERSION=2.4.2,VENDOR=SLAC")
@@ -872,8 +872,8 @@ cd "$(IOC_TOP)"
 ## PLC Project Database files ##
 dbLoadRecords("lfe_motion.db", "PORT=$(ASYN_PORT),PREFIX=PLC:LFE:MOTION:,IOCNAME=$(IOC),IOC=$(IOC)")
 
-# Total records: 9401
-callbackSetQueueSize(20802)
+# Total records: 9399
+callbackSetQueueSize(20798)
 
 # Autosave and archive settings:
 save_restoreSet_status_prefix("PLC:LFE:MOTION:")
