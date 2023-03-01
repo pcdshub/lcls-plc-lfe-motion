@@ -195,9 +195,6 @@ GVL
         bInitIM3L0: BOOL;
         bInitIM4L0: BOOL;
 
-        (* Photon energy comes from the arbiter (see PMPS_PRE.IO Inputs.rPhotonEnergy!) *)
-        {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:PhotonEnergy'}
-        fPhotonEnergy_eV AT %I* : REAL;
         {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:PMPS:ReqTrans'}
         rReqTrans AT %I*		: ARRAY [1..PMPS_GVL.AUX_ATTENUATORS] OF ST_PMPS_Attenuator_IO;
         {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:PMPS:CurTrans'}
@@ -383,14 +380,47 @@ Main
         M32: DUT_MotionStage := (sName := 'PF1L0:WFS:MMS:02');
 
         // RTDSL0: 8 Axes
-        M33: DUT_MotionStage;
+        {attribute 'pytmc' := 'pv: RTDSL0:DIODE:MMS:01'}
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[RTDSL0-EL7041-01]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable := TIIB[RTDSL0-EL7041-01]^STM Status^Status^Digital input 2'}
+        M33: DUT_MotionStage := (sName := 'RTDSL0:DIODE:MMS:01');
         M34: DUT_MotionStage;
         M35: DUT_MotionStage;
         M36: DUT_MotionStage;
         M37: DUT_MotionStage;
+        //to be uncommented when the mccallister stage on RTDSK0 is moved to RTDSLo
+        (*
+        {attribute 'pytmc' := 'pv: RTDSL0:SCRP:MMS:01'}
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[RTDSL0-EL7041-02]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable := TIIB[RTDSL0-EL7041-02]^STM Status^Status^Digital input 2'}
+        M34: DUT_MotionStage := (sName := 'RTDSL0:SCRP:MMS:01');
+        {attribute 'pytmc' := 'pv: RTDSL0:SCRP:MMS:02'}
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[RTDSL0-EL7041-03]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable := TIIB[RTDSL0-EL7041-03]^STM Status^Status^Digital input 2'}
+        M35: DUT_MotionStage := (sName := 'RTDSL0:SCRP:MMS:02');
+        {attribute 'pytmc' := 'pv: RTDSL0:SCRP:MMS:03'}
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[RTDSL0-EL7041-04]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable := TIIB[RTDSL0-EL7041-04]^STM Status^Status^Digital input 2'}
+        M36: DUT_MotionStage := (sName := 'RTDSL0:SCRP:MMS:03');
+        *)
+        //LDM on RTDSL0
+        {attribute 'pytmc' := 'pv: RTDSL0:LDM:MMS:01'}
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[RTDSL0-EL7041-05]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable := TIIB[RTDSL0-EL7041-05]^STM Status^Status^Digital input 2;
+                                   .nRawEncoderINT := TIIB[Term 113 (EL3054)]^AI Standard Channel 1^Value'}
+        //M37: DUT_MotionStage := (sName := 'RTDSL0:LDM:MMS:01');
         M38: DUT_MotionStage;
         M39: DUT_MotionStage;
         M40: DUT_MotionStage;
+
+        // to be uncommented when mccallister stage is moved from RTDSK0 -> RTDSL0
+        (*
+        {attribute 'pytmc' := 'pv: RTDSL0:SCRP:LED:01'}
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[RTDSK0-EL7041-04]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable := TIIB[RTDSK0-EL7041-04]^STM Status^Status^Digital input 2'}
+        LED1: ENUM_XPIM_States;
+        *)
+
 
         // SL1L0-POWER: 4 Axes
         {attribute 'pytmc' := 'pv: SL1L0:POWER:MMS:BOTTOM'}
@@ -451,6 +481,24 @@ Main
         {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E6-MOTORS]^STM Status^Status^Digital input 1;
                                   .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E6-MOTORS]^STM Status^Status^Digital input 2'}
         M54: DUT_MotionStage := (sName := 'SP1L0:KMONO:MMS:DIODE_VERT');
+
+            // Three_Stage_RTDSX0: 3 Axes
+         (*   to uncomment when stage is moved to RTDSL0
+        {attribute 'pytmc' := 'pv: RTDSX0:MMS:01'}
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2;
+                                  .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1'}
+        M55: DUT_MotionStage := (sName := 'RTDSX0:MMS:01');
+
+         {attribute 'pytmc' := 'pv: RTDSX0:MMS:02'}
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2;
+                                  .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1'}
+        M56: DUT_MotionStage := (sName := 'RTDSX0:MMS:02');
+
+        {attribute 'pytmc' := 'pv: RTDSX0:MMS:03'}
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2;
+                                  .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1'}
+        M57: DUT_MotionStage := (sName := 'RTDSX0:MMS:03');
+        *)
     END_VAR
 
 
@@ -477,6 +525,8 @@ RTDSL0
 
         {attribute 'pytmc' :=' pv: RTDSL0:MPA:04 '}
         RTDSL0_MPA_04: FB_MPA := (sName := 'RTDSL0:MPA:04');
+
+
     END_VAR
 
 
@@ -900,6 +950,7 @@ FB_MPA
     ACT_IO();
 
     END_FUNCTION_BLOCK
+
     ACTION ACT_IO:
     (*Inputs*)
     q_stAct.i_bInLS :=  i_xInsertedLS;
@@ -1131,6 +1182,7 @@ FB_SLITS
 
 
     END_FUNCTION_BLOCK
+
     ACTION ACT_BLOCK:
     rTrig_Block (CLK:= bBlock);
     rTrig_Open (CLK:= bOpen);
@@ -1154,6 +1206,7 @@ FB_SLITS
         bClose := false;
     END_IF
     END_ACTION
+
     ACTION ACT_CalculatePositions:
     //check if requested center or gap has changed
     //check that the requested values are within acceptable motion range
@@ -1205,9 +1258,11 @@ FB_SLITS
 
     //Update PMPS Arbiter with the Actual Size and Center of the Aperture
     END_ACTION
+
     ACTION ACT_Home:
 
     END_ACTION
+
     ACTION ACT_Init:
     //  init the motion stages parameters
     IF ( bInit) THEN
@@ -1225,6 +1280,7 @@ FB_SLITS
         stSouthBlade.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
     END_IF
     END_ACTION
+
     ACTION ACT_Motion:
     // Instantiate Function block for all the blades
     fbTopBlade(stMotionStage:=stTopBlade);
@@ -1292,6 +1348,7 @@ FB_SLITS
         bMoveOk:=bMoveOk,
         stMotionStage:=stSouthBlade);
     END_ACTION
+
     ACTION ACT_Zero:
     //ZERO BIAS
 
@@ -1443,6 +1500,7 @@ FB_SLITS_POWER
     ACT_RTDs();
 
     END_FUNCTION_BLOCK
+
     ACTION ACT_RTDs:
     ////RTDs
     RTD_TOP_1();
@@ -2013,7 +2071,7 @@ PRG_AT2L0_SOLID
 
             fAbsorptionConstant := F_CalculateAbsorptionConstant(
                 sElement:=stFilter.sFilterMaterial,
-                fEnergyEV:=GVL.fPhotonEnergy_eV, (* TODO double-check link *)
+                fEnergyEV:=PMPS_GVL.stCurrentBeamParameters.neV,
                 fDensity_gm3:=fFilterDensity,
                 fAtomicWeight:=fFilterAtomicMass,
                 bError=>bError,
@@ -2569,6 +2627,15 @@ PRG_IM4L0_XTES
                                   .D[21] := TIIB[IM4L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 21'}
         stEL6Out AT %Q*: EL6OutData22b;
 
+         {attribute 'pytmc' := 'pv: IM4L0:SCRP:LED:01:PWR
+                            io: io
+                            field: ZNAM OFF
+                            field: ONAM ON
+         '}
+
+         {attribute 'TcLinkTo' := 'TIIB[IM4L0-EL2004]^Channel 4^Output'}
+        bIM4L0_SCRP_LED_01 AT %Q*: BOOL;
+
         bInit: BOOL := TRUE;
     END_VAR
     IF bInit THEN
@@ -2715,6 +2782,10 @@ PRG_RTDSL0
 
     PROGRAM PRG_RTDSL0
     VAR
+
+        fbRTDSL0_Diode_MMS_01: FB_MotionStage;
+
+        bInit: BOOL := TRUE;
     END_VAR
     // Placeholder, standard simulated motion for all axes
     //fbMotion1(stMotionStage := Main.M33);
@@ -2765,21 +2836,49 @@ PRG_RTDSL0
         io_fbFFHWO := GVL.fbFastFaultOutput1,
         bEnableFF := FALSE,
     );
+    //  init the motion stages parameters
+    IF ( bInit) THEN
+        Main.M33.bHardwareEnable := TRUE;
+        Main.M33.bPowerSelf :=TRUE;
+        Main.M33.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+        (* uncomment when mccallister goes from RTDSK0 -> RTDSL0
+        Main.M34.bHardwareEnable := TRUE;
+        Main.M34.bPowerSelf :=TRUE;
+        Main.M34.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
 
-    (*
-    RTDSL0_MPA_04(
-        ibInsertOK:= TRUE,
-        ibRetractOK:= TRUE ,
-        ibPMPS_OK:= TRUE ,
-        ibOverrideInterlock:= ,
-        q_stAct=> ,
-        xMPS_OK=> ,
-        xDone=> ,
-        i_xReset := ,
-        io_fbFFHWO := GVL.fbFastFaultOutput1,
-        bEnableFF := TRUE,
-    );
-    *)
+        Main.M35.bHardwareEnable := TRUE;
+        Main.M35.bPowerSelf :=TRUE;
+        Main.M35.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+
+        Main.M36.bHardwareEnable := TRUE;
+        Main.M36.bPowerSelf :=TRUE;
+        Main.M36.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+
+        //LDM motor
+        Main.M37.bHardwareEnable := TRUE;
+        Main.M37.bPowerSelf :=TRUE;
+        Main.M37.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+        *)
+        Main.M33.nHomingMode := ENUM_EpicsHomeCmd.HIGH_LIMIT;
+        //uncomment when mccallister gets moved RTDSK0->RTDSL0
+        //Main.M34.nHomingMode := ENUM_EpicsHomeCmd.HIGH_LIMIT;
+        //Main.M35.nHomingMode := ENUM_EpicsHomeCmd.HIGH_LIMIT;
+        //Main.M36.nHomingMode := ENUM_EpicsHomeCmd.HIGH_LIMIT;
+        Main.M37.nHomingMode := ENUM_EpicsHomeCmd.HIGH_LIMIT;
+
+            bInit := FALSE;
+
+    END_IF
+
+
+    fbRTDSL0_Diode_MMS_01 (stMotionStage := Main.M33);
+    //uncomment when mccallister stage RTDSK0 -> RTDSL0
+    //fbRTDSL0_SCRP_MMS_01 (stMotionStage := Main.M34);
+    //fbRTDSL0_SCRP_MMS_02 (stMotionStage := Main.M35);
+    //fbRTDSL0_SCRP_MMS_03 (stMotionStage := Main.M36);
+    //fbRTDSL0_LDM_MMS_01 (stMotionStage := Main.M37);
+    //uncomment when mccallister stage RTDSK0->RTDSL0
+    //fbRTDSK0_SCRP_LED_01 (enumXPIM := Main.LED1);
 
     END_PROGRAM
 
@@ -2787,6 +2886,7 @@ PRG_RTDSL0
 Related:
     * `GVL`_
     * `Main`_
+    * `RTDSL0`_
 
 
 PRG_SL1L0_POWER

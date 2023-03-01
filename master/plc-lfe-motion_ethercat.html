@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Box Hierarchy &mdash; pcdshub/lcls-plc-lfe-motion  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/docs-versions-menu.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Boxes" href="plc-lfe-motion_boxes.html" />
+    <link rel="prev" title="NC Settings" href="plc-lfe-motion_nc.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pcdshub/lcls-plc-lfe-motion
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">plc-lfe-motion</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_pragmas.html">Pragmas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_nc.html">NC Settings</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Box Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_boxes.html">Boxes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_links.html">Links</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">lfe_motion</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_lfe_motion_summary.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_lfe_motion_summary.html#pragmas">Pragmas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_lfe_motion_summary.html#libraries">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_lfe_motion_summary.html#symbols">Symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_lfe_motion_epics.html">Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_lfe_motion_epics.html#database-records">Database Records</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_lfe_motion_source.html">DUTs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_lfe_motion_source.html#gvls">GVLs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_lfe_motion_source.html#pous">POUs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pcdshub/lcls-plc-lfe-motion</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Box Hierarchy</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/plc-lfe-motion_ethercat.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="box-hierarchy">
+<h1>Box Hierarchy<a class="headerlink" href="#box-hierarchy" title="Permalink to this heading"></a></h1>
+<ol class="arabic">
+<li><dl>
+<dt><strong>Power (EK1200) [ID: 1]</strong></dt><dd><blockquote>
+<div><p>EK1200-5000 EtherCAT Power supply (2A E-Bus)</p>
+</div></blockquote>
+<ol class="arabic">
+<li><dl class="simple">
+<dt>PMPS_FFO [ID: 2]</dt><dd><p>EL2202 2Ch. Dig. Output 24V, 0.5A</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>License (EL6070) [ID: 7]</dt><dd><p>EL6070 1Ch. Licensing-Terminal</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>PMPS_PRE [ID: 3]</dt><dd><p>EL6695 EtherCAT Bridge terminal (Primary)</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>PLC Junction 1 (EK1122) [ID: 4]</dt><dd><blockquote>
+<div><p>EK1122 2 port EtherCAT junction</p>
+</div></blockquote>
+<ol class="arabic">
+<li><dl>
+<dt><strong>X1 RTDSL0 (EK1100) [ID: 8]</strong></dt><dd><blockquote>
+<div><p>EK1100 EtherCAT Coupler (2A E-Bus)</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>RTDSL0-EL7041-01 [ID: 131]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>RTDSL0-EL7041-02 [ID: 132]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>RTDSL0-EL7041-03 [ID: 133]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>RTDSL0-EL7041-04 [ID: 134]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>RTDSL0-EL7041-05 [ID: 135]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Term 110 (EL7041-1000) [ID: 136]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL7041-1000 1Ch. Stepper motor output stage (50V, 5A, standard)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Term 111 (EL7041-1000) [ID: 137]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL7041-1000 1Ch. Stepper motor output stage (50V, 5A, standard)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>RTDSL0-MPA-EL2008 [ID: 22]</dt><dd><p>EL2008 8Ch. Dig. Output 24V, 0.5A</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>RTDSL0-MPA-EL1008 [ID: 138]</dt><dd><p>EL1008 8Ch. Dig. Input 24V, 3ms</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Term 113 (EL3054) [ID: 139]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL3054 4Ch. Ana. Input 4-20mA</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Term 114 (EL6021) [ID: 140]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL6021 Interface (RS422/485)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Term 115 (EL2008) [ID: 141]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL2008 8Ch. Dig. Output 24V, 0.5A</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Term 116 (EL1008) [ID: 142]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL1008 8Ch. Dig. Input 24V, 3ms</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Term 117 (EL9410) [ID: 143]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL9410 E-Bus Power Supplier  (Diagnostics)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Term 118 (EL3062) [ID: 144]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL3062 2Ch. Ana. Input 0-10V</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Term 119 (EL1002) [ID: 145]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL1002 2Ch. Dig. Input 24V, 3ms</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Term 120 (EL1002) [ID: 146]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL1002 2Ch. Dig. Input 24V, 3ms</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Term 121 (EL2004) [ID: 147]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL2004 4Ch. Dig. Output 24V, 0.5A</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Term 122 (EL1002) [ID: 148]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL1002 2Ch. Dig. Input 24V, 3ms</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Term 123 (EL1004) [ID: 149]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL1004 4Ch. Dig. Input 24V, 3ms</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Term 124 (EL1004) [ID: 150]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL1004 4Ch. Dig. Input 24V, 3ms</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Term 125 (EL2624) [ID: 151]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL2624 4Ch. Relay Output, NO (125V AC / 30V DC)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Term 126 (EL9515) [ID: 152]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL9515 Netzteilklemme 15V</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Term 127 (EL9515) [ID: 153]</dt><dd><p>( <strong>SyncUnit=RTDSL0</strong> )    EL9515 Netzteilklemme 15V</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Term 128 (EL9011) [ID: 154]</dt><dd><p>EL9011 End Terminal</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>X2 IM1L0-XTES (EK1100) [ID: 9]</strong></dt><dd><blockquote>
+<div><p>EK1100 EtherCAT Coupler (2A E-Bus)</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>IM1L0-EL7041 [ID: 26]</dt><dd><p>( <strong>SyncUnit=IM1L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM1L0-EL2004 [ID: 27]</dt><dd><p>( <strong>SyncUnit=IM1L0</strong> )    EL2004 4Ch. Dig. Output 24V, 0.5A</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM1L0-EL5101-01 [ID: 28]</dt><dd><p>( <strong>SyncUnit=IM1L0</strong> )    EL5101 1Ch. Inc. Encoder 5V</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM1L0-EL5101-02 [ID: 29]</dt><dd><p>( <strong>SyncUnit=IM1L0</strong> )    EL5101 1Ch. Inc. Encoder 5V</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM1L0-EL1088 [ID: 30]</dt><dd><p>( <strong>SyncUnit=IM1L0</strong> )    EL1088 8Ch. Dig. Input 24V, 3ms, negative</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM1L0-EL7342 [ID: 31]</dt><dd><p>( <strong>SyncUnit=IM1L0</strong> )    EL7342 2Ch. DC motor output stage (50V, 3.5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM1L0-EL3054 [ID: 32]</dt><dd><p>( <strong>SyncUnit=IM1L0</strong> )    EL3054 4Ch. Ana. Input 4-20mA</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM1L0-EL6021 [ID: 33]</dt><dd><p>( <strong>SyncUnit=IM1L0</strong> )    EL6021 Interface (RS422/485)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM1L0-EL6002 [ID: 34]</dt><dd><p>( <strong>SyncUnit=IM1L0</strong> )    EL6002 Interface 2Ch. (RS232)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM1L0-EL9011 [ID: 35]</dt><dd><p>EL9011 End Terminal</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>PLC Junction 2 (EK1122) [ID: 5]</dt><dd><blockquote>
+<div><p>EK1122 2 port EtherCAT junction</p>
+</div></blockquote>
+<ol class="arabic">
+<li><dl>
+<dt><strong>X1 HXR EC1 (EK1100) [ID: 10]</strong></dt><dd><blockquote>
+<div><p>EK1100 EtherCAT Coupler (2A E-Bus)</p>
+</div></blockquote>
+<ol class="arabic">
+<li><dl>
+<dt>EC1 E1 (EK1122) [ID: 12]</dt><dd><blockquote>
+<div><p>EK1122 2 port EtherCAT junction</p>
+</div></blockquote>
+<ol class="arabic">
+<li><dl>
+<dt><strong>X1 SL1L0-Power (EK1100) [ID: 17]</strong></dt><dd><blockquote>
+<div><p>EK1100 EtherCAT Coupler (2A E-Bus)</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>SL1L0-EL7041-E1 [ID: 130]</dt><dd><p>( <strong>SyncUnit=SL1L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL1L0-EL5042-E2 [ID: 107]</dt><dd><p>( <strong>SyncUnit=SL1L0</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL1L0-EL7041-E3 [ID: 98]</dt><dd><p>( <strong>SyncUnit=SL1L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL1L0-EL2004-E4 [ID: 102]</dt><dd><p>( <strong>SyncUnit=SL1L0</strong> )    EL2004 4Ch. Dig. Output 24V, 0.5A</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL1L0-EL7041-E5 [ID: 108]</dt><dd><p>( <strong>SyncUnit=SL1L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL1L0-EL5042-E6 [ID: 99]</dt><dd><p>( <strong>SyncUnit=SL1L0</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL1L0-EL7041-E7 [ID: 100]</dt><dd><p>( <strong>SyncUnit=SL1L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL1L0-EL3202-E8 [ID: 101]</dt><dd><p>( <strong>SyncUnit=SL1L0</strong> )    EL3202 2Ch. Ana. Input PT100 (RTD)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL1L0-EL3202-E9 [ID: 105]</dt><dd><p>( <strong>SyncUnit=SL1L0</strong> )    EL3202 2Ch. Ana. Input PT100 (RTD)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL1L0-EL3202-E10 [ID: 106]</dt><dd><p>( <strong>SyncUnit=SL1L0</strong> )    EL3202 2Ch. Ana. Input PT100 (RTD)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL1L0-EL3202-E11 [ID: 129]</dt><dd><p>( <strong>SyncUnit=SL1L0</strong> )    EL3202 2Ch. Ana. Input PT100 (RTD)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL1L0-EL1004-E12 [ID: 83]</dt><dd><p>( <strong>SyncUnit=SL1L0</strong> )    EL1004 4Ch. Dig. Input 24V, 3ms</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL1L0-EL9011 [ID: 84]</dt><dd><p>EL9011 End Terminal</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>X2 AT2L0-SOLID (EK1100) [ID: 18]</strong></dt><dd><blockquote>
+<div><p>EK1100 EtherCAT Coupler (2A E-Bus)</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>AT2L0-EL7041-01 [ID: 109]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL7041-02 [ID: 110]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL7041-03 [ID: 111]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL7041-04 [ID: 112]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL7041-05 [ID: 113]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL7041-06 [ID: 114]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL7041-07 [ID: 115]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL7041-08 [ID: 116]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL7041-09 [ID: 117]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL7041-10 [ID: 118]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL9410 [ID: 119]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL9410 E-Bus Power Supplier  (Diagnostics)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL7041-11 [ID: 120]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL7041-12 [ID: 121]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL7041-13 [ID: 122]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL7041-14 [ID: 123]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL7041-15 [ID: 124]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL7041-16 [ID: 125]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL7041-17 [ID: 126]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL7041-18 [ID: 127]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL7041-19 [ID: 128]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>AT2L0-SOLID-ENC (EK1100) [ID: 72]</strong></dt><dd><blockquote>
+<div><p>EK1100 EtherCAT Coupler (2A E-Bus)</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>AT2L0-EL5042-01 [ID: 73]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL5042-02 [ID: 74]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL5042-03 [ID: 75]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL5042-04 [ID: 76]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL5042-05 [ID: 77]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL5042-06 [ID: 78]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL5042-07 [ID: 79]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL5042-08 [ID: 80]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL5042-09 [ID: 81]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL5042-10 [ID: 82]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL1004 [ID: 103]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL1004 4Ch. Dig. Input 24V, 3ms</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>AT2L0-EL2004 [ID: 104]</dt><dd><p>( <strong>SyncUnit=AT2L0</strong> )    EL2004 4Ch. Dig. Output 24V, 0.5A</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>EC1 E2 (EK1122) [ID: 13]</dt><dd><blockquote>
+<div><p>EK1122 2 port EtherCAT junction</p>
+</div></blockquote>
+<ol class="arabic">
+<li><dl>
+<dt><strong>X1 IM2L0-XTES (EK1100) [ID: 19]</strong></dt><dd><blockquote>
+<div><p>EK1100 EtherCAT Coupler (2A E-Bus)</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>IM2L0-EL7041 [ID: 36]</dt><dd><p>( <strong>SyncUnit=IM2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM2L0-EL2004 [ID: 37]</dt><dd><p>( <strong>SyncUnit=IM2L0</strong> )    EL2004 4Ch. Dig. Output 24V, 0.5A</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM2L0-EL5042 [ID: 38]</dt><dd><p>( <strong>SyncUnit=IM2L0</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM2L0-EL7342 [ID: 39]</dt><dd><p>( <strong>SyncUnit=IM2L0</strong> )    EL7342 2Ch. DC motor output stage (50V, 3.5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM2L0-EL1088 [ID: 40]</dt><dd><p>( <strong>SyncUnit=IM2L0</strong> )    EL1088 8Ch. Dig. Input 24V, 3ms, negative</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM2L0-EL6002 [ID: 41]</dt><dd><p>( <strong>SyncUnit=IM2L0</strong> )    EL6002 Interface 2Ch. (RS232)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM2L0-EL9011 [ID: 42]</dt><dd><p>EL9011 End Terminal</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>X2 SL2L0-Power (EK1100) [ID: 20]</strong></dt><dd><blockquote>
+<div><p>(<strong>Disabled</strong>)    EK1100 EtherCAT Coupler (2A E-Bus)</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>SL2L0-EL7041-E1 [ID: 85]</dt><dd><p>( <strong>SyncUnit=SL2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL2L0-EL5042-E2 [ID: 86]</dt><dd><p>( <strong>SyncUnit=SL2L0</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL2L0-EL7041-E3 [ID: 87]</dt><dd><p>( <strong>SyncUnit=SL2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL2L0-EL2004-E4 [ID: 88]</dt><dd><p>( <strong>SyncUnit=SL2L0</strong> )    EL2004 4Ch. Dig. Output 24V, 0.5A</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL2L0-EL7041-E5 [ID: 89]</dt><dd><p>( <strong>SyncUnit=SL2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL2L0-EL5042-E6 [ID: 90]</dt><dd><p>( <strong>SyncUnit=SL2L0</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL2L0-EL7041-E7 [ID: 91]</dt><dd><p>( <strong>SyncUnit=SL2L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL2L0-EL3202-E8 [ID: 92]</dt><dd><p>( <strong>SyncUnit=SL2L0</strong> )    EL3202 2Ch. Ana. Input PT100 (RTD)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL2L0-EL3202-E9 [ID: 93]</dt><dd><p>( <strong>SyncUnit=SL2L0</strong> )    EL3202 2Ch. Ana. Input PT100 (RTD)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL2L0-EL3202-E10 [ID: 94]</dt><dd><p>( <strong>SyncUnit=SL2L0</strong> )    EL3202 2Ch. Ana. Input PT100 (RTD)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL2L0-EL3202-E11 [ID: 95]</dt><dd><p>( <strong>SyncUnit=SL2L0</strong> )    EL3202 2Ch. Ana. Input PT100 (RTD)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL2L0-EL1004-E12 [ID: 96]</dt><dd><p>( <strong>SyncUnit=SL2L0</strong> )    EL1004 4Ch. Dig. Input 24V, 3ms</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SL2L0-EL9011 [ID: 97]</dt><dd><p>EL9011 End Terminal</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>EC1 E3 (EK1122) [ID: 14]</dt><dd><blockquote>
+<div><p>EK1122 2 port EtherCAT junction</p>
+</div></blockquote>
+<ol class="arabic">
+<li><dl>
+<dt><strong>X1 PF1L0-WFS (EK1100) [ID: 21]</strong></dt><dd><blockquote>
+<div><p>EK1100 EtherCAT Coupler (2A E-Bus)</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>PF1L0-EL7041-01 [ID: 66]</dt><dd><p>( <strong>SyncUnit=PF1L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>PF1L0-EL7041-02 [ID: 67]</dt><dd><p>( <strong>SyncUnit=PF1L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>PF1L0-EL5042 [ID: 68]</dt><dd><p>( <strong>SyncUnit=PF1L0</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>PF1L0-EL2004 [ID: 69]</dt><dd><p>( <strong>SyncUnit=PF1L0</strong> )    EL2004 4Ch. Dig. Output 24V, 0.5A</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>PF1L0-EL3314 [ID: 70]</dt><dd><p>( <strong>SyncUnit=PF1L0</strong> )    EL3314 4Ch. Ana. Input Thermocouple (TC)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>PF1L0-EL9011 [ID: 71]</dt><dd><p>EL9011 End Terminal</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>X2_0 SP1L0-KMONO_MOTOR (EK1100) [ID: 155]</strong></dt><dd><blockquote>
+<div><p>EK1100 EtherCAT Coupler (2A E-Bus)</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>SP1L0-EL7031-E1-MOTORS [ID: 156]</dt><dd><p>( <strong>SyncUnit=SP1L0</strong> )    EL7031 1Ch. Stepper motor output stage (24V, 1.5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SP1L0-EL7041-E2-MOTORS [ID: 157]</dt><dd><p>( <strong>SyncUnit=SP1L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SP1L0-EL7041-E3-MOTORS [ID: 158]</dt><dd><p>( <strong>SyncUnit=SP1L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SP1L0-EL7041-E4-MOTORS [ID: 159]</dt><dd><p>( <strong>SyncUnit=SP1L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SP1L0-EL7041-E5-MOTORS [ID: 160]</dt><dd><p>( <strong>SyncUnit=SP1L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SP1L0-EL7041-E6-MOTORS [ID: 161]</dt><dd><p>( <strong>SyncUnit=SP1L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SP1L0-EL9011-E7-MOTORS [ID: 162]</dt><dd><p>EL9011 End Terminal</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>X2_1 SP1L0-KMONO_LVDT (EK1100) [ID: 163]</strong></dt><dd><blockquote>
+<div><p>EK1100 EtherCAT Coupler (2A E-Bus)</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>SP1L0-EL6021-E1-LVDT [ID: 164]</dt><dd><p>( <strong>SyncUnit=SP1L0</strong> )    EL6021 Interface (RS422/485)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SP1L0-EL1004-E2-LVDT [ID: 165]</dt><dd><p>( <strong>SyncUnit=SP1L0</strong> )    EL1004 4Ch. Dig. Input 24V, 3ms</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SP1L0-EL1004-E3-LVDT [ID: 166]</dt><dd><p>( <strong>SyncUnit=SP1L0</strong> )    EL1004 4Ch. Dig. Input 24V, 3ms</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SP1L0-EL3052-E4-LVDT [ID: 167]</dt><dd><p>( <strong>SyncUnit=SP1L0</strong> )    EL3052 2Ch. Ana. Input 4-20mA</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SP1L0-EL3052-E5-LVDT [ID: 168]</dt><dd><p>( <strong>SyncUnit=SP1L0</strong> )    EL3052 2Ch. Ana. Input 4-20mA</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SP1L0-EL3052-E6-LVDT [ID: 169]</dt><dd><p>( <strong>SyncUnit=SP1L0</strong> )    EL3052 2Ch. Ana. Input 4-20mA</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SP1L0-EL9011-E7-LVDT [ID: 170]</dt><dd><p>EL9011 End Terminal</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>X2 HXR EC2 (EK1100) [ID: 11]</strong></dt><dd><blockquote>
+<div><p>EK1100 EtherCAT Coupler (2A E-Bus)</p>
+</div></blockquote>
+<ol class="arabic">
+<li><dl>
+<dt>EC2 E1 (EK1122) [ID: 15]</dt><dd><blockquote>
+<div><p>EK1122 2 port EtherCAT junction</p>
+</div></blockquote>
+<ol class="arabic">
+<li><dl>
+<dt><strong>X1 IM3L0-PPM (EK1100) [ID: 23]</strong></dt><dd><blockquote>
+<div><p>EK1100 EtherCAT Coupler (2A E-Bus)</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>IM3L0-EL7041 [ID: 50]</dt><dd><p>( <strong>SyncUnit=IM3L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM3L0-EL5042 [ID: 51]</dt><dd><p>( <strong>SyncUnit=IM3L0</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM3L0-EL2004 [ID: 52]</dt><dd><p>( <strong>SyncUnit=IM3L0</strong> )    EL2004 4Ch. Dig. Output 24V, 0.5A</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM3L0-EL3314 [ID: 53]</dt><dd><p>( <strong>SyncUnit=IM3L0</strong> )    EL3314 4Ch. Ana. Input Thermocouple (TC)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM3L0-EL3052 [ID: 54]</dt><dd><p>( <strong>SyncUnit=IM3L0</strong> )    EL3052 2Ch. Ana. Input 4-20mA</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM3L0-EL3062 [ID: 55]</dt><dd><p>( <strong>SyncUnit=IM3L0</strong> )    EL3062 2Ch. Ana. Input 0-10V</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM3L0-EL4004 [ID: 56]</dt><dd><p>( <strong>SyncUnit=IM3L0</strong> )    EL4004 4Ch. Ana. Output 0-10V, 12bit</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM3L0-EL9011 [ID: 57]</dt><dd><p>EL9011 End Terminal</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>X2 IM1L1-PPM (EK1100) [ID: 24]</strong></dt><dd><blockquote>
+<div><p>EK1100 EtherCAT Coupler (2A E-Bus)</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>IM1L1-EL7041 [ID: 58]</dt><dd><p>( <strong>SyncUnit=IM1L1</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM1L1-EL5042 [ID: 59]</dt><dd><p>( <strong>SyncUnit=IM1L1</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM1L1-EL2004 [ID: 60]</dt><dd><p>( <strong>SyncUnit=IM1L1</strong> )    EL2004 4Ch. Dig. Output 24V, 0.5A</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM1L1-EL3314 [ID: 61]</dt><dd><p>( <strong>SyncUnit=IM1L1</strong> )    EL3314 4Ch. Ana. Input Thermocouple (TC)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM1L1-EL3052 [ID: 62]</dt><dd><p>( <strong>SyncUnit=IM1L1</strong> )    EL3052 2Ch. Ana. Input 4-20mA</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM1L1-EL3062 [ID: 63]</dt><dd><p>( <strong>SyncUnit=IM1L1</strong> )    EL3062 2Ch. Ana. Input 0-10V</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM1L1-EL4004 [ID: 64]</dt><dd><p>( <strong>SyncUnit=IM1L1</strong> )    EL4004 4Ch. Ana. Output 0-10V, 12bit</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM1L1-EL9011 [ID: 65]</dt><dd><p>EL9011 End Terminal</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>EC2 E2 (EK1122) [ID: 16]</dt><dd><blockquote>
+<div><p>EK1122 2 port EtherCAT junction</p>
+</div></blockquote>
+<ol class="arabic">
+<li><dl>
+<dt><strong>X1 IM4L0-XTES (EK1100) [ID: 25]</strong></dt><dd><blockquote>
+<div><p>EK1100 EtherCAT Coupler (2A E-Bus)</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>IM4L0-EL7041 [ID: 43]</dt><dd><p>( <strong>SyncUnit=IM4L0</strong> )    EL7041 1Ch. Stepper motor output stage (50V, 5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM4L0-EL2004 [ID: 44]</dt><dd><p>( <strong>SyncUnit=IM4L0</strong> )    EL2004 4Ch. Dig. Output 24V, 0.5A</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM4L0-EL5042 [ID: 45]</dt><dd><p>( <strong>SyncUnit=IM4L0</strong> )    EL5042 2Ch. BiSS-C Encoder</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM4L0-EL7342 [ID: 46]</dt><dd><p>( <strong>SyncUnit=IM4L0</strong> )    EL7342 2Ch. DC motor output stage (50V, 3.5A)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM4L0-EL1088 [ID: 47]</dt><dd><p>( <strong>SyncUnit=IM4L0</strong> )    EL1088 8Ch. Dig. Input 24V, 3ms, negative</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM4L0-EL6002 [ID: 48]</dt><dd><p>( <strong>SyncUnit=IM4L0</strong> )    EL6002 Interface 2Ch. (RS232)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>IM4L0-EL9011 [ID: 49]</dt><dd><p>EL9011 End Terminal</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>PLC End Cap (EL9011) [ID: 6]</dt><dd><p>EL9011 End Terminal</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="plc-lfe-motion_nc.html" class="btn btn-neutral float-left" title="NC Settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="plc-lfe-motion_boxes.html" class="btn btn-neutral float-right" title="Boxes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, SLAC National Accelerator Laboratory.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

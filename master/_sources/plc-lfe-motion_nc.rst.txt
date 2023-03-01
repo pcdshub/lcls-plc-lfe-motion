@@ -838,7 +838,8 @@ Axis 23: Axis 23 IM1L1-PPM-MMS
     Dynamic:AccelerationMaximum, 200
     Dynamic:Deceleration, 200
     Dynamic:DecelerationMaximum, 200
-    Dynamic:Jerk, 500
+    Dynamic:DelayTime, 0.004
+    Dynamic:Jerk, 1000
     Enc:EncType, 29
     Enc:Inc:RefSoftSyncMask, #x0000ffff
     Enc:MaxCount, #xffffffff
@@ -850,7 +851,12 @@ Axis 23: Axis 23 IM1L1-PPM-MMS
     Enc:SoftEndMinControl:Enable, true
     Enc:SoftEndMinControl:Range, -101.12
     Id, 23
+    MotionControl:Enable, true
+    MotionControl:Range, 0.0005
+    MotionControl:Time, 1
     OtherSettings:AllowMotionCmdToSlave, true
+    TargetPosControl:Range, 0.01
+    TargetPosControl:Time, 1
     Velo:Maximum, 65
 
 
@@ -953,7 +959,8 @@ Axis 27: Axis 27 IM3L0-PPM-MMS
     Dynamic:AccelerationMaximum, 200
     Dynamic:Deceleration, 200
     Dynamic:DecelerationMaximum, 200
-    Dynamic:Jerk, 500
+    Dynamic:DelayTime, 0.004
+    Dynamic:Jerk, 1000
     Enc:EncType, 29
     Enc:Inc:RefSoftSyncMask, #x0000ffff
     Enc:MaxCount, #xffffffff
@@ -963,7 +970,12 @@ Axis 27: Axis 27 IM3L0-PPM-MMS
     Enc:SoftEndMaxControl:Range, -8
     Enc:SoftEndMinControl:Range, -92.82
     Id, 27
+    MotionControl:Enable, true
+    MotionControl:Range, 0.0005
+    MotionControl:Time, 1
     OtherSettings:AllowMotionCmdToSlave, true
+    TargetPosControl:Range, 0.01
+    TargetPosControl:Time, 1
     Velo:Maximum, 65
 
 
@@ -1129,9 +1141,23 @@ Axis 33: Axis 33
     AxisFolder, RTDSL0
     AxisType, 1
     CreateSymbols, true
-    Enc:EncType, 1
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 4.53125e-05
+    Enc:SoftEndMaxControl:Enable, true
+    Enc:SoftEndMaxControl:Range, 1
+    Enc:SoftEndMinControl:Enable, true
+    Enc:SoftEndMinControl:Range, -35
     Id, 33
     OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 50
+    OtherSettings:PulseDistancePos, 100
+    Velo:FastManual, 20
+    Velo:Maximum, 2
+    Velo:RefSearch, 1
+    Velo:RefSync, 0.1
+    Velo:SlowManual, 5
 
 
 
@@ -1201,7 +1227,10 @@ Axis 37: Axis 37
     AxisFolder, RTDSL0
     AxisType, 1
     CreateSymbols, true
-    Enc:EncType, 1
+    Enc:EncType, 7
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ReferenceSystem, 1
     Id, 37
     OtherSettings:AllowMotionCmdToSlave, true
 

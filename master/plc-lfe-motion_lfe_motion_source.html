@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DUTs &mdash; pcdshub/lcls-plc-lfe-motion  documentation</title>
@@ -11,11 +11,12 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/doctr-versions-menu.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/docs-versions-menu.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -27,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> pcdshub/lcls-plc-lfe-motion
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pcdshub/lcls-plc-lfe-motion
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -41,6 +46,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_pragmas.html">Pragmas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_nc.html">NC Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_ethercat.html">Box Hierarchy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_boxes.html">Boxes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_links.html">Links</a></li>
 </ul>
@@ -109,8 +115,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>DUTs</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">DUTs</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/plc-lfe-motion_lfe_motion_source.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -121,9 +127,9 @@
            <div itemprop="articleBody">
              
   <section id="duts">
-<h1>DUTs<a class="headerlink" href="#duts" title="Permalink to this headline"></a></h1>
+<h1>DUTs<a class="headerlink" href="#duts" title="Permalink to this heading"></a></h1>
 <section id="dut-satt-filter">
-<h2>DUT_SATT_Filter<a class="headerlink" href="#dut-satt-filter" title="Permalink to this headline"></a></h2>
+<h2>DUT_SATT_Filter<a class="headerlink" href="#dut-satt-filter" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TYPE</span> <span class="n">DUT_SATT_Filter</span> <span class="p">:</span>
 <span class="n">STRUCT</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -160,7 +166,7 @@
 </dl>
 </section>
 <section id="e-positionstate">
-<h2>E_PositionState<a class="headerlink" href="#e-positionstate" title="Permalink to this headline"></a></h2>
+<h2>E_PositionState<a class="headerlink" href="#e-positionstate" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TYPE</span> <span class="n">E_PositionState</span> <span class="p">:</span>
 <span class="p">(</span>
 <span class="n">RETRACTED</span>    <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span>
@@ -173,7 +179,7 @@
 </div>
 </section>
 <section id="st-mpa">
-<h2>ST_MPA<a class="headerlink" href="#st-mpa" title="Permalink to this headline"></a></h2>
+<h2>ST_MPA<a class="headerlink" href="#st-mpa" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TYPE</span> <span class="n">ST_MPA</span> <span class="p">:</span>
 <span class="n">STRUCT</span>
 <span class="o">//</span>    <span class="n">i_xInsertLS</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
@@ -266,9 +272,9 @@
 </section>
 </section>
 <section id="gvls">
-<h1>GVLs<a class="headerlink" href="#gvls" title="Permalink to this headline"></a></h1>
+<h1>GVLs<a class="headerlink" href="#gvls" title="Permalink to this heading"></a></h1>
 <section id="global-version">
-<h2>Global_Version<a class="headerlink" href="#global-version" title="Permalink to this headline"></a></h2>
+<h2>Global_Version<a class="headerlink" href="#global-version" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcGenerated&#39;</span><span class="p">}</span>
 <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;no-analysis&#39;</span><span class="p">}</span>
 <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;linkalways&#39;</span><span class="p">}</span>
@@ -281,40 +287,37 @@
 </div>
 </section>
 <section id="gvl">
-<h2>GVL<a class="headerlink" href="#gvl" title="Permalink to this headline"></a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{attribute &#39;qualified_only&#39;}
-VAR_GLOBAL
-    {attribute &#39;pytmc&#39; := &#39;pv: PLC:LFE:MOTION:ARB&#39;}
-    fbArbiter: FB_Arbiter(1);
+<h2>GVL<a class="headerlink" href="#gvl" title="Permalink to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
+<span class="n">VAR_GLOBAL</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: PLC:LFE:MOTION:ARB&#39;</span><span class="p">}</span>
+    <span class="n">fbArbiter</span><span class="p">:</span> <span class="n">FB_Arbiter</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 
-    {attribute &#39;pytmc&#39; := &#39;pv: PLC:LFE:MOTION:FFO:01&#39;}
-    {attribute &#39;TcLinkTo&#39; := &#39;.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output&#39;}
-    fbFastFaultOutput1: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID := &#39;172.21.88.66.1.1&#39;);
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: PLC:LFE:MOTION:FFO:01&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output&#39;</span><span class="p">}</span>
+    <span class="n">fbFastFaultOutput1</span><span class="p">:</span> <span class="n">FB_HardwareFFOutput</span> <span class="o">:=</span> <span class="p">(</span><span class="n">bAutoReset</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">i_sNetID</span> <span class="o">:=</span> <span class="s1">&#39;172.21.88.66.1.1&#39;</span><span class="p">);</span>
 
-    {attribute &#39;pytmc&#39; := &#39;pv: PLC:LFE:MOTION:FFO:02&#39;}
-    {attribute &#39;TcLinkTo&#39; := &#39;.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output&#39;}
-    fbFastFaultOutput2: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID := &#39;172.21.88.66.1.1&#39;);
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: PLC:LFE:MOTION:FFO:02&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output&#39;</span><span class="p">}</span>
+    <span class="n">fbFastFaultOutput2</span><span class="p">:</span> <span class="n">FB_HardwareFFOutput</span> <span class="o">:=</span> <span class="p">(</span><span class="n">bAutoReset</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">i_sNetID</span> <span class="o">:=</span> <span class="s1">&#39;172.21.88.66.1.1&#39;</span><span class="p">);</span>
 
-    bInitIM1L0: BOOL;
-    bInitIM1L1: BOOL;
-    bInitIM2L0: BOOL;
-    bInitIM3L0: BOOL;
-    bInitIM4L0: BOOL;
+    <span class="n">bInitIM1L0</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+    <span class="n">bInitIM1L1</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+    <span class="n">bInitIM2L0</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+    <span class="n">bInitIM3L0</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+    <span class="n">bInitIM4L0</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
-    (* Photon energy comes from the arbiter (see PMPS_PRE.IO Inputs.rPhotonEnergy!) *)
-    {attribute &#39;pytmc&#39; := &#39;pv: PLC:LFE:MOTION:PhotonEnergy&#39;}
-    fPhotonEnergy_eV AT %I* : REAL;
-    {attribute &#39;pytmc&#39; := &#39;pv: PLC:LFE:MOTION:PMPS:ReqTrans&#39;}
-    rReqTrans AT %I*                : ARRAY [1..PMPS_GVL.AUX_ATTENUATORS] OF ST_PMPS_Attenuator_IO;
-    {attribute &#39;pytmc&#39; := &#39;pv: PLC:LFE:MOTION:PMPS:CurTrans&#39;}
-    rCurTrans AT %Q*                : ARRAY [1..PMPS_GVL.AUX_ATTENUATORS] OF ST_PMPS_Attenuator_IO;
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: PLC:LFE:MOTION:PMPS:ReqTrans&#39;</span><span class="p">}</span>
+    <span class="n">rReqTrans</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span>                <span class="p">:</span> <span class="n">ARRAY</span> <span class="p">[</span><span class="mf">1.</span><span class="o">.</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">AUX_ATTENUATORS</span><span class="p">]</span> <span class="n">OF</span> <span class="n">ST_PMPS_Attenuator_IO</span><span class="p">;</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: PLC:LFE:MOTION:PMPS:CurTrans&#39;</span><span class="p">}</span>
+    <span class="n">rCurTrans</span> <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span>                <span class="p">:</span> <span class="n">ARRAY</span> <span class="p">[</span><span class="mf">1.</span><span class="o">.</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">AUX_ATTENUATORS</span><span class="p">]</span> <span class="n">OF</span> <span class="n">ST_PMPS_Attenuator_IO</span><span class="p">;</span>
 
-END_VAR
+<span class="n">END_VAR</span>
 </pre></div>
 </div>
 </section>
 <section id="main">
-<h2>Main<a class="headerlink" href="#main" title="Permalink to this headline"></a></h2>
+<h2>Main<a class="headerlink" href="#main" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
 <span class="p">(</span><span class="o">*</span>
@@ -485,14 +488,47 @@ END_VAR
     <span class="n">M32</span><span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;PF1L0:WFS:MMS:02&#39;</span><span class="p">);</span>
 
     <span class="o">//</span> <span class="n">RTDSL0</span><span class="p">:</span> <span class="mi">8</span> <span class="n">Axes</span>
-    <span class="n">M33</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: RTDSL0:DIODE:MMS:01&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable  := TIIB[RTDSL0-EL7041-01]^STM Status^Status^Digital input 1;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">RTDSL0</span><span class="o">-</span><span class="n">EL7041</span><span class="o">-</span><span class="mi">01</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="s1">&#39;}</span>
+    <span class="n">M33</span><span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;RTDSL0:DIODE:MMS:01&#39;</span><span class="p">);</span>
     <span class="n">M34</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
     <span class="n">M35</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
     <span class="n">M36</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
     <span class="n">M37</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
+    <span class="o">//</span><span class="n">to</span> <span class="n">be</span> <span class="n">uncommented</span> <span class="n">when</span> <span class="n">the</span> <span class="n">mccallister</span> <span class="n">stage</span> <span class="n">on</span> <span class="n">RTDSK0</span> <span class="ow">is</span> <span class="n">moved</span> <span class="n">to</span> <span class="n">RTDSLo</span>
+    <span class="p">(</span><span class="o">*</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: RTDSL0:SCRP:MMS:01&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable  := TIIB[RTDSL0-EL7041-02]^STM Status^Status^Digital input 1;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">RTDSL0</span><span class="o">-</span><span class="n">EL7041</span><span class="o">-</span><span class="mi">02</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="s1">&#39;}</span>
+    <span class="n">M34</span><span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;RTDSL0:SCRP:MMS:01&#39;</span><span class="p">);</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: RTDSL0:SCRP:MMS:02&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable  := TIIB[RTDSL0-EL7041-03]^STM Status^Status^Digital input 1;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">RTDSL0</span><span class="o">-</span><span class="n">EL7041</span><span class="o">-</span><span class="mi">03</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="s1">&#39;}</span>
+    <span class="n">M35</span><span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;RTDSL0:SCRP:MMS:02&#39;</span><span class="p">);</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: RTDSL0:SCRP:MMS:03&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable  := TIIB[RTDSL0-EL7041-04]^STM Status^Status^Digital input 1;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">RTDSL0</span><span class="o">-</span><span class="n">EL7041</span><span class="o">-</span><span class="mi">04</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="s1">&#39;}</span>
+    <span class="n">M36</span><span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;RTDSL0:SCRP:MMS:03&#39;</span><span class="p">);</span>
+    <span class="o">*</span><span class="p">)</span>
+    <span class="o">//</span><span class="n">LDM</span> <span class="n">on</span> <span class="n">RTDSL0</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: RTDSL0:LDM:MMS:01&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable  := TIIB[RTDSL0-EL7041-05]^STM Status^Status^Digital input 1;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">RTDSL0</span><span class="o">-</span><span class="n">EL7041</span><span class="o">-</span><span class="mi">05</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="p">;</span>
+                               <span class="o">.</span><span class="n">nRawEncoderINT</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">Term</span> <span class="mi">113</span> <span class="p">(</span><span class="n">EL3054</span><span class="p">)]</span><span class="o">^</span><span class="n">AI</span> <span class="n">Standard</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Value</span><span class="s1">&#39;}</span>
+    <span class="o">//</span><span class="n">M37</span><span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;RTDSL0:LDM:MMS:01&#39;</span><span class="p">);</span>
     <span class="n">M38</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
     <span class="n">M39</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
     <span class="n">M40</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
+
+    <span class="o">//</span> <span class="n">to</span> <span class="n">be</span> <span class="n">uncommented</span> <span class="n">when</span> <span class="n">mccallister</span> <span class="n">stage</span> <span class="ow">is</span> <span class="n">moved</span> <span class="kn">from</span> <span class="nn">RTDSK0</span> <span class="o">-&gt;</span> <span class="n">RTDSL0</span>
+    <span class="p">(</span><span class="o">*</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: RTDSL0:SCRP:LED:01&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable  := TIIB[RTDSK0-EL7041-04]^STM Status^Status^Digital input 1;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">RTDSK0</span><span class="o">-</span><span class="n">EL7041</span><span class="o">-</span><span class="mi">04</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="s1">&#39;}</span>
+    <span class="n">LED1</span><span class="p">:</span> <span class="n">ENUM_XPIM_States</span><span class="p">;</span>
+    <span class="o">*</span><span class="p">)</span>
+
 
     <span class="o">//</span> <span class="n">SL1L0</span><span class="o">-</span><span class="n">POWER</span><span class="p">:</span> <span class="mi">4</span> <span class="n">Axes</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: SL1L0:POWER:MMS:BOTTOM&#39;</span><span class="p">}</span>
@@ -553,6 +589,24 @@ END_VAR
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E6-MOTORS]^STM Status^Status^Digital input 1;</span>
                               <span class="o">.</span><span class="n">bLimitBackwardEnable</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">SP1L0</span><span class="o">-</span><span class="n">EL7041</span><span class="o">-</span><span class="n">E6</span><span class="o">-</span><span class="n">MOTORS</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="s1">&#39;}</span>
     <span class="n">M54</span><span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;SP1L0:KMONO:MMS:DIODE_VERT&#39;</span><span class="p">);</span>
+
+        <span class="o">//</span> <span class="n">Three_Stage_RTDSX0</span><span class="p">:</span> <span class="mi">3</span> <span class="n">Axes</span>
+     <span class="p">(</span><span class="o">*</span>   <span class="n">to</span> <span class="n">uncomment</span> <span class="n">when</span> <span class="n">stage</span> <span class="ow">is</span> <span class="n">moved</span> <span class="n">to</span> <span class="n">RTDSL0</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: RTDSX0:MMS:01&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">SP1L0</span><span class="o">-</span><span class="n">EL7041</span><span class="o">-</span><span class="n">E2</span><span class="o">-</span><span class="n">MOTORS</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">1</span><span class="s1">&#39;}</span>
+    <span class="n">M55</span><span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;RTDSX0:MMS:01&#39;</span><span class="p">);</span>
+
+     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: RTDSX0:MMS:02&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">SP1L0</span><span class="o">-</span><span class="n">EL7041</span><span class="o">-</span><span class="n">E2</span><span class="o">-</span><span class="n">MOTORS</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">1</span><span class="s1">&#39;}</span>
+    <span class="n">M56</span><span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;RTDSX0:MMS:02&#39;</span><span class="p">);</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: RTDSX0:MMS:03&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable  := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 2;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">SP1L0</span><span class="o">-</span><span class="n">EL7041</span><span class="o">-</span><span class="n">E2</span><span class="o">-</span><span class="n">MOTORS</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">1</span><span class="s1">&#39;}</span>
+    <span class="n">M57</span><span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;RTDSX0:MMS:03&#39;</span><span class="p">);</span>
+    <span class="o">*</span><span class="p">)</span>
 <span class="n">END_VAR</span>
 </pre></div>
 </div>
@@ -565,7 +619,7 @@ END_VAR
 </dl>
 </section>
 <section id="rtdsl0">
-<h2>RTDSL0<a class="headerlink" href="#rtdsl0" title="Permalink to this headline"></a></h2>
+<h2>RTDSL0<a class="headerlink" href="#rtdsl0" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: RTDSL0:MPA:01 &#39;</span><span class="p">}</span>
@@ -579,6 +633,8 @@ END_VAR
 
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: RTDSL0:MPA:04 &#39;</span><span class="p">}</span>
     <span class="n">RTDSL0_MPA_04</span><span class="p">:</span> <span class="n">FB_MPA</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;RTDSL0:MPA:04&#39;</span><span class="p">);</span>
+
+
 <span class="n">END_VAR</span>
 </pre></div>
 </div>
@@ -591,9 +647,9 @@ END_VAR
 </section>
 </section>
 <section id="pous">
-<h1>POUs<a class="headerlink" href="#pous" title="Permalink to this headline"></a></h1>
+<h1>POUs<a class="headerlink" href="#pous" title="Permalink to this heading"></a></h1>
 <section id="fb-attenuatorelementdensity">
-<h2>FB_AttenuatorElementDensity<a class="headerlink" href="#fb-attenuatorelementdensity" title="Permalink to this headline"></a></h2>
+<h2>FB_AttenuatorElementDensity<a class="headerlink" href="#fb-attenuatorelementdensity" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_AttenuatorElementDensity</span>
 <span class="n">VAR_INPUT</span>
     <span class="n">sName</span> <span class="p">:</span> <span class="n">STRING</span><span class="p">;</span>
@@ -623,7 +679,7 @@ END_VAR
 </div>
 </section>
 <section id="fb-attffo">
-<h2>FB_AttFFO<a class="headerlink" href="#fb-attffo" title="Permalink to this headline"></a></h2>
+<h2>FB_AttFFO<a class="headerlink" href="#fb-attffo" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_AttFFO</span>
 <span class="n">VAR_IN_OUT</span>
     <span class="n">stMotionStage</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
@@ -648,7 +704,7 @@ END_VAR
 </div>
 </section>
 <section id="fb-basicaxisffo">
-<h2>FB_BasicAxisFFO<a class="headerlink" href="#fb-basicaxisffo" title="Permalink to this headline"></a></h2>
+<h2>FB_BasicAxisFFO<a class="headerlink" href="#fb-basicaxisffo" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_BasicAxisFFO</span>
 <span class="p">(</span><span class="o">*</span>
     <span class="n">Placeholder</span> <span class="n">FFO</span> <span class="n">logic</span> <span class="k">for</span> <span class="n">no</span> <span class="n">beam</span> <span class="n">allowed</span><span class="p">,</span> <span class="n">pre</span><span class="o">-</span><span class="n">comissioning</span>
@@ -680,7 +736,7 @@ END_VAR
 </div>
 </section>
 <section id="fb-basicmotionstagealtffo">
-<h2>FB_BasicMotionStageAltFFO<a class="headerlink" href="#fb-basicmotionstagealtffo" title="Permalink to this headline"></a></h2>
+<h2>FB_BasicMotionStageAltFFO<a class="headerlink" href="#fb-basicmotionstagealtffo" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_BasicMotionStageAltFFO</span>
 <span class="p">(</span><span class="o">*</span>
     <span class="n">Alternative</span> <span class="n">to</span> <span class="n">FB_BasicMotionStageFFO</span> <span class="k">for</span> <span class="n">an</span> <span class="n">arbitrary</span> <span class="n">out</span> <span class="n">condition</span>
@@ -726,7 +782,7 @@ END_VAR
 </dl>
 </section>
 <section id="fb-basicmotionstageffo">
-<h2>FB_BasicMotionStageFFO<a class="headerlink" href="#fb-basicmotionstageffo" title="Permalink to this headline"></a></h2>
+<h2>FB_BasicMotionStageFFO<a class="headerlink" href="#fb-basicmotionstageffo" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_BasicMotionStageFFO</span>
 <span class="p">(</span><span class="o">*</span>
     <span class="n">Placeholder</span> <span class="n">FFO</span> <span class="n">logic</span> <span class="k">for</span> <span class="n">no</span> <span class="n">beam</span> <span class="n">allowed</span><span class="p">,</span> <span class="n">pre</span><span class="o">-</span><span class="n">comissioning</span>
@@ -777,7 +833,7 @@ END_VAR
 </dl>
 </section>
 <section id="fb-doubleactingmpa">
-<h2>FB_DoubleActingMPA<a class="headerlink" href="#fb-doubleactingmpa" title="Permalink to this headline"></a></h2>
+<h2>FB_DoubleActingMPA<a class="headerlink" href="#fb-doubleactingmpa" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_DoubleActingMPA</span>
 <span class="n">VAR_IN_OUT</span>
     <span class="n">iq_MPA</span> <span class="p">:</span> <span class="n">DUT_DoubleActPneumaticActuator</span><span class="p">;</span>
@@ -822,7 +878,7 @@ END_VAR
 </div>
 </section>
 <section id="fb-mpa">
-<h2>FB_MPA<a class="headerlink" href="#fb-mpa" title="Permalink to this headline"></a></h2>
+<h2>FB_MPA<a class="headerlink" href="#fb-mpa" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_MPA</span>
 <span class="n">VAR_INPUT</span>
     <span class="p">(</span><span class="o">*</span><span class="n">EPS</span> <span class="n">Interlock</span> <span class="n">Bits</span><span class="o">*</span><span class="p">)</span>
@@ -985,6 +1041,7 @@ END_VAR
 <span class="n">ACT_IO</span><span class="p">();</span>
 
 <span class="n">END_FUNCTION_BLOCK</span>
+
 <span class="n">ACTION</span> <span class="n">ACT_IO</span><span class="p">:</span>
 <span class="p">(</span><span class="o">*</span><span class="n">Inputs</span><span class="o">*</span><span class="p">)</span>
 <span class="n">q_stAct</span><span class="o">.</span><span class="n">i_bInLS</span> <span class="o">:=</span>  <span class="n">i_xInsertedLS</span><span class="p">;</span>
@@ -1004,7 +1061,7 @@ END_VAR
 </dl>
 </section>
 <section id="fb-simmotor">
-<h2>FB_SimMotor<a class="headerlink" href="#fb-simmotor" title="Permalink to this headline"></a></h2>
+<h2>FB_SimMotor<a class="headerlink" href="#fb-simmotor" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_SimMotor</span>
 <span class="n">VAR_IN_OUT</span>
     <span class="n">stMotionStage</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
@@ -1024,7 +1081,7 @@ END_VAR
 </div>
 </section>
 <section id="fb-slits">
-<h2>FB_SLITS<a class="headerlink" href="#fb-slits" title="Permalink to this headline"></a></h2>
+<h2>FB_SLITS<a class="headerlink" href="#fb-slits" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_SLITS</span>
 <span class="n">VAR_IN_OUT</span>
     <span class="n">stTopBlade</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
@@ -1212,6 +1269,7 @@ END_VAR
 
 
 <span class="n">END_FUNCTION_BLOCK</span>
+
 <span class="n">ACTION</span> <span class="n">ACT_BLOCK</span><span class="p">:</span>
 <span class="n">rTrig_Block</span> <span class="p">(</span><span class="n">CLK</span><span class="o">:=</span> <span class="n">bBlock</span><span class="p">);</span>
 <span class="n">rTrig_Open</span> <span class="p">(</span><span class="n">CLK</span><span class="o">:=</span> <span class="n">bOpen</span><span class="p">);</span>
@@ -1235,6 +1293,7 @@ END_VAR
     <span class="n">bClose</span> <span class="o">:=</span> <span class="n">false</span><span class="p">;</span>
 <span class="n">END_IF</span>
 <span class="n">END_ACTION</span>
+
 <span class="n">ACTION</span> <span class="n">ACT_CalculatePositions</span><span class="p">:</span>
 <span class="o">//</span><span class="n">check</span> <span class="k">if</span> <span class="n">requested</span> <span class="n">center</span> <span class="ow">or</span> <span class="n">gap</span> <span class="n">has</span> <span class="n">changed</span>
 <span class="o">//</span><span class="n">check</span> <span class="n">that</span> <span class="n">the</span> <span class="n">requested</span> <span class="n">values</span> <span class="n">are</span> <span class="n">within</span> <span class="n">acceptable</span> <span class="n">motion</span> <span class="nb">range</span>
@@ -1286,9 +1345,11 @@ END_VAR
 
 <span class="o">//</span><span class="n">Update</span> <span class="n">PMPS</span> <span class="n">Arbiter</span> <span class="k">with</span> <span class="n">the</span> <span class="n">Actual</span> <span class="n">Size</span> <span class="ow">and</span> <span class="n">Center</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Aperture</span>
 <span class="n">END_ACTION</span>
+
 <span class="n">ACTION</span> <span class="n">ACT_Home</span><span class="p">:</span>
 
 <span class="n">END_ACTION</span>
+
 <span class="n">ACTION</span> <span class="n">ACT_Init</span><span class="p">:</span>
 <span class="o">//</span>  <span class="n">init</span> <span class="n">the</span> <span class="n">motion</span> <span class="n">stages</span> <span class="n">parameters</span>
 <span class="n">IF</span> <span class="p">(</span> <span class="n">bInit</span><span class="p">)</span> <span class="n">THEN</span>
@@ -1306,6 +1367,7 @@ END_VAR
     <span class="n">stSouthBlade</span><span class="o">.</span><span class="n">nBrakeMode</span> <span class="o">:=</span> <span class="n">ENUM_StageBrakeMode</span><span class="o">.</span><span class="n">NO_BRAKE</span><span class="p">;</span>
 <span class="n">END_IF</span>
 <span class="n">END_ACTION</span>
+
 <span class="n">ACTION</span> <span class="n">ACT_Motion</span><span class="p">:</span>
 <span class="o">//</span> <span class="n">Instantiate</span> <span class="n">Function</span> <span class="n">block</span> <span class="k">for</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">blades</span>
 <span class="n">fbTopBlade</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">stTopBlade</span><span class="p">);</span>
@@ -1373,6 +1435,7 @@ END_VAR
     <span class="n">bMoveOk</span><span class="o">:=</span><span class="n">bMoveOk</span><span class="p">,</span>
     <span class="n">stMotionStage</span><span class="o">:=</span><span class="n">stSouthBlade</span><span class="p">);</span>
 <span class="n">END_ACTION</span>
+
 <span class="n">ACTION</span> <span class="n">ACT_Zero</span><span class="p">:</span>
 <span class="o">//</span><span class="n">ZERO</span> <span class="n">BIAS</span>
 
@@ -1461,7 +1524,7 @@ END_VAR
 </div>
 </section>
 <section id="fb-slits-power">
-<h2>FB_SLITS_POWER<a class="headerlink" href="#fb-slits-power" title="Permalink to this headline"></a></h2>
+<h2>FB_SLITS_POWER<a class="headerlink" href="#fb-slits-power" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_SLITS_POWER</span> <span class="n">EXTENDS</span> <span class="n">FB_SLITS</span>
 <span class="n">VAR_INPUT</span>
 <span class="n">END_VAR</span>
@@ -1520,6 +1583,7 @@ END_VAR
 <span class="n">ACT_RTDs</span><span class="p">();</span>
 
 <span class="n">END_FUNCTION_BLOCK</span>
+
 <span class="n">ACTION</span> <span class="n">ACT_RTDs</span><span class="p">:</span>
 <span class="o">////</span><span class="n">RTDs</span>
 <span class="n">RTD_TOP_1</span><span class="p">();</span>
@@ -1544,7 +1608,7 @@ END_VAR
 </dl>
 </section>
 <section id="fb-slits-power-1">
-<h2>FB_SLITS_POWER_1<a class="headerlink" href="#fb-slits-power-1" title="Permalink to this headline"></a></h2>
+<h2>FB_SLITS_POWER_1<a class="headerlink" href="#fb-slits-power-1" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_SLITS_POWER_1</span>
 <span class="n">VAR_IN_OUT</span>
     <span class="n">stTopBlade</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
@@ -1717,7 +1781,7 @@ END_VAR
 </div>
 </section>
 <section id="prg-1-plctask">
-<h2>PRG_1_PlcTask<a class="headerlink" href="#prg-1-plctask" title="Permalink to this headline"></a></h2>
+<h2>PRG_1_PlcTask<a class="headerlink" href="#prg-1-plctask" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_1_PlcTask</span>
 <span class="p">(</span><span class="o">*</span>
     <span class="n">Launch</span> <span class="n">site</span> <span class="k">for</span> <span class="n">each</span> <span class="n">component</span><span class="s1">&#39;s program</span>
@@ -1765,7 +1829,7 @@ END_VAR
 </dl>
 </section>
 <section id="prg-2-pmps-pre">
-<h2>PRG_2_PMPS_PRE<a class="headerlink" href="#prg-2-pmps-pre" title="Permalink to this headline"></a></h2>
+<h2>PRG_2_PMPS_PRE<a class="headerlink" href="#prg-2-pmps-pre" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_2_PMPS_PRE</span>
 <span class="n">VAR</span>
     <span class="n">nCycles</span><span class="p">:</span> <span class="n">UDINT</span> <span class="o">:=</span> <span class="mi">200</span><span class="p">;</span>
@@ -1798,7 +1862,7 @@ END_VAR
 </dl>
 </section>
 <section id="prg-3-pmps-post">
-<h2>PRG_3_PMPS_POST<a class="headerlink" href="#prg-3-pmps-post" title="Permalink to this headline"></a></h2>
+<h2>PRG_3_PMPS_POST<a class="headerlink" href="#prg-3-pmps-post" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_3_PMPS_POST</span>
 <span class="n">VAR</span>
     <span class="n">fbArbiterIO</span><span class="p">:</span> <span class="n">FB_SubSysToArbiter_IO</span><span class="p">;</span>
@@ -1821,7 +1885,7 @@ END_VAR
 </dl>
 </section>
 <section id="prg-4-log">
-<h2>PRG_4_LOG<a class="headerlink" href="#prg-4-log" title="Permalink to this headline"></a></h2>
+<h2>PRG_4_LOG<a class="headerlink" href="#prg-4-log" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_4_LOG</span>
 <span class="n">VAR</span>
     <span class="n">fbLogHandler</span><span class="p">:</span> <span class="n">FB_LogHandler</span><span class="p">;</span>
@@ -1833,7 +1897,7 @@ END_VAR
 </div>
 </section>
 <section id="prg-at2l0-solid">
-<h2>PRG_AT2L0_SOLID<a class="headerlink" href="#prg-at2l0-solid" title="Permalink to this headline"></a></h2>
+<h2>PRG_AT2L0_SOLID<a class="headerlink" href="#prg-at2l0-solid" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_AT2L0_SOLID</span>
 <span class="n">VAR</span>
     <span class="n">bAT2L0_debug</span><span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
@@ -2082,7 +2146,7 @@ END_VAR
 
         <span class="n">fAbsorptionConstant</span> <span class="o">:=</span> <span class="n">F_CalculateAbsorptionConstant</span><span class="p">(</span>
             <span class="n">sElement</span><span class="o">:=</span><span class="n">stFilter</span><span class="o">.</span><span class="n">sFilterMaterial</span><span class="p">,</span>
-            <span class="n">fEnergyEV</span><span class="o">:=</span><span class="n">GVL</span><span class="o">.</span><span class="n">fPhotonEnergy_eV</span><span class="p">,</span> <span class="p">(</span><span class="o">*</span> <span class="n">TODO</span> <span class="n">double</span><span class="o">-</span><span class="n">check</span> <span class="n">link</span> <span class="o">*</span><span class="p">)</span>
+            <span class="n">fEnergyEV</span><span class="o">:=</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">neV</span><span class="p">,</span>
             <span class="n">fDensity_gm3</span><span class="o">:=</span><span class="n">fFilterDensity</span><span class="p">,</span>
             <span class="n">fAtomicWeight</span><span class="o">:=</span><span class="n">fFilterAtomicMass</span><span class="p">,</span>
             <span class="n">bError</span><span class="o">=&gt;</span><span class="n">bError</span><span class="p">,</span>
@@ -2182,7 +2246,7 @@ END_VAR
 </dl>
 </section>
 <section id="prg-im1l0-xtes">
-<h2>PRG_IM1L0_XTES<a class="headerlink" href="#prg-im1l0-xtes" title="Permalink to this headline"></a></h2>
+<h2>PRG_IM1L0_XTES<a class="headerlink" href="#prg-im1l0-xtes" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_IM1L0_XTES</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2300,7 +2364,7 @@ END_VAR
 </dl>
 </section>
 <section id="prg-im1l1-ppm">
-<h2>PRG_IM1L1_PPM<a class="headerlink" href="#prg-im1l1-ppm" title="Permalink to this headline"></a></h2>
+<h2>PRG_IM1L1_PPM<a class="headerlink" href="#prg-im1l1-ppm" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_IM1L1_PPM</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2376,7 +2440,7 @@ END_VAR
 </dl>
 </section>
 <section id="prg-im2l0-xtes">
-<h2>PRG_IM2L0_XTES<a class="headerlink" href="#prg-im2l0-xtes" title="Permalink to this headline"></a></h2>
+<h2>PRG_IM2L0_XTES<a class="headerlink" href="#prg-im2l0-xtes" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_IM2L0_XTES</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2500,7 +2564,7 @@ END_VAR
 </dl>
 </section>
 <section id="prg-im3l0-ppm">
-<h2>PRG_IM3L0_PPM<a class="headerlink" href="#prg-im3l0-ppm" title="Permalink to this headline"></a></h2>
+<h2>PRG_IM3L0_PPM<a class="headerlink" href="#prg-im3l0-ppm" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_IM3L0_PPM</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2575,7 +2639,7 @@ END_VAR
 </dl>
 </section>
 <section id="prg-im4l0-xtes">
-<h2>PRG_IM4L0_XTES<a class="headerlink" href="#prg-im4l0-xtes" title="Permalink to this headline"></a></h2>
+<h2>PRG_IM4L0_XTES<a class="headerlink" href="#prg-im4l0-xtes" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_IM4L0_XTES</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2638,6 +2702,15 @@ END_VAR
                               <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">21</span><span class="p">]</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">IM4L0</span><span class="o">-</span><span class="n">EL6002</span><span class="p">]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">21</span><span class="s1">&#39;}</span>
     <span class="n">stEL6Out</span> <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span><span class="p">:</span> <span class="n">EL6OutData22b</span><span class="p">;</span>
 
+     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: IM4L0:SCRP:LED:01:PWR</span>
+                        <span class="n">io</span><span class="p">:</span> <span class="n">io</span>
+                        <span class="n">field</span><span class="p">:</span> <span class="n">ZNAM</span> <span class="n">OFF</span>
+                        <span class="n">field</span><span class="p">:</span> <span class="n">ONAM</span> <span class="n">ON</span>
+     <span class="s1">&#39;}</span>
+
+     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIIB[IM4L0-EL2004]^Channel 4^Output&#39;</span><span class="p">}</span>
+    <span class="n">bIM4L0_SCRP_LED_01</span> <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+
     <span class="n">bInit</span><span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
 <span class="n">END_VAR</span>
 <span class="n">IF</span> <span class="n">bInit</span> <span class="n">THEN</span>
@@ -2694,7 +2767,7 @@ END_VAR
 </dl>
 </section>
 <section id="prg-pf1l0-wfs">
-<h2>PRG_PF1L0_WFS<a class="headerlink" href="#prg-pf1l0-wfs" title="Permalink to this headline"></a></h2>
+<h2>PRG_PF1L0_WFS<a class="headerlink" href="#prg-pf1l0-wfs" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_PF1L0_WFS</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2781,9 +2854,13 @@ END_VAR
 </dl>
 </section>
 <section id="prg-rtdsl0">
-<h2>PRG_RTDSL0<a class="headerlink" href="#prg-rtdsl0" title="Permalink to this headline"></a></h2>
+<h2>PRG_RTDSL0<a class="headerlink" href="#prg-rtdsl0" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_RTDSL0</span>
 <span class="n">VAR</span>
+
+    <span class="n">fbRTDSL0_Diode_MMS_01</span><span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+
+    <span class="n">bInit</span><span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
 <span class="n">END_VAR</span>
 <span class="o">//</span> <span class="n">Placeholder</span><span class="p">,</span> <span class="n">standard</span> <span class="n">simulated</span> <span class="n">motion</span> <span class="k">for</span> <span class="nb">all</span> <span class="n">axes</span>
 <span class="o">//</span><span class="n">fbMotion1</span><span class="p">(</span><span class="n">stMotionStage</span> <span class="o">:=</span> <span class="n">Main</span><span class="o">.</span><span class="n">M33</span><span class="p">);</span>
@@ -2834,21 +2911,49 @@ END_VAR
     <span class="n">io_fbFFHWO</span> <span class="o">:=</span> <span class="n">GVL</span><span class="o">.</span><span class="n">fbFastFaultOutput1</span><span class="p">,</span>
     <span class="n">bEnableFF</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">,</span>
 <span class="p">);</span>
+<span class="o">//</span>  <span class="n">init</span> <span class="n">the</span> <span class="n">motion</span> <span class="n">stages</span> <span class="n">parameters</span>
+<span class="n">IF</span> <span class="p">(</span> <span class="n">bInit</span><span class="p">)</span> <span class="n">THEN</span>
+    <span class="n">Main</span><span class="o">.</span><span class="n">M33</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+    <span class="n">Main</span><span class="o">.</span><span class="n">M33</span><span class="o">.</span><span class="n">bPowerSelf</span> <span class="o">:=</span><span class="n">TRUE</span><span class="p">;</span>
+    <span class="n">Main</span><span class="o">.</span><span class="n">M33</span><span class="o">.</span><span class="n">nBrakeMode</span> <span class="o">:=</span> <span class="n">ENUM_StageBrakeMode</span><span class="o">.</span><span class="n">NO_BRAKE</span><span class="p">;</span>
+    <span class="p">(</span><span class="o">*</span> <span class="n">uncomment</span> <span class="n">when</span> <span class="n">mccallister</span> <span class="n">goes</span> <span class="kn">from</span> <span class="nn">RTDSK0</span> <span class="o">-&gt;</span> <span class="n">RTDSL0</span>
+    <span class="n">Main</span><span class="o">.</span><span class="n">M34</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+    <span class="n">Main</span><span class="o">.</span><span class="n">M34</span><span class="o">.</span><span class="n">bPowerSelf</span> <span class="o">:=</span><span class="n">TRUE</span><span class="p">;</span>
+    <span class="n">Main</span><span class="o">.</span><span class="n">M34</span><span class="o">.</span><span class="n">nBrakeMode</span> <span class="o">:=</span> <span class="n">ENUM_StageBrakeMode</span><span class="o">.</span><span class="n">NO_BRAKE</span><span class="p">;</span>
 
-<span class="p">(</span><span class="o">*</span>
-<span class="n">RTDSL0_MPA_04</span><span class="p">(</span>
-    <span class="n">ibInsertOK</span><span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-    <span class="n">ibRetractOK</span><span class="o">:=</span> <span class="n">TRUE</span> <span class="p">,</span>
-    <span class="n">ibPMPS_OK</span><span class="o">:=</span> <span class="n">TRUE</span> <span class="p">,</span>
-    <span class="n">ibOverrideInterlock</span><span class="o">:=</span> <span class="p">,</span>
-    <span class="n">q_stAct</span><span class="o">=&gt;</span> <span class="p">,</span>
-    <span class="n">xMPS_OK</span><span class="o">=&gt;</span> <span class="p">,</span>
-    <span class="n">xDone</span><span class="o">=&gt;</span> <span class="p">,</span>
-    <span class="n">i_xReset</span> <span class="o">:=</span> <span class="p">,</span>
-    <span class="n">io_fbFFHWO</span> <span class="o">:=</span> <span class="n">GVL</span><span class="o">.</span><span class="n">fbFastFaultOutput1</span><span class="p">,</span>
-    <span class="n">bEnableFF</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-<span class="p">);</span>
-<span class="o">*</span><span class="p">)</span>
+    <span class="n">Main</span><span class="o">.</span><span class="n">M35</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+    <span class="n">Main</span><span class="o">.</span><span class="n">M35</span><span class="o">.</span><span class="n">bPowerSelf</span> <span class="o">:=</span><span class="n">TRUE</span><span class="p">;</span>
+    <span class="n">Main</span><span class="o">.</span><span class="n">M35</span><span class="o">.</span><span class="n">nBrakeMode</span> <span class="o">:=</span> <span class="n">ENUM_StageBrakeMode</span><span class="o">.</span><span class="n">NO_BRAKE</span><span class="p">;</span>
+
+    <span class="n">Main</span><span class="o">.</span><span class="n">M36</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+    <span class="n">Main</span><span class="o">.</span><span class="n">M36</span><span class="o">.</span><span class="n">bPowerSelf</span> <span class="o">:=</span><span class="n">TRUE</span><span class="p">;</span>
+    <span class="n">Main</span><span class="o">.</span><span class="n">M36</span><span class="o">.</span><span class="n">nBrakeMode</span> <span class="o">:=</span> <span class="n">ENUM_StageBrakeMode</span><span class="o">.</span><span class="n">NO_BRAKE</span><span class="p">;</span>
+
+    <span class="o">//</span><span class="n">LDM</span> <span class="n">motor</span>
+    <span class="n">Main</span><span class="o">.</span><span class="n">M37</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+    <span class="n">Main</span><span class="o">.</span><span class="n">M37</span><span class="o">.</span><span class="n">bPowerSelf</span> <span class="o">:=</span><span class="n">TRUE</span><span class="p">;</span>
+    <span class="n">Main</span><span class="o">.</span><span class="n">M37</span><span class="o">.</span><span class="n">nBrakeMode</span> <span class="o">:=</span> <span class="n">ENUM_StageBrakeMode</span><span class="o">.</span><span class="n">NO_BRAKE</span><span class="p">;</span>
+    <span class="o">*</span><span class="p">)</span>
+    <span class="n">Main</span><span class="o">.</span><span class="n">M33</span><span class="o">.</span><span class="n">nHomingMode</span> <span class="o">:=</span> <span class="n">ENUM_EpicsHomeCmd</span><span class="o">.</span><span class="n">HIGH_LIMIT</span><span class="p">;</span>
+    <span class="o">//</span><span class="n">uncomment</span> <span class="n">when</span> <span class="n">mccallister</span> <span class="n">gets</span> <span class="n">moved</span> <span class="n">RTDSK0</span><span class="o">-&gt;</span><span class="n">RTDSL0</span>
+    <span class="o">//</span><span class="n">Main</span><span class="o">.</span><span class="n">M34</span><span class="o">.</span><span class="n">nHomingMode</span> <span class="o">:=</span> <span class="n">ENUM_EpicsHomeCmd</span><span class="o">.</span><span class="n">HIGH_LIMIT</span><span class="p">;</span>
+    <span class="o">//</span><span class="n">Main</span><span class="o">.</span><span class="n">M35</span><span class="o">.</span><span class="n">nHomingMode</span> <span class="o">:=</span> <span class="n">ENUM_EpicsHomeCmd</span><span class="o">.</span><span class="n">HIGH_LIMIT</span><span class="p">;</span>
+    <span class="o">//</span><span class="n">Main</span><span class="o">.</span><span class="n">M36</span><span class="o">.</span><span class="n">nHomingMode</span> <span class="o">:=</span> <span class="n">ENUM_EpicsHomeCmd</span><span class="o">.</span><span class="n">HIGH_LIMIT</span><span class="p">;</span>
+    <span class="n">Main</span><span class="o">.</span><span class="n">M37</span><span class="o">.</span><span class="n">nHomingMode</span> <span class="o">:=</span> <span class="n">ENUM_EpicsHomeCmd</span><span class="o">.</span><span class="n">HIGH_LIMIT</span><span class="p">;</span>
+
+        <span class="n">bInit</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
+
+<span class="n">END_IF</span>
+
+
+<span class="n">fbRTDSL0_Diode_MMS_01</span> <span class="p">(</span><span class="n">stMotionStage</span> <span class="o">:=</span> <span class="n">Main</span><span class="o">.</span><span class="n">M33</span><span class="p">);</span>
+<span class="o">//</span><span class="n">uncomment</span> <span class="n">when</span> <span class="n">mccallister</span> <span class="n">stage</span> <span class="n">RTDSK0</span> <span class="o">-&gt;</span> <span class="n">RTDSL0</span>
+<span class="o">//</span><span class="n">fbRTDSL0_SCRP_MMS_01</span> <span class="p">(</span><span class="n">stMotionStage</span> <span class="o">:=</span> <span class="n">Main</span><span class="o">.</span><span class="n">M34</span><span class="p">);</span>
+<span class="o">//</span><span class="n">fbRTDSL0_SCRP_MMS_02</span> <span class="p">(</span><span class="n">stMotionStage</span> <span class="o">:=</span> <span class="n">Main</span><span class="o">.</span><span class="n">M35</span><span class="p">);</span>
+<span class="o">//</span><span class="n">fbRTDSL0_SCRP_MMS_03</span> <span class="p">(</span><span class="n">stMotionStage</span> <span class="o">:=</span> <span class="n">Main</span><span class="o">.</span><span class="n">M36</span><span class="p">);</span>
+<span class="o">//</span><span class="n">fbRTDSL0_LDM_MMS_01</span> <span class="p">(</span><span class="n">stMotionStage</span> <span class="o">:=</span> <span class="n">Main</span><span class="o">.</span><span class="n">M37</span><span class="p">);</span>
+<span class="o">//</span><span class="n">uncomment</span> <span class="n">when</span> <span class="n">mccallister</span> <span class="n">stage</span> <span class="n">RTDSK0</span><span class="o">-&gt;</span><span class="n">RTDSL0</span>
+<span class="o">//</span><span class="n">fbRTDSK0_SCRP_LED_01</span> <span class="p">(</span><span class="n">enumXPIM</span> <span class="o">:=</span> <span class="n">Main</span><span class="o">.</span><span class="n">LED1</span><span class="p">);</span>
 
 <span class="n">END_PROGRAM</span>
 </pre></div>
@@ -2857,12 +2962,13 @@ END_VAR
 <dt>Related:</dt><dd><ul class="simple">
 <li><p><a class="reference internal" href="#gvl">GVL</a></p></li>
 <li><p><a class="reference internal" href="#main">Main</a></p></li>
+<li><p><a class="reference internal" href="#rtdsl0">RTDSL0</a></p></li>
 </ul>
 </dd>
 </dl>
 </section>
 <section id="prg-sl1l0-power">
-<h2>PRG_SL1L0_POWER<a class="headerlink" href="#prg-sl1l0-power" title="Permalink to this headline"></a></h2>
+<h2>PRG_SL1L0_POWER<a class="headerlink" href="#prg-sl1l0-power" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_SL1L0_POWER</span>
 <span class="n">VAR</span> <span class="o">//</span> <span class="n">fix</span> <span class="n">linking</span> <span class="n">to</span> <span class="n">rtd</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">following</span> <span class="n">order</span> <span class="n">Bottom</span> <span class="o">-</span> <span class="n">South</span> <span class="o">-</span> <span class="n">TOP</span> <span class="o">-</span> <span class="n">NORTH</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2964,7 +3070,7 @@ END_VAR
 </dl>
 </section>
 <section id="prg-sl2l0-power">
-<h2>PRG_SL2L0_POWER<a class="headerlink" href="#prg-sl2l0-power" title="Permalink to this headline"></a></h2>
+<h2>PRG_SL2L0_POWER<a class="headerlink" href="#prg-sl2l0-power" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_SL2L0_POWER</span>
 <span class="n">VAR</span> <span class="o">//</span> <span class="n">linking</span> <span class="n">to</span> <span class="n">rtd</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">following</span> <span class="n">order</span> <span class="n">Bottom</span> <span class="o">-</span> <span class="n">South</span> <span class="o">-</span> <span class="n">TOP</span> <span class="o">-</span> <span class="n">NORTH</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -3062,7 +3168,7 @@ END_VAR
 </dl>
 </section>
 <section id="prg-sp1l0-kmono">
-<h2>PRG_SP1L0_KMONO<a class="headerlink" href="#prg-sp1l0-kmono" title="Permalink to this headline"></a></h2>
+<h2>PRG_SP1L0_KMONO<a class="headerlink" href="#prg-sp1l0-kmono" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_SP1L0_KMONO</span>
 <span class="n">VAR</span>
     <span class="n">fbMotion1</span><span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
@@ -3223,7 +3329,7 @@ END_VAR
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, SLAC National Accelerator Laboratory.</p>
+    <p>&#169; Copyright 2023, SLAC National Accelerator Laboratory.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
