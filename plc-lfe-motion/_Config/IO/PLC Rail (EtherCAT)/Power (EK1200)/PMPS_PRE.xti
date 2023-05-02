@@ -65,6 +65,18 @@
 			</Hides>
 		</DataType>
 		<DataType>
+			<Name GUID="{6D319B26-4590-2152-3DE7-3BA9B629CA65}" IecBaseType="true" AutoDeleteType="true">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Name>
+			<BitSize>1024</BitSize>
+			<BaseType GUID="{7E016B85-166E-4B4F-AAC4-ECA8DDD44F13}">ST_PMPS_Attenuator_IO</BaseType>
+			<ArrayInfo>
+				<LBound>1</LBound>
+				<Elements>16</Elements>
+			</ArrayInfo>
+			<Hides>
+				<Hide GUID="{63B6CB02-1D33-B57D-1DC8-CC6DA3ED8E9B}"/>
+			</Hides>
+		</DataType>
+		<DataType>
 			<Name GUID="{67AC048F-B785-4A4D-B941-B11E2213F502}">ST_PMPS_Aperture_IO</Name>
 			<BitSize>96</BitSize>
 			<SubItem>
@@ -119,7 +131,7 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name GUID="{C9AB5DB1-1B57-42EF-8E17-FBE97768475C}">ST_BeamParams_IO</Name>
+			<Name GUID="{292CD354-C7C0-4A61-AAD0-1C85DD69646B}">ST_BeamParams_IO</Name>
 			<BitSize>1760</BitSize>
 			<SubItem>
 				<Name>nTran</Name>
@@ -213,6 +225,12 @@
 					<Min>0</Min>
 					<Value>0</Value>
 				</Default>
+			</SubItem>
+			<SubItem>
+				<Name>nMachineMode</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000002}">USINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>152</BitOffs>
 			</SubItem>
 			<SubItem>
 				<Name>astAttenuators</Name>
@@ -328,18 +346,8 @@
 				<Hide GUID="{0E623A01-D6F4-41DD-A8F2-FBC77EE11035}"/>
 				<Hide GUID="{B8136069-15B2-4545-8E40-00504F2F580D}"/>
 				<Hide GUID="{4A38F9D3-765E-4C94-9AAB-7EB5DFA13820}"/>
-			</Hides>
-		</DataType>
-		<DataType>
-			<Name GUID="{6D319B26-4590-2152-3DE7-3BA9B629CA65}" IecBaseType="true" AutoDeleteType="true">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Name>
-			<BitSize>1024</BitSize>
-			<BaseType GUID="{7E016B85-166E-4B4F-AAC4-ECA8DDD44F13}">ST_PMPS_Attenuator_IO</BaseType>
-			<ArrayInfo>
-				<LBound>1</LBound>
-				<Elements>16</Elements>
-			</ArrayInfo>
-			<Hides>
-				<Hide GUID="{63B6CB02-1D33-B57D-1DC8-CC6DA3ED8E9B}"/>
+				<Hide GUID="{C9AB5DB1-1B57-42EF-8E17-FBE97768475C}"/>
+				<Hide GUID="{43851ABC-CF8A-4AF9-A768-E27D209879D8}"/>
 			</Hides>
 		</DataType>
 	</DataTypes>
@@ -630,9 +638,9 @@
 								</SubItem>
 								<SubItem>
 									<SubIdx>1</SubIdx>
-									<Name>RequestedBP</Name>
-									<Type>ARRAY [0..219] OF BYTE</Type>
-									<BitSize>1760</BitSize>
+									<Name>SattArrayStatus</Name>
+									<Type>ARRAY [0..127] OF BYTE</Type>
+									<BitSize>1024</BitSize>
 									<BitOffs>16</BitOffs>
 									<Flags>
 										<Access>rw</Access>
@@ -642,10 +650,10 @@
 								</SubItem>
 								<SubItem>
 									<SubIdx>2</SubIdx>
-									<Name>SattArrayStatus</Name>
-									<Type>ARRAY [0..127] OF BYTE</Type>
-									<BitSize>1024</BitSize>
-									<BitOffs>1776</BitOffs>
+									<Name>RequestedBP</Name>
+									<Type>ARRAY [0..219] OF BYTE</Type>
+									<BitSize>1760</BitSize>
+									<BitOffs>1040</BitOffs>
 									<Flags>
 										<Access>rw</Access>
 										<Category>o</Category>
@@ -669,9 +677,9 @@
 								</SubItem>
 								<SubItem>
 									<SubIdx>1</SubIdx>
-									<Name>CurrentBP</Name>
-									<Type>ARRAY [0..219] OF BYTE</Type>
-									<BitSize>1760</BitSize>
+									<Name>SattArrayReq</Name>
+									<Type>ARRAY [0..127] OF BYTE</Type>
+									<BitSize>1024</BitSize>
 									<BitOffs>16</BitOffs>
 									<Flags>
 										<Access>ro</Access>
@@ -681,10 +689,10 @@
 								</SubItem>
 								<SubItem>
 									<SubIdx>2</SubIdx>
-									<Name>SattArrayReq</Name>
-									<Type>ARRAY [0..127] OF BYTE</Type>
-									<BitSize>1024</BitSize>
-									<BitOffs>1776</BitOffs>
+									<Name>CurrentBP</Name>
+									<Type>ARRAY [0..219] OF BYTE</Type>
+									<BitSize>1760</BitSize>
+									<BitOffs>1040</BitOffs>
 									<Flags>
 										<Access>ro</Access>
 										<Category>o</Category>
@@ -733,13 +741,13 @@
 									<SubItem>
 										<Name>SubIndex 005</Name>
 										<Info>
-											<DefaultData>f0000000</DefaultData>
+											<DefaultData>40000000</DefaultData>
 										</Info>
 									</SubItem>
 									<SubItem>
 										<Name>SubIndex 006</Name>
 										<Info>
-											<DefaultData>f0000000</DefaultData>
+											<DefaultData>f0020060</DefaultData>
 										</Info>
 									</SubItem>
 									<SubItem>
@@ -751,13 +759,13 @@
 									<SubItem>
 										<Name>SubIndex 008</Name>
 										<Info>
-											<DefaultData>50000000</DefaultData>
+											<DefaultData>f0000000</DefaultData>
 										</Info>
 									</SubItem>
 									<SubItem>
 										<Name>SubIndex 009</Name>
 										<Info>
-											<DefaultData>f0020060</DefaultData>
+											<DefaultData>f0000000</DefaultData>
 										</Info>
 									</SubItem>
 									<SubItem>
@@ -781,7 +789,7 @@
 									<SubItem>
 										<Name>SubIndex 013</Name>
 										<Info>
-											<DefaultData>40000000</DefaultData>
+											<DefaultData>50000000</DefaultData>
 										</Info>
 									</SubItem>
 								</Info>
@@ -829,13 +837,13 @@
 									<SubItem>
 										<Name>SubIndex 005</Name>
 										<Info>
-											<DefaultData>f0000000</DefaultData>
+											<DefaultData>40000000</DefaultData>
 										</Info>
 									</SubItem>
 									<SubItem>
 										<Name>SubIndex 006</Name>
 										<Info>
-											<DefaultData>f0000000</DefaultData>
+											<DefaultData>f0020070</DefaultData>
 										</Info>
 									</SubItem>
 									<SubItem>
@@ -847,13 +855,13 @@
 									<SubItem>
 										<Name>SubIndex 008</Name>
 										<Info>
-											<DefaultData>50000000</DefaultData>
+											<DefaultData>f0000000</DefaultData>
 										</Info>
 									</SubItem>
 									<SubItem>
 										<Name>SubIndex 009</Name>
 										<Info>
-											<DefaultData>f0020070</DefaultData>
+											<DefaultData>f0000000</DefaultData>
 										</Info>
 									</SubItem>
 									<SubItem>
@@ -877,7 +885,7 @@
 									<SubItem>
 										<Name>SubIndex 013</Name>
 										<Info>
-											<DefaultData>40000000</DefaultData>
+											<DefaultData>50000000</DefaultData>
 										</Info>
 									</SubItem>
 								</Info>
@@ -959,15 +967,15 @@
 										</Info>
 									</SubItem>
 									<SubItem>
-										<Name>RequestedBP</Name>
-										<Info>
-											<DefaultData>00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DefaultData>
-										</Info>
-									</SubItem>
-									<SubItem>
 										<Name>SattArrayStatus</Name>
 										<Info>
 											<DefaultData>0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>RequestedBP</Name>
+										<Info>
+											<DefaultData>00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DefaultData>
 										</Info>
 									</SubItem>
 								</Info>
@@ -989,15 +997,15 @@
 										</Info>
 									</SubItem>
 									<SubItem>
-										<Name>CurrentBP</Name>
-										<Info>
-											<DefaultData>00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DefaultData>
-										</Info>
-									</SubItem>
-									<SubItem>
 										<Name>SattArrayReq</Name>
 										<Info>
 											<DefaultData>0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>CurrentBP</Name>
+										<Info>
+											<DefaultData>00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DefaultData>
 										</Info>
 									</SubItem>
 								</Info>
@@ -1159,19 +1167,19 @@
 				</Entry>
 			</Pdo>
 			<Pdo Name="IO Inputs" Index="#x1a08" Flags="#x0020" SyncMan="3">
-				<Entry Name="CurrentBP" BitLen="240" Index="#x6000" Sub="#x01">
-					<Type GUID="{C9AB5DB1-1B57-42EF-8E17-FBE97768475C}">ST_BeamParams_IO</Type>
-				</Entry>
-				<Entry Name="SattArrayReq" BitLen="240" Index="#x6000" Sub="#x02">
+				<Entry Name="SattArrayReq" BitLen="240" Index="#x6000" Sub="#x01">
 					<Type GUID="{6D319B26-4590-2152-3DE7-3BA9B629CA65}">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Type>
+				</Entry>
+				<Entry Name="CurrentBP" BitLen="240" Index="#x6000" Sub="#x02">
+					<Type GUID="{292CD354-C7C0-4A61-AAD0-1C85DD69646B}">ST_BeamParams_IO</Type>
 				</Entry>
 			</Pdo>
 			<Pdo Name="IO Outputs" Index="#x1608" InOut="1" Flags="#x0020" SyncMan="2">
-				<Entry Name="RequestedBP" BitLen="240" Index="#x7000" Sub="#x01">
-					<Type GUID="{C9AB5DB1-1B57-42EF-8E17-FBE97768475C}">ST_BeamParams_IO</Type>
-				</Entry>
-				<Entry Name="SattArrayStatus" BitLen="240" Index="#x7000" Sub="#x02">
+				<Entry Name="SattArrayStatus" BitLen="240" Index="#x7000" Sub="#x01">
 					<Type GUID="{6D319B26-4590-2152-3DE7-3BA9B629CA65}">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Type>
+				</Entry>
+				<Entry Name="RequestedBP" BitLen="240" Index="#x7000" Sub="#x02">
+					<Type GUID="{292CD354-C7C0-4A61-AAD0-1C85DD69646B}">ST_BeamParams_IO</Type>
 				</Entry>
 			</Pdo>
 			<CoeProfile ProfileNo="5001"/>
