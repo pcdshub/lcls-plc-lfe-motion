@@ -14,6 +14,13 @@ VAR
                               .fbOpal.bOpalPower := TIIB[IM1L0-EL2004]^Channel 2^Output;
                               .fbLED.bLedPower := TIIB[IM1L0-EL2004]^Channel 3^Output'}
     fbIM1L0: FB_XPIM;
+    {attribute 'pytmc' := '
+        pv: IM1L0:XTES:FLOW_OK
+        field: ZNAM LOW
+        field: ONAM OK
+    '}
+    {attribute 'TcLinkTo' := 'TIIB[IM1L0-EL7342]^DCM Status Channel 1^Status^Digital input 1'}
+    bIM1L0FlowOk AT %I*: BOOL;
     {attribute 'TcLinkTo' := '.Status := TIIB[IM1L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Status;
                               .D[0] := TIIB[IM1L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 0;
                               .D[1] := TIIB[IM1L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 1;
