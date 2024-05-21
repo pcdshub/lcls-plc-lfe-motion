@@ -160,11 +160,12 @@ Global_Version
 ::
 
     {attribute 'TcGenerated'}
+    {attribute 'no-analysis'}
+    {attribute 'linkalways'}
     // This function has been automatically generated from the project information.
     VAR_GLOBAL CONSTANT
         {attribute 'const_non_replaced'}
-        {attribute 'linkalways'}
-        stLibVersion_lcls_plc_lfe_motion : ST_LibVersion := (iMajor := 2, iMinor := 1, iBuild := 0, iRevision := 0, sVersion := '2.1.0');
+        stLibVersion_lcls_plc_lfe_motion : ST_LibVersion := (iMajor := 0, iMinor := 0, iBuild := 0, iRevision := 0, sVersion := '0.0.0');
     END_VAR
 
 
@@ -2184,6 +2185,13 @@ PRG_IM1L0_XTES
                                   .fbOpal.bOpalPower := TIIB[IM1L0-EL2004]^Channel 2^Output;
                                   .fbLED.bLedPower := TIIB[IM1L0-EL2004]^Channel 3^Output'}
         fbIM1L0: FB_XPIM;
+        {attribute 'pytmc' := '
+            pv: IM1L0:XTES:FLOW_OK
+            field: ZNAM LOW
+            field: ONAM OK
+        '}
+        {attribute 'TcLinkTo' := 'TIIB[IM1L0-EL7342]^DCM Status Channel 1^Status^Digital input 1'}
+        bIM1L0FlowOk AT %I*: BOOL;
         {attribute 'TcLinkTo' := '.Status := TIIB[IM1L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Status;
                                   .D[0] := TIIB[IM1L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 0;
                                   .D[1] := TIIB[IM1L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 1;

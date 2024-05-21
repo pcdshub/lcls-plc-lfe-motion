@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DUTs &mdash; pcdshub/lcls-plc-lfe-motion  documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/tree.css?v=837a00b9" />
+      <link rel="stylesheet" type="text/css" href="_static/width.css?v=ab210c7a" />
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/docs-versions-menu.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/docs-versions-menu.js?v=3d6a1aea"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -46,7 +50,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_pragmas.html">Pragmas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_nc.html">NC Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_ethercat.html">Box Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_ethercat.html">EtherCAT Terminals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_boxes.html">Boxes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-motion_links.html">Links</a></li>
 </ul>
@@ -127,9 +131,9 @@
            <div itemprop="articleBody">
              
   <section id="duts">
-<h1>DUTs<a class="headerlink" href="#duts" title="Permalink to this heading"></a></h1>
+<h1>DUTs<a class="headerlink" href="#duts" title="Link to this heading"></a></h1>
 <section id="dut-satt-filter">
-<h2>DUT_SATT_Filter<a class="headerlink" href="#dut-satt-filter" title="Permalink to this heading"></a></h2>
+<h2>DUT_SATT_Filter<a class="headerlink" href="#dut-satt-filter" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TYPE</span> <span class="n">DUT_SATT_Filter</span> <span class="p">:</span>
 <span class="n">STRUCT</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -166,7 +170,7 @@
 </dl>
 </section>
 <section id="e-positionstate">
-<h2>E_PositionState<a class="headerlink" href="#e-positionstate" title="Permalink to this heading"></a></h2>
+<h2>E_PositionState<a class="headerlink" href="#e-positionstate" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TYPE</span> <span class="n">E_PositionState</span> <span class="p">:</span>
 <span class="p">(</span>
 <span class="n">RETRACTED</span>    <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span>
@@ -179,7 +183,7 @@
 </div>
 </section>
 <section id="st-mpa">
-<h2>ST_MPA<a class="headerlink" href="#st-mpa" title="Permalink to this heading"></a></h2>
+<h2>ST_MPA<a class="headerlink" href="#st-mpa" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TYPE</span> <span class="n">ST_MPA</span> <span class="p">:</span>
 <span class="n">STRUCT</span>
 <span class="o">//</span>    <span class="n">i_xInsertLS</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
@@ -272,21 +276,22 @@
 </section>
 </section>
 <section id="gvls">
-<h1>GVLs<a class="headerlink" href="#gvls" title="Permalink to this heading"></a></h1>
+<h1>GVLs<a class="headerlink" href="#gvls" title="Link to this heading"></a></h1>
 <section id="global-version">
-<h2>Global_Version<a class="headerlink" href="#global-version" title="Permalink to this heading"></a></h2>
+<h2>Global_Version<a class="headerlink" href="#global-version" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcGenerated&#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;no-analysis&#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;linkalways&#39;</span><span class="p">}</span>
 <span class="o">//</span> <span class="n">This</span> <span class="n">function</span> <span class="n">has</span> <span class="n">been</span> <span class="n">automatically</span> <span class="n">generated</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">project</span> <span class="n">information</span><span class="o">.</span>
 <span class="n">VAR_GLOBAL</span> <span class="n">CONSTANT</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;const_non_replaced&#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;linkalways&#39;</span><span class="p">}</span>
-    <span class="n">stLibVersion_lcls_plc_lfe_motion</span> <span class="p">:</span> <span class="n">ST_LibVersion</span> <span class="o">:=</span> <span class="p">(</span><span class="n">iMajor</span> <span class="o">:=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">iMinor</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">iBuild</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">iRevision</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">sVersion</span> <span class="o">:=</span> <span class="s1">&#39;2.1.0&#39;</span><span class="p">);</span>
+    <span class="n">stLibVersion_lcls_plc_lfe_motion</span> <span class="p">:</span> <span class="n">ST_LibVersion</span> <span class="o">:=</span> <span class="p">(</span><span class="n">iMajor</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">iMinor</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">iBuild</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">iRevision</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">sVersion</span> <span class="o">:=</span> <span class="s1">&#39;0.0.0&#39;</span><span class="p">);</span>
 <span class="n">END_VAR</span>
 </pre></div>
 </div>
 </section>
 <section id="gvl">
-<h2>GVL<a class="headerlink" href="#gvl" title="Permalink to this heading"></a></h2>
+<h2>GVL<a class="headerlink" href="#gvl" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: PLC:LFE:MOTION:ARB&#39;</span><span class="p">}</span>
@@ -316,7 +321,7 @@
 </div>
 </section>
 <section id="main">
-<h2>Main<a class="headerlink" href="#main" title="Permalink to this heading"></a></h2>
+<h2>Main<a class="headerlink" href="#main" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
 <span class="p">(</span><span class="o">*</span>
@@ -618,7 +623,7 @@
 </dl>
 </section>
 <section id="rtdsl0">
-<h2>RTDSL0<a class="headerlink" href="#rtdsl0" title="Permalink to this heading"></a></h2>
+<h2>RTDSL0<a class="headerlink" href="#rtdsl0" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: RTDSL0:MPA:01 &#39;</span><span class="p">}</span>
@@ -646,9 +651,9 @@
 </section>
 </section>
 <section id="pous">
-<h1>POUs<a class="headerlink" href="#pous" title="Permalink to this heading"></a></h1>
+<h1>POUs<a class="headerlink" href="#pous" title="Link to this heading"></a></h1>
 <section id="fb-attenuatorelementdensity">
-<h2>FB_AttenuatorElementDensity<a class="headerlink" href="#fb-attenuatorelementdensity" title="Permalink to this heading"></a></h2>
+<h2>FB_AttenuatorElementDensity<a class="headerlink" href="#fb-attenuatorelementdensity" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_AttenuatorElementDensity</span>
 <span class="n">VAR_INPUT</span>
     <span class="n">sName</span> <span class="p">:</span> <span class="n">STRING</span><span class="p">;</span>
@@ -678,7 +683,7 @@
 </div>
 </section>
 <section id="fb-attffo">
-<h2>FB_AttFFO<a class="headerlink" href="#fb-attffo" title="Permalink to this heading"></a></h2>
+<h2>FB_AttFFO<a class="headerlink" href="#fb-attffo" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_AttFFO</span>
 <span class="n">VAR_IN_OUT</span>
     <span class="n">stMotionStage</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
@@ -703,7 +708,7 @@
 </div>
 </section>
 <section id="fb-basicaxisffo">
-<h2>FB_BasicAxisFFO<a class="headerlink" href="#fb-basicaxisffo" title="Permalink to this heading"></a></h2>
+<h2>FB_BasicAxisFFO<a class="headerlink" href="#fb-basicaxisffo" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_BasicAxisFFO</span>
 <span class="p">(</span><span class="o">*</span>
     <span class="n">Placeholder</span> <span class="n">FFO</span> <span class="n">logic</span> <span class="k">for</span> <span class="n">no</span> <span class="n">beam</span> <span class="n">allowed</span><span class="p">,</span> <span class="n">pre</span><span class="o">-</span><span class="n">comissioning</span>
@@ -735,7 +740,7 @@
 </div>
 </section>
 <section id="fb-basicmotionstagealtffo">
-<h2>FB_BasicMotionStageAltFFO<a class="headerlink" href="#fb-basicmotionstagealtffo" title="Permalink to this heading"></a></h2>
+<h2>FB_BasicMotionStageAltFFO<a class="headerlink" href="#fb-basicmotionstagealtffo" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_BasicMotionStageAltFFO</span>
 <span class="p">(</span><span class="o">*</span>
     <span class="n">Alternative</span> <span class="n">to</span> <span class="n">FB_BasicMotionStageFFO</span> <span class="k">for</span> <span class="n">an</span> <span class="n">arbitrary</span> <span class="n">out</span> <span class="n">condition</span>
@@ -781,7 +786,7 @@
 </dl>
 </section>
 <section id="fb-basicmotionstageffo">
-<h2>FB_BasicMotionStageFFO<a class="headerlink" href="#fb-basicmotionstageffo" title="Permalink to this heading"></a></h2>
+<h2>FB_BasicMotionStageFFO<a class="headerlink" href="#fb-basicmotionstageffo" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_BasicMotionStageFFO</span>
 <span class="p">(</span><span class="o">*</span>
     <span class="n">Placeholder</span> <span class="n">FFO</span> <span class="n">logic</span> <span class="k">for</span> <span class="n">no</span> <span class="n">beam</span> <span class="n">allowed</span><span class="p">,</span> <span class="n">pre</span><span class="o">-</span><span class="n">comissioning</span>
@@ -832,7 +837,7 @@
 </dl>
 </section>
 <section id="fb-doubleactingmpa">
-<h2>FB_DoubleActingMPA<a class="headerlink" href="#fb-doubleactingmpa" title="Permalink to this heading"></a></h2>
+<h2>FB_DoubleActingMPA<a class="headerlink" href="#fb-doubleactingmpa" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_DoubleActingMPA</span>
 <span class="n">VAR_IN_OUT</span>
     <span class="n">iq_MPA</span> <span class="p">:</span> <span class="n">DUT_DoubleActPneumaticActuator</span><span class="p">;</span>
@@ -877,7 +882,7 @@
 </div>
 </section>
 <section id="fb-mpa">
-<h2>FB_MPA<a class="headerlink" href="#fb-mpa" title="Permalink to this heading"></a></h2>
+<h2>FB_MPA<a class="headerlink" href="#fb-mpa" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_MPA</span>
 <span class="n">VAR_INPUT</span>
     <span class="p">(</span><span class="o">*</span><span class="n">EPS</span> <span class="n">Interlock</span> <span class="n">Bits</span><span class="o">*</span><span class="p">)</span>
@@ -1060,7 +1065,7 @@
 </dl>
 </section>
 <section id="fb-simmotor">
-<h2>FB_SimMotor<a class="headerlink" href="#fb-simmotor" title="Permalink to this heading"></a></h2>
+<h2>FB_SimMotor<a class="headerlink" href="#fb-simmotor" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_SimMotor</span>
 <span class="n">VAR_IN_OUT</span>
     <span class="n">stMotionStage</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
@@ -1080,7 +1085,7 @@
 </div>
 </section>
 <section id="fb-slits">
-<h2>FB_SLITS<a class="headerlink" href="#fb-slits" title="Permalink to this heading"></a></h2>
+<h2>FB_SLITS<a class="headerlink" href="#fb-slits" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_SLITS</span>
 <span class="n">VAR_IN_OUT</span>
     <span class="n">stTopBlade</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
@@ -1523,7 +1528,7 @@
 </div>
 </section>
 <section id="fb-slits-power">
-<h2>FB_SLITS_POWER<a class="headerlink" href="#fb-slits-power" title="Permalink to this heading"></a></h2>
+<h2>FB_SLITS_POWER<a class="headerlink" href="#fb-slits-power" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_SLITS_POWER</span> <span class="n">EXTENDS</span> <span class="n">FB_SLITS</span>
 <span class="n">VAR_INPUT</span>
 <span class="n">END_VAR</span>
@@ -1607,7 +1612,7 @@
 </dl>
 </section>
 <section id="fb-slits-power-1">
-<h2>FB_SLITS_POWER_1<a class="headerlink" href="#fb-slits-power-1" title="Permalink to this heading"></a></h2>
+<h2>FB_SLITS_POWER_1<a class="headerlink" href="#fb-slits-power-1" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_SLITS_POWER_1</span>
 <span class="n">VAR_IN_OUT</span>
     <span class="n">stTopBlade</span><span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span>
@@ -1780,7 +1785,7 @@
 </div>
 </section>
 <section id="prg-1-plctask">
-<h2>PRG_1_PlcTask<a class="headerlink" href="#prg-1-plctask" title="Permalink to this heading"></a></h2>
+<h2>PRG_1_PlcTask<a class="headerlink" href="#prg-1-plctask" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_1_PlcTask</span>
 <span class="p">(</span><span class="o">*</span>
     <span class="n">Launch</span> <span class="n">site</span> <span class="k">for</span> <span class="n">each</span> <span class="n">component</span><span class="s1">&#39;s program</span>
@@ -1828,7 +1833,7 @@
 </dl>
 </section>
 <section id="prg-2-pmps-pre">
-<h2>PRG_2_PMPS_PRE<a class="headerlink" href="#prg-2-pmps-pre" title="Permalink to this heading"></a></h2>
+<h2>PRG_2_PMPS_PRE<a class="headerlink" href="#prg-2-pmps-pre" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_2_PMPS_PRE</span>
 <span class="n">VAR</span>
     <span class="n">nCycles</span><span class="p">:</span> <span class="n">UDINT</span> <span class="o">:=</span> <span class="mi">200</span><span class="p">;</span>
@@ -1861,7 +1866,7 @@
 </dl>
 </section>
 <section id="prg-3-pmps-post">
-<h2>PRG_3_PMPS_POST<a class="headerlink" href="#prg-3-pmps-post" title="Permalink to this heading"></a></h2>
+<h2>PRG_3_PMPS_POST<a class="headerlink" href="#prg-3-pmps-post" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_3_PMPS_POST</span>
 <span class="n">VAR</span>
     <span class="n">fbArbiterIO</span><span class="p">:</span> <span class="n">FB_SubSysToArbiter_IO</span><span class="p">;</span>
@@ -1884,7 +1889,7 @@
 </dl>
 </section>
 <section id="prg-4-log">
-<h2>PRG_4_LOG<a class="headerlink" href="#prg-4-log" title="Permalink to this heading"></a></h2>
+<h2>PRG_4_LOG<a class="headerlink" href="#prg-4-log" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_4_LOG</span>
 <span class="n">VAR</span>
     <span class="n">fbLogHandler</span><span class="p">:</span> <span class="n">FB_LogHandler</span><span class="p">;</span>
@@ -1896,7 +1901,7 @@
 </div>
 </section>
 <section id="prg-at2l0-solid">
-<h2>PRG_AT2L0_SOLID<a class="headerlink" href="#prg-at2l0-solid" title="Permalink to this heading"></a></h2>
+<h2>PRG_AT2L0_SOLID<a class="headerlink" href="#prg-at2l0-solid" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_AT2L0_SOLID</span>
 <span class="n">VAR</span>
     <span class="n">bAT2L0_debug</span><span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
@@ -2245,7 +2250,7 @@
 </dl>
 </section>
 <section id="prg-im1l0-xtes">
-<h2>PRG_IM1L0_XTES<a class="headerlink" href="#prg-im1l0-xtes" title="Permalink to this heading"></a></h2>
+<h2>PRG_IM1L0_XTES<a class="headerlink" href="#prg-im1l0-xtes" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_IM1L0_XTES</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2259,6 +2264,13 @@
                               <span class="o">.</span><span class="n">fbOpal</span><span class="o">.</span><span class="n">bOpalPower</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">IM1L0</span><span class="o">-</span><span class="n">EL2004</span><span class="p">]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Output</span><span class="p">;</span>
                               <span class="o">.</span><span class="n">fbLED</span><span class="o">.</span><span class="n">bLedPower</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">IM1L0</span><span class="o">-</span><span class="n">EL2004</span><span class="p">]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">3</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
     <span class="n">fbIM1L0</span><span class="p">:</span> <span class="n">FB_XPIM</span><span class="p">;</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+        <span class="n">pv</span><span class="p">:</span> <span class="n">IM1L0</span><span class="p">:</span><span class="n">XTES</span><span class="p">:</span><span class="n">FLOW_OK</span>
+        <span class="n">field</span><span class="p">:</span> <span class="n">ZNAM</span> <span class="n">LOW</span>
+        <span class="n">field</span><span class="p">:</span> <span class="n">ONAM</span> <span class="n">OK</span>
+    <span class="s1">&#39;}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIIB[IM1L0-EL7342]^DCM Status Channel 1^Status^Digital input 1&#39;</span><span class="p">}</span>
+    <span class="n">bIM1L0FlowOk</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.Status := TIIB[IM1L0-EL6002]^COM TxPDO-Map Inputs Channel 1^Status;</span>
                               <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">IM1L0</span><span class="o">-</span><span class="n">EL6002</span><span class="p">]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">0</span><span class="p">;</span>
                               <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">IM1L0</span><span class="o">-</span><span class="n">EL6002</span><span class="p">]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">1</span><span class="p">;</span>
@@ -2363,7 +2375,7 @@
 </dl>
 </section>
 <section id="prg-im1l1-ppm">
-<h2>PRG_IM1L1_PPM<a class="headerlink" href="#prg-im1l1-ppm" title="Permalink to this heading"></a></h2>
+<h2>PRG_IM1L1_PPM<a class="headerlink" href="#prg-im1l1-ppm" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_IM1L1_PPM</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2439,7 +2451,7 @@
 </dl>
 </section>
 <section id="prg-im2l0-xtes">
-<h2>PRG_IM2L0_XTES<a class="headerlink" href="#prg-im2l0-xtes" title="Permalink to this heading"></a></h2>
+<h2>PRG_IM2L0_XTES<a class="headerlink" href="#prg-im2l0-xtes" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_IM2L0_XTES</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2563,7 +2575,7 @@
 </dl>
 </section>
 <section id="prg-im3l0-ppm">
-<h2>PRG_IM3L0_PPM<a class="headerlink" href="#prg-im3l0-ppm" title="Permalink to this heading"></a></h2>
+<h2>PRG_IM3L0_PPM<a class="headerlink" href="#prg-im3l0-ppm" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_IM3L0_PPM</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2638,7 +2650,7 @@
 </dl>
 </section>
 <section id="prg-im4l0-xtes">
-<h2>PRG_IM4L0_XTES<a class="headerlink" href="#prg-im4l0-xtes" title="Permalink to this heading"></a></h2>
+<h2>PRG_IM4L0_XTES<a class="headerlink" href="#prg-im4l0-xtes" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_IM4L0_XTES</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2766,7 +2778,7 @@
 </dl>
 </section>
 <section id="prg-pf1l0-wfs">
-<h2>PRG_PF1L0_WFS<a class="headerlink" href="#prg-pf1l0-wfs" title="Permalink to this heading"></a></h2>
+<h2>PRG_PF1L0_WFS<a class="headerlink" href="#prg-pf1l0-wfs" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_PF1L0_WFS</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -2853,7 +2865,7 @@
 </dl>
 </section>
 <section id="prg-rtdsl0">
-<h2>PRG_RTDSL0<a class="headerlink" href="#prg-rtdsl0" title="Permalink to this heading"></a></h2>
+<h2>PRG_RTDSL0<a class="headerlink" href="#prg-rtdsl0" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_RTDSL0</span>
 <span class="n">VAR</span>
 
@@ -2967,7 +2979,7 @@
 </dl>
 </section>
 <section id="prg-sl1l0-power">
-<h2>PRG_SL1L0_POWER<a class="headerlink" href="#prg-sl1l0-power" title="Permalink to this heading"></a></h2>
+<h2>PRG_SL1L0_POWER<a class="headerlink" href="#prg-sl1l0-power" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_SL1L0_POWER</span>
 <span class="n">VAR</span> <span class="o">//</span> <span class="n">fix</span> <span class="n">linking</span> <span class="n">to</span> <span class="n">rtd</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">following</span> <span class="n">order</span> <span class="n">Bottom</span> <span class="o">-</span> <span class="n">South</span> <span class="o">-</span> <span class="n">TOP</span> <span class="o">-</span> <span class="n">NORTH</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -3069,7 +3081,7 @@
 </dl>
 </section>
 <section id="prg-sl2l0-power">
-<h2>PRG_SL2L0_POWER<a class="headerlink" href="#prg-sl2l0-power" title="Permalink to this heading"></a></h2>
+<h2>PRG_SL2L0_POWER<a class="headerlink" href="#prg-sl2l0-power" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_SL2L0_POWER</span>
 <span class="n">VAR</span> <span class="o">//</span> <span class="n">linking</span> <span class="n">to</span> <span class="n">rtd</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">following</span> <span class="n">order</span> <span class="n">Bottom</span> <span class="o">-</span> <span class="n">South</span> <span class="o">-</span> <span class="n">TOP</span> <span class="o">-</span> <span class="n">NORTH</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -3167,7 +3179,7 @@
 </dl>
 </section>
 <section id="prg-sp1l0-kmono">
-<h2>PRG_SP1L0_KMONO<a class="headerlink" href="#prg-sp1l0-kmono" title="Permalink to this heading"></a></h2>
+<h2>PRG_SP1L0_KMONO<a class="headerlink" href="#prg-sp1l0-kmono" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_SP1L0_KMONO</span>
 <span class="n">VAR</span>
     <span class="n">fbMotion1</span><span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
@@ -3328,7 +3340,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, SLAC National Accelerator Laboratory.</p>
+    <p>&#169; Copyright 2024, SLAC National Accelerator Laboratory.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
