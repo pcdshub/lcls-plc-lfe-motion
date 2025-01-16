@@ -4417,6 +4417,10 @@ External Setpoint Generation:
 					<Type>BIT</Type>
 				</Var>
 				<Var>
+					<Name>GVL.rReqTrans</Name>
+					<Type GUID="{6D319B26-4590-2152-3DE7-3BA9B629CA65}">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Type>
+				</Var>
+				<Var>
 					<Name>Main.M1.Axis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
@@ -9709,10 +9713,6 @@ External Setpoint Generation:
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL.rReqTrans</Name>
-					<Type GUID="{6D319B26-4590-2152-3DE7-3BA9B629CA65}">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Type>
-				</Var>
-				<Var>
 					<Name>RTDSL0.RTDSL0_MPA_01.i_xInsertedLS</Name>
 					<Comment>
 						<![CDATA[IO]]>
@@ -10146,6 +10146,18 @@ External Setpoint Generation:
 							<![CDATA[ Cohort index. Identifies which cohort this BP set was included in arbitration]]>
 						</Comment>
 					</SubVar>
+				</Var>
+				<Var>
+					<Name>GVL.fbFastFaultOutput1.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL.fbFastFaultOutput2.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL.rCurTrans</Name>
+					<Type GUID="{6D319B26-4590-2152-3DE7-3BA9B629CA65}">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1.Axis.PlcToNc</Name>
@@ -10742,18 +10754,6 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL.fbFastFaultOutput1.q_xFastFaultOut</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL.fbFastFaultOutput2.q_xFastFaultOut</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL.rCurTrans</Name>
-					<Type GUID="{6D319B26-4590-2152-3DE7-3BA9B629CA65}">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Type>
-				</Var>
-				<Var>
 					<Name>RTDSL0.RTDSL0_MPA_01.q_xInsert_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -10933,6 +10933,70 @@ External Setpoint Generation:
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL7342">
 				<Link VarA="PlcTask Inputs^PRG_IM1L0_XTES.bIM1L0FlowOk" VarB="DCM Status Channel 1^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^Box 209 (CU1124)^X1 IM2L0-XTES (EK1100)^IM2L0-EL1088">
+				<Link VarA="PlcTask Inputs^Main.M25.bHome" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M26.bHome" VarB="Channel 4^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.fbIM2L0.bFocusEndBwd" VarB="Channel 4^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.fbIM2L0.bFocusEndFwd" VarB="Channel 3^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.fbIM2L0.bZoomEndBwd" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.fbIM2L0.bZoomEndFwd" VarB="Channel 1^Input" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^Box 209 (CU1124)^X1 IM2L0-XTES (EK1100)^IM2L0-EL2004">
+				<Link VarA="PlcTask Outputs^Main.M24.bBrakeRelease" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.fbIM2L0.fbLED.bLEDPower" VarB="Channel 3^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.fbIM2L0.fbOpal.bOpalPower" VarB="Channel 2^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^Box 209 (CU1124)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002">
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[0]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 0" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[10]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 10" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[11]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 11" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[12]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 12" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[13]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 13" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[14]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 14" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[15]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 15" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[16]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 16" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[17]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 17" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[18]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 18" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[19]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 19" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[1]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 1" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[20]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 20" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[21]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 21" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[2]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[3]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 3" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[4]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 4" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[5]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 5" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[6]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 6" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[7]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 7" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[8]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 8" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[9]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 9" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^Status" VarB="COM TxPDO-Map Inputs Channel 1^Status" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^Ctrl" VarB="COM RxPDO-Map Outputs Channel 1^Ctrl" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[0]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 0" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[10]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 10" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[11]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 11" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[12]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 12" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[13]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 13" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[14]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 14" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[15]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 15" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[16]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 16" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[17]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 17" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[18]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 18" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[19]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 19" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[1]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 1" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[20]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 20" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[21]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 21" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[2]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 2" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[3]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 3" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[4]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 4" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[5]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 5" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[6]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 6" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[7]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 7" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[8]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 8" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[9]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 9" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^Box 209 (CU1124)^X1 IM2L0-XTES (EK1100)^IM2L0-EL7041">
+				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.bDefectiveLimitSwitch" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E10">
 				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
@@ -11102,70 +11166,6 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^Main.M19.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM19CoilARaw" VarB="STM Synchron info data^Info data 1"/>
 				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM19CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
-			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL1088">
-				<Link VarA="PlcTask Inputs^Main.M25.bHome" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^Main.M26.bHome" VarB="Channel 4^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.fbIM2L0.bFocusEndBwd" VarB="Channel 4^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.fbIM2L0.bFocusEndFwd" VarB="Channel 3^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.fbIM2L0.bZoomEndBwd" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.fbIM2L0.bZoomEndFwd" VarB="Channel 1^Input" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL2004">
-				<Link VarA="PlcTask Outputs^Main.M24.bBrakeRelease" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.fbIM2L0.fbLED.bLEDPower" VarB="Channel 3^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.fbIM2L0.fbOpal.bOpalPower" VarB="Channel 2^Output" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002">
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[0]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 0" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[10]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 10" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[11]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 11" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[12]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 12" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[13]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 13" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[14]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 14" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[15]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 15" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[16]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 16" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[17]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 17" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[18]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 18" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[19]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 19" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[1]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 1" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[20]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 20" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[21]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 21" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[2]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 2" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[3]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 3" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[4]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 4" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[5]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 5" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[6]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 6" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[7]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 7" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[8]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 8" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^D[9]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 9" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.stEL6In^Status" VarB="COM TxPDO-Map Inputs Channel 1^Status" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^Ctrl" VarB="COM RxPDO-Map Outputs Channel 1^Ctrl" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[0]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 0" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[10]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 10" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[11]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 11" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[12]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 12" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[13]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 13" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[14]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 14" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[15]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 15" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[16]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 16" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[17]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 17" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[18]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 18" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[19]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 19" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[1]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 1" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[20]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 20" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[21]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 21" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[2]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 2" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[3]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 3" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[4]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 4" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[5]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 5" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[6]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 6" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[7]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 7" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[8]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 8" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L0_XTES.stEL6Out^D[9]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 9" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL7041">
-				<Link VarA="PlcTask Inputs^PRG_IM2L0_XTES.bDefectiveLimitSwitch" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E10">
 				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
