@@ -30,7 +30,7 @@
 			<SyncMan>001080002600010001000000400080008000001026010000</SyncMan>
 			<SyncMan>801080002200010002000000400080008000801022010000</SyncMan>
 			<SyncMan>001100000400000003000000000000000000001104000000</SyncMan>
-			<SyncMan>80110a002000010004000000000000001400801120010000</SyncMan>
+			<SyncMan>80110c002000010004000000000000001400801120010000</SyncMan>
 			<Fmmu>0000000000000000801100010100000002000000000000000000000000000000</Fmmu>
 			<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
 			<BootStrapData>0010f400f410f400</BootStrapData>
@@ -44,7 +44,7 @@
 			<MBoxUserCmdData>02000300090000000f00000003000000000000000000000000000000000000002008801501000000004d756c74697475726e205b4269745d00</MBoxUserCmdData>
 			<MBoxUserCmdData>020003000900000010000000030000000000000000000000000000000000000020088016010000002053696e676c657475726e205b4269745d00</MBoxUserCmdData>
 			<MBoxUserCmdData>02000300090000001500000003000000000000000000000000000000000000002008801701000000004f6666736574204c53422042697473205b4269745d00</MBoxUserCmdData>
-			<Pdo Name="FB Inputs Channel 1" Index="#x1a00" Flags="#x0010" SyncMan="3">
+			<Pdo Name="FB Inputs Channel 1" Index="#x1a00" Flags="#x0010">
 				<ExcludePdo>#x1a02</ExcludePdo>
 				<Entry Name="Status__Warning" Index="#x6000" Sub="#x01" Flags="#x00008020">
 					<Type>BIT</Type>
@@ -104,7 +104,7 @@
 					<Type>ULINT</Type>
 				</Entry>
 			</Pdo>
-			<Pdo Name="FB Inputs Channel 1 compact" Index="#x1a02" Flags="#x0010">
+			<Pdo Name="FB Inputs Channel 1 compact" Index="#x1a02" Flags="#x0010" SyncMan="3">
 				<ExcludePdo>#x1a00</ExcludePdo>
 				<Entry Name="Status__Warning" Index="#x6000" Sub="#x01">
 					<Type>BIT</Type>
@@ -134,7 +134,7 @@
 					<Type>UDINT</Type>
 				</Entry>
 			</Pdo>
-			<Pdo Name="FB Inputs Channel 2 compact" Index="#x1a03" Flags="#x0010">
+			<Pdo Name="FB Inputs Channel 2 compact" Index="#x1a03" Flags="#x0010" SyncMan="3">
 				<ExcludePdo>#x1a01</ExcludePdo>
 				<Entry Name="Status__Warning" Index="#x6010" Sub="#x01">
 					<Type>BIT</Type>
