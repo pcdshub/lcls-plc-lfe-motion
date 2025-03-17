@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="PRG_AT2L0_SOLID" Id="{6180f524-6468-4c61-b137-11e8cfa13685}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_AT2L0_SOLID
 VAR
@@ -27,7 +27,7 @@ VAR
         pv: AT2L0:XTES:MMS
         expand: :%.2d:STATE
     '}
-    fbAT2L0_states: ARRAY[1..19] OF FB_PositionStateInOut;
+    fbAT2L0_states: ARRAY[1..19] OF FB_PositionState1D_InOut;
 
     stOut: DUT_PositionState := (
         fPosition := 24,
@@ -232,19 +232,18 @@ FOR iIndex := 1 TO 19 DO
     stFilter REF= fbAT2L0_filters[iIndex];
 
     fbAT2L0_states[iIndex](
-        bEnable := TRUE,
         stMotionStage := fbAT2L0_axes[iIndex]^,
         stOut := stOut,
         stIn := stIn);
 
     fbAT2L0_ffo[iIndex](
         stMotionStage := fbAT2L0_axes[iIndex]^,
-        enumState := fbAT2L0_states[iIndex].enumGet,
+        enumState := fbAT2L0_states[iIndex].eStateGet,
         fbFFHWO := GVL.fbFastFaultOutput2);
 
-    IF fbAT2L0_states[iIndex].enumGet = ENUM_EpicsInOut.UNKNOWN THEN
+    IF fbAT2L0_states[iIndex].eStateGet = ENUM_EpicsInOut.UNKNOWN THEN
         stFilter.fTransmission := 0.0;
-    ELSIF fbAT2L0_states[iIndex].enumGet = ENUM_EpicsInOut.OUT OR stFilter.sFilterMaterial = '' THEN
+    ELSIF fbAT2L0_states[iIndex].eStateGet = ENUM_EpicsInOut.OUT OR stFilter.sFilterMaterial = '' THEN
         stFilter.fTransmission := 1.0;
     ELSE
         fbAtomicMass(sName:=stFilter.sFilterMaterial, fValue=>fFilterAtomicMass);
@@ -266,7 +265,7 @@ FOR iIndex := 1 TO 19 DO
     fTransmission := fTransmission * stFilter.fTransmission;
 END_FOR
 
-IF fbAT2L0_states[1].enumGet = ENUM_EpicsInOut.IN THEN
+IF fbAT2L0_states[1].eStateGet = ENUM_EpicsInOut.IN THEN
     (* Inspection mirror blocks the beam *)
     GVL.rCurTrans[PMPS.L_Attenuators.AT2L0].nTran := 0.0;
     (* TODO fast fault as well *)

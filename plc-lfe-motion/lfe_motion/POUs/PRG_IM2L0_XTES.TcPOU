@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="PRG_IM2L0_XTES" Id="{86a27ca3-c197-4a69-8332-821ef1b19550}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_IM2L0_XTES
 VAR
@@ -72,33 +72,33 @@ END_VAR
     <Implementation>
       <ST><![CDATA[
 IF bInit THEN
-    fbIM2L0.nTransitionAssertionID := 16#2200;
-    fbIM2L0.nUnknownAssertionID := 16#2209;
+    //fbIM2L0.nTransitionAssertionID := 16#2200;
+    //fbIM2L0.nUnknownAssertionID := 16#2209;
 
     fbIM2L0.stOut.fPosition := 0;
     fbIM2L0.stOut.bUseRawCounts := FALSE;
-    fbIM2L0.stOut.nRequestAssertionID := 16#2201;
-    fbIM2L0.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
+    //fbIM2L0.stOut.nRequestAssertionID := 16#2201;
+    //fbIM2L0.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
     fbIM2L0.stOut.bValid := TRUE;
 
     fbIM2L0.stYag.fPosition := -87.65;
     fbIM2L0.stYag.bUseRawCounts := FALSE;
-    fbIM2L0.stYag.nRequestAssertionID := 16#2202;
-    fbIM2L0.stYag.stBeamParams := PMPS_GVL.cstFullBeam;
+    //fbIM2L0.stYag.nRequestAssertionID := 16#2202;
+    //fbIM2L0.stYag.stBeamParams := PMPS_GVL.cstFullBeam;
     // For now, do not have restrictions on this YAG. Eventually we want to add exclusion ranges where we need to limit transmission to 0.1 (10%) within those ranges. Currently we do not have transmission control via PMPS on LFE.
     // fbIM2L0.stYag.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
     fbIM2L0.stYag.bValid := TRUE;
 
     fbIM2L0.stDiamond.fPosition := -57.65;
     fbIM2L0.stDiamond.bUseRawCounts := FALSE;
-    fbIM2L0.stDiamond.nRequestAssertionID := 16#2203;
-    fbIM2L0.stDiamond.stBeamParams := PMPS_GVL.cstFullBeam;
+    //fbIM2L0.stDiamond.nRequestAssertionID := 16#2203;
+    //fbIM2L0.stDiamond.stBeamParams := PMPS_GVL.cstFullBeam;
     fbIM2L0.stDiamond.bValid := TRUE;
 
     fbIM2L0.stReticle.fPosition := -27.65;
     fbIM2L0.stReticle.bUseRawCounts := FALSE;
-    fbIM2L0.stReticle.nRequestAssertionID := 16#2204;
-    fbIM2L0.stReticle.stBeamParams := PMPS_GVL.cst0RateBeam;
+    //fbIM2L0.stReticle.nRequestAssertionID := 16#2204;
+    //fbIM2L0.stReticle.stBeamParams := PMPS_GVL.cst0RateBeam;
     fbIM2L0.stReticle.bValid := TRUE;
 
     bInit := FALSE;
@@ -113,7 +113,13 @@ fbIM2L0(
     stZoomStage := Main.M25,
     stFocusStage := Main.M26,
     stEl6In := stEL6In,
-    stEl6Out := stEl6Out);]]></ST>
+    stEl6Out := stEl6Out,
+    sDeviceName := 'IM2L0:XTES',
+    sTransitionKey := 'IM2L0:XTES-TRANSITION',
+    bEnableMotion := TRUE,
+    bEnableBeamParams := TRUE,
+    bEnablePositionLimits := TRUE,
+);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

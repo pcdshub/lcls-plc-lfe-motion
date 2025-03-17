@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="PRG_IM1L0_XTES" Id="{dc3548d0-1688-4ec2-b4ae-fd34a5036e7d}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_IM1L0_XTES
 VAR
@@ -76,32 +76,32 @@ END_VAR
     <Implementation>
       <ST><![CDATA[
 IF bInit THEN
-    fbIM1L0.nTransitionAssertionID := 16#2100;
-    fbIM1L0.nUnknownAssertionID := 16#2109;
+    //fbIM1L0.nTransitionAssertionID := 16#2100;
+    //fbIM1L0.nUnknownAssertionID := 16#2109;
 
     fbIM1L0.stOut.fPosition := 0;
     fbIM1L0.stOut.bUseRawCounts := FALSE;
-    fbIM1L0.stOut.nRequestAssertionID := 16#2101;
-    fbIM1L0.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
+    //fbIM1L0.stOut.nRequestAssertionID := 16#2101;
+    //fbIM1L0.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
     fbIM1L0.stOut.bValid := TRUE;
 
     fbIM1L0.stYag.fPosition := -86.65;
     fbIM1L0.stYag.bUseRawCounts := FALSE;
-    fbIM1L0.stYag.nRequestAssertionID := 16#2102;
-    fbIM1L0.stYag.stBeamParams := PMPS_GVL.cstFullBeam;
-    fbIM1L0.stYag.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
+    //fbIM1L0.stYag.nRequestAssertionID := 16#2102;
+    //fbIM1L0.stYag.stBeamParams := PMPS_GVL.cstFullBeam;
+    //fbIM1L0.stYag.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
     fbIM1L0.stYag.bValid := TRUE;
 
     fbIM1L0.stDiamond.fPosition := -56.65;
     fbIM1L0.stDiamond.bUseRawCounts := FALSE;
-    fbIM1L0.stDiamond.nRequestAssertionID := 16#2103;
-    fbIM1L0.stDiamond.stBeamParams := PMPS_GVL.cstFullBeam;
+    //fbIM1L0.stDiamond.nRequestAssertionID := 16#2103;
+    //fbIM1L0.stDiamond.stBeamParams := PMPS_GVL.cstFullBeam;
     fbIM1L0.stDiamond.bValid := TRUE;
 
     fbIM1L0.stReticle.fPosition := -26.65;
     fbIM1L0.stReticle.bUseRawCounts := FALSE;
-    fbIM1L0.stReticle.nRequestAssertionID := 16#2104;
-    fbIM1L0.stReticle.stBeamParams := PMPS_GVL.cst0RateBeam;
+    //fbIM1L0.stReticle.nRequestAssertionID := 16#2104;
+    //fbIM1L0.stReticle.stBeamParams := PMPS_GVL.cst0RateBeam;
     fbIM1L0.stReticle.bValid := TRUE;
 
     bInit := FALSE;
@@ -114,7 +114,13 @@ fbIM1L0(
     stZoomStage := Main.M21,
     stFocusStage := Main.M22,
     stEl6In := stEL6In,
-    stEl6Out := stEl6Out);]]></ST>
+    stEl6Out := stEl6Out,
+    sDeviceName := 'IM1L0:XTES',
+    sTransitionKey := 'IM1L0:XTES-TRANSITION',
+    bEnableMotion := TRUE,
+    bEnableBeamParams := TRUE,
+    bEnablePositionLimits := TRUE,
+);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
