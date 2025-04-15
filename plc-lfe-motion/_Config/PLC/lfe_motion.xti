@@ -1336,7 +1336,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{5364CE42-9782-432E-9F8A-838503C1EFE8}" Name="lfe_motion" PrjFilePath="..\..\lfe_motion\lfe_motion.plcproj" TmcFilePath="..\..\lfe_motion\lfe_motion.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{ACA1AE16-2805-5048-C4FF-AAA6A262D6CF}" TmcPath="lfe_motion\lfe_motion.tmc">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{A3EB47E0-F9B5-A163-41E5-556D4AAC3126}" TmcPath="lfe_motion\lfe_motion.tmc">
 			<Name>lfe_motion Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="8" AreaNo="4">
@@ -5386,6 +5386,7 @@ External Setpoint Generation:
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^IM2L0 AT2L0 SL1L0 JUNCTION (CU1124)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-02">
 				<Link VarA="PlcTask Inputs^Main.M2.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^Main.M2.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^IM2L0 AT2L0 SL1L0 JUNCTION (CU1124)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-03">
 				<Link VarA="PlcTask Inputs^Main.M3.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
