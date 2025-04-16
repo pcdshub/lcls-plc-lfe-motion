@@ -1324,7 +1324,7 @@ External Setpoint Generation:
 	<Axis Id="19" CreateSymbols="true" AxisType="1" AxisFolder="AT2L0-SOLID">
 		<Name>__FILENAME__</Name>
 		<AxisPara>
-			<Dynamic AccelerationMaximum="200" DecelerationMaximum="600" Acceleration="100" Deceleration="500" Jerk="100"/>
+			<Dynamic AccelerationMaximum="200" DecelerationMaximum="600" Acceleration="22.2222" Deceleration="3.73134" Jerk="39.5062"/>
 			<Velo RefSearch="6" RefSync="6" SlowManual="1" FastManual="6" Maximum="12.5"/>
 			<OtherSettings AllowMotionCmdToSlave="true" PulseDistancePos="1" PulseDistanceNeg="1"/>
 		</AxisPara>
@@ -1373,7 +1373,7 @@ External Setpoint Generation:
 		</Encoder>
 		<Drive Name="Drive" DrvType="24">
 			<DrvPara Inverse="true">
-				<Analog VeloReferenz="20.32" ScaleFactorActTorque="0.1"/>
+				<Analog VeloReferenz="5" ScaleFactorActTorque="0.1"/>
 				<TimeComp TaskDelayCycles="1"/>
 			</DrvPara>
 			<Vars VarGrpType="1">
