@@ -14,12 +14,6 @@ VAR_GLOBAL
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output'}
     fbFastFaultOutput2: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID := '172.21.88.66.1.1');
 
-    bInitIM1L0: BOOL;
-    bInitIM1L1: BOOL;
-    bInitIM2L0: BOOL;
-    bInitIM3L0: BOOL;
-    bInitIM4L0: BOOL;
-
     {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:PMPS:ReqTrans'}
     rReqTrans AT %I*		: ARRAY [1..PMPS_GVL.AUX_ATTENUATORS] OF ST_PMPS_Attenuator_IO;
     {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:PMPS:CurTrans'}
