@@ -239,7 +239,7 @@ FOR iIndex := 1 TO 19 DO
     fbAT2L0_ffo[iIndex](
         stMotionStage := fbAT2L0_axes[iIndex]^,
         enumState := fbAT2L0_states[iIndex].eStateGet,
-        fbFFHWO := GVL.fbFastFaultOutput2);
+        fbFFHWO := GVL.fbFastFaultOutput1);
 
     IF fbAT2L0_states[iIndex].eStateGet = ENUM_EpicsInOut.UNKNOWN THEN
         stFilter.fTransmission := 0.0;

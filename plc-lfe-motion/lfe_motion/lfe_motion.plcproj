@@ -112,6 +112,12 @@
     <Compile Include="Temp\FB_SimMotor.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Temp\FB_SLITS.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Temp\FB_SLITS_POWER.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Version\Global_Version.TcGVL">
       <SubType>Code</SubType>
     </Compile>
@@ -144,6 +150,12 @@
     <PlaceholderReference Include="PMPS">
       <DefaultResolution>PMPS, * (SLAC - LCLS)</DefaultResolution>
       <Namespace>PMPS</Namespace>
+      <Parameters>
+        <Parameter ListName="PMPS_PARAM" xmlns="">
+          <Key>MAX_FAST_FAULTS</Key>
+          <Value>100</Value>
+        </Parameter>
+      </Parameters>
     </PlaceholderReference>
     <PlaceholderReference Include="Tc2_MC2">
       <DefaultResolution>Tc2_MC2, * (Beckhoff Automation GmbH)</DefaultResolution>

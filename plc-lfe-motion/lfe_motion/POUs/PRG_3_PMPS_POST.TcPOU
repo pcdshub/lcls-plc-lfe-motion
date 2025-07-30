@@ -4,11 +4,20 @@
     <Declaration><![CDATA[PROGRAM PRG_3_PMPS_POST
 VAR
     fbArbiterIO: FB_SubSysToArbiter_IO;
+    bMR1L1_Veto_OUT: BOOL;
+    fbVetoArbiter_L1: FB_VetoArbiter;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[GVL.fbFastFaultOutput1.Execute();
-GVL.fbFastFaultOutput2.Execute();
+      <ST><![CDATA[bMR1L1_Veto_OUT := PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.L_Stopper.MR1L1_OUT] AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.L_Stopper.MR1L1_IN];
+
+GVL.fbFastFaultOutput1.Execute();
+GVL.fbFastFaultOutput2.Execute(i_xVeto:=bMR1L1_Veto_OUT);
+
+fbVetoArbiter_L1(bVeto:=bMR1L1_Veto_OUT,
+                HigherAuthority := GVL.fbArbiter,
+                LowerAuthority := GVL.fbArbiter2,
+                FFO := GVL.fbFastFaultOutput1);
 
 fbArbiterIO(
     Arbiter:=GVL.fbArbiter,
