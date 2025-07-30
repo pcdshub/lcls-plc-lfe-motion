@@ -86,7 +86,11 @@ fbSL1L0(stTopBlade:=  Main.M43,
         stBottomBlade:= Main.M41,
         stNorthBlade:=  Main.M44,
         stSouthBlade:=  Main.M42,
-        bExecuteMotion:=bExecuteMotion);
+        bExecuteMotion:=bExecuteMotion,
+        io_fbFFHWO := GVL.fbFastFaultOutput1,
+        fbArbiter := GVL.fbArbiter,
+);
+//fbSL1L0.M_UpdatePMPS(1); Not sure what index to use
 
 //for testing purposes only. comment-out/delete once done.
 (*mcPower[1](axis:=Main.M41.Axis, Enable:=TRUE, enable_positive:=Main.M41.bLimitForwardEnable, enable_negative:=Main.M41.bLimitBackwardEnable);

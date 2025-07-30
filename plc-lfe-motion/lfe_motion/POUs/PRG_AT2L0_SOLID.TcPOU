@@ -27,16 +27,16 @@ VAR
         pv: AT2L0:XTES:MMS
         expand: :%.2d:STATE
     '}
-    fbAT2L0_states: ARRAY[1..19] OF FB_PositionStateInOut;
+    fbAT2L0_states: ARRAY[1..19] OF FB_PositionState1D_InOut;
 
-    stOut: DUT_PositionState := (
+    stOut: ST_PositionState  := (
         fPosition := 24,
         fDelta := 2,
         fVelocity := 6,
         bMoveOk := TRUE,
         bValid := TRUE);
 
-    stIn: DUT_PositionState := (
+    stIn: ST_PositionState  := (
         fPosition := 0,
         fDelta := 2,
         fVelocity := 6,
@@ -232,19 +232,18 @@ FOR iIndex := 1 TO 19 DO
     stFilter REF= fbAT2L0_filters[iIndex];
 
     fbAT2L0_states[iIndex](
-        bEnable := TRUE,
         stMotionStage := fbAT2L0_axes[iIndex]^,
         stOut := stOut,
         stIn := stIn);
 
     fbAT2L0_ffo[iIndex](
         stMotionStage := fbAT2L0_axes[iIndex]^,
-        enumState := fbAT2L0_states[iIndex].enumGet,
+        enumState := fbAT2L0_states[iIndex].eStateGet,
         fbFFHWO := GVL.fbFastFaultOutput2);
 
-    IF fbAT2L0_states[iIndex].enumGet = ENUM_EpicsInOut.UNKNOWN THEN
+    IF fbAT2L0_states[iIndex].eStateGet = ENUM_EpicsInOut.UNKNOWN THEN
         stFilter.fTransmission := 0.0;
-    ELSIF fbAT2L0_states[iIndex].enumGet = ENUM_EpicsInOut.OUT OR stFilter.sFilterMaterial = '' THEN
+    ELSIF fbAT2L0_states[iIndex].eStateGet = ENUM_EpicsInOut.OUT OR stFilter.sFilterMaterial = '' THEN
         stFilter.fTransmission := 1.0;
     ELSE
         fbAtomicMass(sName:=stFilter.sFilterMaterial, fValue=>fFilterAtomicMass);
@@ -266,7 +265,7 @@ FOR iIndex := 1 TO 19 DO
     fTransmission := fTransmission * stFilter.fTransmission;
 END_FOR
 
-IF fbAT2L0_states[1].enumGet = ENUM_EpicsInOut.IN THEN
+IF fbAT2L0_states[1].eStateGet = ENUM_EpicsInOut.IN THEN
     (* Inspection mirror blocks the beam *)
     GVL.rCurTrans[PMPS.L_Attenuators.AT2L0].nTran := 0.0;
     (* TODO fast fault as well *)
