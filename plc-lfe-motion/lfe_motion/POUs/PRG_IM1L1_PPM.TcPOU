@@ -10,14 +10,14 @@ VAR
     {attribute 'TcLinkTo' := '.fbGige.iIlluminatorINT := TIIB[IM1L1-EL4004]^AO Outputs Channel 1^Analog output;
                               .fbGige.bGigePower := TIIB[IM1L1-EL2004]^Channel 2^Output;
                               .fbPowerMeter.iVoltageINT := TIIB[IM1L1-EL3062]^AI Standard Channel 1^Value;
-                              .fbPowerMeter.fbThermoCouple.bError := TIIB[IM1L1-EL3314]^TC Inputs Channel 1^Status^Error;
-                              .fbPowerMeter.fbThermoCouple.bUnderrange := TIIB[IM1L1-EL3314]^TC Inputs Channel 1^Status^Underrange;
-                              .fbPowerMeter.fbThermoCouple.bOverrange := TIIB[IM1L1-EL3314]^TC Inputs Channel 1^Status^Overrange;
-                              .fbPowerMeter.fbThermoCouple.iRaw := TIIB[IM1L1-EL3314]^TC Inputs Channel 1^Value;
-                              .fbYagThermoCouple.bError := TIIB[IM1L1-EL3314]^TC Inputs Channel 2^Status^Error;
-                              .fbYagThermoCouple.bUnderrange := TIIB[IM1L1-EL3314]^TC Inputs Channel 2^Status^Underrange;
-                              .fbYagThermoCouple.bOverrange := TIIB[IM1L1-EL3314]^TC Inputs Channel 2^Status^Overrange;
-                              .fbYagThermoCouple.iRaw := TIIB[IM1L1-EL3314]^TC Inputs Channel 2^Value'}
+                              .fbPowerMeter.fbTempSensor.bError := TIIB[IM1L1-EL3314]^TC Inputs Channel 1^Status^Error;
+                              .fbPowerMeter.fbTempSensor.bUnderrange := TIIB[IM1L1-EL3314]^TC Inputs Channel 1^Status^Underrange;
+                              .fbPowerMeter.fbTempSensor.bOverrange := TIIB[IM1L1-EL3314]^TC Inputs Channel 1^Status^Overrange;
+                              .fbPowerMeter.fbTempSensor.iRaw := TIIB[IM1L1-EL3314]^TC Inputs Channel 1^Value;
+                              .fbYagTempSensor.bError := TIIB[IM1L1-EL3314]^TC Inputs Channel 2^Status^Error;
+                              .fbYagTempSensor.bUnderrange := TIIB[IM1L1-EL3314]^TC Inputs Channel 2^Status^Underrange;
+                              .fbYagTempSensor.bOverrange := TIIB[IM1L1-EL3314]^TC Inputs Channel 2^Status^Overrange;
+                              .fbYagTempSensor.iRaw := TIIB[IM1L1-EL3314]^TC Inputs Channel 2^Value'}
     fbIM1L1: FB_PPM;
 
     fbStateSetup: FB_StateSetupHelper;
