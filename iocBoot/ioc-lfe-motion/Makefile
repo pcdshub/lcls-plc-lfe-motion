@@ -12,4 +12,3 @@ PYTMC_OPTS :=
 PREFIX = PLC:LFE:MOTION
 
 include $(IOC_TOP)/iocBoot/templates/Makefile.base
-

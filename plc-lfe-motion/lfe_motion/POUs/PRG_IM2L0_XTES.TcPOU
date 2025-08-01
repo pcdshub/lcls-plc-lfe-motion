@@ -63,7 +63,12 @@ VAR
                               .D[21] := TIIB[IM2L0-EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 21'}
     stEL6Out AT %Q*: EL6OutData22b;
 
-    bInit: BOOL := TRUE;
+    fbStateSetup: FB_StateSetupHelper;
+    stDefault: ST_PositionState := (
+        fVelocity := 1,
+        bMoveOk := TRUE,
+        bValid := TRUE
+    );
 
     {attribute 'TcLinkTo' := 'TIIB[IM2L0-EL7041]^STM Status^Status^Digital input 1'}
     bDefectiveLimitSwitch AT %I*: BOOL;
@@ -71,38 +76,11 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[
-IF bInit THEN
-    fbIM2L0.nTransitionAssertionID := 16#2200;
-    fbIM2L0.nUnknownAssertionID := 16#2209;
-
-    fbIM2L0.stOut.fPosition := 0;
-    fbIM2L0.stOut.bUseRawCounts := FALSE;
-    fbIM2L0.stOut.nRequestAssertionID := 16#2201;
-    fbIM2L0.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
-    fbIM2L0.stOut.bValid := TRUE;
-
-    fbIM2L0.stYag.fPosition := -87.65;
-    fbIM2L0.stYag.bUseRawCounts := FALSE;
-    fbIM2L0.stYag.nRequestAssertionID := 16#2202;
-    fbIM2L0.stYag.stBeamParams := PMPS_GVL.cstFullBeam;
-    // For now, do not have restrictions on this YAG. Eventually we want to add exclusion ranges where we need to limit transmission to 0.1 (10%) within those ranges. Currently we do not have transmission control via PMPS on LFE.
-    // fbIM2L0.stYag.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
-    fbIM2L0.stYag.bValid := TRUE;
-
-    fbIM2L0.stDiamond.fPosition := -57.65;
-    fbIM2L0.stDiamond.bUseRawCounts := FALSE;
-    fbIM2L0.stDiamond.nRequestAssertionID := 16#2203;
-    fbIM2L0.stDiamond.stBeamParams := PMPS_GVL.cstFullBeam;
-    fbIM2L0.stDiamond.bValid := TRUE;
-
-    fbIM2L0.stReticle.fPosition := -27.65;
-    fbIM2L0.stReticle.bUseRawCounts := FALSE;
-    fbIM2L0.stReticle.nRequestAssertionID := 16#2204;
-    fbIM2L0.stReticle.stBeamParams := PMPS_GVL.cst0RateBeam;
-    fbIM2L0.stReticle.bValid := TRUE;
-
-    bInit := FALSE;
-END_IF
+fbStateSetup(stPositionState:=stDefault, bSetDefault:=TRUE);
+fbStateSetup(stPositionState:=fbIM2L0.stOut, fPosition:=0,          sPmpsState:='IM2L0:XTES-OUT');
+fbStateSetup(stPositionState:=fbIM2L0.stYag, fPosition:=-87.65,     sPmpsState:='IM2L0:XTES-YAG');
+fbStateSetup(stPositionState:=fbIM2L0.stDiamond, fPosition:=-57.65, sPmpsState:='IM2L0:XTES-DIAMOND');
+fbStateSetup(stPositionState:=fbIM2L0.stReticle, fPosition:=-27.65, sPmpsState:='IM2L0:XTES-RETICLE');
 
 Main.M24.bLimitForwardEnable := bDefectiveLimitSwitch OR (Main.M24.stAxisStatus.fActPosition < 0);
 
@@ -113,7 +91,13 @@ fbIM2L0(
     stZoomStage := Main.M25,
     stFocusStage := Main.M26,
     stEl6In := stEL6In,
-    stEl6Out := stEl6Out);]]></ST>
+    stEl6Out := stEl6Out,
+    sDeviceName := 'IM2L0:XTES',
+    sTransitionKey := 'IM2L0:XTES-TRANSITION',
+    bEnableMotion := TRUE,
+    bEnableBeamParams := TRUE,
+    bEnablePositionLimits := TRUE,
+);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

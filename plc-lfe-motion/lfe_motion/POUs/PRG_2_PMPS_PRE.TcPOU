@@ -3,26 +3,17 @@
   <POU Name="PRG_2_PMPS_PRE" Id="{2f4e980b-04a5-4967-a693-b70eb29ff6ac}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_2_PMPS_PRE
 VAR
-    nCycles: UDINT := 200;
-    nStartCycle: UDINT;
-    nCycleCount: UDINT;
-    nCurrTaskIndex: BYTE;
-    getTask: GETCURTASKINDEX;
+
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// Stagger initializations to avoid clogging PMPS Arbiter Queue
-getTask();
-nCycleCount := _TaskInfo[getTask.index].CycleCount;
-IF nStartCycle = 0 THEN
-    nStartCycle := nCycleCount;
-END_IF
-
-GVL.bInitIM1L0 S= nCycleCount - nStartCycle > nCycles;
-GVL.bInitIM1L1 S= nCycleCount - nStartCycle > nCycles * 2;
-GVL.bInitIM2L0 S= nCycleCount - nStartCycle > nCycles * 3;
-GVL.bInitIM3L0 S= nCycleCount - nStartCycle > nCycles * 4;
-GVL.bInitIM4L0 S= nCycleCount - nStartCycle > nCycles * 5;]]></ST>
+      <ST><![CDATA[
+MOTION_GVL.fbStandardPMPSDB(
+    io_fbFFHWO:=GVL.fbFastFaultOutput1,
+    bEnable:=TRUE,
+    sPLCName:='plc-lfe-motion',
+);
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
